@@ -1,4 +1,5 @@
-import { View, Text, ScrollView, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
 import { useTheme } from '@/lib/theme';
 
@@ -26,7 +27,7 @@ export default function TermsOfServiceScreen() {
 
           <Text style={s.subheading}>2. Description of Service</Text>
           <Text style={s.body}>
-            Nafs is a free, offline 30-day Islamic spiritual transformation application. It provides daily plans, tasks, dhikr, Quran goals, and character-building exercises based on Islamic teachings. The app is provided "as is" for personal, non-commercial use.
+            {"Nafs is a free, offline 30-day Islamic spiritual transformation application. It provides daily plans, tasks, dhikr, Quran goals, and character-building exercises based on Islamic teachings. The app is provided \"as is\" for personal, non-commercial use."}
           </Text>
 
           <Text style={s.subheading}>3. Islamic Content Disclaimer</Text>
@@ -54,9 +55,9 @@ export default function TermsOfServiceScreen() {
 
           <Text style={s.subheading}>6. Limitation of Liability</Text>
           <Text style={s.body}>
-            Nafs is provided "as is" without warranties of any kind. We are not liable for:{'\n'}
+            {"Nafs is provided \"as is\" without warranties of any kind. We are not liable for:"}{'\n'}
             {'\n'}- Any loss of data due to device issues, app uninstallation, or system resets{'\n'}
-            - Any spiritual, religious, or personal decisions made based on the app's content{'\n'}
+            {"- Any spiritual, religious, or personal decisions made based on the app's content"}{'\n'}
             - Any damages arising from the use or inability to use the app{'\n'}
             - The accuracy or completeness of Islamic content, hadith, or translations
           </Text>

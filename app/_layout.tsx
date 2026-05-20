@@ -1,7 +1,7 @@
-import { useEffect, useState, Component } from 'react';
-import { Stack, useRouter } from 'expo-router';
+import { useEffect, useState, Component, useRef } from 'react';
+import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Platform } from 'react-native';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { appStorage } from '@/lib/storage';
 import { ThemeProvider } from '@/lib/ThemeProvider';
@@ -19,8 +19,13 @@ class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError:
       return (
         <View style={ebStyles.container}>
           <Text style={ebStyles.title}>Something went wrong</Text>
-          <Text style={ebStyles.message}>We apologize for the inconvenience. Please try restarting the app.</Text>
-          <TouchableOpacity style={ebStyles.button} onPress={() => this.setState({ hasError: false, error: null })}>
+          <Text style={ebStyles.message}>
+            {this.state.error?.message || 'We apologize for the inconvenience. Please try restarting the app.'}
+          </Text>
+          <TouchableOpacity 
+            style={ebStyles.button} 
+            onPress={() => this.setState({ hasError: false, error: null })}
+          >
             <Text style={ebStyles.buttonText}>Try Again</Text>
           </TouchableOpacity>
         </View>
@@ -41,30 +46,51 @@ const ebStyles = StyleSheet.create({
 function RootLayoutInner() {
   useFrameworkReady();
   const router = useRouter();
+  const segments = useSegments();
   const { colors, mode } = useTheme();
   const [isReady, setIsReady] = useState(false);
+  const isInitializing = useRef(false);
 
   useEffect(() => {
-    (async () => {
-      const state = await appStorage.getState();
-      if (!state) {
-        router.replace('/(auth)/register');
-      } else if (!state.isAuthenticated) {
-        router.replace('/(auth)/login');
-      } else if (!state.isOnboarded) {
-        router.replace('/(onboarding)');
-      } else {
-        router.replace('/(tabs)');
+    const initialize = async () => {
+      if (isInitializing.current) return;
+      isInitializing.current = true;
+      
+      console.log('[RootLayout] Initializing...');
+      try {
+        const state = await appStorage.getState();
+        const isOnboarded = state?.isOnboarded || false;
+        
+        console.log('[RootLayout] Status:', { isOnboarded, segments });
+
+        const inAuthGroup = segments[0] === '(onboarding)';
+        const inTabsGroup = segments[0] === '(tabs)';
+
+        if (!isOnboarded && !inAuthGroup) {
+          console.log('[RootLayout] Redirecting to onboarding');
+          router.replace('/(onboarding)');
+        } else if (isOnboarded && !inTabsGroup) {
+          console.log('[RootLayout] Redirecting to tabs');
+          router.replace('/(tabs)');
+        }
+      } catch (error) {
+        console.error('[RootLayout] Initialization error:', error);
+      } finally {
+        setIsReady(true);
+        isInitializing.current = false;
       }
-      setIsReady(true);
-    })();
-  }, []);
+    };
+
+    if (!isReady) {
+      initialize();
+    }
+  }, [isReady, segments, router]);
 
   if (!isReady) {
     return (
       <View style={[styles.loadingContainer, { backgroundColor: colors.cream }]}>
         <ActivityIndicator size="large" color={colors.mediumGreen} />
-        <Text style={[styles.loadingText, { color: colors.mutedText }]}>Loading...</Text>
+        <Text style={[styles.loadingText, { color: colors.mutedText }]}>Preparing your space...</Text>
       </View>
     );
   }
@@ -72,6 +98,8 @@ function RootLayoutInner() {
   return (
     <>
       <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
         <Stack.Screen name="(modals)" options={{ presentation: 'modal' }} />
       </Stack>
@@ -92,5 +120,5 @@ export default function RootLayout() {
 
 const styles = StyleSheet.create({
   loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 12 },
-  loadingText: { fontSize: 14 },
+  loadingText: { fontSize: 14, fontWeight: '500' },
 });

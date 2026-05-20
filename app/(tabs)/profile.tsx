@@ -1,11 +1,14 @@
-import { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, SafeAreaView, TouchableOpacity, Alert } from 'react-native';
+import { useState, useEffect, useCallback } from 'react';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Alert, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import * as Haptics from 'expo-haptics';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import { appStorage } from '@/lib/storage';
 import { getLevelTitle } from '@/lib/planGenerator';
 import { AppState } from '@/lib/types';
 import { useTheme } from '@/lib/theme';
-import { LogOut, RotateCcw, BookOpen, Star, Flame, Settings, Pencil } from 'lucide-react-native';
+import { RotateCcw, BookOpen, Star, Flame, Settings, Pencil, Heart, User } from 'lucide-react-native';
 
 export default function ProfileScreen() {
   const router = useRouter();
@@ -19,23 +22,23 @@ export default function ProfileScreen() {
     setState(appState);
   };
 
-  const handleLogout = async () => {
-    await appStorage.updateState({ isAuthenticated: false });
-    router.replace('/(auth)/login');
-  };
+  const triggerHaptic = useCallback(() => {
+    if (Platform.OS !== 'web') Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+  }, []);
 
   const handleReset = () => {
+    triggerHaptic();
     Alert.alert(
-      'Reset All Data',
-      'This will permanently delete all your progress. Are you sure?',
+      'Reset All Progress',
+      'This will permanently delete all your journey data. Are you sure you want to start fresh?',
       [
         { text: 'Cancel', style: 'cancel' },
         {
-          text: 'Reset',
+          text: 'Reset Everything',
           style: 'destructive',
           onPress: async () => {
             await appStorage.resetAll();
-            router.replace('/(auth)/register');
+            router.replace('/(onboarding)');
           },
         },
       ]
@@ -45,7 +48,7 @@ export default function ProfileScreen() {
   if (!state || !state.userProfile) {
     return (
       <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}>
-        <Text style={[styles.loadingText, { color: colors.mutedText }]}>Loading...</Text>
+        <Text style={styles.loadingText}>Gathering your profile...</Text>
       </SafeAreaView>
     );
   }
@@ -56,119 +59,93 @@ export default function ProfileScreen() {
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        <View style={styles.headerRow}>
-          <Text style={[styles.headerTitle, { color: colors.primaryGreen }]}>Profile</Text>
-          <TouchableOpacity onPress={() => router.push('/(modals)/settings')} accessibilityLabel="Open settings" accessibilityRole="button">
+        <Animated.View entering={FadeInDown} style={styles.header}>
+          <Text style={[styles.title, { color: colors.primaryGreen }]}>Your Presence</Text>
+          <TouchableOpacity onPress={() => { router.push('/(modals)/settings'); triggerHaptic(); }}>
             <Settings size={22} color={colors.mediumGreen} />
           </TouchableOpacity>
-        </View>
+        </Animated.View>
 
-        <View style={styles.header}>
-          <View style={[styles.avatar, { backgroundColor: colors.mediumGreen }]}>
-            <Text style={styles.avatarText}>{profile.name.charAt(0).toUpperCase()}</Text>
+        <View style={styles.profileMain}>
+          <View style={[styles.avatar, { backgroundColor: colors.white }]}>
+            <User size={40} color={colors.mediumGreen} />
           </View>
-          <Text style={[styles.name, { color: colors.primaryGreen }]}>{profile.name}</Text>
-          <Text style={[styles.levelBadge, { color: colors.gold }]}>{levelInfo.level}</Text>
-          <Text style={[styles.levelArabic, { color: colors.mediumText }]}>{levelInfo.arabic}</Text>
+          <View style={styles.profileInfo}>
+            <Text style={[styles.name, { color: colors.darkText }]}>{profile.name}</Text>
+            <View style={styles.levelTag}>
+              <Star size={12} color={colors.gold} fill={colors.gold} />
+              <Text style={[styles.levelText, { color: colors.gold }]}>{levelInfo.level}</Text>
+            </View>
+          </View>
+          <TouchableOpacity style={[styles.editCircle, { backgroundColor: colors.white }]} onPress={() => { router.push('/(modals)/edit-profile'); triggerHaptic(); }}>
+            <Pencil size={18} color={colors.mediumGreen} />
+          </TouchableOpacity>
         </View>
 
         <View style={styles.statsRow}>
-          <View style={[styles.statCard, { backgroundColor: colors.cardBackground }]}>
-            <Star size={20} color={colors.gold} strokeWidth={2} />
-            <Text style={[styles.statValue, { color: colors.darkText }]}>{state.totalPoints}</Text>
-            <Text style={[styles.statLabel, { color: colors.mutedText }]}>Points</Text>
-          </View>
-          <View style={[styles.statCard, { backgroundColor: colors.cardBackground }]}>
-            <Flame size={20} color={colors.mediumGreen} strokeWidth={2} />
+          <View style={[styles.statCard, { backgroundColor: colors.white }]}>
+            <Flame size={20} color={colors.gold} />
             <Text style={[styles.statValue, { color: colors.darkText }]}>{state.streakDays}</Text>
             <Text style={[styles.statLabel, { color: colors.mutedText }]}>Streak</Text>
           </View>
-          <View style={[styles.statCard, { backgroundColor: colors.cardBackground }]}>
-            <BookOpen size={20} color={colors.primaryGreen} strokeWidth={2} />
-            <Text style={[styles.statValue, { color: colors.darkText }]}>Day {state.currentDay}</Text>
-            <Text style={[styles.statLabel, { color: colors.mutedText }]}>Current</Text>
+          <View style={[styles.statCard, { backgroundColor: colors.white }]}>
+            <Star size={20} color={colors.mediumGreen} />
+            <Text style={[styles.statValue, { color: colors.darkText }]}>{state.totalPoints}</Text>
+            <Text style={[styles.statLabel, { color: colors.mutedText }]}>Points</Text>
+          </View>
+          <View style={[styles.statCard, { backgroundColor: colors.white }]}>
+            <BookOpen size={20} color={colors.primaryGreen} />
+            <Text style={[styles.statValue, { color: colors.darkText }]}>{state.currentDay}</Text>
+            <Text style={[styles.statLabel, { color: colors.mutedText }]}>Day</Text>
           </View>
         </View>
 
-        <TouchableOpacity style={[styles.editButton, { backgroundColor: colors.paleGreen }]} onPress={() => router.push('/(modals)/edit-profile')} accessibilityLabel="Edit your profile" accessibilityRole="button">
-          <Pencil size={16} color={colors.primaryGreen} />
-          <Text style={[styles.editButtonText, { color: colors.primaryGreen }]}>Edit Profile</Text>
-        </TouchableOpacity>
+        <View style={styles.section}>
+          <View style={styles.sectionHeader}>
+            <Heart size={18} color={colors.mediumGreen} />
+            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Your Focus</Text>
+          </View>
+          <View style={styles.tagsContainer}>
+            {profile.improvementAreas.map((area) => (
+              <View key={area} style={[styles.tag, { backgroundColor: colors.white }]}>
+                <Text style={[styles.tagText, { color: colors.primaryGreen }]}>{area}</Text>
+              </View>
+            ))}
+          </View>
+        </View>
 
         <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Profile Details</Text>
-          <View style={[styles.detailCard, { backgroundColor: colors.cardBackground }]}>
-            <View style={[styles.detailRow, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Age</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.age}</Text>
+          <Text style={[styles.sectionTitleSmall, { color: colors.mutedText }]}>Preferences</Text>
+          <View style={[styles.detailsCard, { backgroundColor: colors.white }]}>
+            <View style={styles.detailRow}>
+              <Text style={[styles.detailLabel, { color: colors.mediumText }]}>Knowledge Level</Text>
+              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.knowledgeLevel}</Text>
             </View>
-            <View style={[styles.detailRow, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Gender</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.gender.charAt(0).toUpperCase() + profile.gender.slice(1)}</Text>
-            </View>
-            <View style={[styles.detailRow, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Knowledge Level</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.knowledgeLevel.charAt(0).toUpperCase() + profile.knowledgeLevel.slice(1)}</Text>
-            </View>
-            <View style={[styles.detailRow, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Prayer Consistency</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.prayerConsistency.charAt(0).toUpperCase() + profile.prayerConsistency.slice(1)}</Text>
-            </View>
-            <View style={[styles.detailRow, { borderBottomColor: colors.border }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Daily Time</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.dailyMinutes} min</Text>
+            <View style={styles.detailRow}>
+              <Text style={[styles.detailLabel, { color: colors.mediumText }]}>Prayer Consistency</Text>
+              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.prayerConsistency}</Text>
             </View>
             <View style={[styles.detailRow, { borderBottomWidth: 0 }]}>
-              <Text style={[styles.detailLabel, { color: colors.mutedText }]}>Commitment</Text>
-              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.commitmentLevel}/10</Text>
+              <Text style={[styles.detailLabel, { color: colors.mediumText }]}>Daily Goal</Text>
+              <Text style={[styles.detailValue, { color: colors.darkText }]}>{profile.dailyMinutes} mins</Text>
             </View>
           </View>
         </View>
 
-        {profile.improvementAreas.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Focus Areas</Text>
-            <View style={styles.tagsContainer}>
-              {profile.improvementAreas.map((area) => (
-                <View key={area} style={[styles.tag, { backgroundColor: colors.paleGreen }]}>
-                  <Text style={[styles.tagText, { color: colors.primaryGreen }]}>{area.charAt(0).toUpperCase() + area.slice(1)}</Text>
-                </View>
-              ))}
-            </View>
-          </View>
-        )}
-
-        {profile.personalGoal ? (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Personal Goal</Text>
-            <View style={[styles.goalCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.gold }]}>
-              <Text style={[styles.goalText, { color: colors.darkText }]}>{profile.personalGoal}</Text>
-            </View>
-          </View>
-        ) : null}
-
-        {profile.challenges ? (
-          <View style={styles.section}>
-            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Challenges</Text>
-            <View style={[styles.goalCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.mediumGreen }]}>
-              <Text style={[styles.goalText, { color: colors.darkText }]}>{profile.challenges}</Text>
-            </View>
-          </View>
-        ) : null}
-
-        <View style={styles.section}>
-          <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Account</Text>
-          <TouchableOpacity style={[styles.actionButton, { backgroundColor: colors.cardBackground }]} onPress={handleLogout} accessibilityLabel="Logout" accessibilityRole="button">
-            <LogOut size={18} color={colors.mediumGreen} strokeWidth={2} />
-            <Text style={[styles.actionText, { color: colors.mediumGreen }]}>Logout</Text>
+        <View style={styles.accountSection}>
+          <TouchableOpacity 
+            activeOpacity={0.7}
+            style={[styles.resetButton, { backgroundColor: colors.white }]} 
+            onPress={handleReset}
+          >
+            <RotateCcw size={18} color={colors.error} />
+            <Text style={[styles.resetText, { color: colors.error }]}>Reset My Journey</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.actionButton, styles.dangerButton]} onPress={handleReset} accessibilityLabel="Reset all data" accessibilityRole="button">
-            <RotateCcw size={18} color={colors.error} strokeWidth={2} />
-            <Text style={[styles.actionText, { color: colors.error }]}>Reset All Data</Text>
-          </TouchableOpacity>
+          <Text style={[styles.footerText, { color: colors.mutedText }]}>
+            Nafs v1.0 • Local Storage Mode{'\n'}Your data stays on this device.
+          </Text>
         </View>
-
-        <Text style={[styles.footerText, { color: colors.mutedText }]}>Nafs - 30-Day Islamic Transformation{'\n'}All data stored locally on your device</Text>
+        <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -176,35 +153,35 @@ export default function ProfileScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  scrollContent: { paddingHorizontal: 16, paddingVertical: 16 },
-  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 24 },
-  headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 },
-  headerTitle: { fontSize: 28, fontWeight: '700' },
-  header: { alignItems: 'center', marginBottom: 24 },
-  avatar: { width: 80, height: 80, borderRadius: 40, justifyContent: 'center', alignItems: 'center', marginBottom: 12 },
-  avatarText: { fontSize: 32, fontWeight: '700', color: '#FFFFFF' },
-  name: { fontSize: 24, fontWeight: '700', marginBottom: 4 },
-  levelBadge: { fontSize: 14, fontWeight: '600', marginBottom: 2 },
-  levelArabic: { fontSize: 12 },
-  statsRow: { flexDirection: 'row', gap: 12, marginBottom: 16 },
-  statCard: { flex: 1, borderRadius: 12, padding: 14, alignItems: 'center', gap: 6 },
-  statValue: { fontSize: 16, fontWeight: '700' },
-  statLabel: { fontSize: 11 },
-  editButton: { flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: 8, borderRadius: 12, paddingVertical: 10, marginBottom: 24 },
-  editButtonText: { fontSize: 14, fontWeight: '600' },
-  section: { marginBottom: 20 },
-  sectionTitle: { fontSize: 16, fontWeight: '700', marginBottom: 10 },
-  detailCard: { borderRadius: 12, padding: 14 },
-  detailRow: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 8, borderBottomWidth: 1 },
-  detailLabel: { fontSize: 13 },
-  detailValue: { fontSize: 13, fontWeight: '600' },
-  tagsContainer: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
-  tag: { borderRadius: 20, paddingVertical: 6, paddingHorizontal: 14 },
-  tagText: { fontSize: 12, fontWeight: '600' },
-  goalCard: { borderRadius: 12, padding: 14, borderLeftWidth: 4 },
-  goalText: { fontSize: 14, lineHeight: 20 },
-  actionButton: { flexDirection: 'row', alignItems: 'center', gap: 10, borderRadius: 12, paddingVertical: 14, paddingHorizontal: 14, marginBottom: 10 },
-  dangerButton: { backgroundColor: '#FEE8E8' },
-  actionText: { fontSize: 14, fontWeight: '600' },
-  footerText: { textAlign: 'center', fontSize: 12, marginTop: 8, marginBottom: 24, lineHeight: 18 },
+  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 40 },
+  scrollContent: { paddingHorizontal: 20, paddingVertical: 24 },
+  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 32 },
+  title: { fontSize: 32, fontWeight: '800' },
+  profileMain: { flexDirection: 'row', alignItems: 'center', marginBottom: 32, gap: 20 },
+  avatar: { width: 80, height: 80, borderRadius: 32, justifyContent: 'center', alignItems: 'center', shadowColor: '#000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.02, shadowRadius: 10, elevation: 1 },
+  profileInfo: { flex: 1 },
+  name: { fontSize: 24, fontWeight: '800', marginBottom: 6 },
+  levelTag: { flexDirection: 'row', alignItems: 'center', gap: 6 },
+  levelText: { fontSize: 13, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 },
+  editCircle: { width: 44, height: 44, borderRadius: 22, justifyContent: 'center', alignItems: 'center', shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.05, shadowRadius: 8, elevation: 1 },
+  statsRow: { flexDirection: 'row', gap: 12, marginBottom: 32 },
+  statCard: { flex: 1, padding: 20, borderRadius: 28, alignItems: 'center', gap: 8, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  statValue: { fontSize: 20, fontWeight: '800' },
+  statLabel: { fontSize: 12, fontWeight: '600' },
+  section: { marginBottom: 32 },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', gap: 10, marginBottom: 16 },
+  sectionTitle: { fontSize: 20, fontWeight: '800' },
+  sectionTitleSmall: { fontSize: 12, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 },
+  tagsContainer: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 },
+  tag: { paddingHorizontal: 16, paddingVertical: 10, borderRadius: 16, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  tagText: { fontSize: 14, fontWeight: '700', textTransform: 'capitalize' },
+  detailsCard: { padding: 20, borderRadius: 28, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  detailRow: { flexDirection: 'row', justifyContent: 'space-between', paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: 'rgba(0,0,0,0.03)' },
+  detailLabel: { fontSize: 14, fontWeight: '600' },
+  detailValue: { fontSize: 14, fontWeight: '700' },
+  accountSection: { alignItems: 'center', gap: 20, marginTop: 10 },
+  resetButton: { flexDirection: 'row', alignItems: 'center', gap: 10, paddingHorizontal: 24, paddingVertical: 16, borderRadius: 24, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.05, shadowRadius: 10, elevation: 2 },
+  resetText: { fontSize: 15, fontWeight: '700' },
+  footerText: { textAlign: 'center', fontSize: 12, fontWeight: '500', lineHeight: 20 },
 });
+

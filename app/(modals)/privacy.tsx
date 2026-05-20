@@ -1,4 +1,5 @@
-import { View, Text, ScrollView, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
 import { useTheme } from '@/lib/theme';
 
@@ -16,7 +17,7 @@ export default function PrivacyPolicyScreen() {
           <Text style={s.heading}>Privacy Policy for Nafs</Text>
 
           <Text style={s.body}>
-            Nafs ("we", "our", or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application.
+            {"Nafs (\"we\", \"our\", or \"the app\") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our mobile application."}
           </Text>
 
           <Text style={s.subheading}>1. Data Collection</Text>
@@ -47,10 +48,10 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={s.subheading}>5. Security</Text>
           <Text style={s.body}>
-            We use device-level secure storage for sensitive data such as your PIN. However, no method of electronic storage is 100% secure. We recommend using your device's built-in security features (screen lock, biometric authentication) for additional protection.
+            {"We use device-level secure storage for sensitive data such as your PIN. However, no method of electronic storage is 100% secure. We recommend using your device's built-in security features (screen lock, biometric authentication) for additional protection."}
           </Text>
 
-          <Text style={s.subheading}>6. Children's Privacy</Text>
+          <Text style={s.subheading}>{"6. Children's Privacy"}</Text>
           <Text style={s.body}>
             Nafs is suitable for users of all ages. We do not knowingly collect personal information from children, as we do not collect personal information from any users.
           </Text>
@@ -62,7 +63,7 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={s.subheading}>8. Changes to This Policy</Text>
           <Text style={s.body}>
-            We may update this Privacy Policy from time to time. Any changes will be reflected in the "Last updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.
+            {"We may update this Privacy Policy from time to time. Any changes will be reflected in the \"Last updated\" date above. Continued use of the app after changes constitutes acceptance of the updated policy."}
           </Text>
 
           <Text style={s.subheading}>9. Contact</Text>

@@ -113,7 +113,6 @@ export interface DayProgress {
 
 export interface AppState {
   isOnboarded: boolean;
-  isAuthenticated: boolean;
   userProfile: UserProfile | null;
   currentDay: number;
   dayProgress: Record<number, DayProgress>;
@@ -121,11 +120,6 @@ export interface AppState {
   streakDays: number;
   lastActiveDate: string;
   unlockedAchievements?: string[];
-}
-
-export interface AuthData {
-  pin: string;
-  createdAt: string;
 }
 
 export interface Achievement {

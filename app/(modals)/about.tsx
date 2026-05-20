@@ -1,4 +1,5 @@
-import { View, Text, ScrollView, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
 import { useTheme } from '@/lib/theme';
 import Constants from 'expo-constants';
@@ -27,7 +28,7 @@ export default function AboutScreen() {
           </Text>
 
           <View style={s.section}>
-            <Text style={s.sectionTitle}>What's Inside</Text>
+            <Text style={s.sectionTitle}>{"What's Inside"}</Text>
             <View style={s.card}>
               <Text style={s.bullet}>30-day structured program with daily themes</Text>
               <Text style={s.bullet}>Morning and evening dhikr with transliteration</Text>

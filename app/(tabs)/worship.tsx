@@ -1,13 +1,14 @@
-import { useState, useEffect, useCallback } from 'react';
-import { View, Text, ScrollView, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
-import { Platform } from 'react-native';
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
-import Animated, { ZoomIn } from 'react-native-reanimated';
+import Animated, { FadeInDown, ZoomIn, Layout } from 'react-native-reanimated';
+import { BlurView } from 'expo-blur';
 import { appStorage } from '@/lib/storage';
 import { getDayPlan } from '@/lib/planGenerator';
 import { AppState, DhikrItem, PrayerName } from '@/lib/types';
 import { useTheme } from '@/lib/theme';
-import { Minus, Plus, RotateCcw, Check, BookOpen } from 'lucide-react-native';
+import { Minus, Plus, RotateCcw, Check, BookOpen, Heart, Activity, ChevronLeft, ChevronRight } from 'lucide-react-native';
 
 const PRAYER_NAMES: { id: PrayerName; name: string; arabic: string; time: string }[] = [
   { id: 'fajr', name: 'Fajr', arabic: 'الفجر', time: 'Dawn' },
@@ -20,7 +21,7 @@ const PRAYER_NAMES: { id: PrayerName; name: string; arabic: string; time: string
 type Tab = 'dhikr' | 'prayer' | 'quran';
 
 export default function WorshipScreen() {
-  const { colors } = useTheme();
+  const { colors, mode } = useTheme();
   const [state, setState] = useState<AppState | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('dhikr');
   const [dhikrIndex, setDhikrIndex] = useState(0);
@@ -38,34 +39,32 @@ export default function WorshipScreen() {
     }
   };
 
-  const triggerHaptic = useCallback(() => {
-    if (Platform.OS !== 'web') Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+  const triggerHaptic = useCallback((style: Haptics.ImpactFeedbackStyle = Haptics.ImpactFeedbackStyle.Light) => {
+    if (Platform.OS !== 'web') Haptics.impactAsync(style);
   }, []);
 
-  if (!state) {
-    return <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}><Text style={[styles.loadingText, { color: colors.mutedText }]}>Loading...</Text></SafeAreaView>;
+  const dayPlan = useMemo(() => state ? getDayPlan(state.currentDay) : null, [state]);
+  
+  if (!state || !dayPlan) {
+    return <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}><Text style={styles.loadingText}>Preparing tools...</Text></SafeAreaView>;
   }
 
-  const dayPlan = getDayPlan(state.currentDay);
-  const morningDhikr = dayPlan.morningDhikr;
-  const eveningDhikr = dayPlan.eveningDhikr;
-  const allDhikr = [...morningDhikr.map(d => ({ ...d, time: 'morning' })), ...eveningDhikr.map(d => ({ ...d, time: 'evening' }))];
+  const allDhikr = [...dayPlan.morningDhikr.map(d => ({ ...d, time: 'morning' })), ...dayPlan.eveningDhikr.map(d => ({ ...d, time: 'evening' }))];
   const currentDhikr = allDhikr[dhikrIndex] as (DhikrItem & { time: string }) | undefined;
   const targetCount = currentDhikr?.count ?? 33;
 
   const incrementDhikr = () => {
     const newCount = dhikrCount + 1;
     setDhikrCount(newCount);
-    triggerHaptic();
+    triggerHaptic(Haptics.ImpactFeedbackStyle.Medium);
     if (newCount === targetCount && Platform.OS !== 'web') {
       Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     }
   };
 
-  const resetDhikr = () => { setDhikrCount(0); };
-
-  const nextDhikr = () => { setDhikrIndex((i) => Math.min(i + 1, allDhikr.length - 1)); setDhikrCount(0); };
-  const prevDhikr = () => { setDhikrIndex((i) => Math.max(i - 1, 0)); setDhikrCount(0); };
+  const resetDhikr = () => { setDhikrCount(0); triggerHaptic(); };
+  const nextDhikr = () => { setDhikrIndex((i) => Math.min(i + 1, allDhikr.length - 1)); setDhikrCount(0); triggerHaptic(); };
+  const prevDhikr = () => { setDhikrIndex((i) => Math.max(i - 1, 0)); setDhikrCount(0); triggerHaptic(); };
 
   const togglePrayer = async (prayer: PrayerName) => {
     const isCompleted = prayersCompleted.includes(prayer);
@@ -83,181 +82,143 @@ export default function WorshipScreen() {
   };
 
   const dhikrProgress = targetCount > 0 ? Math.min(dhikrCount / targetCount, 1) : 0;
-  const prayerProgress = prayersCompleted.length / 5;
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        <Text style={[styles.title, { color: colors.primaryGreen }]}>Worship Tools</Text>
-        <Text style={[styles.subtitle, { color: colors.mediumText }]}>Interactive aids for your daily practice</Text>
+        <Animated.View entering={FadeInDown} style={styles.header}>
+          <Text style={[styles.title, { color: colors.primaryGreen }]}>Worship Space</Text>
+          <Text style={[styles.subtitle, { color: colors.mediumText }]}>Nurture your heart through daily practice</Text>
+        </Animated.View>
 
-        <View style={[styles.tabRow, { backgroundColor: colors.cardBackground }]}>
-          {(['dhikr', 'prayer', 'quran'] as Tab[]).map((tab) => (
-            <TouchableOpacity
-              key={tab}
-              style={[styles.tabButton, activeTab === tab && { backgroundColor: colors.mediumGreen }]}
-              onPress={() => setActiveTab(tab)}
-              accessibilityLabel={`${tab} tab`}
-              accessibilityRole="button"
-            >
-              <Text style={[styles.tabText, activeTab === tab && styles.tabTextActive]}>
-                {tab === 'dhikr' ? 'Dhikr' : tab === 'prayer' ? 'Prayers' : 'Quran'}
-              </Text>
-            </TouchableOpacity>
-          ))}
+        <View style={styles.tabContainer}>
+          <BlurView intensity={Platform.OS === 'ios' ? 40 : 100} tint={mode === 'dark' ? 'dark' : 'light'} style={[styles.tabBar, { backgroundColor: mode === 'dark' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.7)' }]}>
+            {(['dhikr', 'prayer', 'quran'] as Tab[]).map((tab) => (
+              <TouchableOpacity
+                key={tab}
+                style={[styles.tabButton, activeTab === tab && { backgroundColor: colors.mediumGreen }]}
+                onPress={() => { setActiveTab(tab); triggerHaptic(); }}
+              >
+                <Text style={[styles.tabText, { color: activeTab === tab ? '#FFFFFF' : colors.mutedText }]}>
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </Text>
+              </TouchableOpacity>
+            ))}
+          </BlurView>
         </View>
 
         {activeTab === 'dhikr' && currentDhikr && (
-          <View style={styles.dhikrSection}>
-            <View style={[styles.dhikrTimeBadge, { backgroundColor: currentDhikr.time === 'morning' ? colors.paleGold : colors.paleGreen }]}>
-              <Text style={[styles.dhikrTimeText, { color: currentDhikr.time === 'morning' ? colors.gold : colors.primaryGreen }]}>
-                {currentDhikr.time === 'morning' ? 'Morning Adhkar' : 'Evening Adhkar'}
-              </Text>
-            </View>
-
-            <View style={[styles.dhikrCard, { backgroundColor: colors.cardBackground }]}>
+          <Animated.View entering={FadeInDown} style={styles.dhikrSection}>
+            <View style={[styles.dhikrCard, { backgroundColor: colors.white }]}>
+              <View style={[styles.timeTag, { backgroundColor: currentDhikr.time === 'morning' ? colors.paleGold : colors.paleGreen }]}>
+                <Text style={[styles.timeTagText, { color: currentDhikr.time === 'morning' ? colors.gold : colors.primaryGreen }]}>
+                  {currentDhikr.time === 'morning' ? 'Morning' : 'Evening'}
+                </Text>
+              </View>
               <Text style={[styles.dhikrArabic, { color: colors.primaryGreen }]}>{currentDhikr.arabic}</Text>
-              <Text style={[styles.dhikrTransliteration, { color: colors.mediumText }]}>{currentDhikr.transliteration}</Text>
-              <Text style={[styles.dhikrTranslation, { color: colors.darkText }]}>{currentDhikr.translation}</Text>
+              <Text style={[styles.dhikrTrans, { color: colors.mediumText }]}>{currentDhikr.transliteration}</Text>
+              <Text style={[styles.dhikrTransText, { color: colors.darkText }]}>{currentDhikr.translation}</Text>
             </View>
 
-            <View style={styles.counterSection}>
-              <View style={[styles.counterCircle, { backgroundColor: colors.paleGreen, borderColor: colors.mediumGreen }]}>
-                <Text style={[styles.counterNumber, { color: colors.primaryGreen }]}>{dhikrCount}</Text>
-                <Text style={[styles.counterTarget, { color: colors.mediumText }]}>/ {targetCount}</Text>
-              </View>
-
-              <View style={[styles.progressBar, { backgroundColor: colors.paleGreen }]}>
-                <Animated.View style={[styles.progressFill, { width: `${dhikrProgress * 100}%`, backgroundColor: dhikrCount >= targetCount ? colors.success : colors.mediumGreen }]} />
-              </View>
-
-              {dhikrCount >= targetCount && (
-                <Animated.View entering={ZoomIn} style={[styles.completedBadge, { backgroundColor: colors.success }]}>
-                  <Check size={16} color="#FFFFFF" strokeWidth={3} />
-                  <Text style={styles.completedText}>Complete!</Text>
-                </Animated.View>
-              )}
-
-              <View style={styles.counterButtons}>
-                <TouchableOpacity style={[styles.counterButton, { backgroundColor: colors.cardBackground }]} onPress={resetDhikr} accessibilityLabel="Reset counter">
-                  <RotateCcw size={20} color={colors.mediumGreen} />
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.tapButton, { backgroundColor: colors.mediumGreen }]} onPress={incrementDhikr} accessibilityLabel="Tap to count dhikr" accessibilityRole="button">
-                  <Text style={styles.tapButtonText}>Tap</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={[styles.counterButton, { backgroundColor: colors.cardBackground }]} onPress={() => setDhikrCount(c => Math.max(0, c - 1))} accessibilityLabel="Subtract one">
-                  <Minus size={20} color={colors.mediumGreen} />
-                </TouchableOpacity>
-              </View>
-            </View>
-
-            <View style={styles.dhikrNav}>
-              <TouchableOpacity style={[styles.navButton, { backgroundColor: colors.cardBackground }]} onPress={prevDhikr} disabled={dhikrIndex === 0} accessibilityLabel="Previous dhikr">
-                <Text style={[styles.navButtonText, { color: colors.mediumGreen }]}>Previous</Text>
+            <View style={styles.counterContainer}>
+              <TouchableOpacity 
+                activeOpacity={0.8}
+                style={[styles.counterMain, { backgroundColor: colors.white, borderColor: colors.mediumGreen }]}
+                onPress={incrementDhikr}
+              >
+                <View style={[styles.counterInner, { backgroundColor: colors.paleGreen }]}>
+                  <Text style={[styles.counterValue, { color: colors.primaryGreen }]}>{dhikrCount}</Text>
+                  <Text style={[styles.counterGoal, { color: colors.mediumGreen }]}>of {targetCount}</Text>
+                </View>
+                <Animated.View 
+                  layout={Layout.springify()}
+                  style={[styles.counterProgress, { height: `${dhikrProgress * 100}%`, backgroundColor: colors.mediumGreen, opacity: 0.1 }]} 
+                />
               </TouchableOpacity>
-              <Text style={[styles.dhikrPageText, { color: colors.mutedText }]}>{dhikrIndex + 1} of {allDhikr.length}</Text>
-              <TouchableOpacity style={[styles.navButton, { backgroundColor: colors.cardBackground }]} onPress={nextDhikr} disabled={dhikrIndex === allDhikr.length - 1} accessibilityLabel="Next dhikr">
-                <Text style={[styles.navButtonText, { color: colors.mediumGreen }]}>Next</Text>
-              </TouchableOpacity>
+
+              <View style={styles.counterActions}>
+                <TouchableOpacity style={[styles.actionCircle, { backgroundColor: colors.white }]} onPress={prevDhikr} disabled={dhikrIndex === 0}>
+                  <ChevronLeft size={20} color={dhikrIndex === 0 ? colors.border : colors.mediumGreen} />
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.actionCircle, { backgroundColor: colors.white }]} onPress={resetDhikr}>
+                  <RotateCcw size={20} color={colors.gold} />
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.actionCircle, { backgroundColor: colors.white }]} onPress={nextDhikr} disabled={dhikrIndex === allDhikr.length - 1}>
+                  <ChevronRight size={20} color={dhikrIndex === allDhikr.length - 1 ? colors.border : colors.mediumGreen} />
+                </TouchableOpacity>
+              </View>
+              <Text style={[styles.pageIndicator, { color: colors.mutedText }]}>{dhikrIndex + 1} / {allDhikr.length}</Text>
             </View>
-          </View>
+          </Animated.View>
         )}
 
         {activeTab === 'prayer' && (
-          <View style={styles.prayerSection}>
-            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Today's Prayers</Text>
-            <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>Day {state.currentDay} - Track your 5 daily prayers</Text>
-
-            <View style={[styles.prayerProgressCard, { backgroundColor: colors.cardBackground }]}>
-              <Text style={[styles.prayerProgressLabel, { color: colors.mutedText }]}>Completed</Text>
-              <Text style={[styles.prayerProgressValue, { color: colors.primaryGreen }]}>{prayersCompleted.length}/5</Text>
-              <View style={[styles.progressBar, { backgroundColor: colors.paleGreen }]}>
-                <View style={[styles.progressFill, { width: `${prayerProgress * 100}%`, backgroundColor: colors.mediumGreen }]} />
-              </View>
+          <Animated.View entering={FadeInDown} style={styles.prayerSection}>
+            <View style={styles.prayerList}>
+              {PRAYER_NAMES.map((prayer, index) => {
+                const isCompleted = prayersCompleted.includes(prayer.id);
+                return (
+                  <Animated.View key={prayer.id} entering={FadeInDown.delay(index * 100)} layout={Layout.springify()}>
+                    <TouchableOpacity
+                      style={[styles.prayerCard, { backgroundColor: colors.white }]}
+                      onPress={() => togglePrayer(prayer.id)}
+                    >
+                      <View style={styles.prayerLeft}>
+                        <Text style={[styles.prayerName, { color: colors.darkText }]}>{prayer.name}</Text>
+                        <Text style={[styles.prayerTime, { color: colors.mutedText }]}>{prayer.time}</Text>
+                      </View>
+                      <Text style={[styles.prayerArabic, { color: colors.gold }]}>{prayer.arabic}</Text>
+                      <View style={[styles.prayerCheck, { backgroundColor: isCompleted ? colors.mediumGreen : colors.paleGreen }]}>
+                        {isCompleted && <Check size={16} color="#FFFFFF" />}
+                      </View>
+                    </TouchableOpacity>
+                  </Animated.View>
+                );
+              })}
             </View>
 
-            {PRAYER_NAMES.map((prayer) => {
-              const isCompleted = prayersCompleted.includes(prayer.id);
-              return (
-                <TouchableOpacity
-                  key={prayer.id}
-                  style={[styles.prayerCard, { backgroundColor: colors.cardBackground, borderLeftColor: isCompleted ? colors.success : colors.gold }]}
-                  onPress={() => togglePrayer(prayer.id)}
-                  accessibilityLabel={`${prayer.name} prayer - ${isCompleted ? 'completed' : 'not completed'}`}
-                  accessibilityRole="button"
-                >
-                  <View style={styles.prayerInfo}>
-                    <Text style={[styles.prayerName, { color: colors.darkText }]}>{prayer.name}</Text>
-                    <Text style={[styles.prayerArabic, { color: colors.gold }]}>{prayer.arabic}</Text>
-                    <Text style={[styles.prayerTime, { color: colors.mutedText }]}>{prayer.time}</Text>
-                  </View>
-                  <View style={[styles.prayerCheck, { backgroundColor: isCompleted ? colors.success : colors.paleGreen }]}>
-                    {isCompleted ? <Check size={18} color="#FFFFFF" strokeWidth={3} /> : <Text style={[styles.prayerCheckText, { color: colors.mutedText }]}>Mark</Text>}
-                  </View>
-                </TouchableOpacity>
-              );
-            })}
-
-            {prayersCompleted.length === 5 && (
-              <Animated.View entering={ZoomIn} style={[styles.allPrayersCard, { backgroundColor: colors.paleGreen }]}>
-                <Text style={[styles.allPrayersText, { color: colors.primaryGreen }]}>Masha'Allah! All 5 prayers completed today!</Text>
-              </Animated.View>
-            )}
-
             {dayPlan.prayerFocus && (
-              <View style={[styles.focusCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.gold }]}>
-                <Text style={[styles.focusTitle, { color: colors.darkText }]}>Today's Prayer Focus</Text>
-                <Text style={[styles.focusPrayer, { color: colors.primaryGreen }]}>{dayPlan.prayerFocus.prayer}</Text>
+              <View style={[styles.focusCard, { backgroundColor: colors.paleGold }]}>
+                <View style={styles.focusHeader}>
+                  <Activity size={18} color={colors.gold} />
+                  <Text style={[styles.focusTitle, { color: colors.gold }]}>Daily Focus</Text>
+                </View>
+                <Text style={[styles.focusPrayer, { color: colors.darkText }]}>{dayPlan.prayerFocus.prayer}</Text>
                 <Text style={[styles.focusTip, { color: colors.mediumText }]}>{dayPlan.prayerFocus.tip}</Text>
-                {dayPlan.prayerFocus.arabicDua && (
-                  <View style={[styles.duaBox, { backgroundColor: colors.paleGreen }]}>
-                    <Text style={[styles.duaArabic, { color: colors.primaryGreen }]}>{dayPlan.prayerFocus.arabicDua}</Text>
-                    {dayPlan.prayerFocus.duaTransliteration && <Text style={[styles.duaTrans, { color: colors.mediumText }]}>{dayPlan.prayerFocus.duaTransliteration}</Text>}
-                    {dayPlan.prayerFocus.duaTranslation && <Text style={[styles.duaTransText, { color: colors.darkText }]}>{dayPlan.prayerFocus.duaTranslation}</Text>}
-                  </View>
-                )}
               </View>
             )}
-          </View>
+          </Animated.View>
         )}
 
         {activeTab === 'quran' && (
-          <View style={styles.quranSection}>
-            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Today's Quran Goal</Text>
-            <Text style={[styles.sectionSubtitle, { color: colors.mutedText }]}>Day {state.currentDay}</Text>
-
-            <View style={[styles.quranCard, { backgroundColor: colors.cardBackground }]}>
+          <Animated.View entering={FadeInDown} style={styles.quranSection}>
+            <View style={[styles.quranCard, { backgroundColor: colors.white }]}>
               <View style={styles.quranHeader}>
-                <BookOpen size={24} color={colors.gold} />
-                <View style={styles.quranInfo}>
+                <BookOpen size={24} color={colors.mediumGreen} />
+                <View>
                   <Text style={[styles.quranSurah, { color: colors.primaryGreen }]}>{dayPlan.quranGoal.surah}</Text>
-                  <Text style={[styles.quranAyahs, { color: colors.mediumText }]}>{dayPlan.quranGoal.ayahs}</Text>
+                  <Text style={[styles.quranAyahs, { color: colors.mutedText }]}>{dayPlan.quranGoal.ayahs}</Text>
                 </View>
               </View>
-              <Text style={[styles.quranDescription, { color: colors.darkText }]}>{dayPlan.quranGoal.description}</Text>
-              <View style={[styles.quranTranslationBox, { backgroundColor: colors.paleGreen }]}>
-                <Text style={[styles.quranTranslation, { color: colors.darkText }]}>{dayPlan.quranGoal.translation}</Text>
+              <Text style={[styles.quranDesc, { color: colors.darkText }]}>{dayPlan.quranGoal.description}</Text>
+            </View>
+
+            <View style={[styles.utilityCard, { backgroundColor: colors.paleGreen }]}>
+              <Heart size={20} color={colors.primaryGreen} />
+              <View style={styles.utilityContent}>
+                <Text style={[styles.utilityTitle, { color: colors.primaryGreen }]}>{dayPlan.sunnahPractice.title}</Text>
+                <Text style={[styles.utilityDesc, { color: colors.mediumText }]}>{dayPlan.sunnahPractice.description}</Text>
               </View>
             </View>
 
-            <View style={[styles.sunnahCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.freshGreen }]}>
-              <Text style={[styles.sunnahTitle, { color: colors.darkText }]}>Today's Sunnah Practice</Text>
-              <Text style={[styles.sunnahName, { color: colors.primaryGreen }]}>{dayPlan.sunnahPractice.title}</Text>
-              <Text style={[styles.sunnahDesc, { color: colors.mediumText }]}>{dayPlan.sunnahPractice.description}</Text>
-              <Text style={[styles.sunnahSource, { color: colors.gold }]}>{dayPlan.sunnahPractice.source}</Text>
+            <View style={[styles.utilityCard, { backgroundColor: colors.white }]}>
+              <Text style={[styles.utilityLabel, { color: colors.gold }]}>Character</Text>
+              <Text style={[styles.utilityTitle, { color: colors.darkText }]}>{dayPlan.characterGoal.trait}</Text>
+              <Text style={[styles.utilityDesc, { color: colors.mediumText }]}>{dayPlan.characterGoal.description}</Text>
             </View>
-
-            <View style={[styles.characterCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.gold }]}>
-              <Text style={[styles.characterTitle, { color: colors.darkText }]}>Character Building</Text>
-              <Text style={[styles.characterTrait, { color: colors.primaryGreen }]}>{dayPlan.characterGoal.trait} ({dayPlan.characterGoal.arabicTerm})</Text>
-              <Text style={[styles.characterDesc, { color: colors.mediumText }]}>{dayPlan.characterGoal.description}</Text>
-              <View style={[styles.actionBox, { backgroundColor: colors.paleGold }]}>
-                <Text style={[styles.actionLabel, { color: colors.gold }]}>Action:</Text>
-                <Text style={[styles.actionText, { color: colors.darkText }]}>{dayPlan.characterGoal.action}</Text>
-              </View>
-            </View>
-          </View>
+          </Animated.View>
         )}
+        <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -265,82 +226,57 @@ export default function WorshipScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  scrollContent: { paddingHorizontal: 16, paddingVertical: 16 },
-  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 24 },
-  title: { fontSize: 28, fontWeight: '700', marginBottom: 4 },
-  subtitle: { fontSize: 14, marginBottom: 20 },
-  tabRow: { flexDirection: 'row', borderRadius: 12, padding: 4, marginBottom: 20 },
-  tabButton: { flex: 1, paddingVertical: 10, borderRadius: 10, alignItems: 'center' },
-  tabText: { fontSize: 14, fontWeight: '600', color: '#808080' },
-  tabTextActive: { color: '#FFFFFF' },
+  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 40 },
+  scrollContent: { paddingHorizontal: 20, paddingVertical: 24 },
+  header: { marginBottom: 24 },
+  title: { fontSize: 32, fontWeight: '800', marginBottom: 4 },
+  subtitle: { fontSize: 15, fontWeight: '500' },
+  tabContainer: { marginBottom: 32, borderRadius: 24, overflow: 'hidden' },
+  tabBar: { flexDirection: 'row', padding: 6, borderRadius: 24 },
+  tabButton: { flex: 1, paddingVertical: 12, borderRadius: 20, alignItems: 'center' },
+  tabText: { fontSize: 14, fontWeight: '700' },
   // Dhikr
-  dhikrSection: { marginBottom: 24 },
-  dhikrTimeBadge: { alignSelf: 'flex-start', borderRadius: 20, paddingVertical: 4, paddingHorizontal: 12, marginBottom: 12 },
-  dhikrTimeText: { fontSize: 12, fontWeight: '600' },
-  dhikrCard: { borderRadius: 16, padding: 20, marginBottom: 20, alignItems: 'center' },
-  dhikrArabic: { fontSize: 24, fontWeight: '700', textAlign: 'center', lineHeight: 40, marginBottom: 12 },
-  dhikrTransliteration: { fontSize: 14, textAlign: 'center', fontStyle: 'italic', marginBottom: 8, lineHeight: 20 },
-  dhikrTranslation: { fontSize: 13, textAlign: 'center', lineHeight: 20 },
-  counterSection: { alignItems: 'center', marginBottom: 20 },
-  counterCircle: { width: 160, height: 160, borderRadius: 80, justifyContent: 'center', alignItems: 'center', borderWidth: 4, marginBottom: 16 },
-  counterNumber: { fontSize: 48, fontWeight: '700' },
-  counterTarget: { fontSize: 16 },
-  progressBar: { height: 8, borderRadius: 4, overflow: 'hidden', width: '80%', marginBottom: 12 },
-  progressFill: { height: '100%' },
-  completedBadge: { flexDirection: 'row', alignItems: 'center', gap: 6, borderRadius: 20, paddingVertical: 6, paddingHorizontal: 14, marginBottom: 12 },
-  completedText: { color: '#FFFFFF', fontSize: 14, fontWeight: '600' },
-  counterButtons: { flexDirection: 'row', alignItems: 'center', gap: 16 },
-  counterButton: { width: 48, height: 48, borderRadius: 24, justifyContent: 'center', alignItems: 'center' },
-  tapButton: { width: 80, height: 80, borderRadius: 40, justifyContent: 'center', alignItems: 'center' },
-  tapButtonText: { color: '#FFFFFF', fontSize: 20, fontWeight: '700' },
-  dhikrNav: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  navButton: { borderRadius: 10, paddingVertical: 8, paddingHorizontal: 16 },
-  navButtonText: { fontSize: 14, fontWeight: '600' },
-  dhikrPageText: { fontSize: 13 },
+  dhikrSection: { gap: 24 },
+  dhikrCard: { padding: 24, borderRadius: 32, alignItems: 'center', shadowColor: '#000', shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.02, shadowRadius: 12, elevation: 2 },
+  timeTag: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 12, marginBottom: 16 },
+  timeTagText: { fontSize: 12, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 },
+  dhikrArabic: { fontSize: 28, fontWeight: '700', textAlign: 'center', marginBottom: 16, lineHeight: 44 },
+  dhikrTrans: { fontSize: 15, fontStyle: 'italic', textAlign: 'center', marginBottom: 8, lineHeight: 22 },
+  dhikrTransText: { fontSize: 14, textAlign: 'center', lineHeight: 22 },
+  counterContainer: { alignItems: 'center', gap: 24 },
+  counterMain: { width: 200, height: 200, borderRadius: 100, padding: 12, borderWidth: 2, justifyContent: 'center', alignItems: 'center', overflow: 'hidden' },
+  counterInner: { width: '100%', height: '100%', borderRadius: 100, justifyContent: 'center', alignItems: 'center', zIndex: 1 },
+  counterValue: { fontSize: 56, fontWeight: '800' },
+  counterGoal: { fontSize: 14, fontWeight: '600', marginTop: -4 },
+  counterProgress: { position: 'absolute', bottom: 0, width: '200%', zIndex: 0 },
+  counterActions: { flexDirection: 'row', gap: 20, alignItems: 'center' },
+  actionCircle: { width: 52, height: 52, borderRadius: 26, justifyContent: 'center', alignItems: 'center', shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.05, shadowRadius: 8, elevation: 2 },
+  pageIndicator: { fontSize: 13, fontWeight: '600' },
   // Prayer
-  prayerSection: { marginBottom: 24 },
-  sectionTitle: { fontSize: 18, fontWeight: '700', marginBottom: 4 },
-  sectionSubtitle: { fontSize: 13, marginBottom: 16 },
-  prayerProgressCard: { borderRadius: 12, padding: 14, marginBottom: 16 },
-  prayerProgressLabel: { fontSize: 12, marginBottom: 4 },
-  prayerProgressValue: { fontSize: 24, fontWeight: '700', marginBottom: 8 },
-  prayerCard: { borderRadius: 12, padding: 14, marginBottom: 10, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', borderLeftWidth: 4 },
-  prayerInfo: { flex: 1 },
-  prayerName: { fontSize: 16, fontWeight: '700', marginBottom: 2 },
-  prayerArabic: { fontSize: 14, marginBottom: 2 },
-  prayerTime: { fontSize: 12 },
-  prayerCheck: { width: 48, height: 48, borderRadius: 24, justifyContent: 'center', alignItems: 'center' },
-  prayerCheckText: { fontSize: 11, fontWeight: '600' },
-  allPrayersCard: { borderRadius: 12, padding: 16, alignItems: 'center', marginTop: 8, marginBottom: 16 },
-  allPrayersText: { fontSize: 16, fontWeight: '700' },
-  focusCard: { borderRadius: 12, padding: 14, borderLeftWidth: 4, marginTop: 8 },
-  focusTitle: { fontSize: 14, fontWeight: '700', marginBottom: 8 },
-  focusPrayer: { fontSize: 16, fontWeight: '600', marginBottom: 6 },
-  focusTip: { fontSize: 13, lineHeight: 20, marginBottom: 10 },
-  duaBox: { borderRadius: 10, padding: 12, marginTop: 8 },
-  duaArabic: { fontSize: 18, fontWeight: '600', textAlign: 'center', lineHeight: 28, marginBottom: 6 },
-  duaTrans: { fontSize: 12, fontStyle: 'italic', textAlign: 'center', marginBottom: 4 },
-  duaTransText: { fontSize: 12, textAlign: 'center' },
+  prayerSection: { gap: 24 },
+  prayerList: { gap: 12 },
+  prayerCard: { flexDirection: 'row', alignItems: 'center', padding: 20, borderRadius: 28, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  prayerLeft: { flex: 1 },
+  prayerName: { fontSize: 18, fontWeight: '700', marginBottom: 2 },
+  prayerTime: { fontSize: 13, fontWeight: '500' },
+  prayerArabic: { fontSize: 18, fontWeight: '600', marginRight: 20 },
+  prayerCheck: { width: 32, height: 32, borderRadius: 16, justifyContent: 'center', alignItems: 'center' },
+  focusCard: { padding: 20, borderRadius: 28 },
+  focusHeader: { flexDirection: 'row', alignItems: 'center', gap: 8, marginBottom: 12 },
+  focusTitle: { fontSize: 12, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1 },
+  focusPrayer: { fontSize: 18, fontWeight: '700', marginBottom: 6 },
+  focusTip: { fontSize: 14, lineHeight: 22 },
   // Quran
-  quranSection: { marginBottom: 24 },
-  quranCard: { borderRadius: 16, padding: 16, marginBottom: 16 },
-  quranHeader: { flexDirection: 'row', alignItems: 'center', gap: 12, marginBottom: 12 },
-  quranInfo: { flex: 1 },
-  quranSurah: { fontSize: 18, fontWeight: '700', marginBottom: 2 },
-  quranAyahs: { fontSize: 13 },
-  quranDescription: { fontSize: 14, lineHeight: 20, marginBottom: 12 },
-  quranTranslationBox: { borderRadius: 10, padding: 12 },
-  quranTranslation: { fontSize: 13, lineHeight: 20, fontStyle: 'italic' },
-  sunnahCard: { borderRadius: 12, padding: 14, borderLeftWidth: 4, marginBottom: 16 },
-  sunnahTitle: { fontSize: 14, fontWeight: '700', marginBottom: 8 },
-  sunnahName: { fontSize: 16, fontWeight: '600', marginBottom: 6 },
-  sunnahDesc: { fontSize: 13, lineHeight: 20, marginBottom: 8 },
-  sunnahSource: { fontSize: 12, fontWeight: '600' },
-  characterCard: { borderRadius: 12, padding: 14, borderLeftWidth: 4, marginBottom: 16 },
-  characterTitle: { fontSize: 14, fontWeight: '700', marginBottom: 8 },
-  characterTrait: { fontSize: 16, fontWeight: '600', marginBottom: 6 },
-  characterDesc: { fontSize: 13, lineHeight: 20, marginBottom: 10 },
-  actionBox: { borderRadius: 10, padding: 12 },
-  actionLabel: { fontSize: 11, fontWeight: '700', marginBottom: 4 },
-  actionText: { fontSize: 13, lineHeight: 20 },
+  quranSection: { gap: 16 },
+  quranCard: { padding: 24, borderRadius: 32, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  quranHeader: { flexDirection: 'row', alignItems: 'center', gap: 16, marginBottom: 16 },
+  quranSurah: { fontSize: 22, fontWeight: '800' },
+  quranAyahs: { fontSize: 14, fontWeight: '600' },
+  quranDesc: { fontSize: 15, lineHeight: 24 },
+  utilityCard: { padding: 20, borderRadius: 28, gap: 12 },
+  utilityContent: { flex: 1 },
+  utilityLabel: { fontSize: 11, fontWeight: '800', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 4 },
+  utilityTitle: { fontSize: 18, fontWeight: '700', marginBottom: 4 },
+  utilityDesc: { fontSize: 14, lineHeight: 22 },
 });
+

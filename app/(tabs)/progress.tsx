@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, SafeAreaView, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter } from 'expo-router';
+import Animated, { FadeInDown, Layout } from 'react-native-reanimated';
+import { BlurView } from 'expo-blur';
 import { appStorage } from '@/lib/storage';
 import { getDaysCompleted, getOverallProgress, getLevelTitle } from '@/lib/planGenerator';
 import { AppState } from '@/lib/types';
 import { useTheme } from '@/lib/theme';
 import { getUnlockedAchievements } from '@/lib/achievements';
-import { Trophy, BookOpen, Star } from 'lucide-react-native';
+import { Trophy, BookOpen, Star, TrendingUp, Award } from 'lucide-react-native';
 
 export default function ProgressScreen() {
-  const { colors } = useTheme();
+  const { colors, mode } = useTheme();
   const router = useRouter();
   const [state, setState] = useState<AppState | null>(null);
 
@@ -17,7 +20,7 @@ export default function ProgressScreen() {
 
   const loadData = async () => { setState(await appStorage.getState()); };
 
-  if (!state) return <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}><Text style={[styles.loadingText, { color: colors.mutedText }]}>Loading...</Text></SafeAreaView>;
+  if (!state) return <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}><Text style={styles.loadingText}>Gathering your growth...</Text></SafeAreaView>;
 
   const daysCompleted = getDaysCompleted(state.dayProgress);
   const overallProgress = getOverallProgress(state.dayProgress);
@@ -30,7 +33,6 @@ export default function ProgressScreen() {
     { name: 'Dhikr', key: 'dhikr', icon: '📿' },
     { name: 'Sunnah', key: 'sunnah', icon: '🌙' },
     { name: 'Character', key: 'character', icon: '💎' },
-    { name: 'Reflection', key: 'reflection', icon: '💭' },
   ].map(cat => {
     let count = 0;
     for (const progress of Object.values(state.dayProgress)) {
@@ -41,92 +43,105 @@ export default function ProgressScreen() {
     return { ...cat, count };
   });
 
-  const totalTasksCompleted = categoryStats.reduce((sum, c) => sum + c.count, 0);
-
-  const milestones = [
-    { label: 'Complete First Week', target: 7 },
-    { label: 'Halfway There!', target: 14 },
-    { label: 'Three Weeks Strong', target: 21 },
-    { label: 'Complete 30-Day Journey', target: 30 },
-  ];
-
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: colors.cream }]}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
-        <View style={styles.header}>
-          <Text style={[styles.title, { color: colors.primaryGreen }]}>Your Progress</Text>
-          <Text style={[styles.subtitle, { color: colors.mediumText }]}>Spiritual Growth Metrics</Text>
+        <Animated.View entering={FadeInDown} style={styles.header}>
+          <Text style={[styles.title, { color: colors.primaryGreen }]}>Your Growth</Text>
+          <Text style={[styles.subtitle, { color: colors.mediumText }]}>Nurturing your soul, step by step</Text>
+        </Animated.View>
+
+        <View style={styles.mainStatsContainer}>
+          <BlurView intensity={Platform.OS === 'ios' ? 40 : 100} tint={mode === 'dark' ? 'dark' : 'light'} style={[styles.mainStatsCard, { backgroundColor: mode === 'dark' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.7)' }]}>
+            <View style={styles.progressHeader}>
+              <View>
+                <Text style={[styles.levelLabel, { color: colors.mutedText }]}>Current Level</Text>
+                <Text style={[styles.levelName, { color: colors.primaryGreen }]}>{levelInfo.level}</Text>
+              </View>
+              <Award size={32} color={colors.gold} />
+            </View>
+
+            <View style={styles.overallProgressContainer}>
+              <View style={styles.progressInfo}>
+                <Text style={[styles.progressTitle, { color: colors.darkText }]}>Journey Completion</Text>
+                <Text style={[styles.progressPercent, { color: colors.mediumGreen }]}>{Math.round(overallProgress)}%</Text>
+              </View>
+              <View style={[styles.progressBar, { backgroundColor: colors.paleGreen }]}>
+                <Animated.View layout={Layout.springify()} style={[styles.progressFill, { width: `${overallProgress}%`, backgroundColor: colors.mediumGreen }]} />
+              </View>
+            </View>
+
+            <View style={styles.statsGrid}>
+              <View style={styles.statBox}>
+                <Text style={[styles.statValue, { color: colors.gold }]}>{daysCompleted}</Text>
+                <Text style={[styles.statLabel, { color: colors.mutedText }]}>Days</Text>
+              </View>
+              <View style={styles.statDivider} />
+              <View style={styles.statBox}>
+                <Text style={[styles.statValue, { color: colors.gold }]}>{state.totalPoints}</Text>
+                <Text style={[styles.statLabel, { color: colors.mutedText }]}>Points</Text>
+              </View>
+              <View style={styles.statDivider} />
+              <View style={styles.statBox}>
+                <Text style={[styles.statValue, { color: colors.gold }]}>{state.streakDays}</Text>
+                <Text style={[styles.statLabel, { color: colors.mutedText }]}>Streak</Text>
+              </View>
+            </View>
+          </BlurView>
         </View>
 
-        <View style={[styles.mainStatsCard, { backgroundColor: colors.cardBackground }]}>
-          <View style={[styles.progressCircle, { backgroundColor: colors.paleGreen }]}>
-            <Text style={[styles.progressPercent, { color: colors.primaryGreen }]}>{Math.round(overallProgress)}%</Text>
-            <Text style={[styles.progressLabel, { color: colors.mediumText }]}>Complete</Text>
-          </View>
-          <View style={styles.statsGrid}>
-            <View style={styles.statBlock}><Text style={[styles.statNumber, { color: colors.gold }]}>{daysCompleted}</Text><Text style={[styles.statName, { color: colors.mutedText }]}>Days Done</Text></View>
-            <View style={styles.statBlock}><Text style={[styles.statNumber, { color: colors.gold }]}>{state.totalPoints}</Text><Text style={[styles.statName, { color: colors.mutedText }]}>Points</Text></View>
-            <View style={styles.statBlock}><Text style={[styles.statNumber, { color: colors.gold }]}>{state.streakDays}</Text><Text style={[styles.statName, { color: colors.mutedText }]}>Streak</Text></View>
-          </View>
-        </View>
-
-        <View style={[styles.levelCard, { backgroundColor: colors.cardBackground, borderLeftColor: colors.gold }]}>
-          <Text style={[styles.levelLabel, { color: colors.mutedText }]}>Current Level</Text>
-          <Text style={[styles.levelName, { color: colors.mediumGreen }]}>{levelInfo.level}</Text>
-          <Text style={[styles.levelArabic, { color: colors.gold }]}>{levelInfo.arabic}</Text>
-        </View>
-
-        <View style={styles.quickLinks}>
-          <TouchableOpacity style={[styles.quickLinkCard, { backgroundColor: colors.cardBackground }]} onPress={() => router.push('/(modals)/achievements')} accessibilityLabel="View achievements" accessibilityRole="button">
-            <Trophy size={20} color={colors.gold} />
-            <View style={styles.quickLinkInfo}>
-              <Text style={[styles.quickLinkTitle, { color: colors.darkText }]}>Achievements</Text>
-              <Text style={[styles.quickLinkSub, { color: colors.mutedText }]}>{unlockedAchievements.length} unlocked</Text>
+        <View style={styles.quickActions}>
+          <TouchableOpacity 
+            style={[styles.actionCard, { backgroundColor: colors.white }]} 
+            onPress={() => router.push('/(modals)/achievements')}
+          >
+            <Trophy size={22} color={colors.gold} />
+            <View>
+              <Text style={[styles.actionTitle, { color: colors.darkText }]}>Achievements</Text>
+              <Text style={[styles.actionSub, { color: colors.mutedText }]}>{unlockedAchievements.length} Unlocked</Text>
             </View>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.quickLinkCard, { backgroundColor: colors.cardBackground }]} onPress={() => router.push('/(modals)/duas')} accessibilityLabel="Browse duas library" accessibilityRole="button">
-            <BookOpen size={20} color={colors.mediumGreen} />
-            <View style={styles.quickLinkInfo}>
-              <Text style={[styles.quickLinkTitle, { color: colors.darkText }]}>Duas Library</Text>
-              <Text style={[styles.quickLinkSub, { color: colors.mutedText }]}>Browse collections</Text>
+
+          <TouchableOpacity 
+            style={[styles.actionCard, { backgroundColor: colors.white }]} 
+            onPress={() => router.push('/(modals)/duas')}
+          >
+            <BookOpen size={22} color={colors.mediumGreen} />
+            <View>
+              <Text style={[styles.actionTitle, { color: colors.darkText }]}>Duas Library</Text>
+              <Text style={[styles.actionSub, { color: colors.mutedText }]}>Browse Collection</Text>
             </View>
           </TouchableOpacity>
         </View>
 
-        <View style={styles.categorySection}>
-          <Text style={[styles.categoryTitle, { color: colors.darkText }]}>Category Breakdown</Text>
-          <Text style={[styles.categorySubtitle, { color: colors.mutedText }]}>{totalTasksCompleted} total tasks completed</Text>
-          {categoryStats.map((cat) => {
-            const maxPossible = 30;
-            const percent = maxPossible > 0 ? (cat.count / maxPossible) * 100 : 0;
-            return (
-              <View key={cat.key} style={[styles.categoryBar, { backgroundColor: colors.cardBackground }]}>
-                <Text style={styles.categoryIcon}>{cat.icon}</Text>
-                <Text style={[styles.categoryName, { color: colors.darkText }]}>{cat.name}</Text>
-                <View style={[styles.categoryProgressBar, { backgroundColor: colors.paleGreen }]}>
-                  <View style={[styles.categoryProgressFill, { width: `${percent}%`, backgroundColor: colors.mediumGreen }]} />
+        <View style={styles.breakdownSection}>
+          <View style={styles.sectionHeader}>
+            <TrendingUp size={20} color={colors.mediumGreen} />
+            <Text style={[styles.sectionTitle, { color: colors.darkText }]}>Focus Breakdown</Text>
+          </View>
+          
+          <View style={[styles.breakdownCard, { backgroundColor: colors.white }]}>
+            {categoryStats.map((cat, index) => {
+              const max = 30; // Approximation for visualization
+              const percent = Math.min((cat.count / max) * 100, 100);
+              return (
+                <View key={cat.key} style={[styles.breakdownRow, index === categoryStats.length - 1 && { borderBottomWidth: 0 }]}>
+                  <Text style={styles.breakdownIcon}>{cat.icon}</Text>
+                  <View style={styles.breakdownInfo}>
+                    <View style={styles.breakdownLabelRow}>
+                      <Text style={[styles.breakdownName, { color: colors.darkText }]}>{cat.name}</Text>
+                      <Text style={[styles.breakdownCount, { color: colors.gold }]}>{cat.count}</Text>
+                    </View>
+                    <View style={[styles.smallProgressBar, { backgroundColor: colors.paleGreen }]}>
+                      <View style={[styles.smallProgressFill, { width: `${percent}%`, backgroundColor: colors.mediumGreen }]} />
+                    </View>
+                  </View>
                 </View>
-                <Text style={[styles.categoryCount, { color: colors.mutedText }]}>{cat.count}</Text>
-              </View>
-            );
-          })}
+              );
+            })}
+          </View>
         </View>
-
-        <View style={styles.milestoneSection}>
-          <Text style={[styles.milestoneTitle, { color: colors.darkText }]}>Milestones</Text>
-          {milestones.map((m) => {
-            const done = daysCompleted >= m.target;
-            return (
-              <View key={m.target} style={[styles.milestoneItem, { backgroundColor: colors.cardBackground }]}>
-                <View style={[styles.milestoneMark, { backgroundColor: done ? colors.success : colors.paleGreen }]}>
-                  <Text style={styles.milestoneIcon}>✓</Text>
-                </View>
-                <Text style={[styles.milestoneText, { color: colors.darkText }]}>{m.label}</Text>
-                <Text style={[styles.milestoneStatus, { color: colors.mutedText }]}>{done ? 'Done!' : `${daysCompleted}/${m.target}`}</Text>
-              </View>
-            );
-          })}
-        </View>
+        <View style={{ height: 40 }} />
       </ScrollView>
     </SafeAreaView>
   );
@@ -134,42 +149,42 @@ export default function ProgressScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  scrollContent: { paddingHorizontal: 16, paddingVertical: 16 },
-  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 24 },
-  header: { marginBottom: 20 },
-  title: { fontSize: 28, fontWeight: '700', marginBottom: 4 },
-  subtitle: { fontSize: 14 },
-  mainStatsCard: { borderRadius: 16, padding: 20, marginBottom: 16, alignItems: 'center' },
-  progressCircle: { width: 140, height: 140, borderRadius: 70, justifyContent: 'center', alignItems: 'center', marginBottom: 20 },
-  progressPercent: { fontSize: 36, fontWeight: '700' },
-  progressLabel: { fontSize: 12, marginTop: 4 },
-  statsGrid: { flexDirection: 'row', justifyContent: 'space-around', width: '100%' },
-  statBlock: { alignItems: 'center' },
-  statNumber: { fontSize: 22, fontWeight: '700', marginBottom: 4 },
-  statName: { fontSize: 11, textAlign: 'center' },
-  levelCard: { borderRadius: 16, padding: 16, marginBottom: 16, borderLeftWidth: 4 },
-  levelLabel: { fontSize: 12, fontWeight: '500', marginBottom: 4 },
-  levelName: { fontSize: 20, fontWeight: '700', marginBottom: 4 },
-  levelArabic: { fontSize: 14, fontWeight: '600' },
-  quickLinks: { flexDirection: 'row', gap: 12, marginBottom: 20 },
-  quickLinkCard: { flex: 1, borderRadius: 12, padding: 14, flexDirection: 'row', alignItems: 'center', gap: 10 },
-  quickLinkInfo: { flex: 1 },
-  quickLinkTitle: { fontSize: 14, fontWeight: '700' },
-  quickLinkSub: { fontSize: 11, marginTop: 2 },
-  categorySection: { marginBottom: 20 },
-  categoryTitle: { fontSize: 16, fontWeight: '700', marginBottom: 4 },
-  categorySubtitle: { fontSize: 12, marginBottom: 12 },
-  categoryBar: { borderRadius: 10, paddingVertical: 10, paddingHorizontal: 12, marginBottom: 8, flexDirection: 'row', alignItems: 'center', gap: 8 },
-  categoryIcon: { fontSize: 16 },
-  categoryName: { fontSize: 13, fontWeight: '600', width: 70 },
-  categoryProgressBar: { flex: 1, height: 8, borderRadius: 4, overflow: 'hidden' },
-  categoryProgressFill: { height: '100%' },
-  categoryCount: { fontSize: 12, fontWeight: '600', width: 30, textAlign: 'right' },
-  milestoneSection: { marginBottom: 24 },
-  milestoneTitle: { fontSize: 16, fontWeight: '700', marginBottom: 12 },
-  milestoneItem: { borderRadius: 12, paddingVertical: 12, paddingHorizontal: 14, marginBottom: 10, flexDirection: 'row', alignItems: 'center', gap: 12 },
-  milestoneMark: { width: 32, height: 32, borderRadius: 16, justifyContent: 'center', alignItems: 'center' },
-  milestoneIcon: { fontSize: 16, color: '#FFFFFF', fontWeight: '700' },
-  milestoneText: { fontSize: 13, fontWeight: '600', flex: 1 },
-  milestoneStatus: { fontSize: 11, fontWeight: '500' },
+  loadingText: { textAlign: 'center', fontSize: 16, marginTop: 40 },
+  scrollContent: { paddingHorizontal: 20, paddingVertical: 24 },
+  header: { marginBottom: 28 },
+  title: { fontSize: 32, fontWeight: '800', marginBottom: 4 },
+  subtitle: { fontSize: 15, fontWeight: '500' },
+  mainStatsContainer: { marginBottom: 32, borderRadius: 32, overflow: 'hidden' },
+  mainStatsCard: { padding: 24, borderRadius: 32 },
+  progressHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 },
+  levelLabel: { fontSize: 12, fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5, marginBottom: 4 },
+  levelName: { fontSize: 24, fontWeight: '800' },
+  overallProgressContainer: { marginBottom: 28 },
+  progressInfo: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 10 },
+  progressTitle: { fontSize: 15, fontWeight: '700' },
+  progressPercent: { fontSize: 20, fontWeight: '800' },
+  progressBar: { height: 10, borderRadius: 5, overflow: 'hidden' },
+  progressFill: { height: '100%', borderRadius: 5 },
+  statsGrid: { flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' },
+  statBox: { alignItems: 'center' },
+  statValue: { fontSize: 22, fontWeight: '800', marginBottom: 2 },
+  statLabel: { fontSize: 12, fontWeight: '600' },
+  statDivider: { width: 1, height: 30, backgroundColor: 'rgba(0,0,0,0.05)' },
+  quickActions: { flexDirection: 'row', gap: 12, marginBottom: 32 },
+  actionCard: { flex: 1, padding: 20, borderRadius: 28, gap: 12, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  actionTitle: { fontSize: 15, fontWeight: '700' },
+  actionSub: { fontSize: 11, fontWeight: '600' },
+  breakdownSection: { gap: 16 },
+  sectionHeader: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  sectionTitle: { fontSize: 20, fontWeight: '800' },
+  breakdownCard: { padding: 20, borderRadius: 32, shadowColor: '#000', shadowOffset: { width: 0, height: 2 }, shadowOpacity: 0.02, shadowRadius: 8, elevation: 1 },
+  breakdownRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 14, borderBottomWidth: 1, borderBottomColor: 'rgba(0,0,0,0.03)' },
+  breakdownIcon: { fontSize: 20, marginRight: 16 },
+  breakdownInfo: { flex: 1 },
+  breakdownLabelRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 },
+  breakdownName: { fontSize: 14, fontWeight: '700' },
+  breakdownCount: { fontSize: 14, fontWeight: '800' },
+  smallProgressBar: { height: 6, borderRadius: 3, overflow: 'hidden' },
+  smallProgressFill: { height: '100%', borderRadius: 3 },
 });
+
