@@ -44,26 +44,58 @@ export function resolveCalcSettings(
   };
 }
 
+/**
+ * adhan's recommended high-latitude rule depends on latitude magnitude only, so
+ * the hemisphere is ignored (southern and northern 53 degrees share a rule).
+ */
+export function highLatitudeRuleFor(latitude: number) {
+  return HighLatitudeRule.recommended(new Coordinates(Math.abs(latitude), 0));
+}
+
+const SIX_TIMES = ['fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha'] as const;
+const isValidDate = (d: Date) => Number.isFinite(d.getTime());
+
 export function getPrayerTimes(
   date: Date,
   coords: Coords,
   method: CalcMethodId,
   madhab: MadhabId
 ): DailyPrayerTimes {
-  const compute = (lat: number, lon: number) => {
+  const compute = (latitude: number) => {
     const params = CalculationMethod[method]();
     params.madhab = madhab === 'hanafi' ? Madhab.Hanafi : Madhab.Shafi;
-    params.highLatitudeRule = HighLatitudeRule.recommended(coords);
-    const t = new PrayerTimes(new Coordinates(lat, lon), date, params);
+    params.highLatitudeRule = highLatitudeRuleFor(latitude);
+    const t = new PrayerTimes(new Coordinates(latitude, coords.longitude), date, params);
     return { fajr: t.fajr, sunrise: t.sunrise, dhuhr: t.dhuhr, asr: t.asr, maghrib: t.maghrib, isha: t.isha };
   };
-  const exact = compute(coords.latitude, coords.longitude);
-  const allFinite = PRAYER_ORDER.every((p) => Number.isFinite(exact[p].getTime()));
-  if (allFinite) return { ...exact, estimated: false };
-  // Polar day/night: adhan's high-latitude rules can still yield NaN, so
-  // fall back to the nearest latitude that has defined times (±60°).
+  const exact = compute(coords.latitude);
+  if (SIX_TIMES.every((k) => isValidDate(exact[k]))) return { ...exact, estimated: false };
+  // Polar day/night. A single NaN switches the WHOLE day to the clamped computation
+  // (latitude limited to +/-60 for both times and the rule), which keeps the six
+  // times mutually consistent and ordered rather than mixing two calculations.
   const clamped = Math.max(-60, Math.min(60, coords.latitude));
-  return { ...compute(clamped, coords.longitude), estimated: true };
+  return { ...compute(clamped), estimated: true };
+}
+
+/**
+ * Picks the next prayer after `now` from today's and tomorrow's times.
+ * Invalid (NaN) times are skipped. Throws only if neither day has any valid time,
+ * which getPrayerTimes never produces.
+ */
+export function pickNext(
+  now: Date,
+  today: DailyPrayerTimes,
+  tomorrow: DailyPrayerTimes
+): { name: PrayerName; time: Date } {
+  // Tomorrow's times are not guaranteed to fall after `now` at high latitudes
+  // (e.g. Tromso's "tomorrow" fajr can land earlier in local time), so check both.
+  for (const day of [today, tomorrow]) {
+    for (const name of PRAYER_ORDER) {
+      const time = day[name];
+      if (isValidDate(time) && time.getTime() > now.getTime()) return { name, time };
+    }
+  }
+  throw new Error('pickNext: no upcoming valid prayer time');
 }
 
 export function getNextPrayer(
@@ -72,17 +104,7 @@ export function getNextPrayer(
   method: CalcMethodId,
   madhab: MadhabId
 ): { name: PrayerName; time: Date } {
-  const isValid = (d: Date) => Number.isFinite(d.getTime());
   const today = getPrayerTimes(now, coords, method, madhab);
-  for (const name of PRAYER_ORDER) {
-    if (!isValid(today[name])) continue;
-    if (today[name].getTime() > now.getTime()) return { name, time: today[name] };
-  }
-  const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-  const next = getPrayerTimes(tomorrow, coords, method, madhab);
-  if (isValid(next.fajr)) return { name: 'fajr', time: next.fajr };
-  for (const name of PRAYER_ORDER) {
-    if (isValid(next[name])) return { name, time: next[name] };
-  }
-  return { name: 'fajr', time: next.fajr };
+  const tomorrow = getPrayerTimes(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1), coords, method, madhab);
+  return pickNext(now, today, tomorrow);
 }
