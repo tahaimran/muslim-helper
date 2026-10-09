@@ -91,6 +91,8 @@ export interface DayPlan {
 export interface DayTask {
   id: string;
   title: string;
+  titleBeginner?: string;
+  titleAdvanced?: string;
   category: 'prayer' | 'quran' | 'dhikr' | 'sunnah' | 'character' | 'reflection';
   points: number;
 }
