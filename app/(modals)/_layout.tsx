@@ -73,6 +73,7 @@ export default function ModalsLayout() {
           headerTitle: 'Edit Profile',
         }}
       />
+      <Stack.Screen name="milestone/[id]" options={{ title: t("me.milestones"), headerStyle: { backgroundColor: app.colors.bg }, headerTitleStyle: { color: app.colors.text, fontSize: 17, fontFamily: app.font("uiMedium") }, headerTintColor: app.colors.accent }} />
       <Stack.Screen
         name="day/[n]"
         options={{

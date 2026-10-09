@@ -86,7 +86,8 @@
     "reflectPlaceholder": "Write a few honest words. Only you will see them.",
     "saved": "Saved",
     "moodPrompt": "How is your heart today?",
-    "contentComing": "Today's guidance is on its way. Keep your prayers and dhikr going in the meantime."
+    "contentComing": "Today's guidance is on its way. Keep your prayers and dhikr going in the meantime.",
+    "dateLine": "{{hijri}}, {{gregorian}}"
   },
   "istiqamah": {
     "title": "Istiqamah — staying steady",
@@ -99,11 +100,33 @@
     "newCycleTitle": "Walk the 30 days again",
     "newCycleHint": "Begin a fresh cycle with deeper steps, whenever you feel ready.",
     "newCycle": "Begin a new 30 days",
-    "confirm": "Tap again to begin"
+    "confirm": "Tap again to begin",
+    "doneToday": "Done today"
   },
   "day": {
     "title": "Day {{n}}",
     "generic": "Day",
     "locked": "Opens on day {{n}}"
+  },
+  "me": {
+    "greeting": "Assalamu alaikum, {{name}}",
+    "greetingNoName": "Assalamu alaikum",
+    "editProfile": "Edit profile",
+    "daysShownUp": "days shown up",
+    "streak": "day streak",
+    "prayersKept": "prayers kept, last 30 days",
+    "heatmapTitle": "Your prayers",
+    "heatmapSubtitle": "The last five weeks, one square a day",
+    "heatmapCell": "{{date}}: {{count}} of 5 prayers",
+    "milestones": "Milestones",
+    "unlocked": "reached",
+    "locked": "not yet reached",
+    "reachedOn": "Reached on {{date}}",
+    "notYet": "Not reached yet. It will come in its own time.",
+    "milestoneUnknown": "This milestone could not be found.",
+    "settings": "Settings",
+    "about": "About",
+    "help": "Help",
+    "privacy": "Privacy"
   }
 }
