@@ -11,6 +11,8 @@ export interface DailyPrayerTimes {
   asr: Date;
   maghrib: Date;
   isha: Date;
+  /** True when the coordinates were clamped to ±60° latitude (polar day/night). */
+  estimated: boolean;
 }
 
 export interface Coords {
@@ -48,11 +50,20 @@ export function getPrayerTimes(
   method: CalcMethodId,
   madhab: MadhabId
 ): DailyPrayerTimes {
-  const params = CalculationMethod[method]();
-  params.madhab = madhab === 'hanafi' ? Madhab.Hanafi : Madhab.Shafi;
-  params.highLatitudeRule = HighLatitudeRule.recommended(coords);
-  const t = new PrayerTimes(new Coordinates(coords.latitude, coords.longitude), date, params);
-  return { fajr: t.fajr, sunrise: t.sunrise, dhuhr: t.dhuhr, asr: t.asr, maghrib: t.maghrib, isha: t.isha };
+  const compute = (lat: number, lon: number) => {
+    const params = CalculationMethod[method]();
+    params.madhab = madhab === 'hanafi' ? Madhab.Hanafi : Madhab.Shafi;
+    params.highLatitudeRule = HighLatitudeRule.recommended(coords);
+    const t = new PrayerTimes(new Coordinates(lat, lon), date, params);
+    return { fajr: t.fajr, sunrise: t.sunrise, dhuhr: t.dhuhr, asr: t.asr, maghrib: t.maghrib, isha: t.isha };
+  };
+  const exact = compute(coords.latitude, coords.longitude);
+  const allFinite = PRAYER_ORDER.every((p) => Number.isFinite(exact[p].getTime()));
+  if (allFinite) return { ...exact, estimated: false };
+  // Polar day/night: adhan's high-latitude rules can still yield NaN, so
+  // fall back to the nearest latitude that has defined times (±60°).
+  const clamped = Math.max(-60, Math.min(60, coords.latitude));
+  return { ...compute(clamped, coords.longitude), estimated: true };
 }
 
 export function getNextPrayer(

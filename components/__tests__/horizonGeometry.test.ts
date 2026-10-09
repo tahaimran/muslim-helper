@@ -19,6 +19,7 @@ const times: DailyPrayerTimes = {
   asr: at(15),
   maghrib: at(18),
   isha: at(20),
+  estimated: false,
 };
 
 const W = 348;

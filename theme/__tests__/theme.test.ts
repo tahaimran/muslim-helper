@@ -7,7 +7,7 @@ import type { DailyPrayerTimes } from '../../lib/prayerTimes';
 const at = (h: number, m = 0) => new Date(2026, 9, 9, h, m);
 const times: DailyPrayerTimes = {
   fajr: at(5, 0), sunrise: at(6, 20), dhuhr: at(12, 10),
-  asr: at(15, 30), maghrib: at(18, 5), isha: at(19, 25),
+  asr: at(15, 30), maghrib: at(18, 5), isha: at(19, 25), estimated: false,
 };
 
 describe('contrast', () => {

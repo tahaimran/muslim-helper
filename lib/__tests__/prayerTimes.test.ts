@@ -75,3 +75,28 @@ describe('invalid-time guard', () => {
     expect(Number.isFinite(next.time.getTime())).toBe(true);
   });
 });
+
+describe('nearest-latitude fallback for polar days', () => {
+  const TROMSO = { latitude: 69.6492, longitude: 18.9553 };
+  const OSLO = { latitude: 59.9139, longitude: 10.7522 };
+  const seqOf = (t: ReturnType<typeof getPrayerTimes>) =>
+    [t.fajr, t.sunrise, t.dhuhr, t.asr, t.maghrib, t.isha].map((d) => d.getTime());
+  it.each([
+    ['June', new Date(2026, 5, 21)],
+    ['December', new Date(2026, 11, 21)],
+  ])('Tromso %s: all six finite, ordered, estimated', (_label, date) => {
+    const t = getPrayerTimes(date, TROMSO, 'MuslimWorldLeague', 'shafi');
+    const seq = seqOf(t);
+    seq.forEach((ms) => expect(Number.isFinite(ms)).toBe(true));
+    expect([...seq].sort((a, b) => a - b)).toEqual(seq);
+    expect(t.estimated).toBe(true);
+  });
+  it('Mecca is not estimated', () => {
+    expect(getPrayerTimes(new Date(2026, 9, 9), MECCA_COORDS, 'UmmAlQura', 'shafi').estimated).toBe(false);
+  });
+  it('Oslo in June yields finite times', () => {
+    const t = getPrayerTimes(new Date(2026, 5, 21), OSLO, 'MuslimWorldLeague', 'shafi');
+    seqOf(t).forEach((ms) => expect(Number.isFinite(ms)).toBe(true));
+  });
+});
+const MECCA_COORDS = { latitude: 21.4225, longitude: 39.8262 };
