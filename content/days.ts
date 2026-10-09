@@ -257,7 +257,7 @@ export const DAYS: DayContent[] = [
     },
     prayerFocus: {
       prayer: 'all',
-      tip: "Make each wudu today carefully: begin with Bismillah, follow the order, wash each part well, and say the shahadah when you finish. Then add this du'a.",
+      tip: "Make each wudu today carefully: begin with Bismillah, follow the order, wash each part well, and say the shahadah when you finish. You may also add this du'a.",
       dua: {
         arabic:
           'اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ',
@@ -438,7 +438,7 @@ export const DAYS: DayContent[] = [
     theme: 'Fajr',
     themeArabic: 'الفجر',
     intro:
-      'Fajr is a great test of sincerity. Rising before the world to stand before Allah shows the depth of your love for Him.',
+      'Fajr is a special meeting with Allah: rising in the quiet of dawn to stand before Him while the world sleeps. If it is hard for you, every step toward it counts.',
     morningDhikr: [
       {
         id: 'bika_asbahna',
@@ -449,7 +449,7 @@ export const DAYS: DayContent[] = [
         meaning:
           'O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection',
         count: 1,
-        source: hadith('Abu Dawud 5068; Tirmidhi 3391'),
+        source: hadith('Abu Dawud 5068'),
       },
       {
         id: 'asbahna_ala_fitrah',
@@ -474,7 +474,7 @@ export const DAYS: DayContent[] = [
         meaning:
           'O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return',
         count: 1,
-        source: hadith('Tirmidhi 3391; Ibn Majah 3868'),
+        source: hadith('Ibn Majah 3868'),
       },
       {
         id: 'audhu_bikalimatillah',
@@ -719,9 +719,9 @@ export const DAYS: DayContent[] = [
         transliteration:
           'Allāhummajʿalil-Qurʾāna rabīʿa qalbī, wa nūra ṣadrī, wa jalāʾa ḥuznī, wa dhahāba hammī',
         meaning:
-          'O Allah, make the Quran the spring of my heart, the light of my chest, the remover of my sorrow and the reliever of my distress',
+          "(From a longer du'a for distress, Ahmad 3712) O Allah, make the Quran the spring of my heart, the light of my chest, the remover of my sorrow and the reliever of my distress",
         count: 1,
-        source: hadith('Ahmad 3712'),
+        source: hadith('Ahmad 3712', 'hasan'),
       },
       SUBHANALLAHI_WA_BIHAMDIHI,
     ],
@@ -745,7 +745,7 @@ export const DAYS: DayContent[] = [
       trait: 'Consistency',
       arabic: 'المداومة',
       description:
-        'The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small." A small daily Quran habit shapes the soul over time.',
+        'The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small" (Bukhari 6464). A small daily Quran habit shapes the soul over time.',
       action:
         'Choose a fixed daily Quran time, even 10 minutes, and protect it.',
     },
@@ -833,7 +833,7 @@ export const DAYS: DayContent[] = [
           'Allāhumma innī asʾalukal-ʿafwa wal-ʿāfiyata fid-dunyā wal-ākhirah',
         meaning:
           'O Allah, I ask You for pardon and well-being in this world and the Hereafter.',
-        source: hadith('Abu Dawud 5074; Ibn Majah 3871'),
+        source: hadith('Ibn Majah 3871'),
       },
     },
     sunnah: {
@@ -977,7 +977,7 @@ export const DAYS: DayContent[] = [
     sunnah: {
       title: 'Morning and evening adhkar',
       description:
-        'Begin learning the morning and evening adhkar. Today, at the least, recite the three Quls (Al-Ikhlas, Al-Falaq and An-Nas) three times each, morning and evening, and the tasbih after your prayers (33 + 33 + 33, then the tahlil). Recite Ayat al-Kursi before you sleep.',
+        'Begin learning the morning and evening adhkar. Today, at the least, recite the three Quls (Al-Ikhlas, Al-Falaq and An-Nas) three times each, morning and evening, and the tasbih after your prayers (33 + 33 + 33, then the tahlil) (Muslim 597). Recite Ayat al-Kursi before you sleep (Bukhari 2311).',
       source: hadith('Abu Dawud 5082', 'hasan'),
     },
     character: {
@@ -1086,7 +1086,7 @@ export const DAYS: DayContent[] = [
       trait: 'Love for the Prophet ﷺ',
       arabic: 'محبة النبي ﷺ',
       description:
-        'True love for the Prophet ﷺ shows in following his way, not just in claiming love. Every Sunnah you follow is a sign of it.',
+        'Love for the Prophet ﷺ grows and shows as you follow his way. Every Sunnah you follow is a sign of it.',
       action:
         'Read one chapter of the Seerah (his biography) today to deepen your love and understanding of who he was.',
     },
@@ -1174,7 +1174,7 @@ export const DAYS: DayContent[] = [
     },
     prayerFocus: {
       prayer: 'all',
-      tip: "In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: \"The closest a servant is to his Lord is when he is prostrating, so make much du'a.\" This Quranic du'a was the one he made most often.",
+      tip: "In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: \"The closest a servant is to his Lord is when he is prostrating, so make much du'a.\" Anas said this Quranic du'a was the one he made most often (Bukhari 6389).",
       dua: {
         arabic:
           'رَبَّنَآ ءَاتِنَا فِي ٱلدُّنۡيَا حَسَنَةࣰ وَفِي ٱلۡأٓخِرَةِ حَسَنَةࣰ وَقِنَا عَذَابَ ٱلنَّارِ',
@@ -1190,7 +1190,7 @@ export const DAYS: DayContent[] = [
       description:
         "The Prophet ﷺ taught us special times for du'a: the last third of the night (Bukhari 1145), between the adhan and the iqamah (Abu Dawud 521; Tirmidhi 212), in sujood (Muslim 482), at the end of the obligatory prayers (Tirmidhi 3499), and the hour on Friday, sought in the last hour after Asr (Bukhari 935; Abu Dawud 1048). Use at least 3 of these times today.",
       source: hadith(
-        'Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 3499; Bukhari 935',
+        'Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 212; Tirmidhi 3499; Bukhari 935; Abu Dawud 1048',
         'hasan',
       ),
     },
@@ -1203,7 +1203,7 @@ export const DAYS: DayContent[] = [
         'Write a heartfelt list of 10 things you need from Allah. Be specific, then trust Him and let go.',
     },
     hadith: {
-      arabic: 'الدُّعَاءُ هُوَ الْعِبَادَةُ',
+      arabic: 'الدُّعَاءُ هُوَ الْعِبَادَةُ، وَقَرَأَ: ﴿وَقَالَ رَبُّكُمُ ٱدۡعُونِيٓ أَسۡتَجِبۡ لَكُمۡ﴾',
       meaning:
         '"Supplication is worship itself." Then he recited: "And your Lord says: Call upon Me; I will respond to you" (Ghafir 40:60).',
       source: hadith('Tirmidhi 2969; Abu Dawud 1479'),
@@ -1602,7 +1602,7 @@ export const DAYS: DayContent[] = [
         arabic: 'الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ',
         transliteration:
           'Al-ḥamdu lillāhi ḥamdan kathīran ṭayyiban mubārakan fīh',
-        meaning: 'Praise be to Allah, abundant, good and blessed praise',
+        meaning: '(In prayer) Praise be to Allah, abundant, good and blessed praise',
         count: 1,
         source: hadith('Muslim 600; Bukhari 799'),
       },
@@ -1716,7 +1716,7 @@ export const DAYS: DayContent[] = [
           'اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ',
         transliteration:
           'Allāhummaghsilnī min khaṭāyāya bil-māʾi wath-thalji wal-barad',
-        meaning: 'O Allah, wash away my sins with water, snow and hail',
+        meaning: "(From the opening du'a of prayer) O Allah, wash away my sins with water, snow and hail",
         count: 1,
         source: hadith("Nasa'i 895"),
       },
@@ -2144,7 +2144,7 @@ export const DAYS: DayContent[] = [
         id: 'ighfir_lil_muminin',
         arabic: 'اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ',
         transliteration: 'Allāhummaghfir lil-muʾminīna wal-muʾmināt',
-        meaning: 'O Allah, forgive the believing men and women',
+        meaning: "(Personal du'a) O Allah, forgive the believing men and women",
         count: 10,
         // A general du'a echoing Quran 47:19 and 71:28; not their exact wording, so no source.
         source: null,
@@ -2331,7 +2331,7 @@ export const DAYS: DayContent[] = [
     theme: 'Husn al-Khuluq',
     themeArabic: 'حسن الخلق',
     intro:
-      "Nothing is heavier on the believer's scale on the Day of Resurrection than good character. Today you consciously practise beautiful manners in every interaction.",
+      "Nothing is heavier on the believer's scale on the Day of Resurrection than good character (Abu Dawud 4799; Tirmidhi 2002). Today you consciously practise beautiful manners in every interaction.",
     morningDhikr: [
       {
         id: 'ihdini_li_ahsanil_akhlaq',
@@ -2394,7 +2394,7 @@ export const DAYS: DayContent[] = [
       arabic: 'إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلاَقًا',
       meaning:
         '"Indeed, among the best of you are those with the best character."',
-      source: hadith('Bukhari 3559; Muslim 2321'),
+      source: hadith('Bukhari 3559'),
     },
     reflection:
       'Who in your life deserves more kindness and patience from you? How has your character grown over these 21 days?',
@@ -2455,7 +2455,7 @@ export const DAYS: DayContent[] = [
         id: 'rabbi_zidni_ilma',
         arabic: 'رَّبِّ زِدۡنِي عِلۡمࣰا',
         transliteration: 'Rabbi zidnī ʿilmā',
-        meaning: 'My Lord, increase me in knowledge',
+        meaning: '(From Quran 20:114, where Allah tells the Prophet ﷺ to say it) My Lord, increase me in knowledge',
         count: 1,
         source: quran('Quran 20:114'),
       },
@@ -2465,7 +2465,7 @@ export const DAYS: DayContent[] = [
       surah: 'Ta-Ha',
       surahNumber: 20,
       ayahs: '114',
-      note: 'The only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."',
+      note: 'Scholars note that knowledge is the only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."',
     },
     prayerFocus: {
       prayer: 'fajr',
@@ -2663,7 +2663,7 @@ export const DAYS: DayContent[] = [
         transliteration:
           'Allāhumma innī asʾalukal-jannata wa mā qarraba ilayhā min qawlin aw ʿamal',
         meaning:
-          'O Allah, I ask You for Paradise and for whatever word or deed brings me near to it',
+          "(From a longer du'a) O Allah, I ask You for Paradise and for whatever word or deed brings me near to it",
         count: 1,
         source: hadith('Ibn Majah 3846'),
       },
@@ -2959,7 +2959,7 @@ export const DAYS: DayContent[] = [
         meaning:
           '(Morning and evening) O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me',
         count: 1,
-        source: hadith('Abu Dawud 5074; Ibn Majah 3871'),
+        source: hadith('Abu Dawud 5074'),
       },
       {
         id: 'astaghfirullah_al_azim',
@@ -3052,7 +3052,7 @@ export const DAYS: DayContent[] = [
     theme: 'Ummah',
     themeArabic: 'الأمة',
     intro:
-      'The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body. Today you invest in your community.',
+      'The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body (Bukhari 6011; Muslim 2586). Today you invest in your community.',
     morningDhikr: [
       {
         id: 'aslih_ummata_muhammad',
@@ -3165,7 +3165,7 @@ export const DAYS: DayContent[] = [
         transliteration:
           'Allāhumma zayyinnā bi-zīnatil-īmān, wajʿalnā hudātan muhtadīn',
         meaning:
-          'O Allah, adorn us with the beauty of faith, and make us guides who are themselves rightly guided',
+          "(From a longer du'a) O Allah, adorn us with the beauty of faith, and make us guides who are themselves rightly guided",
         count: 1,
         source: hadith("Nasa'i 1305"),
       },
@@ -3259,7 +3259,7 @@ export const DAYS: DayContent[] = [
         arabic: 'يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ',
         transliteration: 'Yā Muqallibal-qulūbi thabbit qalbī ʿalā dīnik',
         meaning:
-          "(The du'a he said most often) O Turner of hearts, make my heart firm upon Your religion",
+          "(Umm Salamah said this was the du'a he made most often when he was with her) O Turner of hearts, make my heart firm upon Your religion",
         count: 1,
         source: hadith('Tirmidhi 3522; Tirmidhi 2140'),
       },

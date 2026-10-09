@@ -2,7 +2,7 @@ import { DAYS, WEEKS } from '../../content/days';
 import { DUA_CATEGORIES } from '../../content/duas';
 import {
   DUA_AFTER_WUDU, EVENING_ADHKAR, MORNING_ADHKAR, PILLARS_OF_IMAN, PILLARS_OF_ISLAM,
-  PILLARS_SOURCES, RAKAH_COUNTS, SALAH_STEPS, WUDU_STEPS,
+  PILLARS_SOURCES, RAKAH_COUNTS, SALAH_NOTES, SALAH_STEPS, WUDU_STEPS,
 } from '../../content/learn';
 import { MILESTONE_CONTENT, WELCOME_BACK } from '../../content/milestones';
 import { MILESTONE_IDS } from '../milestones';
@@ -21,6 +21,28 @@ const BANNED = [
   /seeking knowledge is (an )?obligat/i,
   /salat al-shukr/i,
 ];
+
+// Every piece of user-facing content, for blob-wide guards.
+const ALL_CONTENT = [
+  DAYS, DUA_CATEGORIES, MORNING_ADHKAR, EVENING_ADHKAR, SALAH_STEPS, WUDU_STEPS,
+  MILESTONE_CONTENT, WELCOME_BACK,
+];
+const LEARN_CONTENT = [
+  WUDU_STEPS, DUA_AFTER_WUDU, SALAH_STEPS, SALAH_NOTES, PILLARS_OF_ISLAM, PILLARS_OF_IMAN,
+  MORNING_ADHKAR, EVENING_ADHKAR,
+];
+const TANWEEN_ARTIFACT = /[ࣰ-ࣲ] [اى]/;
+// Arabic of removed texts, matched with harakat stripped so diacritic variants can't slip through.
+const BANNED_ARABIC = [
+  /تفكر ساعة/,
+  /سلاح المؤمن/,
+  /كل أمر ذي بال/,
+  /طلب الحلال/,
+  /طلب العلم فريضة/,
+  /وعلى بركة الله/,
+  /وجعلنا من المسلمين/,
+];
+const stripHarakat = (s: string) => s.replace(/[ً-ٰٟۡ]/g, '');
 
 function checkSource(s: Source, where: string) {
   expect(s.ref.trim().length).toBeGreaterThan(0);
@@ -97,6 +119,34 @@ describe('day content integrity', () => {
     BANNED.forEach((re) => expect(blob).not.toMatch(re));
   });
 
+  it('post-salah tasbih is 33 each, and no dhikr count is 34', () => {
+    const all: Dhikr[] = [
+      ...DAYS.flatMap((d) => [...d.morningDhikr, ...d.eveningDhikr]),
+      ...MORNING_ADHKAR, ...EVENING_ADHKAR,
+    ];
+    const tasbih = all.filter((d) => ['subhanallah', 'alhamdulillah', 'allahuakbar'].includes(d.id));
+    expect(tasbih.length).toBeGreaterThan(0);
+    tasbih.forEach((d) => expect(d.count).toBe(33));
+    all.forEach((d) => expect(d.count).not.toBe(34));
+  });
+
+  it('each dhikr id has one Arabic text and one transliteration everywhere', () => {
+    const all: Dhikr[] = [
+      ...DAYS.flatMap((d) => [...d.morningDhikr, ...d.eveningDhikr]),
+      ...MORNING_ADHKAR, ...EVENING_ADHKAR,
+    ];
+    const arabic = new Map<string, Set<string>>();
+    const translit = new Map<string, Set<string>>();
+    all.forEach((d) => {
+      if (!arabic.has(d.id)) arabic.set(d.id, new Set());
+      if (!translit.has(d.id)) translit.set(d.id, new Set());
+      arabic.get(d.id)!.add(d.arabic);
+      translit.get(d.id)!.add(d.transliteration);
+    });
+    arabic.forEach((v, id) => expect([id, v.size]).toEqual([id, 1]));
+    translit.forEach((v, id) => expect([id, v.size]).toEqual([id, 1]));
+  });
+
   it('uses Fussilat for surah 41', () => {
     DAYS.filter((d) => d.quran.surahNumber === 41).forEach((d) => expect(d.quran.surah).toBe('Fussilat'));
   });
@@ -119,6 +169,23 @@ describe('milestone content', () => {
       checkText(MILESTONE_CONTENT[id].text, id);
     });
     checkText(WELCOME_BACK, 'welcome_back');
+  });
+});
+
+describe('all content', () => {
+  it('contains no banned texts anywhere', () => {
+    const blob = JSON.stringify(ALL_CONTENT);
+    BANNED.forEach((re) => expect(blob).not.toMatch(re));
+  });
+
+  it('contains no banned Arabic texts anywhere (harakat-insensitive)', () => {
+    const blob = stripHarakat(JSON.stringify([...ALL_CONTENT, ...LEARN_CONTENT]));
+    BANNED_ARABIC.forEach((re) => expect(blob).not.toMatch(re));
+  });
+
+  it('has no tanween-spacing artifacts in learn or duas Arabic', () => {
+    expect(JSON.stringify(LEARN_CONTENT)).not.toMatch(TANWEEN_ARTIFACT);
+    expect(JSON.stringify(DUA_CATEGORIES)).not.toMatch(TANWEEN_ARTIFACT);
   });
 });
 

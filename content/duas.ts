@@ -282,7 +282,7 @@ export const DUA_CATEGORIES: DuaCategory[] = [
         text: {
           arabic: 'وَقُل رَّبِّ زِدۡنِي عِلۡمࣰا',
           transliteration: 'Wa qur-Rabbi zidnī ʿilmā',
-          meaning: 'And say: “My Lord, increase me in knowledge.”',
+          meaning: 'And say: “My Lord, increase me in knowledge.” (Allah tells the Prophet ﷺ to say this; the du‘a itself is “Rabbi zidnī ʿilmā”.)',
           source: quran('Quran 20:114'),
         },
       },

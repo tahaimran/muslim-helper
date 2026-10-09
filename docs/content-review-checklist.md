@@ -10,7 +10,7 @@
 
 **Translations.** Translations into other languages are not covered here. They get their own checklist later (Plan 6).
 
-Totals: 241 items listed (dhikr repeated across days are merged), 47 with confidence M, 19 with no source, 22 citations inside free text.
+Totals: 241 items listed (dhikr repeated across days are merged), 41 with confidence M, 19 with no source, 52 citations inside free text.
 
 ---
 
@@ -22,24 +22,24 @@ Totals: 241 items listed (dhikr repeated across days are merged), 47 with confid
 - [ ] Day 25 sunnah: anchored on Muslim 2985 (hadith qudsi on shirk in deeds) instead of the secondary-verified Ahmad 23630 on minor shirk. Confirm it fits the claim made.
 - [ ] Du'a of Umar ibn al-Khattab (Day 25 evening): stored as an athar, "Ahmad, az-Zuhd", no number. Confirm the attribution.
 - [ ] Muslim 2654 vs 2655 (Day 30, Muslim 'Director of hearts'): cited 2654 per the standard references while the mirror numbers it 2655. Confirm on sunnah.com.
-- [ ] Muslim 782 vs 783 (welcome-back message and Day 30 'most beloved deeds'): the dataset puts this at 782, many sites cite 783. Confirm.
 - [ ] Items stored as hasan because the grading is disputed or understated (every line marked 'stored as hasan' in section B). Confirm each grade, or swap for an agreed-upon text.
 - [ ] Gradings that al-Albani accepts but Zubair Ali Za'i weakens: Abu Dawud 5090, Abu Dawud 1547, Tirmidhi 3401, Tirmidhi 3502, Ibn Majah 925, Tirmidhi 55 (after-wudu addition). Confirm keep or swap.
-- [ ] Nasa'i 3140 (Day 25, stored hasan; Za'i da'if) and Abu Dawud 1521 / Tirmidhi 406 (hasan per Arna'ut and Tirmidhi). Confirm.
-- [ ] Abu Dawud 5074 (sleep du'a, Learn and Day 21-30 use): the tail 'wa a'udhu bi-azamatika an ughtala min tahti' was cut off in the extract. Confirm the full wording.
+- [ ] Abu Dawud 1521 / Tirmidhi 406 (Day 27, hasan per Arna'ut and Tirmidhi). Confirm.
+- [ ] Day 6 evening dhikr `rabi_qalbi` (Ahmad 3712, stored hasan): Musnad Ahmad is not in the mirror, so the narrated clause («أَنْ تَجْعَلَ الْقُرْآنَ رَبِيعَ قَلْبِي...») could not be checked; the current du'a-form wording was kept and labelled as part of a longer du'a for distress. Confirm wording and grade.
+- [ ] Day 10 hadith (Tirmidhi 2969; Abu Dawud 1479): the recitation is introduced with «وَقَرَأَ» as in Tirmidhi 2969 (verification-1 wrote «ثُمَّ قَرَأَ»); the Quran excerpt is the 40:60 Uthmani slice from the API. Confirm.
+- [ ] Learn Salah note 'For women' (no prayer or make-up during menstruation and post-natal bleeding, Bukhari 321; Muslim 335; reciting so only she hears near non-mahram men; covering all but face and hands). Post-natal bleeding is by analogy and scholarly agreement, not in the cited texts. Confirm wording.
 - [ ] Ayat al-Kursi in morning/evening adhkar: rests on a narration (Nasa'i al-Kubra / Hakim) not in the mirror. The source cites only Quran 2:255. Confirm the timing claim.
 - [ ] Morning form of Muslim 2723 ('hadhal-yawm ... ma ba'dahu'): the standard morning form is used, but no narration in the six books spells it out word for word.
 - [ ] Isti'adhah: the ref Quran 16:98 is the ayah that commands it; the formula itself is not that ayah's text.
 - [ ] Wudu Bismillah step: Nasa'i 78 has the literal wording; Abu Dawud 101 only says 'mention Allah's name'.
 - [ ] Salah takbir (Ibn Majah 803) and rising from ruku (Bukhari 735): verification-2 gave different numbers because they do not contain the phrase verbatim. Confirm the cited ones.
-- [ ] Muslim 399 (Umar's istiftah narration): not found in the mirror. Confirm the number on sunnah.com if cited.
-- [ ] Numbers recalled from memory and never looked up (all marked M): Bukhari 1, 157/158, 631, 1442, 3477, 5376, 6307, 6334, 6406; Muslim 16, 397, 403, 408, 582, 918, 2693, 1037, 234, 598; Tirmidhi 3505, 3575; Abu Dawud 864; Nasa'i 465.
+- [ ] Numbers recalled from memory and never looked up (all marked M): Bukhari 1, 631, 1442, 5376, 6307; Muslim 16, 1037, 234.
 - [ ] Day 27 hadith uses the Bukhari 6309 wording ('Allahu afrah') and Day 30's Muslim 38 uses the Muslim wording ('fastaqim'), not Tirmidhi's 'thumma astaqim'. Confirm.
 - [ ] Day 21 'most smiling' claim: Tirmidhi 3641 (Za'i da'if) was replaced by Jarir's report (Bukhari 3035; Muslim 2475). Confirm the sunnah wording.
 - [ ] Day 24 hadith: the trimmed Bukhari 6416 wording is used (without the 'inhabitants of the grave' clause, which is in Tirmidhi 2333). Confirm.
 - [ ] Day 16 hadith: Bukhari 7138; Muslim 1829 wording 'ala kullukum ra'in' (Bukhari 893 lacks the 'ala'). Confirm.
 - [ ] Dhikr with no source (section C) must be presented as general or personal du'a, not as prophetic. Confirm labelling.
-- [ ] Madhhab notes in Learn Wudu and Salah are brief summaries. Ideally have a teacher from each school review them.
+- [ ] Madhhab notes in Learn Wudu and Salah (wiping the head, where the hands rest, the phrases on rising behind an imam, the first tashahhud, the four-school note) are brief summaries. Ideally have a teacher from each school review them.
 - [ ] Quran text was fetched from fawazahmed0 quran-api (ara-quranuthmanihaf), not typed. Surah 94:6 shows the API's own spacing. Spot-check against a mushaf.
 - [ ] sunnah.com was unreachable during verification. All hadith numbers were checked against the fawazahmed0 mirror. A final click-through on sunnah.com is recommended.
 
@@ -52,21 +52,19 @@ Totals: 241 items listed (dhikr repeated across days are merged), 47 with confid
 - [ ] Dhikr asbahna_ala_fitrah (morning; days 4) | "We have entered the morning upon the natural way of Islam, t..." | (no source) | - | M (narrated in Ahmad, number unverified, source null)
 - [ ] Day 5 · hadith | ""Pray as you have seen me praying."" | Bukhari 631 | sahih | M (number recalled, not looked up)
 - [ ] Dhikr ya_hayyu_ya_qayyum (morning; days 5) | "(In times of distress) O Ever-Living, O Sustainer, by Your m..." | Tirmidhi 3524 | hasan | M (stored as hasan (disputed or understated))
-- [ ] Dhikr rabi_qalbi (evening; days 6) | "O Allah, make the Quran the spring of my heart, the light of..." | Ahmad 3712 | sahih | M (number/grade secondary-verified only)
+- [ ] Dhikr rabi_qalbi (evening; days 6) | "(From a longer du'a for distress, Ahmad 3712) O Allah, make ..." | Ahmad 3712 | hasan | M (number/grade secondary-verified only; stored as hasan (disputed or understated))
 - [ ] Day 7 · hadith | ""By Allah, I seek Allah's forgiveness and turn to Him in rep..." | Bukhari 6307 | sahih | M (number recalled, not looked up)
-- [ ] Day 7 · prayer-focus dua | "O Allah, I ask You for pardon and well-being in this world a..." | Abu Dawud 5074; Ibn Majah 3871 | sahih | M (tail of the text not confirmed)
 - [ ] Day 8 · sunnah (Morning and evening adhkar) | "Begin learning the morning and evening adhkar. Today, at the..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr three_quls (morning; days 8) | "Surahs Al-Ikhlas, Al-Falaq and An-Nas, three times each in t..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr afini_fi_badani (morning; days 8) | "O Allah, grant me well-being in my body, my hearing and my s..." | Abu Dawud 5090 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
 - [ ] Day 9 · sunnah (The Sunnah of eating) | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Bukhari 5376; Muslim 2022 | sahih | M (number recalled, not looked up)
-- [ ] Day 10 · sunnah (Times when du'a is answered) | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 3499; Bukhari 935 | hasan | M (stored as hasan (disputed or understated))
+- [ ] Day 10 · sunnah (Times when du'a is answered) | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 212; Tirmidhi 3499; Bukhari 935; Abu Dawud 1048 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr bismillah_before_eating (evening; days 11) | "(Before eating) In the name of Allah" | Bukhari 5376; Muslim 2022 | sahih | M (number recalled, not looked up)
 - [ ] Day 12 · sunnah (A du'a for lawful provision) | "Make this du'a often: "Allahummak-fini bi-halalika 'an haram..." | Tirmidhi 3563 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr ikfini_bi_halalik (morning; days 12) | "O Allah, suffice me with what You have made lawful instead o..." | Tirmidhi 3563 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Day 13 · sunnah (Tie your camel first) | "A man asked the Prophet ﷺ whether he should tie his camel an..." | Tirmidhi 2517 | hasan | M (hasan by supporting routes; stored as hasan (disputed or understated))
 - [ ] Dhikr waking_dua_afani (morning; days 14) | "(On waking) Praise be to Allah who gave health to my body, r..." | Tirmidhi 3401 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
 - [ ] Dhikr audhu_minal_khiyanah (morning; days 16) | "O Allah, I seek refuge in You from hunger, for it is a wretc..." | Abu Dawud 1547; Nasa'i 5468 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
-- [ ] Dhikr istirja (morning; days 17) | "(At a calamity) We belong to Allah and to Him we return. O A..." | Muslim 918 | sahih | M (number recalled, not looked up)
 - [ ] Dhikr ahsanta_khalqi (evening; days 21) | "O Allah, You have made my form beautiful, so make my charact..." | (no source) | - | M (narrated in Ahmad (Irwa' 74), number unverified, source null)
 - [ ] Day 22 · sunnah (Learn one new thing about your deen) | "The Prophet ﷺ said: "Whoever Allah wants good for, He gives ..." | Bukhari 71; Muslim 1037 | sahih | M (number recalled, not looked up)
 - [ ] Dhikr ilman_nafian (morning; days 22) | "(After the salam of Fajr) O Allah, I ask You for beneficial ..." | Ibn Majah 925 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
@@ -75,7 +73,6 @@ Totals: 241 items listed (dhikr repeated across days are merged), 47 with confid
 - [ ] Dhikr umar_dua_ikhlas (evening; days 25) | "(Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds ri..." | Du'a of 'Umar ibn al-Khattab (Ahmad, az-Zuhd) | n/a | M (number/grade secondary-verified only; athar, not a prophetic text)
 - [ ] Day 26 · sunnah (Muhasabah (self-accounting)) | "'Umar ibn al-Khattab said: "Hold yourselves to account befor..." | Athar of 'Umar ibn al-Khattab, cited by at-Tirmidhi under no. 2459 | n/a | M (athar, not a prophetic text)
 - [ ] Day 27 · sunnah (Two rak'ahs of repentance (Salat at-Tawbah)) | "The Prophet ﷺ said: "No servant commits a sin, then purifies..." | Abu Dawud 1521; Tirmidhi 406 | hasan | M (Arna'ut/Tirmidhi hasan; stored as hasan (disputed or understated))
-- [ ] Dhikr asalukal_afiyah (evening; days 27) | "(Morning and evening) O Allah, I ask You for well-being in t..." | Abu Dawud 5074; Ibn Majah 3871 | sahih | M (tail of the text not confirmed)
 - [ ] Dhikr musarrifal_qulub (evening; days 30) | "O Allah, Director of hearts, direct our hearts to Your obedi..." | Muslim 2654 | sahih | M (Muslim 2654 vs 2655 numbering)
 - [ ] Duas · Daily life · Before eating | "In the name of Allah. The Prophet ﷺ told a boy: “Mention the..." | Bukhari 5376; Muslim 2022 | sahih | M (number recalled, not looked up)
 - [ ] Duas · Daily life · After eating | "All praise is for Allah who fed me this and provided it for ..." | Tirmidhi 3458 | hasan | M (stored as hasan (disputed or understated))
@@ -85,12 +82,9 @@ Totals: 241 items listed (dhikr repeated across days are merged), 47 with confid
 - [ ] Learn · morning adhkar · surah_ikhlas | "Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Suffic..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Learn · morning adhkar · surah_falaq | "Al-Falaq: Say: I seek refuge in the Lord of daybreak, from t..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Learn · morning adhkar · surah_nas | "An-Nas: Say: I seek refuge in the Lord of mankind, the King ..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
-- [ ] Learn · morning adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | M (tail of the text not confirmed)
 - [ ] Learn · evening adhkar · surah_ikhlas | "Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Suffic..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Learn · evening adhkar · surah_falaq | "Al-Falaq: Say: I seek refuge in the Lord of daybreak, from t..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Learn · evening adhkar · surah_nas | "An-Nas: Say: I seek refuge in the Lord of mankind, the King ..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
-- [ ] Learn · evening adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | M (tail of the text not confirmed)
-- [ ] Welcome back message | ""The most beloved of deeds to Allah are the most consistent,..." | Bukhari 6464; Muslim 782 | sahih | M (Muslim 782 vs 783 numbering)
 
 ### C. Items with no source
 These are general or personal du'a (or a dhikr with no specific virtue claimed). They must not be presented as prophetic. Confirm each is labelled accordingly.
@@ -105,7 +99,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Dhikr audhu_minal_jaza (evening; days 17) | "(Personal du'a) O Allah, I seek refuge in You from panic and..." | (no source) | - | -
 - [ ] Dhikr audhu_minal_kibr (morning; days 18) | "(Personal du'a) O Allah, I seek refuge in You from arrogance..." | (no source) | - | -
 - [ ] Dhikr irhamna_bi_rahmatik (morning; days 19) | "(Personal du'a) O Allah, have mercy on us with Your mercy th..." | (no source) | - | -
-- [ ] Dhikr ighfir_lil_muminin (evening; days 19) | "O Allah, forgive the believing men and women" | (no source) | - | -
+- [ ] Dhikr ighfir_lil_muminin (evening; days 19) | "(Personal du'a) O Allah, forgive the believing men and women" | (no source) | - | -
 - [ ] Dhikr barik_li_fi_ahli (morning; days 20) | "(Personal du'a) O Allah, bless me in my family and my wealth" | (no source) | - | -
 - [ ] Dhikr ijma_shamla_ahli (evening; days 20) | "(Personal du'a) O Allah, unite my family in obeying You" | (no source) | - | -
 - [ ] Dhikr ahsanta_khalqi (evening; days 21) | "O Allah, You have made my form beautiful, so make my charact..." | (no source) | - | M (narrated in Ahmad (Irwa' 74), number unverified, source null)
@@ -139,7 +133,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Day 18 · hadith | ""Allah has revealed to me that you must be humble towards on..." | Muslim 2865 | sahih | H
 - [ ] Day 19 · hadith | ""The merciful are shown mercy by the Most Merciful. Be merci..." | Tirmidhi 1924 | sahih | H
 - [ ] Day 20 · hadith | ""Whoever loves that his provision be expanded and his life b..." | Bukhari 5986; Muslim 2557 | sahih | H
-- [ ] Day 21 · hadith | ""Indeed, among the best of you are those with the best chara..." | Bukhari 3559; Muslim 2321 | sahih | H
+- [ ] Day 21 · hadith | ""Indeed, among the best of you are those with the best chara..." | Bukhari 3559 | sahih | H
 - [ ] Day 22 · hadith | ""Whoever travels a path seeking knowledge, Allah will make e..." | Muslim 2699 | sahih | H
 - [ ] Day 23 · hadith | "Ibn 'Abbas said that when it was the last third of the night..." | Bukhari 4569 | sahih | H
 - [ ] Day 24 · hadith | ""Be in this world as if you were a stranger or a traveller."" | Bukhari 6416 | sahih | H
@@ -160,7 +154,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Day 7 · sunnah (Sayyid al-Istighfar) | "Say the master du'a of seeking forgiveness in the morning an..." | Bukhari 6306 | sahih | H
 - [ ] Day 8 · sunnah (Morning and evening adhkar) | "Begin learning the morning and evening adhkar. Today, at the..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Day 9 · sunnah (The Sunnah of eating) | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Bukhari 5376; Muslim 2022 | sahih | M (number recalled, not looked up)
-- [ ] Day 10 · sunnah (Times when du'a is answered) | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 3499; Bukhari 935 | hasan | M (stored as hasan (disputed or understated))
+- [ ] Day 10 · sunnah (Times when du'a is answered) | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 1145; Muslim 482; Abu Dawud 521; Tirmidhi 212; Tirmidhi 3499; Bukhari 935; Abu Dawud 1048 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Day 11 · sunnah (Sadaqah jariyah (ongoing charity)) | "The Prophet ﷺ said: "When a person dies, his deeds come to a..." | Muslim 1631 | sahih | H
 - [ ] Day 12 · sunnah (A du'a for lawful provision) | "Make this du'a often: "Allahummak-fini bi-halalika 'an haram..." | Tirmidhi 3563 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Day 13 · sunnah (Tie your camel first) | "A man asked the Prophet ﷺ whether he should tie his camel an..." | Tirmidhi 2517 | hasan | M (hasan by supporting routes; stored as hasan (disputed or understated))
@@ -187,7 +181,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Day 2 · prayer-focus dua | "(After the shahadah that follows wudu) O Allah, make me amon..." | Tirmidhi 55 | sahih | M (grading disputed (idtirab; Za'i weakens))
 - [ ] Day 4 · prayer-focus dua | "O Allah, place light in my heart, light in my tongue, light ..." | Muslim 763; Bukhari 6316 | sahih | H
 - [ ] Day 5 · prayer-focus dua | "(In ruku' and sujood) Glory be to You, O Allah, our Lord, an..." | Bukhari 817; Muslim 484 | sahih | H
-- [ ] Day 7 · prayer-focus dua | "O Allah, I ask You for pardon and well-being in this world a..." | Abu Dawud 5074; Ibn Majah 3871 | sahih | M (tail of the text not confirmed)
+- [ ] Day 7 · prayer-focus dua | "O Allah, I ask You for pardon and well-being in this world a..." | Ibn Majah 3871 | sahih | H
 - [ ] Day 10 · prayer-focus dua | "Our Lord, give us good in this world and good in the Hereaft..." | Quran 2:201 | n/a | H
 
 ### Daily Quran readings (30)
@@ -237,16 +231,16 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Dhikr subhanallahi_wa_bihamdihi (evening; days 2, 6, 11, 17, 20, 22, 26, 28) | "Glory be to Allah and praise be to Him" | Muslim 2692 | sahih | H
 - [ ] Dhikr waking_dua (morning; days 3, 14) | "(On waking) Praise be to Allah who gave us life after causin..." | Bukhari 6312; Muslim 2711 | sahih | H
 - [ ] Dhikr dua_after_adhan (morning; days 3) | "(After each adhan) O Allah, Lord of this perfect call and th..." | Bukhari 614 | sahih | H
-- [ ] Dhikr bika_asbahna (morning; days 4) | "O Allah, by You we enter the morning and by You we enter the..." | Abu Dawud 5068; Tirmidhi 3391 | sahih | H
+- [ ] Dhikr bika_asbahna (morning; days 4) | "O Allah, by You we enter the morning and by You we enter the..." | Abu Dawud 5068 | sahih | H
 - [ ] Dhikr asbahna_ala_fitrah (morning; days 4) | "We have entered the morning upon the natural way of Islam, t..." | (no source) | - | M (narrated in Ahmad, number unverified, source null)
-- [ ] Dhikr bika_amsayna (evening; days 4) | "O Allah, by You we enter the evening and by You we enter the..." | Tirmidhi 3391; Ibn Majah 3868 | sahih | H
+- [ ] Dhikr bika_amsayna (evening; days 4) | "O Allah, by You we enter the evening and by You we enter the..." | Ibn Majah 3868 | sahih | H
 - [ ] Dhikr audhu_bikalimatillah (evening; days 4) | "I seek refuge in the perfect words of Allah from the evil of..." | Muslim 2709; Tirmidhi 3604 | sahih | H
 - [ ] Dhikr ya_hayyu_ya_qayyum (morning; days 5) | "(In times of distress) O Ever-Living, O Sustainer, by Your m..." | Tirmidhi 3524 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr dua_dhun_nun (morning; days 5) | "There is no god but You, glory be to You; I have been among ..." | Quran 21:87 | n/a | H
 - [ ] Dhikr subhanallahil_azim (evening; days 5) | "Glory be to Allah and praise be to Him; glory be to Allah th..." | Muslim 2694 | sahih | H
 - [ ] Dhikr salawat (evening; days 5) | "O Allah, send blessings upon Muhammad" | (no source) | - | -
 - [ ] Dhikr ihdini_li_ahsanil_akhlaq (morning; days 6, 21) | "(From a longer du'a) And guide me to the best of character, ..." | Muslim 771 | sahih | H
-- [ ] Dhikr rabi_qalbi (evening; days 6) | "O Allah, make the Quran the spring of my heart, the light of..." | Ahmad 3712 | sahih | M (number/grade secondary-verified only)
+- [ ] Dhikr rabi_qalbi (evening; days 6) | "(From a longer du'a for distress, Ahmad 3712) O Allah, make ..." | Ahmad 3712 | hasan | M (number/grade secondary-verified only; stored as hasan (disputed or understated))
 - [ ] Dhikr astaghfirullah_al_azim (morning/evening; days 7, 27) | "I seek forgiveness from Allah the Magnificent, besides whom ..." | Tirmidhi 3577 | sahih | H
 - [ ] Dhikr three_quls (morning; days 8) | "Surahs Al-Ikhlas, Al-Falaq and An-Nas, three times each in t..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
 - [ ] Dhikr afini_fi_badani (morning; days 8) | "O Allah, grant me well-being in my body, my hearing and my s..." | Abu Dawud 5090 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
@@ -266,36 +260,36 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Dhikr leaving_home_dua (morning; days 13) | "(On leaving home) In the name of Allah; I place my trust in ..." | Abu Dawud 5095; Tirmidhi 3426 | sahih | H
 - [ ] Dhikr tahlil (evening; days 13) | "None has the right to be worshipped but Allah alone, without..." | Muslim 2691 | sahih | H
 - [ ] Dhikr waking_dua_afani (morning; days 14) | "(On waking) Praise be to Allah who gave health to my body, r..." | Tirmidhi 3401 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
-- [ ] Dhikr hamdan_kathiran (evening; days 14) | "Praise be to Allah, abundant, good and blessed praise" | Muslim 600; Bukhari 799 | sahih | H
+- [ ] Dhikr hamdan_kathiran (evening; days 14) | "(In prayer) Praise be to Allah, abundant, good and blessed p..." | Muslim 600; Bukhari 799 | sahih | H
 - [ ] Dhikr sidq_dua (morning; days 15) | "(Personal du'a) O Allah, I ask You for truthfulness in speec..." | (no source) | - | -
-- [ ] Dhikr ighsilni (evening; days 15) | "O Allah, wash away my sins with water, snow and hail" | Nasa'i 895 | sahih | H
+- [ ] Dhikr ighsilni (evening; days 15) | "(From the opening du'a of prayer) O Allah, wash away my sins..." | Nasa'i 895 | sahih | H
 - [ ] Dhikr audhu_minal_khiyanah (morning; days 16) | "O Allah, I seek refuge in You from hunger, for it is a wretc..." | Abu Dawud 1547; Nasa'i 5468 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
 - [ ] Dhikr subhanallahil_azimi_wa_bihamdihi (evening; days 16) | "Glory be to Allah the Magnificent, and praise be to Him" | Abu Dawud 5091 | sahih | H
 - [ ] Dhikr sabr_dua (morning; days 17) | "(Personal du'a) O Allah, I ask You for patience with what Yo..." | (no source) | - | -
-- [ ] Dhikr istirja (morning; days 17) | "(At a calamity) We belong to Allah and to Him we return. O A..." | Muslim 918 | sahih | M (number recalled, not looked up)
+- [ ] Dhikr istirja (morning; days 17) | "(At a calamity) We belong to Allah and to Him we return. O A..." | Muslim 918 | sahih | H
 - [ ] Dhikr audhu_minal_jaza (evening; days 17) | "(Personal du'a) O Allah, I seek refuge in You from panic and..." | (no source) | - | -
 - [ ] Dhikr audhu_minal_kibr (morning; days 18) | "(Personal du'a) O Allah, I seek refuge in You from arrogance..." | (no source) | - | -
 - [ ] Dhikr irhamna_bi_rahmatik (morning; days 19) | "(Personal du'a) O Allah, have mercy on us with Your mercy th..." | (no source) | - | -
-- [ ] Dhikr ighfir_lil_muminin (evening; days 19) | "O Allah, forgive the believing men and women" | (no source) | - | -
+- [ ] Dhikr ighfir_lil_muminin (evening; days 19) | "(Personal du'a) O Allah, forgive the believing men and women" | (no source) | - | -
 - [ ] Dhikr rabbana_wasita (evening; days 19) | "Our Lord, You encompass all things in mercy and knowledge, s..." | Quran 40:7 | n/a | H
 - [ ] Dhikr barik_li_fi_ahli (morning; days 20) | "(Personal du'a) O Allah, bless me in my family and my wealth" | (no source) | - | -
 - [ ] Dhikr ijma_shamla_ahli (evening; days 20) | "(Personal du'a) O Allah, unite my family in obeying You" | (no source) | - | -
 - [ ] Dhikr ahsanta_khalqi (evening; days 21) | "O Allah, You have made my form beautiful, so make my charact..." | (no source) | - | M (narrated in Ahmad (Irwa' 74), number unverified, source null)
 - [ ] Dhikr ilman_nafian (morning; days 22) | "(After the salam of Fajr) O Allah, I ask You for beneficial ..." | Ibn Majah 925 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
-- [ ] Dhikr rabbi_zidni_ilma (evening; days 22) | "My Lord, increase me in knowledge" | Quran 20:114 | n/a | H
+- [ ] Dhikr rabbi_zidni_ilma (evening; days 22) | "(From Quran 20:114, where Allah tells the Prophet ﷺ to say i..." | Quran 20:114 | n/a | H
 - [ ] Dhikr subhanallahi_adada_khalqih (morning; days 23) | "(Three times, after Fajr) Glory be to Allah and praise be to..." | Muslim 2726 | sahih | H
 - [ ] Dhikr rabbana_ma_khalaqta (evening; days 23) | "Our Lord, You did not create this in vain; glory be to You, ..." | Quran 3:191 | n/a | H
 - [ ] Dhikr la_tajal_ad_dunya (morning; days 24) | "(From a longer du'a he often made before rising from a gathe..." | Tirmidhi 3502 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
-- [ ] Dhikr asalukal_jannah (evening; days 24) | "O Allah, I ask You for Paradise and for whatever word or dee..." | Ibn Majah 3846 | sahih | H
+- [ ] Dhikr asalukal_jannah (evening; days 24) | "(From a longer du'a) O Allah, I ask You for Paradise and for..." | Ibn Majah 3846 | sahih | H
 - [ ] Dhikr audhu_an_ushrika (morning; days 25) | "O Allah, I seek refuge in You from knowingly associating any..." | (no source) | - | M (al-Adab al-Mufrad 716 not verified, source null)
 - [ ] Dhikr umar_dua_ikhlas (evening; days 25) | "(Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds ri..." | Du'a of 'Umar ibn al-Khattab (Ahmad, az-Zuhd) | n/a | M (number/grade secondary-verified only; athar, not a prophetic text)
 - [ ] Dhikr yuraqibuka (evening; days 26) | "(Personal du'a) O Allah, make me among those who are mindful..." | (no source) | - | -
 - [ ] Dhikr rabbana_zalamna (morning; days 27) | "Our Lord, we have wronged ourselves; if You do not forgive u..." | Quran 7:23 | n/a | H
-- [ ] Dhikr asalukal_afiyah (evening; days 27) | "(Morning and evening) O Allah, I ask You for well-being in t..." | Abu Dawud 5074; Ibn Majah 3871 | sahih | M (tail of the text not confirmed)
+- [ ] Dhikr asalukal_afiyah (evening; days 27) | "(Morning and evening) O Allah, I ask You for well-being in t..." | Abu Dawud 5074 | sahih | H
 - [ ] Dhikr aslih_ummata_muhammad (morning; days 28) | "(Personal du'a) O Allah, set right the ummah of Muhammad, re..." | (no source) | - | -
 - [ ] Dhikr unsur_al_islam (evening; days 28) | "(Personal du'a) O Allah, give victory to Islam and the Musli..." | (no source) | - | -
-- [ ] Dhikr hudatan_muhtadin (morning; days 29) | "O Allah, adorn us with the beauty of faith, and make us guid..." | Nasa'i 1305 | sahih | H
-- [ ] Dhikr ya_muqallibal_qulub (morning; days 30) | "(The du'a he said most often) O Turner of hearts, make my he..." | Tirmidhi 3522; Tirmidhi 2140 | sahih | H
+- [ ] Dhikr hudatan_muhtadin (morning; days 29) | "(From a longer du'a) O Allah, adorn us with the beauty of fa..." | Nasa'i 1305 | sahih | H
+- [ ] Dhikr ya_muqallibal_qulub (morning; days 30) | "(Umm Salamah said this was the du'a he made most often when ..." | Tirmidhi 3522; Tirmidhi 2140 | sahih | H
 - [ ] Dhikr musarrifal_qulub (evening; days 30) | "O Allah, Director of hearts, direct our hearts to Your obedi..." | Muslim 2654 | sahih | M (Muslim 2654 vs 2655 numbering)
 - [ ] Dhikr ighfir_li_ma_qaddamtu (evening; days 30) | "O Allah, forgive me what I have done before and what I have ..." | Muslim 2719 | sahih | H
 
@@ -316,7 +310,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Duas · Daily life · Leaving the mosque | "O Allah, I ask You of Your bounty." | Muslim 713 | sahih | H
 - [ ] Duas · Daily life · Leaving home | "In the name of Allah; I place my trust in Allah; there is no..." | Abu Dawud 5095; Tirmidhi 3426 | sahih | H
 - [ ] Duas · Quran · Before reciting the Quran | "I seek refuge in Allah from Shaytan, the accursed. Allah say..." | Quran 16:98 | n/a | H
-- [ ] Duas · Quran · Asking for knowledge | "And say: “My Lord, increase me in knowledge.”" | Quran 20:114 | n/a | H
+- [ ] Duas · Quran · Asking for knowledge | "And say: “My Lord, increase me in knowledge.” (Allah tells t..." | Quran 20:114 | n/a | H
 - [ ] Duas · Forgiveness · The best way to ask forgiveness | "O Allah, You are my Lord; there is no god but You. You creat..." | Bukhari 6306 | sahih | H
 - [ ] Duas · Forgiveness · Repentance | "I seek Allah’s forgiveness and I turn to Him in repentance." | Bukhari 6307 | sahih | M (number recalled, not looked up)
 
@@ -351,7 +345,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Learn · morning adhkar · sayyid_istighfar | "O Allah, You are my Lord; there is no god but You. You creat..." | Bukhari 6306 | sahih | H
 - [ ] Learn · morning adhkar · alimal_ghayb | "O Allah, Knower of the unseen and the seen, Creator of the h..." | Tirmidhi 3392 | sahih | H
 - [ ] Learn · morning adhkar · bismillah_la_yadurr | "In the name of Allah, with whose name nothing on earth or in..." | Abu Dawud 5088 | sahih | H
-- [ ] Learn · morning adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | M (tail of the text not confirmed)
+- [ ] Learn · morning adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | H
 - [ ] Learn · morning adhkar · subhanallahi_wa_bihamdihi | "Glory be to Allah and praise be to Him" | Muslim 2692 | sahih | H
 - [ ] Learn · evening adhkar · ayat_al_kursi | "Allah: there is no god but Him, the Ever-Living, the Sustain..." | Quran 2:255 | n/a | H
 - [ ] Learn · evening adhkar · surah_ikhlas | "Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Suffic..." | Abu Dawud 5082 | hasan | M (stored as hasan (disputed or understated))
@@ -363,7 +357,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Learn · evening adhkar · alimal_ghayb | "O Allah, Knower of the unseen and the seen, Creator of the h..." | Tirmidhi 3392 | sahih | H
 - [ ] Learn · evening adhkar · bismillah_la_yadurr | "In the name of Allah, with whose name nothing on earth or in..." | Abu Dawud 5088 | sahih | H
 - [ ] Learn · evening adhkar · audhu_bikalimatillah | "I seek refuge in the perfect words of Allah from the evil of..." | Muslim 2709; Tirmidhi 3604 | sahih | H
-- [ ] Learn · evening adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | M (tail of the text not confirmed)
+- [ ] Learn · evening adhkar · afiyah | "O Allah, I ask You for well-being in this world and the next..." | Abu Dawud 5074 | sahih | H
 - [ ] Learn · evening adhkar · subhanallahi_wa_bihamdihi | "Glory be to Allah and praise be to Him" | Muslim 2692 | sahih | H
 
 ### Milestones and welcome-back (11)
@@ -377,29 +371,59 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Milestone · tasbih_1000 | ""Is any of you unable to earn a thousand good deeds each day..." | Muslim 2698 | sahih | H
 - [ ] Milestone · halfway | ""For indeed, with hardship comes ease. Indeed, with hardship..." | Quran 94:5-6 | n/a | H
 - [ ] Milestone · journey_complete | ""If you are grateful, I will surely increase you."" | Quran 14:7 | n/a | H
-- [ ] Welcome back message | ""The most beloved of deeds to Allah are the most consistent,..." | Bukhari 6464; Muslim 782 | sahih | M (Muslim 782 vs 783 numbering)
+- [ ] Welcome back message | ""The most beloved of deeds to Allah are the most consistent,..." | Bukhari 6464; Muslim 782 | sahih | H
 
-### Citations inside tips, descriptions and tasks (22)
+### Citations inside tips, descriptions and tasks (52)
 References mentioned in free text rather than a source field. Confirm the claim each one supports.
+- [ ] Day 6 · dhikr rabi_qalbi | "(From a longer du'a for distress, Ahmad 3712) O Allah, make ..." | Ahmad 3712
+- [ ] Day 6 · character | "The Prophet ﷺ said: "The most beloved of deeds to Allah are ..." | Bukhari 6464
 - [ ] Day 7 · prayer-focus tip | "Tonight, before you sleep or in the last part of the night b..." | Bukhari 1145
+- [ ] Day 8 · sunnah | "Begin learning the morning and evening adhkar. Today, at the..." | Muslim 597
+- [ ] Day 8 · sunnah | "Begin learning the morning and evening adhkar. Today, at the..." | Bukhari 2311
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Bukhari 5376
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Muslim 2022
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Bukhari 5409
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Muslim 2064
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Muslim 2031
+- [ ] Day 9 · sunnah | "Today, practise the Sunnah of eating: say Bismillah, eat wit..." | Muslim 2734
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 1145
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Abu Dawud 521
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Tirmidhi 212
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Muslim 482
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Tirmidhi 3499
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Bukhari 935
+- [ ] Day 10 · sunnah | "The Prophet ﷺ taught us special times for du'a: the last thi..." | Abu Dawud 1048
+- [ ] Day 10 · prayer-focus tip | "In every sujood today, make du'a in your own words for your ..." | Bukhari 6389
+- [ ] Day 11 · dhikr yunfiqu_fa_tukhlif | "(Personal du'a, inspired by the angels' du'a in Bukhari 1442..." | Bukhari 1442
 - [ ] Day 11 · prayer-focus tip | "Every morning two angels come down. One says, "O Allah, give..." | Bukhari 1442
 - [ ] Day 11 · prayer-focus tip | "Every morning two angels come down. One says, "O Allah, give..." | Muslim 1010
+- [ ] Day 12 · sunnah | "Make this du'a often: "Allahummak-fini bi-halalika 'an haram..." | Ibn Majah 925
 - [ ] Day 12 · prayer-focus tip | "Pray 2 rak'ahs of Duha today, between sunrise and Dhuhr. Eve..." | Muslim 720
 - [ ] Day 12 · character | "The Prophet ﷺ said: "Wealth is not having many possessions; ..." | Bukhari 6446
 - [ ] Day 13 · prayer-focus tip | "If you have a decision to make, big or small, pray istikhara..." | Bukhari 6382
 - [ ] Day 14 · prayer-focus tip | "When good news or a blessing reaches you today, fall into a ..." | Abu Dawud 2774
+- [ ] Day 17 · sunnah | "The Prophet ﷺ said: "The strong one is not the one who overc..." | Bukhari 6115
+- [ ] Day 17 · sunnah | "The Prophet ﷺ said: "The strong one is not the one who overc..." | Abu Dawud 4782
+- [ ] Day 18 · sunnah | "The Prophet ﷺ would greet even children with salam (Bukhari ..." | Bukhari 6247
+- [ ] Day 18 · sunnah | "The Prophet ﷺ would greet even children with salam (Bukhari ..." | Muslim 2168
 - [ ] Day 18 · prayer-focus tip | "Placing your forehead on the ground is the fullest physical ..." | Muslim 772
 - [ ] Day 18 · character | "Pride (kibr) is a disease of the heart. The Prophet ﷺ said t..." | Muslim 91
 - [ ] Day 19 · prayer-focus tip | "In today's prayers, make specific du'a for others: your pare..." | Muslim 2732
+- [ ] Day 21 · intro | "Nothing is heavier on the believer's scale on the Day of Res..." | Abu Dawud 4799
+- [ ] Day 21 · intro | "Nothing is heavier on the believer's scale on the Day of Res..." | Tirmidhi 2002
 - [ ] Day 21 · character | "The Prophet ﷺ said that a good word is charity (Bukhari 2989..." | Bukhari 2989
 - [ ] Day 21 · character | "The Prophet ﷺ said that a good word is charity (Bukhari 2989..." | Muslim 1009
 - [ ] Day 24 · prayer-focus tip | "A sign of zuhd is giving your time to prayer over worldly pu..." | Muslim 728
 - [ ] Day 25 · character | "Among the seven whom Allah will shade on the Day when there ..." | Bukhari 660
 - [ ] Day 25 · character | "Among the seven whom Allah will shade on the Day when there ..." | Muslim 1031
 - [ ] Day 27 · prayer-focus tip | "In the last third of tonight, when Allah descends to the low..." | Bukhari 1145
+- [ ] Day 28 · intro | "The Prophet ﷺ likened the believers, in their mercy and affe..." | Bukhari 6011
+- [ ] Day 28 · intro | "The Prophet ﷺ likened the believers, in their mercy and affe..." | Muslim 2586
 - [ ] Day 28 · prayer-focus tip | "If it is Friday, attend Jumu'ah. If not, pray at least one f..." | Bukhari 645
 - [ ] Day 29 · prayer-focus tip | "In your prayers today, make heartfelt du'a by name for peopl..." | Bukhari 2937
 - [ ] Day 29 · prayer-focus tip | "In your prayers today, make heartfelt du'a by name for peopl..." | Muslim 2491
 - [ ] Day 30 · prayer-focus tip | "Make today a complete day of prayer: the five fard prayers, ..." | Muslim 728
 - [ ] Learn Salah step 5 · Recite Al-Fatihah | "Recite Al-Fatihah, then say Āmīn. The Prophet ﷺ said there i..." | Bukhari 756
 - [ ] Learn Salah step 9 · Prostrate (sujud) | "Say Allahu akbar and prostrate on forehead and nose, palms, ..." | Muslim 482
+- [ ] Learn Salah note · For women | "During menstruation and post-natal bleeding a woman does not..." | Bukhari 321
+- [ ] Learn Salah note · For women | "During menstruation and post-natal bleeding a woman does not..." | Muslim 335

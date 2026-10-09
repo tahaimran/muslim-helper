@@ -75,7 +75,7 @@ export const WUDU_STEPS: LearnStep[] = [
   {
     id: 'wudu_head',
     title: 'Wipe your head',
-    body: 'Wipe your head once with wet hands, from front to back and back to the front again. Hanafi and Shafi\'i differ on how much must be wiped; wiping the whole head, as the Prophet ﷺ did, is the sunnah.',
+    body: 'Wipe your head once with wet hands, from front to back and back to the front again, as the Prophet ﷺ did. How much must be wiped differs by school. Maliki and Hanbali: the whole head; Hanafi: at least a quarter; Shafi\'i: any part. Wiping the whole head covers all views.',
   },
   {
     id: 'wudu_ears',
@@ -100,7 +100,7 @@ export const DUA_AFTER_WUDU: SourcedText = {
   transliteration:
     'Ashhadu an lā ilāha illallāhu waḥdahū lā sharīka lah, wa ashhadu anna Muḥammadan ʿabduhū wa rasūluh',
   meaning:
-    'I bear witness that there is no god but Allah, alone without partner, and I bear witness that Muhammad is His servant and Messenger. (Whoever makes wudu and says this, the eight gates of Paradise are opened for him.)',
+    'I bear witness that there is no god but Allah, alone without partner, and I bear witness that Muhammad is His servant and Messenger. (Whoever performs wudu well, then says this, the eight gates of Paradise are opened for him.)',
   source: hadith('Muslim 234'),
 };
 
@@ -118,7 +118,7 @@ export const SALAH_STEPS: LearnStep[] = [
   {
     id: 'salah_takbir',
     title: 'Begin with Allahu akbar',
-    body: 'Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Hanafi and Shafi\'i differ on where the hands rest: below the navel (Hanafi) or on the chest, above the navel (Shafi\'i).',
+    body: 'Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Where the hands rest differs by school. Hanafi and Hanbali: below the navel (Hanafi women: on the chest); Shafi\'i: below the chest, above the navel; many Malikis let the arms hang at the sides. All are valid practice.',
     recite: {
       arabic: 'اللَّهُ أَكْبَرُ',
       transliteration: 'Allāhu akbar',
@@ -189,7 +189,7 @@ export const SALAH_STEPS: LearnStep[] = [
   {
     id: 'salah_rising',
     title: 'Stand back up',
-    body: 'Rise saying the first phrase, then once you are standing straight say the second. Behind an imam, say only the second.',
+    body: 'Rise saying the first phrase, then once you are standing straight say the second. In most schools, behind an imam say only the second phrase (Shafi\'is say both).',
     recite: {
       arabic: 'سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ، رَبَّنَا وَلَكَ الْحَمْدُ',
       transliteration: 'Samiʿallāhu liman ḥamidah. Rabbanā wa lakal-ḥamd',
@@ -288,17 +288,22 @@ export const SALAH_NOTES: { id: string; title: string; body: string }[] = [
   {
     id: 'three_four_rakahs',
     title: '3- and 4-rak‘ah prayers',
-    body: 'After the second rak\'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh", then stand with Allahu akbar. In the 3rd and 4th rak\'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.',
+    body: 'After the second rak\'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh" (Shafi\'is also add the salawat), then stand with Allahu akbar. In the 3rd and 4th rak\'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.',
   },
   {
     id: 'aloud_or_silent',
     title: 'Aloud or silent',
-    body: 'Fajr is recited aloud, and so are the first two rak\'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently.',
+    body: 'Fajr is recited aloud, and so are the first two rak\'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently. "Aloud" applies to men and to the imam; for women, see the note below.',
+  },
+  {
+    id: 'for_women',
+    title: 'For women',
+    body: 'During menstruation and post-natal bleeding a woman does not pray, and she does not make up those prayers afterwards (Bukhari 321; Muslim 335). When non-mahram men are present, recite so that only you can hear. In prayer, cover the whole body except the face and hands.',
   },
   {
     id: 'madhhab_details',
     title: 'Small differences between madhhabs',
-    body: 'Hanafi and Shafi\'i differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.',
+    body: 'The four schools (Hanafi, Maliki, Shafi\'i and Hanbali) differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.',
   },
 ];
 
@@ -501,6 +506,8 @@ export const MORNING_ADHKAR: Dhikr[] = [
   AYAT_AL_KURSI_DHIKR,
   ...QULS,
   {
+    // Muslim 2723 gives the evening wording; in 2723.02 Ibn Mas'ud adds "and in the morning he said
+    // likewise", so the morning form swaps amsayna/laylah for asbahna/yawm.
     id: 'asbahna_wa_asbahal_mulk',
     arabic:
       'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ',
