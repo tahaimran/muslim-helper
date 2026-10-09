@@ -50,3 +50,28 @@ describe('resolveCalcSettings', () => {
     expect(resolveCalcSettings({ calcMethod: 'Egyptian', madhab: 'hanafi' }, 'SA')).toEqual({ method: 'Egyptian', madhab: 'hanafi' });
   });
 });
+
+describe('high latitude hardening', () => {
+  const OSLO = { latitude: 59.9139, longitude: 10.7522 };
+  const REYKJAVIK = { latitude: 64.1466, longitude: -21.9426 };
+  it('produces valid ordered times at high latitudes in summer', () => {
+    for (const loc of [OSLO, REYKJAVIK]) {
+      const t = getPrayerTimes(new Date(2026, 5, 21), loc, 'MuslimWorldLeague', 'shafi');
+      const seq = [t.fajr, t.sunrise, t.dhuhr, t.asr, t.maghrib, t.isha].map((d) => d.getTime());
+      seq.forEach((ms) => expect(Number.isFinite(ms)).toBe(true));
+      expect([...seq].sort((a, b) => a - b)).toEqual(seq);
+    }
+  });
+  it('getNextPrayer never returns an invalid date', () => {
+    const next = getNextPrayer(new Date(2026, 5, 21, 23, 30), REYKJAVIK, 'MuslimWorldLeague', 'shafi');
+    expect(Number.isFinite(next.time.getTime())).toBe(true);
+  });
+});
+
+describe('invalid-time guard', () => {
+  it('skips NaN prayer times when finding the next prayer (Tromso midsummer)', () => {
+    const TROMSO = { latitude: 69.6492, longitude: 18.9553 };
+    const next = getNextPrayer(new Date(2026, 5, 21, 23, 30), TROMSO, 'MuslimWorldLeague', 'shafi');
+    expect(Number.isFinite(next.time.getTime())).toBe(true);
+  });
+});

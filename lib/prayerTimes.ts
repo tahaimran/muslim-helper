@@ -1,4 +1,4 @@
-import { CalculationMethod, Coordinates, Madhab, PrayerTimes } from 'adhan';
+import { CalculationMethod, Coordinates, HighLatitudeRule, Madhab, PrayerTimes } from 'adhan';
 import { PRAYER_NAMES, type CalcMethodId, type MadhabId, type Settings } from './model';
 import type { PrayerName } from './types';
 
@@ -50,6 +50,7 @@ export function getPrayerTimes(
 ): DailyPrayerTimes {
   const params = CalculationMethod[method]();
   params.madhab = madhab === 'hanafi' ? Madhab.Hanafi : Madhab.Shafi;
+  params.highLatitudeRule = HighLatitudeRule.recommended(coords);
   const t = new PrayerTimes(new Coordinates(coords.latitude, coords.longitude), date, params);
   return { fajr: t.fajr, sunrise: t.sunrise, dhuhr: t.dhuhr, asr: t.asr, maghrib: t.maghrib, isha: t.isha };
 }
@@ -60,10 +61,17 @@ export function getNextPrayer(
   method: CalcMethodId,
   madhab: MadhabId
 ): { name: PrayerName; time: Date } {
+  const isValid = (d: Date) => Number.isFinite(d.getTime());
   const today = getPrayerTimes(now, coords, method, madhab);
   for (const name of PRAYER_ORDER) {
+    if (!isValid(today[name])) continue;
     if (today[name].getTime() > now.getTime()) return { name, time: today[name] };
   }
   const tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
-  return { name: 'fajr', time: getPrayerTimes(tomorrow, coords, method, madhab).fajr };
+  const next = getPrayerTimes(tomorrow, coords, method, madhab);
+  if (isValid(next.fajr)) return { name: 'fajr', time: next.fajr };
+  for (const name of PRAYER_ORDER) {
+    if (isValid(next[name])) return { name, time: next[name] };
+  }
+  return { name: 'fajr', time: next.fajr };
 }
