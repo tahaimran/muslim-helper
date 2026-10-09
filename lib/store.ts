@@ -6,7 +6,7 @@ import { toDateKey, type DateKey } from './day';
 import { convertLegacyNafs, LEGACY_NAFS_KEY } from './legacy';
 import type { MilestoneId } from './milestones';
 import {
-  emptyDateLog, initialState, planDayKey,
+  DEFAULT_SETTINGS, emptyDateLog, initialState, planDayKey,
   type DateLog, type PersistedState, type PlanDayLog, type Profile, type Settings,
 } from './model';
 import type { MoodType, PrayerName } from './types';
@@ -148,6 +148,19 @@ export function createAppStore() {
         version: 1,
         storage: createJSONStorage(() => AsyncStorage),
         partialize: (s) => getPersisted(s),
+        merge: (persisted, current) => {
+          const p = (persisted ?? {}) as Partial<PersistedState>;
+          const ps: Partial<Settings> = p.settings ?? {};
+          return {
+            ...current,
+            ...p,
+            settings: {
+              ...DEFAULT_SETTINGS,
+              ...ps,
+              reminders: { ...DEFAULT_SETTINGS.reminders, ...(ps.reminders ?? {}) },
+            },
+          };
+        },
       }
     )
   );
@@ -163,16 +176,33 @@ export async function importLegacyIfNeeded(
   store: ReturnType<typeof createAppStore> = appStore,
   today: DateKey = toDateKey(new Date())
 ): Promise<boolean> {
+  if (!store.persist.hasHydrated()) {
+    await new Promise<void>((resolve) => {
+      const unsub = store.persist.onFinishHydration(() => {
+        unsub();
+        resolve();
+      });
+      if (store.persist.hasHydrated()) {
+        unsub();
+        resolve();
+      }
+    });
+  }
   if (store.getState().profile) return false;
+  let converted: PersistedState | null;
   try {
     const raw = await AsyncStorage.getItem(LEGACY_NAFS_KEY);
     if (!raw) return false;
-    const converted = convertLegacyNafs(JSON.parse(raw), today);
-    if (!converted) return false;
-    store.getState().replaceAll(converted);
-    await AsyncStorage.removeItem(LEGACY_NAFS_KEY);
-    return true;
+    converted = convertLegacyNafs(JSON.parse(raw), today);
   } catch {
     return false;
   }
+  if (!converted) return false;
+  store.getState().replaceAll(converted);
+  try {
+    await AsyncStorage.removeItem(LEGACY_NAFS_KEY);
+  } catch {
+    // best-effort cleanup; import already applied
+  }
+  return true;
 }

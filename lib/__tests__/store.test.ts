@@ -1,7 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createAppStore, getPersisted, importLegacyIfNeeded, STORE_KEY } from '../store';
 import { LEGACY_NAFS_KEY } from '../legacy';
-import type { Profile } from '../model';
+import { DEFAULT_SETTINGS, type Profile } from '../model';
 
 const profile: Profile = { name: 'Yusuf', prayerHabit: 'some', knowledgeLevel: 'beginner', focusAreas: ['prayer'], dailyMinutes: 20 };
 const flush = () => new Promise((r) => setTimeout(r, 0));
@@ -119,5 +119,28 @@ describe('app store', () => {
     store.getState().completeOnboarding(profile, '2026-10-09');
     expect(await importLegacyIfNeeded(store, '2026-10-09')).toBe(false);
     expect(store.getState().profile?.name).toBe('Yusuf');
+  });
+
+  it('waits for hydration before the legacy guard, keeping a persisted profile', async () => {
+    const seeded = createAppStore();
+    seeded.getState().completeOnboarding(profile, '2026-10-09');
+    await flush();
+    await AsyncStorage.setItem(LEGACY_NAFS_KEY, JSON.stringify({ isOnboarded: true, userProfile: { name: 'Old' } }));
+    const store = createAppStore();
+    expect(await importLegacyIfNeeded(store, '2026-10-09')).toBe(false);
+    expect(store.getState().profile?.name).toBe('Yusuf');
+  });
+
+  it('fills missing persisted settings (e.g. reminders) with defaults on rehydrate', async () => {
+    await AsyncStorage.setItem(STORE_KEY, JSON.stringify({
+      state: { profile, settings: { language: 'ur' } },
+      version: 1,
+    }));
+    const store = createAppStore();
+    await store.persist.rehydrate();
+    const s = store.getState().settings;
+    expect(s.language).toBe('ur');
+    expect(s.reminders).toEqual(DEFAULT_SETTINGS.reminders);
+    expect(s.theme).toBe(DEFAULT_SETTINGS.theme);
   });
 });
