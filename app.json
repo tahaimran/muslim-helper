@@ -1,21 +1,23 @@
 {
   "expo": {
-    "name": "Nafs",
-    "slug": "nafs-30-day-transformation",
+    "name": "Awdah",
+    "slug": "awdah",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "nafs",
+    "scheme": "awdah",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "description": "A free 30-day Islamic spiritual transformation app with daily plans, dhikr, Quran goals, and character building exercises.",
+    "description": "Awdah — a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. No accounts, no ads, nothing leaves your phone.",
     "android": {
       "package": "com.nafs.transformation",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon-foreground.png",
         "backgroundColor": "#1B4332"
       },
-      "permissions": ["NOTIFICATIONS"],
+      "permissions": [
+        "NOTIFICATIONS"
+      ],
       "versionCode": 1
     },
     "ios": {
@@ -37,12 +39,6 @@
         {
           "icon": "./assets/images/notification-icon.png",
           "color": "#2D6A4F"
-        }
-      ],
-      [
-        "expo-secure-store",
-        {
-          "configureAndroid": true
         }
       ]
     ],
