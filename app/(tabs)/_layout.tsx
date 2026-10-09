@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 import { Tabs } from 'expo-router';
 import { BlurView } from 'expo-blur';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -39,10 +39,13 @@ export default function TabLayout() {
         tabBarHideOnKeyboard: true,
         tabBarLabelStyle: { fontFamily: font('uiMedium'), fontSize: 11 },
         tabBarItemStyle: { paddingVertical: 6 },
-        tabBarBackground: () =>
-          Platform.OS === 'ios' ? (
-            <BlurView intensity={30} tint={scheme === 'dark' ? 'dark' : 'light'} style={StyleSheet.absoluteFill} />
-          ) : null,
+        tabBarBackground: () => (
+          <View style={styles.clip}>
+            {Platform.OS === 'ios' ? (
+              <BlurView intensity={30} tint={scheme === 'dark' ? 'dark' : 'light'} style={StyleSheet.absoluteFill} />
+            ) : null}
+          </View>
+        ),
         tabBarStyle: {
           position: 'absolute',
           start: 16,
@@ -51,11 +54,9 @@ export default function TabLayout() {
           height: 64,
           borderRadius: 22,
           borderWidth: StyleSheet.hairlineWidth,
-          borderTopWidth: StyleSheet.hairlineWidth,
           borderColor: colors.line,
           backgroundColor: withAlpha(colors.surface, 0.92),
-          overflow: 'hidden',
-          shadowColor: '#000',
+          shadowColor: colors.shadow,
           shadowOpacity: 0.1,
           shadowRadius: 16,
           shadowOffset: { width: 0, height: 4 },
@@ -71,3 +72,5 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+const styles = StyleSheet.create({ clip: { ...StyleSheet.absoluteFillObject, borderRadius: 22, overflow: 'hidden' } });

@@ -26,8 +26,5 @@
   },
   "milestones": {
     "unlocked": "Milestone reached: {{title}}"
-  },
-  "splash": {
-    "preparing": "Preparing your space"
   }
 }

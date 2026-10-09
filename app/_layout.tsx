@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component, useCallback, useEffect, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
@@ -6,13 +6,13 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import { getLocales } from 'expo-localization';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { I18nextProvider } from 'react-i18next';
+import { I18nextProvider, useTranslation } from 'react-i18next';
 import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
 import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
 import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
 import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
 import { FONT_ASSETS } from '@/theme/fonts';
-import { AppText, Button, ToastHost, showToast } from '@/components';
+import { AppText, Button, ToastHost } from '@/components';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -41,18 +41,19 @@ class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError:
   }
 }
 
-function Shell({ hydrated }: { hydrated: boolean }) {
+function Shell() {
   const router = useRouter();
   const segments = useSegments();
   const { scheme } = useTheme();
   const profile = useAppStore((s) => s.profile);
   const language = useAppStore((s) => s.settings.language);
 
+  const firstLang = useRef(true);
   useEffect(() => {
-    if (!hydrated) showToast(i18n.t('errors.storage'), 'error');
-  }, [hydrated]);
-
-  useEffect(() => {
+    if (firstLang.current) {
+      firstLang.current = false;
+      return;
+    }
     void initI18n(resolveLanguage(language, deviceCodes()));
   }, [language]);
 
@@ -78,40 +79,65 @@ function Shell({ hydrated }: { hydrated: boolean }) {
   );
 }
 
+type Boot = 'loading' | 'unhydrated' | 'ready';
+
+async function boot(): Promise<Boot> {
+  if (!(await waitForHydration())) return 'unhydrated';
+  await importLegacyIfNeeded();
+  await initI18n(resolveLanguage(appStore.getState().settings.language, deviceCodes()));
+  return 'ready';
+}
+
+function StorageUnavailable({ onRetry }: { onRetry: () => void }) {
+  const { colors } = useTheme();
+  const { t } = useTranslation();
+  return (
+    <View style={[styles.center, { backgroundColor: colors.bg }]}>
+      <AppText variant="body" style={styles.message}>{t('errors.storage')}</AppText>
+      <Button label={t('common.retry')} onPress={onRetry} />
+    </View>
+  );
+}
+
 function Root() {
   const [fontsLoaded, fontError] = useFonts(FONT_ASSETS);
-  const [ready, setReady] = useState(false);
-  const [hydrated, setHydrated] = useState(true);
+  const [state, setState] = useState<Boot>('loading');
 
   useEffect(() => {
     let active = true;
-    (async () => {
-      const ok = await waitForHydration();
-      await importLegacyIfNeeded();
-      await initI18n(resolveLanguage(appStore.getState().settings.language, deviceCodes()));
-      if (!active) return;
-      setHydrated(ok);
-      setReady(true);
-    })().catch(() => {
-      if (active) setReady(true);
-    });
+    boot()
+      .then((b) => active && setState(b))
+      .catch(() => active && setState('unhydrated'));
     return () => {
       active = false;
     };
   }, []);
 
+  const retry = useCallback(async () => {
+    try {
+      await appStore.persist.rehydrate();
+      setState(await boot());
+    } catch {
+      setState('unhydrated');
+    }
+  }, []);
+
   const fontsDone = fontsLoaded || fontError !== null;
   useEffect(() => {
-    if (ready && fontsDone) SplashScreen.hideAsync().catch(() => {});
-  }, [ready, fontsDone]);
+    if (state !== 'loading' && fontsDone) SplashScreen.hideAsync().catch(() => {});
+  }, [state, fontsDone]);
 
-  if (!ready || !fontsDone) return null;
+  if (state === 'loading' || !fontsDone) return null;
   return (
     <I18nextProvider i18n={i18n}>
       <AppThemeProvider>
-        <ErrorBoundary>
-          <Shell hydrated={hydrated} />
-        </ErrorBoundary>
+        {state === 'ready' ? (
+          <ErrorBoundary>
+            <Shell />
+          </ErrorBoundary>
+        ) : (
+          <StorageUnavailable onRetry={retry} />
+        )}
       </AppThemeProvider>
     </I18nextProvider>
   );
