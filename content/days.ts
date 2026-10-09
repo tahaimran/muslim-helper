@@ -1395,7 +1395,7 @@ export const DAYS: DayContent[] = [
       note: 'Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."',
     },
     prayerFocus: {
-      prayer: 'dhuhr',
+      prayer: 'all',
       tip: "Pray 2 rak'ahs of Duha today, between sunrise and Dhuhr. Every morning a charity is due for each joint of your body, and two rak'ahs of Duha suffice for all of it (Muslim 720).",
     },
     sunnah: {
@@ -1445,7 +1445,7 @@ export const DAYS: DayContent[] = [
         id: '12_prayers',
         title: 'Pray all 5 prayers on time',
         titleBeginner: 'Pray as many of the 5 prayers on time as you can',
-        titleAdvanced: 'Pray all 5 prayers on time, and Duha as well',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
         category: 'prayer',
       },
       {
@@ -1476,9 +1476,9 @@ export const DAYS: DayContent[] = [
       {
         id: 'leaving_home_dua',
         arabic:
-          'بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+          'بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ',
         transliteration:
-          'Bismillāh, tawakkaltu ʿalallāh, wa lā ḥawla wa lā quwwata illā billāh',
+          'Bismillāh, tawakkaltu ʿalallāh, lā ḥawla wa lā quwwata illā billāh',
         meaning:
           '(On leaving home) In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah',
         count: 1,
@@ -1854,15 +1854,14 @@ export const DAYS: DayContent[] = [
         'Pick one unfulfilled promise or commitment. Fulfil it today, or speak honestly with the person involved.',
     },
     hadith: {
-      arabic:
-        'أَدِّ الأَمَانَةَ إِلَى مَنِ ائْتَمَنَكَ، وَلاَ تَخُنْ مَنْ خَانَكَ',
+      // Exact excerpt as in Bukhari 7138 and Muslim 1829 (Bukhari 893 has the same without أَلاَ).
+      arabic: 'أَلاَ كُلُّكُمْ رَاعٍ، وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ',
       meaning:
-        '"Return the trust to the one who entrusted you, and do not betray the one who betrayed you."',
-      // Graded hasan sahih by al-Albani; some later checkers grade it da'if (verification-1, Day 16).
-      source: hadith('Abu Dawud 3535; Tirmidhi 1264', 'hasan'),
+        '"Indeed, each of you is a shepherd, and each of you is responsible for his flock."',
+      source: hadith('Bukhari 7138; Muslim 1829'),
     },
     reflection:
-      'In which relationships or roles could you be more trustworthy or reliable?',
+      'Who and what has been placed in your care? In which of those roles could you be more trustworthy or reliable?',
     tasks: [
       {
         id: '16_promises',
@@ -1923,7 +1922,7 @@ export const DAYS: DayContent[] = [
         arabic:
           'إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا',
         transliteration:
-          'Innā lillāhi wa innā ilayhi rājiʿūn, Allāhumma ʾjurnī fī muṣībatī wa akhlif lī khayran minhā',
+          "Innā lillāhi wa innā ilayhi rājiʿūn, Allāhumma'jurnī fī muṣībatī wa akhlif lī khayran minhā",
         meaning:
           '(At a calamity) We belong to Allah and to Him we return. O Allah, reward me in my affliction and replace it for me with something better',
         count: 1,
@@ -2054,7 +2053,7 @@ export const DAYS: DayContent[] = [
     },
     prayerFocus: {
       prayer: 'all',
-      tip: 'Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, feel its meaning: "I submit to You, my Lord, the Most High." Let that feeling stay with you.',
+      tip: 'Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, say "Subhana Rabbiyal-A\'la" (Glory be to my Lord, the Most High; Muslim 772) and feel its meaning: you are submitting completely to Him. Let that feeling stay with you.',
     },
     sunnah: {
       title: 'Be the first to give salam',
@@ -2282,9 +2281,9 @@ export const DAYS: DayContent[] = [
     },
     hadith: {
       arabic:
-        'مَنْ سَرَّهُ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، أَوْ يُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ',
+        'مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، وَيُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ',
       meaning:
-        '"Whoever would like his provision to be expanded and his life to be extended, let him keep the ties of kinship."',
+        '"Whoever loves that his provision be expanded and his life be extended, let him keep the ties of kinship."',
       source: hadith('Bukhari 5986; Muslim 2557'),
     },
     reflection:
@@ -2292,13 +2291,14 @@ export const DAYS: DayContent[] = [
     tasks: [
       {
         id: '20_call_family',
-        title: 'Call or visit a family member today',
+        title:
+          'Call, message or visit a family member today, ideally after Fajr',
         category: 'character',
       },
       {
-        id: '20_fajr_contact',
-        title: 'Contact a family member after Fajr',
-        category: 'sunnah',
+        id: '20_family_dua',
+        title: "Make du'a for each member of your family by name",
+        category: 'dhikr',
       },
       {
         id: '20_repair',
