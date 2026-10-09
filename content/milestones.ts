@@ -70,7 +70,7 @@ export const MILESTONE_CONTENT: Record<MilestoneId, { title: string; text: Sourc
   halfway: {
     title: "Halfway through your journey",
     text: {
-      arabic: "فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰ ا",
+      arabic: "فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا ﴿٥﴾ إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰا",
       meaning: "\"For indeed, with hardship comes ease. Indeed, with hardship comes ease.\"",
       source: {"kind":"quran","ref":"Quran 94:5-6","grade":null},
     },

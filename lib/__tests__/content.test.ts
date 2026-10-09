@@ -3,7 +3,7 @@ import { MILESTONE_CONTENT, WELCOME_BACK } from '../../content/milestones';
 import { MILESTONE_IDS } from '../milestones';
 import type { Dhikr, Source, SourcedText } from '../../content/types';
 
-const ARABIC = /[؀-ۿ]/;
+const ARABIC = /[\u0600-\u06FF]/;
 
 // Texts removed for being fabricated, weak, unsourced or misapplied. Must never return.
 const BANNED = [
@@ -41,6 +41,10 @@ function checkDhikr(d: Dhikr) {
 }
 
 describe('day content integrity', () => {
+  it('has no tanween-spacing artifacts in Arabic text', () => {
+    expect(JSON.stringify(DAYS)).not.toMatch(/[\u08F0-\u08F2] [\u0627\u0649]/);
+  });
+
   it('has sequential day numbers', () => {
     DAYS.forEach((d, i) => expect(d.day).toBe(i + 1));
   });
@@ -95,6 +99,10 @@ describe('day content integrity', () => {
 });
 
 describe('milestone content', () => {
+  it('has no tanween-spacing artifacts in Arabic text', () => {
+    expect(JSON.stringify([MILESTONE_CONTENT, WELCOME_BACK])).not.toMatch(/[\u08F0-\u08F2] [\u0627\u0649]/);
+  });
+
   it('covers every milestone id with sourced text', () => {
     MILESTONE_IDS.forEach((id) => {
       expect(MILESTONE_CONTENT[id].title.length).toBeGreaterThan(0);
