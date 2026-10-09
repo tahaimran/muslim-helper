@@ -195,7 +195,8 @@ All 12 issues the audit flagged are resolved below. Three extra problems turned 
 ### Day 27: Tawbah Nasuha (L1315)
 - **Current:** Allah is more joyful at the repentance... than one who found his lost camel in the desert. (Bukhari & Muslim)
 - **Verdict:** KEEP · **Grade:** Sahih · **Ref:** Bukhari 6309; Muslim 2747 · **Confidence:** H
-- **Arabic:** لَلَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ
+- **Arabic (Bukhari 6309):** اللَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ، وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ
+- **Note:** Corrected from an earlier blend of Muslim's «لَلَّهُ» opening with Bukhari's body; this is the exact Bukhari 6309 wording from the hadith-api mirror (Muslim 2747 has a longer, differently worded narration).
 
 ### Day 28: Ummah (L1363)
 - **Current:** "The believer to the believer is like a building..." (Bukhari)

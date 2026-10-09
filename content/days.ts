@@ -153,7 +153,7 @@ export const DAYS: DayContent[] = [
           'Allāhumma innī asʾaluka ʿilman nāfiʿan, wa rizqan ṭayyiban, wa ʿamalan mutaqabbalā',
         meaning:
           '(After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds.',
-        source: hadith('Ibn Majah 925'),
+        source: hadith('Ibn Majah 925', 'hasan'),
       },
     },
     sunnah: {
@@ -702,11 +702,11 @@ export const DAYS: DayContent[] = [
       {
         id: 'ihdini_li_ahsanil_akhlaq',
         arabic:
-          'اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لَا يَصْرِفُ عَنِّي سَيِّئَهَا إِلَّا أَنْتَ',
+          'وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ',
         transliteration:
-          'Allāhummah-dinī li-aḥsanil-akhlāqi lā yahdī li-aḥsanihā illā anta, waṣrif ʿannī sayyiʾahā lā yaṣrifu ʿannī sayyiʾahā illā ant',
+          'Wahdinī li-aḥsanil-akhlāqi lā yahdī li-aḥsanihā illā ant, waṣrif ʿannī sayyiʾahā lā yaṣrifu ʿannī sayyiʾahā illā ant',
         meaning:
-          'O Allah, guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You',
+          "(From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You",
         count: 1,
         source: hadith('Muslim 771'),
       },
@@ -2336,11 +2336,11 @@ export const DAYS: DayContent[] = [
       {
         id: 'ihdini_li_ahsanil_akhlaq',
         arabic:
-          'اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لَا يَصْرِفُ عَنِّي سَيِّئَهَا إِلَّا أَنْتَ',
+          'وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ',
         transliteration:
-          'Allāhummah-dinī li-aḥsanil-akhlāqi lā yahdī li-aḥsanihā illā anta, waṣrif ʿannī sayyiʾahā lā yaṣrifu ʿannī sayyiʾahā illā ant',
+          'Wahdinī li-aḥsanil-akhlāqi lā yahdī li-aḥsanihā illā ant, waṣrif ʿannī sayyiʾahā lā yaṣrifu ʿannī sayyiʾahā illā ant',
         meaning:
-          'O Allah, guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You',
+          "(From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You",
         count: 1,
         source: hadith('Muslim 771'),
       },
@@ -2447,7 +2447,7 @@ export const DAYS: DayContent[] = [
         meaning:
           '(After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds',
         count: 1,
-        source: hadith('Ibn Majah 925'),
+        source: hadith('Ibn Majah 925', 'hasan'),
       },
     ],
     eveningDhikr: [
@@ -2498,7 +2498,7 @@ export const DAYS: DayContent[] = [
       {
         id: '22_learn',
         title: 'Listen to one Islamic lecture or read Islamic content',
-        category: 'quran',
+        category: 'reflection',
       },
       {
         id: '22_after_fajr',
@@ -2646,11 +2646,11 @@ export const DAYS: DayContent[] = [
       {
         id: 'la_tajal_ad_dunya',
         arabic:
-          'اللَّهُمَّ لَا تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلَا مَبْلَغَ عِلْمِنَا',
+          'وَلاَ تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلاَ مَبْلَغَ عِلْمِنَا',
         transliteration:
-          'Allāhumma lā tajʿalid-dunyā akbara hamminā wa lā mablagha ʿilminā',
+          'Wa lā tajʿalid-dunyā akbara hamminā wa lā mablagha ʿilminā',
         meaning:
-          "(From a du'a he often made before rising from a gathering) O Allah, do not make this world our greatest concern nor the limit of our knowledge",
+          "(From a longer du'a he often made before rising from a gathering) And do not make this world our greatest concern nor the limit of our knowledge",
         count: 1,
         source: hadith('Tirmidhi 3502', 'hasan'),
       },
@@ -2720,7 +2720,8 @@ export const DAYS: DayContent[] = [
       },
       {
         id: '24_dhikr',
-        title: "Make the du'a for Paradise in the morning and evening",
+        title:
+          "Make the du'a against worldly worry in the morning and the du'a for Paradise in the evening",
         category: 'dhikr',
       },
       {
@@ -2797,11 +2798,10 @@ export const DAYS: DayContent[] = [
     },
     hadith: {
       arabic:
-        'إِنَّ اللَّهَ لاَ يَقْبَلُ مِنَ الْعَمَلِ إِلاَّ مَا كَانَ لَهُ خَالِصًا وَابْتُغِيَ بِهِ وَجْهُهُ',
+        'إِنَّ اللَّهَ لاَ يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ',
       meaning:
-        '"Allah does not accept any deed except what is done purely for Him and by which His Face is sought."',
-      // Hasan sahih per al-Albani and Abu Ghuddah; Zubair Ali Za'i grades it da'if, so shown as hasan.
-      source: hadith("Nasa'i 3140", 'hasan'),
+        '"Allah does not look at your forms or your wealth, but He looks at your hearts and your deeds."',
+      source: hadith('Muslim 2564'),
     },
     reflection:
       'Which of your acts of worship might be tainted by the desire for praise or recognition?',
@@ -2843,7 +2843,7 @@ export const DAYS: DayContent[] = [
     theme: 'Muraqabah',
     themeArabic: 'المراقبة',
     intro:
-      'Muraqabah is living with the awareness that Allah sees your actions, your words and your secret thoughts. It is the heart of ihsan: "to worship Allah as if you see Him."',
+      'Muraqabah is living with the awareness that Allah sees your actions, your words and your secret thoughts. It is the heart of ihsan, the highest level of worship.',
     morningDhikr: [SAYYID_ISTIGHFAR],
     eveningDhikr: [
       {
@@ -2867,7 +2867,7 @@ export const DAYS: DayContent[] = [
     },
     prayerFocus: {
       prayer: 'all',
-      tip: 'The Prophet ﷺ defined ihsan: "To worship Allah as if you see Him, and if you do not see Him, He surely sees you" (Bukhari 50; Muslim 8). Bring this awareness into every rak\'ah today.',
+      tip: "Bring the awareness that Allah sees you into every rak'ah today, from the opening takbir to the final salam.",
     },
     sunnah: {
       title: 'Muhasabah (self-accounting)',
@@ -2999,9 +2999,9 @@ export const DAYS: DayContent[] = [
     },
     hadith: {
       arabic:
-        'لَلَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ',
+        'اللَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ، وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ',
       meaning:
-        '"Allah is more pleased with the repentance of His servant than one of you would be on finding his camel after losing it in a desert."',
+        '"Allah is more pleased with the repentance of His servant than one of you who comes upon his camel after losing it in a desolate land."',
       source: hadith('Bukhari 6309; Muslim 2747'),
     },
     reflection:
@@ -3274,7 +3274,7 @@ export const DAYS: DayContent[] = [
         meaning:
           'O Allah, Director of hearts, direct our hearts to Your obedience',
         count: 1,
-        // sunnah.com numbers this Muslim 2654; the hadith-api mirror's arabicnumber shows 2655 (verification-2 open doubt 1).
+        // sunnah.com numbers this Muslim 2654; the hadith-api mirror's arabicnumber is off by one here and shows 2655.
         source: hadith('Muslim 2654'),
       },
       {
