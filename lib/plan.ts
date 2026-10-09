@@ -18,9 +18,11 @@ export function taskLimit(dailyMinutes: number): number {
   return 6;
 }
 
-export function personalizeTasks(tasks: DayTask[], profile: Profile, cycle: number): DayTask[] {
+export type PersonalizableTask = Pick<DayTask, 'title' | 'titleBeginner' | 'titleAdvanced' | 'category'>;
+
+export function personalizeTasks<T extends PersonalizableTask>(tasks: T[], profile: Profile, cycle: number): T[] {
   const focus = new Set(profile.focusAreas.map((a) => FOCUS_TO_CATEGORY[a]));
-  const rank = (t: DayTask) => (t.category === 'prayer' ? 0 : focus.has(t.category) ? 1 : 2);
+  const rank = (t: T) => (t.category === 'prayer' ? 0 : focus.has(t.category) ? 1 : 2);
 
   const ordered = tasks
     .map((task, index) => ({ task, index }))
