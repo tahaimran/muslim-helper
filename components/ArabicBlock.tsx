@@ -14,7 +14,7 @@ export function ArabicBlock({ arabic, transliteration, meaning, sourceRef, size 
   return (
     <View style={styles.block}>
       <AppText variant={size === 'large' ? 'arabicLarge' : 'arabic'}>{arabic}</AppText>
-      {transliteration ? <AppText variant="small" muted center style={styles.italic}>{transliteration}</AppText> : null}
+      {transliteration ? <AppText variant="small" muted center>{transliteration}</AppText> : null}
       <AppText variant="body" center>{meaning}</AppText>
       {sourceRef ? <AppText variant="caption" muted center>{sourceRef}</AppText> : null}
     </View>
@@ -23,5 +23,4 @@ export function ArabicBlock({ arabic, transliteration, meaning, sourceRef, size 
 
 const styles = StyleSheet.create({
   block: { gap: 8, alignItems: 'stretch' },
-  italic: { fontStyle: 'italic' },
 });

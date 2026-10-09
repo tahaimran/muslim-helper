@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeProvider';
@@ -26,6 +26,7 @@ export function ToastHost() {
   useEffect(() => {
     const l = (t: ToastEvent) => {
       setToast(t);
+      AccessibilityInfo.announceForAccessibility(t.message);
       if (timer.current) clearTimeout(timer.current);
       timer.current = setTimeout(() => setToast(null), 3000);
     };

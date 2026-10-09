@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
-import { PressableScale } from './Pressable';
+import { PressableScale } from './PressableScale';
 
 export type SectionProps = {
   title?: string;

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
-import { PressableScale } from './Pressable';
+import { PressableScale } from './PressableScale';
 
 export function Chip({ label, selected, onPress }: { label: string; selected: boolean; onPress: () => void }) {
   const { colors } = useTheme();

@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { DirectionalIcon } from './DirectionalIcon';
-import { PressableScale } from './Pressable';
+import { PressableScale } from './PressableScale';
 
 export type ListRowProps = {
   title: string;
@@ -30,7 +30,7 @@ export function ListRow({ title, subtitle, onPress, trailing, leading, destructi
   const rowStyle = [styles.row, { borderBottomColor: colors.line }];
   if (!onPress) return <View style={rowStyle}>{content}</View>;
   return (
-    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={title} style={rowStyle}>
+    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={subtitle ? `${title}, ${subtitle}` : title} style={rowStyle}>
       {content}
     </PressableScale>
   );

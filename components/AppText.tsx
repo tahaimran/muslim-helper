@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, type TextProps, type TextStyle } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
-import { TYPE_SCALE, type FontRole } from '../theme/fonts';
+import { ARABIC_SCALE, TYPE_SCALE, type FontRole } from '../theme/fonts';
 
 export type TextVariant =
   | 'hero' | 'display' | 'title' | 'heading' | 'body' | 'small' | 'caption' | 'arabic' | 'arabicLarge';
@@ -16,12 +16,12 @@ export type AppTextProps = TextProps & {
   center?: boolean;
 };
 
-const ARABIC_SIZE = { arabic: 28, arabicLarge: 36 } as const;
+
 
 export function AppText({ variant = 'body', muted, color, weight, center, style, ...rest }: AppTextProps) {
   const { colors, font, lineHeight } = useTheme();
   const isArabic = variant === 'arabic' || variant === 'arabicLarge';
-  const size = isArabic ? ARABIC_SIZE[variant as 'arabic' | 'arabicLarge'] : TYPE_SCALE[variant as keyof typeof TYPE_SCALE];
+  const size = variant === 'arabic' ? ARABIC_SCALE.normal : variant === 'arabicLarge' ? ARABIC_SCALE.large : TYPE_SCALE[variant];
 
   let role: FontRole;
   if (isArabic) role = 'arabic';

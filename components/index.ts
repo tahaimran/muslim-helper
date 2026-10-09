@@ -9,4 +9,4 @@ export * from './ArabicBlock';
 export * from './ListRow';
 export * from './Toast';
 export * from './DirectionalIcon';
-export * from './Pressable';
+export * from './PressableScale';

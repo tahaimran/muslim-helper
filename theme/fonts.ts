@@ -12,6 +12,7 @@ export const FONT_ASSETS = {
 export type FontRole = 'ui' | 'uiMedium' | 'uiBold' | 'display' | 'arabic';
 
 export const TYPE_SCALE = { caption: 12, small: 14, body: 16, heading: 20, title: 25, display: 31, hero: 39 } as const;
+export const ARABIC_SCALE = { normal: 28, large: 36 } as const;
 
 export function fontFamily(lang: Lang, role: FontRole): string {
   if (role === 'arabic') return 'Amiri_400Regular';

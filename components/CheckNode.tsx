@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Check } from 'lucide-react-native';
 import { useTheme } from '../theme/ThemeProvider';
-import { PressableScale } from './Pressable';
+import { PressableScale } from './PressableScale';
 
 export type CheckNodeProps = { checked: boolean; onPress: () => void; label: string; size?: number };
 

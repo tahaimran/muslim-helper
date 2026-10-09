@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
-import { PressableScale } from './Pressable';
+import { PressableScale } from './PressableScale';
 
 export type ButtonProps = {
   label: string;
@@ -36,7 +36,7 @@ export function Button({ label, onPress, variant = 'primary', disabled, icon, ac
 
 const styles = StyleSheet.create({
   base: {
-    height: 52, minWidth: 44, borderRadius: 14, borderWidth: 1,
+    minHeight: 52, minWidth: 44, borderRadius: 14, borderWidth: 1,
     flexDirection: 'row', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 20,
   },
   icon: { marginEnd: 8 },
