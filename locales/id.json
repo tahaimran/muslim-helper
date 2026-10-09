@@ -181,7 +181,7 @@
     },
     "intention": {
       "title": "Set your intention",
-      "summary": "Prayer: {{habit}}. About {{count}} minutes a day.",
+      "summary": "Your prayer: {{habit}}. Your time: {{minutes}}.",
       "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
       "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
       "hadithSource": "Sahih al-Bukhari 1"
