@@ -12,3 +12,5 @@ export * from './DirectionalIcon';
 export * from './PressableScale';
 export * from './SkyHeader';
 export * from './PrayerHorizon';
+export * from './profile/ProfileControls';
+export * from './DocPage';

@@ -1,88 +1,33 @@
 import { Stack } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { useTheme as useAppTheme } from '@/theme/ThemeProvider';
-import { useTheme } from '@/lib/theme';
+import { useTheme } from '@/theme/ThemeProvider';
 
 export default function ModalsLayout() {
-  const { colors } = useTheme();
   const { t } = useTranslation();
-  const app = useAppTheme();
+  const { colors, font } = useTheme();
 
   return (
     <Stack
       screenOptions={{
         headerShown: true,
-        headerStyle: {
-          backgroundColor: colors.cream,
-        },
-        headerTitleStyle: {
-          color: colors.darkText,
-          fontSize: 17,
-          fontWeight: '600',
-        },
-        headerTintColor: colors.mediumGreen,
+        headerStyle: { backgroundColor: colors.bg },
+        headerTitleStyle: { color: colors.text, fontSize: 17, fontFamily: font('uiMedium') },
+        headerTintColor: colors.accent,
         headerShadowVisible: false,
+        headerBackButtonDisplayMode: 'minimal',
+        contentStyle: { backgroundColor: colors.bg },
         presentation: 'modal',
         animation: 'slide_from_bottom',
       }}>
-      <Stack.Screen
-        name="settings"
-        options={{
-          headerTitle: 'Settings',
-        }}
-      />
-      <Stack.Screen
-        name="about"
-        options={{
-          headerTitle: 'About Nafs',
-        }}
-      />
-      <Stack.Screen
-        name="privacy"
-        options={{
-          headerTitle: 'Privacy Policy',
-        }}
-      />
-      <Stack.Screen
-        name="terms"
-        options={{
-          headerTitle: 'Terms of Service',
-        }}
-      />
-      <Stack.Screen
-        name="help"
-        options={{
-          headerTitle: 'Help & Support',
-        }}
-      />
-      <Stack.Screen
-        name="achievements"
-        options={{
-          headerTitle: 'Achievements',
-        }}
-      />
-      <Stack.Screen
-        name="duas"
-        options={{
-          headerTitle: 'Daily Duas',
-        }}
-      />
-      <Stack.Screen
-        name="edit-profile"
-        options={{
-          headerTitle: 'Edit Profile',
-        }}
-      />
-      <Stack.Screen name="milestone/[id]" options={{ title: t("me.milestones"), headerStyle: { backgroundColor: app.colors.bg }, headerTitleStyle: { color: app.colors.text, fontSize: 17, fontFamily: app.font("uiMedium") }, headerTintColor: app.colors.accent }} />
-      <Stack.Screen
-        name="day/[n]"
-        options={{
-          title: t('day.generic'),
-          headerStyle: { backgroundColor: app.colors.bg },
-          headerTitleStyle: { color: app.colors.text, fontSize: 17, fontFamily: app.font('uiMedium') },
-          headerTintColor: app.colors.accent,
-        }}
-      />
+      <Stack.Screen name="settings" options={{ title: t('me.settings') }} />
+      <Stack.Screen name="edit-profile" options={{ title: t('me.editProfile') }} />
+      <Stack.Screen name="about" options={{ title: t('me.about') }} />
+      <Stack.Screen name="privacy" options={{ title: t('me.privacy') }} />
+      <Stack.Screen name="terms" options={{ title: t('me.terms') }} />
+      <Stack.Screen name="help" options={{ title: t('me.help') }} />
+      <Stack.Screen name="duas" options={{ title: t('me.duas') }} />
+      <Stack.Screen name="milestone/[id]" options={{ title: t('me.milestones') }} />
+      <Stack.Screen name="day/[n]" options={{ title: t('day.generic') }} />
     </Stack>
   );
 }

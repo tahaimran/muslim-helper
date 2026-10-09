@@ -102,6 +102,7 @@ export default function MeScreen() {
         <ListRow title={t('me.about')} onPress={() => router.push('/(modals)/about')} />
         <ListRow title={t('me.help')} onPress={() => router.push('/(modals)/help')} />
         <ListRow title={t('me.privacy')} onPress={() => router.push('/(modals)/privacy')} />
+        <ListRow title={t('me.terms')} onPress={() => router.push('/(modals)/terms')} />
       </Section>
     </Screen>
   );

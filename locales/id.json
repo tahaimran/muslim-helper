@@ -127,6 +127,199 @@
     "settings": "Settings",
     "about": "About",
     "help": "Help",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "duas": "Daily duas"
+  },
+  "journey": {
+    "title": "Your path",
+    "cycle": "Round {{n}}",
+    "weekProgress": "{{done}} of {{total}} days complete",
+    "dayN": "Day {{n}}",
+    "status": {
+      "complete": "complete",
+      "partial": "started",
+      "open": "not started",
+      "today": "today",
+      "locked": "not yet open"
+    }
+  },
+  "onboarding": {
+    "begin": "Begin",
+    "start": "Start my journey",
+    "skip": "Skip",
+    "progress": "Step {{current}} of {{total}}",
+    "welcome": {
+      "arabic": "عودة",
+      "arabicLabel": "Awdah, meaning return",
+      "title": "A gentle path back to your deen",
+      "body": "Free and private. No accounts, and nothing ever leaves your phone."
+    },
+    "language": {
+      "title": "Choose your language",
+      "subtitle": "You can change this any time in Settings. Right-to-left languages take full effect after restarting the app."
+    },
+    "name": {
+      "title": "What should we call you?",
+      "subtitle": "This is optional. Your name stays on this phone."
+    },
+    "habit": {
+      "title": "How is your prayer these days?",
+      "subtitle": "There is no wrong answer. This only helps us start gently."
+    },
+    "knowledge": {
+      "title": "How familiar are you with the basics?",
+      "subtitle": "We will match the pace to you."
+    },
+    "focus": {
+      "title": "What would you like to focus on?",
+      "subtitle": "Choose up to three."
+    },
+    "time": {
+      "title": "How much time can you give each day?",
+      "subtitle": "A few minutes is enough to start."
+    },
+    "intention": {
+      "title": "Set your intention",
+      "summary": "Prayer: {{habit}}. About {{count}} minutes a day.",
+      "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+      "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
+      "hadithSource": "Sahih al-Bukhari 1"
+    }
+  },
+  "profile": {
+    "name": "Name",
+    "nameOptional": "Optional",
+    "namePlaceholder": "Your name",
+    "saved": "Profile saved",
+    "needFocus": "Choose at least one focus area.",
+    "habit": {
+      "none": "Not yet",
+      "some": "Sometimes",
+      "most": "Most days",
+      "all": "All five, alhamdulillah"
+    },
+    "knowledge": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "knowledgeDesc": {
+      "beginner": "I am learning the basics",
+      "intermediate": "I practise regularly and want to grow",
+      "advanced": "I have a solid foundation"
+    },
+    "area": {
+      "prayer": "Prayer",
+      "quran": "Quran",
+      "dhikr": "Dhikr",
+      "fasting": "Fasting",
+      "character": "Character",
+      "family": "Family",
+      "knowledge": "Knowledge",
+      "charity": "Charity"
+    },
+    "minutes_one": "{{count}} minute",
+    "minutes_other": "{{count}} minutes"
+  },
+  "settings": {
+    "language": "Language",
+    "languageNote": "Right-to-left languages take full effect after restarting the app.",
+    "theme": "Theme",
+    "themes": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "data": "Your data",
+    "reset": "Erase all data",
+    "resetHint": "Removes your profile and progress from this phone.",
+    "resetConfirm": "Tap again to erase everything",
+    "resetConfirmHint": "This cannot be undone. It cancels by itself in a few seconds."
+  },
+  "about": {
+    "intro": "Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.",
+    "whatTitle": "What Awdah is",
+    "whatBody": "A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.",
+    "freeTitle": "Why it is free",
+    "freeBody": "Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.",
+    "sourcesTitle": "About the content",
+    "sourcesBody": "Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.",
+    "version": "Version {{version}}"
+  },
+  "privacy": {
+    "intro": "Awdah does not collect any data about you.",
+    "storage": {
+      "title": "Stored on your device",
+      "body": "Everything you enter, such as your profile, prayers, tasks and journal, is stored only on this phone."
+    },
+    "accounts": {
+      "title": "No accounts, analytics or ads",
+      "body": "There are no accounts, no analytics, no advertising and no trackers. Nothing is sent to us or to anyone else."
+    },
+    "location": {
+      "title": "Location",
+      "body": "If you choose to set your location, it is used only on your phone to calculate prayer times. It is never sent anywhere."
+    },
+    "backups": {
+      "title": "Backups",
+      "body": "Backups are files that you create and keep. You decide where they go and who can see them."
+    },
+    "deletion": {
+      "title": "Deleting your data",
+      "body": "You can erase everything in Settings, and uninstalling Awdah deletes all of its data from your phone."
+    },
+    "updated": "Last updated {{date}}"
+  },
+  "terms": {
+    "intro": "These are the plain terms for using Awdah.",
+    "guidance": {
+      "title": "Personal guidance",
+      "body": "Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings."
+    },
+    "scholars": {
+      "title": "Not a fatwa",
+      "body": "Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar."
+    },
+    "asIs": {
+      "title": "As is",
+      "body": "The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time."
+    },
+    "yourData": {
+      "title": "Your data",
+      "body": "Your data stays on your phone and is yours. See the Privacy page for details."
+    },
+    "updated": "Last updated {{date}}"
+  },
+  "help": {
+    "intro": "Answers to common questions.",
+    "days": {
+      "q": "How do the days advance?",
+      "a": "Your 30-day path follows the calendar. Day 1 is the day you began, and each new date brings the next day automatically."
+    },
+    "missed": {
+      "q": "What if I miss a day?",
+      "a": "Nothing is lost and nothing is punished. The path keeps moving with the calendar, and you can open any past day from Journey to catch up."
+    },
+    "past": {
+      "q": "Can I complete past or future days?",
+      "a": "You can edit past days from Journey. Future days stay locked until their date arrives."
+    },
+    "prayers": {
+      "q": "How do I mark my prayers?",
+      "a": "On the Today screen, tap a prayer on the horizon to mark it as prayed. Tap again to undo."
+    },
+    "tasbih": {
+      "q": "How does the tasbih work?",
+      "a": "Count your dhikr in the Worship tab. When a day's step asks for a dhikr and you reach its target, that step is completed for you."
+    },
+    "language": {
+      "q": "How do I change the language?",
+      "a": "Open Me, then Settings, and choose your language. Right-to-left languages take full effect after restarting the app."
+    },
+    "reset": {
+      "q": "How do I erase my data?",
+      "a": "Open Me, then Settings, and tap Erase all data twice. This removes your profile and progress. Your language and theme are kept."
+    }
   }
 }
