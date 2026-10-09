@@ -1,5 +1,5 @@
+import { DEFAULT_SETTINGS, initialState } from '../model';
 import { parseBackup, serializeBackup } from '../backup';
-import { initialState } from '../model';
 
 const sample = () => {
   const s = initialState();
@@ -36,5 +36,29 @@ describe('backup', () => {
     const res = parseBackup(JSON.stringify(old), '2026-10-09');
     expect(res.ok).toBe(true);
     if (res.ok) expect(res.data.profile?.name).toBe('Old');
+  });
+});
+
+describe('backup normalization', () => {
+  it('fills default reminders when settings lack them', () => {
+    const settings: Record<string, unknown> = { ...sample().settings };
+    delete settings.reminders;
+    const json = JSON.stringify({ app: 'awdah', schema: 1, data: { ...sample(), settings } });
+    const res = parseBackup(json, '2026-10-09');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.settings.reminders).toEqual(DEFAULT_SETTINGS.reminders);
+  });
+  it('drops a string focusAreas to an empty list', () => {
+    const json = JSON.stringify({ app: 'awdah', schema: 1, data: { ...sample(), profile: { ...sample().profile, focusAreas: 'prayer' } } });
+    const res = parseBackup(json, '2026-10-09');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.profile?.focusAreas).toEqual([]);
+  });
+  it('filters junk prayers and non-numeric tasbih values', () => {
+    const dates = { '2026-10-01': { active: true, prayers: ['fajr', 'junk', 'fajr'], tasbih: { a: 'x', b: 5 } } };
+    const json = JSON.stringify({ app: 'awdah', schema: 1, data: { ...sample(), dates } });
+    const res = parseBackup(json, '2026-10-09');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.dates['2026-10-01']).toEqual({ active: true, prayers: ['fajr'], tasbih: { b: 5 } });
   });
 });
