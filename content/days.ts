@@ -80,6 +80,7 @@ const SAYYID_ISTIGHFAR: Dhikr = {
 
 export const WEEKS: WeekInfo[] = [
   { week: 1, title: 'Foundation', titleArabic: 'الأساس', days: [1, 7] },
+  { week: 2, title: 'Building', titleArabic: 'البناء', days: [8, 14] },
 ];
 
 export const DAYS: DayContent[] = [
@@ -1236,6 +1237,1086 @@ export const DAYS: DayContent[] = [
       {
         id: '10_reflection',
         title: 'Reflect on answered prayers in your life',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 11 ─────────────────────────────
+  {
+    day: 11,
+    theme: 'Sadaqah',
+    themeArabic: 'الصدقة',
+    intro:
+      'Giving in the way of Allah purifies your wealth, eases hardship and earns His love. The Prophet ﷺ was the most generous of people, and even more generous in Ramadan.',
+    morningDhikr: [
+      {
+        id: 'yunfiqu_fa_tukhlif',
+        arabic: 'اللَّهُمَّ اجْعَلْنَا مِمَّن يُنفِقُ فَتُخْلِفُ لَهُ',
+        transliteration: 'Allāhummajʿalnā mimman yunfiqu fa-tukhlifu lah',
+        meaning:
+          "(Personal du'a, inspired by the angels' du'a in Bukhari 1442) O Allah, make us among those who spend, and You replace it for them",
+        count: 1,
+        // Not itself a narrated du'a (verification-2 R31), so no source is shown.
+        source: null,
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'bismillah_before_eating',
+        arabic: 'بِسْمِ اللَّهِ',
+        transliteration: 'Bismillāh',
+        meaning: '(Before eating) In the name of Allah',
+        count: 1,
+        source: hadith('Bukhari 5376; Muslim 2022'),
+      },
+      SUBHANALLAHI_WA_BIHAMDIHI,
+    ],
+    quran: {
+      surah: 'Al-Baqarah',
+      surahNumber: 2,
+      ayahs: '261',
+      note: 'The parable of those who spend in the way of Allah: like a grain that grows seven ears, with a hundred grains in each ear. "And Allah multiplies for whom He wills."',
+    },
+    prayerFocus: {
+      prayer: 'fajr',
+      tip: 'Every morning two angels come down. One says, "O Allah, give the one who spends something in return," and the other says, "O Allah, give the one who withholds loss" (Bukhari 1442; Muslim 1010). Give some sadaqah early today, after Fajr.',
+    },
+    sunnah: {
+      title: 'Sadaqah jariyah (ongoing charity)',
+      description:
+        'The Prophet ﷺ said: "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that benefits, or a righteous child who prays for him." Start an ongoing charity today: share beneficial knowledge, teach someone a Sunnah, plant a tree, give to a masjid fund or support an orphan.',
+      source: hadith('Muslim 1631'),
+    },
+    character: {
+      trait: 'Generosity',
+      arabic: 'الكرم',
+      description:
+        'True generosity is giving when it is hard to give, giving what you love, and expecting nothing in return.',
+      action:
+        'Give sadaqah today, even a small coin, a smile or some food. Give something that costs you something.',
+    },
+    hadith: {
+      arabic:
+        'مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ، وَمَا زَادَ اللَّهُ عَبْدًا بِعَفْوٍ إِلاَّ عِزًّا',
+      meaning:
+        '"Charity does not decrease wealth, and Allah does not increase a servant who forgives except in honour."',
+      source: hadith('Muslim 2588'),
+    },
+    reflection:
+      'What are you holding back from giving: money, time, knowledge or kindness? What would happen if you gave more?',
+    tasks: [
+      {
+        id: '11_sadaqah',
+        title: 'Give sadaqah today (any amount)',
+        titleBeginner: 'Give any small sadaqah, even a smile',
+        category: 'character',
+      },
+      {
+        id: '11_ongoing',
+        title: 'Do one act of ongoing charity (sadaqah jariyah)',
+        category: 'sunnah',
+      },
+      {
+        id: '11_quran',
+        title: 'Read Al-Baqarah 2:261 and reflect on its promise',
+        category: 'quran',
+      },
+      {
+        id: '11_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '11_dhikr',
+        title: 'Say SubhanAllahi wa bihamdihi 100 times',
+        category: 'dhikr',
+        tasbih: [{ dhikrId: 'subhanallahi_wa_bihamdihi', target: 100 }],
+      },
+      {
+        id: '11_reflection',
+        title: 'Reflect on your relationship with giving',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 12 ─────────────────────────────
+  {
+    day: 12,
+    theme: 'Halal Rizq',
+    themeArabic: 'الرزق الحلال',
+    intro:
+      'What we earn and consume shapes our hearts and our worship. Today, look at your livelihood in the light of Islam.',
+    morningDhikr: [
+      {
+        id: 'ikfini_bi_halalik',
+        arabic:
+          'اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ',
+        transliteration:
+          'Allāhummak-finī bi-ḥalālika ʿan ḥarāmik, wa aghninī bi-faḍlika ʿamman siwāk',
+        meaning:
+          'O Allah, suffice me with what You have made lawful instead of what You have forbidden, and by Your grace make me free of need of anyone besides You',
+        count: 1,
+        source: hadith('Tirmidhi 3563', 'hasan'),
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'audhu_minal_faqr',
+        arabic:
+          'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ، وَأَعُوذُ بِكَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ',
+        transliteration:
+          'Allāhumma innī aʿūdhu bika minal-faqri wal-qillati wadh-dhillah, wa aʿūdhu bika min an aẓlima aw uẓlam',
+        meaning:
+          'O Allah, I seek refuge in You from poverty, from scarcity and from humiliation, and I seek refuge in You from wronging others or being wronged',
+        count: 1,
+        source: hadith('Abu Dawud 1544'),
+      },
+      {
+        id: 'astaghfirullah',
+        arabic: 'أَسْتَغْفِرُ اللَّهَ',
+        transliteration: 'Astaghfirullāh',
+        meaning:
+          "I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.",
+        count: 100,
+        source: hadith('Muslim 2702'),
+      },
+    ],
+    quran: {
+      surah: 'Al-Baqarah',
+      surahNumber: 2,
+      ayahs: '168-169',
+      note: 'Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."',
+    },
+    prayerFocus: {
+      prayer: 'dhuhr',
+      tip: "Pray 2 rak'ahs of Duha today, between sunrise and Dhuhr. Every morning a charity is due for each joint of your body, and two rak'ahs of Duha suffice for all of it (Muslim 720).",
+    },
+    sunnah: {
+      title: "A du'a for lawful provision",
+      description:
+        'Make this du\'a often: "Allahummak-fini bi-halalika \'an haramika wa aghnini bi-fadlika \'amman siwak" (O Allah, suffice me with what You have made lawful instead of what You have forbidden, and make me free of need of anyone besides You). After Fajr, also ask Allah for "beneficial knowledge, good provision and accepted deeds" (Ibn Majah 925).',
+      source: hadith('Tirmidhi 3563', 'hasan'),
+    },
+    character: {
+      trait: 'Contentment',
+      arabic: 'القناعة',
+      description:
+        'The Prophet ﷺ said: "Wealth is not having many possessions; true wealth is contentment of the soul" (Bukhari 6446).',
+      action:
+        'Practise contentment today: hold back from one purchase or desire you would normally give in to, and say "Alhamdulillah" for what you have.',
+    },
+    hadith: {
+      arabic:
+        'أَيُّهَا النَّاسُ، إِنَّ اللَّهَ طَيِّبٌ لاَ يَقْبَلُ إِلاَّ طَيِّبًا',
+      meaning: '"O people, Allah is Good and accepts only what is good."',
+      source: hadith('Muslim 1015'),
+    },
+    reflection:
+      'Is there anything in how you earn or spend money that you need to review in the light of Islam?',
+    tasks: [
+      {
+        id: '12_duha',
+        title: "Pray 2 rak'ahs of Duha",
+        category: 'prayer',
+      },
+      {
+        id: '12_rizq_dua',
+        title: "Say the du'a for lawful provision",
+        category: 'dhikr',
+      },
+      {
+        id: '12_quran',
+        title: 'Read Al-Baqarah 2:168-169',
+        category: 'quran',
+      },
+      {
+        id: '12_contentment',
+        title: 'Hold back from one desire and say Alhamdulillah',
+        category: 'character',
+      },
+      {
+        id: '12_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: 'Pray all 5 prayers on time, and Duha as well',
+        category: 'prayer',
+      },
+      {
+        id: '12_reflection',
+        title: 'Review your income and spending in the light of Islam',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 13 ─────────────────────────────
+  {
+    day: 13,
+    theme: 'Tawakkul',
+    themeArabic: 'التوكل',
+    intro:
+      "Tawakkul means doing your best and then placing the result entirely in Allah's hands. It is not laziness; it is one of the highest levels of faith.",
+    morningDhikr: [
+      {
+        id: 'hasbunallah',
+        arabic: 'حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ',
+        transliteration: 'Ḥasbunallāhu wa niʿmal-wakīl',
+        meaning:
+          'Allah is sufficient for us, and He is the best disposer of affairs',
+        count: 1,
+        source: quran('Quran 3:173'),
+      },
+      {
+        id: 'leaving_home_dua',
+        arabic:
+          'بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+        transliteration:
+          'Bismillāh, tawakkaltu ʿalallāh, wa lā ḥawla wa lā quwwata illā billāh',
+        meaning:
+          '(On leaving home) In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah',
+        count: 1,
+        source: hadith('Abu Dawud 5095; Tirmidhi 3426'),
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'tahlil',
+        arabic:
+          'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+        transliteration:
+          'Lā ilāha illallāhu waḥdahū lā sharīka lah, lahul-mulku wa lahul-ḥamdu wa huwa ʿalā kulli shayʾin qadīr',
+        meaning:
+          'None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things',
+        count: 100,
+        source: hadith('Muslim 2691'),
+      },
+    ],
+    quran: {
+      surah: 'At-Talaq',
+      surahNumber: 65,
+      ayahs: '3',
+      note: 'The well-known verse on trust: "And whoever relies upon Allah, He is sufficient for him. Indeed, Allah will accomplish His purpose."',
+    },
+    prayerFocus: {
+      prayer: 'all',
+      tip: "If you have a decision to make, big or small, pray istikhara today: two voluntary rak'ahs followed by the istikhara du'a, which the Prophet ﷺ taught his Companions for every matter (Bukhari 6382). Then move forward, trusting that Allah is guiding your steps.",
+    },
+    sunnah: {
+      title: 'Tie your camel first',
+      description:
+        'A man asked the Prophet ﷺ whether he should tie his camel and trust in Allah, or leave it untied and trust in Allah. He said: "Tie it, and trust in Allah." Tawakkul includes doing your part fully, then letting go of the outcome.',
+      source: hadith('Tirmidhi 2517', 'hasan'),
+    },
+    character: {
+      trait: 'Releasing anxiety',
+      arabic: 'رفع القلق',
+      description:
+        'Much anxiety comes from trying to control outcomes. Tawakkul replaces anxiety with peace, because Allah is in control.',
+      action:
+        'Write down your top 3 worries. Then sincerely hand each one to Allah\'s care, saying "Hasbunallahu wa ni\'mal wakil."',
+    },
+    hadith: {
+      arabic:
+        'لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ، تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا',
+      meaning:
+        '"If you relied on Allah as He truly deserves, you would be provided for as the birds are provided for: they go out hungry in the morning and return full in the evening."',
+      source: hadith('Tirmidhi 2344'),
+    },
+    reflection:
+      'In which part of your life do you struggle most to trust Allah? What would happen if you truly let go?',
+    tasks: [
+      {
+        id: '13_tahlil',
+        title: 'Say the tahlil (La ilaha illallahu wahdahu...) 100 times',
+        category: 'dhikr',
+        tasbih: [{ dhikrId: 'tahlil', target: 100 }],
+      },
+      {
+        id: '13_worries',
+        title: 'Hand your top 3 worries to Allah',
+        category: 'reflection',
+      },
+      {
+        id: '13_istikhara',
+        title: 'Pray istikhara for a current decision',
+        titleBeginner: "Learn the istikhara du'a for your next decision",
+        category: 'prayer',
+      },
+      { id: '13_quran', title: 'Memorise At-Talaq 65:3', category: 'quran' },
+      {
+        id: '13_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '13_reflection',
+        title: 'Journal on trust and anxiety',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 14 ─────────────────────────────
+  {
+    day: 14,
+    theme: 'Shukr',
+    themeArabic: 'الشكر',
+    intro:
+      'Allah says, "If you are grateful, I will surely increase you." Today, learn to see every moment as a gift from Him, and to show gratitude in word and deed.',
+    morningDhikr: [
+      {
+        id: 'waking_dua',
+        arabic:
+          'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
+        transliteration:
+          'Al-ḥamdu lillāhil-ladhī aḥyānā baʿda mā amātanā wa ilayhin-nushūr',
+        meaning:
+          '(On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection',
+        count: 1,
+        source: hadith('Bukhari 6312; Muslim 2711'),
+      },
+      {
+        id: 'waking_dua_afani',
+        arabic:
+          'الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ',
+        transliteration:
+          'Al-ḥamdu lillāhil-ladhī ʿāfānī fī jasadī, wa radda ʿalayya rūḥī, wa adhina lī bi-dhikrih',
+        meaning:
+          '(On waking) Praise be to Allah who gave health to my body, returned my soul to me and permitted me to remember Him',
+        count: 1,
+        source: hadith('Tirmidhi 3401', 'hasan'),
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'hamdan_kathiran',
+        arabic: 'الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ',
+        transliteration:
+          'Al-ḥamdu lillāhi ḥamdan kathīran ṭayyiban mubārakan fīh',
+        meaning: 'Praise be to Allah, abundant, good and blessed praise',
+        count: 1,
+        source: hadith('Muslim 600; Bukhari 799'),
+      },
+      {
+        id: 'ainni_ala_dhikrik',
+        arabic:
+          'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+        transliteration:
+          'Allāhumma aʿinnī ʿalā dhikrika wa shukrika wa ḥusni ʿibādatik',
+        meaning:
+          '(At the end of each prayer) O Allah, help me to remember You, thank You and worship You well',
+        count: 1,
+        source: hadith("Abu Dawud 1522; Nasa'i 1303"),
+      },
+    ],
+    quran: {
+      surah: 'Ibrahim',
+      surahNumber: 14,
+      ayahs: '7',
+      note: 'Allah\'s promise that gratitude brings increase: "If you are grateful, I will surely increase you; but if you deny, indeed, My punishment is severe."',
+    },
+    prayerFocus: {
+      prayer: 'all',
+      tip: 'When good news or a blessing reaches you today, fall into a single prostration of gratitude (sujud ash-shukr). Whenever something pleasing came to the Prophet ﷺ, he would fall down in prostration, thanking Allah (Abu Dawud 2774). After each prayer, ask Allah to help you thank Him.',
+    },
+    sunnah: {
+      title: 'Thank people too',
+      description:
+        'The Prophet ﷺ said: "Whoever does not thank people does not thank Allah." Show gratitude in two ways today: thank Allah directly (Alhamdulillah), and thank the people through whom He blessed you.',
+      source: hadith('Abu Dawud 4811; Tirmidhi 1954'),
+    },
+    character: {
+      trait: 'Seeing the good',
+      arabic: 'حسن الظن',
+      description:
+        'Shukr trains us to see blessings even in hardship. Everything Allah decrees has wisdom, even what hurts.',
+      action:
+        'Think of something that is difficult in your life right now. Write down 3 blessings that may be hidden in it.',
+    },
+    hadith: {
+      arabic:
+        'انْظُرُوا إِلَى مَنْ أَسْفَلَ مِنْكُمْ وَلاَ تَنْظُرُوا إِلَى مَنْ هُوَ فَوْقَكُمْ، فَهُوَ أَجْدَرُ أَنْ لاَ تَزْدَرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ',
+      meaning:
+        '"Look at those below you and do not look at those above you, for that is more fitting, so that you do not belittle the favours of Allah upon you."',
+      source: hadith('Muslim 2963; Bukhari 6490'),
+    },
+    reflection:
+      'What is one blessing you often overlook or take for granted? How would your day change if you truly appreciated it?',
+    tasks: [
+      {
+        id: '14_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced:
+          "Pray all 5 prayers on time, saying Allahumma a'inni 'ala dhikrika wa shukrika after each",
+        category: 'prayer',
+      },
+      {
+        id: '14_sujud_shukr',
+        title:
+          'Make a prostration of gratitude (sujud ash-shukr) for a blessing',
+        category: 'sunnah',
+      },
+      {
+        id: '14_shukr_list',
+        title: 'Write down 20 specific blessings',
+        titleBeginner: 'Write down 5 specific blessings',
+        category: 'reflection',
+      },
+      {
+        id: '14_thank_people',
+        title: 'Sincerely thank 3 people today',
+        category: 'character',
+      },
+      {
+        id: '14_quran',
+        title: 'Read Ibrahim 14:7 and take in its promise',
+        category: 'quran',
+      },
+      {
+        id: '14_difficulty',
+        title: 'Find 3 blessings in a current difficulty',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 15 ─────────────────────────────
+  {
+    day: 15,
+    theme: 'Sidq',
+    themeArabic: 'الصدق',
+    intro:
+      'Truthfulness in speech, in action and in the heart is the foundation of noble character. Today you practise complete honesty, with others and with yourself.',
+    morningDhikr: [
+      {
+        id: 'sidq_dua',
+        arabic:
+          'اللَّهُمَّ إِنِّي أَسْأَلُكَ الصِّدْقَ فِي الْقَوْلِ وَالْعَمَلِ',
+        transliteration: 'Allāhumma innī asʾalukaṣ-ṣidqa fil-qawli wal-ʿamal',
+        meaning:
+          "(Personal du'a) O Allah, I ask You for truthfulness in speech and in action",
+        count: 1,
+        source: null,
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'ighsilni',
+        arabic:
+          'اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ',
+        transliteration:
+          'Allāhummaghsilnī min khaṭāyāya bil-māʾi wath-thalji wal-barad',
+        meaning: 'O Allah, wash away my sins with water, snow and hail',
+        count: 1,
+        source: hadith("Nasa'i 895"),
+      },
+      {
+        id: 'astaghfirullah',
+        arabic: 'أَسْتَغْفِرُ اللَّهَ',
+        transliteration: 'Astaghfirullāh',
+        meaning:
+          "I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.",
+        count: 100,
+        source: hadith('Muslim 2702'),
+      },
+    ],
+    quran: {
+      surah: 'At-Tawbah',
+      surahNumber: 9,
+      ayahs: '119',
+      note: 'The command to stand with the truthful: "O you who believe, fear Allah and be with those who are truthful."',
+    },
+    prayerFocus: {
+      prayer: 'isha',
+      tip: "Among the qualities Allah praises alongside truthfulness is seeking forgiveness before dawn (Al 'Imran 3:17). Tonight, pray 2 or more rak'ahs of night prayer, before you sleep or before Fajr, and ask Him for forgiveness.",
+    },
+    sunnah: {
+      title: 'No white lies or half-truths',
+      description:
+        'When the Prophet ﷺ called the tribes of Quraysh together, they told him: "We have never experienced anything from you but truthfulness." Today, be completely honest in every interaction: no white lies, exaggerations or misleading statements, even ones that seem harmless.',
+      source: hadith('Bukhari 4770'),
+    },
+    character: {
+      trait: 'Honest self-assessment',
+      arabic: 'المحاسبة',
+      description:
+        'True sidq includes being honest with yourself about your flaws and weaknesses, without excuses or self-deception.',
+      action:
+        "Write an honest self-assessment: where do you fall short? What do you tell yourself that isn't fully true?",
+    },
+    hadith: {
+      arabic:
+        'إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ، وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ، وَإِنَّ الرَّجُلَ لَيَصْدُقُ حَتَّى يَكُونَ صِدِّيقًا، وَإِنَّ الْكَذِبَ يَهْدِي إِلَى الْفُجُورِ، وَإِنَّ الْفُجُورَ يَهْدِي إِلَى النَّارِ، وَإِنَّ الرَّجُلَ لَيَكْذِبُ، حَتَّى يُكْتَبَ عِنْدَ اللَّهِ كَذَّابًا',
+      meaning:
+        '"Truthfulness leads to righteousness, and righteousness leads to Paradise. A man keeps telling the truth until he becomes truthful. Lying leads to wickedness, and wickedness leads to the Fire. A man keeps lying until he is written before Allah as a liar."',
+      source: hadith('Bukhari 6094; Muslim 2607'),
+    },
+    reflection:
+      'Is there an area where you have been less than fully honest, with others or with yourself?',
+    tasks: [
+      {
+        id: '15_full_honesty',
+        title: 'Be completely honest in every interaction today',
+        titleBeginner: 'Avoid even one white lie today',
+        category: 'character',
+      },
+      {
+        id: '15_self_assess',
+        title: 'Write an honest self-assessment',
+        category: 'reflection',
+      },
+      { id: '15_quran', title: 'Memorise At-Tawbah 9:119', category: 'quran' },
+      {
+        id: '15_tahajjud',
+        title: "Pray 2 rak'ahs of night prayer (tahajjud)",
+        titleBeginner: "Pray 2 extra rak'ahs before you sleep",
+        titleAdvanced: 'Wake in the last third of the night and pray tahajjud',
+        category: 'prayer',
+      },
+      {
+        id: '15_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '15_dhikr',
+        title: 'Say astaghfirullah 100 times',
+        category: 'dhikr',
+        tasbih: [{ dhikrId: 'astaghfirullah', target: 100 }],
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 16 ─────────────────────────────
+  {
+    day: 16,
+    theme: 'Amanah',
+    themeArabic: 'الأمانة',
+    intro:
+      'Amanah means fulfilling trusts, keeping promises and being reliable in every role: in your family, with friends, at work and as a Muslim. Even before prophethood, the Prophet ﷺ was known among his people for his trustworthiness.',
+    morningDhikr: [
+      {
+        id: 'audhu_minal_khiyanah',
+        arabic:
+          'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُوعِ فَإِنَّهُ بِئْسَ الضَّجِيعُ، وَأَعُوذُ بِكَ مِنَ الْخِيَانَةِ فَإِنَّهَا بِئْسَتِ الْبِطَانَةُ',
+        transliteration:
+          'Allāhumma innī aʿūdhu bika minal-jūʿi fa-innahū biʾsaḍ-ḍajīʿ, wa aʿūdhu bika minal-khiyānati fa-innahā biʾsatil-biṭānah',
+        meaning:
+          'O Allah, I seek refuge in You from hunger, for it is a wretched bed-fellow, and from treachery, for it is a wretched inner companion',
+        count: 1,
+        source: hadith("Abu Dawud 1547; Nasa'i 5468", 'hasan'),
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'subhanallahil_azimi_wa_bihamdihi',
+        arabic: 'سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ',
+        transliteration: 'SubḥānAllāhil-ʿAẓīmi wa biḥamdih',
+        meaning: 'Glory be to Allah the Magnificent, and praise be to Him',
+        count: 100,
+        source: hadith('Abu Dawud 5091'),
+      },
+    ],
+    quran: {
+      surah: 'Al-Anfal',
+      surahNumber: 8,
+      ayahs: '27',
+      note: '"O you who believe, do not betray Allah and the Messenger, and do not knowingly betray your trusts."',
+    },
+    prayerFocus: {
+      prayer: 'all',
+      tip: "Prayer itself is a trust from Allah. Fulfil it completely today: pray all 5 prayers on time, with their sunnah rak'ahs, with good wudu, facing the qiblah.",
+    },
+    sunnah: {
+      title: 'Keeping promises',
+      description:
+        'The Prophet ﷺ said: "The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks his promise, and when he is trusted he betrays the trust." List any promises or commitments you have not kept, and fulfil at least one today.',
+      source: hadith('Bukhari 33; Muslim 59'),
+    },
+    character: {
+      trait: 'Reliability',
+      arabic: 'الموثوقية',
+      description:
+        'Be the person people can count on. Your word is your bond: when you say you will do something, do it.',
+      action:
+        'Pick one unfulfilled promise or commitment. Fulfil it today, or speak honestly with the person involved.',
+    },
+    hadith: {
+      arabic:
+        'أَدِّ الأَمَانَةَ إِلَى مَنِ ائْتَمَنَكَ، وَلاَ تَخُنْ مَنْ خَانَكَ',
+      meaning:
+        '"Return the trust to the one who entrusted you, and do not betray the one who betrayed you."',
+      // Graded hasan sahih by al-Albani; some later checkers grade it da'if (verification-1, Day 16).
+      source: hadith('Abu Dawud 3535; Tirmidhi 1264', 'hasan'),
+    },
+    reflection:
+      'In which relationships or roles could you be more trustworthy or reliable?',
+    tasks: [
+      {
+        id: '16_promises',
+        title: 'Fulfil one unkept promise today',
+        category: 'character',
+      },
+      {
+        id: '16_all_prayers',
+        title: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced:
+          "Pray all 5 prayers early in their time, with all their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '16_quran',
+        title: 'Read Al-Anfal 8:27 and reflect',
+        category: 'quran',
+      },
+      {
+        id: '16_dhikr',
+        title: 'Say SubhanAllahil-Azimi wa bihamdihi 100 times',
+        category: 'dhikr',
+        tasbih: [{ dhikrId: 'subhanallahil_azimi_wa_bihamdihi', target: 100 }],
+      },
+      {
+        id: '16_reflection',
+        title: 'Review your promises and commitments',
+        category: 'reflection',
+      },
+      {
+        id: '16_amanah_act',
+        title: 'Be the most reliable person in one situation today',
+        category: 'sunnah',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 17 ─────────────────────────────
+  {
+    day: 17,
+    theme: 'Sabr',
+    themeArabic: 'الصبر',
+    intro:
+      '"Indeed, Allah is with the patient." Sabr is not passive resignation; it is active, disciplined perseverance, knowing that Allah is testing and refining you.',
+    morningDhikr: [
+      {
+        id: 'sabr_dua',
+        arabic: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ الصَّبْرَ عَلَى أَقْدَارِكَ',
+        transliteration: 'Allāhumma innī asʾalukaṣ-ṣabra ʿalā aqdārik',
+        meaning:
+          "(Personal du'a) O Allah, I ask You for patience with what You decree",
+        count: 1,
+        source: null,
+      },
+      {
+        id: 'istirja',
+        arabic:
+          'إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا',
+        transliteration:
+          'Innā lillāhi wa innā ilayhi rājiʿūn, Allāhumma ʾjurnī fī muṣībatī wa akhlif lī khayran minhā',
+        meaning:
+          '(At a calamity) We belong to Allah and to Him we return. O Allah, reward me in my affliction and replace it for me with something better',
+        count: 1,
+        source: hadith('Muslim 918'),
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'audhu_minal_jaza',
+        arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجَزَعِ',
+        transliteration: 'Allāhumma innī aʿūdhu bika minal-jazaʿ',
+        meaning:
+          "(Personal du'a) O Allah, I seek refuge in You from panic and despair in hardship",
+        count: 1,
+        source: null,
+      },
+      SUBHANALLAHI_WA_BIHAMDIHI,
+    ],
+    quran: {
+      surah: 'Al-Baqarah',
+      surahNumber: 2,
+      ayahs: '155-157',
+      note: 'Allah tests us with fear, hunger and loss, "but give good tidings to the patient: those who, when disaster strikes them, say: Indeed we belong to Allah, and indeed to Him we will return."',
+    },
+    prayerFocus: {
+      prayer: 'fajr',
+      tip: 'Fajr is itself a test of sabr: leaving sleep and a warm bed. Today, when the alarm rings, practise patience by getting up straight away. Each morning is training in sabr.',
+    },
+    sunnah: {
+      title: 'Patience in anger',
+      description:
+        'The Prophet ﷺ said: "The strong one is not the one who overcomes people by his strength, but the one who controls himself when angry." When something irritates you today, pause and say "A\'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). If you are standing, sit down (Abu Dawud 4782).',
+      source: hadith('Bukhari 6114; Muslim 2609; Bukhari 6115; Abu Dawud 4782'),
+    },
+    character: {
+      trait: 'Self-control',
+      arabic: 'ضبط النفس',
+      description:
+        'Sabr in the face of anger, frustration and difficulty is the highest level of this quality.',
+      action:
+        'When you feel irritated or frustrated today, stop and say "Alhamdulillah \'ala kulli hal" (praise be to Allah in every situation) before you respond.',
+    },
+    hadith: {
+      arabic:
+        'عَجَبًا لأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ وَلَيْسَ ذَاكَ لأَحَدٍ إِلاَّ لِلْمُؤْمِنِ إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ',
+      meaning:
+        '"How wonderful is the affair of the believer! All of it is good, and that is for no one except the believer. If something good happens to him, he is grateful, and that is good for him. If something bad happens to him, he is patient, and that is good for him."',
+      source: hadith('Muslim 2999'),
+    },
+    reflection:
+      'What tests you most in life right now? How can you see it as something Allah is using to raise you?',
+    tasks: [
+      {
+        id: '17_anger',
+        title: 'Practise sabr in one frustrating situation',
+        category: 'character',
+      },
+      {
+        id: '17_fajr',
+        title: 'Get up at the first alarm and pray Fajr',
+        titleBeginner: 'Pray Fajr before sunrise',
+        titleAdvanced:
+          'Get up at the first alarm and pray Fajr early in its time',
+        category: 'prayer',
+      },
+      {
+        id: '17_quran',
+        title: 'Read Al-Baqarah 2:155-157 and take it to heart',
+        category: 'quran',
+      },
+      {
+        id: '17_inna_lillah',
+        title:
+          'Say "Inna lillahi wa inna ilayhi raji\'un" at every difficulty today',
+        category: 'dhikr',
+      },
+      {
+        id: '17_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '17_reflection',
+        title: 'See a current trial as Allah refining you',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 18 ─────────────────────────────
+  {
+    day: 18,
+    theme: "Tawadu'",
+    themeArabic: 'التواضع',
+    intro:
+      "The Prophet ﷺ was the most humble of people, though he was the greatest of them. True tawadu' comes from knowing Allah and knowing yourself.",
+    morningDhikr: [
+      {
+        id: 'audhu_minal_kibr',
+        arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكِبْرِ وَالْعُجْبِ',
+        transliteration: 'Allāhumma innī aʿūdhu bika minal-kibri wal-ʿujb',
+        meaning:
+          "(Personal du'a) O Allah, I seek refuge in You from arrogance and self-admiration",
+        count: 1,
+        source: null,
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'kaffarat_al_majlis',
+        arabic:
+          'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ',
+        transliteration:
+          'Subḥānakallāhumma wa biḥamdik, ashhadu an lā ilāha illā ant, astaghfiruka wa atūbu ilayk',
+        meaning:
+          '(At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You',
+        count: 1,
+        source: hadith('Abu Dawud 4859; Tirmidhi 3433'),
+      },
+    ],
+    quran: {
+      surah: 'Al-Isra',
+      surahNumber: 17,
+      ayahs: '37',
+      note: '"And do not walk upon the earth arrogantly. Indeed, you will never tear the earth apart, and you will never reach the mountains in height."',
+    },
+    prayerFocus: {
+      prayer: 'all',
+      tip: 'Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, feel its meaning: "I submit to You, my Lord, the Most High." Let that feeling stay with you.',
+    },
+    sunnah: {
+      title: 'Be the first to give salam',
+      description:
+        'The Prophet ﷺ would greet even children with salam (Bukhari 6247; Muslim 2168), and he said: "The people closest to Allah are those who begin the greeting of salam." Today, be the first to say salam to everyone you meet.',
+      source: hadith('Abu Dawud 5197; Bukhari 6247'),
+    },
+    character: {
+      trait: 'Avoiding pride',
+      arabic: 'ترك الكبر',
+      description:
+        'Pride (kibr) is a disease of the heart. The Prophet ﷺ said that no one with an atom\'s weight of pride in his heart will enter Paradise, and he defined pride as "rejecting the truth and looking down on people" (Muslim 91).',
+      action:
+        "Sincerely praise someone's work or quality today without comparing them to yourself. Celebrate someone else's success.",
+    },
+    hadith: {
+      arabic:
+        'إِنَّ اللَّهَ أَوْحَى إِلَىَّ أَنْ تَوَاضَعُوا حَتَّى لاَ يَفْخَرَ أَحَدٌ عَلَى أَحَدٍ وَلاَ يَبْغِي أَحَدٌ عَلَى أَحَدٍ',
+      meaning:
+        '"Allah has revealed to me that you must be humble towards one another, so that no one boasts over another and no one wrongs another."',
+      source: hadith('Muslim 2865'),
+    },
+    reflection:
+      'In which situations do you feel superior to others? How can you grow real humility in those moments?',
+    tasks: [
+      {
+        id: '18_salam_first',
+        title: 'Be the first to say salam to everyone today',
+        category: 'sunnah',
+      },
+      {
+        id: '18_compliment',
+        title: 'Sincerely praise someone without comparing yourself',
+        category: 'character',
+      },
+      {
+        id: '18_sujood',
+        title: 'Feel humility deeply in every sujood today',
+        titleBeginner: 'Make one sujood slow and humble',
+        category: 'prayer',
+      },
+      { id: '18_quran', title: 'Memorise Al-Isra 17:37', category: 'quran' },
+      {
+        id: '18_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '18_reflection',
+        title: 'Reflect on moments of pride and how to address them',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 19 ─────────────────────────────
+  {
+    day: 19,
+    theme: 'Rahmah',
+    themeArabic: 'الرحمة',
+    intro:
+      'The Prophet ﷺ was sent as a mercy to all the worlds. Mercy towards people, animals and all of creation is a sign of strong faith.',
+    morningDhikr: [
+      {
+        id: 'basmalah',
+        arabic: 'بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ',
+        transliteration: 'Bismillāhir-Raḥmānir-Raḥīm',
+        meaning: 'In the name of Allah, the Most Gracious, the Most Merciful',
+        count: 1,
+        source: quran('Quran 1:1'),
+      },
+      {
+        id: 'irhamna_bi_rahmatik',
+        arabic:
+          'اللَّهُمَّ ارْحَمْنَا بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ',
+        transliteration:
+          'Allāhummarḥamnā bi-raḥmatikal-latī wasiʿat kulla shayʾ',
+        meaning:
+          "(Personal du'a) O Allah, have mercy on us with Your mercy that encompasses all things",
+        count: 1,
+        source: null,
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'ighfir_lil_muminin',
+        arabic: 'اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ',
+        transliteration: 'Allāhummaghfir lil-muʾminīna wal-muʾmināt',
+        meaning: 'O Allah, forgive the believing men and women',
+        count: 10,
+        // A general du'a echoing Quran 47:19 and 71:28; not their exact wording, so no source.
+        source: null,
+      },
+      {
+        id: 'rabbana_wasita',
+        arabic:
+          'رَبَّنَا وَسِعۡتَ كُلَّ شَيۡءࣲ رَّحۡمَةࣰ وَعِلۡمࣰا فَٱغۡفِرۡ لِلَّذِينَ تَابُواْ وَٱتَّبَعُواْ سَبِيلَكَ وَقِهِمۡ عَذَابَ ٱلۡجَحِيمِ',
+        transliteration:
+          'Rabbanā wasiʿta kulla shayʾin raḥmatan wa ʿilman faghfir lilladhīna tābū wattabaʿū sabīlaka wa qihim ʿadhābal-jaḥīm',
+        meaning:
+          'Our Lord, You encompass all things in mercy and knowledge, so forgive those who repent and follow Your way, and protect them from the punishment of Hellfire',
+        count: 1,
+        source: quran('Quran 40:7'),
+      },
+    ],
+    quran: {
+      surah: 'Al-Anbiya',
+      surahNumber: 21,
+      ayahs: '107',
+      note: 'The summary of the Prophet\'s ﷺ mission: "And We have not sent you except as a mercy to the worlds."',
+    },
+    prayerFocus: {
+      prayer: 'all',
+      tip: 'In today\'s prayers, make specific du\'a for others: your parents, your family, the sick and suffering, and Muslims around the world. The Prophet ﷺ said that when a believer prays for his brother in his absence, the angel says, "And the same for you" (Muslim 2732).',
+    },
+    sunnah: {
+      title: 'Mercy to animals',
+      description:
+        'The Prophet ﷺ told of a woman who entered the Fire because of a cat she locked up without food or water, and of a man who gave water to a thirsty dog, so Allah thanked him and admitted him to Paradise. Today, show active mercy: feed a bird, put out water, be gentle with animals and reduce waste.',
+      source: hadith('Bukhari 3482; Bukhari 173'),
+    },
+    character: {
+      trait: 'Compassion for those who struggle',
+      arabic: 'الشفقة',
+      description:
+        'True rahmah means feeling the pain of others and acting to relieve it, without judging their struggles.',
+      action:
+        'Reach out to someone you know who is struggling. Not to advise them, just to listen and show you care.',
+    },
+    hadith: {
+      arabic:
+        'الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ، ارْحَمُوا مَنْ فِي الأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ',
+      meaning:
+        '"The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will have mercy on you."',
+      source: hadith('Tirmidhi 1924'),
+    },
+    reflection:
+      'Who in your life needs more mercy and compassion from you? How can you show it this week?',
+    tasks: [
+      {
+        id: '19_reach_out',
+        title: 'Reach out to someone who is struggling',
+        category: 'character',
+      },
+      {
+        id: '19_dua_others',
+        title: "Make specific du'a for others in every prayer",
+        titleBeginner: "Make du'a for one other person in your prayer",
+        category: 'prayer',
+      },
+      {
+        id: '19_mercy_animal',
+        title: 'Show mercy to an animal or to nature today',
+        category: 'sunnah',
+      },
+      { id: '19_quran', title: 'Memorise Al-Anbiya 21:107', category: 'quran' },
+      {
+        id: '19_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '19_reflection',
+        title: 'Think about who needs your mercy most',
+        category: 'reflection',
+      },
+    ],
+  },
+
+  // ───────────────────────────── Day 20 ─────────────────────────────
+  {
+    day: 20,
+    theme: 'Silat ar-Rahim',
+    themeArabic: 'صلة الرحم',
+    intro:
+      'Keeping family ties is one of the most emphasised duties in Islam, and cutting them is a serious sin. Today, actively strengthen your bonds with your family.',
+    morningDhikr: [
+      {
+        id: 'barik_li_fi_ahli',
+        arabic: 'اللَّهُمَّ بَارِكْ لِي فِي أَهْلِي وَمَالِي',
+        transliteration: 'Allāhumma bārik lī fī ahlī wa mālī',
+        meaning: "(Personal du'a) O Allah, bless me in my family and my wealth",
+        count: 1,
+        source: null,
+      },
+    ],
+    eveningDhikr: [
+      {
+        id: 'ijma_shamla_ahli',
+        arabic: 'اللَّهُمَّ اجْمَعْ شَمْلَ أَهْلِي عَلَى طَاعَتِكَ',
+        transliteration: 'Allāhummajmaʿ shamla ahlī ʿalā ṭāʿatik',
+        meaning: "(Personal du'a) O Allah, unite my family in obeying You",
+        count: 1,
+        source: null,
+      },
+      SUBHANALLAHI_WA_BIHAMDIHI,
+    ],
+    quran: {
+      surah: 'An-Nisa',
+      surahNumber: 4,
+      ayahs: '1',
+      note: 'Allah links keeping family ties directly to fearing Him: "And fear Allah, through whom you ask one another, and the wombs."',
+    },
+    prayerFocus: {
+      prayer: 'fajr',
+      tip: "After Fajr, call or message a family member you haven't spoken to recently, so your day begins with keeping ties.",
+    },
+    sunnah: {
+      title: "Keeping ties even when others don't",
+      description:
+        'The Prophet ﷺ said: "The one who keeps ties is not the one who only returns the favour, but the one who keeps ties when they have been cut." Today, reach out to a family member you have drifted away from.',
+      source: hadith('Bukhari 5991'),
+    },
+    character: {
+      trait: 'Forgiveness in the family',
+      arabic: 'العفو في العائلة',
+      description:
+        'Family conflicts are inevitable. The question is whether you hold grudges or choose to forgive for the sake of Allah.',
+      action:
+        'If there is a rift in any family relationship, take the first step today to repair it, even with a simple kind message.',
+    },
+    hadith: {
+      arabic:
+        'مَنْ سَرَّهُ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، أَوْ يُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ',
+      meaning:
+        '"Whoever would like his provision to be expanded and his life to be extended, let him keep the ties of kinship."',
+      source: hadith('Bukhari 5986; Muslim 2557'),
+    },
+    reflection:
+      'Which family relationships need your attention and repair? What small step can you take today?',
+    tasks: [
+      {
+        id: '20_call_family',
+        title: 'Call or visit a family member today',
+        category: 'character',
+      },
+      {
+        id: '20_fajr_contact',
+        title: 'Contact a family member after Fajr',
+        category: 'sunnah',
+      },
+      {
+        id: '20_repair',
+        title: 'Take one step to repair a family rift',
+        category: 'character',
+      },
+      {
+        id: '20_quran',
+        title: 'Read An-Nisa 4:1 and reflect',
+        category: 'quran',
+      },
+      {
+        id: '20_prayers',
+        title: 'Pray all 5 prayers on time',
+        titleBeginner: 'Pray as many of the 5 prayers on time as you can',
+        titleAdvanced: "Pray all 5 prayers on time with their sunnah rak'ahs",
+        category: 'prayer',
+      },
+      {
+        id: '20_reflection',
+        title: 'Map out your family relationships and what they need',
         category: 'reflection',
       },
     ],
