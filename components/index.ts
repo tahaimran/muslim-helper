@@ -8,6 +8,7 @@ export * from './CheckNode';
 export * from './ArabicBlock';
 export * from './ListRow';
 export * from './Toast';
+export * from './RestartBanner';
 export * from './DirectionalIcon';
 export * from './PressableScale';
 export * from './SkyHeader';

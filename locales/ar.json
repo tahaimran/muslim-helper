@@ -480,5 +480,8 @@
     "Singapore": "Singapore / Malaysia / Indonesia",
     "Tehran": "Tehran (Geophysics Institute)",
     "Turkey": "Turkey (Diyanet)"
+  },
+  "language": {
+    "restart": "Restart Awdah to finish switching language."
   }
 }

@@ -13,7 +13,7 @@
       "package": "com.nafs.transformation",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon-foreground.png",
-        "backgroundColor": "#1B4332"
+        "backgroundColor": "#161A33"
       },
       "permissions": [
         "NOTIFICATIONS"
@@ -23,7 +23,16 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.nafs.transformation",
-      "buildNumber": "1"
+      "buildNumber": "1",
+      "infoPlist": {
+        "CFBundleLocalizations": [
+          "en",
+          "ar",
+          "ur",
+          "id",
+          "tr"
+        ]
+      }
     },
     "web": {
       "bundler": "metro",
@@ -34,9 +43,28 @@
       "expo-router",
       "expo-font",
       [
+        "expo-localization",
+        {
+          "supportsRTL": true
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "backgroundColor": "#161A33",
+          "imageWidth": 200
+        }
+      ],
+      [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Awdah uses your location only on your phone to calculate prayer times. It is never sent anywhere."
+          "locationWhenInUsePermission": "Awdah uses your location only on your phone to calculate prayer times. It is never sent anywhere.",
+          "locationAlwaysAndWhenInUsePermission": false,
+          "locationAlwaysPermission": false,
+          "isIosBackgroundLocationEnabled": false,
+          "isAndroidBackgroundLocationEnabled": false,
+          "isAndroidForegroundServiceEnabled": false
         }
       ],
       [
@@ -52,7 +80,8 @@
     },
     "extra": {
       "privacyPolicyUrl": "https://nafs.app/privacy",
-      "supportEmail": "nafs.app.support@gmail.com"
+      "supportEmail": "nafs.app.support@gmail.com",
+      "supportsRTL": true
     }
   }
 }

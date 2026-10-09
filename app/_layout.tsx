@@ -10,11 +10,12 @@ import { I18nextProvider } from 'react-i18next';
 import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
 import type { Lang } from '@/lib/model';
 import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
+import { applyDirection } from '@/lib/platform/direction';
 import { pauseIfPermissionRevoked, rescheduleFromStore } from '@/lib/platform/notify';
 import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
 import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
 import { FONT_ASSETS } from '@/theme/fonts';
-import { AppText, Button, ToastHost } from '@/components';
+import { AppText, Button, RestartBanner, ToastHost } from '@/components';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
@@ -100,6 +101,7 @@ function Shell() {
         <Stack.Screen name="+not-found" />
       </Stack>
       <ToastHost />
+      <RestartBanner />
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>
   );
@@ -121,7 +123,10 @@ async function boot(): Promise<Boot> {
     return 'unhydrated';
   }
   await importLegacyIfNeeded();
-  await safeInitI18n(appStore.getState().settings.language);
+  const pref = appStore.getState().settings.language;
+  await safeInitI18n(pref);
+  // Guards a direction mismatch after a restore/import or an interrupted switch (once per launch).
+  await applyDirection(resolveLanguage(pref, deviceCodes())).catch(() => 'unchanged');
   return 'ready';
 }
 
