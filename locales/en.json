@@ -354,5 +354,27 @@
         "subtitle": "Browse hadith with their sources"
       }
     }
+  },
+  "worship": {
+    "title": "Worship",
+    "tasbih": "Tasbih",
+    "morning": "Morning adhkar",
+    "evening": "Evening adhkar",
+    "duas": "Daily duas",
+    "today": "Today: {{count}}",
+    "resetRound": "Reset round",
+    "ofTarget": "of {{target}}",
+    "tapA11y": "{{name}}, {{round}} of {{target}}",
+    "tapHint": "Double tap to count one",
+    "itemCount": "Tap to count, {{n}} of {{count}}",
+    "itemDone": "Done, {{count}} of {{count}}",
+    "completeMorning": "I’ve completed the morning adhkar",
+    "completedMorning": "Morning adhkar completed today",
+    "completeEvening": "I’ve completed the evening adhkar",
+    "completedEvening": "Evening adhkar completed today",
+    "grade": {
+      "sahih": "sahih",
+      "hasan": "hasan"
+    }
   }
 }
