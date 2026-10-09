@@ -1,0 +1,52 @@
+import { getPrayerTimes, getNextPrayer, resolveCalcSettings, PRAYER_ORDER } from '../prayerTimes';
+
+const MECCA = { latitude: 21.4225, longitude: 39.8262 };
+const DAY = new Date(2026, 9, 9); // local Y/M/D = 2026-10-09
+
+describe('getPrayerTimes', () => {
+  it('computes Umm al-Qura times for Mecca', () => {
+    const t = getPrayerTimes(DAY, MECCA, 'UmmAlQura', 'shafi');
+    expect(t.fajr.toISOString()).toBe('2026-10-09T01:58:00.000Z');
+    expect(t.maghrib.toISOString()).toBe('2026-10-09T15:01:00.000Z');
+  });
+  it('returns times in prayer order', () => {
+    const t = getPrayerTimes(DAY, MECCA, 'UmmAlQura', 'shafi');
+    const times = PRAYER_ORDER.map((p) => t[p].getTime());
+    expect([...times].sort((a, b) => a - b)).toEqual(times);
+  });
+  it('puts Hanafi Asr later than Shafi Asr', () => {
+    const shafi = getPrayerTimes(DAY, MECCA, 'UmmAlQura', 'shafi');
+    const hanafi = getPrayerTimes(DAY, MECCA, 'UmmAlQura', 'hanafi');
+    expect(hanafi.asr.getTime()).toBeGreaterThan(shafi.asr.getTime());
+  });
+});
+
+describe('getNextPrayer', () => {
+  it('returns the next prayer later today', () => {
+    const next = getNextPrayer(new Date('2026-10-09T15:30:00Z'), MECCA, 'UmmAlQura', 'shafi');
+    expect(next.name).toBe('isha');
+  });
+  it("returns tomorrow's fajr after isha", () => {
+    const now = new Date('2026-10-09T20:00:00Z'); // 16:00 in New York, still 2026-10-09 locally
+    const next = getNextPrayer(now, MECCA, 'UmmAlQura', 'shafi');
+    expect(next.name).toBe('fajr');
+    expect(next.time.getTime()).toBeGreaterThan(now.getTime());
+    expect(next.time.toISOString().startsWith('2026-10-10')).toBe(true);
+  });
+});
+
+describe('resolveCalcSettings', () => {
+  it('picks a regional default method and madhab', () => {
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, 'PK')).toEqual({ method: 'Karachi', madhab: 'hanafi' });
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, 'TR')).toEqual({ method: 'Turkey', madhab: 'hanafi' });
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, 'ID')).toEqual({ method: 'Singapore', madhab: 'shafi' });
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, 'SA')).toEqual({ method: 'UmmAlQura', madhab: 'shafi' });
+  });
+  it('falls back to Muslim World League / shafi', () => {
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, null)).toEqual({ method: 'MuslimWorldLeague', madhab: 'shafi' });
+    expect(resolveCalcSettings({ calcMethod: null, madhab: null }, 'ZZ')).toEqual({ method: 'MuslimWorldLeague', madhab: 'shafi' });
+  });
+  it('respects explicit user choices', () => {
+    expect(resolveCalcSettings({ calcMethod: 'Egyptian', madhab: 'hanafi' }, 'SA')).toEqual({ method: 'Egyptian', madhab: 'hanafi' });
+  });
+});
