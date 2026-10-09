@@ -26,5 +26,79 @@
   },
   "milestones": {
     "unlocked": "Milestone reached: {{title}}"
+  },
+  "prayers": {
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha"
+  },
+  "category": {
+    "prayer": "Prayer",
+    "quran": "Quran",
+    "dhikr": "Dhikr",
+    "sunnah": "Sunnah",
+    "character": "Character",
+    "reflection": "Reflection"
+  },
+  "mood": {
+    "grateful": "Grateful",
+    "peaceful": "Peaceful",
+    "struggling": "Struggling",
+    "motivated": "Motivated",
+    "reflective": "Reflective"
+  },
+  "hijri": {
+    "months": {
+      "1": "Muharram",
+      "2": "Safar",
+      "3": "Rabi al-Awwal",
+      "4": "Rabi al-Thani",
+      "5": "Jumada al-Ula",
+      "6": "Jumada al-Akhirah",
+      "7": "Rajab",
+      "8": "Sha'ban",
+      "9": "Ramadan",
+      "10": "Shawwal",
+      "11": "Dhu al-Qi'dah",
+      "12": "Dhu al-Hijjah"
+    }
+  },
+  "share": {
+    "footer": "Shared from Awdah"
+  },
+  "today": {
+    "greeting": "Assalamu alaikum, {{name}}",
+    "greetingNoName": "Assalamu alaikum",
+    "hijriDate": "{{day}} {{month}} {{year}}",
+    "dayN": "Day {{day}} of 30",
+    "setPrayerTimes": "Set your location for prayer times",
+    "welcomeBack": "Welcome back. Pick up right where you are — no catching up needed.",
+    "learnSalah": "Learn how to pray, step by step",
+    "learnSalahHint": "A gentle guide, at your own pace",
+    "intention": "Today's intention",
+    "steps": "Today's steps",
+    "a11yDone": "done",
+    "tasbihLocked": "This one completed itself from your tasbih count today.",
+    "share": "Share",
+    "reflect": "Reflect",
+    "reflectPlaceholder": "Write a few honest words. Only you will see them.",
+    "saved": "Saved",
+    "moodPrompt": "How is your heart today?",
+    "contentComing": "Today's guidance is on its way. Keep your prayers and dhikr going in the meantime."
+  },
+  "istiqamah": {
+    "title": "Istiqamah — staying steady",
+    "titleArabic": "الاستقامة",
+    "subtitle": "Small, steady deeds, every day",
+    "steps": "Today's steps",
+    "morning": "Morning adhkar",
+    "evening": "Evening adhkar",
+    "reflection": "What helped you stay steady today?",
+    "newCycleTitle": "Walk the 30 days again",
+    "newCycleHint": "Begin a fresh cycle with deeper steps, whenever you feel ready.",
+    "newCycle": "Begin a new 30 days",
+    "confirm": "Tap again to begin"
   }
 }
