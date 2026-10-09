@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { StyleSheet, View, type LayoutChangeEvent } from 'react-native';
+import { StyleSheet, View, useWindowDimensions, type LayoutChangeEvent } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { Check } from 'lucide-react-native';
@@ -7,7 +7,7 @@ import type { DailyPrayerTimes } from '../lib/prayerTimes';
 import { PRAYER_ORDER } from '../lib/prayerTimes';
 import type { PrayerName } from '../lib/types';
 import { TYPE_SCALE } from '../theme/fonts';
-import { palette } from '../theme/tokens';
+import { SKY, type SkyPhase } from '../theme/sky';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { NODE_ANGLES, arcGeometry, arcPath, minNodeSpacing, nodePositions, pointAtAngle, sunDisplayAngle } from './horizonGeometry';
@@ -21,8 +21,11 @@ export type PrayerHorizonProps = {
   now: Date;
   textColor: string;
   mutedColor: string;
-  accent: string;
-  /** Check-mark color on a done node; defaults to the theme's onAccent. */
+  /** Sky phase; supplies the default accent, check color and sun color. */
+  phase: SkyPhase;
+  /** Done-node fill; defaults to SKY[phase].accent. */
+  accent?: string;
+  /** Check-mark color on a done node; defaults to SKY[phase].onAccent. */
   onAccent?: string;
   onToggle: (p: PrayerName) => void;
 };
@@ -37,8 +40,6 @@ const LABEL_GAP = 4;
 const SUN = 10;
 const GLOW = 26;
 const SUN_MS = 900;
-// The sky is not themed, so the sun keeps one bright gold in both app schemes.
-const SUN_GOLD = palette.dawnGoldNight;
 
 const pad2 = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 const defaultTime = (d: Date) => `${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
@@ -46,11 +47,15 @@ const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), M
 
 /** The five daily prayers as tappable nodes along the sky's horizon arc, with the sun riding the arc by the clock. */
 export function PrayerHorizon({
-  labels, times, timeLabel = defaultTime, done, now, textColor, mutedColor, accent, onAccent, onToggle,
+  labels, times, timeLabel = defaultTime, done, now, textColor, mutedColor, phase, accent, onAccent, onToggle,
 }: PrayerHorizonProps) {
-  const { colors, isRTL, reduceMotion, lineHeight } = useTheme();
+  const { isRTL, reduceMotion, lineHeight } = useTheme();
+  const { fontScale } = useWindowDimensions();
+  const sky = SKY[phase];
+  const fillColor = accent ?? sky.accent;
+  const sunColor = sky.sun;
   const [width, setWidth] = useState(0);
-  const checkColor = onAccent ?? colors.onAccent;
+  const checkColor = onAccent ?? sky.onAccent;
 
   const geom = useMemo(() => arcGeometry(width, ARC_HEIGHT, isRTL, INSET), [width, isRTL]);
   const nodes = useMemo(() => nodePositions(geom), [geom]);
@@ -75,7 +80,8 @@ export function PrayerHorizon({
   });
 
   const doneSet = new Set(done);
-  const captionLine = lineHeight(TYPE_SCALE.caption);
+  // AppText caps font scaling at 1.3, so the label block must not grow past that either.
+  const captionLine = lineHeight(TYPE_SCALE.caption * Math.min(fontScale, 1.3));
   const labelTop = HIT / 2 + NODE / 2 + LABEL_GAP; // measured from the top of a node's touch box
   const labelsH = captionLine * (times ? 2 : 1);
   const pressH = labelTop + labelsH + LABEL_GAP;
@@ -87,6 +93,7 @@ export function PrayerHorizon({
     <View onLayout={onLayout} style={{ height }}>
       {ready ? (
         // Positions are physical (already mirrored for RTL by the geometry), so lay out this layer LTR.
+        // Deliberate exception to the start/end rule: below, `left` is used for those physical coordinates.
         <View style={[StyleSheet.absoluteFill, styles.ltr]}>
           <Svg width={width} height={height} style={StyleSheet.absoluteFill}>
             <G transform={`translate(0, ${TOP_PAD})`}>
@@ -97,9 +104,9 @@ export function PrayerHorizon({
           {/* The sun sits beneath the nodes so it never hides a node's check. */}
           {target !== null ? (
             <Animated.View style={[styles.sun, sunStyle]}>
-              <View style={[styles.glowOuter, { backgroundColor: SUN_GOLD }]} />
-              <View style={[styles.glowInner, { backgroundColor: SUN_GOLD }]} />
-              <View style={[styles.core, { backgroundColor: SUN_GOLD, shadowColor: SUN_GOLD }]} />
+              <View style={[styles.glowOuter, { backgroundColor: sunColor }]} />
+              <View style={[styles.glowInner, { backgroundColor: sunColor }]} />
+              <View style={[styles.core, { backgroundColor: sunColor, shadowColor: sunColor }]} />
             </Animated.View>
           ) : null}
 
@@ -117,19 +124,19 @@ export function PrayerHorizon({
                 accessibilityRole="checkbox"
                 accessibilityLabel={time ? `${labels[p]}, ${time}` : labels[p]}
                 accessibilityState={{ checked }}
-                style={[styles.press, { width: pressW, height: pressH, start: pressStart, top: TOP_PAD + y - HIT / 2 }]}
+                style={[styles.press, { width: pressW, height: pressH, left: pressStart, top: TOP_PAD + y - HIT / 2 }]}
               >
                 <View
                   style={[
                     styles.node,
-                    { start: x - pressStart - NODE / 2 },
-                    checked ? { backgroundColor: accent } : { borderWidth: 2, borderColor: textColor },
+                    { left: x - pressStart - NODE / 2 },
+                    checked ? { backgroundColor: fillColor } : { borderWidth: 2, borderColor: textColor },
                   ]}
                 >
                   {checked ? <Check size={11} color={checkColor} strokeWidth={3.5} /> : null}
                 </View>
                 <View
-                  style={[styles.label, { width: labelW, start: labelStart, top: labelTop }]}
+                  style={[styles.label, { width: labelW, left: labelStart, top: labelTop }]}
                   importantForAccessibility="no-hide-descendants"
                   accessibilityElementsHidden
                 >
@@ -167,7 +174,7 @@ const styles = StyleSheet.create({
   },
   label: { position: 'absolute', pointerEvents: 'none' },
   sun: {
-    position: 'absolute', top: 0, start: 0, pointerEvents: 'none', width: GLOW, height: GLOW,
+    position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: GLOW, height: GLOW,
     alignItems: 'center', justifyContent: 'center',
   },
   glowOuter: { position: 'absolute', width: GLOW, height: GLOW, borderRadius: GLOW / 2, opacity: 0.16 },

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { AccessibilityInfo, StyleSheet, View } from 'react-native';
+import { AccessibilityInfo, Platform, StyleSheet, View } from 'react-native';
 import Animated, { FadeInDown, FadeOut } from 'react-native-reanimated';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '../theme/ThemeProvider';
@@ -26,7 +26,8 @@ export function ToastHost() {
   useEffect(() => {
     const l = (t: ToastEvent) => {
       setToast(t);
-      AccessibilityInfo.announceForAccessibility(t.message);
+      // Android announces via the live region below; announcing here too would double-read.
+      if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(t.message);
       if (timer.current) clearTimeout(timer.current);
       timer.current = setTimeout(() => setToast(null), 3000);
     };
@@ -39,7 +40,7 @@ export function ToastHost() {
 
   if (!toast) return null;
   return (
-    <View pointerEvents="none" style={[styles.host, { bottom: insets.bottom + 96 }]}>
+    <View style={[styles.host, { bottom: insets.bottom + 96 }]}>
       <Animated.View
         key={toast.id}
         entering={reduceMotion ? undefined : FadeInDown.duration(180)}
@@ -54,6 +55,6 @@ export function ToastHost() {
 }
 
 const styles = StyleSheet.create({
-  host: { position: 'absolute', start: 20, end: 20, alignItems: 'center' },
+  host: { position: 'absolute', start: 20, end: 20, alignItems: 'center', pointerEvents: 'none' },
   toast: { borderRadius: 14, borderWidth: 1, paddingHorizontal: 18, paddingVertical: 12, maxWidth: '100%' },
 });

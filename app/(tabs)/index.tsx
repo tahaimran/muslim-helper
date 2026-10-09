@@ -59,7 +59,6 @@ type SkyAreaProps = {
 /** Owns the minute clock so only the sky re-renders as time passes, not the whole screen. */
 function SkyArea({ greeting, title, titleArabic, dateLine, prayersDone, onTogglePrayer }: SkyAreaProps) {
   const { t } = useTranslation();
-  const { colors } = useTheme();
   const now = useNow();
   const phase = getSkyPhase(now, null);
   const sky = SKY[phase];
@@ -77,7 +76,7 @@ function SkyArea({ greeting, title, titleArabic, dateLine, prayersDone, onToggle
           now={now}
           textColor={sky.text}
           mutedColor={sky.textMuted}
-          accent={colors.accent}
+          phase={phase}
           onToggle={onTogglePrayer}
         />
       </View>

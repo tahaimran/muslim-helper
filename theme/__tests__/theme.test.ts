@@ -20,7 +20,8 @@ describe('contrast', () => {
     for (const bg of [c.bg, c.surface]) {
       expect(contrastRatio(c.text, bg)).toBeGreaterThanOrEqual(4.5);
       expect(contrastRatio(c.textMuted, bg)).toBeGreaterThanOrEqual(4.5);
-      expect(contrastRatio(c.accent, bg)).toBeGreaterThanOrEqual(3);
+      expect(contrastRatio(c.accent, bg)).toBeGreaterThanOrEqual(4.5);
+      expect(contrastRatio(c.control, bg)).toBeGreaterThanOrEqual(3);
       expect(contrastRatio(c.gold, bg)).toBeGreaterThanOrEqual(3);
     }
     expect(contrastRatio(c.onAccent, c.accent)).toBeGreaterThanOrEqual(4.5);
@@ -30,6 +31,15 @@ describe('contrast', () => {
       for (const stop of s.gradient) {
         expect(contrastRatio(s.text, stop)).toBeGreaterThanOrEqual(4.5);
         expect(contrastRatio(s.textMuted, stop)).toBeGreaterThanOrEqual(4.5);
+      }
+    }
+  });
+  it('sky accent, onAccent and sun are legible on every gradient stop', () => {
+    for (const s of Object.values(SKY)) {
+      expect(contrastRatio(s.onAccent, s.accent)).toBeGreaterThanOrEqual(4.5);
+      for (const stop of s.gradient) {
+        expect(contrastRatio(s.accent, stop)).toBeGreaterThanOrEqual(3);
+        expect(contrastRatio(s.sun, stop)).toBeGreaterThanOrEqual(3);
       }
     }
   });

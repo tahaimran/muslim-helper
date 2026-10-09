@@ -1,6 +1,8 @@
-import React, { useEffect, type ReactNode } from 'react';
+import React, { useEffect, useMemo, type ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { useIsFocused } from '@react-navigation/native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Svg, { G, Path } from 'react-native-svg';
 import Animated, { Easing, useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
@@ -29,6 +31,7 @@ export function SkyHeader({ phase, greeting, title, titleArabic, dateLine, nextP
   const { font, isRTL, reduceMotion } = useTheme();
   const insets = useSafeAreaInsets();
   const sky = SKY[phase];
+  const focused = useIsFocused();
 
   const opacity = useSharedValue(reduceMotion ? 1 : 0.6);
   useEffect(() => {
@@ -38,6 +41,7 @@ export function SkyHeader({ phase, greeting, title, titleArabic, dateLine, nextP
 
   return (
     <View style={styles.panel}>
+      {focused ? <StatusBar style={sky.isDark ? 'light' : 'dark'} /> : null}
       <Animated.View style={[StyleSheet.absoluteFill, skyStyle]}>
         <LinearGradient colors={sky.gradient} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }} style={StyleSheet.absoluteFill} />
       </Animated.View>
@@ -57,7 +61,7 @@ export function SkyHeader({ phase, greeting, title, titleArabic, dateLine, nextP
         >
           {titleArabic}
         </AppText>
-        <AppText variant="heading" weight="medium" color={sky.text}>
+        <AppText variant="heading" weight="medium" color={sky.text} accessibilityRole="header">
           {title}
         </AppText>
         <AppText variant="caption" color={sky.textMuted} style={styles.date}>
@@ -95,20 +99,25 @@ const STARS = [0, 1, 2].flatMap((row) =>
 );
 
 function GirihCorner({ color, isRTL }: { color: string; isRTL: boolean }) {
+  const stars = useMemo(
+    () =>
+      STARS.map(({ col, row, strength }) => {
+        const cx = isRTL ? col * STEP : TEXTURE - col * STEP;
+        const cy = row * STEP;
+        return { key: `${row}-${col}`, strength, outer: starPath(cx, cy, STAR_R), inner: starPath(cx, cy, STAR_R * 0.45) };
+      }),
+    [isRTL],
+  );
   return (
     <View style={styles.texture} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
       <Svg width={TEXTURE} height={TEXTURE}>
         <G opacity={0.06}>
-          {STARS.map(({ col, row, strength }) => {
-            const cx = isRTL ? col * STEP : TEXTURE - col * STEP;
-            const cy = row * STEP;
-            return (
-              <G key={`${row}-${col}`} opacity={strength}>
-                <Path d={starPath(cx, cy, STAR_R)} fill={color} />
-                <Path d={starPath(cx, cy, STAR_R * 0.45)} fill="none" stroke={color} strokeWidth={1.5} />
-              </G>
-            );
-          })}
+          {stars.map(({ key, strength, outer, inner }) => (
+            <G key={key} opacity={strength}>
+              <Path d={outer} fill={color} />
+              <Path d={inner} fill="none" stroke={color} strokeWidth={1.5} />
+            </G>
+          ))}
         </G>
       </Svg>
     </View>

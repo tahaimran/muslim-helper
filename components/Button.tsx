@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { PressableScale } from './PressableScale';
@@ -7,28 +7,31 @@ import { PressableScale } from './PressableScale';
 export type ButtonProps = {
   label: string;
   onPress: () => void;
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'destructive';
   disabled?: boolean;
+  /** Shows a spinner and blocks presses. */
+  loading?: boolean;
   icon?: React.ReactNode;
   accessibilityHint?: string;
 };
 
-export function Button({ label, onPress, variant = 'primary', disabled, icon, accessibilityHint }: ButtonProps) {
+export function Button({ label, onPress, variant = 'primary', disabled, loading, icon, accessibilityHint }: ButtonProps) {
   const { colors } = useTheme();
   const bg = variant === 'primary' ? colors.accent : 'transparent';
-  const fg = variant === 'primary' ? colors.onAccent : colors.accent;
-  const border = variant === 'secondary' ? colors.line : 'transparent';
+  const fg = variant === 'primary' ? colors.onAccent : variant === 'destructive' ? colors.danger : colors.accent;
+  const off = !!disabled || !!loading;
+  const border = variant === 'secondary' || variant === 'destructive' ? colors.line : 'transparent';
   return (
     <PressableScale
       onPress={onPress}
-      disabled={disabled}
+      disabled={off}
       accessibilityRole="button"
       accessibilityLabel={label}
       accessibilityHint={accessibilityHint}
-      accessibilityState={{ disabled: !!disabled }}
+      accessibilityState={{ disabled: off, busy: !!loading }}
       style={[styles.base, { backgroundColor: bg, borderColor: border, opacity: disabled ? 0.45 : 1 }]}
     >
-      {icon ? <View style={styles.icon}>{icon}</View> : null}
+      {loading ? <ActivityIndicator color={fg} style={styles.icon} /> : icon ? <View style={styles.icon}>{icon}</View> : null}
       <AppText variant="body" weight="medium" color={fg}>{label}</AppText>
     </PressableScale>
   );

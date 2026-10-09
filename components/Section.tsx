@@ -22,7 +22,7 @@ export function Section({ title, subtitle, children, action }: SectionProps) {
             {subtitle ? <AppText variant="small" muted>{subtitle}</AppText> : null}
           </View>
           {action ? (
-            <PressableScale onPress={action.onPress} accessibilityRole="button" accessibilityLabel={action.label} style={styles.action}>
+            <PressableScale onPress={action.onPress} accessibilityRole="button" accessibilityLabel={action.label} haptic={false} style={styles.action}>
               <AppText variant="small" weight="medium" color={colors.accent}>{action.label}</AppText>
             </PressableScale>
           ) : null}

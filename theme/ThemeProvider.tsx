@@ -33,9 +33,11 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     let active = true;
-    AccessibilityInfo.isReduceMotionEnabled().then((v) => {
-      if (active) setReduceMotion(v);
-    });
+    AccessibilityInfo.isReduceMotionEnabled()
+      .then((v) => {
+        if (active) setReduceMotion(v);
+      })
+      .catch(() => {});
     const sub = AccessibilityInfo.addEventListener('reduceMotionChanged', setReduceMotion);
     return () => {
       active = false;
@@ -43,7 +45,7 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
-  const scheme = resolveScheme(pref, system === 'dark' ? 'dark' : system === 'light' ? 'light' : null);
+  const scheme = resolveScheme(pref, system);
   const isRTL = I18nManager.isRTL;
 
   const value = useMemo<Theme>(

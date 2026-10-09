@@ -16,9 +16,7 @@ export type AppTextProps = TextProps & {
   center?: boolean;
 };
 
-
-
-export function AppText({ variant = 'body', muted, color, weight, center, style, ...rest }: AppTextProps) {
+export function AppText({ variant = 'body', muted, color, weight, center, style, maxFontSizeMultiplier = 1.3, ...rest }: AppTextProps) {
   const { colors, font, lineHeight } = useTheme();
   const isArabic = variant === 'arabic' || variant === 'arabicLarge';
   const size = variant === 'arabic' ? ARABIC_SCALE.normal : variant === 'arabicLarge' ? ARABIC_SCALE.large : TYPE_SCALE[variant];
@@ -46,5 +44,5 @@ export function AppText({ variant = 'body', muted, color, weight, center, style,
   }
   if (center) base.textAlign = 'center';
 
-  return <Text {...rest} style={[base, style]} />;
+  return <Text maxFontSizeMultiplier={maxFontSizeMultiplier} {...rest} style={[base, style]} />;
 }
