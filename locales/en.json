@@ -131,6 +131,9 @@
     "terms": "Terms",
     "duas": "Daily duas"
   },
+  "duas": {
+    "intro": "Short supplications from the Quran and Sunnah. Tap one to read it."
+  },
   "journey": {
     "title": "Your path",
     "cycle": "Round {{n}}",

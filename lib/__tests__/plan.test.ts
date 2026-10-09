@@ -3,12 +3,12 @@ import type { Profile } from '../model';
 import type { DayTask } from '../types';
 
 const tasks: DayTask[] = [
-  { id: '1_fajr', title: 'Pray Fajr with all Sunnah prayers', titleBeginner: 'Pray Fajr', titleAdvanced: 'Pray Fajr + 2 sunnah + adhkar', category: 'prayer', points: 0 },
-  { id: '1_bismillah', title: 'Bismillah', category: 'sunnah', points: 0 },
-  { id: '1_fatihah', title: 'Fatihah', category: 'quran', points: 0 },
-  { id: '1_secret', title: 'Secret deed', category: 'character', points: 0 },
-  { id: '1_dhikr', title: 'Evening dhikr', category: 'dhikr', points: 0 },
-  { id: '1_reflect', title: 'Reflect', category: 'reflection', points: 0 },
+  { id: '1_fajr', title: 'Pray Fajr with all Sunnah prayers', titleBeginner: 'Pray Fajr', titleAdvanced: 'Pray Fajr + 2 sunnah + adhkar', category: 'prayer' },
+  { id: '1_bismillah', title: 'Bismillah', category: 'sunnah' },
+  { id: '1_fatihah', title: 'Fatihah', category: 'quran' },
+  { id: '1_secret', title: 'Secret deed', category: 'character' },
+  { id: '1_dhikr', title: 'Evening dhikr', category: 'dhikr' },
+  { id: '1_reflect', title: 'Reflect', category: 'reflection' },
 ];
 
 const profile = (p: Partial<Profile> = {}): Profile => ({
@@ -38,11 +38,11 @@ describe('personalizeTasks', () => {
   });
   it('never drops prayer tasks even below the limit', () => {
     const many: DayTask[] = [
-      { id: 'a', title: 'A', category: 'prayer', points: 0 },
-      { id: 'b', title: 'B', category: 'prayer', points: 0 },
-      { id: 'c', title: 'C', category: 'prayer', points: 0 },
-      { id: 'd', title: 'D', category: 'prayer', points: 0 },
-      { id: 'e', title: 'E', category: 'quran', points: 0 },
+      { id: 'a', title: 'A', category: 'prayer' },
+      { id: 'b', title: 'B', category: 'prayer' },
+      { id: 'c', title: 'C', category: 'prayer' },
+      { id: 'd', title: 'D', category: 'prayer' },
+      { id: 'e', title: 'E', category: 'quran' },
     ];
     const ids = personalizeTasks(many, profile({ dailyMinutes: 5 }), 1).map((t) => t.id);
     expect(ids).toEqual(['a', 'b', 'c', 'd']);
