@@ -18,7 +18,7 @@
 - English UI copy: plain, warm, sentence case; no points, no levels, no guilt language.
 - No React imports in `content/`.
 - `reviewed` status of translations belongs to Plan 6; this plan writes English + Arabic only.
-- **Quran Arabic is never hand-typed.** Every Quran ayah's Arabic (milestones, Al-Fatihah, Al-Ikhlas, ayat al-kursi, any dhikr that is an ayah) must be fetched from the canonical Uthmani text: `https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/{surah}/{ayah}.json` (field `text`) — fetch with curl/WebFetch while writing the file.
+- **Quran Arabic is never hand-typed.** Every Quran ayah's Arabic (milestones, Al-Fatihah, Al-Ikhlas, ayat al-kursi, any dhikr that is an ayah) must be fetched from the canonical Uthmani text: `https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/ara-quranuthmanihaf/{surah}/{ayah}.json` (field `text`) — fetch with curl/WebFetch while writing the file, then normalise the edition's stray-space artifact: `.replace(/([ࣰ-ࣲ]) (?=[اى])/g, '$1')` (e.g. "يُسۡرࣰ ا" → "يُسۡرࣰا"). Multiple ayat are joined with an ayah-end marker like " ﴿٥﴾ ".
 - Items the research marks as non-prophetic phrasing get `source: null` (shown as personal dhikr/du'a without a virtue claim). Hasbiyallah is sourced as `Quran 9:129` only; never present the ×7 count or its reward as a prophetic promise (count 1, or 7 only with source null).
 - Do not delete `constants/islamicContent.ts` or `constants/duas.ts` (old screens still import them until Plan 4).
 
