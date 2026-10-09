@@ -1,8 +1,8 @@
 import { CalculationMethod, Coordinates, Madhab, PrayerTimes } from 'adhan';
-import type { CalcMethodId, MadhabId, Settings } from './model';
+import { PRAYER_NAMES, type CalcMethodId, type MadhabId, type Settings } from './model';
 import type { PrayerName } from './types';
 
-export const PRAYER_ORDER: PrayerName[] = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+export const PRAYER_ORDER: readonly PrayerName[] = PRAYER_NAMES;
 
 export interface DailyPrayerTimes {
   fajr: Date;

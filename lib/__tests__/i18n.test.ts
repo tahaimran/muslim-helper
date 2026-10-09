@@ -24,6 +24,9 @@ describe('i18n', () => {
     expect(resolveLanguage(null, ['ID'])).toBe('id');
     expect(resolveLanguage(null, ['fr', null])).toBe('en');
     expect(resolveLanguage(null, [])).toBe('en');
+    expect(resolveLanguage(null, ['in'])).toBe('id');
+    expect(resolveLanguage(null, ['ar-SA'])).toBe('ar');
+    expect(resolveLanguage(null, ['tr_TR'])).toBe('tr');
   });
   it('has identical keys in every locale', () => {
     const base = keys(en);

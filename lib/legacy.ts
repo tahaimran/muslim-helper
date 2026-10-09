@@ -1,18 +1,15 @@
 import { addDays, toDateKey, type DateKey } from './day';
-import { initialState, planDayKey, type PersistedState, type Profile } from './model';
+import {
+  IMPROVEMENT_AREAS, initialState, KNOWLEDGE_LEVELS, MOODS, planDayKey, PRACTICE_LEVELS, PRAYER_NAMES,
+  type PersistedState, type Profile,
+} from './model';
 import type { ImprovementArea, KnowledgeLevel, MoodType, PracticeLevel, PrayerName } from './types';
 
 export const LEGACY_NAFS_KEY = 'nafs_app_state';
 
-const PRACTICE: PracticeLevel[] = ['none', 'some', 'most', 'all'];
-const KNOWLEDGE: KnowledgeLevel[] = ['beginner', 'intermediate', 'advanced'];
-const AREAS: ImprovementArea[] = ['prayer', 'quran', 'dhikr', 'fasting', 'character', 'family', 'knowledge', 'charity'];
-const MOODS: MoodType[] = ['grateful', 'peaceful', 'struggling', 'motivated', 'reflective'];
-const PRAYERS: PrayerName[] = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
-
 type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => typeof v === 'object' && v !== null && !Array.isArray(v);
-const oneOf = <T extends string>(v: unknown, allowed: T[], fallback: T): T =>
+const oneOf = <T extends string>(v: unknown, allowed: readonly T[], fallback: T): T =>
   allowed.includes(v as T) ? (v as T) : fallback;
 const strings = (v: unknown): string[] => (Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []);
 
@@ -28,15 +25,17 @@ export function convertLegacyNafs(raw: unknown, today: DateKey): PersistedState 
 
   const profile: Profile = {
     name: typeof up.name === 'string' ? up.name : '',
-    prayerHabit: oneOf(up.prayerConsistency, PRACTICE, 'some'),
-    knowledgeLevel: oneOf(up.knowledgeLevel, KNOWLEDGE, 'beginner'),
-    focusAreas: strings(up.improvementAreas).filter((a): a is ImprovementArea => AREAS.includes(a as ImprovementArea)),
+    prayerHabit: oneOf(up.prayerConsistency, PRACTICE_LEVELS, 'some'),
+    knowledgeLevel: oneOf(up.knowledgeLevel, KNOWLEDGE_LEVELS, 'beginner'),
+    focusAreas: strings(up.improvementAreas).filter((a): a is ImprovementArea => IMPROVEMENT_AREAS.includes(a as ImprovementArea)),
     dailyMinutes: typeof up.dailyMinutes === 'number' && up.dailyMinutes > 0 ? up.dailyMinutes : 30,
   };
 
   const state = initialState();
   state.profile = profile;
-  state.planStartDate = parseStart(up.planStartDate, today);
+  const originalStart = parseStart(up.planStartDate, today);
+  state.planStartDate = originalStart;
+  let maxProgressDay = 0;
 
   const progress = isObj(raw.dayProgress) ? raw.dayProgress : {};
   for (const [key, value] of Object.entries(progress)) {
@@ -53,11 +52,15 @@ export function convertLegacyNafs(raw: unknown, today: DateKey): PersistedState 
       ...(mood !== undefined ? { mood } : {}),
     };
 
-    const prayers = strings(value.prayersCompleted).filter((p): p is PrayerName => PRAYERS.includes(p as PrayerName));
+    if (completedTaskIds.length > 0 && day > maxProgressDay) maxProgressDay = day;
+
+    const prayers = strings(value.prayersCompleted).filter((p): p is PrayerName => PRAYER_NAMES.includes(p as PrayerName));
     const active = completedTaskIds.length > 0 || prayers.length > 0 || (journal ?? '').trim().length > 0;
     if (active || prayers.length > 0) {
-      state.dates[addDays(state.planStartDate, day - 1)] = { active, prayers, tasbih: {} };
+      state.dates[addDays(originalStart, day - 1)] = { active, prayers, tasbih: {} };
     }
   }
+  // Resume after the user's real progress instead of landing on a late day.
+  state.planStartDate = addDays(today, -Math.min(maxProgressDay, 29));
   return state;
 }

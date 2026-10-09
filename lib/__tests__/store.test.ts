@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { createAppStore, getPersisted, importLegacyIfNeeded, STORE_KEY } from '../store';
+import { createAppStore, getPersisted, importLegacyIfNeeded, STORE_KEY, waitForHydration } from '../store';
 import { LEGACY_NAFS_KEY } from '../legacy';
 import { DEFAULT_SETTINGS, type Profile } from '../model';
 
@@ -142,5 +142,23 @@ describe('app store', () => {
     expect(s.language).toBe('ur');
     expect(s.reminders).toEqual(DEFAULT_SETTINGS.reminders);
     expect(s.theme).toBe(DEFAULT_SETTINGS.theme);
+  });
+
+  it('waitForHydration resolves true once hydrated', async () => {
+    const store = createAppStore();
+    expect(await waitForHydration(store)).toBe(true);
+    expect(await waitForHydration(store)).toBe(true);
+  });
+
+  it('waitForHydration resolves false on timeout when hydration never finishes', async () => {
+    const never = { getItem: () => new Promise<string | null>(() => {}), setItem: async () => {}, removeItem: async () => {} };
+    const store = createAppStore(never);
+    expect(await waitForHydration(store, 10)).toBe(false);
+  });
+
+  it('importLegacyIfNeeded does not import when hydration times out', async () => {
+    const never = { getItem: () => new Promise<string | null>(() => {}), setItem: async () => {}, removeItem: async () => {} };
+    const store = createAppStore(never);
+    expect(await importLegacyIfNeeded(store, '2026-10-09', 10)).toBe(false);
   });
 });

@@ -25,7 +25,8 @@ export function isRTL(lang: Lang): boolean {
 export function resolveLanguage(pref: Lang | null, deviceLanguageCodes: (string | null)[]): Lang {
   if (pref) return pref;
   for (const code of deviceLanguageCodes) {
-    const c = code?.toLowerCase();
+    const base = code?.toLowerCase().split(/[-_]/)[0];
+    const c = base === 'in' ? 'id' : base;
     if (c && (SUPPORTED_LANGS as readonly string[]).includes(c)) return c as Lang;
   }
   return 'en';

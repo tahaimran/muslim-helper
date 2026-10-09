@@ -51,7 +51,9 @@ function withDate(
 
 const markActive = (log: DateLog): DateLog => ({ ...log, active: true });
 
-export function createAppStore() {
+type AppStorage = Parameters<typeof createJSONStorage>[0] extends () => infer R ? R : never;
+
+export function createAppStore(storage: AppStorage = AsyncStorage) {
   return createStore<AppStore>()(
     persist(
       (set) => {
@@ -146,7 +148,9 @@ export function createAppStore() {
       {
         name: STORE_KEY,
         version: 1,
-        storage: createJSONStorage(() => AsyncStorage),
+        storage: createJSONStorage(() => storage),
+        // Every future version bump needs a real migration here.
+        migrate: (persisted) => persisted as PersistedState,
         partialize: (s) => getPersisted(s),
         merge: (persisted, current) => {
           const p = (persisted ?? {}) as Partial<PersistedState>;
@@ -172,22 +176,36 @@ export function useAppStore<T>(selector: (s: AppStore) => T): T {
   return useStore(appStore, selector);
 }
 
+export function waitForHydration(
+  store: ReturnType<typeof createAppStore> = appStore,
+  timeoutMs = 4000
+): Promise<boolean> {
+  if (store.persist.hasHydrated()) return Promise.resolve(true);
+  return new Promise<boolean>((resolve) => {
+    let unsub = () => {};
+    const timer = setTimeout(() => {
+      unsub();
+      resolve(false);
+    }, timeoutMs);
+    unsub = store.persist.onFinishHydration(() => {
+      clearTimeout(timer);
+      unsub();
+      resolve(true);
+    });
+    if (store.persist.hasHydrated()) {
+      clearTimeout(timer);
+      unsub();
+      resolve(true);
+    }
+  });
+}
+
 export async function importLegacyIfNeeded(
   store: ReturnType<typeof createAppStore> = appStore,
-  today: DateKey = toDateKey(new Date())
+  today: DateKey = toDateKey(new Date()),
+  hydrationTimeoutMs = 4000
 ): Promise<boolean> {
-  if (!store.persist.hasHydrated()) {
-    await new Promise<void>((resolve) => {
-      const unsub = store.persist.onFinishHydration(() => {
-        unsub();
-        resolve();
-      });
-      if (store.persist.hasHydrated()) {
-        unsub();
-        resolve();
-      }
-    });
-  }
+  if (!(await waitForHydration(store, hydrationTimeoutMs))) return false;
   if (store.getState().profile) return false;
   let converted: PersistedState | null;
   try {

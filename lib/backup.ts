@@ -3,6 +3,11 @@ import { convertLegacyNafs } from './legacy';
 import {
   DEFAULT_SETTINGS,
   initialState,
+  IMPROVEMENT_AREAS,
+  KNOWLEDGE_LEVELS,
+  MOODS,
+  PRACTICE_LEVELS,
+  PRAYER_NAMES,
   type CalcMethodId,
   type DateLog,
   type MadhabId,
@@ -18,11 +23,6 @@ import type { ImprovementArea, KnowledgeLevel, MoodType, PracticeLevel, PrayerNa
 export type BackupError = 'invalid_json' | 'not_awdah' | 'unsupported_version' | 'invalid_shape';
 export type BackupResult = { ok: true; data: PersistedState } | { ok: false; error: BackupError };
 
-const PRACTICE: PracticeLevel[] = ['none', 'some', 'most', 'all'];
-const KNOWLEDGE: KnowledgeLevel[] = ['beginner', 'intermediate', 'advanced'];
-const AREAS: ImprovementArea[] = ['prayer', 'quran', 'dhikr', 'fasting', 'character', 'family', 'knowledge', 'charity'];
-const MOODS: MoodType[] = ['grateful', 'peaceful', 'struggling', 'motivated', 'reflective'];
-const PRAYERS: PrayerName[] = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
 const LANGS: Lang[] = ['en', 'ar', 'ur', 'id', 'tr'];
 const THEMES: Settings['theme'][] = ['system', 'light', 'dark'];
 const CALC_METHODS: CalcMethodId[] = [
@@ -51,12 +51,12 @@ export function serializeBackup(state: PersistedState, now: Date): string {
 function normalizeProfile(v: unknown): Profile | null {
   if (!isObj(v)) return null;
   const areas = Array.isArray(v.focusAreas)
-    ? [...new Set(v.focusAreas.filter((a): a is ImprovementArea => AREAS.includes(a)))]
+    ? [...new Set(v.focusAreas.filter((a): a is ImprovementArea => IMPROVEMENT_AREAS.includes(a)))]
     : [];
   return {
     name: str(v.name, ''),
-    prayerHabit: oneOf(v.prayerHabit, PRACTICE) ?? 'some',
-    knowledgeLevel: oneOf(v.knowledgeLevel, KNOWLEDGE) ?? 'beginner',
+    prayerHabit: oneOf(v.prayerHabit, PRACTICE_LEVELS) ?? 'some',
+    knowledgeLevel: oneOf(v.knowledgeLevel, KNOWLEDGE_LEVELS) ?? 'beginner',
     focusAreas: areas,
     dailyMinutes: finite(v.dailyMinutes) && v.dailyMinutes > 0 ? v.dailyMinutes : 30,
   };
@@ -110,7 +110,7 @@ function normalizeDates(v: unknown): Record<DateKey, DateLog> {
   for (const [key, raw] of Object.entries(v)) {
     if (!DATE_RE.test(key) || !isObj(raw)) continue;
     const prayers = Array.isArray(raw.prayers)
-      ? [...new Set(raw.prayers.filter((p): p is PrayerName => PRAYERS.includes(p)))]
+      ? [...new Set(raw.prayers.filter((p): p is PrayerName => PRAYER_NAMES.includes(p)))]
       : [];
     const tasbih: Record<string, number> = {};
     if (isObj(raw.tasbih)) {

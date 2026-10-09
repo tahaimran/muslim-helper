@@ -1,3 +1,4 @@
+import { getPlanPosition } from '../day';
 import { convertLegacyNafs } from '../legacy';
 
 const legacy = {
@@ -22,10 +23,25 @@ describe('convertLegacyNafs', () => {
       name: 'Aisha', prayerHabit: 'some', knowledgeLevel: 'beginner',
       focusAreas: ['prayer', 'quran'], dailyMinutes: 20,
     });
-    expect(s.planStartDate).toBe('2026-09-01');
+    expect(s.planStartDate).toBe('2026-10-08');
     expect(s.planDays['1:1']).toEqual({ completedTaskIds: ['1_fajr', '1_fatihah'], journal: 'my niyyah', mood: 'grateful' });
     expect(s.dates['2026-09-01']).toEqual({ active: true, prayers: ['fajr', 'dhuhr'], tasbih: {} });
     expect(s.cycle).toBe(1);
+  });
+  it('rebases the plan start so migrated users resume after their progress', () => {
+    const s = convertLegacyNafs({
+      isOnboarded: true,
+      userProfile: { planStartDate: '2026-08-01T10:00:00.000Z' },
+      dayProgress: {
+        1: { completedTaskIds: ['a'] },
+        2: { completedTaskIds: [] },
+        3: { completedTaskIds: ['b'] },
+      },
+    }, '2026-10-09')!;
+    expect(s.planStartDate).toBe('2026-10-06');
+    expect(getPlanPosition(s.planStartDate!, '2026-10-09').day).toBe(4);
+    expect(s.dates['2026-08-01'].active).toBe(true);
+    expect(s.dates['2026-08-03'].active).toBe(true);
   });
   it('returns null for non-onboarded or garbage input', () => {
     expect(convertLegacyNafs(null, '2026-10-09')).toBeNull();

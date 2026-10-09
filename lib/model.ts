@@ -1,6 +1,14 @@
 import type { DateKey } from './day';
 import type { ImprovementArea, KnowledgeLevel, MoodType, PracticeLevel, PrayerName } from './types';
 
+export const PRACTICE_LEVELS: readonly PracticeLevel[] = ['none', 'some', 'most', 'all'];
+export const KNOWLEDGE_LEVELS: readonly KnowledgeLevel[] = ['beginner', 'intermediate', 'advanced'];
+export const IMPROVEMENT_AREAS: readonly ImprovementArea[] = [
+  'prayer', 'quran', 'dhikr', 'fasting', 'character', 'family', 'knowledge', 'charity',
+];
+export const MOODS: readonly MoodType[] = ['grateful', 'peaceful', 'struggling', 'motivated', 'reflective'];
+export const PRAYER_NAMES: readonly PrayerName[] = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
+
 export type Lang = 'en' | 'ar' | 'ur' | 'id' | 'tr';
 
 export type CalcMethodId =
