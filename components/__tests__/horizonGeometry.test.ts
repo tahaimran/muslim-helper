@@ -2,6 +2,7 @@ import {
   NODE_ANGLES,
   arcGeometry,
   arcPath,
+  minNodeSpacing,
   nodePositions,
   pointAtAngle,
   sunAngle,
@@ -41,12 +42,13 @@ describe('arcGeometry', () => {
 });
 
 describe('nodePositions', () => {
-  it('uses fixed angles with Fajr low at the start, Dhuhr at the top, Isha low at the end', () => {
-    expect(NODE_ANGLES).toEqual([170, 90, 70, 48, 10]);
+  it('uses evenly spaced fixed angles from the start end to the far end', () => {
+    expect(NODE_ANGLES).toEqual([165, 127.5, 90, 52.5, 15]);
   });
 
-  it('keeps the far-side nodes far enough apart for their labels', () => {
+  it('keeps adjacent nodes far enough apart for their labels', () => {
     const p = nodePositions(arcGeometry(W, H, false));
+    expect(p.dhuhr.x - p.fajr.x).toBeGreaterThanOrEqual(44);
     expect(p.asr.x - p.dhuhr.x).toBeGreaterThanOrEqual(44);
     expect(p.maghrib.x - p.asr.x).toBeGreaterThanOrEqual(44);
     expect(p.isha.x - p.maghrib.x).toBeGreaterThanOrEqual(44);
@@ -62,11 +64,20 @@ describe('nodePositions', () => {
     expect(p.fajr.y).toBeGreaterThan(p.asr.y);
   });
 
-  it('puts Dhuhr at the top centre of the arc', () => {
+  it('is balanced: Asr at the apex, the other nodes symmetric about the centre', () => {
     const p = nodePositions(arcGeometry(W, H, false));
-    expect(p.dhuhr.x).toBeCloseTo(W / 2, 6);
-    expect(p.dhuhr.y).toBeCloseTo(0, 6);
-    for (const k of ['fajr', 'asr', 'maghrib', 'isha'] as const) expect(p[k].y).toBeGreaterThan(p.dhuhr.y);
+    expect(p.asr.x).toBeCloseTo(W / 2, 6);
+    expect(p.asr.y).toBeCloseTo(0, 6);
+    expect(p.dhuhr.x + p.maghrib.x).toBeCloseTo(W, 6);
+    expect(p.dhuhr.y).toBeCloseTo(p.maghrib.y, 6);
+    expect(p.fajr.x + p.isha.x).toBeCloseTo(W, 6);
+  });
+
+  it('minNodeSpacing returns the smallest gap between adjacent node centres', () => {
+    const p = nodePositions(arcGeometry(W, H, false));
+    expect(minNodeSpacing(p)).toBeCloseTo(p.dhuhr.x - p.fajr.x, 6);
+    expect(minNodeSpacing(nodePositions(arcGeometry(W, H, true)))).toBeCloseTo(p.dhuhr.x - p.fajr.x, 6);
+    expect(minNodeSpacing(nodePositions(arcGeometry(200, H, false)))).toBeLessThan(44);
   });
 
   it('is ordered start to end along x in LTR', () => {
@@ -90,7 +101,7 @@ describe('nodePositions', () => {
 
 describe('sun', () => {
   it('is clamped to the Fajr node before Fajr', () => {
-    expect(sunAngle(at(3), times)).toBe(170);
+    expect(sunAngle(at(3), times)).toBe(165);
     const g = arcGeometry(W, H, false);
     const s = sunPosition(g, at(3), times);
     const f = nodePositions(g).fajr;
@@ -99,7 +110,7 @@ describe('sun', () => {
   });
 
   it('is clamped to the Isha node after Isha', () => {
-    expect(sunAngle(at(23, 30), times)).toBe(10);
+    expect(sunAngle(at(23, 30), times)).toBe(15);
     const g = arcGeometry(W, H, true);
     const s = sunPosition(g, at(23, 30), times);
     const i = nodePositions(g).isha;
@@ -107,15 +118,15 @@ describe('sun', () => {
   });
 
   it('sits exactly on a node at that prayer time', () => {
-    expect(sunAngle(at(12), times)).toBe(90);
-    expect(sunAngle(at(15), times)).toBe(70);
+    expect(sunAngle(at(12), times)).toBe(127.5);
+    expect(sunAngle(at(15), times)).toBe(90);
   });
 
   it('interpolates between neighbouring prayers', () => {
-    // halfway between Dhuhr (12:00, 90deg) and Asr (15:00, 70deg)
-    expect(sunAngle(at(13, 30), times)).toBeCloseTo(80, 6);
-    // a quarter of the way from Fajr (05:00, 170deg) to Dhuhr (12:00, 90deg)
-    expect(sunAngle(at(6, 45), times)).toBeCloseTo(150, 6);
+    // halfway between Dhuhr (12:00, 127.5deg) and Asr (15:00, 90deg)
+    expect(sunAngle(at(13, 30), times)).toBeCloseTo(108.75, 6);
+    // a quarter of the way from Fajr (05:00, 165deg) to Dhuhr (12:00, 127.5deg)
+    expect(sunAngle(at(6, 45), times)).toBeCloseTo(155.625, 6);
   });
 
   it('pointAtAngle mirrors around the centre in RTL', () => {

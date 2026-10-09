@@ -2,12 +2,10 @@ import { PRAYER_ORDER, type DailyPrayerTimes } from '../lib/prayerTimes';
 import type { PrayerName } from '../lib/types';
 
 /**
- * Fixed node angles in PRAYER_ORDER (degrees; 180 = start end, 90 = top, 0 = far end).
- * Like the real sun: Fajr low at the start, Dhuhr at the zenith, Isha low at the far end.
- * The afternoon nodes sit at roughly even x steps (cos ~ 1/3, 2/3) so their labels never collide;
- * the open morning stretch between Fajr and Dhuhr is where the sun travels after sunrise.
+ * Fixed, evenly spaced node angles in PRAYER_ORDER (degrees; 180 = start end, 90 = top, 0 = far end).
+ * The arc shows the day's sequence: Fajr low at the start, Isha low at the far end, Asr at the apex.
  */
-export const NODE_ANGLES: readonly number[] = [170, 90, 70, 48, 10];
+export const NODE_ANGLES: readonly number[] = [165, 127.5, 90, 52.5, 15];
 
 export interface ArcGeometry {
   width: number;
@@ -69,4 +67,13 @@ export function sunAngle(now: Date, times: DailyPrayerTimes): number {
 
 export function sunPosition(g: ArcGeometry, now: Date, times: DailyPrayerTimes): Point {
   return pointAtAngle(g, sunAngle(now, times));
+}
+
+/** Smallest horizontal distance between adjacent node centres (caps touch-target width so targets never overlap). */
+export function minNodeSpacing(nodes: Record<PrayerName, Point>): number {
+  let min = Infinity;
+  for (let i = 1; i < PRAYER_ORDER.length; i++) {
+    min = Math.min(min, Math.abs(nodes[PRAYER_ORDER[i]].x - nodes[PRAYER_ORDER[i - 1]].x));
+  }
+  return min;
 }

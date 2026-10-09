@@ -7,10 +7,11 @@ import type { DailyPrayerTimes } from '../lib/prayerTimes';
 import { PRAYER_ORDER } from '../lib/prayerTimes';
 import type { PrayerName } from '../lib/types';
 import { TYPE_SCALE } from '../theme/fonts';
+import { palette } from '../theme/tokens';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
-import { NODE_ANGLES, arcGeometry, arcPath, nodePositions, pointAtAngle, sunAngle } from './horizonGeometry';
-import { PressableScale } from './index';
+import { NODE_ANGLES, arcGeometry, arcPath, minNodeSpacing, nodePositions, pointAtAngle, sunAngle } from './horizonGeometry';
+import { PressableScale } from './PressableScale';
 
 export type PrayerHorizonProps = {
   labels: Record<PrayerName, string>;
@@ -34,6 +35,8 @@ const LABEL_GAP = 4;
 const SUN = 10;
 const GLOW = 26;
 const SUN_MS = 900;
+// The sky is not themed, so the sun keeps one bright gold in both app schemes.
+const SUN_GOLD = palette.dawnGoldNight;
 
 const pad2 = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 const defaultTime = (d: Date) => `${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
@@ -47,6 +50,8 @@ export function PrayerHorizon({
 
   const geom = useMemo(() => arcGeometry(width, ARC_HEIGHT, isRTL, INSET), [width, isRTL]);
   const nodes = useMemo(() => nodePositions(geom), [geom]);
+  // Touch targets are 44 wide unless the nodes sit closer than that (narrow screens): never overlap.
+  const hitW = Math.min(HIT, Math.floor(minNodeSpacing(nodes)));
   const target = times ? sunAngle(now, times) : null;
 
   const angle = useSharedValue(reduceMotion && target !== null ? target : NODE_ANGLES[0]);
@@ -107,7 +112,7 @@ export function PrayerHorizon({
                   accessibilityRole="checkbox"
                   accessibilityLabel={time ? `${labels[p]}, ${time}` : labels[p]}
                   accessibilityState={{ checked }}
-                  style={[styles.hit, { start: x - HIT / 2, top: TOP_PAD + y - HIT / 2 }]}
+                  style={[styles.hit, { width: hitW, start: x - hitW / 2, top: TOP_PAD + y - HIT / 2 }]}
                 >
                   <View
                     style={[
@@ -124,9 +129,9 @@ export function PrayerHorizon({
 
           {target !== null ? (
             <Animated.View style={[styles.sun, sunStyle]}>
-              <View style={[styles.glowOuter, { backgroundColor: colors.gold }]} />
-              <View style={[styles.glowInner, { backgroundColor: colors.gold }]} />
-              <View style={[styles.core, { backgroundColor: colors.gold, shadowColor: colors.gold }]} />
+              <View style={[styles.glowOuter, { backgroundColor: SUN_GOLD }]} />
+              <View style={[styles.glowInner, { backgroundColor: SUN_GOLD }]} />
+              <View style={[styles.core, { backgroundColor: SUN_GOLD, shadowColor: SUN_GOLD }]} />
             </Animated.View>
           ) : null}
         </View>
@@ -138,7 +143,7 @@ export function PrayerHorizon({
 const styles = StyleSheet.create({
   ltr: { direction: 'ltr' },
   label: { position: 'absolute', width: LABEL_W, pointerEvents: 'none' },
-  hit: { position: 'absolute', width: HIT, height: HIT, alignItems: 'center', justifyContent: 'center' },
+  hit: { position: 'absolute', height: HIT, alignItems: 'center', justifyContent: 'center' },
   node: { width: NODE, height: NODE, borderRadius: NODE / 2, alignItems: 'center', justifyContent: 'center' },
   sun: { position: 'absolute', top: 0, start: 0, pointerEvents: 'none', width: GLOW, height: GLOW, alignItems: 'center', justifyContent: 'center' },
   glowOuter: { position: 'absolute', width: GLOW, height: GLOW, borderRadius: GLOW / 2, opacity: 0.16 },
