@@ -48,5 +48,6 @@ describe('buildProfile', () => {
   it('returns null when answers are missing', () => {
     expect(buildProfile({ ...full, prayerHabit: null })).toBeNull();
     expect(buildProfile({ ...full, dailyMinutes: null })).toBeNull();
+    expect(buildProfile({ ...full, focusAreas: [] })).toBeNull();
   });
 });

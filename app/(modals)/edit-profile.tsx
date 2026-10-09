@@ -7,19 +7,25 @@ import {
 } from '@/components';
 import { useAppStore } from '@/lib/store';
 import { buildProfile, toggleFocusArea } from '@/lib/onboarding';
+import type { Profile } from '@/lib/model';
 import type { ImprovementArea, KnowledgeLevel, PracticeLevel } from '@/lib/types';
 
 export default function EditProfileScreen() {
+  const profile = useAppStore((s) => s.profile);
+  // Mount the form only once the profile is loaded so its fields start from the saved values.
+  return profile ? <EditProfileForm profile={profile} /> : <Screen edges={['bottom']}><View /></Screen>;
+}
+
+function EditProfileForm({ profile }: { profile: Profile }) {
   const { t } = useTranslation();
   const router = useRouter();
-  const profile = useAppStore((s) => s.profile);
   const updateProfile = useAppStore((s) => s.updateProfile);
 
-  const [name, setName] = useState(profile?.name ?? '');
-  const [prayerHabit, setPrayerHabit] = useState<PracticeLevel | null>(profile?.prayerHabit ?? null);
-  const [knowledgeLevel, setKnowledgeLevel] = useState<KnowledgeLevel | null>(profile?.knowledgeLevel ?? null);
-  const [focusAreas, setFocusAreas] = useState<ImprovementArea[]>(profile?.focusAreas ?? []);
-  const [dailyMinutes, setDailyMinutes] = useState<number | null>(profile?.dailyMinutes ?? null);
+  const [name, setName] = useState(profile.name ?? '');
+  const [prayerHabit, setPrayerHabit] = useState<PracticeLevel | null>(profile.prayerHabit ?? null);
+  const [knowledgeLevel, setKnowledgeLevel] = useState<KnowledgeLevel | null>(profile.knowledgeLevel ?? null);
+  const [focusAreas, setFocusAreas] = useState<ImprovementArea[]>(profile.focusAreas ?? []);
+  const [dailyMinutes, setDailyMinutes] = useState<number | null>(profile.dailyMinutes ?? null);
 
   const next = buildProfile({ name, prayerHabit, knowledgeLevel, focusAreas, dailyMinutes });
   const valid = next !== null && next.focusAreas.length >= 1;

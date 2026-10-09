@@ -181,7 +181,7 @@
     },
     "intention": {
       "title": "Set your intention",
-      "summary": "Prayer: {{habit}}. About {{count}} minutes a day.",
+      "summary": "Your prayer: {{habit}}. Your time: {{minutes}}.",
       "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
       "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
       "hadithSource": "Sahih al-Bukhari 1"
@@ -219,8 +219,7 @@
       "knowledge": "Knowledge",
       "charity": "Charity"
     },
-    "minutes_one": "{{count}} minute",
-    "minutes_other": "{{count}} minutes"
+    "minutes": "{{count}} min"
   },
   "settings": {
     "language": "Language",
@@ -235,7 +234,8 @@
     "reset": "Erase all data",
     "resetHint": "Removes your profile and progress from this phone.",
     "resetConfirm": "Tap again to erase everything",
-    "resetConfirmHint": "This cannot be undone. It cancels by itself in a few seconds."
+    "resetConfirmHint": "This cannot be undone. It cancels by itself in a few seconds.",
+    "resetA11yHint": "Double tap twice within four seconds to erase everything"
   },
   "about": {
     "intro": "Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.",
@@ -260,10 +260,6 @@
     "location": {
       "title": "Location",
       "body": "If you choose to set your location, it is used only on your phone to calculate prayer times. It is never sent anywhere."
-    },
-    "backups": {
-      "title": "Backups",
-      "body": "Backups are files that you create and keep. You decide where they go and who can see them."
     },
     "deletion": {
       "title": "Deleting your data",

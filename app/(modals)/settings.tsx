@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Chip, LanguageOptions, ListRow, Screen, Section } from '@/components';
 import { useAppStore } from '@/lib/store';
@@ -12,7 +11,6 @@ const CONFIRM_WINDOW_MS = 4000;
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
-  const router = useRouter();
   const lang = useLang();
   const theme = useAppStore((s) => s.settings.theme);
   const updateSettings = useAppStore((s) => s.updateSettings);
@@ -31,7 +29,7 @@ export default function SettingsScreen() {
     if (timer.current) clearTimeout(timer.current);
     setConfirming(false);
     resetAll();
-    router.replace('/(onboarding)');
+    // The app shell redirects to onboarding once the profile is null.
   };
 
   return (
@@ -54,6 +52,8 @@ export default function SettingsScreen() {
           title={confirming ? t('settings.resetConfirm') : t('settings.reset')}
           subtitle={confirming ? t('settings.resetConfirmHint') : t('settings.resetHint')}
           onPress={onReset}
+          accessibilityHint={t('settings.resetA11yHint')}
+          accessibilityLiveRegion="polite"
         />
       </Section>
     </Screen>

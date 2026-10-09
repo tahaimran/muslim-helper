@@ -15,9 +15,11 @@ export type ListRowProps = {
   trailing?: React.ReactNode;
   leading?: React.ReactNode;
   destructive?: boolean;
+  accessibilityHint?: string;
+  accessibilityLiveRegion?: 'none' | 'polite' | 'assertive';
 };
 
-export function ListRow({ title, subtitle, value, onPress, trailing, leading, destructive }: ListRowProps) {
+export function ListRow({ title, subtitle, value, onPress, trailing, leading, destructive, accessibilityHint, accessibilityLiveRegion }: ListRowProps) {
   const { colors } = useTheme();
   const content = (
     <>
@@ -33,7 +35,7 @@ export function ListRow({ title, subtitle, value, onPress, trailing, leading, de
   const rowStyle = [styles.row, { borderBottomColor: colors.line }];
   if (!onPress) return <View style={rowStyle}>{content}</View>;
   return (
-    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={[title, subtitle, value].filter(Boolean).join(', ')} haptic={false} style={rowStyle}>
+    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={[title, subtitle, value].filter(Boolean).join(', ')} accessibilityHint={accessibilityHint} accessibilityLiveRegion={accessibilityLiveRegion} haptic={false} style={rowStyle}>
       {content}
     </PressableScale>
   );

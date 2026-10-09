@@ -44,6 +44,7 @@ export function canAdvance(step: OnboardingStep, draft: OnboardingDraft): boolea
 /** Builds the profile to save, or null if required answers are missing. */
 export function buildProfile(draft: OnboardingDraft) {
   if (!draft.prayerHabit || !draft.knowledgeLevel || draft.dailyMinutes === null) return null;
+  if (draft.focusAreas.length < 1 || draft.focusAreas.length > MAX_FOCUS_AREAS) return null;
   return {
     name: draft.name.trim(),
     prayerHabit: draft.prayerHabit,

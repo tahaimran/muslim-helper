@@ -106,8 +106,8 @@ export default function OnboardingScreen() {
             <View style={styles.intention}>
               <AppText variant="body" muted center>
                 {t('onboarding.intention.summary', {
-                  habit: habitLabel.toLowerCase(),
-                  count: dailyMinutes ?? 0,
+                  habit: habitLabel,
+                  minutes: dailyMinutes === null ? '' : t('profile.minutes', { count: dailyMinutes }),
                 })}
               </AppText>
               <ArabicBlock
