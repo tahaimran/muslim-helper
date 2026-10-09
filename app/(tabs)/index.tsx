@@ -16,7 +16,9 @@ import { toHijri } from '@/lib/hijri';
 import { MOODS, PRAYER_NAMES, type PersistedState } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import type { MoodType, PrayerName } from '@/lib/types';
+import { usePrayerTimes } from '@/lib/usePrayerTimes';
 import { useToday } from '@/lib/useToday';
+import { timeUntil } from '@/lib/view/nextPrayer';
 import { buildTodayVM, istiqamahJournalDay, type TaskVM } from '@/lib/view/today';
 import { SKY, getSkyPhase } from '@/theme/sky';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -48,6 +50,7 @@ function dateFromKey(key: DateKey): Date {
 }
 
 type SkyAreaProps = {
+  today: DateKey;
   greeting: string;
   title: string;
   titleArabic: string;
@@ -57,21 +60,40 @@ type SkyAreaProps = {
 };
 
 /** Owns the minute clock so only the sky re-renders as time passes, not the whole screen. */
-function SkyArea({ greeting, title, titleArabic, dateLine, prayersDone, onTogglePrayer }: SkyAreaProps) {
+function SkyArea({ today, greeting, title, titleArabic, dateLine, prayersDone, onTogglePrayer }: SkyAreaProps) {
   const { t } = useTranslation();
   const now = useNow();
-  const phase = getSkyPhase(now, null);
+  const lang = useLang();
+  const { times, next } = usePrayerTimes(today);
+  const phase = getSkyPhase(now, times);
   const sky = SKY[phase];
+  const timeLabel = useCallback((d: Date) => {
+    try {
+      return new Intl.DateTimeFormat(lang, { hour: 'numeric', minute: '2-digit' }).format(d);
+    } catch {
+      return d.toTimeString().slice(0, 5);
+    }
+  }, [lang]);
+  const nextPrayerLine = useMemo(() => {
+    if (!next) return undefined;
+    const prayer = t(`prayers.${next.name}`);
+    const time = timeLabel(next.time);
+    const { h, m } = timeUntil(now, next.time);
+    if (h > 0) return t('today.nextIn', { prayer, time, h, m });
+    if (m > 0) return t('today.nextInMin', { prayer, time, m });
+    return t('today.nextPrayer', { prayer, time });
+  }, [next, now, t, timeLabel]);
   const prayerLabels = useMemo(
     () => Object.fromEntries(PRAYER_NAMES.map((p) => [p, t(`prayers.${p}`)])) as Record<PrayerName, string>,
     [t],
   );
   return (
-    <SkyHeader phase={phase} greeting={greeting} title={title} titleArabic={titleArabic} dateLine={dateLine}>
+    <SkyHeader phase={phase} greeting={greeting} title={title} titleArabic={titleArabic} dateLine={dateLine} nextPrayerLine={nextPrayerLine}>
       <View style={styles.horizonPad}>
         <PrayerHorizon
           labels={prayerLabels}
-          times={null}
+          times={times}
+          timeLabel={timeLabel}
           done={prayersDone}
           now={now}
           textColor={sky.text}
@@ -79,6 +101,9 @@ function SkyArea({ greeting, title, titleArabic, dateLine, prayersDone, onToggle
           phase={phase}
           onToggle={onTogglePrayer}
         />
+        {times?.estimated ? (
+          <AppText variant="caption" center color={sky.textMuted} style={styles.estimated}>{t('prayer.estimated')}</AppText>
+        ) : null}
       </View>
     </SkyHeader>
   );
@@ -166,6 +191,7 @@ export default function TodayScreen() {
   return (
     <Screen padded={false} edges={[]} contentStyle={styles.noTop}>
       <SkyArea
+        today={today}
         greeting={greeting}
         title={title}
         titleArabic={titleArabic}
@@ -293,6 +319,7 @@ function HadithBlock({ text, onShare, shareLabel }: { text: SourcedText; onShare
 const styles = StyleSheet.create({
   noTop: { paddingTop: 0 },
   horizonPad: { paddingHorizontal: 8 },
+  estimated: { marginTop: 4 },
   body: { paddingHorizontal: 20 },
   setTimes: { marginTop: 8, alignItems: 'center' },
   welcomeLine: { marginTop: 12 },

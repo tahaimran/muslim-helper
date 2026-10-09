@@ -1,4 +1,4 @@
-import { buildProfile, canAdvance, clampMinutes, toggleFocusArea, type OnboardingDraft } from '../onboarding';
+import { ONBOARDING_STEPS, buildProfile, canAdvance, clampMinutes, toggleFocusArea, type OnboardingDraft } from '../onboarding';
 
 const full: OnboardingDraft = {
   name: '  Amina ', prayerHabit: 'some', knowledgeLevel: 'beginner', focusAreas: ['prayer'], dailyMinutes: 10,
@@ -23,10 +23,16 @@ describe('toggleFocusArea', () => {
   });
 });
 
+describe('ONBOARDING_STEPS', () => {
+  it('places the optional prayer-times step right after time', () => {
+    expect(ONBOARDING_STEPS.indexOf('prayerTimes')).toBe(ONBOARDING_STEPS.indexOf('time') + 1);
+  });
+});
+
 describe('canAdvance', () => {
   const empty: OnboardingDraft = { name: '', prayerHabit: null, knowledgeLevel: null, focusAreas: [], dailyMinutes: null };
   it('allows optional steps', () => {
-    for (const s of ['welcome', 'language', 'name', 'intention'] as const) expect(canAdvance(s, empty)).toBe(true);
+    for (const s of ['welcome', 'language', 'name', 'prayerTimes', 'intention'] as const) expect(canAdvance(s, empty)).toBe(true);
   });
   it('requires answers on required steps', () => {
     expect(canAdvance('habit', empty)).toBe(false);

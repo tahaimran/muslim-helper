@@ -10,7 +10,8 @@
     "save": "Save",
     "done": "Done",
     "retry": "Try again",
-    "home": "Go to Today"
+    "home": "Go to Today",
+    "close": "Close"
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",
@@ -32,7 +33,8 @@
     "dhuhr": "Dhuhr",
     "asr": "Asr",
     "maghrib": "Maghrib",
-    "isha": "Isha"
+    "isha": "Isha",
+    "sunrise": "Sunrise"
   },
   "category": {
     "prayer": "Prayer",
@@ -87,7 +89,10 @@
     "saved": "Saved",
     "moodPrompt": "How is your heart today?",
     "contentComing": "Today's guidance is on its way. Keep your prayers and dhikr going in the meantime.",
-    "dateLine": "{{hijri}}, {{gregorian}}"
+    "dateLine": "{{hijri}}, {{gregorian}}",
+    "nextPrayer": "Next: {{prayer}} at {{time}}",
+    "nextIn": "Next: {{prayer}} at {{time}}, in {{h}} h {{m}} min",
+    "nextInMin": "Next: {{prayer}} at {{time}}, in {{m}} min"
   },
   "istiqamah": {
     "title": "Istiqamah — staying steady",
@@ -188,6 +193,11 @@
       "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
       "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
       "hadithSource": "Sahih al-Bukhari 1"
+    },
+    "later": "Later",
+    "prayerTimes": {
+      "title": "Prayer times",
+      "subtitle": "Optional. Your location is used only on this phone to calculate prayer times. It is never sent anywhere."
     }
   },
   "profile": {
@@ -238,7 +248,16 @@
     "resetHint": "Removes your profile and progress from this phone.",
     "resetConfirm": "Tap again to erase everything",
     "resetConfirmHint": "This cannot be undone. It cancels by itself in a few seconds.",
-    "resetA11yHint": "Double tap twice within four seconds to erase everything"
+    "resetA11yHint": "Double tap twice within four seconds to erase everything",
+    "prayerTimes": "Prayer times",
+    "prayerTimesNote": "Your location is used only on this phone to calculate prayer times.",
+    "location": "Location",
+    "method": "Calculation method",
+    "methodAuto": "Auto ({{method}})",
+    "asr": "Asr method",
+    "asrAuto": "Auto ({{asr}})",
+    "asrShafi": "Standard (Shafi'i, Maliki, Hanbali)",
+    "asrHanafi": "Hanafi"
   },
   "about": {
     "intro": "Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.",
@@ -378,6 +397,38 @@
     "grade": {
       "sahih": "sahih",
       "hasan": "hasan"
-    }
+    },
+    "prayerTimesToday": "Prayer times today",
+    "nextPrayer": "next prayer"
+  },
+  "prayer": {
+    "estimated": "Times estimated for high latitude"
+  },
+  "location": {
+    "near": "Near {{city}}",
+    "cityLabel": "{{city}}, {{country}}",
+    "notSet": "Not set",
+    "useMyLocation": "Use my location",
+    "chooseCity": "Choose a city",
+    "searchPlaceholder": "Search for a city",
+    "searchHint": "Type a city name to search. Search works offline.",
+    "noResults": "No matching city. Try another spelling or a nearby city.",
+    "locating": "Finding your location…",
+    "denied": "Location permission was not granted. You can choose a city instead.",
+    "unavailable": "Could not get your location. You can choose a city instead."
+  },
+  "methods": {
+    "MuslimWorldLeague": "Muslim World League",
+    "Egyptian": "Egyptian General Authority",
+    "Karachi": "University of Islamic Sciences, Karachi",
+    "UmmAlQura": "Umm al-Qura, Makkah",
+    "Dubai": "Dubai",
+    "MoonsightingCommittee": "Moonsighting Committee",
+    "NorthAmerica": "ISNA (North America)",
+    "Kuwait": "Kuwait",
+    "Qatar": "Qatar",
+    "Singapore": "Singapore / Malaysia / Indonesia",
+    "Tehran": "Tehran (Geophysics Institute)",
+    "Turkey": "Turkey (Diyanet)"
   }
 }

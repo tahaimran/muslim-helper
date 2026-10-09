@@ -94,3 +94,8 @@ export function emptyDateLog(): DateLog {
 export function planDayKey(cycle: number, day: number): string {
   return `${cycle}:${day}`;
 }
+
+export const CALC_METHODS: readonly CalcMethodId[] = [
+  'MuslimWorldLeague', 'Egyptian', 'Karachi', 'UmmAlQura', 'Dubai', 'MoonsightingCommittee',
+  'NorthAmerica', 'Kuwait', 'Qatar', 'Singapore', 'Tehran', 'Turkey',
+];

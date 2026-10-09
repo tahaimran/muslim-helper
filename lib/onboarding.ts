@@ -5,7 +5,7 @@ export const MAX_DAILY_MINUTES = 120;
 export const MAX_FOCUS_AREAS = 3;
 export const MINUTE_OPTIONS: readonly number[] = [5, 10, 20, 30, 60];
 export const ONBOARDING_STEPS = [
-  'welcome', 'language', 'name', 'habit', 'knowledge', 'focus', 'time', 'intention',
+  'welcome', 'language', 'name', 'habit', 'knowledge', 'focus', 'time', 'prayerTimes', 'intention',
 ] as const;
 export type OnboardingStep = (typeof ONBOARDING_STEPS)[number];
 
@@ -30,7 +30,7 @@ export interface OnboardingDraft {
   dailyMinutes: number | null;
 }
 
-/** Whether the user may leave `step` forward. Welcome, language, name (optional) and intention always can. */
+/** Whether the user may leave `step` forward. Welcome, language, name, prayer times (all optional) and intention always can. */
 export function canAdvance(step: OnboardingStep, draft: OnboardingDraft): boolean {
   switch (step) {
     case 'habit': return draft.prayerHabit !== null;

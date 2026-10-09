@@ -34,6 +34,12 @@
       "expo-router",
       "expo-font",
       [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Awdah uses your location only on your phone to calculate prayer times. It is never sent anywhere."
+        }
+      ],
+      [
         "expo-notifications",
         {
           "icon": "./assets/images/notification-icon.png",

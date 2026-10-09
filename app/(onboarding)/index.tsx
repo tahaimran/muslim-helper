@@ -6,6 +6,8 @@ import {
   AppText, ArabicBlock, Button, DirectionalIcon, FocusChips, HabitOptions, KnowledgeOptions, LanguageOptions,
   MinutesOptions, NameInput, PressableScale, Screen,
 } from '@/components';
+import { CityPicker } from '@/components/settings/CityPicker';
+import { useLocationSetup } from '@/lib/useLocationSetup';
 import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -30,6 +32,9 @@ export default function OnboardingScreen() {
   const [focusAreas, setFocusAreas] = useState<ImprovementArea[]>([]);
   const [dailyMinutes, setDailyMinutes] = useState<number | null>(null);
   const [saving, setSaving] = useState(false);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const hasLocation = useAppStore((s) => s.settings.location !== null);
+  const { busy, error, fromGps, chooseCity } = useLocationSetup();
 
   const step = ONBOARDING_STEPS[stepIndex];
   const draft: OnboardingDraft = useMemo(
@@ -102,6 +107,22 @@ export default function OnboardingScreen() {
           {step === 'knowledge' ? <KnowledgeOptions value={knowledgeLevel} onChange={setKnowledgeLevel} /> : null}
           {step === 'focus' ? <FocusChips value={focusAreas} onToggle={(a) => setFocusAreas((f) => toggleFocusArea(f, a))} /> : null}
           {step === 'time' ? <MinutesOptions value={dailyMinutes} onChange={setDailyMinutes} /> : null}
+          {step === 'prayerTimes' ? (
+            <View style={styles.intention}>
+              <Button
+                label={busy ? t('location.locating') : t('location.useMyLocation')}
+                loading={busy}
+                onPress={() => { fromGps().then((ok) => { if (ok) next(); }); }}
+              />
+              <Button variant="secondary" label={t('location.chooseCity')} onPress={() => setPickerOpen(true)} />
+              {error ? <AppText variant="small" muted accessibilityLiveRegion="polite">{t(`location.${error}`)}</AppText> : null}
+              <CityPicker
+                visible={pickerOpen}
+                onClose={() => setPickerOpen(false)}
+                onSelect={(city) => { chooseCity(city); setPickerOpen(false); next(); }}
+              />
+            </View>
+          ) : null}
           {step === 'intention' ? (
             <View style={styles.intention}>
               <AppText variant="body" muted center>
@@ -127,7 +148,15 @@ export default function OnboardingScreen() {
             <Button label={t('onboarding.start')} onPress={finish} loading={saving} disabled={!buildProfile(draft)} />
           ) : (
             <>
-              <Button label={t('common.continue')} onPress={next} disabled={!canAdvance(step, draft)} />
+              {step === 'prayerTimes' ? (
+                <Button
+                  variant={hasLocation ? 'primary' : 'ghost'}
+                  label={hasLocation ? t('common.continue') : t('onboarding.later')}
+                  onPress={next}
+                />
+              ) : (
+                <Button label={t('common.continue')} onPress={next} disabled={!canAdvance(step, draft)} />
+              )}
               {step === 'name' ? <Button variant="ghost" label={t('onboarding.skip')} onPress={() => { setName(''); next(); }} /> : null}
             </>
           )}

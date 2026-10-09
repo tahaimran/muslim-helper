@@ -5,14 +5,16 @@ import * as Haptics from 'expo-haptics';
 import { useTranslation } from 'react-i18next';
 import { AppText, ListRow, Screen, Section } from '@/components';
 import { AdhkarList } from '@/components/worship/AdhkarList';
+import { PrayerTimesList, type PrayerTimeRow } from '@/components/worship/PrayerTimesList';
 import { TasbihCounter } from '@/components/worship/TasbihCounter';
 import { DAYS } from '@/content/days';
 import { EVENING_ADHKAR, MORNING_ADHKAR } from '@/content/learn';
 import type { Dhikr } from '@/content/types';
 import { getPlanPosition } from '@/lib/day';
-import { getPrayerTimes, resolveCalcSettings } from '@/lib/prayerTimes';
 import { useAppStore } from '@/lib/store';
+import { usePrayerTimes } from '@/lib/usePrayerTimes';
 import { useToday } from '@/lib/useToday';
+import { useLang } from '@/theme/useLang';
 import { adhkarExpansion, buildDhikrOptions, nextRound, ROUND_TARGETS } from '@/lib/view/worship';
 
 const NO_TASBIH: Record<string, number> = {};
@@ -30,7 +32,6 @@ export default function WorshipScreen() {
   const router = useRouter();
   const today = useToday();
 
-  const settings = useAppStore((s) => s.settings);
   const planStartDate = useAppStore((s) => s.planStartDate);
   const tasbih = useAppStore((s) => s.dates[today]?.tasbih) ?? NO_TASBIH;
   const incrementTasbih = useAppStore((s) => s.incrementTasbih);
@@ -67,23 +68,37 @@ export default function WorshipScreen() {
   }, [incrementTasbih, today, selected, round, target]);
 
   // Which adhkar section starts open: from prayer times when a location is saved, else the clock.
-  const { location, calcMethod, madhab } = settings;
-  const expansion = useMemo(() => {
-    const now = new Date();
-    let times: { dhuhr: Date; asr: Date } | null = null;
-    if (location) {
-      try {
-        const calc = resolveCalcSettings({ calcMethod, madhab }, location.countryCode);
-        const p = getPrayerTimes(now, location, calc.method, calc.madhab);
-        times = { dhuhr: p.dhuhr, asr: p.asr };
-      } catch {
-        times = null;
-      }
-    }
-    return adhkarExpansion(now, times);
+  const lang = useLang();
+  const { times, next } = usePrayerTimes(today);
+  const expansion = useMemo(
+    () => adhkarExpansion(new Date(), times ? { dhuhr: times.dhuhr, asr: times.asr } : null),
     // today is a dependency on purpose: re-evaluate when the day rolls over.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [location, calcMethod, madhab, today]);
+    [times, today],
+  );
+
+  const timeRows = useMemo<PrayerTimeRow[] | null>(() => {
+    if (!times) return null;
+    let fmt: (d: Date) => string;
+    try {
+      const f = new Intl.DateTimeFormat(lang, { hour: 'numeric', minute: '2-digit' });
+      fmt = (d) => f.format(d);
+    } catch {
+      fmt = (d) => d.toTimeString().slice(0, 5);
+    }
+    const valid = (d: Date) => Number.isFinite(d.getTime());
+    const order: ('fajr' | 'sunrise' | 'dhuhr' | 'asr' | 'maghrib' | 'isha')[] = [
+      'fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha',
+    ];
+    return order
+      .filter((k) => valid(times[k]))
+      .map((k) => ({
+        key: k,
+        label: t(`prayers.${k}`),
+        time: fmt(times[k]),
+        isNext: k !== 'sunrise' && next?.name === k && next.time.getTime() === times[k].getTime(),
+      }));
+  }, [times, next, lang, t]);
 
   const sourceLabel = useCallback(
     (d: Dhikr) => {
@@ -101,6 +116,12 @@ export default function WorshipScreen() {
   return (
     <Screen>
       <AppText variant="title" accessibilityRole="header" style={styles.title}>{t('worship.title')}</AppText>
+
+      {timeRows ? (
+        <Section title={t('worship.prayerTimesToday')}>
+          <PrayerTimesList rows={timeRows} note={times?.estimated ? t('prayer.estimated') : undefined} nextLabel={t('worship.nextPrayer')} />
+        </Section>
+      ) : null}
 
       <Section title={t('worship.tasbih')}>
         {selected ? (
