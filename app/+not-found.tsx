@@ -1,33 +1,18 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Stack, useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
+import { AppText, Button, Screen } from '@/components';
 
 export default function NotFoundScreen() {
+  const { t } = useTranslation();
+  const router = useRouter();
   return (
     <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.text}>{"This screen doesn't exist."}</Text>
-        <Link href="/" style={styles.link}>
-          <Text>Go to home screen!</Text>
-        </Link>
-      </View>
+      <Stack.Screen options={{ headerShown: false }} />
+      <Screen scroll={false} contentStyle={{ justifyContent: 'center', alignItems: 'center', gap: 16 }}>
+        <AppText variant="heading" center>{t('errors.notFound')}</AppText>
+        <Button label={t('common.home')} onPress={() => router.replace('/(tabs)')} />
+      </Screen>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: 600,
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-});

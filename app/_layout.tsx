@@ -1,124 +1,131 @@
-import { useEffect, useState, Component, useRef } from 'react';
+import React, { Component, useEffect, useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Platform } from 'react-native';
-import { useFrameworkReady } from '@/hooks/useFrameworkReady';
-import { appStorage } from '@/lib/storage';
-import { ThemeProvider } from '@/lib/ThemeProvider';
-import { useTheme, lightTheme } from '@/lib/theme';
+import * as SplashScreen from 'expo-splash-screen';
+import { useFonts } from 'expo-font';
+import { getLocales } from 'expo-localization';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { I18nextProvider } from 'react-i18next';
+import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
+import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
+import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
+import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
+import { FONT_ASSETS } from '@/theme/fonts';
+import { AppText, Button, ToastHost, showToast } from '@/components';
 
-class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean; error: Error | null }> {
-  state = { hasError: false, error: null as Error | null };
+SplashScreen.preventAutoHideAsync().catch(() => {});
 
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true, error };
+const deviceCodes = () => getLocales().map((l) => l.languageCode);
+
+function ErrorFallback({ onRetry }: { onRetry: () => void }) {
+  const { colors } = useTheme();
+  return (
+    <View style={[styles.center, { backgroundColor: colors.bg }]}>
+      <AppText variant="body" style={styles.message}>{i18n.t('errors.generic')}</AppText>
+      <Button label={i18n.t('common.retry')} onPress={onRetry} />
+    </View>
+  );
+}
+
+class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean }> {
+  state = { hasError: false };
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
   }
 
   render() {
-    if (this.state.hasError) {
-      return (
-        <View style={ebStyles.container}>
-          <Text style={ebStyles.title}>Something went wrong</Text>
-          <Text style={ebStyles.message}>
-            {this.state.error?.message || 'We apologize for the inconvenience. Please try restarting the app.'}
-          </Text>
-          <TouchableOpacity 
-            style={ebStyles.button} 
-            onPress={() => this.setState({ hasError: false, error: null })}
-          >
-            <Text style={ebStyles.buttonText}>Try Again</Text>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-    return this.props.children;
+    if (!this.state.hasError) return this.props.children;
+    return <ErrorFallback onRetry={() => this.setState({ hasError: false })} />;
   }
 }
 
-const ebStyles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: lightTheme.cream, padding: 24 },
-  title: { fontSize: 20, fontWeight: '700', color: lightTheme.darkText, marginBottom: 8 },
-  message: { fontSize: 14, color: lightTheme.mediumText, textAlign: 'center', marginBottom: 24, lineHeight: 20 },
-  button: { backgroundColor: lightTheme.mediumGreen, borderRadius: 12, paddingVertical: 12, paddingHorizontal: 24 },
-  buttonText: { color: '#FFFFFF', fontSize: 16, fontWeight: '600' },
-});
-
-function RootLayoutInner() {
-  useFrameworkReady();
+function Shell({ hydrated }: { hydrated: boolean }) {
   const router = useRouter();
   const segments = useSegments();
-  const { colors, mode } = useTheme();
-  const [isReady, setIsReady] = useState(false);
-  const isInitializing = useRef(false);
+  const { scheme } = useTheme();
+  const profile = useAppStore((s) => s.profile);
+  const language = useAppStore((s) => s.settings.language);
 
   useEffect(() => {
-    const initialize = async () => {
-      if (isInitializing.current) return;
-      isInitializing.current = true;
-      
-      console.log('[RootLayout] Initializing...');
-      try {
-        const state = await appStorage.getState();
-        const isOnboarded = state?.isOnboarded || false;
-        
-        console.log('[RootLayout] Status:', { isOnboarded, segments });
+    if (!hydrated) showToast(i18n.t('errors.storage'), 'error');
+  }, [hydrated]);
 
-        const inAuthGroup = segments[0] === '(onboarding)';
-        const inTabsGroup = segments[0] === '(tabs)';
+  useEffect(() => {
+    void initI18n(resolveLanguage(language, deviceCodes()));
+  }, [language]);
 
-        if (!isOnboarded && !inAuthGroup) {
-          console.log('[RootLayout] Redirecting to onboarding');
-          router.replace('/(onboarding)');
-        } else if (isOnboarded && !inTabsGroup) {
-          console.log('[RootLayout] Redirecting to tabs');
-          router.replace('/(tabs)');
-        }
-      } catch (error) {
-        console.error('[RootLayout] Initialization error:', error);
-      } finally {
-        setIsReady(true);
-        isInitializing.current = false;
-      }
-    };
+  useEffect(() => startMilestoneWatcher(), []);
 
-    if (!isReady) {
-      initialize();
-    }
-  }, [isReady, segments, router]);
-
-  if (!isReady) {
-    return (
-      <View style={[styles.loadingContainer, { backgroundColor: colors.cream }]}>
-        <ActivityIndicator size="large" color={colors.mediumGreen} />
-        <Text style={[styles.loadingText, { color: colors.mutedText }]}>Preparing your space...</Text>
-      </View>
-    );
-  }
+  useEffect(() => {
+    const inOnboarding = segments[0] === '(onboarding)';
+    if (profile === null && !inOnboarding) router.replace('/(onboarding)');
+    else if (profile !== null && inOnboarding) router.replace('/(tabs)');
+  }, [profile, segments, router]);
 
   return (
     <>
       <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="(onboarding)" />
+        <Stack.Screen name="(tabs)" />
         <Stack.Screen name="(modals)" options={{ presentation: 'modal' }} />
+        <Stack.Screen name="+not-found" />
       </Stack>
-      <StatusBar style={mode === 'dark' ? 'light' : 'dark'} />
+      <ToastHost />
+      <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>
+  );
+}
+
+function Root() {
+  const [fontsLoaded, fontError] = useFonts(FONT_ASSETS);
+  const [ready, setReady] = useState(false);
+  const [hydrated, setHydrated] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const ok = await waitForHydration();
+      await importLegacyIfNeeded();
+      await initI18n(resolveLanguage(appStore.getState().settings.language, deviceCodes()));
+      if (!active) return;
+      setHydrated(ok);
+      setReady(true);
+    })().catch(() => {
+      if (active) setReady(true);
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const fontsDone = fontsLoaded || fontError !== null;
+  useEffect(() => {
+    if (ready && fontsDone) SplashScreen.hideAsync().catch(() => {});
+  }, [ready, fontsDone]);
+
+  if (!ready || !fontsDone) return null;
+  return (
+    <I18nextProvider i18n={i18n}>
+      <AppThemeProvider>
+        <ErrorBoundary>
+          <Shell hydrated={hydrated} />
+        </ErrorBoundary>
+      </AppThemeProvider>
+    </I18nextProvider>
   );
 }
 
 export default function RootLayout() {
   return (
-    <ErrorBoundary>
-      <ThemeProvider>
-        <RootLayoutInner />
-      </ThemeProvider>
-    </ErrorBoundary>
+    <SafeAreaProvider>
+      <Root />
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  loadingContainer: { flex: 1, justifyContent: 'center', alignItems: 'center', gap: 12 },
-  loadingText: { fontSize: 14, fontWeight: '500' },
+  center: { flex: 1, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 16 },
+  message: { textAlign: 'center' },
 });

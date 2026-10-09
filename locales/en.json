@@ -9,10 +9,25 @@
     "cancel": "Cancel",
     "save": "Save",
     "done": "Done",
-    "retry": "Try again"
+    "retry": "Try again",
+    "home": "Go to Today"
   },
   "errors": {
     "generic": "Something went wrong. Please try again.",
-    "storage": "We couldn't save that change on your device."
+    "storage": "We couldn't save that change on your device.",
+    "notFound": "This page could not be found."
+  },
+  "tabs": {
+    "today": "Today",
+    "worship": "Worship",
+    "learn": "Learn",
+    "journey": "Journey",
+    "me": "Me"
+  },
+  "milestones": {
+    "unlocked": "Milestone reached: {{title}}"
+  },
+  "splash": {
+    "preparing": "Preparing your space"
   }
 }
