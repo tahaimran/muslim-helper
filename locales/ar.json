@@ -100,5 +100,10 @@
     "newCycleHint": "Begin a fresh cycle with deeper steps, whenever you feel ready.",
     "newCycle": "Begin a new 30 days",
     "confirm": "Tap again to begin"
+  },
+  "day": {
+    "title": "Day {{n}}",
+    "generic": "Day",
+    "locked": "Opens on day {{n}}"
   }
 }

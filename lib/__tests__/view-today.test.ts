@@ -1,6 +1,7 @@
 import { DAYS } from '../../content/days';
 import { addDays } from '../day';
 import { initialState, planDayKey, type PersistedState, type Profile } from '../model';
+import { createAppStore } from '../store';
 import { buildDayVM, buildTodayVM, istiqamahJournalDay } from '../view/today';
 
 const START = '2026-10-01';
@@ -157,5 +158,19 @@ describe('buildDayVM', () => {
 
   it('returns null for a day with no content', () => {
     expect(buildDayVM(state(), 99, START)).toBeNull();
+  });
+});
+
+describe('day detail toggling', () => {
+  it("writes the viewed day's log but marks today (not that day) active", () => {
+    const today = addDays(START, 5);
+    const store = createAppStore();
+    store.getState().completeOnboarding(profile(), START);
+    const id = DAYS[1].tasks[0].id;
+    store.getState().toggleTask(2, id, today);
+    const s = store.getState();
+    expect(s.planDays[planDayKey(1, 2)].completedTaskIds).toEqual([id]);
+    expect(s.dates[today].active).toBe(true);
+    expect(s.dates[addDays(START, 1)]).toBeUndefined();
   });
 });

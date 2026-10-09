@@ -1,8 +1,12 @@
 import { Stack } from 'expo-router';
+import { useTranslation } from 'react-i18next';
+import { useTheme as useAppTheme } from '@/theme/ThemeProvider';
 import { useTheme } from '@/lib/theme';
 
 export default function ModalsLayout() {
   const { colors } = useTheme();
+  const { t } = useTranslation();
+  const app = useAppTheme();
 
   return (
     <Stack
@@ -67,6 +71,15 @@ export default function ModalsLayout() {
         name="edit-profile"
         options={{
           headerTitle: 'Edit Profile',
+        }}
+      />
+      <Stack.Screen
+        name="day/[n]"
+        options={{
+          title: t('day.generic'),
+          headerStyle: { backgroundColor: app.colors.bg },
+          headerTitleStyle: { color: app.colors.text, fontSize: 17, fontFamily: app.font('uiMedium') },
+          headerTintColor: app.colors.accent,
         }}
       />
     </Stack>
