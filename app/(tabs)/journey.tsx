@@ -2,15 +2,13 @@ import React, { useMemo } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { AppText, PressableScale, Screen, Section, ThreadItem, ThreadList } from '@/components';
-import { DayNode } from '@/components/journey/DayNode';
-import type { PersistedState } from '@/lib/model';
+import { AppText, Screen, Section } from '@/components';
+import { WeekPath } from '@/components/journey/WeekPath';
+import { initialState, type PersistedState } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
-import { buildJourneyVM, type DayStatus } from '@/lib/view/journey';
+import { buildJourneyVM, type JourneyDayVM } from '@/lib/view/journey';
 import { useTheme } from '@/theme/ThemeProvider';
-
-const INDENT = 24;
 
 export default function JourneyScreen() {
   const { t } = useTranslation();
@@ -18,22 +16,22 @@ export default function JourneyScreen() {
   const { colors } = useTheme();
   const today = useToday();
 
+  // Only the fields buildJourneyVM reads: profile, cycle, plan start, plan days, and the
+  // per-date logs (today's tasbih counts can complete the current day).
   const profile = useAppStore((s) => s.profile);
-  const settings = useAppStore((s) => s.settings);
   const cycle = useAppStore((s) => s.cycle);
   const planStartDate = useAppStore((s) => s.planStartDate);
   const planDays = useAppStore((s) => s.planDays);
   const dates = useAppStore((s) => s.dates);
-  const milestones = useAppStore((s) => s.milestones);
 
   const vm = useMemo(() => {
-    const state: PersistedState = { schema: 1, profile, settings, cycle, planStartDate, planDays, dates, milestones };
+    const state: PersistedState = { ...initialState(), profile, cycle, planStartDate, planDays, dates };
     return buildJourneyVM(state, today);
-  }, [profile, settings, cycle, planStartDate, planDays, dates, milestones, today]);
+  }, [profile, cycle, planStartDate, planDays, dates, today]);
 
-  const open = (day: number, status: DayStatus) => {
-    if (status === 'today') router.navigate('/(tabs)');
-    else router.push(`/(modals)/day/${day}`);
+  const open = (d: JourneyDayVM) => {
+    if (d.status === 'today') router.navigate('/(tabs)');
+    else router.push(`/(modals)/day/${d.day}`);
   };
 
   return (
@@ -44,33 +42,22 @@ export default function JourneyScreen() {
       </View>
 
       {vm.weeks.map((w) => (
-        <Section
-          key={w.week}
-          title={`${w.title}  ${w.titleArabic}`}
-          subtitle={t('journey.weekProgress', { done: w.doneCount, total: w.days.length })}
-        >
-          <ThreadList>
-            {w.days.map((d, i) => {
-              const label = `${t('journey.dayN', { n: d.day })}, ${d.theme}, ${t(`journey.status.${d.status}`)}`;
-              return (
-                <View key={d.day} style={i % 2 === 1 ? styles.shiftEnd : styles.shiftStart}>
-                  <ThreadItem node={<DayNode status={d.status} />} first={i === 0} last={i === w.days.length - 1}>
-                    <PressableScale
-                      onPress={() => open(d.day, d.status)}
-                      accessibilityRole="button"
-                      accessibilityLabel={label}
-                      style={styles.row}
-                    >
-                      <AppText variant="caption" color={d.status === 'today' ? colors.gold : colors.textMuted}>
-                        {t('journey.dayN', { n: d.day })}
-                      </AppText>
-                      <AppText variant="body" weight="medium" muted={d.status === 'locked'}>{d.theme}</AppText>
-                    </PressableScale>
-                  </ThreadItem>
-                </View>
-              );
-            })}
-          </ThreadList>
+        <Section key={w.week}>
+          <View style={styles.weekHeader} accessible accessibilityRole="header">
+            <AppText variant="heading">{w.title}</AppText>
+            <AppText variant="arabic" color={colors.gold} style={{ writingDirection: 'rtl' }}>
+              {w.titleArabic}
+            </AppText>
+          </View>
+          <AppText variant="small" muted style={styles.weekSub}>
+            {t('journey.weekProgress', { done: w.doneCount, total: w.days.length })}
+          </AppText>
+          <WeekPath
+            days={w.days}
+            dayLabel={(n) => t('journey.dayN', { n })}
+            a11yLabel={(d) => `${t('journey.dayN', { n: d.day })}, ${d.theme}, ${t(`journey.status.${d.status}`)}`}
+            onPress={open}
+          />
         </Section>
       ))}
     </Screen>
@@ -79,7 +66,6 @@ export default function JourneyScreen() {
 
 const styles = StyleSheet.create({
   header: { marginTop: 8 },
-  row: { minHeight: 44, justifyContent: 'center' },
-  shiftStart: { paddingStart: 0 },
-  shiftEnd: { paddingStart: INDENT },
+  weekHeader: { flexDirection: 'row', alignItems: 'baseline', gap: 12 },
+  weekSub: { marginBottom: 8 },
 });

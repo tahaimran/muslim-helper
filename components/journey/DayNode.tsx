@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withSequence, withTiming } from 'react-native-reanimated';
 import { Check, Lock } from 'lucide-react-native';
@@ -13,10 +13,18 @@ export function DayNode({ status }: { status: DayStatus }) {
   const scale = useSharedValue(1);
   const anim = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
 
+  // reduceMotion resolves asynchronously (it starts false), so wait briefly and re-check
+  // the latest value before pulsing.
+  const reduceRef = useRef(reduceMotion);
+  reduceRef.current = reduceMotion;
   useEffect(() => {
-    if (status !== 'today' || reduceMotion) return;
-    scale.value = withSequence(withTiming(1.18, { duration: 380 }), withTiming(1, { duration: 380 }));
-  }, [status, reduceMotion, scale]);
+    if (status !== 'today') return;
+    const id = setTimeout(() => {
+      if (reduceRef.current) return;
+      scale.value = withSequence(withTiming(1.18, { duration: 380 }), withTiming(1, { duration: 380 }));
+    }, 300);
+    return () => clearTimeout(id);
+  }, [status, scale]);
 
   let body: React.ReactNode;
   switch (status) {
