@@ -1,0 +1,18 @@
+{
+  "app": {
+    "name": "Awdah",
+    "tagline": "Your gentle path back to the deen"
+  },
+  "common": {
+    "continue": "Continue",
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "done": "Done",
+    "retry": "Try again"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "storage": "We couldn't save that change on your device."
+  }
+}
