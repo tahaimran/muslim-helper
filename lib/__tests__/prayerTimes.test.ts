@@ -49,20 +49,21 @@ describe('getPrayerTimes', () => {
 describe('getNextPrayer', () => {
   it('returns the next prayer later today', () => {
     const next = getNextPrayer(new Date('2026-10-09T15:30:00Z'), MECCA, 'UmmAlQura', 'shafi');
-    expect(next.name).toBe('isha');
+    expect(next?.name).toBe('isha');
   });
   it("returns tomorrow's fajr after isha", () => {
     const now = new Date('2026-10-09T20:00:00Z'); // 16:00 in New York, still 2026-10-09 locally
     const next = getNextPrayer(now, MECCA, 'UmmAlQura', 'shafi');
-    expect(next.name).toBe('fajr');
-    expect(next.time.getTime()).toBeGreaterThan(now.getTime());
-    expect(next.time.toISOString().startsWith('2026-10-10')).toBe(true);
+    expect(next?.name).toBe('fajr');
+    expect(next!.time.getTime()).toBeGreaterThan(now.getTime());
+    expect(next!.time.toISOString().startsWith('2026-10-10')).toBe(true);
   });
   it('returns a finite, future time at Tromso midsummer late evening', () => {
     const now = new Date(2026, 5, 21, 23, 30);
     const next = getNextPrayer(now, TROMSO, 'MuslimWorldLeague', 'shafi');
-    expect(Number.isFinite(next.time.getTime())).toBe(true);
-    expect(next.time.getTime()).toBeGreaterThan(now.getTime());
+    expect(next).not.toBeNull();
+    expect(Number.isFinite(next!.time.getTime())).toBe(true);
+    expect(next!.time.getTime()).toBeGreaterThan(now.getTime());
   });
 });
 
@@ -92,9 +93,13 @@ describe('pickNext (invalid-time guard)', () => {
     const tomorrow = { ...day(atTomorrow), fajr: new Date(2026, 9, 9, 20, 30) }; // before `now`
     expect(pickNext(at(21), day(at), tomorrow)).toEqual({ name: 'dhuhr', time: atTomorrow(12) });
   });
-  it('throws when neither day has any valid time', () => {
+  it('returns null when every candidate is NaN or in the past', () => {
     const allNaN = { fajr: NAN, sunrise: NAN, dhuhr: NAN, asr: NAN, maghrib: NAN, isha: NAN, estimated: false };
-    expect(() => pickNext(at(13), allNaN, allNaN)).toThrow();
+    expect(pickNext(at(13), allNaN, allNaN)).toBeNull();
+    // Everything today is past or NaN, and tomorrow's only valid times are also before now.
+    const pastToday = { ...day(at), dhuhr: NAN, asr: NAN, maghrib: NAN, isha: NAN };
+    const pastTomorrow = day(() => new Date(2026, 9, 9, 1));
+    expect(pickNext(at(21), pastToday, pastTomorrow)).toBeNull();
   });
 });
 

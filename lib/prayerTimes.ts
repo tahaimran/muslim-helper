@@ -79,14 +79,14 @@ export function getPrayerTimes(
 
 /**
  * Picks the next prayer after `now` from today's and tomorrow's times.
- * Invalid (NaN) times are skipped. Throws only if neither day has any valid time,
- * which getPrayerTimes never produces.
+ * Invalid (NaN) and past times are skipped. Returns null when no upcoming valid
+ * time exists, so callers in render paths can simply omit the next-prayer line.
  */
 export function pickNext(
   now: Date,
   today: DailyPrayerTimes,
   tomorrow: DailyPrayerTimes
-): { name: PrayerName; time: Date } {
+): { name: PrayerName; time: Date } | null {
   // Tomorrow's times are not guaranteed to fall after `now` at high latitudes
   // (e.g. Tromso's "tomorrow" fajr can land earlier in local time), so check both.
   for (const day of [today, tomorrow]) {
@@ -95,7 +95,7 @@ export function pickNext(
       if (isValidDate(time) && time.getTime() > now.getTime()) return { name, time };
     }
   }
-  throw new Error('pickNext: no upcoming valid prayer time');
+  return null;
 }
 
 export function getNextPrayer(
@@ -103,7 +103,7 @@ export function getNextPrayer(
   coords: Coords,
   method: CalcMethodId,
   madhab: MadhabId
-): { name: PrayerName; time: Date } {
+): { name: PrayerName; time: Date } | null {
   const today = getPrayerTimes(now, coords, method, madhab);
   const tomorrow = getPrayerTimes(new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1), coords, method, madhab);
   return pickNext(now, today, tomorrow);
