@@ -6,8 +6,9 @@ import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
 import { getLocales } from 'expo-localization';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { I18nextProvider, useTranslation } from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
 import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
+import type { Lang } from '@/lib/model';
 import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
 import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
 import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
@@ -81,20 +82,34 @@ function Shell() {
 
 type Boot = 'loading' | 'unhydrated' | 'ready';
 
+async function safeInitI18n(pref: Lang | null): Promise<void> {
+  try {
+    await initI18n(resolveLanguage(pref, deviceCodes()));
+  } catch {
+    // keep going; the fallback below shows English text
+  }
+}
+
 async function boot(): Promise<Boot> {
-  if (!(await waitForHydration())) return 'unhydrated';
+  if (!(await waitForHydration())) {
+    await safeInitI18n(null);
+    return 'unhydrated';
+  }
   await importLegacyIfNeeded();
-  await initI18n(resolveLanguage(appStore.getState().settings.language, deviceCodes()));
+  await safeInitI18n(appStore.getState().settings.language);
   return 'ready';
 }
 
-function StorageUnavailable({ onRetry }: { onRetry: () => void }) {
+// Last-resort English strings for when i18n could not initialize.
+const FALLBACK = { storage: 'We could not open your saved data.', retry: 'Try again' };
+
+function StorageUnavailable({ onRetry, busy }: { onRetry: () => void; busy: boolean }) {
   const { colors } = useTheme();
-  const { t } = useTranslation();
+  const ok = i18n.isInitialized;
   return (
     <View style={[styles.center, { backgroundColor: colors.bg }]}>
-      <AppText variant="body" style={styles.message}>{t('errors.storage')}</AppText>
-      <Button label={t('common.retry')} onPress={onRetry} />
+      <AppText variant="body" style={styles.message}>{ok ? i18n.t('errors.storage') : FALLBACK.storage}</AppText>
+      <Button label={ok ? i18n.t('common.retry') : FALLBACK.retry} onPress={onRetry} disabled={busy} />
     </View>
   );
 }
@@ -102,23 +117,33 @@ function StorageUnavailable({ onRetry }: { onRetry: () => void }) {
 function Root() {
   const [fontsLoaded, fontError] = useFonts(FONT_ASSETS);
   const [state, setState] = useState<Boot>('loading');
+  const [retrying, setRetrying] = useState(false);
+  const mounted = useRef(true);
+  const inFlight = useRef(false);
 
   useEffect(() => {
-    let active = true;
+    mounted.current = true;
     boot()
-      .then((b) => active && setState(b))
-      .catch(() => active && setState('unhydrated'));
+      .then((b) => mounted.current && setState(b))
+      .catch(() => mounted.current && setState('unhydrated'));
     return () => {
-      active = false;
+      mounted.current = false;
     };
   }, []);
 
   const retry = useCallback(async () => {
+    if (inFlight.current) return;
+    inFlight.current = true;
+    setRetrying(true);
     try {
       await appStore.persist.rehydrate();
-      setState(await boot());
+      const next = await boot();
+      if (mounted.current) setState(next);
     } catch {
-      setState('unhydrated');
+      if (mounted.current) setState('unhydrated');
+    } finally {
+      inFlight.current = false;
+      if (mounted.current) setRetrying(false);
     }
   }, []);
 
@@ -131,13 +156,9 @@ function Root() {
   return (
     <I18nextProvider i18n={i18n}>
       <AppThemeProvider>
-        {state === 'ready' ? (
-          <ErrorBoundary>
-            <Shell />
-          </ErrorBoundary>
-        ) : (
-          <StorageUnavailable onRetry={retry} />
-        )}
+        <ErrorBoundary>
+          {state === 'ready' ? <Shell /> : <StorageUnavailable onRetry={retry} busy={retrying} />}
+        </ErrorBoundary>
       </AppThemeProvider>
     </I18nextProvider>
   );
