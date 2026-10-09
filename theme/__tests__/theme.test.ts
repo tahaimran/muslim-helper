@@ -27,7 +27,10 @@ describe('contrast', () => {
   });
   it('sky text passes AA on every gradient stop', () => {
     for (const s of Object.values(SKY)) {
-      for (const stop of s.gradient) expect(contrastRatio(s.text, stop)).toBeGreaterThanOrEqual(4.5);
+      for (const stop of s.gradient) {
+        expect(contrastRatio(s.text, stop)).toBeGreaterThanOrEqual(4.5);
+        expect(contrastRatio(s.textMuted, stop)).toBeGreaterThanOrEqual(4.5);
+      }
     }
   });
   it('exposes the palette', () => {
@@ -63,6 +66,10 @@ describe('fonts', () => {
     expect(fontFamily('ar', 'ui')).toMatch(/ReadexPro/);
     for (const l of ['en', 'ar', 'ur', 'id', 'tr'] as const) expect(fontFamily(l, 'arabic')).toMatch(/Amiri/);
     expect(fontFamily('en', 'display')).toMatch(/Amiri/);
+  });
+  it('uses Nastaliq bold for Urdu bold roles', () => {
+    expect(fontFamily('ur', 'uiBold')).toMatch(/NotoNastaliqUrdu_700Bold/);
+    expect(fontFamily('ur', 'display')).toMatch(/NotoNastaliqUrdu_700Bold/);
   });
   it('gives Nastaliq extra line height', () => {
     expect(lineHeightFor('ur', 16)).toBe(32);
