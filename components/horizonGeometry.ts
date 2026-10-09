@@ -65,8 +65,36 @@ export function sunAngle(now: Date, times: DailyPrayerTimes): number {
   return NODE_ANGLES[last];
 }
 
+/**
+ * Angle at which to draw the sun. Between Fajr and Isha this is `sunAngle`; while pinned (before Fajr /
+ * after Isha) it rests `offsetPx` further along the arc, outward beyond the end node, so it never hides it.
+ */
+export function sunDisplayAngle(g: ArcGeometry, now: Date, times: DailyPrayerTimes, offsetPx = 14): number {
+  const a = sunAngle(now, times);
+  const first = NODE_ANGLES[0];
+  const last = NODE_ANGLES[NODE_ANGLES.length - 1];
+  if (a !== first && a !== last) return a;
+  const dir = a === first ? 1 : -1;
+  const limit = a === first ? 180 - a : a; // how far we may go before leaving the arc
+  const node = pointAtAngle(g, a);
+  const dist = (d: number) => {
+    const p = pointAtAngle(g, a + dir * d);
+    return Math.hypot(p.x - node.x, p.y - node.y);
+  };
+  if (dist(limit) <= offsetPx) return a + dir * limit;
+  // Distance grows monotonically with the angle delta along this end of the arc: bisect for `offsetPx`.
+  let lo = 0;
+  let hi = limit;
+  for (let i = 0; i < 40; i++) {
+    const mid = (lo + hi) / 2;
+    if (dist(mid) < offsetPx) lo = mid;
+    else hi = mid;
+  }
+  return a + dir * lo;
+}
+
 export function sunPosition(g: ArcGeometry, now: Date, times: DailyPrayerTimes): Point {
-  return pointAtAngle(g, sunAngle(now, times));
+  return pointAtAngle(g, sunDisplayAngle(g, now, times));
 }
 
 /** Smallest horizontal distance between adjacent node centres (caps touch-target width so targets never overlap). */

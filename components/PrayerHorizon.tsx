@@ -10,7 +10,7 @@ import { TYPE_SCALE } from '../theme/fonts';
 import { palette } from '../theme/tokens';
 import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
-import { NODE_ANGLES, arcGeometry, arcPath, minNodeSpacing, nodePositions, pointAtAngle, sunAngle } from './horizonGeometry';
+import { NODE_ANGLES, arcGeometry, arcPath, minNodeSpacing, nodePositions, pointAtAngle, sunDisplayAngle } from './horizonGeometry';
 import { PressableScale } from './PressableScale';
 
 export type PrayerHorizonProps = {
@@ -22,15 +22,17 @@ export type PrayerHorizonProps = {
   textColor: string;
   mutedColor: string;
   accent: string;
+  /** Check-mark color on a done node; defaults to the theme's onAccent. */
+  onAccent?: string;
   onToggle: (p: PrayerName) => void;
 };
 
 const ARC_HEIGHT = 72;
 const INSET = 24;
-const TOP_PAD = 22; // room for Dhuhr's touch target above the arc's apex
+const TOP_PAD = 22; // room for the apex node's touch target above the arc
 const HIT = 44;
+const MIN_HIT = 32;
 const NODE = 18;
-const LABEL_W = 56;
 const LABEL_GAP = 4;
 const SUN = 10;
 const GLOW = 26;
@@ -40,19 +42,23 @@ const SUN_GOLD = palette.dawnGoldNight;
 
 const pad2 = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 const defaultTime = (d: Date) => `${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+const clamp = (v: number, lo: number, hi: number) => Math.min(Math.max(v, lo), Math.max(lo, hi));
 
 /** The five daily prayers as tappable nodes along the sky's horizon arc, with the sun riding the arc by the clock. */
 export function PrayerHorizon({
-  labels, times, timeLabel = defaultTime, done, now, textColor, mutedColor, accent, onToggle,
+  labels, times, timeLabel = defaultTime, done, now, textColor, mutedColor, accent, onAccent, onToggle,
 }: PrayerHorizonProps) {
   const { colors, isRTL, reduceMotion, lineHeight } = useTheme();
   const [width, setWidth] = useState(0);
+  const checkColor = onAccent ?? colors.onAccent;
 
   const geom = useMemo(() => arcGeometry(width, ARC_HEIGHT, isRTL, INSET), [width, isRTL]);
   const nodes = useMemo(() => nodePositions(geom), [geom]);
-  // Touch targets are 44 wide unless the nodes sit closer than that (narrow screens): never overlap.
-  const hitW = Math.min(HIT, Math.floor(minNodeSpacing(nodes)));
-  const target = times ? sunAngle(now, times) : null;
+  const span = Math.floor(minNodeSpacing(nodes));
+  // Labels use the room between nodes (at least 44); touch targets never overlap above the 32 floor.
+  const labelW = Math.max(HIT, span);
+  const pressW = Math.max(MIN_HIT, Math.min(labelW, span));
+  const target = times ? sunDisplayAngle(geom, now, times) : null;
 
   const angle = useSharedValue(reduceMotion && target !== null ? target : NODE_ANGLES[0]);
   const ready = width > 0;
@@ -70,8 +76,10 @@ export function PrayerHorizon({
 
   const doneSet = new Set(done);
   const captionLine = lineHeight(TYPE_SCALE.caption);
-  const labelTop = NODE / 2 + LABEL_GAP;
-  const height = TOP_PAD + ARC_HEIGHT + labelTop + captionLine * (times ? 2 : 1) + LABEL_GAP;
+  const labelTop = HIT / 2 + NODE / 2 + LABEL_GAP; // measured from the top of a node's touch box
+  const labelsH = captionLine * (times ? 2 : 1);
+  const pressH = labelTop + labelsH + LABEL_GAP;
+  const height = TOP_PAD + ARC_HEIGHT - HIT / 2 + pressH;
 
   const onLayout = (e: LayoutChangeEvent) => setWidth(Math.round(e.nativeEvent.layout.width));
 
@@ -86,47 +94,7 @@ export function PrayerHorizon({
             </G>
           </Svg>
 
-          {PRAYER_ORDER.map((p) => {
-            const { x, y } = nodes[p];
-            const checked = doneSet.has(p);
-            const time = times ? timeLabel(times[p]) : null;
-            const labelStart = Math.min(Math.max(x - LABEL_W / 2, 0), Math.max(0, width - LABEL_W));
-            return (
-              <React.Fragment key={p}>
-                <View
-                  style={[styles.label, { start: labelStart, top: TOP_PAD + y + labelTop }]}
-                  importantForAccessibility="no-hide-descendants"
-                  accessibilityElementsHidden
-                >
-                  <AppText variant="caption" color={textColor} center numberOfLines={1}>
-                    {labels[p]}
-                  </AppText>
-                  {time ? (
-                    <AppText variant="caption" color={mutedColor} center numberOfLines={1}>
-                      {time}
-                    </AppText>
-                  ) : null}
-                </View>
-                <PressableScale
-                  onPress={() => onToggle(p)}
-                  accessibilityRole="checkbox"
-                  accessibilityLabel={time ? `${labels[p]}, ${time}` : labels[p]}
-                  accessibilityState={{ checked }}
-                  style={[styles.hit, { width: hitW, start: x - hitW / 2, top: TOP_PAD + y - HIT / 2 }]}
-                >
-                  <View
-                    style={[
-                      styles.node,
-                      checked ? { backgroundColor: accent } : { borderWidth: 2, borderColor: textColor },
-                    ]}
-                  >
-                    {checked ? <Check size={11} color={colors.onAccent} strokeWidth={3.5} /> : null}
-                  </View>
-                </PressableScale>
-              </React.Fragment>
-            );
-          })}
-
+          {/* The sun sits beneath the nodes so it never hides a node's check. */}
           {target !== null ? (
             <Animated.View style={[styles.sun, sunStyle]}>
               <View style={[styles.glowOuter, { backgroundColor: SUN_GOLD }]} />
@@ -134,6 +102,56 @@ export function PrayerHorizon({
               <View style={[styles.core, { backgroundColor: SUN_GOLD, shadowColor: SUN_GOLD }]} />
             </Animated.View>
           ) : null}
+
+          {PRAYER_ORDER.map((p) => {
+            const { x, y } = nodes[p];
+            const checked = doneSet.has(p);
+            const time = times ? timeLabel(times[p]) : null;
+            // One pressable covers the node and its name/time beneath it.
+            const pressStart = clamp(x - pressW / 2, 0, width - pressW);
+            const labelStart = clamp(x - labelW / 2, 0, width - labelW) - pressStart;
+            return (
+              <PressableScale
+                key={p}
+                onPress={() => onToggle(p)}
+                accessibilityRole="checkbox"
+                accessibilityLabel={time ? `${labels[p]}, ${time}` : labels[p]}
+                accessibilityState={{ checked }}
+                style={[styles.press, { width: pressW, height: pressH, start: pressStart, top: TOP_PAD + y - HIT / 2 }]}
+              >
+                <View
+                  style={[
+                    styles.node,
+                    { start: x - pressStart - NODE / 2 },
+                    checked ? { backgroundColor: accent } : { borderWidth: 2, borderColor: textColor },
+                  ]}
+                >
+                  {checked ? <Check size={11} color={checkColor} strokeWidth={3.5} /> : null}
+                </View>
+                <View
+                  style={[styles.label, { width: labelW, start: labelStart, top: labelTop }]}
+                  importantForAccessibility="no-hide-descendants"
+                  accessibilityElementsHidden
+                >
+                  <AppText variant="caption" color={textColor} center numberOfLines={1}>
+                    {labels[p]}
+                  </AppText>
+                  {time ? (
+                    <AppText
+                      variant="caption"
+                      color={mutedColor}
+                      center
+                      numberOfLines={1}
+                      adjustsFontSizeToFit
+                      minimumFontScale={0.8}
+                    >
+                      {time}
+                    </AppText>
+                  ) : null}
+                </View>
+              </PressableScale>
+            );
+          })}
         </View>
       ) : null}
     </View>
@@ -142,10 +160,16 @@ export function PrayerHorizon({
 
 const styles = StyleSheet.create({
   ltr: { direction: 'ltr' },
-  label: { position: 'absolute', width: LABEL_W, pointerEvents: 'none' },
-  hit: { position: 'absolute', height: HIT, alignItems: 'center', justifyContent: 'center' },
-  node: { width: NODE, height: NODE, borderRadius: NODE / 2, alignItems: 'center', justifyContent: 'center' },
-  sun: { position: 'absolute', top: 0, start: 0, pointerEvents: 'none', width: GLOW, height: GLOW, alignItems: 'center', justifyContent: 'center' },
+  press: { position: 'absolute' },
+  node: {
+    position: 'absolute', top: HIT / 2 - NODE / 2, width: NODE, height: NODE, borderRadius: NODE / 2,
+    alignItems: 'center', justifyContent: 'center',
+  },
+  label: { position: 'absolute', pointerEvents: 'none' },
+  sun: {
+    position: 'absolute', top: 0, start: 0, pointerEvents: 'none', width: GLOW, height: GLOW,
+    alignItems: 'center', justifyContent: 'center',
+  },
   glowOuter: { position: 'absolute', width: GLOW, height: GLOW, borderRadius: GLOW / 2, opacity: 0.16 },
   glowInner: { position: 'absolute', width: 17, height: 17, borderRadius: 8.5, opacity: 0.3 },
   core: {

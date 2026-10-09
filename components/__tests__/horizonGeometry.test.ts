@@ -6,6 +6,7 @@ import {
   nodePositions,
   pointAtAngle,
   sunAngle,
+  sunDisplayAngle,
   sunPosition,
 } from '../horizonGeometry';
 import type { DailyPrayerTimes } from '../../lib/prayerTimes';
@@ -102,19 +103,47 @@ describe('nodePositions', () => {
 describe('sun', () => {
   it('is clamped to the Fajr node before Fajr', () => {
     expect(sunAngle(at(3), times)).toBe(165);
-    const g = arcGeometry(W, H, false);
-    const s = sunPosition(g, at(3), times);
-    const f = nodePositions(g).fajr;
-    expect(s.x).toBeCloseTo(f.x, 6);
-    expect(s.y).toBeCloseTo(f.y, 6);
+  });
+
+  it('rests 14px beyond the Fajr node, towards the start edge, before Fajr', () => {
+    for (const rtl of [false, true]) {
+      const g = arcGeometry(W, H, rtl);
+      const s = sunPosition(g, at(3), times);
+      const f = nodePositions(g).fajr;
+      expect(Math.hypot(s.x - f.x, s.y - f.y)).toBeCloseTo(14, 0);
+      expect(s.y).toBeGreaterThan(f.y);
+      if (rtl) expect(s.x).toBeGreaterThan(f.x);
+      else expect(s.x).toBeLessThan(f.x);
+    }
+    expect(sunDisplayAngle(arcGeometry(W, H, false), at(3), times)).toBeGreaterThan(165);
   });
 
   it('is clamped to the Isha node after Isha', () => {
     expect(sunAngle(at(23, 30), times)).toBe(15);
-    const g = arcGeometry(W, H, true);
-    const s = sunPosition(g, at(23, 30), times);
-    const i = nodePositions(g).isha;
-    expect(s.x).toBeCloseTo(i.x, 6);
+  });
+
+  it('rests 14px beyond the Isha node, towards the far edge, after Isha', () => {
+    for (const rtl of [false, true]) {
+      const g = arcGeometry(W, H, rtl);
+      const s = sunPosition(g, at(23, 30), times);
+      const i = nodePositions(g).isha;
+      expect(Math.hypot(s.x - i.x, s.y - i.y)).toBeCloseTo(14, 0);
+      if (rtl) expect(s.x).toBeLessThan(i.x);
+      else expect(s.x).toBeGreaterThan(i.x);
+    }
+    expect(sunDisplayAngle(arcGeometry(W, H, false), at(23, 30), times)).toBeLessThan(15);
+  });
+
+  it('shows the sun exactly on its interpolated angle between Fajr and Isha', () => {
+    const g = arcGeometry(W, H, false);
+    expect(sunDisplayAngle(g, at(13, 30), times)).toBeCloseTo(108.75, 6);
+    expect(sunDisplayAngle(g, at(12), times)).toBe(127.5);
+  });
+
+  it('never pushes the resting sun past the ends of the arc', () => {
+    const g = arcGeometry(60, 8, false);
+    expect(sunDisplayAngle(g, at(3), times)).toBeLessThanOrEqual(180);
+    expect(sunDisplayAngle(g, at(23, 30), times)).toBeGreaterThanOrEqual(0);
   });
 
   it('sits exactly on a node at that prayer time', () => {
