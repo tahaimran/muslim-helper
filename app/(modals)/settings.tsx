@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Switch, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { AppText, Button, Chip, LanguageOptions, ListRow, Screen, Section } from '@/components';
 import { OptionRow } from '@/components/profile/ProfileControls';
@@ -9,10 +9,15 @@ import { useLang } from '@/theme/useLang';
 import { CALC_METHODS, type CalcMethodId, type MadhabId, type Settings } from '@/lib/model';
 import { useLocationSetup } from '@/lib/useLocationSetup';
 import { usePrayerTimes } from '@/lib/usePrayerTimes';
+import { useReminders } from '@/lib/useReminders';
 import { useToday } from '@/lib/useToday';
+import { useTheme } from '@/theme/ThemeProvider';
 
 const THEMES: Settings['theme'][] = ['system', 'light', 'dark'];
 const CONFIRM_WINDOW_MS = 4000;
+const HOURS = Array.from({ length: 24 }, (_, i) => i);
+const MINUTES = [0, 15, 30, 45];
+const two = (n: number) => String(n).padStart(2, '0');
 
 export default function SettingsScreen() {
   const { t } = useTranslation();
@@ -28,6 +33,13 @@ export default function SettingsScreen() {
   const { busy, error, fromGps, chooseCity } = useLocationSetup();
   const [pickerOpen, setPickerOpen] = useState(false);
   const [methodOpen, setMethodOpen] = useState(false);
+  const { colors } = useTheme();
+  const reminders = useAppStore((s) => s.settings.reminders);
+  const setReminders = useReminders();
+  const [timeOpen, setTimeOpen] = useState(false);
+  const [hh, mm] = reminders.dailyTime.split(':').map(Number);
+  const setTime = (h: number, m: number) => { void setReminders({ dailyTime: `${two(h)}:${two(m)}` }); };
+  const switchColors = { true: colors.accent, false: colors.line };
   const methodName = (id: CalcMethodId) => t(`methods.${id}`);
   const asrName = (id: MadhabId) => t(id === 'hanafi' ? 'settings.asrHanafi' : 'settings.asrShafi');
 
@@ -95,6 +107,54 @@ export default function SettingsScreen() {
         </View>
       </Section>
 
+      <Section title={t('reminders.title')} subtitle={t('reminders.note')}>
+        <ListRow
+          title={t('reminders.daily')}
+          trailing={
+            <Switch
+              value={reminders.daily}
+              onValueChange={(v) => { void setReminders({ daily: v }); }}
+              trackColor={switchColors}
+              accessibilityLabel={t('reminders.daily')}
+            />
+          }
+        />
+        {reminders.daily ? (
+          <>
+            <ListRow title={t('reminders.dailyTime')} value={reminders.dailyTime} onPress={() => setTimeOpen((o) => !o)} />
+            {timeOpen ? (
+              <View style={styles.timeBox}>
+                <AppText variant="small" weight="medium">{t('reminders.hour')}</AppText>
+                <View style={styles.chips}>
+                  {HOURS.map((h) => (
+                    <Chip key={h} label={two(h)} selected={h === hh} onPress={() => setTime(h, mm)} />
+                  ))}
+                </View>
+                <AppText variant="small" weight="medium">{t('reminders.minute')}</AppText>
+                <View style={styles.chips}>
+                  {MINUTES.map((m) => (
+                    <Chip key={m} label={two(m)} selected={m === mm} onPress={() => setTime(hh, m)} />
+                  ))}
+                </View>
+              </View>
+            ) : null}
+          </>
+        ) : null}
+        <ListRow
+          title={t('reminders.prayers')}
+          subtitle={location ? undefined : t('reminders.needsLocation')}
+          trailing={
+            <Switch
+              value={reminders.prayers && !!location}
+              disabled={!location}
+              onValueChange={(v) => { void setReminders({ prayers: v }); }}
+              trackColor={switchColors}
+              accessibilityLabel={t('reminders.prayers')}
+            />
+          }
+        />
+      </Section>
+
       <CityPicker
         visible={pickerOpen}
         onClose={() => setPickerOpen(false)}
@@ -120,4 +180,5 @@ const styles = StyleSheet.create({
   actions: { marginTop: 8, marginBottom: 8, gap: 4 },
   options: { gap: 10, marginTop: 8 },
   asrTitle: { marginTop: 20 },
+  timeBox: { gap: 10, marginVertical: 8 },
 });

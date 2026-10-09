@@ -234,6 +234,23 @@
     },
     "minutes": "{{count}} min"
   },
+  "reminders": {
+    "title": "Reminders",
+    "note": "Gentle nudges, scheduled on your phone only. Off unless you turn them on.",
+    "daily": "Daily reminder",
+    "dailyTime": "Reminder time",
+    "hour": "Hour",
+    "minute": "Minute",
+    "prayers": "Prayer time alerts",
+    "needsLocation": "Set your location above to get prayer time alerts.",
+    "denied": "Notifications are turned off for Awdah. You can allow them in your phone's system settings.",
+    "unavailable": "Reminders are not available on this device.",
+    "channel": "Reminders",
+    "dailyTitle": "A quiet moment for today",
+    "dailyBody": "Your plan is waiting whenever you are ready.",
+    "prayerTitle": "Time for {{prayer}}",
+    "prayerBody": "It is time for {{prayer}}. May it bring you peace."
+  },
   "settings": {
     "language": "Language",
     "languageNote": "Right-to-left languages take full effect after restarting the app.",

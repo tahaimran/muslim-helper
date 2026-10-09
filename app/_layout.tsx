@@ -1,5 +1,5 @@
 import React, { Component, useCallback, useEffect, useRef, useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { AppState, StyleSheet, View } from 'react-native';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import * as SplashScreen from 'expo-splash-screen';
@@ -10,6 +10,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
 import type { Lang } from '@/lib/model';
 import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
+import { rescheduleFromStore } from '@/lib/platform/notify';
 import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
 import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
 import { FONT_ASSETS } from '@/theme/fonts';
@@ -55,8 +56,23 @@ function Shell() {
       firstLang.current = false;
       return;
     }
-    void initI18n(resolveLanguage(language, deviceCodes()));
+    void initI18n(resolveLanguage(language, deviceCodes())).then(() => rescheduleFromStore());
   }, [language]);
+
+  // Re-plan notifications at launch, on return to the foreground, and when a relevant setting changes.
+  const reminders = useAppStore((s) => s.settings.reminders);
+  const location = useAppStore((s) => s.settings.location);
+  const calcMethod = useAppStore((s) => s.settings.calcMethod);
+  const madhab = useAppStore((s) => s.settings.madhab);
+  useEffect(() => {
+    void rescheduleFromStore();
+  }, [reminders, location, calcMethod, madhab]);
+  useEffect(() => {
+    const sub = AppState.addEventListener('change', (s) => {
+      if (s === 'active') void rescheduleFromStore();
+    });
+    return () => sub.remove();
+  }, []);
 
   useEffect(() => startMilestoneWatcher(), []);
 
