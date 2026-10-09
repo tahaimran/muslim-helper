@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { Linking, StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
-import { AppText, ArabicBlock, ListRow, Screen, Section } from '@/components';
+import { AppText, ArabicBlock, ListRow, Screen, Section, showToast } from '@/components';
 import { StepList, type StepItem } from '@/components/learn/StepList';
 import { useTheme } from '@/theme/ThemeProvider';
 import {
@@ -83,7 +83,7 @@ export default function LearnScreen() {
         <StepList steps={salah} {...hints} />
         <View style={styles.notes}>
           {SALAH_NOTES.map((n) => (
-            <View key={n.id} style={[styles.note, { backgroundColor: colors.surface }]}>
+            <View key={n.id} style={styles.note}>
               <AppText variant="body" weight="medium">{n.title}</AppText>
               <AppText variant="small" muted>{n.body}</AppText>
             </View>
@@ -92,7 +92,7 @@ export default function LearnScreen() {
       </Section>
 
       <Section title={t('learn.rakah.title')} subtitle={t('learn.rakah.subtitle')}>
-        <View accessibilityRole="summary">
+        <View accessibilityRole="list">
           {RAKAH_COUNTS.map((r) => (
             <View
               key={r.prayer}
@@ -123,7 +123,7 @@ export default function LearnScreen() {
             key={r.id}
             title={t(`learn.resources.${r.id}.title`)}
             subtitle={t(`learn.resources.${r.id}.subtitle`)}
-            onPress={() => { Linking.openURL(r.url).catch(() => {}); }}
+            onPress={() => { Linking.openURL(r.url).catch(() => showToast(t('errors.generic'), 'error')); }}
             accessibilityHint={t('learn.resources.hint')}
           />
         ))}
@@ -136,8 +136,8 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   dua: { marginTop: 20, gap: 10 },
   duaTitle: { marginBottom: 2 },
-  notes: { marginTop: 20, gap: 12 },
-  note: { borderRadius: 14, padding: 14, gap: 4 },
+  notes: { marginTop: 24, gap: 20 },
+  note: { gap: 4 },
   rakahRow: { minHeight: 48, flexDirection: 'row', alignItems: 'center', borderBottomWidth: StyleSheet.hairlineWidth },
   pillar: { paddingVertical: 12, gap: 4, borderBottomWidth: StyleSheet.hairlineWidth },
   pillarHead: { flexDirection: 'row', alignItems: 'center', gap: 12 },
