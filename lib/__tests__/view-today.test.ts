@@ -115,12 +115,20 @@ describe('buildTodayVM', () => {
   });
 
   it('returns no day (without crashing) when that day has no content yet', () => {
-    const missing = DAYS.length + 1;
-    if (missing > 30) return; // all content present
-    const vm = buildTodayVM(state(), addDays(START, missing - 1));
-    expect(vm.phase).toBe('journey');
-    expect(vm.day).toBeNull();
-    expect(vm.istiqamah).toBeNull();
+    jest.isolateModules(() => {
+      // Only 3 days of content exist in this scenario, independent of the real DAYS length.
+      jest.doMock('../../content/days', () => ({ DAYS: DAYS.slice(0, 3), WEEKS: [] }));
+      // eslint-disable-next-line @typescript-eslint/no-require-imports -- isolateModules needs a fresh require
+      const { buildTodayVM: build } = require('../view/today') as typeof import('../view/today');
+      expect(build(state(), addDays(START, 2)).day?.day).toBe(3);
+      const vm = build(state(), addDays(START, 3)); // day 4: no content
+      expect(vm.phase).toBe('journey');
+      expect(vm.day).toBeNull();
+      expect(vm.istiqamah).toBeNull();
+      // Istiqamah still finds a hadith when content is short.
+      expect(build(state(), addDays(START, 34)).istiqamah?.hadith).toBe(DAYS[34 % 3].hadith);
+    });
+    jest.dontMock('../../content/days');
   });
 });
 

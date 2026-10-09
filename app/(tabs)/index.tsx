@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Share, StyleSheet, View } from 'react-native';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { AppState, Share, StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
-import { Check, Share2 } from 'lucide-react-native';
+import { Share2 } from 'lucide-react-native';
 import {
   AppText, ArabicBlock, Button, ListRow, PrayerHorizon, PressableScale, Screen, Section, SkyHeader, showToast,
 } from '@/components';
@@ -11,6 +11,7 @@ import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
 import { WELCOME_BACK } from '@/content/milestones';
 import type { SourcedText } from '@/content/types';
+import type { DateKey } from '@/lib/day';
 import { toHijri } from '@/lib/hijri';
 import { MOODS, PRAYER_NAMES, type PersistedState } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
@@ -23,23 +24,72 @@ import { useLang } from '@/theme/useLang';
 
 const CONFIRM_MS = 4000;
 
-/** The current time, refreshed every minute (drives the sky phase and the sun). */
+/** The current time, refreshed every minute and whenever the app returns to the foreground. */
 function useNow(): Date {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
-    const timer = setInterval(() => setNow(new Date()), 60_000);
-    return () => clearInterval(timer);
+    const refresh = () => setNow(new Date());
+    const sub = AppState.addEventListener('change', (s) => {
+      if (s === 'active') refresh();
+    });
+    const timer = setInterval(refresh, 60_000);
+    return () => {
+      sub.remove();
+      clearInterval(timer);
+    };
   }, []);
   return now;
+}
+
+/** Local noon of a date key: a stable instant for that calendar day (safe for Hijri conversion). */
+function dateFromKey(key: DateKey): Date {
+  const [y, m, d] = key.split('-').map(Number);
+  return new Date(y, m - 1, d, 12);
+}
+
+type SkyAreaProps = {
+  greeting: string;
+  title: string;
+  titleArabic: string;
+  dateLine: string;
+  prayersDone: PrayerName[];
+  onTogglePrayer: (p: PrayerName) => void;
+};
+
+/** Owns the minute clock so only the sky re-renders as time passes, not the whole screen. */
+function SkyArea({ greeting, title, titleArabic, dateLine, prayersDone, onTogglePrayer }: SkyAreaProps) {
+  const { t } = useTranslation();
+  const { colors } = useTheme();
+  const now = useNow();
+  const phase = getSkyPhase(now, null);
+  const sky = SKY[phase];
+  const prayerLabels = useMemo(
+    () => Object.fromEntries(PRAYER_NAMES.map((p) => [p, t(`prayers.${p}`)])) as Record<PrayerName, string>,
+    [t],
+  );
+  return (
+    <SkyHeader phase={phase} greeting={greeting} title={title} titleArabic={titleArabic} dateLine={dateLine}>
+      <View style={styles.horizonPad}>
+        <PrayerHorizon
+          labels={prayerLabels}
+          times={null}
+          done={prayersDone}
+          now={now}
+          textColor={sky.text}
+          mutedColor={sky.textMuted}
+          accent={colors.accent}
+          onToggle={onTogglePrayer}
+        />
+      </View>
+    </SkyHeader>
+  );
 }
 
 export default function TodayScreen() {
   const { t } = useTranslation();
   const router = useRouter();
-  const { colors } = useTheme();
   const lang = useLang();
   const today = useToday();
-  const now = useNow();
 
   const profile = useAppStore((s) => s.profile);
   const settings = useAppStore((s) => s.settings);
@@ -59,33 +109,25 @@ export default function TodayScreen() {
     return buildTodayVM(state, today);
   }, [profile, settings, cycle, planStartDate, planDays, dates, milestones, today]);
 
-  const phase = getSkyPhase(now, null);
-  const sky = SKY[phase];
-
-  const prayerLabels = useMemo(
-    () => Object.fromEntries(PRAYER_NAMES.map((p) => [p, t(`prayers.${p}`)])) as Record<PrayerName, string>,
-    [t],
-  );
   const moodLabels = useMemo(
     () => Object.fromEntries(MOODS.map((m) => [m, t(`mood.${m}`)])) as Record<MoodType, string>,
     [t],
   );
   const categoryLabel = (c: TaskVM['category']) => t(`category.${c}`);
 
+  // Built from `today` (not a clock) so it rolls over exactly when the date key does.
   const dateLine = useMemo(() => {
-    const parts: string[] = [];
-    const h = toHijri(now);
-    if (h) parts.push(t('today.hijriDate', { day: h.day, month: t(`hijri.months.${h.month}`), year: h.year }));
-    let greg: string;
+    const date = dateFromKey(today);
+    let gregorian: string;
     try {
-      greg = new Intl.DateTimeFormat(lang, { weekday: 'long', day: 'numeric', month: 'long' }).format(now);
+      gregorian = new Intl.DateTimeFormat(lang, { weekday: 'long', day: 'numeric', month: 'long' }).format(date);
     } catch {
-      greg = now.toDateString();
+      gregorian = date.toDateString();
     }
-    parts.push(greg);
-    return parts.join(' · ');
-    // Recompute when the calendar day or language changes, not every minute.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const h = toHijri(date);
+    if (!h) return gregorian;
+    const hijri = t('today.hijriDate', { day: h.day, month: t(`hijri.months.${h.month}`), year: h.year });
+    return t('today.dateLine', { hijri, gregorian });
   }, [today, lang, t]);
 
   // Inline confirm for starting a new cycle: a second tap within 4s.
@@ -114,6 +156,8 @@ export default function TodayScreen() {
     Share.share({ message }).catch(() => showToast(t('errors.generic'), 'error'));
   };
 
+  const onTogglePrayer = useCallback((p: PrayerName) => togglePrayer(today, p), [togglePrayer, today]);
+
   const name = profile?.name.trim();
   const greeting = name ? t('today.greeting', { name }) : t('today.greetingNoName');
   const content = vm.day?.content;
@@ -122,20 +166,14 @@ export default function TodayScreen() {
 
   return (
     <Screen padded={false} edges={[]} contentStyle={styles.noTop}>
-      <SkyHeader phase={phase} greeting={greeting} title={title} titleArabic={titleArabic} dateLine={dateLine}>
-        <View style={styles.horizonPad}>
-          <PrayerHorizon
-            labels={prayerLabels}
-            times={null}
-            done={vm.prayersDone}
-            now={now}
-            textColor={sky.text}
-            mutedColor={sky.textMuted}
-            accent={colors.accent}
-            onToggle={(p) => togglePrayer(today, p)}
-          />
-        </View>
-      </SkyHeader>
+      <SkyArea
+        greeting={greeting}
+        title={title}
+        titleArabic={titleArabic}
+        dateLine={dateLine}
+        prayersDone={vm.prayersDone}
+        onTogglePrayer={onTogglePrayer}
+      />
 
       <View style={styles.body}>
         {settings.location ? null : (
@@ -178,6 +216,7 @@ export default function TodayScreen() {
 
             <Section title={t('today.reflect')}>
               <ReflectionBox
+                key={`${vm.day.cycle}:${vm.day.day}`}
                 question={content.reflection}
                 value={vm.day.journal}
                 onChange={(text) => setJournal(vm.day!.day, text, today)}
@@ -202,12 +241,12 @@ export default function TodayScreen() {
               <ListRow
                 title={t('istiqamah.morning')}
                 onPress={() => router.push('/(tabs)/worship')}
-                trailing={vm.istiqamah.morningDone ? <Check size={20} color={colors.accent} accessibilityLabel={t('today.a11yDone')} /> : undefined}
+                subtitle={vm.istiqamah.morningDone ? t('istiqamah.doneToday') : undefined}
               />
               <ListRow
                 title={t('istiqamah.evening')}
                 onPress={() => router.push('/(tabs)/worship')}
-                trailing={vm.istiqamah.eveningDone ? <Check size={20} color={colors.accent} accessibilityLabel={t('today.a11yDone')} /> : undefined}
+                subtitle={vm.istiqamah.eveningDone ? t('istiqamah.doneToday') : undefined}
               />
             </Section>
 

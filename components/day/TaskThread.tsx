@@ -25,23 +25,27 @@ export function TaskThread({ tasks, editable, onToggle, onLockedPress, categoryL
           if (task.lockedByTasbih) onLockedPress();
           else onToggle(task.id);
         };
-        const a11y = task.done ? `${task.title}, ${labels.a11yDone}` : task.title;
+        const category = categoryLabel(task.category);
+        const base = `${task.title}, ${category}`;
+        const a11y = task.done ? `${base}, ${labels.a11yDone}` : base;
         return (
           <ThreadItem
             key={task.id}
+            first={i === 0}
             last={i === tasks.length - 1}
-            node={<CheckNode checked={task.done} onPress={press} label={a11y} />}
+            node={<CheckNode checked={task.done} onPress={editable ? press : undefined} label={a11y} />}
           >
             <PressableScale
               onPress={press}
               disabled={!editable}
               haptic={false}
               accessible={false}
+              accessibilityElementsHidden
               importantForAccessibility="no-hide-descendants"
               style={styles.text}
             >
               <AppText variant="body" muted={task.done}>{task.title}</AppText>
-              <AppText variant="caption" muted>{categoryLabel(task.category)}</AppText>
+              <AppText variant="caption" muted>{category}</AppText>
             </PressableScale>
           </ThreadItem>
         );
@@ -51,5 +55,5 @@ export function TaskThread({ tasks, editable, onToggle, onLockedPress, categoryL
 }
 
 const styles = StyleSheet.create({
-  text: { minHeight: 44, justifyContent: 'center', gap: 2 },
+  text: { minHeight: 44, gap: 2 },
 });
