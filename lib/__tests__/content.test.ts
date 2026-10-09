@@ -41,6 +41,11 @@ function checkDhikr(d: Dhikr) {
 }
 
 describe('day content integrity', () => {
+  it('has exactly 30 days in 4 weeks', () => {
+    expect(DAYS).toHaveLength(30);
+    expect(WEEKS.map((w) => w.days)).toEqual([[1, 7], [8, 14], [15, 21], [22, 30]]);
+  });
+
   it('has no tanween-spacing artifacts in Arabic text', () => {
     expect(JSON.stringify(DAYS)).not.toMatch(/[\u08F0-\u08F2] [\u0627\u0649]/);
   });
