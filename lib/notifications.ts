@@ -12,12 +12,12 @@ export interface PlannedNotification {
   body: string;
 }
 
-const DAYS_AHEAD = 7;
-const MAX_NOTIFICATIONS = 36; // iOS keeps at most 64 pending; stay well under.
+const DAYS_AHEAD = 12;
+const MAX_NOTIFICATIONS = 60; // iOS keeps at most 64 pending; the daily one counts too.
 
 const pad = (n: number) => String(n).padStart(2, '0');
 
-function parseTime(hhmm: string): { hour: number; minute: number } {
+export function parseTime(hhmm: string): { hour: number; minute: number } {
   const m = /^(\d{1,2}):(\d{2})$/.exec(hhmm);
   const hour = m ? Number(m[1]) : 20;
   const minute = m ? Number(m[2]) : 0;

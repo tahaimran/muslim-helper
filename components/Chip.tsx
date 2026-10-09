@@ -4,13 +4,13 @@ import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { PressableScale } from './PressableScale';
 
-export function Chip({ label, selected, onPress }: { label: string; selected: boolean; onPress: () => void }) {
+export function Chip({ label, selected, onPress, accessibilityLabel }: { label: string; selected: boolean; onPress: () => void; accessibilityLabel?: string }) {
   const { colors } = useTheme();
   return (
     <PressableScale
       onPress={onPress}
       accessibilityRole="button"
-      accessibilityLabel={label}
+      accessibilityLabel={accessibilityLabel ?? label}
       accessibilityState={{ selected }}
       style={[
         styles.chip,

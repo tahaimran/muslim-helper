@@ -10,7 +10,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n, { initI18n, resolveLanguage } from '@/lib/i18n';
 import type { Lang } from '@/lib/model';
 import { appStore, importLegacyIfNeeded, useAppStore, waitForHydration } from '@/lib/store';
-import { rescheduleFromStore } from '@/lib/platform/notify';
+import { pauseIfPermissionRevoked, rescheduleFromStore } from '@/lib/platform/notify';
 import { startMilestoneWatcher } from '@/lib/milestoneWatcher';
 import { AppThemeProvider, useTheme } from '@/theme/ThemeProvider';
 import { FONT_ASSETS } from '@/theme/fonts';
@@ -68,8 +68,12 @@ function Shell() {
     void rescheduleFromStore();
   }, [reminders, location, calcMethod, madhab]);
   useEffect(() => {
+    const check = () => {
+      void pauseIfPermissionRevoked().then((paused) => (paused ? undefined : rescheduleFromStore()));
+    };
+    check();
     const sub = AppState.addEventListener('change', (s) => {
-      if (s === 'active') void rescheduleFromStore();
+      if (s === 'active') check();
     });
     return () => sub.remove();
   }, []);

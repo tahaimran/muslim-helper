@@ -7,8 +7,10 @@ import { CityPicker } from '@/components/settings/CityPicker';
 import { useAppStore } from '@/lib/store';
 import { useLang } from '@/theme/useLang';
 import { CALC_METHODS, type CalcMethodId, type MadhabId, type Settings } from '@/lib/model';
+import { useBackup } from '@/lib/useBackup';
 import { useLocationSetup } from '@/lib/useLocationSetup';
 import { usePrayerTimes } from '@/lib/usePrayerTimes';
+import { parseTime } from '@/lib/notifications';
 import { useReminders } from '@/lib/useReminders';
 import { useToday } from '@/lib/useToday';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -37,12 +39,13 @@ export default function SettingsScreen() {
   const reminders = useAppStore((s) => s.settings.reminders);
   const setReminders = useReminders();
   const [timeOpen, setTimeOpen] = useState(false);
-  const [hh, mm] = reminders.dailyTime.split(':').map(Number);
+  const { hour: hh, minute: mm } = parseTime(reminders.dailyTime);
   const setTime = (h: number, m: number) => { void setReminders({ dailyTime: `${two(h)}:${two(m)}` }); };
   const switchColors = { true: colors.accent, false: colors.line };
   const methodName = (id: CalcMethodId) => t(`methods.${id}`);
   const asrName = (id: MadhabId) => t(id === 'hanafi' ? 'settings.asrHanafi' : 'settings.asrShafi');
 
+  const backup = useBackup();
   const [confirming, setConfirming] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
@@ -121,19 +124,19 @@ export default function SettingsScreen() {
         />
         {reminders.daily ? (
           <>
-            <ListRow title={t('reminders.dailyTime')} value={reminders.dailyTime} onPress={() => setTimeOpen((o) => !o)} />
+            <ListRow title={t('reminders.dailyTime')} value={`${two(hh)}:${two(mm)}`} expanded={timeOpen} onPress={() => setTimeOpen((o) => !o)} />
             {timeOpen ? (
               <View style={styles.timeBox}>
                 <AppText variant="small" weight="medium">{t('reminders.hour')}</AppText>
                 <View style={styles.chips}>
                   {HOURS.map((h) => (
-                    <Chip key={h} label={two(h)} selected={h === hh} onPress={() => setTime(h, mm)} />
+                    <Chip key={h} label={two(h)} accessibilityLabel={t('reminders.hourLabel', { h: two(h) })} selected={h === hh} onPress={() => setTime(h, mm)} />
                   ))}
                 </View>
                 <AppText variant="small" weight="medium">{t('reminders.minute')}</AppText>
                 <View style={styles.chips}>
                   {MINUTES.map((m) => (
-                    <Chip key={m} label={two(m)} selected={m === mm} onPress={() => setTime(hh, m)} />
+                    <Chip key={m} label={two(m)} accessibilityLabel={t('reminders.minuteLabel', { m: two(m) })} selected={m === mm} onPress={() => setTime(hh, m)} />
                   ))}
                 </View>
               </View>
@@ -160,6 +163,16 @@ export default function SettingsScreen() {
         onClose={() => setPickerOpen(false)}
         onSelect={(city) => { chooseCity(city); setPickerOpen(false); }}
       />
+
+      <Section title={t('backup.title')} subtitle={t('backup.note')}>
+        <ListRow title={t('backup.save')} subtitle={t('backup.saveHint')} onPress={() => { void backup.save(); }} />
+        <ListRow
+          title={backup.confirming ? t('backup.restoreConfirm') : t('backup.restore')}
+          subtitle={backup.confirming ? t('backup.restoreConfirmHint') : t('backup.restoreHint')}
+          onPress={() => { void backup.restore(); }}
+          accessibilityLiveRegion="polite"
+        />
+      </Section>
 
       <Section title={t('settings.data')}>
         <ListRow

@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { DocPage } from '@/components';
 
-const FAQ = ['days', 'missed', 'past', 'prayers', 'tasbih', 'language', 'reset'] as const;
+const FAQ = ['days', 'missed', 'past', 'prayers', 'tasbih', 'language', 'backup', 'reset'] as const;
 
 export default function HelpScreen() {
   const { t } = useTranslation();

@@ -1,6 +1,7 @@
 import { Platform } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import i18n from '../i18n';
+import { showToast } from '../../components/Toast';
 import { appStore } from '../store';
 import { planNotifications, type PlannedNotification } from '../notifications';
 import { getPrayerTimes, resolveCalcSettings } from '../prayerTimes';
@@ -15,7 +16,6 @@ export function notificationsSupported(): boolean {
 
 async function configure(): Promise<void> {
   if (configured) return;
-  configured = true;
   Notifications.setNotificationHandler({
     handleNotification: async () => ({
       shouldPlaySound: true,
@@ -30,6 +30,7 @@ async function configure(): Promise<void> {
       importance: Notifications.AndroidImportance.DEFAULT,
     });
   }
+  configured = true;
 }
 
 /** Asks for notification permission if needed. Never throws; false when unavailable or denied. */
@@ -76,6 +77,26 @@ export async function applyNotifications(planned: PlannedNotification[]): Promis
   }
 }
 
+/**
+ * If a reminder is on but the system permission was revoked, switch reminders off and say so.
+ * Returns true when it paused them (the settings change triggers its own reschedule).
+ */
+export async function pauseIfPermissionRevoked(): Promise<boolean> {
+  if (!notificationsSupported()) return false;
+  const { settings, updateSettings } = appStore.getState();
+  const r = settings.reminders;
+  if (!r.daily && !r.prayers) return false;
+  try {
+    const perm = await Notifications.getPermissionsAsync();
+    if (perm.granted) return false;
+  } catch {
+    return false;
+  }
+  updateSettings({ reminders: { ...r, daily: false, prayers: false } });
+  showToast(i18n.t('reminders.revoked'), 'info');
+  return true;
+}
+
 let chain: Promise<void> = Promise.resolve();
 
 async function run(): Promise<void> {
@@ -83,7 +104,7 @@ async function run(): Promise<void> {
   const { settings } = appStore.getState();
   const { reminders, location } = settings;
   if (!reminders.daily && !reminders.prayers) {
-    // Both off: clear anything left from earlier, but only if permission was ever relevant.
+    // Both off: clear anything left over from earlier.
     try {
       await Notifications.cancelAllScheduledNotificationsAsync();
     } catch {

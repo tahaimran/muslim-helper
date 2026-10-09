@@ -11,8 +11,8 @@ const text = {
   prayerBody: (p: string) => `B-${p}`,
 };
 const off = DEFAULT_SETTINGS.reminders;
-// 2026-10-09 23:00 local (America/New_York): Mecca's Oct 9 prayers are all in the past by then.
-const NOW = new Date(2026, 9, 9, 23, 0);
+// 2026-10-09 23:00 America/New_York as an absolute instant; Mecca's Oct 9 prayers are all past by then.
+const NOW = new Date('2026-10-10T03:00:00Z');
 
 describe('planNotifications', () => {
   it('returns nothing when nothing is enabled', () => {
@@ -30,13 +30,13 @@ describe('planNotifications', () => {
     expect(out.map((n) => n.kind)).toEqual(['daily']);
   });
 
-  it('plans only future prayers across the next 7 days, sorted, daily first', () => {
+  it('plans only future prayers across the next 12 days, sorted, daily first', () => {
     const out = planNotifications({ now: NOW, reminders: { daily: true, dailyTime: '20:00', prayers: true }, timesFor, text });
     const prayers = out.filter((n) => n.kind === 'prayer');
     expect(out[0].kind).toBe('daily');
     expect(prayers.length).toBeGreaterThan(0);
-    expect(prayers.length).toBeLessThanOrEqual(35);
-    expect(out.length).toBeLessThanOrEqual(36);
+    expect(prayers.length).toBeLessThanOrEqual(60);
+    expect(out.length).toBeLessThanOrEqual(60);
     prayers.forEach((n) => expect(n.at!.getTime()).toBeGreaterThan(NOW.getTime()));
     const times = prayers.map((n) => n.at!.getTime());
     expect([...times].sort((a, b) => a - b)).toEqual(times);
@@ -51,13 +51,39 @@ describe('planNotifications', () => {
     expect(out[0].title).toBe(`T-${EXPECTED_FIRST.split('-').pop()}`);
   });
 
-  it('plans all 35 when now is before the first prayer of today', () => {
-    const early = new Date(2026, 9, 9, 0, 0);
+  it('plans every remaining prayer of today when now is early', () => {
+    const early = new Date('2026-10-09T04:00:00Z'); // 00:00 local on Oct 9
     const out = planNotifications({ now: early, reminders: { ...off, prayers: true }, timesFor, text });
-    expect(out.length).toBeGreaterThanOrEqual(34);
-    expect(out.length).toBeLessThanOrEqual(35);
+    expect(out).toHaveLength(EARLY_COUNT);
+    expect(out[0].id).toBe('prayer-2026-10-09-dhuhr');
+  });
+
+  it('falls back to 20:00 for an invalid daily time', () => {
+    for (const bad of ['', 'nope', '25:00', '12:75']) {
+      const out = planNotifications({ now: NOW, reminders: { ...off, daily: true, dailyTime: bad }, timesFor: null, text });
+      expect(out[0]).toMatchObject({ hour: 20, minute: 0 });
+    }
+  });
+
+  it('skips prayers when timesFor throws', () => {
+    const boom = () => { throw new Error('x'); };
+    const out = planNotifications({ now: NOW, reminders: { daily: true, dailyTime: '20:00', prayers: true }, timesFor: boom, text });
+    expect(out.map((n) => n.kind)).toEqual(['daily']);
+  });
+
+  it('caps the total at 60, keeping the daily reminder first', () => {
+    const farTimes = (d: Date) => {
+      const at = (h: number) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + 1, h);
+      return { fajr: at(1), sunrise: at(2), dhuhr: at(3), asr: at(4), maghrib: at(5), isha: at(6), estimated: false };
+    };
+    const out = planNotifications({ now: NOW, reminders: { daily: true, dailyTime: '20:00', prayers: true }, timesFor: farTimes, text });
+    expect(out).toHaveLength(60);
+    expect(out[0].kind).toBe('daily');
+    expect(out.filter((n) => n.kind === 'prayer')).toHaveLength(59);
   });
 });
-// Oct 9: 0 left; Oct 10: 4 (its Fajr is 21:58 on Oct 9 local, already past); Oct 11-15: 5 each.
-const EXPECTED_COUNT = 4 + 5 * 5;
+// 12-day window Oct 9-20: Oct 9 has 0 left; Oct 10 has 4 (its Fajr is 21:58 on Oct 9 local, past); Oct 11-20: 5 each.
+const EXPECTED_COUNT = 4 + 10 * 5;
 const EXPECTED_FIRST = 'prayer-2026-10-10-dhuhr';
+// From 00:00 Oct 9: Oct 9 has 4 left (Fajr was 21:58 Oct 8 local); Oct 10-20: 5 each.
+const EARLY_COUNT = 4 + 11 * 5;

@@ -3,7 +3,7 @@ import { showToast } from '@/components/Toast';
 import i18n from './i18n';
 import type { Settings } from './model';
 import { appStore } from './store';
-import { ensurePermission, notificationsSupported, rescheduleFromStore } from './platform/notify';
+import { ensurePermission, notificationsSupported } from './platform/notify';
 
 type Reminders = Settings['reminders'];
 
@@ -22,8 +22,8 @@ export function useReminders() {
       }
     }
     const { settings, updateSettings } = appStore.getState(); // re-read after the permission prompt
+    // The root layout re-plans notifications whenever reminders change.
     updateSettings({ reminders: { ...settings.reminders, ...patch } });
-    await rescheduleFromStore();
   }, []);
   return update;
 }

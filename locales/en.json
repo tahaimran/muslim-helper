@@ -246,6 +246,9 @@
     "denied": "Notifications are turned off for Awdah. You can allow them in your phone's system settings.",
     "unavailable": "Reminders are not available on this device.",
     "channel": "Reminders",
+    "revoked": "Notifications are turned off in your phone settings, so reminders are paused.",
+    "hourLabel": "{{h}} hours",
+    "minuteLabel": "{{m}} minutes",
     "dailyTitle": "A quiet moment for today",
     "dailyBody": "Your plan is waiting whenever you are ready.",
     "prayerTitle": "Time for {{prayer}}",
@@ -286,6 +289,27 @@
     "sourcesBody": "Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.",
     "version": "Version {{version}}"
   },
+  "backup": {
+    "title": "Backup",
+    "note": "A backup is a file you keep. Awdah never uploads it.",
+    "save": "Save a backup file",
+    "saveHint": "Choose where to keep it.",
+    "restore": "Restore from a file",
+    "restoreHint": "Pick a backup you saved earlier.",
+    "restoreConfirm": "Tap again to restore",
+    "restoreConfirmHint": "This replaces everything on this phone. It cancels by itself in a few seconds.",
+    "restored": "Backup restored",
+    "shareTitle": "Awdah backup",
+    "unavailable": "Saving a backup file is not available here.",
+    "saveFailed": "The backup could not be saved. Please try again.",
+    "error": {
+      "read": "That file could not be read.",
+      "invalid_json": "That file is not a valid backup.",
+      "not_awdah": "That file is not an Awdah backup.",
+      "unsupported_version": "That backup is from a newer version of Awdah. Please update the app.",
+      "invalid_shape": "That backup looks damaged and could not be restored."
+    }
+  },
   "privacy": {
     "intro": "Awdah does not collect any data about you.",
     "storage": {
@@ -299,6 +323,10 @@
     "location": {
       "title": "Location",
       "body": "If you choose to set your location, it is used only on your phone to calculate prayer times. It is never sent anywhere."
+    },
+    "backups": {
+      "title": "Backups",
+      "body": "Backups are files you create and keep. You decide where they go; Awdah never uploads them."
     },
     "deletion": {
       "title": "Deleting your data",
@@ -351,6 +379,10 @@
     "language": {
       "q": "How do I change the language?",
       "a": "Open Me, then Settings, and choose your language. Right-to-left languages take full effect after restarting the app."
+    },
+    "backup": {
+      "q": "How do I back up or move my data?",
+      "a": "Open Me, then Settings, and tap Save a backup file. Choose where to keep it, such as Files or an email to yourself. To restore, tap Restore from a file and pick that backup. Restoring replaces everything on this phone, so it asks you to tap twice."
     },
     "reset": {
       "q": "How do I erase my data?",

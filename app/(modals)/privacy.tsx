@@ -4,7 +4,7 @@ import { DocPage } from '@/components';
 import { LEGAL_UPDATED, formatLegalDate } from '@/lib/legal';
 import { useLang } from '@/theme/useLang';
 
-const KEYS = ['storage', 'accounts', 'location', 'deletion'] as const;
+const KEYS = ['storage', 'accounts', 'location', 'backups', 'deletion'] as const;
 
 export default function PrivacyScreen() {
   const { t } = useTranslation();

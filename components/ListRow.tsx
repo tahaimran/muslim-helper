@@ -17,9 +17,11 @@ export type ListRowProps = {
   destructive?: boolean;
   accessibilityHint?: string;
   accessibilityLiveRegion?: 'none' | 'polite' | 'assertive';
+  /** Set on rows that expand/collapse content. */
+  expanded?: boolean;
 };
 
-export function ListRow({ title, subtitle, value, onPress, trailing, leading, destructive, accessibilityHint, accessibilityLiveRegion }: ListRowProps) {
+export function ListRow({ title, subtitle, value, onPress, trailing, leading, destructive, accessibilityHint, accessibilityLiveRegion, expanded }: ListRowProps) {
   const { colors } = useTheme();
   const content = (
     <>
@@ -35,7 +37,7 @@ export function ListRow({ title, subtitle, value, onPress, trailing, leading, de
   const rowStyle = [styles.row, { borderBottomColor: colors.line }];
   if (!onPress) return <View style={rowStyle}>{content}</View>;
   return (
-    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={[title, subtitle, value].filter(Boolean).join(', ')} accessibilityHint={accessibilityHint} accessibilityLiveRegion={accessibilityLiveRegion} haptic={false} style={rowStyle}>
+    <PressableScale onPress={onPress} accessibilityRole="button" accessibilityLabel={[title, subtitle, value].filter(Boolean).join(', ')} accessibilityHint={accessibilityHint} accessibilityState={expanded === undefined ? undefined : { expanded }} accessibilityLiveRegion={accessibilityLiveRegion} haptic={false} style={rowStyle}>
       {content}
     </PressableScale>
   );
