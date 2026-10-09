@@ -317,5 +317,42 @@
       "q": "How do I erase my data?",
       "a": "Open Me, then Settings, and tap Erase all data twice. This removes your profile and progress. Your language and theme are kept."
     }
+  },
+  "learn": {
+    "expandHint": "Show details",
+    "collapseHint": "Hide details",
+    "wudu": {
+      "title": "Wudu, step by step",
+      "subtitle": "Tap a step to see more",
+      "duaAfter": "After wudu"
+    },
+    "salah": {
+      "title": "Your first prayer",
+      "subtitle": "A 2-rak‘ah prayer, start to finish. Go at your own pace."
+    },
+    "rakah": {
+      "title": "How many rak‘ah?",
+      "subtitle": "The obligatory (fard) rak‘ahs of each prayer",
+      "rowLabel": "{{prayer}}, {{count}} rak‘ahs"
+    },
+    "islam": {
+      "title": "Pillars of Islam"
+    },
+    "iman": {
+      "title": "Pillars of iman"
+    },
+    "resources": {
+      "title": "Keep learning",
+      "caption": "Free, trusted resources. Links open in your browser; Awdah does not track you.",
+      "hint": "Opens in your browser",
+      "quran": {
+        "title": "Quran.com",
+        "subtitle": "Read and listen to the Quran"
+      },
+      "sunnah": {
+        "title": "Sunnah.com",
+        "subtitle": "Browse hadith with their sources"
+      }
+    }
   }
 }
