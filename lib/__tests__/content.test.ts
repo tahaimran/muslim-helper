@@ -1,4 +1,9 @@
 import { DAYS, WEEKS } from '../../content/days';
+import { DUA_CATEGORIES } from '../../content/duas';
+import {
+  DUA_AFTER_WUDU, EVENING_ADHKAR, MORNING_ADHKAR, PILLARS_OF_IMAN, PILLARS_OF_ISLAM,
+  PILLARS_SOURCES, RAKAH_COUNTS, SALAH_STEPS, WUDU_STEPS,
+} from '../../content/learn';
 import { MILESTONE_CONTENT, WELCOME_BACK } from '../../content/milestones';
 import { MILESTONE_IDS } from '../milestones';
 import type { Dhikr, Source, SourcedText } from '../../content/types';
@@ -17,7 +22,7 @@ const BANNED = [
   /salat al-shukr/i,
 ];
 
-export function checkSource(s: Source, where: string) {
+function checkSource(s: Source, where: string) {
   expect(s.ref.trim().length).toBeGreaterThan(0);
   if (s.kind === 'hadith') expect(['sahih', 'hasan']).toContain(s.grade);
   else expect(s.grade).toBeNull();
@@ -114,5 +119,49 @@ describe('milestone content', () => {
       checkText(MILESTONE_CONTENT[id].text, id);
     });
     checkText(WELCOME_BACK, 'welcome_back');
+  });
+});
+
+describe('duas and learn content', () => {
+  it('every dua is sourced, Arabic, with unique ids', () => {
+    const ids = DUA_CATEGORIES.flatMap((c) => c.duas.map((d) => d.id));
+    expect(new Set(ids).size).toBe(ids.length);
+    DUA_CATEGORIES.forEach((c) => c.duas.forEach((d) => checkText(d.text, d.id)));
+  });
+  it('has the learn salah building blocks', () => {
+    expect(WUDU_STEPS.length).toBeGreaterThanOrEqual(8);
+    expect(SALAH_STEPS.length).toBeGreaterThanOrEqual(10);
+    checkText(DUA_AFTER_WUDU, 'dua_after_wudu');
+    [...WUDU_STEPS, ...SALAH_STEPS].forEach((s) => {
+      if (s.recite) {
+        expect(ARABIC.test(s.recite.arabic)).toBe(true);
+        if (s.recite.source) checkSource(s.recite.source, s.id);
+      }
+    });
+  });
+  it("has correct fard rak'ah counts", () => {
+    expect(RAKAH_COUNTS).toEqual([
+      { prayer: 'fajr', fard: 2 }, { prayer: 'dhuhr', fard: 4 }, { prayer: 'asr', fard: 4 },
+      { prayer: 'maghrib', fard: 3 }, { prayer: 'isha', fard: 4 },
+    ]);
+  });
+  it('has 5 pillars of Islam and 6 of iman, sourced', () => {
+    expect(PILLARS_OF_ISLAM).toHaveLength(5);
+    expect(PILLARS_OF_IMAN).toHaveLength(6);
+    checkSource(PILLARS_SOURCES.islam, 'islam');
+    checkSource(PILLARS_SOURCES.iman, 'iman');
+  });
+  it('has sourced morning and evening adhkar', () => {
+    expect(MORNING_ADHKAR.length).toBeGreaterThanOrEqual(5);
+    expect(EVENING_ADHKAR.length).toBeGreaterThanOrEqual(5);
+    [...MORNING_ADHKAR, ...EVENING_ADHKAR].forEach((d) => {
+      checkDhikr(d);
+      expect(d.source).not.toBeNull();
+    });
+  });
+  it('duas contain no banned texts', () => {
+    const blob = JSON.stringify(DUA_CATEGORIES);
+    expect(blob).not.toMatch(/wa ja'?alana minal[- ]muslimin/i);
+    expect(blob).not.toMatch(/'ala barakatillah/i);
   });
 });
