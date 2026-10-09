@@ -247,8 +247,8 @@
     "unavailable": "Reminders are not available on this device.",
     "channel": "Reminders",
     "revoked": "Notifications are turned off in your phone settings, so reminders are paused.",
-    "hourLabel": "{{h}} hours",
-    "minuteLabel": "{{m}} minutes",
+    "hourLabel": "Hour {{h}}",
+    "minuteLabel": "Minute {{m}}",
     "dailyTitle": "A quiet moment for today",
     "dailyBody": "Your plan is waiting whenever you are ready.",
     "prayerTitle": "Time for {{prayer}}",
@@ -304,6 +304,7 @@
     "saveFailed": "The backup could not be saved. Please try again.",
     "error": {
       "read": "That file could not be read.",
+      "tooLarge": "That file is too large to be an Awdah backup.",
       "invalid_json": "That file is not a valid backup.",
       "not_awdah": "That file is not an Awdah backup.",
       "unsupported_version": "That backup is from a newer version of Awdah. Please update the app.",

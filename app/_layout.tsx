@@ -64,7 +64,12 @@ function Shell() {
   const location = useAppStore((s) => s.settings.location);
   const calcMethod = useAppStore((s) => s.settings.calcMethod);
   const madhab = useAppStore((s) => s.settings.madhab);
+  const firstPlan = useRef(true); // launch is handled by check() below
   useEffect(() => {
+    if (firstPlan.current) {
+      firstPlan.current = false;
+      return;
+    }
     void rescheduleFromStore();
   }, [reminders, location, calcMethod, madhab]);
   useEffect(() => {

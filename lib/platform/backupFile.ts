@@ -10,6 +10,16 @@ import { toDateKey } from '../day';
 
 // Uses the SDK 54 object API (File/Paths) from 'expo-file-system'; the legacy module is deprecated.
 
+const MAX_BYTES = 5 * 1024 * 1024;
+
+function removeQuietly(file: File): void {
+  try {
+    if (file.exists) file.delete();
+  } catch {
+    // best effort: the cache is cleared by the system anyway
+  }
+}
+
 export async function exportBackup(): Promise<{ ok: true } | { ok: false; reason: 'unavailable' | 'failed' }> {
   try {
     if (Platform.OS === 'web' || !(await Sharing.isAvailableAsync())) return { ok: false, reason: 'unavailable' };
@@ -17,23 +27,32 @@ export async function exportBackup(): Promise<{ ok: true } | { ok: false; reason
     const file = new File(Paths.cache, backupFileName(toDateKey(now)));
     file.create({ overwrite: true });
     file.write(serializeBackup(getPersisted(appStore.getState()), now));
-    await Sharing.shareAsync(file.uri, { mimeType: 'application/json', dialogTitle: i18n.t('backup.shareTitle') });
+    try {
+      await Sharing.shareAsync(file.uri, { mimeType: 'application/json', dialogTitle: i18n.t('backup.shareTitle') });
+    } finally {
+      removeQuietly(file);
+    }
     return { ok: true };
   } catch {
     return { ok: false, reason: 'failed' };
   }
 }
 
-export async function pickBackup(): Promise<{ ok: true; json: string } | { ok: false; reason: 'cancelled' | 'failed' }> {
+export async function pickBackup(): Promise<{ ok: true; json: string } | { ok: false; reason: 'cancelled' | 'failed' | 'tooLarge' }> {
+  let copy: File | null = null;
   try {
     const res = await DocumentPicker.getDocumentAsync({
       type: ['application/json', 'text/plain', '*/*'],
       copyToCacheDirectory: true,
     });
     if (res.canceled || !res.assets?.[0]) return { ok: false, reason: 'cancelled' };
-    const json = await new File(res.assets[0].uri).text();
+    copy = new File(res.assets[0].uri);
+    if ((res.assets[0].size ?? copy.size) > MAX_BYTES) return { ok: false, reason: 'tooLarge' };
+    const json = await copy.text();
     return { ok: true, json };
   } catch {
     return { ok: false, reason: 'failed' };
+  } finally {
+    if (copy) removeQuietly(copy);
   }
 }
