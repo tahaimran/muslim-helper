@@ -8,7 +8,7 @@
     "scheme": "awdah",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "description": "Awdah — a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. No accounts, no ads, nothing leaves your phone.",
+    "description": "Awdah — a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. No account, no ads, no tracking — your data stays with you.",
     "android": {
       "package": "com.nafs.transformation",
       "adaptiveIcon": {
@@ -18,6 +18,7 @@
       "permissions": [
         "NOTIFICATIONS"
       ],
+      "allowBackup": true,
       "versionCode": 1
     },
     "ios": {
@@ -59,7 +60,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Awdah uses your location only on your phone to calculate prayer times. It is never sent anywhere.",
+          "locationWhenInUsePermission": "Awdah uses your location only on your phone to calculate prayer times. Awdah never sends it anywhere.",
           "locationAlwaysAndWhenInUsePermission": false,
           "locationAlwaysPermission": false,
           "isIosBackgroundLocationEnabled": false,

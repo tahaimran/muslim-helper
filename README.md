@@ -1,6 +1,6 @@
 # Awdah
 
-Awdah is a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. There are no accounts, no ads and no analytics. Everything is stored on your phone and nothing leaves it.
+Awdah is a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. There are no accounts, no ads and no analytics. Everything is stored on your phone; Awdah never sends anything to us (your phone's own system backup may include it, and that backup is yours).
 
 ## Features
 

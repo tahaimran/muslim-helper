@@ -6,7 +6,9 @@ Awdah does not collect any data about you.
 
 ## Stored on your device
 
-Everything you enter, such as your profile, prayers, tasks and journal, is stored only on your phone (in the app's local storage). We never receive it and we have no server to send it to.
+Everything you enter, such as your profile, prayers, tasks and journal, is stored on your phone (in the app's local storage). We never receive it and we have no server to send it to.
+
+If your phone's own system backup is turned on (Google backup on Android, iCloud backup on iPhone), it may include Awdah's data, so that you keep it when you move to a new phone. That backup belongs to you and is handled by Google or Apple under your account; Awdah never sends anything to us.
 
 ## No accounts, analytics or ads
 
@@ -14,7 +16,7 @@ There are no accounts, no analytics, no advertising and no trackers. Awdah makes
 
 ## Location
 
-If you choose to set your location, it is used only on your phone to calculate prayer times. It is never sent anywhere, and it is not looked up against any address or place-name service. You can also pick a city from a list instead.
+If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere, and it is not looked up against any address or place-name service. You can also pick a city from a list instead.
 
 ## Notifications
 
@@ -26,7 +28,7 @@ Backups are files you create and keep. You decide where they go; Awdah never upl
 
 ## Deleting your data
 
-You can erase everything in Settings, and uninstalling Awdah deletes all of its data from your phone.
+Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made (Google or iCloud) may still hold a copy until you delete that backup.
 
 ## Children
 
