@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <!-- Awdah app icon, "Fajr": a dawn sun rising from the horizon beneath a quiet girih star. -->
+  <defs>
+    <radialGradient id="vignette" cx="512" cy="660" r="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1C2140"/>
+      <stop offset="1" stop-color="#11142A"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#161A33"/>
+  <rect width="1024" height="1024" fill="url(#vignette)"/>
+  <g transform="translate(0 52)">
+    <!-- 8-point girih star (two interlaced squares), quiet at low opacity -->
+    <g opacity="0.34" fill="none" stroke="#F2DDAA" stroke-width="10" stroke-linejoin="round">
+      <rect x="457" y="245" width="110" height="110"/>
+      <rect x="457" y="245" width="110" height="110" transform="rotate(45 512 300)"/>
+    </g>
+    <!-- dawn halo -->
+    <path d="M 302 652 A 210 210 0 0 1 722 652" fill="none" stroke="#E3B65A" stroke-width="11" stroke-linecap="round" opacity="0.8"/>
+    <!-- rising sun -->
+    <path d="M 362 652 A 150 150 0 0 1 662 652 Z" fill="#E3B65A"/>
+    <!-- horizon -->
+    <rect x="192" y="672" width="640" height="16" rx="8" fill="#E3B65A"/>
+  </g>
+</svg>
