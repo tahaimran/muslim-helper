@@ -189,6 +189,7 @@
     },
     "intention": {
       "title": "Set your intention",
+      "subtitle": "Begin with a sincere intention. Allah knows your heart.",
       "summary": "Your prayer: {{habit}}. Your time: {{minutes}}.",
       "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
       "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
