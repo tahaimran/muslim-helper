@@ -39,3 +39,38 @@ describe('i18n', () => {
     expect(i18n.language).toBe('ar');
   });
 });
+
+function flat(obj: Record<string, unknown>, prefix = ''): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const [k, v] of Object.entries(obj)) {
+    if (typeof v === 'object' && v !== null) Object.assign(out, flat(v as Record<string, unknown>, `${prefix}${k}.`));
+    else out[`${prefix}${k}`] = String(v);
+  }
+  return out;
+}
+const holders = (s: string) =>
+  [...new Set(s.match(/\{\{\s*\w+\s*\}\}/g) ?? [])].map((x) => x.replace(/\s/g, '')).sort();
+const ARABIC = /[؀-ۿ]/;
+// Strings legitimately identical to English (brand/proper names, symbols).
+const SAME_OK = new Set<string>(['app.name']);
+
+describe('locale quality', () => {
+  const fen = flat(en);
+  const locales = { ar, ur, id, tr };
+  it('has the same {{placeholders}} as English in every key', () => {
+    for (const [name, loc] of Object.entries(locales)) {
+      const f = flat(loc);
+      for (const k of Object.keys(fen)) {
+        expect([name, k, holders(f[k])]).toEqual([name, k, holders(fen[k])]);
+      }
+    }
+  });
+  it('has fewer than 8% untranslated (identical to English) values in ar/ur/id/tr', () => {
+    const considered = Object.keys(fen).filter((k) => !ARABIC.test(fen[k]) && !SAME_OK.has(k));
+    for (const [name, loc] of Object.entries(locales)) {
+      const f = flat(loc);
+      const same = considered.filter((k) => f[k] === fen[k]);
+      expect([name, same.length / considered.length < 0.08, same]).toEqual([name, true, same]);
+    }
+  });
+});
