@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ChevronDown, ChevronUp } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
@@ -23,8 +23,11 @@ export type AdhkarListProps = {
   sourceLabel: (d: Dhikr) => string | undefined;
 };
 
-/** One adhkar section. Per-item counters and expansion are UI state only. */
-export function AdhkarList({
+/**
+ * One adhkar section. Per-item counters and expansion are UI state only. Memoized: it sits under
+ * the tasbih counter and should not re-render on every tap (callers pass stable handlers).
+ */
+export const AdhkarList = memo(function AdhkarList({
   title, items, defaultExpanded, completed, completeLabel, completedLabel, onComplete, sourceLabel,
 }: AdhkarListProps) {
   const { t } = useTranslation();
@@ -77,7 +80,7 @@ export function AdhkarList({
       </View>
     </Section>
   );
-}
+});
 
 const styles = StyleSheet.create({
   item: { borderBottomWidth: StyleSheet.hairlineWidth, paddingVertical: 4 },

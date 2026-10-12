@@ -1,16 +1,12 @@
 import { useCallback } from 'react';
-import { applyDirection } from './platform/direction';
 import { useAppStore } from './store';
 import type { Lang } from './model';
 
-/** Persist a new language and bring the layout direction in line with it. */
+/**
+ * Persist a new language. The app shell reacts to every language change (including a restored
+ * backup) by switching i18n and bringing the layout direction in line, exactly once.
+ */
 export function useLanguageChange(): (lang: Lang) => void {
   const updateSettings = useAppStore((s) => s.updateSettings);
-  return useCallback(
-    (lang: Lang) => {
-      updateSettings({ language: lang });
-      void applyDirection(lang);
-    },
-    [updateSettings],
-  );
+  return useCallback((lang: Lang) => updateSettings({ language: lang }), [updateSettings]);
 }

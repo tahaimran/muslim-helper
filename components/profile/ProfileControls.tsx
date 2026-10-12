@@ -101,7 +101,7 @@ export function FocusChips({ value, onToggle }: { value: readonly ImprovementAre
   return (
     <View style={styles.chips}>
       {IMPROVEMENT_AREAS.map((a) => (
-        <Chip key={a} label={t(`profile.area.${a}`)} selected={value.includes(a)} onPress={() => onToggle(a)} />
+        <Chip key={a} label={t(`profile.area.${a}`)} selected={value.includes(a)} onPress={() => onToggle(a)} multi />
       ))}
     </View>
   );

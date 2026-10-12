@@ -124,6 +124,7 @@ export function PrayerHorizon({
                 accessibilityRole="checkbox"
                 accessibilityLabel={time ? `${labels[p]}, ${time}` : labels[p]}
                 accessibilityState={{ checked }}
+                aria-checked={checked}
                 style={[styles.press, { width: pressW, height: pressH, left: pressStart, top: TOP_PAD + y - HIT / 2 }]}
               >
                 <View

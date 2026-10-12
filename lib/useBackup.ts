@@ -33,7 +33,7 @@ export function useBackup() {
   const restore = useCallback(async () => {
     if (busy.current) return;
     if (Platform.OS === 'web') {
-      showToast(i18n.t('backup.unavailable'), 'error');
+      showToast(i18n.t('backup.restoreUnavailable'), 'error');
       return;
     }
     busy.current = true;

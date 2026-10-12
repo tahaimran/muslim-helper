@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import { AppState, Share, StyleSheet, View } from 'react-native';
+import { Share, StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { Share2 } from 'lucide-react-native';
@@ -11,43 +11,23 @@ import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
 import { WELCOME_BACK } from '@/content/milestones';
 import type { SourcedText } from '@/content/types';
+import { dateFromKey, formatTime, formatWeekdayDate } from '@/lib/dates';
 import type { DateKey } from '@/lib/day';
 import { toHijri } from '@/lib/hijri';
-import { MOODS, PRAYER_NAMES, type PersistedState } from '@/lib/model';
+import { MOODS, PRAYER_NAMES, persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import type { MoodType, PrayerName } from '@/lib/types';
+import { useDatesWithoutTasbih } from '@/lib/useDatesWithoutTasbih';
+import { useNow } from '@/lib/useNow';
 import { usePrayerTimes } from '@/lib/usePrayerTimes';
 import { useToday } from '@/lib/useToday';
-import { timeUntil } from '@/lib/view/nextPrayer';
+import { countdownLine } from '@/lib/view/nextPrayer';
 import { buildTodayVM, istiqamahJournalDay, type TaskVM } from '@/lib/view/today';
 import { SKY, getSkyPhase } from '@/theme/sky';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useLang } from '@/theme/useLang';
 
 const CONFIRM_MS = 4000;
-
-/** The current time, refreshed every minute and whenever the app returns to the foreground. */
-function useNow(): Date {
-  const [now, setNow] = useState(() => new Date());
-  useEffect(() => {
-    const refresh = () => setNow(new Date());
-    const sub = AppState.addEventListener('change', (s) => {
-      if (s === 'active') refresh();
-    });
-    const timer = setInterval(refresh, 60_000);
-    return () => {
-      sub.remove();
-      clearInterval(timer);
-    };
-  }, []);
-  return now;
-}
-
-/** Local noon of a date key: a stable instant for that calendar day (safe for Hijri conversion). */
-function dateFromKey(key: DateKey): Date {
-  const [y, m, d] = key.split('-').map(Number);
-  return new Date(y, m - 1, d, 12);
-}
 
 type SkyAreaProps = {
   today: DateKey;
@@ -64,24 +44,17 @@ function SkyArea({ today, greeting, title, titleArabic, dateLine, prayersDone, o
   const { t } = useTranslation();
   const now = useNow();
   const lang = useLang();
-  const { times, next } = usePrayerTimes(today);
+  // One clock drives the sky, the next prayer and its countdown.
+  const { times, next } = usePrayerTimes(today, now);
   const phase = getSkyPhase(now, times);
   const sky = SKY[phase];
-  const timeLabel = useCallback((d: Date) => {
-    try {
-      return new Intl.DateTimeFormat(lang, { hour: 'numeric', minute: '2-digit' }).format(d);
-    } catch {
-      return d.toTimeString().slice(0, 5);
-    }
-  }, [lang]);
+  const timeLabel = useCallback((d: Date) => formatTime(d, lang), [lang]);
   const nextPrayerLine = useMemo(() => {
     if (!next) return undefined;
     const prayer = t(`prayers.${next.name}`);
     const time = timeLabel(next.time);
-    const { h, m } = timeUntil(now, next.time);
-    if (h > 0) return t('today.nextIn', { prayer, time, h, m });
-    if (m > 0) return t('today.nextInMin', { prayer, time, m });
-    return t('today.nextPrayer', { prayer, time });
+    const { key, h, m } = countdownLine(now, next.time);
+    return t(key, { prayer, time, h, m });
   }, [next, now, t, timeLabel]);
   const prayerLabels = useMemo(
     () => Object.fromEntries(PRAYER_NAMES.map((p) => [p, t(`prayers.${p}`)])) as Record<PrayerName, string>,
@@ -115,13 +88,16 @@ export default function TodayScreen() {
   const lang = useLang();
   const today = useToday();
 
+  // Narrow slices: settings and milestones are not read here except whether a location is set.
   const profile = useAppStore((s) => s.profile);
-  const settings = useAppStore((s) => s.settings);
+  const hasLocation = useAppStore((s) => s.settings.location !== null);
   const cycle = useAppStore((s) => s.cycle);
   const planStartDate = useAppStore((s) => s.planStartDate);
   const planDays = useAppStore((s) => s.planDays);
-  const dates = useAppStore((s) => s.dates);
-  const milestones = useAppStore((s) => s.milestones);
+  // Past days only need active flags and prayers; today's log also carries the tasbih counts
+  // that can complete a step.
+  const pastDates = useDatesWithoutTasbih();
+  const todayLog = useAppStore((s) => s.dates[today]);
   const toggleTask = useAppStore((s) => s.toggleTask);
   const togglePrayer = useAppStore((s) => s.togglePrayer);
   const setJournal = useAppStore((s) => s.setJournal);
@@ -129,9 +105,9 @@ export default function TodayScreen() {
   const startNextCycle = useAppStore((s) => s.startNextCycle);
 
   const vm = useMemo(() => {
-    const state: PersistedState = { schema: 1, profile, settings, cycle, planStartDate, planDays, dates, milestones };
-    return buildTodayVM(state, today);
-  }, [profile, settings, cycle, planStartDate, planDays, dates, milestones, today]);
+    const dates = todayLog ? { ...pastDates, [today]: todayLog } : pastDates;
+    return buildTodayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today);
+  }, [profile, cycle, planStartDate, planDays, pastDates, todayLog, today]);
 
   const moodLabels = useMemo(
     () => Object.fromEntries(MOODS.map((m) => [m, t(`mood.${m}`)])) as Record<MoodType, string>,
@@ -141,14 +117,8 @@ export default function TodayScreen() {
 
   // Built from `today` (not a clock) so it rolls over exactly when the date key does.
   const dateLine = useMemo(() => {
-    const date = dateFromKey(today);
-    let gregorian: string;
-    try {
-      gregorian = new Intl.DateTimeFormat(lang, { weekday: 'long', day: 'numeric', month: 'long' }).format(date);
-    } catch {
-      gregorian = date.toDateString();
-    }
-    const h = toHijri(date);
+    const gregorian = formatWeekdayDate(today, lang);
+    const h = toHijri(dateFromKey(today));
     if (!h) return gregorian;
     const hijri = t('today.hijriDate', { day: h.day, month: t(`hijri.months.${h.month}`), year: h.year });
     return t('today.dateLine', { hijri, gregorian });
@@ -201,7 +171,7 @@ export default function TodayScreen() {
       />
 
       <View style={styles.body}>
-        {settings.location ? null : (
+        {hasLocation ? null : (
           <View style={styles.setTimes}>
             <Button variant="ghost" label={t('today.setPrayerTimes')} onPress={() => router.push('/(modals)/settings')} />
           </View>

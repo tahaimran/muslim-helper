@@ -4,22 +4,13 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { AppText, ArabicBlock, Screen, Section } from '@/components';
 import { MILESTONE_CONTENT } from '@/content/milestones';
+import { formatLongDate } from '@/lib/dates';
 import { MILESTONE_IDS, type MilestoneId } from '@/lib/milestones';
 import { useAppStore } from '@/lib/store';
 
 function parseId(raw: string | string[] | undefined): MilestoneId | null {
   const value = Array.isArray(raw) ? raw[0] : raw;
   return (MILESTONE_IDS as readonly string[]).includes(value ?? '') ? (value as MilestoneId) : null;
-}
-
-function formatDate(key: string, language: string): string {
-  const [y, m, d] = key.split('-').map(Number);
-  const date = new Date(y, (m ?? 1) - 1, d ?? 1);
-  try {
-    return new Intl.DateTimeFormat(language, { day: 'numeric', month: 'long', year: 'numeric' }).format(date);
-  } catch {
-    return key;
-  }
 }
 
 export default function MilestoneScreen() {
@@ -45,7 +36,7 @@ export default function MilestoneScreen() {
         <View style={{ gap: 4 }}>
           <AppText variant="title" accessibilityRole="header">{content.title}</AppText>
           <AppText variant="small" muted>
-            {unlockedOn ? t('me.reachedOn', { date: formatDate(unlockedOn, i18n.language) }) : t('me.notYet')}
+            {unlockedOn ? t('me.reachedOn', { date: formatLongDate(unlockedOn, i18n.language) }) : t('me.notYet')}
           </AppText>
         </View>
       </Section>

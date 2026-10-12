@@ -7,7 +7,7 @@ import { MoodPicker } from '@/components/day/MoodPicker';
 import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
 import { PLAN_LENGTH } from '@/lib/day';
-import { MOODS, type PersistedState } from '@/lib/model';
+import { MOODS, persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import type { MoodType } from '@/lib/types';
 import { useToday } from '@/lib/useToday';
@@ -28,12 +28,11 @@ export default function DayDetailScreen() {
   const day = parseDay(n);
 
   const profile = useAppStore((s) => s.profile);
-  const settings = useAppStore((s) => s.settings);
   const cycle = useAppStore((s) => s.cycle);
   const planStartDate = useAppStore((s) => s.planStartDate);
   const planDays = useAppStore((s) => s.planDays);
-  const dates = useAppStore((s) => s.dates);
-  const milestones = useAppStore((s) => s.milestones);
+  // buildDayVM reads only today's log (tasbih counts can complete the current day).
+  const todayLog = useAppStore((s) => s.dates[today]);
   const toggleTask = useAppStore((s) => s.toggleTask);
   const setJournal = useAppStore((s) => s.setJournal);
   const setMood = useAppStore((s) => s.setMood);
@@ -44,9 +43,9 @@ export default function DayDetailScreen() {
 
   const vm = useMemo(() => {
     if (day === null) return null;
-    const state: PersistedState = { schema: 1, profile, settings, cycle, planStartDate, planDays, dates, milestones };
-    return buildDayVM(state, day, today);
-  }, [day, profile, settings, cycle, planStartDate, planDays, dates, milestones, today]);
+    const dates = todayLog ? { [today]: todayLog } : {};
+    return buildDayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), day, today);
+  }, [day, profile, cycle, planStartDate, planDays, todayLog, today]);
 
   const moodLabels = useMemo(
     () => Object.fromEntries(MOODS.map((m) => [m, t(`mood.${m}`)])) as Record<MoodType, string>,

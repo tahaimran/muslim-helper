@@ -34,6 +34,8 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
+        // Hidden tabs skip re-rendering while another tab updates the store (e.g. tasbih taps).
+        freezeOnBlur: true,
         tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarHideOnKeyboard: true,

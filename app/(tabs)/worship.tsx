@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
@@ -10,6 +10,7 @@ import { TasbihCounter } from '@/components/worship/TasbihCounter';
 import { DAYS } from '@/content/days';
 import { EVENING_ADHKAR, MORNING_ADHKAR } from '@/content/learn';
 import type { Dhikr } from '@/content/types';
+import { formatTime } from '@/lib/dates';
 import { getPlanPosition } from '@/lib/day';
 import { useAppStore } from '@/lib/store';
 import { usePrayerTimes } from '@/lib/usePrayerTimes';
@@ -45,7 +46,13 @@ export default function WorshipScreen() {
 
   const [selectedId, setSelectedId] = useState('subhanallah');
   const [target, setTarget] = useState<number>(ROUND_TARGETS[0]);
-  const [round, setRound] = useState(0);
+  const [round, setRoundState] = useState(0);
+  // The latest round, read synchronously by rapid taps so none of them see a stale value.
+  const roundRef = useRef(0);
+  const setRound = useCallback((next: number) => {
+    roundRef.current = next;
+    setRoundState(next);
+  }, []);
 
   const selected = options.find((o) => o.id === selectedId) ?? options[0];
   const activeId = selected?.id ?? selectedId;
@@ -53,19 +60,21 @@ export default function WorshipScreen() {
   const onSelect = useCallback((id: string) => {
     setSelectedId(id);
     setRound(0);
-  }, []);
+  }, [setRound]);
   const onTargetChange = useCallback((n: number) => {
     setTarget(n);
     setRound(0);
-  }, []);
+  }, [setRound]);
+  const onResetRound = useCallback(() => setRound(0), [setRound]);
   // The per-round counter is UI state only; the store's day total only ever increases.
+  // The haptic is chosen from the computed next round, not from a render-time closure.
   const onTap = useCallback(() => {
     if (!selected) return;
     incrementTasbih(today, selected.id);
-    const r = nextRound(round, target);
+    const r = nextRound(roundRef.current, target);
     setRound(r.round);
     haptic(r.complete ? 'success' : 'light');
-  }, [incrementTasbih, today, selected, round, target]);
+  }, [incrementTasbih, today, selected, target, setRound]);
 
   // Which adhkar section starts open: from prayer times when a location is saved, else the clock.
   const lang = useLang();
@@ -79,13 +88,6 @@ export default function WorshipScreen() {
 
   const timeRows = useMemo<PrayerTimeRow[] | null>(() => {
     if (!times) return null;
-    let fmt: (d: Date) => string;
-    try {
-      const f = new Intl.DateTimeFormat(lang, { hour: 'numeric', minute: '2-digit' });
-      fmt = (d) => f.format(d);
-    } catch {
-      fmt = (d) => d.toTimeString().slice(0, 5);
-    }
     const valid = (d: Date) => Number.isFinite(d.getTime());
     const order: ('fajr' | 'sunrise' | 'dhuhr' | 'asr' | 'maghrib' | 'isha')[] = [
       'fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha',
@@ -95,7 +97,7 @@ export default function WorshipScreen() {
       .map((k) => ({
         key: k,
         label: t(`prayers.${k}`),
-        time: fmt(times[k]),
+        time: formatTime(times[k], lang),
         isNext: k !== 'sunrise' && next?.name === k && next.time.getTime() === times[k].getTime(),
       }));
   }, [times, next, lang, t]);
@@ -108,10 +110,15 @@ export default function WorshipScreen() {
     [t],
   );
 
-  const complete = (id: 'morning_adhkar' | 'evening_adhkar') => {
-    incrementTasbih(today, id);
+  // Stable handlers so the memoized adhkar lists skip re-rendering on tasbih taps.
+  const completeMorning = useCallback(() => {
+    incrementTasbih(today, 'morning_adhkar');
     haptic('success');
-  };
+  }, [incrementTasbih, today]);
+  const completeEvening = useCallback(() => {
+    incrementTasbih(today, 'evening_adhkar');
+    haptic('success');
+  }, [incrementTasbih, today]);
 
   return (
     <Screen>
@@ -134,7 +141,7 @@ export default function WorshipScreen() {
             round={round}
             todayCount={tasbih[activeId] ?? 0}
             onTap={onTap}
-            onResetRound={() => setRound(0)}
+            onResetRound={onResetRound}
           />
         ) : null}
       </Section>
@@ -148,7 +155,7 @@ export default function WorshipScreen() {
         completed={(tasbih.morning_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeMorning')}
         completedLabel={t('worship.completedMorning')}
-        onComplete={() => complete('morning_adhkar')}
+        onComplete={completeMorning}
         sourceLabel={sourceLabel}
       />
       <AdhkarList
@@ -159,7 +166,7 @@ export default function WorshipScreen() {
         completed={(tasbih.evening_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeEvening')}
         completedLabel={t('worship.completedEvening')}
-        onComplete={() => complete('evening_adhkar')}
+        onComplete={completeEvening}
         sourceLabel={sourceLabel}
       />
 

@@ -59,10 +59,10 @@ export function WeekPath({ days, dayLabel, a11yLabel, onPress }: WeekPathProps) 
         >
           <DayNode status={d.status} />
           <View style={styles.text}>
-            <AppText variant="caption" color={d.status === 'today' ? colors.gold : colors.textMuted}>
+            <AppText variant="caption" maxFontSizeMultiplier={1.4} color={d.status === 'today' ? colors.gold : colors.textMuted}>
               {dayLabel(d.day)}
             </AppText>
-            <AppText variant="body" weight="medium" muted={d.status === 'locked'}>{d.theme}</AppText>
+            <AppText variant="body" weight="medium" maxFontSizeMultiplier={1.4} muted={d.status === 'locked'}>{d.theme}</AppText>
           </View>
         </PressableScale>
       ))}

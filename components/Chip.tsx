@@ -4,14 +4,26 @@ import { useTheme } from '../theme/ThemeProvider';
 import { AppText } from './AppText';
 import { PressableScale } from './PressableScale';
 
-export function Chip({ label, selected, onPress, accessibilityLabel }: { label: string; selected: boolean; onPress: () => void; accessibilityLabel?: string }) {
+export type ChipProps = {
+  label: string;
+  selected: boolean;
+  onPress: () => void;
+  accessibilityLabel?: string;
+  /** Part of a multi-select set: a toggle button. Otherwise one choice in a group (a radio). */
+  multi?: boolean;
+};
+
+export function Chip({ label, selected, onPress, accessibilityLabel, multi = false }: ChipProps) {
   const { colors } = useTheme();
+  const a11y = multi
+    ? ({ accessibilityRole: 'button', accessibilityState: { selected } } as const)
+    // aria-checked makes the state reach the web DOM as well.
+    : ({ accessibilityRole: 'radio', accessibilityState: { checked: selected }, 'aria-checked': selected } as const);
   return (
     <PressableScale
       onPress={onPress}
-      accessibilityRole="button"
+      {...a11y}
       accessibilityLabel={accessibilityLabel ?? label}
-      accessibilityState={{ selected }}
       style={[
         styles.chip,
         { backgroundColor: selected ? colors.accent : 'transparent', borderColor: selected ? colors.accent : colors.line },

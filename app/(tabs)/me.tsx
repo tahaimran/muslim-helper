@@ -7,21 +7,13 @@ import { AppText, ListRow, PressableScale, Screen, Section } from '@/components'
 import { MilestoneGrid } from '@/components/me/MilestoneGrid';
 import { PrayerHeatmap } from '@/components/me/PrayerHeatmap';
 import { MILESTONE_CONTENT } from '@/content/milestones';
-import type { PersistedState } from '@/lib/model';
+import { formatShortDate } from '@/lib/dates';
+import { persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
+import { useDatesWithoutTasbih } from '@/lib/useDatesWithoutTasbih';
 import { useToday } from '@/lib/useToday';
 import { buildProgressVM } from '@/lib/view/progress';
 import { useTheme } from '@/theme/ThemeProvider';
-
-function shortDate(key: string, language: string): string {
-  const [y, m, d] = key.split('-').map(Number);
-  const date = new Date(y, (m ?? 1) - 1, d ?? 1);
-  try {
-    return new Intl.DateTimeFormat(language, { day: 'numeric', month: 'short' }).format(date);
-  } catch {
-    return key;
-  }
-}
 
 export default function MeScreen() {
   const { t, i18n } = useTranslation();
@@ -29,18 +21,12 @@ export default function MeScreen() {
   const { colors } = useTheme();
   const today = useToday();
 
+  // Progress reads only active flags, prayers and milestones, so tasbih taps do not re-render it.
   const profile = useAppStore((s) => s.profile);
-  const settings = useAppStore((s) => s.settings);
-  const cycle = useAppStore((s) => s.cycle);
-  const planStartDate = useAppStore((s) => s.planStartDate);
-  const planDays = useAppStore((s) => s.planDays);
-  const dates = useAppStore((s) => s.dates);
+  const dates = useDatesWithoutTasbih();
   const milestones = useAppStore((s) => s.milestones);
 
-  const vm = useMemo(() => {
-    const state: PersistedState = { schema: 1, profile, settings, cycle, planStartDate, planDays, dates, milestones };
-    return buildProgressVM(state, today);
-  }, [profile, settings, cycle, planStartDate, planDays, dates, milestones, today]);
+  const vm = useMemo(() => buildProgressVM(persistedFrom({ dates, milestones }), today), [dates, milestones, today]);
 
   const name = profile?.name?.trim();
   const stats = [
@@ -89,7 +75,7 @@ export default function MeScreen() {
       <Section title={t('me.heatmapTitle')} subtitle={t('me.heatmapSubtitle')}>
         <PrayerHeatmap
           cells={vm.heatmap}
-          cellLabel={(date, count) => t('me.heatmapCell', { date: shortDate(date, i18n.language), count })}
+          cellLabel={(date, count) => t('me.heatmapCell', { date: formatShortDate(date, i18n.language), count })}
         />
       </Section>
 

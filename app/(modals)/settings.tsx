@@ -89,6 +89,7 @@ export default function SettingsScreen() {
         <ListRow
           title={t('settings.method')}
           value={calcMethod ? methodName(calcMethod) : t('settings.methodAuto', { method: methodName(method) })}
+          expanded={methodOpen}
           onPress={() => setMethodOpen((o) => !o)}
         />
         {methodOpen ? (

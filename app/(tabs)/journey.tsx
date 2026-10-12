@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { AppText, Screen, Section } from '@/components';
 import { WeekPath } from '@/components/journey/WeekPath';
-import { initialState, type PersistedState } from '@/lib/model';
+import { persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
 import { buildJourneyVM, type JourneyDayVM } from '@/lib/view/journey';
@@ -16,18 +16,18 @@ export default function JourneyScreen() {
   const { colors } = useTheme();
   const today = useToday();
 
-  // Only the fields buildJourneyVM reads: profile, cycle, plan start, plan days, and the
-  // per-date logs (today's tasbih counts can complete the current day).
+  // Only the fields buildJourneyVM reads: profile, cycle, plan start, plan days, and today's
+  // log (its tasbih counts can complete the current day); other dates are never read.
   const profile = useAppStore((s) => s.profile);
   const cycle = useAppStore((s) => s.cycle);
   const planStartDate = useAppStore((s) => s.planStartDate);
   const planDays = useAppStore((s) => s.planDays);
-  const dates = useAppStore((s) => s.dates);
+  const todayLog = useAppStore((s) => s.dates[today]);
 
   const vm = useMemo(() => {
-    const state: PersistedState = { ...initialState(), profile, cycle, planStartDate, planDays, dates };
-    return buildJourneyVM(state, today);
-  }, [profile, cycle, planStartDate, planDays, dates, today]);
+    const dates = todayLog ? { [today]: todayLog } : {};
+    return buildJourneyVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today);
+  }, [profile, cycle, planStartDate, planDays, todayLog, today]);
 
   const open = (d: JourneyDayVM) => {
     if (d.status === 'today') router.navigate('/(tabs)');

@@ -21,7 +21,7 @@ export function CheckNode({ checked, onPress, label, size = 28 }: CheckNodeProps
   // Without onPress the node is a read-only indicator: no press handling, scale or haptic.
   if (!onPress) {
     return (
-      <View accessible accessibilityRole="checkbox" accessibilityLabel={label} accessibilityState={{ checked, disabled: true }} style={styles.hit}>
+      <View accessible accessibilityRole="checkbox" accessibilityLabel={label} accessibilityState={{ checked, disabled: true }} aria-checked={checked} style={styles.hit}>
         {disc}
       </View>
     );
@@ -32,6 +32,7 @@ export function CheckNode({ checked, onPress, label, size = 28 }: CheckNodeProps
       accessibilityRole="checkbox"
       accessibilityLabel={label}
       accessibilityState={{ checked }}
+      aria-checked={checked}
       style={styles.hit}
     >
       {disc}

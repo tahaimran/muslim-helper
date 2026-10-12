@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-import { AccessibilityInfo, I18nManager, useColorScheme } from 'react-native';
+import { AccessibilityInfo, I18nManager, Platform, useColorScheme } from 'react-native';
+import { isRTL as isRTLLang } from '../lib/i18n';
 import type { Lang } from '../lib/model';
 import { useAppStore } from '../lib/store';
 import { fontFamily, lineHeightFor, type FontRole } from './fonts';
@@ -46,7 +47,9 @@ export function AppThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const scheme = resolveScheme(pref, system);
-  const isRTL = I18nManager.isRTL;
+  // Native direction only changes after a restart, so follow the live flag there; on web the
+  // document direction switches immediately with the language.
+  const isRTL = Platform.OS === 'web' ? isRTLLang(lang) : I18nManager.isRTL;
 
   const value = useMemo<Theme>(
     () => ({
