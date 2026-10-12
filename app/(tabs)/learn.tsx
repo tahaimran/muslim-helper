@@ -7,8 +7,10 @@ import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
 import { localizeLearn, showMeaning } from '@/content/i18n';
 import { PILLARS_SOURCES, RAKAH_COUNTS, type LearnStep } from '@/content/learn';
+import type { Source } from '@/content/types';
+import { sourceLabel } from '@/lib/sourceRef';
 
-const toItems = (steps: LearnStep[], withMeaning: boolean): StepItem[] =>
+const toItems = (steps: LearnStep[], withMeaning: boolean, label: (s: Source) => string): StepItem[] =>
   steps.map((s) => ({
     id: s.id,
     title: s.title,
@@ -18,7 +20,7 @@ const toItems = (steps: LearnStep[], withMeaning: boolean): StepItem[] =>
           arabic: s.recite.arabic,
           transliteration: s.recite.transliteration,
           meaning: withMeaning ? s.recite.meaning : undefined,
-          sourceRef: s.recite.source?.ref,
+          sourceRef: s.recite.source ? label(s.recite.source) : undefined,
         }
       : undefined,
   }));
@@ -53,8 +55,9 @@ export default function LearnScreen() {
   const lang = useLang();
   const learn = useMemo(() => localizeLearn(lang), [lang]);
   const withMeaning = showMeaning(lang);
-  const wudu = useMemo(() => toItems(learn.WUDU_STEPS, withMeaning), [learn, withMeaning]);
-  const salah = useMemo(() => toItems(learn.SALAH_STEPS, withMeaning), [learn, withMeaning]);
+  const label = useMemo(() => (s: Source) => sourceLabel(s, t, lang), [t, lang]);
+  const wudu = useMemo(() => toItems(learn.WUDU_STEPS, withMeaning, label), [learn, withMeaning, label]);
+  const salah = useMemo(() => toItems(learn.SALAH_STEPS, withMeaning, label), [learn, withMeaning, label]);
   const { DUA_AFTER_WUDU, SALAH_NOTES, PILLARS_OF_ISLAM, PILLARS_OF_IMAN } = learn;
   const hints = { expandHint: t('learn.expandHint'), collapseHint: t('learn.collapseHint') };
 
@@ -70,7 +73,7 @@ export default function LearnScreen() {
             arabic={DUA_AFTER_WUDU.arabic}
             transliteration={DUA_AFTER_WUDU.transliteration}
             meaning={withMeaning ? DUA_AFTER_WUDU.meaning : undefined}
-            sourceRef={DUA_AFTER_WUDU.source.ref}
+            sourceRef={label(DUA_AFTER_WUDU.source)}
           />
         </View>
       </Section>

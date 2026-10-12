@@ -71,7 +71,7 @@ Totals: 241 items listed (dhikr repeated across days are merged), 41 with confid
 - [ ] Dhikr la_tajal_ad_dunya (morning; days 24) | "(From a longer du'a he often made before rising from a gathe..." | Tirmidhi 3502 | hasan | M (grading disputed (Za'i weakens); stored as hasan (disputed or understated))
 - [ ] Dhikr audhu_an_ushrika (morning; days 25) | "O Allah, I seek refuge in You from knowingly associating any..." | (no source) | - | M (al-Adab al-Mufrad 716 not verified, source null)
 - [ ] Dhikr umar_dua_ikhlas (evening; days 25) | "(Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds ri..." | Ahmad, az-Zuhd | n/a | M (number/grade secondary-verified only; athar, not a prophetic text)
-- [ ] Day 26 · sunnah (Muhasabah (self-accounting)) | "'Umar ibn al-Khattab said: "Hold yourselves to account befor..." | Tirmidhi 2459 (athar of 'Umar, cited by at-Tirmidhi under this number) | n/a | M (athar, not a prophetic text)
+- [ ] Day 26 · sunnah (Muhasabah (self-accounting)) | "'Umar ibn al-Khattab said: "Hold yourselves to account befor..." | Tirmidhi, after no. 2459 (athar of 'Umar quoted by at-Tirmidhi after that hadith) | n/a | M (athar, not a prophetic text)
 - [ ] Day 27 · sunnah (Two rak'ahs of repentance (Salat at-Tawbah)) | "The Prophet ﷺ said: "No servant commits a sin, then purifies..." | Abu Dawud 1521; Tirmidhi 406 | hasan | M (Arna'ut/Tirmidhi hasan; stored as hasan (disputed or understated))
 - [ ] Dhikr musarrifal_qulub (evening; days 30) | "O Allah, Director of hearts, direct our hearts to Your obedi..." | Muslim 2654 | sahih | M (Muslim 2654 vs 2655 numbering)
 - [ ] Duas · Daily life · Before eating | "In the name of Allah. The Prophet ﷺ told a boy: “Mention the..." | Bukhari 5376; Muslim 2022 | sahih | M (number recalled, not looked up)
@@ -170,7 +170,7 @@ These are general or personal du'a (or a dhikr with no specific virtue claimed).
 - [ ] Day 23 · sunnah (Reflecting on creation) | "Allah praises those who "reflect on the creation of the heav..." | Quran 3:191 | n/a | H
 - [ ] Day 24 · sunnah (A digital detox) | "The Prophet ﷺ said: "There are two blessings that many peopl..." | Bukhari 6412 | sahih | H
 - [ ] Day 25 · sunnah (The showing-off test) | "Allah says in a hadith qudsi: "I am the most free of need of..." | Muslim 2985 | sahih | H
-- [ ] Day 26 · sunnah (Muhasabah (self-accounting)) | "'Umar ibn al-Khattab said: "Hold yourselves to account befor..." | Tirmidhi 2459 (athar of 'Umar, cited by at-Tirmidhi under this number) | n/a | M (athar, not a prophetic text)
+- [ ] Day 26 · sunnah (Muhasabah (self-accounting)) | "'Umar ibn al-Khattab said: "Hold yourselves to account befor..." | Tirmidhi, after no. 2459 (athar of 'Umar quoted by at-Tirmidhi after that hadith) | n/a | M (athar, not a prophetic text)
 - [ ] Day 27 · sunnah (Two rak'ahs of repentance (Salat at-Tawbah)) | "The Prophet ﷺ said: "No servant commits a sin, then purifies..." | Abu Dawud 1521; Tirmidhi 406 | hasan | M (Arna'ut/Tirmidhi hasan; stored as hasan (disputed or understated))
 - [ ] Day 28 · sunnah (Serving the community) | "The Prophet ﷺ said: "Whoever fulfils the need of his brother..." | Bukhari 2442; Muslim 2580 | sahih | H
 - [ ] Day 29 · sunnah (Be the best advertisement for Islam) | "The Prophet ﷺ said: "That Allah guides one person through yo..." | Bukhari 3009; Muslim 2406 | sahih | H

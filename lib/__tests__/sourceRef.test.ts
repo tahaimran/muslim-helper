@@ -30,3 +30,13 @@ describe('sourceLabel', () => {
     expect(sourceLabel({ ref: 'Ahmad, az-Zuhd', grade: null }, t, 'tr')).toBe('Ahmad, az-Zuhd');
   });
 });
+
+describe('localizeSourceRef with "after no."', () => {
+  it('keeps the English wording for en, id and tr', () => {
+    expect(localizeSourceRef('Tirmidhi, after no. 2459', 'en')).toBe('Tirmidhi, after no. 2459');
+  });
+  it('writes it in Arabic and Urdu word order', () => {
+    expect(localizeSourceRef('Tirmidhi, after no. 2459', 'ar')).toBe('الترمذي، بعد رقم 2459');
+    expect(localizeSourceRef('Tirmidhi, after no. 2459', 'ur')).toBe('ترمذی، نمبر 2459 کے بعد');
+  });
+});

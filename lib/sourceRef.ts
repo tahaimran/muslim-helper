@@ -32,10 +32,19 @@ const NAMES: Partial<Record<Lang, Record<string, string>>> = {
 
 const PATTERN = /Abu Dawud|Ibn Majah|Nasa'i|Bukhari|Muslim|Tirmidhi|Ahmad|Quran|az-Zuhd|, /g;
 
+// "after no. N" marks an athar quoted by a collector right after hadith N (not hadith N itself).
+const AFTER_NO = /after no\. (\d+)/g;
+const AFTER_NO_LOCAL: Partial<Record<Lang, (n: string) => string>> = {
+  ar: (n) => `بعد رقم ${n}`,
+  ur: (n) => `نمبر ${n} کے بعد`,
+};
+
 /** Writes hadith/Quran source names in the reader's script (Arabic and Urdu only). */
 export function localizeSourceRef(ref: string, lang: Lang): string {
   const names = NAMES[lang];
-  return names ? ref.replace(PATTERN, (m) => names[m] ?? m) : ref;
+  const after = AFTER_NO_LOCAL[lang];
+  if (!names || !after) return ref;
+  return ref.replace(AFTER_NO, (_m, n: string) => after(n)).replace(PATTERN, (m) => names[m] ?? m);
 }
 
 /**

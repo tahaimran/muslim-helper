@@ -2873,7 +2873,7 @@ export const DAYS: DayContent[] = [
       title: 'Muhasabah (self-accounting)',
       description:
         '\'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of \'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?',
-      source: athar('Tirmidhi 2459'),
+      source: athar('Tirmidhi, after no. 2459'),
     },
     character: {
       trait: 'The same in private',
