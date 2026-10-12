@@ -40,6 +40,7 @@ export async function applyDirection(lang: Lang): Promise<DirectionResult> {
   I18nManager.forceRTL(plan.force);
   if (Platform.OS === 'web' && typeof document !== 'undefined') {
     document.documentElement.dir = plan.force ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
   }
   setPending(plan.action === 'banner');
   if (plan.action === 'none') return 'unchanged';
