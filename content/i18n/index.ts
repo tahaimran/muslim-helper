@@ -16,11 +16,48 @@ import tr from './tr.json';
 // never overlaid.
 
 type Table = Record<string, string>;
-export const CONTENT_TABLES: Record<Lang, Table> = { en, ar, ur, id, tr } as Record<Lang, Table>;
+const tables: Record<Lang, Table> = { en, ar, ur, id, tr } as Record<Lang, Table>;
+export const CONTENT_TABLES: Readonly<Record<Lang, Readonly<Table>>> = tables;
+
+let dayCache = new WeakMap<DayContent, Map<Lang, DayContent>>();
+let duaCache = new WeakMap<DuaCategory[], Map<Lang, DuaCategory[]>>();
+let learnCache = new Map<Lang, LearnModule>();
+function clearCaches(): void {
+  dayCache = new WeakMap();
+  duaCache = new WeakMap();
+  learnCache = new Map();
+}
+
+/** Test-only seam: temporarily replaces one language table (e.g. with a tracking Proxy). */
+export function __withTableForTest<T>(lang: Lang, table: Table, fn: () => T): T {
+  const prev = tables[lang];
+  tables[lang] = table;
+  clearCaches();
+  try {
+    return fn();
+  } finally {
+    tables[lang] = prev;
+    clearCaches();
+  }
+}
 
 function pick(lang: Lang, key: string, fallback: string): string {
   if (lang === 'en') return fallback;
-  return CONTENT_TABLES[lang]?.[key] ?? fallback;
+  const v = tables[lang]?.[key];
+  return typeof v === 'string' && v !== '' ? v : fallback;
+}
+
+function cached<K extends object, V>(
+  cache: WeakMap<K, Map<Lang, V>>,
+  k: K,
+  lang: Lang,
+  make: () => V,
+): V {
+  let m = cache.get(k);
+  if (!m) cache.set(k, (m = new Map()));
+  let v = m.get(lang);
+  if (v === undefined) m.set(lang, (v = make()));
+  return v;
 }
 function pickOpt(lang: Lang, key: string, fallback: string | undefined): string | undefined {
   return fallback === undefined ? undefined : pick(lang, key, fallback);
@@ -36,6 +73,11 @@ function dhikrs(list: Dhikr[], prefix: string, lang: Lang): Dhikr[] {
 }
 
 export function localizeDay(day: DayContent, lang: Lang): DayContent {
+  if (lang === 'en') return day;
+  return cached(dayCache, day, lang, () => buildDay(day, lang));
+}
+
+function buildDay(day: DayContent, lang: Lang): DayContent {
   if (lang === 'en') return day;
   const p = `day.${day.day}`;
   const dua = day.prayerFocus.dua;
@@ -81,6 +123,11 @@ export function localizeWeek(week: WeekInfo, lang: Lang): WeekInfo {
 
 export function localizeDuaCategories(cats: DuaCategory[], lang: Lang): DuaCategory[] {
   if (lang === 'en') return cats;
+  return cached(duaCache, cats, lang, () => buildDuas(cats, lang));
+}
+
+function buildDuas(cats: DuaCategory[], lang: Lang): DuaCategory[] {
+  if (lang === 'en') return cats;
   return cats.map((c) => ({
     ...c,
     title: pick(lang, `duaCat.${c.id}.title`, c.title),
@@ -96,6 +143,13 @@ export function localizeDuaCategories(cats: DuaCategory[], lang: Lang): DuaCateg
 type LearnModule = typeof learnEn;
 
 export function localizeLearn(lang: Lang): LearnModule {
+  if (lang === 'en') return learnEn;
+  let v = learnCache.get(lang);
+  if (!v) learnCache.set(lang, (v = buildLearn(lang)));
+  return v;
+}
+
+function buildLearn(lang: Lang): LearnModule {
   if (lang === 'en') return learnEn;
   const steps = (name: string, list: LearnModule['WUDU_STEPS']) =>
     list.map((s) => ({

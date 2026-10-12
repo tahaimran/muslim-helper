@@ -1,3 +1,4 @@
+// Run via `npm run i18n:extract` (needs the tsx devDependency; do not run with plain node).
 // Extracts every translatable English string from content/*.ts into content/i18n/en.json.
 // Run: npm run i18n:extract   (uses tsx to import the TypeScript content modules)
 // Arabic text, transliteration and source refs are never extracted: they are not translated.
