@@ -10,7 +10,7 @@ export type StepItem = {
   id: string;
   title: string;
   body: string;
-  recite?: { arabic: string; transliteration: string; meaning: string; sourceRef?: string };
+  recite?: { arabic: string; transliteration: string; meaning?: string; sourceRef?: string };
 };
 
 export type StepListProps = {

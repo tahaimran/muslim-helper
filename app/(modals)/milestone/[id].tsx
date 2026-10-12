@@ -3,10 +3,11 @@ import { View } from 'react-native';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { AppText, ArabicBlock, Screen, Section } from '@/components';
-import { MILESTONE_CONTENT } from '@/content/milestones';
+import { localizeMilestone, showMeaning } from '@/content/i18n';
 import { formatLongDate } from '@/lib/dates';
 import { MILESTONE_IDS, type MilestoneId } from '@/lib/milestones';
 import { useAppStore } from '@/lib/store';
+import { useLang } from '@/theme/useLang';
 
 function parseId(raw: string | string[] | undefined): MilestoneId | null {
   const value = Array.isArray(raw) ? raw[0] : raw;
@@ -16,6 +17,7 @@ function parseId(raw: string | string[] | undefined): MilestoneId | null {
 export default function MilestoneScreen() {
   const { t, i18n } = useTranslation();
   const { id: raw } = useLocalSearchParams<{ id?: string | string[] }>();
+  const lang = useLang();
   const id = parseId(raw);
   const unlockedOn = useAppStore((s) => (id ? s.milestones[id] ?? null : null));
 
@@ -28,7 +30,7 @@ export default function MilestoneScreen() {
     );
   }
 
-  const content = MILESTONE_CONTENT[id];
+  const content = localizeMilestone(id, lang);
   return (
     <Screen>
       <Stack.Screen options={{ title: t('me.milestones') }} />
@@ -41,7 +43,7 @@ export default function MilestoneScreen() {
         </View>
       </Section>
       <Section>
-        <ArabicBlock arabic={content.text.arabic} meaning={content.text.meaning} sourceRef={content.text.source.ref} size="large" />
+        <ArabicBlock arabic={content.text.arabic} meaning={showMeaning(lang) ? content.text.meaning : undefined} sourceRef={content.text.source.ref} size="large" />
       </Section>
     </Screen>
   );

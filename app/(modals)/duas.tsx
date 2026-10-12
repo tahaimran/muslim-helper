@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { ChevronDown, ChevronUp } from 'lucide-react-native';
 import { useTranslation } from 'react-i18next';
 import { AppText, ArabicBlock, PressableScale, Screen, Section } from '@/components';
 import { DUA_CATEGORIES, type DuaEntry } from '@/content/duas';
+import { localizeDuaCategories, showMeaning } from '@/content/i18n';
+import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
 
 export default function DuasScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
+  const lang = useLang();
+  const categories = useMemo(() => localizeDuaCategories(DUA_CATEGORIES, lang), [lang]);
   const [open, setOpen] = useState<Record<string, boolean>>({});
 
   const sourceLabel = (d: DuaEntry) => {
@@ -20,7 +24,7 @@ export default function DuasScreen() {
   return (
     <Screen edges={['bottom']}>
       <AppText variant="body" muted style={styles.intro}>{t('duas.intro')}</AppText>
-      {DUA_CATEGORIES.map((cat) => (
+      {categories.map((cat) => (
         <Section key={cat.id} title={cat.title} subtitle={cat.titleArabic}>
           {cat.duas.map((d) => {
             const expanded = !!open[d.id];
@@ -45,7 +49,7 @@ export default function DuasScreen() {
                     <ArabicBlock
                       arabic={d.text.arabic}
                       transliteration={d.text.transliteration}
-                      meaning={d.text.meaning}
+                      meaning={showMeaning(lang) ? d.text.meaning : undefined}
                       sourceRef={sourceLabel(d)}
                     />
                   </View>

@@ -182,3 +182,29 @@ describe('day detail toggling', () => {
     expect(s.dates[addDays(START, 1)]).toBeUndefined();
   });
 });
+
+describe('localized view models', () => {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const i18n = require('../../content/i18n') as typeof import('../../content/i18n');
+
+  it('buildDayVM localizes content for the language and defaults to English', () => {
+    const table = { 'day.1.theme': 'TR-THEME', 'day.1.hadith.meaning': 'TR-HADITH' };
+    expect(buildDayVM(state(), 1, START)!.content.theme).toBe(DAYS[0].theme);
+    i18n.__withTableForTest('ur', table, () => {
+      const vm = buildDayVM(state(), 1, START, 'ur')!;
+      expect(vm.content.theme).toBe('TR-THEME');
+      expect(vm.content.hadith.meaning).toBe('TR-HADITH');
+      expect(vm.tasks.length).toBeGreaterThan(0);
+    });
+  });
+
+  it('buildTodayVM passes the language to the day and the istiqamah hadith', () => {
+    i18n.__withTableForTest('ur', { 'day.1.theme': 'TR-THEME' }, () => {
+      expect(buildTodayVM(state(), START, 'ur').day!.content.theme).toBe('TR-THEME');
+    });
+    i18n.__withTableForTest('ur', { 'day.2.hadith.meaning': 'TR-H2' }, () => {
+      const vm = buildTodayVM(state(), addDays(START, 31), 'ur');
+      expect(vm.istiqamah!.hadith.meaning).toBe('TR-H2');
+    });
+  });
+});

@@ -6,13 +6,14 @@ import { useTranslation } from 'react-i18next';
 import { AppText, ListRow, PressableScale, Screen, Section } from '@/components';
 import { MilestoneGrid } from '@/components/me/MilestoneGrid';
 import { PrayerHeatmap } from '@/components/me/PrayerHeatmap';
-import { MILESTONE_CONTENT } from '@/content/milestones';
+import { localizeMilestone } from '@/content/i18n';
 import { formatShortDate } from '@/lib/dates';
 import { persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import { useDatesWithoutTasbih } from '@/lib/useDatesWithoutTasbih';
 import { useToday } from '@/lib/useToday';
 import { buildProgressVM } from '@/lib/view/progress';
+import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
 
 export default function MeScreen() {
@@ -20,6 +21,7 @@ export default function MeScreen() {
   const router = useRouter();
   const { colors } = useTheme();
   const today = useToday();
+  const lang = useLang();
 
   // Progress reads only active flags, prayers and milestones, so tasbih taps do not re-render it.
   const profile = useAppStore((s) => s.profile);
@@ -36,7 +38,7 @@ export default function MeScreen() {
   ];
 
   const items = vm.milestones.map((m) => {
-    const content = MILESTONE_CONTENT[m.id];
+    const content = localizeMilestone(m.id, lang);
     const unlocked = m.unlockedOn !== null;
     return {
       id: m.id,

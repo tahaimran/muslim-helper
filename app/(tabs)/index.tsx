@@ -9,7 +9,7 @@ import {
 import { MoodPicker } from '@/components/day/MoodPicker';
 import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
-import { WELCOME_BACK } from '@/content/milestones';
+import { localizedWelcomeBack, showMeaning } from '@/content/i18n';
 import type { SourcedText } from '@/content/types';
 import { dateFromKey, formatTime, formatWeekdayDate } from '@/lib/dates';
 import type { DateKey } from '@/lib/day';
@@ -106,8 +106,10 @@ export default function TodayScreen() {
 
   const vm = useMemo(() => {
     const dates = todayLog ? { ...pastDates, [today]: todayLog } : pastDates;
-    return buildTodayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today);
-  }, [profile, cycle, planStartDate, planDays, pastDates, todayLog, today]);
+    return buildTodayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today, lang);
+  }, [profile, cycle, planStartDate, planDays, pastDates, todayLog, today, lang]);
+  const welcomeBack = useMemo(() => localizedWelcomeBack(lang), [lang]);
+  const meaningShown = showMeaning(lang);
 
   const moodLabels = useMemo(
     () => Object.fromEntries(MOODS.map((m) => [m, t(`mood.${m}`)])) as Record<MoodType, string>,
@@ -146,7 +148,7 @@ export default function TodayScreen() {
   };
 
   const share = (text: SourcedText) => {
-    const message = `${text.meaning}\n— ${text.source.ref}\n\n${t('share.footer')}`;
+    const message = `${meaningShown ? text.meaning : text.arabic}\n— ${text.source.ref}\n\n${t('share.footer')}`;
     Share.share({ message }).catch(() => showToast(t('errors.generic'), 'error'));
   };
 
@@ -179,7 +181,7 @@ export default function TodayScreen() {
 
         {vm.welcomeBack ? (
           <Section>
-            <ArabicBlock arabic={WELCOME_BACK.arabic} meaning={WELCOME_BACK.meaning} sourceRef={WELCOME_BACK.source.ref} />
+            <ArabicBlock arabic={welcomeBack.arabic} meaning={meaningShown ? welcomeBack.meaning : undefined} sourceRef={welcomeBack.source.ref} />
             <AppText variant="body" center muted style={styles.welcomeLine}>{t('today.welcomeBack')}</AppText>
           </Section>
         ) : null}
@@ -207,7 +209,7 @@ export default function TodayScreen() {
               />
             </Section>
 
-            <HadithBlock text={content.hadith} onShare={share} shareLabel={t('today.share')} />
+            <HadithBlock text={content.hadith} showMeaningLine={meaningShown} onShare={share} shareLabel={t('today.share')} />
 
             <Section title={t('today.reflect')}>
               <ReflectionBox
@@ -245,7 +247,7 @@ export default function TodayScreen() {
               />
             </Section>
 
-            <HadithBlock text={vm.istiqamah.hadith} onShare={share} shareLabel={t('today.share')} />
+            <HadithBlock text={vm.istiqamah.hadith} showMeaningLine={meaningShown} onShare={share} shareLabel={t('today.share')} />
 
             <Section title={t('today.reflect')}>
               <ReflectionBox
@@ -272,11 +274,11 @@ export default function TodayScreen() {
   );
 }
 
-function HadithBlock({ text, onShare, shareLabel }: { text: SourcedText; onShare: (t: SourcedText) => void; shareLabel: string }) {
+function HadithBlock({ text, showMeaningLine, onShare, shareLabel }: { text: SourcedText; showMeaningLine: boolean; onShare: (t: SourcedText) => void; shareLabel: string }) {
   const { colors } = useTheme();
   return (
     <Section>
-      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={text.meaning} sourceRef={text.source.ref} size="large" />
+      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={showMeaningLine ? text.meaning : undefined} sourceRef={text.source.ref} size="large" />
       <View style={styles.shareRow}>
         <PressableScale onPress={() => onShare(text)} accessibilityRole="button" accessibilityLabel={shareLabel} style={styles.shareBtn}>
           <Share2 size={20} color={colors.textMuted} />

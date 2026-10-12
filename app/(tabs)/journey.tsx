@@ -8,6 +8,7 @@ import { persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
 import { buildJourneyVM, type JourneyDayVM } from '@/lib/view/journey';
+import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
 
 export default function JourneyScreen() {
@@ -15,6 +16,7 @@ export default function JourneyScreen() {
   const router = useRouter();
   const { colors } = useTheme();
   const today = useToday();
+  const lang = useLang();
 
   // Only the fields buildJourneyVM reads: profile, cycle, plan start, plan days, and today's
   // log (its tasbih counts can complete the current day); other dates are never read.
@@ -26,8 +28,8 @@ export default function JourneyScreen() {
 
   const vm = useMemo(() => {
     const dates = todayLog ? { [today]: todayLog } : {};
-    return buildJourneyVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today);
-  }, [profile, cycle, planStartDate, planDays, todayLog, today]);
+    return buildJourneyVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), today, lang);
+  }, [profile, cycle, planStartDate, planDays, todayLog, today, lang]);
 
   const open = (d: JourneyDayVM) => {
     if (d.status === 'today') router.navigate('/(tabs)');

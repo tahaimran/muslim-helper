@@ -1,11 +1,12 @@
 import { DAYS } from '../../content/days';
+import { localizeDay } from '../../content/i18n';
 import type { ContentTask, DayContent, SourcedText } from '../../content/types';
 import {
   daysBetween, daysSinceLastActive, getPlanPosition, getStreak, shouldWelcomeBack,
   PLAN_LENGTH, type DateKey, type Phase,
 } from '../day';
 import { activeDateSet } from '../milestones';
-import { planDayKey, type PersistedState, type Profile } from '../model';
+import { planDayKey, type Lang, type PersistedState, type Profile } from '../model';
 import { personalizeTasks, shouldShowLearnSalah } from '../plan';
 import type { MoodType, PrayerName } from '../types';
 
@@ -68,9 +69,10 @@ function currentPlanDay(state: PersistedState, today: DateKey) {
 }
 
 /** Null when no content exists for `day` (content may still be in progress). */
-export function buildDayVM(state: PersistedState, day: number, today: DateKey): DayVM | null {
-  const content = DAYS[day - 1] as DayContent | undefined;
-  if (!content) return null;
+export function buildDayVM(state: PersistedState, day: number, today: DateKey, lang: Lang = 'en'): DayVM | null {
+  const source = DAYS[day - 1] as DayContent | undefined;
+  if (!source) return null;
+  const content = localizeDay(source, lang);
 
   const { cycle } = state;
   const profile = state.profile ?? FALLBACK_PROFILE;
@@ -104,7 +106,7 @@ export function buildDayVM(state: PersistedState, day: number, today: DateKey): 
   };
 }
 
-export function buildTodayVM(state: PersistedState, today: DateKey): TodayVM {
+export function buildTodayVM(state: PersistedState, today: DateKey, lang: Lang = 'en'): TodayVM {
   const position = currentPlanDay(state, today);
   const active = activeDateSet(state);
   const profile = state.profile ?? FALLBACK_PROFILE;
@@ -115,7 +117,7 @@ export function buildTodayVM(state: PersistedState, today: DateKey): TodayVM {
     const elapsed = Math.max(0, daysBetween(state.planStartDate ?? today, today));
     const rotated = DAYS[elapsed % PLAN_LENGTH] ?? DAYS[elapsed % DAYS.length];
     istiqamah = {
-      hadith: rotated.hadith,
+      hadith: localizeDay(rotated, lang).hadith,
       morningDone: (dateLog?.tasbih.morning_adhkar ?? 0) >= 1,
       eveningDone: (dateLog?.tasbih.evening_adhkar ?? 0) >= 1,
       reflectionKey: elapsed,
@@ -131,7 +133,7 @@ export function buildTodayVM(state: PersistedState, today: DateKey): TodayVM {
     welcomeBack: shouldWelcomeBack(daysSinceLastActive(active, today)),
     showLearnSalah: shouldShowLearnSalah(profile, position.day, state.cycle),
     prayersDone: dateLog?.prayers ?? [],
-    day: position.phase === 'journey' ? buildDayVM(state, position.day, today) : null,
+    day: position.phase === 'journey' ? buildDayVM(state, position.day, today, lang) : null,
     istiqamah,
   };
 }

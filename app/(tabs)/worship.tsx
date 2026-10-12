@@ -8,7 +8,7 @@ import { AdhkarList } from '@/components/worship/AdhkarList';
 import { PrayerTimesList, type PrayerTimeRow } from '@/components/worship/PrayerTimesList';
 import { TasbihCounter } from '@/components/worship/TasbihCounter';
 import { DAYS } from '@/content/days';
-import { EVENING_ADHKAR, MORNING_ADHKAR } from '@/content/learn';
+import { localizeDay, localizeLearn, showMeaning } from '@/content/i18n';
 import type { Dhikr } from '@/content/types';
 import { formatTime } from '@/lib/dates';
 import { getPlanPosition } from '@/lib/day';
@@ -32,6 +32,8 @@ export default function WorshipScreen() {
   const { t } = useTranslation();
   const router = useRouter();
   const today = useToday();
+  const lang = useLang();
+  const learn = useMemo(() => localizeLearn(lang), [lang]);
 
   const planStartDate = useAppStore((s) => s.planStartDate);
   const tasbih = useAppStore((s) => s.dates[today]?.tasbih) ?? NO_TASBIH;
@@ -39,10 +41,11 @@ export default function WorshipScreen() {
 
   const todayContent = useMemo(() => {
     const pos = getPlanPosition(planStartDate ?? today, today);
-    return pos.phase === 'journey' ? DAYS[pos.day - 1] ?? null : null;
-  }, [planStartDate, today]);
+    const src = pos.phase === 'journey' ? DAYS[pos.day - 1] : undefined;
+    return src ? localizeDay(src, lang) : null;
+  }, [planStartDate, today, lang]);
 
-  const options = useMemo(() => buildDhikrOptions(DAYS, todayContent), [todayContent]);
+  const options = useMemo(() => buildDhikrOptions(DAYS.map((d) => localizeDay(d, lang)), todayContent), [todayContent, lang]);
 
   const [selectedId, setSelectedId] = useState('subhanallah');
   const [target, setTarget] = useState<number>(ROUND_TARGETS[0]);
@@ -77,7 +80,6 @@ export default function WorshipScreen() {
   }, [incrementTasbih, today, selected, target, setRound]);
 
   // Which adhkar section starts open: from prayer times when a location is saved, else the clock.
-  const lang = useLang();
   const { times, next } = usePrayerTimes(today);
   const expansion = useMemo(
     () => adhkarExpansion(new Date(), times ? { dhuhr: times.dhuhr, asr: times.asr } : null),
@@ -150,7 +152,8 @@ export default function WorshipScreen() {
       <AdhkarList
         key={`m-${today}`}
         title={t('worship.morning')}
-        items={MORNING_ADHKAR}
+        items={learn.MORNING_ADHKAR}
+        showMeaning={showMeaning(lang)}
         defaultExpanded={expansion === 'morning'}
         completed={(tasbih.morning_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeMorning')}
@@ -161,7 +164,8 @@ export default function WorshipScreen() {
       <AdhkarList
         key={`e-${today}`}
         title={t('worship.evening')}
-        items={EVENING_ADHKAR}
+        items={learn.EVENING_ADHKAR}
+        showMeaning={showMeaning(lang)}
         defaultExpanded={expansion === 'evening'}
         completed={(tasbih.evening_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeEvening')}

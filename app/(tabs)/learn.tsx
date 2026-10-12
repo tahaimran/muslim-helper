@@ -3,20 +3,12 @@ import { Linking, StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { AppText, ArabicBlock, ListRow, Screen, Section, showToast } from '@/components';
 import { StepList, type StepItem } from '@/components/learn/StepList';
+import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
-import {
-  DUA_AFTER_WUDU,
-  PILLARS_OF_IMAN,
-  PILLARS_OF_ISLAM,
-  PILLARS_SOURCES,
-  RAKAH_COUNTS,
-  SALAH_NOTES,
-  SALAH_STEPS,
-  WUDU_STEPS,
-  type LearnStep,
-} from '@/content/learn';
+import { localizeLearn, showMeaning } from '@/content/i18n';
+import { PILLARS_SOURCES, RAKAH_COUNTS, type LearnStep } from '@/content/learn';
 
-const toItems = (steps: LearnStep[]): StepItem[] =>
+const toItems = (steps: LearnStep[], withMeaning: boolean): StepItem[] =>
   steps.map((s) => ({
     id: s.id,
     title: s.title,
@@ -25,7 +17,7 @@ const toItems = (steps: LearnStep[]): StepItem[] =>
       ? {
           arabic: s.recite.arabic,
           transliteration: s.recite.transliteration,
-          meaning: s.recite.meaning,
+          meaning: withMeaning ? s.recite.meaning : undefined,
           sourceRef: s.recite.source?.ref,
         }
       : undefined,
@@ -58,8 +50,12 @@ function PillarList({ items }: { items: Pillar[] }) {
 export default function LearnScreen() {
   const { t } = useTranslation();
   const { colors } = useTheme();
-  const wudu = useMemo(() => toItems(WUDU_STEPS), []);
-  const salah = useMemo(() => toItems(SALAH_STEPS), []);
+  const lang = useLang();
+  const learn = useMemo(() => localizeLearn(lang), [lang]);
+  const withMeaning = showMeaning(lang);
+  const wudu = useMemo(() => toItems(learn.WUDU_STEPS, withMeaning), [learn, withMeaning]);
+  const salah = useMemo(() => toItems(learn.SALAH_STEPS, withMeaning), [learn, withMeaning]);
+  const { DUA_AFTER_WUDU, SALAH_NOTES, PILLARS_OF_ISLAM, PILLARS_OF_IMAN } = learn;
   const hints = { expandHint: t('learn.expandHint'), collapseHint: t('learn.collapseHint') };
 
   return (
@@ -73,7 +69,7 @@ export default function LearnScreen() {
           <ArabicBlock
             arabic={DUA_AFTER_WUDU.arabic}
             transliteration={DUA_AFTER_WUDU.transliteration}
-            meaning={DUA_AFTER_WUDU.meaning}
+            meaning={withMeaning ? DUA_AFTER_WUDU.meaning : undefined}
             sourceRef={DUA_AFTER_WUDU.source.ref}
           />
         </View>

@@ -5,7 +5,7 @@ import { AppText } from './AppText';
 export type ArabicBlockProps = {
   arabic: string;
   transliteration?: string;
-  meaning: string;
+  meaning?: string;
   sourceRef?: string;
   size?: 'normal' | 'large';
 };
@@ -15,7 +15,7 @@ export function ArabicBlock({ arabic, transliteration, meaning, sourceRef, size 
     <View style={styles.block}>
       <AppText variant={size === 'large' ? 'arabicLarge' : 'arabic'}>{arabic}</AppText>
       {transliteration ? <AppText variant="small" muted center>{transliteration}</AppText> : null}
-      <AppText variant="body" center>{meaning}</AppText>
+      {meaning ? <AppText variant="body" center>{meaning}</AppText> : null}
       {sourceRef ? <AppText variant="caption" muted center>{sourceRef}</AppText> : null}
     </View>
   );

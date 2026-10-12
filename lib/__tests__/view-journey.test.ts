@@ -107,3 +107,16 @@ describe('buildJourneyVM', () => {
     expect(statusOf(buildJourneyVM(s, now), day)).toBe('complete');
   });
 });
+
+describe('buildJourneyVM localization', () => {
+  it('localizes week titles and day themes', () => {
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const i18n = require('../../content/i18n') as typeof import('../../content/i18n');
+    i18n.__withTableForTest('tr', { 'week.1.title': 'W1', 'day.1.theme': 'T1' }, () => {
+      const vm = buildJourneyVM(state(), START, 'tr');
+      expect(vm.weeks[0].title).toBe('W1');
+      expect(vm.weeks[0].days[0].theme).toBe('T1');
+    });
+    expect(buildJourneyVM(state(), START).weeks[0].days[0].theme).toBe(DAYS[0].theme);
+  });
+});

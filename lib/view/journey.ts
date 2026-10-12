@@ -1,6 +1,7 @@
 import { DAYS, WEEKS } from '../../content/days';
+import { localizeDay, localizeWeek } from '../../content/i18n';
 import { getPlanPosition, type DateKey, type Phase } from '../day';
-import type { PersistedState } from '../model';
+import type { Lang, PersistedState } from '../model';
 import { buildDayVM } from './today';
 
 export type DayStatus = 'complete' | 'partial' | 'open' | 'today' | 'locked';
@@ -19,15 +20,18 @@ function statusFor(state: PersistedState, day: number, currentDay: number, phase
 export function buildJourneyVM(
   state: PersistedState,
   today: DateKey,
+  lang: Lang = 'en',
 ): { cycle: number; currentDay: number; phase: Phase; weeks: JourneyWeekVM[] } {
   const { day: currentDay, phase } = getPlanPosition(state.planStartDate ?? today, today);
-  const weeks = WEEKS.map((w): JourneyWeekVM => {
+  const weeks = WEEKS.map((src): JourneyWeekVM => {
+    const w = localizeWeek(src, lang);
     const days: JourneyDayVM[] = [];
     for (let d = w.days[0]; d <= w.days[1]; d++) {
+      const dc = DAYS[d - 1] ? localizeDay(DAYS[d - 1], lang) : undefined;
       days.push({
         day: d,
-        theme: DAYS[d - 1]?.theme ?? '',
-        themeArabic: DAYS[d - 1]?.themeArabic ?? '',
+        theme: dc?.theme ?? '',
+        themeArabic: dc?.themeArabic ?? '',
         status: statusFor(state, d, currentDay, phase, today),
       });
     }

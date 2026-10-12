@@ -12,6 +12,8 @@ import { useAppStore } from '@/lib/store';
 import type { MoodType } from '@/lib/types';
 import { useToday } from '@/lib/useToday';
 import { buildDayVM, type TaskVM } from '@/lib/view/today';
+import { showMeaning } from '@/content/i18n';
+import { useLang } from '@/theme/useLang';
 
 /** Parses the route param to a plan day (1..PLAN_LENGTH, clamped); null when not a number. */
 function parseDay(raw: string | string[] | undefined): number | null {
@@ -25,6 +27,7 @@ export default function DayDetailScreen() {
   const router = useRouter();
   const { n } = useLocalSearchParams<{ n?: string | string[] }>();
   const today = useToday();
+  const lang = useLang();
   const day = parseDay(n);
 
   const profile = useAppStore((s) => s.profile);
@@ -44,8 +47,8 @@ export default function DayDetailScreen() {
   const vm = useMemo(() => {
     if (day === null) return null;
     const dates = todayLog ? { [today]: todayLog } : {};
-    return buildDayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), day, today);
-  }, [day, profile, cycle, planStartDate, planDays, todayLog, today]);
+    return buildDayVM(persistedFrom({ profile, cycle, planStartDate, planDays, dates }), day, today, lang);
+  }, [day, profile, cycle, planStartDate, planDays, todayLog, today, lang]);
 
   const moodLabels = useMemo(
     () => Object.fromEntries(MOODS.map((m) => [m, t(`mood.${m}`)])) as Record<MoodType, string>,
@@ -99,7 +102,7 @@ export default function DayDetailScreen() {
         <ArabicBlock
           arabic={content.hadith.arabic}
           transliteration={content.hadith.transliteration}
-          meaning={content.hadith.meaning}
+          meaning={showMeaning(lang) ? content.hadith.meaning : undefined}
           sourceRef={content.hadith.source.ref}
           size="large"
         />
