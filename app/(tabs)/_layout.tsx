@@ -37,8 +37,8 @@ export default function TabLayout() {
         tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarHideOnKeyboard: true,
-        tabBarLabelStyle: { fontFamily: font('uiMedium'), fontSize: 11 },
-        tabBarItemStyle: { paddingVertical: 6 },
+        tabBarLabelStyle: { fontFamily: font('uiMedium'), fontSize: 11, lineHeight: 16 },
+        tabBarItemStyle: { paddingVertical: 4 },
         tabBarBackground: () => (
           <View style={styles.clip}>
             {Platform.OS === 'ios' ? (
@@ -51,7 +51,7 @@ export default function TabLayout() {
           start: 16,
           end: 16,
           bottom: insets.bottom + 8,
-          height: 64,
+          height: 68,
           borderRadius: 22,
           borderWidth: StyleSheet.hairlineWidth,
           borderColor: colors.line,
