@@ -83,6 +83,6 @@ const styles = StyleSheet.create({
   item: { borderBottomWidth: StyleSheet.hairlineWidth, paddingVertical: 4 },
   head: { minHeight: 56, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   headText: { flex: 1 },
-  body: { gap: 12, paddingBottom: 12 },
+  body: { gap: 12, paddingTop: 8, paddingBottom: 12 },
   complete: { marginTop: 16 },
 });
