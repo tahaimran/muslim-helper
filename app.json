@@ -16,9 +16,7 @@
         "backgroundColor": "#161A33"
       },
       "permissions": [
-        "POST_NOTIFICATIONS",
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.ACCESS_FINE_LOCATION"
+        "POST_NOTIFICATIONS"
       ],
       "blockedPermissions": [
         "android.permission.READ_EXTERNAL_STORAGE",
@@ -93,7 +91,6 @@
     },
     "extra": {
       "supportEmail": "nafs.app.support@gmail.com",
-      "router": {},
       "eas": {
         "projectId": "56db77e3-d54f-4923-872a-b4019ebe0874"
       }
