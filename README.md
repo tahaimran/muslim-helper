@@ -22,6 +22,10 @@ npm run dev        # start Expo
 npm test           # Jest
 npm run typecheck  # tsc --noEmit
 npm run lint       # expo lint
+npm run build:web  # static web build (expo export --platform web) into dist/
+npm run i18n:extract           # regenerate content/i18n/en.json from content/
+node scripts/sync-locales.js   # copy new keys from locales/en.json into the other locales
+node scripts/render-icons.mjs  # render the app icon, adaptive icon, splash and favicon PNGs
 ```
 
 ## Project structure
@@ -31,13 +35,13 @@ npm run lint       # expo lint
 - `theme/` - colors, fonts, spacing
 - `lib/` - pure logic, store and i18n (with tests in `lib/__tests__/`)
 - `content/` - journey days, duas, learn links, milestones, cities
-- `locales/` - translation files (`en.json` is the source)
+- `locales/` - translation files (`en.json` is the source); `locales/native/` holds the localized iOS app name and location permission text
 - `store/` - app store listing text per language
 - `docs/` - privacy policy, review checklists, screenshots
 
 ## Content sources and review
 
-Religious content is sourced and checked as recorded in `docs/content-sources/`. Every content change should be reviewed against `docs/content-review-checklist.md`. A translation review checklist will be added later.
+Religious content is sourced and checked as recorded in `docs/content-sources/`. Every content change should be reviewed against `docs/content-review-checklist.md`. Translations are listed for a native-speaking reviewer in [`docs/translation-review-checklist.md`](docs/translation-review-checklist.md).
 
 ## Testing RTL on device
 
@@ -53,11 +57,14 @@ The layout direction follows the language chosen inside Awdah, not the phone's l
 You need a free Expo account (the owner must create one). No backend is required.
 
 ```
-npm install -g eas-cli
+npm i -g eas-cli
 eas login
-eas build -p android
-eas build -p ios
+eas build:configure     # creates eas.json and links the project
+eas build -p android    # Play Store build (AAB)
+eas build -p ios        # App Store build (needs an Apple Developer account)
 ```
+
+The Play feature graphic brief is `store/feature_graphic_brief.txt`. The iOS build is phone-only (`ios.supportsTablet: false`, so no iPad screenshots are needed); the owner can turn tablets back on in `app.json`.
 
 Store listing text lives in `store/<language>/`; screenshots are in `docs/screenshots/`.
 
@@ -70,4 +77,6 @@ The policy is `docs/privacy-policy.md`. To publish it for the stores:
 3. The policy will be served at `https://<user>.github.io/<repo>/privacy-policy`.
 4. Add that URL to `app.json` as `expo.extra.privacyPolicyUrl` and use it in the App Store and Google Play listings.
 
-Contact: nafs.app.support@gmail.com
+## Support
+
+Contact: nafs.app.support@gmail.com. To change the support address, update `expo.extra.supportEmail` in `app.json` and the address in `docs/privacy-policy.md`, `docs/content-review-checklist.md`, `docs/translation-review-checklist.md`, this README and the store listing contact fields. The app screens do not show an email address.

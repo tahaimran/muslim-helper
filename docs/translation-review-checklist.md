@@ -274,6 +274,491 @@ These 201 keys have an intentionally empty Arabic meaning; nothing to review.
 - `milestone.week_one.meaning`
 - `welcomeBack.meaning`
 
+### Quotations and rulings outside meaning lines (ar)
+
+Texts outside the meaning lines that quote Allah or the Prophet ﷺ, quote someone, or explain a ruling (every Learn title and body). Check that each quotation is faithful and each ruling is stated accurately.
+
+- [ ] `day.1.quran.note`
+  - English: Read Al-Fatihah slowly and reflect on each verse. You recite it in every rak'ah: "Guide us to the straight path."
+  - Arabic: اقرأ سورة الفاتحة على مهل وتدبّر كل آية منها. إنك تقرؤها في كل ركعة: ﴿اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ﴾.
+- [ ] `day.1.sunnah.description`
+  - English: Say "Bismillah" before you eat, drink, leave the house or start your work. The Prophet ﷺ said to a boy: "Mention the name of Allah, eat with your right hand, and eat from what is in front of you."
+  - Arabic: قل «بسم الله» قبل أن تأكل أو تشرب أو تخرج من البيت أو تبدأ عملك. قال النبي ﷺ لغلام: «يا غلام، سمِّ الله، وكُلْ بيمينك، وكُلْ مما يليك».
+- [ ] `day.10.intro`
+  - English: Du'a is worship itself, and Allah says, "Call upon Me; I will respond to you." Today you learn to speak to Allah in your own words and trust in His answer.
+  - Arabic: الدعاء هو العبادة، والله يقول: ﴿ادْعُونِي أَسْتَجِبْ لَكُمْ﴾. اليوم تتعلّم أن تناجي الله بكلماتك أنت، وأن تثق في إجابته.
+- [ ] `day.10.prayer.tip`
+  - English: In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is prostrating, so make much du'a." Anas said this Quranic du'a was the one he made most often (Bukhari 6389).
+  - Arabic: في كل سجودٍ اليوم ادعُ بكلماتك لحاجاتك ولأهلك وللأمة. قال النبي ﷺ: «أقرب ما يكون العبد من ربه وهو ساجد، فأكثروا الدعاء». وذكر أنسٌ أن هذا الدعاء القرآني كان أكثر دعاء النبي ﷺ (البخاري ٦٣٨٩).
+- [ ] `day.10.quran.note`
+  - English: The verse that shows Allah is always near and always listening: "I am near. I respond to the call of the one who calls upon Me."
+  - Arabic: الآية التي تُبيّن أن الله قريبٌ دائمًا ويسمع دائمًا: ﴿فَإِنِّي قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ﴾.
+- [ ] `day.10.sunnah.description`
+  - English: The Prophet ﷺ taught us special times for du'a: the last third of the night (Bukhari 1145), between the adhan and the iqamah (Abu Dawud 521; Tirmidhi 212), in sujood (Muslim 482), at the end of the obligatory prayers (Tirmidhi 3499), and the hour on Friday, sought in the last hour after Asr (Bukhari 935; Abu Dawud 1048). Use at least 3 of these times today.
+  - Arabic: علّمنا النبي ﷺ أوقاتًا خاصة للدعاء: الثلث الأخير من الليل (البخاري ١١٤٥)، وبين الأذان والإقامة (أبو داود ٥٢١؛ الترمذي ٢١٢)، وفي السجود (مسلم ٤٨٢)، ودبر الصلوات المكتوبة (الترمذي ٣٤٩٩)، وساعة الجمعة التي تُلتمس آخر ساعةٍ بعد العصر (البخاري ٩٣٥؛ أبو داود ١٠٤٨). اغتنم ثلاثةً من هذه الأوقات على الأقل اليوم.
+- [ ] `day.11.intro`
+  - English: Giving in the way of Allah purifies your wealth, eases hardship and earns His love. The Prophet ﷺ was the most generous of people, and even more generous in Ramadan.
+  - Arabic: الإنفاق في سبيل الله يطهّر مالك، ويُفرّج الكرب، وينال به العبد محبة الله. وكان النبي ﷺ أجود الناس، وكان أجود ما يكون في رمضان.
+- [ ] `day.11.prayer.tip`
+  - English: Every morning two angels come down. One says, "O Allah, give the one who spends something in return," and the other says, "O Allah, give the one who withholds loss" (Bukhari 1442; Muslim 1010). Give some sadaqah early today, after Fajr.
+  - Arabic: ما من صباحٍ إلا وينزل فيه ملكان، فيقول أحدهما: «اللهم أعطِ منفقًا خلفًا»، ويقول الآخر: «اللهم أعطِ ممسكًا تلفًا» (البخاري ١٤٤٢؛ مسلم ١٠١٠). تصدّق بشيءٍ مبكرًا اليوم بعد الفجر.
+- [ ] `day.11.quran.note`
+  - English: The parable of those who spend in the way of Allah: like a grain that grows seven ears, with a hundred grains in each ear. "And Allah multiplies for whom He wills."
+  - Arabic: مثل الذين ينفقون في سبيل الله: كمثل حبةٍ أنبتت سبع سنابل، في كل سنبلةٍ مئة حبة. ﴿وَاللَّهُ يُضَاعِفُ لِمَنْ يَشَاءُ﴾.
+- [ ] `day.11.sunnah.description`
+  - English: The Prophet ﷺ said: "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that benefits, or a righteous child who prays for him." Start an ongoing charity today: share beneficial knowledge, teach someone a Sunnah, plant a tree, give to a masjid fund or support an orphan.
+  - Arabic: قال النبي ﷺ: «إذا مات الإنسان انقطع عنه عمله إلا من ثلاثة: إلا من صدقةٍ جارية، أو علمٍ يُنتفع به، أو ولدٍ صالحٍ يدعو له». ابدأ اليوم صدقةً جارية: انشر علمًا نافعًا، أو علِّم أحدًا سنّة، أو اغرس شجرة، أو ساهم في صندوق مسجد، أو اكفل يتيمًا.
+- [ ] `day.12.character.action`
+  - English: Practise contentment today: hold back from one purchase or desire you would normally give in to, and say "Alhamdulillah" for what you have.
+  - Arabic: تمرّن اليوم على القناعة: امتنع عن شراءٍ أو رغبةٍ كنت ستستجيب لها عادةً، وقل «الحمد لله» على ما عندك.
+- [ ] `day.12.character.description`
+  - English: The Prophet ﷺ said: "Wealth is not having many possessions; true wealth is contentment of the soul" (Bukhari 6446).
+  - Arabic: قال النبي ﷺ: «ليس الغنى عن كثرة العَرَض، ولكنّ الغنى غنى النفس» (البخاري ٦٤٤٦).
+- [ ] `day.12.quran.note`
+  - English: Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."
+  - Arabic: يأمرنا الله أن نأكل مما في الأرض حلالًا طيبًا، ويحذّرنا من اتّباع خطوات الشيطان: ﴿إِنَّهُ لَكُمْ عَدُوٌّ مُبِينٌ﴾.
+- [ ] `day.12.sunnah.description`
+  - English: Make this du'a often: "Allahummak-fini bi-halalika 'an haramika wa aghnini bi-fadlika 'amman siwak" (O Allah, suffice me with what You have made lawful instead of what You have forbidden, and make me free of need of anyone besides You). After Fajr, also ask Allah for "beneficial knowledge, good provision and accepted deeds" (Ibn Majah 925).
+  - Arabic: أكثِر من هذا الدعاء: «اللهم اكفني بحلالك عن حرامك، وأغنني بفضلك عمّن سواك». وبعد الفجر سَل الله أيضًا: «اللهم إني أسألك علمًا نافعًا، ورزقًا طيبًا، وعملًا متقبَّلًا» (ابن ماجه ٩٢٥).
+- [ ] `day.13.character.action`
+  - English: Write down your top 3 worries. Then sincerely hand each one to Allah's care, saying "Hasbunallahu wa ni'mal wakil."
+  - Arabic: اكتب أكبر ثلاثة همومٍ لديك، ثم فوِّض كل واحدٍ منها إلى الله بصدق قائلًا: «حسبنا الله ونعم الوكيل».
+- [ ] `day.13.prayer.tip`
+  - English: If you have a decision to make, big or small, pray istikhara today: two voluntary rak'ahs followed by the istikhara du'a, which the Prophet ﷺ taught his Companions for every matter (Bukhari 6382). Then move forward, trusting that Allah is guiding your steps.
+  - Arabic: إن كان أمامك قرارٌ تتخذه، كبيرًا كان أو صغيرًا، فصلِّ صلاة الاستخارة اليوم: ركعتين من غير الفريضة يتبعهما دعاء الاستخارة، الذي كان النبي ﷺ يعلّمه أصحابه في الأمور كلها (البخاري ٦٣٨٢). ثم امضِ واثقًا أن الله يهدي خطاك.
+- [ ] `day.13.quran.note`
+  - English: The well-known verse on trust: "And whoever relies upon Allah, He is sufficient for him. Indeed, Allah will accomplish His purpose."
+  - Arabic: الآية المشهورة في التوكل: ﴿وَمَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ ۚ إِنَّ اللَّهَ بَالِغُ أَمْرِهِ﴾.
+- [ ] `day.13.sunnah.description`
+  - English: A man asked the Prophet ﷺ whether he should tie his camel and trust in Allah, or leave it untied and trust in Allah. He said: "Tie it, and trust in Allah." Tawakkul includes doing your part fully, then letting go of the outcome.
+  - Arabic: سأل رجلٌ النبي ﷺ: أأعقل ناقتي وأتوكّل، أم أُطلقها وأتوكّل؟ فقال: «اعقلها وتوكّل». فالتوكل يشمل أن تؤدي ما عليك كاملًا، ثم تُسلّم النتيجة لله.
+- [ ] `day.14.intro`
+  - English: Allah says, "If you are grateful, I will surely increase you." Today, learn to see every moment as a gift from Him, and to show gratitude in word and deed.
+  - Arabic: يقول الله: ﴿لَئِنْ شَكَرْتُمْ لَأَزِيدَنَّكُمْ﴾. اليوم تعلّم أن ترى كل لحظةٍ هديةً منه، وأن تشكره بالقول والعمل.
+- [ ] `day.14.prayer.tip`
+  - English: When good news or a blessing reaches you today, fall into a single prostration of gratitude (sujud ash-shukr). Whenever something pleasing came to the Prophet ﷺ, he would fall down in prostration, thanking Allah (Abu Dawud 2774). After each prayer, ask Allah to help you thank Him.
+  - Arabic: إذا بلغك اليوم خبرٌ سار أو نعمة، فاسجد سجدةً واحدة للشكر (سجود الشكر). فقد كان النبي ﷺ إذا جاءه أمرٌ يسرّه خرّ ساجدًا شكرًا لله (أبو داود ٢٧٧٤). وبعد كل صلاة سَل الله أن يعينك على شكره.
+- [ ] `day.14.quran.note`
+  - English: Allah's promise that gratitude brings increase: "If you are grateful, I will surely increase you; but if you deny, indeed, My punishment is severe."
+  - Arabic: وعد الله بأن الشكر يجلب الزيادة: ﴿لَئِنْ شَكَرْتُمْ لَأَزِيدَنَّكُمْ ۖ وَلَئِنْ كَفَرْتُمْ إِنَّ عَذَابِي لَشَدِيدٌ﴾.
+- [ ] `day.14.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever does not thank people does not thank Allah." Show gratitude in two ways today: thank Allah directly (Alhamdulillah), and thank the people through whom He blessed you.
+  - Arabic: قال النبي ﷺ: «من لا يشكر الناس لا يشكر الله». اشكر اليوم بطريقتين: اشكر الله مباشرةً (الحمد لله)، واشكر الناس الذين أنعم الله عليك على أيديهم.
+- [ ] `day.15.quran.note`
+  - English: The command to stand with the truthful: "O you who believe, fear Allah and be with those who are truthful."
+  - Arabic: الأمر بأن نكون مع الصادقين: ﴿يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ وَكُونُوا مَعَ الصَّادِقِينَ﴾.
+- [ ] `day.15.sunnah.description`
+  - English: When the Prophet ﷺ called the tribes of Quraysh together, they told him: "We have never experienced anything from you but truthfulness." Today, be completely honest in every interaction: no white lies, exaggerations or misleading statements, even ones that seem harmless.
+  - Arabic: حين جمع النبي ﷺ بطون قريش قالوا له: «ما جرّبنا عليك إلا صدقًا». كن اليوم صادقًا تمامًا في كل تعامل: لا كذبة بيضاء، ولا مبالغة، ولا كلام مُوهم، حتى ما يبدو منها غير مؤذٍ.
+- [ ] `day.16.intro`
+  - English: Amanah means fulfilling trusts, keeping promises and being reliable in every role: in your family, with friends, at work and as a Muslim. Even before prophethood, the Prophet ﷺ was known among his people for his trustworthiness.
+  - Arabic: الأمانة أداء الحقوق، والوفاء بالوعود، وأن تكون أهلًا للثقة في كل دور: في أسرتك، ومع أصدقائك، وفي عملك، وبوصفك مسلمًا. وقد عُرف النبي ﷺ في قومه بالأمانة حتى قبل البعثة.
+- [ ] `day.16.quran.note`
+  - English: "O you who believe, do not betray Allah and the Messenger, and do not knowingly betray your trusts."
+  - Arabic: ﴿يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَخُونُوا اللَّهَ وَالرَّسُولَ وَتَخُونُوا أَمَانَاتِكُمْ وَأَنْتُمْ تَعْلَمُونَ﴾.
+- [ ] `day.16.sunnah.description`
+  - English: The Prophet ﷺ said: "The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks his promise, and when he is trusted he betrays the trust." List any promises or commitments you have not kept, and fulfil at least one today.
+  - Arabic: قال النبي ﷺ: «آية المنافق ثلاث: إذا حدّث كذب، وإذا وعد أخلف، وإذا اؤتُمن خان». اكتب ما لم تفِ به من وعودٍ أو التزامات، وأوفِ بواحدٍ منها على الأقل اليوم.
+- [ ] `day.17.character.action`
+  - English: When you feel irritated or frustrated today, stop and say "Alhamdulillah 'ala kulli hal" (praise be to Allah in every situation) before you respond.
+  - Arabic: حين تشعر بالضيق أو الإحباط اليوم، توقّف وقل «الحمد لله على كل حال» قبل أن تردّ.
+- [ ] `day.17.intro`
+  - English: "Indeed, Allah is with the patient." Sabr is not passive resignation; it is active, disciplined perseverance, knowing that Allah is testing and refining you.
+  - Arabic: ﴿إِنَّ اللَّهَ مَعَ الصَّابِرِينَ﴾. الصبر ليس استسلامًا سلبيًا، بل مثابرةٌ واعيةٌ منضبطة، مع اليقين بأن الله يختبرك ويصقلك.
+- [ ] `day.17.quran.note`
+  - English: Allah tests us with fear, hunger and loss, "but give good tidings to the patient: those who, when disaster strikes them, say: Indeed we belong to Allah, and indeed to Him we will return."
+  - Arabic: يبتلينا الله بالخوف والجوع والنقص: ﴿وَبَشِّرِ الصَّابِرِينَ ۝ الَّذِينَ إِذَا أَصَابَتْهُمْ مُصِيبَةٌ قَالُوا إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ﴾.
+- [ ] `day.17.sunnah.description`
+  - English: The Prophet ﷺ said: "The strong one is not the one who overcomes people by his strength, but the one who controls himself when angry." When something irritates you today, pause and say "A'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). If you are standing, sit down (Abu Dawud 4782).
+  - Arabic: قال النبي ﷺ: «ليس الشديد بالصُّرَعة، إنما الشديد الذي يملك نفسه عند الغضب». إذا أغضبك شيءٌ اليوم فتوقّف وقل: «أعوذ بالله من الشيطان الرجيم» (البخاري ٦١١٥). وإن كنت قائمًا فاجلس (أبو داود ٤٧٨٢).
+- [ ] `day.17.task.17_inna_lillah.title`
+  - English: Say "Inna lillahi wa inna ilayhi raji'un" at every difficulty today
+  - Arabic: قل «إنا لله وإنا إليه راجعون» عند كل شدةٍ اليوم
+- [ ] `day.18.character.description`
+  - English: Pride (kibr) is a disease of the heart. The Prophet ﷺ said that no one with an atom's weight of pride in his heart will enter Paradise, and he defined pride as "rejecting the truth and looking down on people" (Muslim 91).
+  - Arabic: الكِبر داءٌ من أدواء القلوب. أخبر النبي ﷺ أنه لا يدخل الجنة من كان في قلبه مثقال ذرةٍ من كِبر، وعرّف الكِبر بأنه «بطر الحق وغمط الناس» (مسلم ٩١).
+- [ ] `day.18.intro`
+  - English: The Prophet ﷺ was the most humble of people, though he was the greatest of them. True tawadu' comes from knowing Allah and knowing yourself.
+  - Arabic: كان النبي ﷺ أشدّ الناس تواضعًا وهو أعظمهم قدرًا. والتواضع الحقيقي ينبع من معرفة الله ومعرفة النفس.
+- [ ] `day.18.prayer.tip`
+  - English: Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, say "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High; Muslim 772) and feel its meaning: you are submitting completely to Him. Let that feeling stay with you.
+  - Arabic: وضع الجبهة على الأرض أكمل تعبيرٍ جسدي عن التواضع. قل في كل سجودٍ اليوم «سبحان ربي الأعلى» (مسلم ٧٧٢) واستشعر معناها: إنك تخضع له خضوعًا تامًّا. ودع هذا الشعور يرافقك.
+- [ ] `day.18.quran.note`
+  - English: "And do not walk upon the earth arrogantly. Indeed, you will never tear the earth apart, and you will never reach the mountains in height."
+  - Arabic: ﴿وَلَا تَمْشِ فِي الْأَرْضِ مَرَحًا ۖ إِنَّكَ لَنْ تَخْرِقَ الْأَرْضَ وَلَنْ تَبْلُغَ الْجِبَالَ طُولًا﴾.
+- [ ] `day.18.sunnah.description`
+  - English: The Prophet ﷺ would greet even children with salam (Bukhari 6247; Muslim 2168), and he said: "The people closest to Allah are those who begin the greeting of salam." Today, be the first to say salam to everyone you meet.
+  - Arabic: كان النبي ﷺ يسلّم حتى على الصبيان (البخاري ٦٢٤٧؛ مسلم ٢١٦٨)، وقال: «إن أولى الناس بالله من بدأهم بالسلام». كن اليوم البادئ بالسلام على كل من تلقاه.
+- [ ] `day.19.intro`
+  - English: The Prophet ﷺ was sent as a mercy to all the worlds. Mercy towards people, animals and all of creation is a sign of strong faith.
+  - Arabic: بُعث النبي ﷺ رحمةً للعالمين. والرحمة بالناس والحيوان وسائر الخلق علامةٌ على قوة الإيمان.
+- [ ] `day.19.prayer.tip`
+  - English: In today's prayers, make specific du'a for others: your parents, your family, the sick and suffering, and Muslims around the world. The Prophet ﷺ said that when a believer prays for his brother in his absence, the angel says, "And the same for you" (Muslim 2732).
+  - Arabic: في صلوات اليوم ادعُ دعاءً محددًا لغيرك: لوالديك، ولأهلك، وللمرضى والمكروبين، وللمسلمين في أنحاء العالم. أخبر النبي ﷺ أن المؤمن إذا دعا لأخيه بظهر الغيب قال الملَك: «ولك بمثل» (مسلم ٢٧٣٢).
+- [ ] `day.19.quran.note`
+  - English: The summary of the Prophet's ﷺ mission: "And We have not sent you except as a mercy to the worlds."
+  - Arabic: خلاصة رسالة النبي ﷺ: ﴿وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِلْعَالَمِينَ﴾.
+- [ ] `day.19.sunnah.description`
+  - English: The Prophet ﷺ told of a woman who entered the Fire because of a cat she locked up without food or water, and of a man who gave water to a thirsty dog, so Allah thanked him and admitted him to Paradise. Today, show active mercy: feed a bird, put out water, be gentle with animals and reduce waste.
+  - Arabic: أخبر النبي ﷺ عن امرأةٍ دخلت النار في هرّةٍ حبستها فلم تُطعمها ولم تسقها، وعن رجلٍ سقى كلبًا عطشان فشكر الله له فغفر له وأدخله الجنة. أظهر اليوم رحمةً عملية: أطعم طائرًا، أو ضع ماءً، أو ترفّق بالحيوان، أو قلّل الهدر.
+- [ ] `day.2.character.action`
+  - English: Whenever you feel the urge to speak badly about someone, say "SubhanAllah" instead and change the topic.
+  - Arabic: كلما شعرت برغبةٍ في ذكر أحدٍ بسوء، قل «سبحان الله» بدلًا من ذلك وغيِّر الحديث.
+- [ ] `day.2.quran.note`
+  - English: Reflect on this verse about purification: "Indeed, Allah loves those who turn to Him in repentance and loves those who purify themselves."
+  - Arabic: تدبّر هذه الآية في الطهارة: ﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾.
+- [ ] `day.2.sunnah.description`
+  - English: The Prophet ﷺ said: "Were it not that it would be hard on my ummah, I would have commanded them to use the siwak with every prayer." Use a siwak or brush your teeth before your prayers today.
+  - Arabic: قال النبي ﷺ: «لولا أن أشقّ على أمتي لأمرتهم بالسواك عند كل صلاة». استعمل السواك أو نظِّف أسنانك بالفرشاة قبل صلواتك اليوم.
+- [ ] `day.20.quran.note`
+  - English: Allah links keeping family ties directly to fearing Him: "And fear Allah, through whom you ask one another, and the wombs."
+  - Arabic: يقرن الله صلة الرحم بتقواه مباشرةً: ﴿وَاتَّقُوا اللَّهَ الَّذِي تَسَاءَلُونَ بِهِ وَالْأَرْحَامَ﴾.
+- [ ] `day.20.sunnah.description`
+  - English: The Prophet ﷺ said: "The one who keeps ties is not the one who only returns the favour, but the one who keeps ties when they have been cut." Today, reach out to a family member you have drifted away from.
+  - Arabic: قال النبي ﷺ: «ليس الواصل بالمكافئ، ولكن الواصل الذي إذا قُطعت رحمه وصلها». تواصل اليوم مع قريبٍ ابتعدت عنه.
+- [ ] `day.21.character.description`
+  - English: The Prophet ﷺ said that a good word is charity (Bukhari 2989; Muslim 1009). The words you choose can lift people up or tear them down, so choose every word with care today.
+  - Arabic: أخبر النبي ﷺ أن الكلمة الطيبة صدقة (البخاري ٢٩٨٩؛ مسلم ١٠٠٩). الكلمات التي تختارها قد ترفع الناس أو تهدمهم، فاختر كل كلمةٍ بعناية اليوم.
+- [ ] `day.21.quran.note`
+  - English: Allah's description of the Prophet ﷺ: "And indeed, you are of a great moral character."
+  - Arabic: وصف الله لنبيه ﷺ: ﴿وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ﴾.
+- [ ] `day.21.sunnah.description`
+  - English: The Prophet ﷺ said: "Your smiling in the face of your brother is charity for you." Jarir said that from the day he accepted Islam, the Prophet ﷺ never saw him without smiling at him. Today, smile genuinely at every person you meet: at home, at work and in the street.
+  - Arabic: قال النبي ﷺ: «تبسّمك في وجه أخيك لك صدقة». وقال جرير: ما رآني النبي ﷺ منذ أسلمت إلا تبسّم في وجهي. ابتسم اليوم ابتسامةً صادقة لكل من تلقاه: في البيت، وفي العمل، وفي الطريق.
+- [ ] `day.22.prayer.tip`
+  - English: After Fajr, while the mind is fresh and the world is quiet, spend 15 minutes studying one Islamic topic. Begin with the du'a for beneficial knowledge that the Prophet ﷺ said after the salam of Fajr.
+  - Arabic: بعد الفجر، والذهن صافٍ والعالم ساكن، خصِّص خمس عشرة دقيقة لدراسة موضوعٍ إسلامي واحد. وابدأ بدعاء العلم النافع الذي كان النبي ﷺ يقوله بعد السلام من صلاة الفجر.
+- [ ] `day.22.quran.note`
+  - English: Scholars note that knowledge is the only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."
+  - Arabic: ينبّه العلماء إلى أن العلم هو الشيء الوحيد الذي أُمر النبي ﷺ أن يطلب الزيادة منه: ﴿وَقُلْ رَبِّ زِدْنِي عِلْمًا﴾.
+- [ ] `day.22.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever Allah wants good for, He gives him understanding of the religion." Learn one new thing about your deen today: a ruling of fiqh, a name of Allah, a hadith or the tafsir of an ayah.
+  - Arabic: قال النبي ﷺ: «من يُرد الله به خيرًا يفقّهه في الدين». تعلّم اليوم شيئًا جديدًا واحدًا عن دينك: حكمًا فقهيًا، أو اسمًا من أسماء الله، أو حديثًا، أو تفسير آية.
+- [ ] `day.23.sunnah.description`
+  - English: Allah praises those who "reflect on the creation of the heavens and the earth" and say: "Our Lord, You did not create this in vain." Take 15 minutes outside today: walk, sit and look at the sky, and say "SubhanAllah" at each sign of creation you notice.
+  - Arabic: يُثني الله على الذين ﴿يَتَفَكَّرُونَ فِي خَلْقِ السَّمَاوَاتِ وَالْأَرْضِ﴾ ويقولون: ﴿رَبَّنَا مَا خَلَقْتَ هَٰذَا بَاطِلًا﴾. اخرج اليوم خمس عشرة دقيقة: امشِ، واجلس، وانظر إلى السماء، وقل «سبحان الله» عند كل آيةٍ من آيات الخلق تلحظها.
+- [ ] `day.24.character.description`
+  - English: Before every major decision, ask: "How does this serve my akhirah?" Let that question reframe your choices.
+  - Arabic: قبل كل قرارٍ مهم اسأل: «كيف يخدم هذا آخرتي؟» ودع هذا السؤال يُعيد تشكيل اختياراتك.
+- [ ] `day.24.prayer.tip`
+  - English: A sign of zuhd is giving your time to prayer over worldly pursuits. Today, pray the sunnah prayers with each fard: the Prophet ﷺ said that whoever prays twelve rak'ahs in a day and night, a house is built for him in Paradise (Muslim 728).
+  - Arabic: من علامات الزهد أن تُؤثر الصلاة بوقتك على مشاغل الدنيا. صلِّ اليوم السنن الرواتب مع كل فريضة: قال النبي ﷺ إن من صلّى اثنتي عشرة ركعةً في يومٍ وليلة بُني له بيتٌ في الجنة (مسلم ٧٢٨).
+- [ ] `day.24.quran.note`
+  - English: The parable of this world: "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children..."
+  - Arabic: مثل الحياة الدنيا: ﴿اعْلَمُوا أَنَّمَا الْحَيَاةُ الدُّنْيَا لَعِبٌ وَلَهْوٌ وَزِينَةٌ وَتَفَاخُرٌ بَيْنَكُمْ وَتَكَاثُرٌ فِي الْأَمْوَالِ وَالْأَوْلَادِ﴾...
+- [ ] `day.24.sunnah.description`
+  - English: The Prophet ﷺ said: "There are two blessings that many people are cheated of: health and free time." Today, take a 3-hour break from social media and entertainment, and use that time for worship instead.
+  - Arabic: قال النبي ﷺ: «نعمتان مغبونٌ فيهما كثيرٌ من الناس: الصحة والفراغ». خذ اليوم استراحةً لثلاث ساعاتٍ من وسائل التواصل والترفيه، واستعمل ذلك الوقت في العبادة بدلًا منها.
+- [ ] `day.25.character.description`
+  - English: Among the seven whom Allah will shade on the Day when there is no shade but His is "a man who gives charity so secretly that his left hand does not know what his right hand gives" (Bukhari 660; Muslim 1031).
+  - Arabic: من السبعة الذين يظلّهم الله في ظلّه يوم لا ظلّ إلا ظلّه: «رجلٌ تصدّق أخفى حتى لا تعلم شماله ما تُنفق يمينه» (البخاري ٦٦٠؛ مسلم ١٠٣١).
+- [ ] `day.25.prayer.tip`
+  - English: Before each prayer today, check your intention: "Am I praying because people might see me, or purely for Allah?" Let every rak'ah be for Him alone.
+  - Arabic: قبل كل صلاةٍ اليوم راجع نيتك: «أأصلّي لأن الناس قد يرونني، أم لله خالصًا؟» واجعل كل ركعةٍ له وحده.
+- [ ] `day.25.quran.note`
+  - English: The essence of the religion: "And they were not commanded except to worship Allah, sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion."
+  - Arabic: جوهر الدين: ﴿وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ حُنَفَاءَ وَيُقِيمُوا الصَّلَاةَ وَيُؤْتُوا الزَّكَاةَ ۚ وَذَٰلِكَ دِينُ الْقَيِّمَةِ﴾.
+- [ ] `day.25.sunnah.description`
+  - English: Allah says in a hadith qudsi: "I am the most free of need of any partner. Whoever does a deed in which he associates anyone else with Me, I leave him and his association." Test each action today: "Would I do this the same way if no one was watching?" If not, correct your intention.
+  - Arabic: يقول الله في الحديث القدسي: «أنا أغنى الشركاء عن الشرك، من عمل عملًا أشرك فيه معي غيري تركته وشركه». اختبر كل عملٍ اليوم: «هل كنت سأفعله بالطريقة نفسها لو لم يرني أحد؟» فإن لم يكن كذلك فصحِّح نيتك.
+- [ ] `day.26.quran.note`
+  - English: "And He is with you wherever you are. And Allah, of what you do, is Seeing."
+  - Arabic: ﴿وَهُوَ مَعَكُمْ أَيْنَ مَا كُنْتُمْ ۚ وَاللَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ﴾.
+- [ ] `day.26.sunnah.description`
+  - English: 'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of 'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?
+  - Arabic: قال عمر بن الخطاب: «حاسبوا أنفسكم قبل أن تُحاسَبوا». وهذا من قول عمر وليس حديثًا. قبل أن تنام راجع يومك: ما الذي أحسنت فيه؟ وأين قصّرت؟ وما الذي ستحسّنه غدًا؟
+- [ ] `day.27.prayer.tip`
+  - English: In the last third of tonight, when Allah descends to the lowest heaven and asks, "Who is seeking My forgiveness, that I may forgive him?" (Bukhari 1145), pray tahajjud and make the most sincere tawbah of your life. Be specific about what you are repenting from.
+  - Arabic: في الثلث الأخير من هذه الليلة، حين ينزل الله إلى السماء الدنيا فيقول: «من يستغفرني فأغفر له؟» (البخاري ١١٤٥)، صلِّ التهجد وتُب أصدق توبةٍ في حياتك. وسمِّ بدقّةٍ ما تتوب منه.
+- [ ] `day.27.quran.note`
+  - English: The command to repent sincerely: "O you who believe, turn to Allah in sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow."
+  - Arabic: الأمر بالتوبة الصادقة: ﴿يَا أَيُّهَا الَّذِينَ آمَنُوا تُوبُوا إِلَى اللَّهِ تَوْبَةً نَصُوحًا عَسَىٰ رَبُّكُمْ أَنْ يُكَفِّرَ عَنْكُمْ سَيِّئَاتِكُمْ وَيُدْخِلَكُمْ جَنَّاتٍ تَجْرِي مِنْ تَحْتِهَا الْأَنْهَارُ﴾.
+- [ ] `day.27.sunnah.description`
+  - English: The Prophet ﷺ said: "No servant commits a sin, then purifies himself well, stands and prays two rak'ahs, then seeks Allah's forgiveness, except that Allah forgives him." Then he recited Al 'Imran 3:135. Make wudu carefully today, pray two rak'ahs and ask Allah to forgive you.
+  - Arabic: قال النبي ﷺ: «ما من عبدٍ يُذنب ذنبًا فيُحسن الطُّهور، ثم يقوم فيصلّي ركعتين، ثم يستغفر الله، إلا غفر الله له»، ثم قرأ الآية ١٣٥ من سورة آل عمران. توضّأ اليوم بعناية، وصلِّ ركعتين، واسأل الله أن يغفر لك.
+- [ ] `day.28.intro`
+  - English: The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body (Bukhari 6011; Muslim 2586). Today you invest in your community.
+  - Arabic: شبّه النبي ﷺ المؤمنين في تراحمهم وتوادّهم بالجسد الواحد (البخاري ٦٠١١؛ مسلم ٢٥٨٦). اليوم تستثمر في مجتمعك.
+- [ ] `day.28.quran.note`
+  - English: "You are the best nation produced for mankind. You enjoin what is right, forbid what is wrong and believe in Allah."
+  - Arabic: ﴿كُنْتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ تَأْمُرُونَ بِالْمَعْرُوفِ وَتَنْهَوْنَ عَنِ الْمُنْكَرِ وَتُؤْمِنُونَ بِاللَّهِ﴾.
+- [ ] `day.28.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever fulfils the need of his brother, Allah will fulfil his need; and whoever relieves a Muslim of a hardship, Allah will relieve him of a hardship on the Day of Resurrection." Today, volunteer, help a neighbour, contribute to a community cause or visit a sick Muslim.
+  - Arabic: قال النبي ﷺ: «من كان في حاجة أخيه كان الله في حاجته، ومن فرّج عن مسلمٍ كربةً فرّج الله عنه كربةً من كربات يوم القيامة». تطوّع اليوم، أو ساعد جارًا، أو ساهم في عملٍ مجتمعي، أو عُد مسلمًا مريضًا.
+- [ ] `day.29.intro`
+  - English: Every Muslim represents the deen, and da'wah is not only for scholars: it is living Islam so beautifully that others are inspired. "And who is better in speech than one who invites to Allah?"
+  - Arabic: كل مسلمٍ يمثّل دينه، والدعوة ليست للعلماء وحدهم: إنها أن تعيش الإسلام بجمالٍ يُلهم غيرك. ﴿وَمَنْ أَحْسَنُ قَوْلًا مِمَّنْ دَعَا إِلَى اللَّهِ﴾.
+- [ ] `day.29.prayer.tip`
+  - English: In your prayers today, make heartfelt du'a by name for people who are not Muslim or who have drifted from Islam. The Prophet ﷺ prayed for people's guidance: "O Allah, guide Daws" (Bukhari 2937), and he prayed for the guidance of Abu Hurayrah's mother (Muslim 2491).
+  - Arabic: ادعُ في صلواتك اليوم من قلبك، بالأسماء، لمن ليسوا مسلمين أو لمن ابتعدوا عن الإسلام. فقد دعا النبي ﷺ بالهداية للناس: «اللهم اهدِ دَوسًا» (البخاري ٢٩٣٧)، ودعا بالهداية لأمّ أبي هريرة (مسلم ٢٤٩١).
+- [ ] `day.29.quran.note`
+  - English: "And who is better in speech than one who invites to Allah, does righteousness and says: Indeed, I am of the Muslims."
+  - Arabic: ﴿وَمَنْ أَحْسَنُ قَوْلًا مِمَّنْ دَعَا إِلَى اللَّهِ وَعَمِلَ صَالِحًا وَقَالَ إِنَّنِي مِنَ الْمُسْلِمِينَ﴾.
+- [ ] `day.29.sunnah.description`
+  - English: The Prophet ﷺ said: "That Allah guides one person through you is better for you than red camels." The greatest da'wah is your character: when you are kind, honest, reliable, generous and humble, people see Islam in action. Embody these qualities in every interaction today.
+  - Arabic: قال النبي ﷺ: «لأن يهدي الله بك رجلًا خيرٌ لك من أن يكون لك حُمر النَّعَم». وأعظم الدعوة خُلُقك: فحين تكون لطيفًا صادقًا أمينًا كريمًا متواضعًا، يرى الناس الإسلام حيًّا أمامهم. جسِّد هذه الصفات في كل تعاملٍ اليوم.
+- [ ] `day.3.quran.note`
+  - English: "Guard your prayers, especially the middle prayer, and stand before Allah in devotion." Reflect on what it means to truly guard your prayers.
+  - Arabic: ﴿حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ﴾. تأمّل ما معنى أن تحافظ على صلواتك حقًّا.
+- [ ] `day.3.sunnah.description`
+  - English: The Prophet ﷺ said that whoever prays twelve voluntary rak'ahs in a day and night, a house will be built for him in Paradise. They are 2 before Fajr, 4 before Dhuhr and 2 after it, 2 after Maghrib and 2 after Isha.
+  - Arabic: أخبر النبي ﷺ أن من صلّى اثنتي عشرة ركعةً تطوّعًا في يومٍ وليلة بُني له بيتٌ في الجنة. وهي: ركعتان قبل الفجر، وأربعٌ قبل الظهر وركعتان بعده، وركعتان بعد المغرب، وركعتان بعد العشاء.
+- [ ] `day.30.intro`
+  - English: You have reached Day 30, but the journey does not end here; it begins here. Istiqamah means staying on the straight path consistently, as the Prophet ﷺ taught: "Say: I believe in Allah, then be steadfast."
+  - Arabic: لقد بلغت اليوم الثلاثين، لكن الرحلة لا تنتهي هنا، بل تبدأ من هنا. الاستقامة أن تثبت على الصراط المستقيم بمداومة، كما علّم النبي ﷺ: «قل آمنت بالله فاستقم».
+- [ ] `day.30.quran.note`
+  - English: The promise to those who remain steadfast: "Indeed, those who say, Our Lord is Allah, and then remain steadfast, the angels will descend upon them: Do not fear and do not grieve, but receive good tidings of Paradise, which you were promised."
+  - Arabic: وعد الله للثابتين: ﴿إِنَّ الَّذِينَ قَالُوا رَبُّنَا اللَّهُ ثُمَّ اسْتَقَامُوا تَتَنَزَّلُ عَلَيْهِمُ الْمَلَائِكَةُ أَلَّا تَخَافُوا وَلَا تَحْزَنُوا وَأَبْشِرُوا بِالْجَنَّةِ الَّتِي كُنْتُمْ تُوعَدُونَ﴾.
+- [ ] `day.30.sunnah.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small." Plan a daily routine of prayer, Quran, dhikr and character work for the next 30 days that you can keep up.
+  - Arabic: قال النبي ﷺ: «أحبّ الأعمال أدومها إلى الله وإن قلّ». خطِّط للأيام الثلاثين القادمة روتينًا يوميًا من الصلاة والقرآن والذكر وتهذيب الأخلاق تستطيع المداومة عليه.
+- [ ] `day.4.prayer.tip`
+  - English: Sleep early tonight and lay out your prayer mat before bed. When the alarm rings, sit up straight away and say the waking du'a, "Al-hamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur." Don't lie back down; wudu will wake you fully.
+  - Arabic: نَم مبكرًا الليلة وافرش سجادتك قبل النوم. وحين يرنّ المنبّه، اجلس فورًا وقل دعاء الاستيقاظ: «الحمد لله الذي أحيانا بعد ما أماتنا وإليه النشور». لا تعُد إلى الاستلقاء؛ فالوضوء سيوقظك تمامًا.
+- [ ] `day.4.quran.note`
+  - English: Read about the dawn prayer, which the angels witness: "Indeed, the recitation at dawn is ever witnessed."
+  - Arabic: اقرأ عن صلاة الفجر التي تشهدها الملائكة: ﴿إِنَّ قُرْآنَ الْفَجْرِ كَانَ مَشْهُودًا﴾.
+- [ ] `day.4.sunnah.description`
+  - English: On waking, say the waking du'a, wipe the sleep from your face with your hand, make wudu, and pray the 2 sunnah rak'ahs before Fajr. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and everything in it."
+  - Arabic: عند الاستيقاظ قل دعاء الاستيقاظ، وامسح أثر النوم عن وجهك بيدك، وتوضأ، وصلِّ ركعتي سنّة الفجر. قال النبي ﷺ: «ركعتا الفجر خيرٌ من الدنيا وما فيها».
+- [ ] `day.5.prayer.tip`
+  - English: Before Dhuhr, remind yourself that you are about to speak to Allah. Slow every movement and make your ruku' and sujood longer than usual. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is in prostration, so make much du'a."
+  - Arabic: قبل الظهر ذكِّر نفسك أنك على وشك مناجاة الله. تمهّل في كل حركة، وأطِل ركوعك وسجودك أكثر من المعتاد. قال النبي ﷺ: «أقرب ما يكون العبد من ربه وهو ساجد، فأكثروا الدعاء».
+- [ ] `day.5.quran.note`
+  - English: The first quality of the successful believers is khushu' in prayer: "Successful indeed are the believers, those who are humble in their prayer."
+  - Arabic: أول صفات المؤمنين المفلحين الخشوع في الصلاة: ﴿قَدْ أَفْلَحَ الْمُؤْمِنُونَ ۝ الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ﴾.
+- [ ] `day.5.sunnah.description`
+  - English: Make your prostration longer than usual today. In sujood, repeat "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High), then make your own du'a. In his night prayer, the Prophet's ﷺ prostration lasted as long as it takes to recite fifty verses.
+  - Arabic: أطِل سجودك اليوم أكثر من المعتاد. كرِّر في سجودك «سبحان ربي الأعلى»، ثم ادعُ بما تشاء. وكان سجود النبي ﷺ في صلاة الليل يطول قدر ما يقرأ أحدكم خمسين آية.
+- [ ] `day.6.character.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small" (Bukhari 6464). A small daily Quran habit shapes the soul over time.
+  - Arabic: قال النبي ﷺ: «أحبّ الأعمال أدومها إلى الله وإن قلّ» (البخاري ٦٤٦٤). وعادة القرآن اليومية الصغيرة تشكّل الروح مع الوقت.
+- [ ] `day.6.sunnah.description`
+  - English: Set a fixed time each day for the Quran. The Prophet ﷺ said: "The best of you are those who learn the Quran and teach it." Even one verse read with reflection is valuable. Start small and stay consistent.
+  - Arabic: خصِّص وقتًا ثابتًا كل يومٍ للقرآن. قال النبي ﷺ: «خيركم من تعلّم القرآن وعلّمه». وحتى آيةٌ واحدة تُقرأ بتدبّر لها قيمتها. ابدأ صغيرًا وداوِم.
+- [ ] `day.7.prayer.tip`
+  - English: Tonight, before you sleep or in the last part of the night before Fajr, pray 2 or more rak'ahs of night prayer. Ask Allah sincerely for forgiveness. Allah descends to the lowest heaven in the last third of the night and asks, "Who is asking Me for forgiveness, that I may forgive him?" (Bukhari 1145)
+  - Arabic: الليلة، قبل أن تنام أو في آخر الليل قبل الفجر، صلِّ ركعتين أو أكثر من قيام الليل، واسأل الله المغفرة بصدق. فإن الله ينزل إلى السماء الدنيا في الثلث الأخير من الليل فيقول: «من يستغفرني فأغفر له؟» (البخاري ١١٤٥).
+- [ ] `day.7.quran.note`
+  - English: One of the most hopeful verses in the Quran: "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins."
+  - Arabic: من أرجى آيات القرآن: ﴿لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ ۚ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا﴾.
+- [ ] `day.7.sunnah.description`
+  - English: Say the master du'a of seeking forgiveness in the morning and the evening. The Prophet ﷺ said that whoever says it with certainty during the day and dies before evening, or says it at night and dies before morning, is of the people of Paradise.
+  - Arabic: قل سيد الاستغفار في الصباح والمساء. أخبر النبي ﷺ أن من قالها من النهار موقنًا بها فمات قبل أن يُمسي، أو قالها من الليل فمات قبل أن يُصبح، فهو من أهل الجنة.
+- [ ] `day.8.character.action`
+  - English: Name 10 specific blessings today. Be specific: not just "health" but "I can see, I have food, I have a home."
+  - Arabic: عُدَّ اليوم عشر نعمٍ محددة. كن دقيقًا: لا تقل «الصحة» فحسب، بل «أنا أُبصر، ولديّ طعام، ولديّ بيت».
+- [ ] `day.8.intro`
+  - English: Remembrance of Allah nourishes the heart: "Verily, in the remembrance of Allah do hearts find rest." Today you build a morning and evening dhikr routine to carry with you every day.
+  - Arabic: ذكر الله غذاء القلب: ﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾. اليوم تبني وِردًا للذكر في الصباح والمساء يرافقك كل يوم.
+- [ ] `day.8.quran.note`
+  - English: The well-known verse about dhikr and the heart: "Verily, in the remembrance of Allah do hearts find rest."
+  - Arabic: الآية المشهورة عن الذكر والقلب: ﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾.
+- [ ] `day.9.character.description`
+  - English: Love for the Prophet ﷺ grows and shows as you follow his way. Every Sunnah you follow is a sign of it.
+  - Arabic: محبة النبي ﷺ تنمو وتظهر باتّباع هديه، وكل سنّةٍ تتّبعها علامةٌ عليها.
+- [ ] `day.9.character.trait`
+  - English: Love for the Prophet ﷺ
+  - Arabic: محبة النبي ﷺ
+- [ ] `day.9.intro`
+  - English: Following the Sunnah means living as the Prophet ﷺ lived. Every Sunnah you revive is an act of love for him and a source of great reward.
+  - Arabic: اتّباع السنّة أن تعيش كما عاش النبي ﷺ. وكل سنّةٍ تُحييها عملٌ من أعمال محبته ومصدرٌ لأجرٍ عظيم.
+- [ ] `day.9.prayer.tip`
+  - English: Today, focus on praying as the Prophet ﷺ prayed. Learn one Sunnah of prayer you may have missed, such as the opening du'a (istiftah), the du'a between the two prostrations, or a du'a in the final tashahhud.
+  - Arabic: اليوم ركِّز على أن تصلّي كما كان النبي ﷺ يصلّي. تعلّم سنّةً واحدة من سنن الصلاة ربما فاتتك، كدعاء الاستفتاح، أو الدعاء بين السجدتين، أو دعاءٍ في التشهد الأخير.
+- [ ] `day.9.quran.note`
+  - English: The verse that makes the Prophet ﷺ our finest example: "There has certainly been for you in the Messenger of Allah an excellent example."
+  - Arabic: الآية التي تجعل النبي ﷺ قدوتنا المثلى: ﴿لَقَدْ كَانَ لَكُمْ فِي رَسُولِ اللَّهِ أُسْوَةٌ حَسَنَةٌ﴾.
+- [ ] `day.9.reflection`
+  - English: Which Sunnah of the Prophet ﷺ do you most want to make a permanent part of your life?
+  - Arabic: أيّ سنّةٍ من سنن النبي ﷺ تودّ أكثر من غيرها أن تجعلها جزءًا دائمًا من حياتك؟
+- [ ] `day.9.task.9_salawat.title`
+  - English: Send salawat on the Prophet ﷺ 100 times
+  - Arabic: صلِّ على النبي ﷺ مئة مرة
+- [ ] `dua.tawbah.occasion`
+  - English: Any time; the Prophet ﷺ said it more than seventy times a day
+  - Arabic: في أيّ وقت؛ وكان النبي ﷺ يقوله في اليوم أكثر من سبعين مرة
+- [ ] `learn.salah_notes.aloud_or_silent.body`
+  - English: Fajr is recited aloud, and so are the first two rak'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently. "Aloud" applies to men and to the imam; for women, see the note below.
+  - Arabic: يُجهر بالقراءة في الفجر، وفي الركعتين الأوليين من المغرب والعشاء، ويُسرّ بها في الظهر والعصر. والجهر في حقّ الرجال والإمام؛ أما المرأة فانظري الملاحظة أدناه.
+- [ ] `learn.salah_notes.aloud_or_silent.title`
+  - English: Aloud or silent
+  - Arabic: الجهر والإسرار
+- [ ] `learn.salah_notes.for_women.body`
+  - English: During menstruation and post-natal bleeding a woman does not pray, and she does not make up those prayers afterwards (Bukhari 321; Muslim 335). When non-mahram men are present, recite so that only you can hear. In prayer, cover the whole body except the face and hands.
+  - Arabic: لا تصلّي المرأة في أثناء الحيض والنفاس، ولا تقضي تلك الصلوات بعد ذلك (البخاري ٣٢١؛ مسلم ٣٣٥). وإذا حضر رجالٌ أجانب فاقرئي بحيث لا يسمعك غيرك. وفي الصلاة استري الجسد كله إلا الوجه والكفّين.
+- [ ] `learn.salah_notes.for_women.title`
+  - English: For women
+  - Arabic: للنساء
+- [ ] `learn.salah_notes.madhhab_details.body`
+  - English: The four schools (Hanafi, Maliki, Shafi'i and Hanbali) differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.
+  - Arabic: تختلف المذاهب الأربعة (الحنفي والمالكي والشافعي والحنبلي) في تفاصيل قليلة، مثل موضع اليدين، ورفع اليدين عند الركوع، وهيئة الجلوس، وقراءة الفاتحة خلف الإمام. اتّبع معلّمًا موثوقًا واحدًا أو مذهبًا واحدًا؛ فكل هذه الطرق صحيحة.
+- [ ] `learn.salah_notes.madhhab_details.title`
+  - English: Small differences between madhhabs
+  - Arabic: فروقٌ يسيرة بين المذاهب
+- [ ] `learn.salah_notes.three_four_rakahs.body`
+  - English: After the second rak'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh" (Shafi'is also add the salawat), then stand with Allahu akbar. In the 3rd and 4th rak'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.
+  - Arabic: بعد الركعة الثانية اجلس واقرأ التشهد إلى «عبده ورسوله» فقط (ويزيد الشافعية الصلاة على النبي ﷺ)، ثم قُم مكبّرًا «الله أكبر». وفي الركعتين الثالثة والرابعة اقرأ الفاتحة وحدها سرًّا، ثم اختم بالجلوس الأخير كاملًا والتسليم.
+- [ ] `learn.salah_notes.three_four_rakahs.title`
+  - English: 3- and 4-rak‘ah prayers
+  - Arabic: الصلاة الثلاثية والرباعية
+- [ ] `learn.salah_steps.salah_fatihah.body`
+  - English: Recite Al-Fatihah, then say Āmīn. The Prophet ﷺ said there is no prayer without it (Bukhari 756).
+  - Arabic: اقرأ الفاتحة، ثم قل «آمين». قال النبي ﷺ إنه لا صلاة بدونها (البخاري ٧٥٦).
+- [ ] `learn.salah_steps.salah_fatihah.title`
+  - English: Recite Al-Fatihah
+  - Arabic: اقرأ الفاتحة
+- [ ] `learn.salah_steps.salah_final_dua.body`
+  - English: Before the salam, seek refuge in Allah from these four things, then ask Him for whatever you need.
+  - Arabic: قبل السلام استعذ بالله من هذه الأربع، ثم سَله ما شئت من حاجتك.
+- [ ] `learn.salah_steps.salah_final_dua.title`
+  - English: A du‘a before ending
+  - Arabic: دعاءٌ قبل الختام
+- [ ] `learn.salah_steps.salah_istiadhah.body`
+  - English: Quietly seek refuge in Allah before you recite.
+  - Arabic: استعذ بالله سرًّا قبل أن تقرأ.
+- [ ] `learn.salah_steps.salah_istiadhah.title`
+  - English: Seek refuge
+  - Arabic: الاستعاذة
+- [ ] `learn.salah_steps.salah_opening_dua.body`
+  - English: Quietly say this short opening du‘a. It is sunnah, so your prayer is still valid while you are learning it.
+  - Arabic: قل سرًّا دعاء الاستفتاح القصير هذا. وهو سنّة، فصلاتك صحيحةٌ ما دمت تتعلّمه.
+- [ ] `learn.salah_steps.salah_opening_dua.title`
+  - English: Opening du‘a
+  - Arabic: دعاء الاستفتاح
+- [ ] `learn.salah_steps.salah_prepare.body`
+  - English: Make wudu, cover yourself properly and face the qiblah. Intend in your heart which prayer you are praying (for example, Fajr, 2 rak'ahs); nothing needs to be said aloud.
+  - Arabic: توضّأ، واستر عورتك كما ينبغي، واستقبل القبلة. وانوِ بقلبك الصلاة التي تصلّيها (مثلًا: الفجر، ركعتان)؛ ولا حاجة إلى التلفّظ بشيء.
+- [ ] `learn.salah_steps.salah_prepare.title`
+  - English: Get ready
+  - Arabic: استعدّ
+- [ ] `learn.salah_steps.salah_rising.body`
+  - English: Rise saying the first phrase, then once you are standing straight say the second. In most schools, behind an imam say only the second phrase (Shafi'is say both).
+  - Arabic: ارفع قائلًا العبارة الأولى، فإذا استويت قائمًا فقل الثانية. وفي أكثر المذاهب يقول المأموم خلف الإمام العبارة الثانية فقط (ويقولهما الشافعية معًا).
+- [ ] `learn.salah_steps.salah_rising.title`
+  - English: Stand back up
+  - Arabic: الرفع من الركوع
+- [ ] `learn.salah_steps.salah_ruku.body`
+  - English: Say Allahu akbar and bow with your back straight and hands on your knees, and be still. Say this; once is valid, and it is commonly said three times.
+  - Arabic: قل «الله أكبر» واركع مستوي الظهر، واضعًا يديك على ركبتيك، واطمئنّ. وقل هذا الذكر؛ تُجزئ مرةٌ واحدة، والمعتاد أن يُقال ثلاثًا.
+- [ ] `learn.salah_steps.salah_ruku.title`
+  - English: Bow (ruku‘)
+  - Arabic: الركوع
+- [ ] `learn.salah_steps.salah_salawat.body`
+  - English: Still sitting, send blessings on the Prophet ﷺ.
+  - Arabic: وأنت ما زلت جالسًا، صلِّ على النبي ﷺ.
+- [ ] `learn.salah_steps.salah_salawat.title`
+  - English: Send blessings on the Prophet ﷺ
+  - Arabic: الصلاة على النبي ﷺ
+- [ ] `learn.salah_steps.salah_second_rakah.body`
+  - English: Stand up with Allahu akbar and repeat everything from Al-Fatihah to the second prostration. There is no opening du‘a this time.
+  - Arabic: قُم مكبّرًا «الله أكبر» وكرّر كل شيءٍ من الفاتحة إلى السجدة الثانية. ولا يُقال دعاء الاستفتاح هذه المرة.
+- [ ] `learn.salah_steps.salah_second_rakah.title`
+  - English: Stand for the second rak‘ah
+  - Arabic: القيام للركعة الثانية
+- [ ] `learn.salah_steps.salah_second_sujud.body`
+  - English: Say Allahu akbar and make a second prostration, just like the first.
+  - Arabic: قل «الله أكبر» واسجد سجدةً ثانية كالأولى تمامًا.
+- [ ] `learn.salah_steps.salah_second_sujud.title`
+  - English: Prostrate again
+  - Arabic: السجدة الثانية
+- [ ] `learn.salah_steps.salah_short_surah.body`
+  - English: In the first two rak'ahs, recite a short surah after Al-Fatihah. Al-Ikhlas is a good one to start with.
+  - Arabic: في الركعتين الأوليين اقرأ سورةً قصيرة بعد الفاتحة. وسورة الإخلاص بدايةٌ حسنة.
+- [ ] `learn.salah_steps.salah_short_surah.title`
+  - English: Recite a short surah
+  - Arabic: اقرأ سورةً قصيرة
+- [ ] `learn.salah_steps.salah_sitting.body`
+  - English: Say Allahu akbar, sit up and be still for a moment.
+  - Arabic: قل «الله أكبر» واجلس مطمئنًّا لحظة.
+- [ ] `learn.salah_steps.salah_sitting.title`
+  - English: Sit between the prostrations
+  - Arabic: الجلوس بين السجدتين
+- [ ] `learn.salah_steps.salah_sujud.body`
+  - English: Say Allahu akbar and prostrate on forehead and nose, palms, knees and toes, and be still. This is the closest you are to your Lord, so make du‘a here too (Muslim 482).
+  - Arabic: قل «الله أكبر» واسجد على الجبهة والأنف، والكفّين، والركبتين، وأطراف القدمين، واطمئنّ. هذا أقرب ما تكون من ربك، فادعُ هنا أيضًا (مسلم ٤٨٢).
+- [ ] `learn.salah_steps.salah_sujud.title`
+  - English: Prostrate (sujud)
+  - Arabic: السجود
+- [ ] `learn.salah_steps.salah_takbir.body`
+  - English: Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Where the hands rest differs by school. Hanafi and Hanbali: below the navel (Hanafi women: on the chest); Shafi'i: below the chest, above the navel; many Malikis let the arms hang at the sides. All are valid practice.
+  - Arabic: ارفع يديك حذو منكبيك أو أذنيك وقل «الله أكبر»، ثم ضع يدك اليمنى على اليسرى. ويختلف موضع اليدين باختلاف المذاهب: عند الحنفية والحنابلة تحت السرّة (والمرأة عند الحنفية على الصدر)، وعند الشافعية تحت الصدر فوق السرّة، وكثيرٌ من المالكية يُرسلون اليدين على الجانبين. وكلّها عملٌ صحيح.
+- [ ] `learn.salah_steps.salah_takbir.title`
+  - English: Begin with Allahu akbar
+  - Arabic: ابدأ بـ«الله أكبر»
+- [ ] `learn.salah_steps.salah_tashahhud.body`
+  - English: After the second rak'ah's prostrations, sit and recite the tashahhud.
+  - Arabic: بعد سجدتي الركعة الثانية اجلس واقرأ التشهد.
+- [ ] `learn.salah_steps.salah_tashahhud.title`
+  - English: Sit for the tashahhud
+  - Arabic: الجلوس للتشهد
+- [ ] `learn.salah_steps.salah_taslim.body`
+  - English: Turn your head to the right and say the salam, then turn to the left and say it again. Your prayer is complete, alhamdulillah.
+  - Arabic: التفت برأسك إلى اليمين وقل السلام، ثم التفت إلى اليسار وقله مرةً أخرى. لقد تمّت صلاتك، والحمد لله.
+- [ ] `learn.salah_steps.salah_taslim.title`
+  - English: End with salam
+  - Arabic: اختم بالتسليم
+- [ ] `learn.wudu_steps.wudu_arms.body`
+  - English: Wash your right arm from the fingertips up to and including the elbow, three times, then the left.
+  - Arabic: اغسل يدك اليمنى من أطراف الأصابع إلى المرفق مع المرفق، ثلاث مرات، ثم اليسرى.
+- [ ] `learn.wudu_steps.wudu_arms.title`
+  - English: Wash your arms
+  - Arabic: اغسل يديك إلى المرفقين
+- [ ] `learn.wudu_steps.wudu_bismillah.body`
+  - English: Begin by mentioning the name of Allah.
+  - Arabic: ابدأ بذكر اسم الله.
+- [ ] `learn.wudu_steps.wudu_bismillah.title`
+  - English: Say Bismillah
+  - Arabic: قل «بسم الله»
+- [ ] `learn.wudu_steps.wudu_ears.body`
+  - English: Wipe the inside of your ears with your index fingers and the back with your thumbs, once.
+  - Arabic: امسح باطن أذنيك بالسبّابتين وظاهرهما بالإبهامين، مرةً واحدة.
+- [ ] `learn.wudu_steps.wudu_ears.title`
+  - English: Wipe your ears
+  - Arabic: امسح أذنيك
+- [ ] `learn.wudu_steps.wudu_face.body`
+  - English: Wash your whole face, from the hairline to the chin and from ear to ear, three times.
+  - Arabic: اغسل وجهك كله، من منابت الشعر إلى الذقن، ومن الأذن إلى الأذن، ثلاث مرات.
+- [ ] `learn.wudu_steps.wudu_face.title`
+  - English: Wash your face
+  - Arabic: اغسل وجهك
+- [ ] `learn.wudu_steps.wudu_feet.body`
+  - English: Wash your right foot up to and including the ankle, three times, getting between the toes, then the left.
+  - Arabic: اغسل قدمك اليمنى إلى الكعبين مع الكعبين، ثلاث مرات، مخلّلًا بين الأصابع، ثم اليسرى.
+- [ ] `learn.wudu_steps.wudu_feet.title`
+  - English: Wash your feet
+  - Arabic: اغسل قدميك
+- [ ] `learn.wudu_steps.wudu_hands.body`
+  - English: Wash both hands up to the wrists, three times.
+  - Arabic: اغسل كفّيك إلى الرسغين، ثلاث مرات.
+- [ ] `learn.wudu_steps.wudu_hands.title`
+  - English: Wash your hands
+  - Arabic: اغسل كفّيك
+- [ ] `learn.wudu_steps.wudu_head.body`
+  - English: Wipe your head once with wet hands, from front to back and back to the front again, as the Prophet ﷺ did. How much must be wiped differs by school. Maliki and Hanbali: the whole head; Hanafi: at least a quarter; Shafi'i: any part. Wiping the whole head covers all views.
+  - Arabic: امسح رأسك مرةً واحدة بيدين مبلّلتين، من المقدّمة إلى المؤخّرة ثم ارجع بهما إلى المقدّمة، كما فعل النبي ﷺ. ويختلف القدر الواجب مسحه باختلاف المذاهب: عند المالكية والحنابلة الرأس كله، وعند الحنفية الربع على الأقل، وعند الشافعية أيّ جزءٍ منه. ومسح الرأس كله يجمع الأقوال كلها.
+- [ ] `learn.wudu_steps.wudu_head.title`
+  - English: Wipe your head
+  - Arabic: امسح رأسك
+- [ ] `learn.wudu_steps.wudu_intention.body`
+  - English: Intend in your heart that you are purifying yourself for prayer; there is nothing to say out loud. Most scholars count this intention as required, while Hanafis count it as sunnah.
+  - Arabic: انوِ بقلبك أنك تتطهّر للصلاة؛ ولا حاجة إلى التلفّظ بشيء. وجمهور العلماء يعدّون هذه النية واجبة، بينما يعدّها الحنفية سنّة.
+- [ ] `learn.wudu_steps.wudu_intention.title`
+  - English: Intend in your heart
+  - Arabic: انوِ بقلبك
+- [ ] `learn.wudu_steps.wudu_mouth_nose.body`
+  - English: Rinse your mouth and sniff water into your nose and blow it out, three times. One handful of water for both is fine.
+  - Arabic: تمضمض، واستنشق الماء بأنفك ثم استنثره، ثلاث مرات. ولا بأس أن تكون المضمضة والاستنشاق من غرفةٍ واحدة.
+- [ ] `learn.wudu_steps.wudu_mouth_nose.title`
+  - English: Mouth and nose
+  - Arabic: المضمضة والاستنشاق
+- [ ] `learn.wudu_steps.wudu_order.body`
+  - English: Do the steps in this order and without long breaks in between. Washing each part once or twice is valid too; three times is the full sunnah, so don't go beyond three.
+  - Arabic: أدِّ الخطوات بهذا الترتيب ودون فواصل طويلة بينها. وغسل كل عضوٍ مرةً أو مرتين صحيحٌ أيضًا؛ والثلاث هي تمام السنّة، فلا تزِد عليها.
+- [ ] `learn.wudu_steps.wudu_order.title`
+  - English: Keep the order, no long pauses
+  - Arabic: الترتيب والموالاة
+
 ### UI legal and privacy text (ar)
 
 - [ ] `share.footer`
@@ -1233,6 +1718,491 @@ These 201 keys have an intentionally empty Arabic meaning; nothing to review.
   - Arabic source: وَأَنَّ أَحَبَّ الأَعْمَالِ أَدْوَمُهَا إِلَى اللَّهِ وَإِنْ قَلَّ
   - English: "The most beloved of deeds to Allah are the most consistent, even if small."
   - Urdu: ”اللہ کو سب سے زیادہ پسندیدہ عمل وہ ہے جو مسلسل ہو، چاہے تھوڑا ہو۔“
+
+### Quotations and rulings outside meaning lines (ur)
+
+Texts outside the meaning lines that quote Allah or the Prophet ﷺ, quote someone, or explain a ruling (every Learn title and body). Check that each quotation is faithful and each ruling is stated accurately.
+
+- [ ] `day.1.quran.note`
+  - English: Read Al-Fatihah slowly and reflect on each verse. You recite it in every rak'ah: "Guide us to the straight path."
+  - Urdu: سورۃ الفاتحہ آہستہ آہستہ پڑھیں اور ہر آیت پر غور کریں۔ آپ اسے ہر رکعت میں پڑھتے ہیں: ”ہمیں سیدھا راستہ دکھا۔“
+- [ ] `day.1.sunnah.description`
+  - English: Say "Bismillah" before you eat, drink, leave the house or start your work. The Prophet ﷺ said to a boy: "Mention the name of Allah, eat with your right hand, and eat from what is in front of you."
+  - Urdu: کھانے، پینے، گھر سے نکلنے یا کوئی کام شروع کرنے سے پہلے ”بسم اللہ“ کہیں۔ نبی کریم ﷺ نے ایک لڑکے سے فرمایا: ”اللہ کا نام لو، دائیں ہاتھ سے کھاؤ، اور اپنے سامنے سے کھاؤ۔“
+- [ ] `day.10.intro`
+  - English: Du'a is worship itself, and Allah says, "Call upon Me; I will respond to you." Today you learn to speak to Allah in your own words and trust in His answer.
+  - Urdu: دعا ہی عبادت ہے، اور اللہ فرماتا ہے: ”مجھے پکارو، میں تمہاری دعا قبول کروں گا۔“ آج آپ اپنے الفاظ میں اللہ سے بات کرنا اور اس کے جواب پر بھروسا کرنا سیکھیں گے۔
+- [ ] `day.10.prayer.tip`
+  - English: In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is prostrating, so make much du'a." Anas said this Quranic du'a was the one he made most often (Bukhari 6389).
+  - Urdu: آج ہر سجدے میں اپنے الفاظ میں اپنی ضرورتوں، اپنے گھر والوں اور امت کے لیے دعا کریں۔ نبی کریم ﷺ نے فرمایا: ”بندہ اپنے رب کے سب سے زیادہ قریب سجدے کی حالت میں ہوتا ہے، اس لیے (سجدے میں) کثرت سے دعا کرو۔“ حضرت انسؓ نے بتایا کہ یہ قرآنی دعا آپ ﷺ سب سے زیادہ مانگا کرتے تھے (بخاری 6389)۔
+- [ ] `day.10.quran.note`
+  - English: The verse that shows Allah is always near and always listening: "I am near. I respond to the call of the one who calls upon Me."
+  - Urdu: وہ آیت جو بتاتی ہے کہ اللہ ہمیشہ قریب ہے اور ہمیشہ سنتا ہے: ”میں قریب ہوں، پکارنے والا جب مجھے پکارتا ہے تو میں اس کی پکار کا جواب دیتا ہوں۔“
+- [ ] `day.10.sunnah.description`
+  - English: The Prophet ﷺ taught us special times for du'a: the last third of the night (Bukhari 1145), between the adhan and the iqamah (Abu Dawud 521; Tirmidhi 212), in sujood (Muslim 482), at the end of the obligatory prayers (Tirmidhi 3499), and the hour on Friday, sought in the last hour after Asr (Bukhari 935; Abu Dawud 1048). Use at least 3 of these times today.
+  - Urdu: نبی کریم ﷺ نے ہمیں دعا کے خاص اوقات سکھائے: رات کا آخری تہائی حصہ (بخاری 1145)، اذان اور اقامت کے درمیان (ابو داؤد 521؛ ترمذی 212)، سجدے میں (مسلم 482)، فرض نمازوں کے آخر میں (ترمذی 3499)، اور جمعہ کے دن کی وہ گھڑی جسے عصر کے بعد آخری گھڑی میں تلاش کیا جاتا ہے (بخاری 935؛ ابو داؤد 1048)۔ آج ان میں سے کم از کم 3 اوقات سے فائدہ اٹھائیں۔
+- [ ] `day.11.intro`
+  - English: Giving in the way of Allah purifies your wealth, eases hardship and earns His love. The Prophet ﷺ was the most generous of people, and even more generous in Ramadan.
+  - Urdu: اللہ کی راہ میں دینا آپ کے مال کو پاک کرتا ہے، مشکلات آسان کرتا ہے اور اللہ کی محبت دلاتا ہے۔ نبی کریم ﷺ لوگوں میں سب سے زیادہ سخی تھے، اور رمضان میں اور بھی زیادہ سخاوت فرماتے تھے۔
+- [ ] `day.11.prayer.tip`
+  - English: Every morning two angels come down. One says, "O Allah, give the one who spends something in return," and the other says, "O Allah, give the one who withholds loss" (Bukhari 1442; Muslim 1010). Give some sadaqah early today, after Fajr.
+  - Urdu: ہر صبح دو فرشتے اترتے ہیں۔ ایک کہتا ہے: ”اے اللہ! خرچ کرنے والے کو اس کا بدل عطا فرما“، اور دوسرا کہتا ہے: ”اے اللہ! روک کر رکھنے والے کا مال ضائع کر دے“ (بخاری 1442؛ مسلم 1010)۔ آج فجر کے بعد جلدی کچھ صدقہ دیں۔
+- [ ] `day.11.quran.note`
+  - English: The parable of those who spend in the way of Allah: like a grain that grows seven ears, with a hundred grains in each ear. "And Allah multiplies for whom He wills."
+  - Urdu: اللہ کی راہ میں خرچ کرنے والوں کی مثال: جیسے ایک دانہ جس سے سات بالیاں نکلیں، اور ہر بالی میں سو دانے ہوں۔ ”اور اللہ جس کے لیے چاہتا ہے بڑھا دیتا ہے۔“
+- [ ] `day.11.sunnah.description`
+  - English: The Prophet ﷺ said: "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that benefits, or a righteous child who prays for him." Start an ongoing charity today: share beneficial knowledge, teach someone a Sunnah, plant a tree, give to a masjid fund or support an orphan.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”جب انسان فوت ہو جاتا ہے تو اس کے عمل ختم ہو جاتے ہیں سوائے تین کے: صدقہ جاریہ، وہ علم جس سے فائدہ اٹھایا جائے، یا نیک اولاد جو اس کے لیے دعا کرے۔“ آج کوئی صدقہ جاریہ شروع کریں: مفید علم پھیلائیں، کسی کو کوئی سنت سکھائیں، درخت لگائیں، مسجد کے فنڈ میں دیں یا کسی یتیم کی کفالت کریں۔
+- [ ] `day.12.character.action`
+  - English: Practise contentment today: hold back from one purchase or desire you would normally give in to, and say "Alhamdulillah" for what you have.
+  - Urdu: آج قناعت کی مشق کریں: کسی ایک خریداری یا خواہش سے رک جائیں جسے آپ عام طور پر پورا کر لیتے ہیں، اور جو کچھ آپ کے پاس ہے اس پر ”الحمد للہ“ کہیں۔
+- [ ] `day.12.character.description`
+  - English: The Prophet ﷺ said: "Wealth is not having many possessions; true wealth is contentment of the soul" (Bukhari 6446).
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”مالداری سامان کی کثرت کا نام نہیں، اصل مالداری دل کا غنی ہونا ہے“ (بخاری 6446)۔
+- [ ] `day.12.quran.note`
+  - English: Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."
+  - Urdu: اللہ ہمیں حلال اور پاکیزہ چیزیں کھانے کا حکم دیتا ہے، اور شیطان کے نقشِ قدم پر چلنے سے خبردار کرتا ہے: ”بے شک وہ تمہارا کھلا دشمن ہے۔“
+- [ ] `day.12.sunnah.description`
+  - English: Make this du'a often: "Allahummak-fini bi-halalika 'an haramika wa aghnini bi-fadlika 'amman siwak" (O Allah, suffice me with what You have made lawful instead of what You have forbidden, and make me free of need of anyone besides You). After Fajr, also ask Allah for "beneficial knowledge, good provision and accepted deeds" (Ibn Majah 925).
+  - Urdu: یہ دعا کثرت سے مانگیں: ”اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ“ (اے اللہ! اپنے حلال کے ذریعے مجھے اپنے حرام سے بچا کر کافی ہو جا، اور مجھے اپنے سوا ہر ایک سے بے نیاز کر دے)۔ فجر کے بعد اللہ سے ”نفع دینے والا علم، پاکیزہ رزق اور قبول ہونے والا عمل“ بھی مانگیں (ابن ماجہ 925)۔
+- [ ] `day.13.character.action`
+  - English: Write down your top 3 worries. Then sincerely hand each one to Allah's care, saying "Hasbunallahu wa ni'mal wakil."
+  - Urdu: اپنی 3 سب سے بڑی پریشانیاں لکھیں۔ پھر ”حسبنا اللہ ونعم الوکیل“ کہتے ہوئے ہر ایک کو سچے دل سے اللہ کے سپرد کر دیں۔
+- [ ] `day.13.prayer.tip`
+  - English: If you have a decision to make, big or small, pray istikhara today: two voluntary rak'ahs followed by the istikhara du'a, which the Prophet ﷺ taught his Companions for every matter (Bukhari 6382). Then move forward, trusting that Allah is guiding your steps.
+  - Urdu: اگر آپ کو کوئی فیصلہ کرنا ہے، چھوٹا ہو یا بڑا، تو آج استخارہ کریں: دو نفل رکعتیں اور پھر استخارہ کی دعا، جو نبی کریم ﷺ اپنے صحابہ کو ہر معاملے کے لیے سکھاتے تھے (بخاری 6382)۔ پھر اس یقین کے ساتھ آگے بڑھیں کہ اللہ آپ کے قدموں کی رہنمائی کر رہا ہے۔
+- [ ] `day.13.quran.note`
+  - English: The well-known verse on trust: "And whoever relies upon Allah, He is sufficient for him. Indeed, Allah will accomplish His purpose."
+  - Urdu: توکل کے بارے میں مشہور آیت: ”اور جو اللہ پر بھروسا کرے تو وہ اس کے لیے کافی ہے۔ بے شک اللہ اپنا کام پورا کر کے رہتا ہے۔“
+- [ ] `day.13.sunnah.description`
+  - English: A man asked the Prophet ﷺ whether he should tie his camel and trust in Allah, or leave it untied and trust in Allah. He said: "Tie it, and trust in Allah." Tawakkul includes doing your part fully, then letting go of the outcome.
+  - Urdu: ایک شخص نے نبی کریم ﷺ سے پوچھا کہ کیا وہ اپنی اونٹنی باندھ کر اللہ پر توکل کرے یا کھلی چھوڑ کر توکل کرے؟ آپ ﷺ نے فرمایا: ”اسے باندھو، اور اللہ پر توکل کرو۔“ توکل میں اپنا حصہ پوری طرح ادا کرنا اور پھر نتیجہ اللہ پر چھوڑ دینا شامل ہے۔
+- [ ] `day.14.intro`
+  - English: Allah says, "If you are grateful, I will surely increase you." Today, learn to see every moment as a gift from Him, and to show gratitude in word and deed.
+  - Urdu: اللہ فرماتا ہے: ”اگر تم شکر کرو گے تو میں تمہیں ضرور زیادہ دوں گا۔“ آج ہر لمحے کو اس کا تحفہ سمجھنا، اور قول و عمل سے شکر ادا کرنا سیکھیں۔
+- [ ] `day.14.prayer.tip`
+  - English: When good news or a blessing reaches you today, fall into a single prostration of gratitude (sujud ash-shukr). Whenever something pleasing came to the Prophet ﷺ, he would fall down in prostration, thanking Allah (Abu Dawud 2774). After each prayer, ask Allah to help you thank Him.
+  - Urdu: آج جب کوئی خوش خبری یا نعمت ملے تو ایک سجدۂ شکر کریں۔ جب بھی نبی کریم ﷺ کو کوئی خوشی کی بات پہنچتی تو آپ اللہ کا شکر ادا کرتے ہوئے سجدے میں گر جاتے (ابو داؤد 2774)۔ ہر نماز کے بعد اللہ سے شکر کی توفیق مانگیں۔
+- [ ] `day.14.quran.note`
+  - English: Allah's promise that gratitude brings increase: "If you are grateful, I will surely increase you; but if you deny, indeed, My punishment is severe."
+  - Urdu: اللہ کا وعدہ کہ شکر سے نعمت بڑھتی ہے: ”اگر تم شکر کرو گے تو میں تمہیں ضرور زیادہ دوں گا، اور اگر ناشکری کرو گے تو یقیناً میرا عذاب بہت سخت ہے۔“
+- [ ] `day.14.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever does not thank people does not thank Allah." Show gratitude in two ways today: thank Allah directly (Alhamdulillah), and thank the people through whom He blessed you.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”جو لوگوں کا شکر ادا نہیں کرتا وہ اللہ کا شکر ادا نہیں کرتا۔“ آج دو طرح شکر ادا کریں: براہِ راست اللہ کا شکر (الحمد للہ)، اور ان لوگوں کا شکریہ جن کے ذریعے اللہ نے آپ کو نوازا۔
+- [ ] `day.15.quran.note`
+  - English: The command to stand with the truthful: "O you who believe, fear Allah and be with those who are truthful."
+  - Urdu: سچوں کے ساتھ رہنے کا حکم: ”اے ایمان والو! اللہ سے ڈرو اور سچوں کے ساتھ رہو۔“
+- [ ] `day.15.sunnah.description`
+  - English: When the Prophet ﷺ called the tribes of Quraysh together, they told him: "We have never experienced anything from you but truthfulness." Today, be completely honest in every interaction: no white lies, exaggerations or misleading statements, even ones that seem harmless.
+  - Urdu: جب نبی کریم ﷺ نے قریش کے قبیلوں کو جمع کیا تو انہوں نے کہا: ”ہم نے آپ سے سچ کے سوا کبھی کچھ نہیں دیکھا۔“ آج ہر معاملے میں مکمل سچ بولیں: نہ کوئی چھوٹا جھوٹ، نہ مبالغہ، نہ گمراہ کن بات، چاہے وہ بے ضرر ہی کیوں نہ لگے۔
+- [ ] `day.16.intro`
+  - English: Amanah means fulfilling trusts, keeping promises and being reliable in every role: in your family, with friends, at work and as a Muslim. Even before prophethood, the Prophet ﷺ was known among his people for his trustworthiness.
+  - Urdu: امانت کا مطلب ہے امانتیں ادا کرنا، وعدے پورے کرنا اور ہر کردار میں قابلِ اعتماد ہونا: گھر میں، دوستوں کے ساتھ، کام پر اور ایک مسلمان کے طور پر۔ نبوت سے پہلے بھی نبی کریم ﷺ اپنی قوم میں امانت داری کے لیے مشہور تھے۔
+- [ ] `day.16.quran.note`
+  - English: "O you who believe, do not betray Allah and the Messenger, and do not knowingly betray your trusts."
+  - Urdu: ”اے ایمان والو! اللہ اور رسول سے خیانت نہ کرو، اور جان بوجھ کر اپنی امانتوں میں خیانت نہ کرو۔“
+- [ ] `day.16.sunnah.description`
+  - English: The Prophet ﷺ said: "The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks his promise, and when he is trusted he betrays the trust." List any promises or commitments you have not kept, and fulfil at least one today.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”منافق کی تین نشانیاں ہیں: جب بات کرے تو جھوٹ بولے، جب وعدہ کرے تو خلاف ورزی کرے، اور جب اسے امانت دی جائے تو خیانت کرے۔“ اپنے وہ وعدے یا ذمہ داریاں لکھیں جو پوری نہیں ہوئیں، اور آج کم از کم ایک پوری کریں۔
+- [ ] `day.17.character.action`
+  - English: When you feel irritated or frustrated today, stop and say "Alhamdulillah 'ala kulli hal" (praise be to Allah in every situation) before you respond.
+  - Urdu: آج جب آپ کو چڑچڑاہٹ یا جھنجھلاہٹ محسوس ہو تو جواب دینے سے پہلے رکیں اور ”الحمد للہ علیٰ کل حال“ (ہر حال میں اللہ کا شکر ہے) کہیں۔
+- [ ] `day.17.intro`
+  - English: "Indeed, Allah is with the patient." Sabr is not passive resignation; it is active, disciplined perseverance, knowing that Allah is testing and refining you.
+  - Urdu: ”بے شک اللہ صبر کرنے والوں کے ساتھ ہے۔“ صبر بے بسی سے ہار مان لینا نہیں؛ یہ فعال اور منظم ثابت قدمی ہے، اس یقین کے ساتھ کہ اللہ آپ کو آزما کر نکھار رہا ہے۔
+- [ ] `day.17.quran.note`
+  - English: Allah tests us with fear, hunger and loss, "but give good tidings to the patient: those who, when disaster strikes them, say: Indeed we belong to Allah, and indeed to Him we will return."
+  - Urdu: اللہ ہمیں خوف، بھوک اور نقصان سے آزماتا ہے، ”اور صبر کرنے والوں کو خوش خبری دے دو: وہ لوگ کہ جب ان پر کوئی مصیبت آتی ہے تو کہتے ہیں: بے شک ہم اللہ ہی کے ہیں اور ہم اسی کی طرف لوٹنے والے ہیں۔“
+- [ ] `day.17.sunnah.description`
+  - English: The Prophet ﷺ said: "The strong one is not the one who overcomes people by his strength, but the one who controls himself when angry." When something irritates you today, pause and say "A'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). If you are standing, sit down (Abu Dawud 4782).
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”طاقتور وہ نہیں جو لوگوں کو پچھاڑ دے، بلکہ طاقتور وہ ہے جو غصے کے وقت اپنے آپ پر قابو رکھے۔“ آج جب کوئی بات آپ کو غصہ دلائے تو رکیں اور ”اعوذ باللہ من الشیطان الرجیم“ کہیں (بخاری 6115)۔ اگر کھڑے ہوں تو بیٹھ جائیں (ابو داؤد 4782)۔
+- [ ] `day.17.task.17_inna_lillah.title`
+  - English: Say "Inna lillahi wa inna ilayhi raji'un" at every difficulty today
+  - Urdu: آج ہر مشکل پر ”انا للہ وانا الیہ راجعون“ کہیں
+- [ ] `day.18.character.description`
+  - English: Pride (kibr) is a disease of the heart. The Prophet ﷺ said that no one with an atom's weight of pride in his heart will enter Paradise, and he defined pride as "rejecting the truth and looking down on people" (Muslim 91).
+  - Urdu: تکبر (کِبر) دل کی بیماری ہے۔ نبی کریم ﷺ نے فرمایا کہ جس کے دل میں ذرہ برابر بھی تکبر ہو وہ جنت میں داخل نہیں ہوگا، اور آپ ﷺ نے تکبر کی تعریف یوں فرمائی: ”حق کو ٹھکرانا اور لوگوں کو حقیر سمجھنا“ (مسلم 91)۔
+- [ ] `day.18.intro`
+  - English: The Prophet ﷺ was the most humble of people, though he was the greatest of them. True tawadu' comes from knowing Allah and knowing yourself.
+  - Urdu: نبی کریم ﷺ لوگوں میں سب سے زیادہ عاجز تھے، حالانکہ آپ سب سے عظیم تھے۔ سچی تواضع اللہ کو پہچاننے اور اپنے آپ کو پہچاننے سے آتی ہے۔
+- [ ] `day.18.prayer.tip`
+  - English: Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, say "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High; Muslim 772) and feel its meaning: you are submitting completely to Him. Let that feeling stay with you.
+  - Urdu: اپنی پیشانی زمین پر رکھنا عاجزی کا سب سے مکمل جسمانی اظہار ہے۔ آج ہر سجدے میں ”سبحان ربی الاعلیٰ“ (پاک ہے میرا رب جو سب سے بلند ہے؛ مسلم 772) کہیں اور اس کا مطلب محسوس کریں: آپ مکمل طور پر اس کے آگے جھک رہے ہیں۔ اس احساس کو اپنے ساتھ رکھیں۔
+- [ ] `day.18.quran.note`
+  - English: "And do not walk upon the earth arrogantly. Indeed, you will never tear the earth apart, and you will never reach the mountains in height."
+  - Urdu: ”اور زمین میں اکڑ کر نہ چلو۔ بے شک تم نہ زمین کو پھاڑ سکتے ہو اور نہ لمبائی میں پہاڑوں تک پہنچ سکتے ہو۔“
+- [ ] `day.18.sunnah.description`
+  - English: The Prophet ﷺ would greet even children with salam (Bukhari 6247; Muslim 2168), and he said: "The people closest to Allah are those who begin the greeting of salam." Today, be the first to say salam to everyone you meet.
+  - Urdu: نبی کریم ﷺ بچوں کو بھی سلام کرتے تھے (بخاری 6247؛ مسلم 2168)، اور آپ ﷺ نے فرمایا: ”اللہ کے سب سے زیادہ قریب وہ لوگ ہیں جو سلام میں پہل کرتے ہیں۔“ آج جس سے بھی ملیں، سلام میں پہل کریں۔
+- [ ] `day.19.intro`
+  - English: The Prophet ﷺ was sent as a mercy to all the worlds. Mercy towards people, animals and all of creation is a sign of strong faith.
+  - Urdu: نبی کریم ﷺ تمام جہانوں کے لیے رحمت بنا کر بھیجے گئے۔ انسانوں، جانوروں اور پوری مخلوق پر رحم مضبوط ایمان کی علامت ہے۔
+- [ ] `day.19.prayer.tip`
+  - English: In today's prayers, make specific du'a for others: your parents, your family, the sick and suffering, and Muslims around the world. The Prophet ﷺ said that when a believer prays for his brother in his absence, the angel says, "And the same for you" (Muslim 2732).
+  - Urdu: آج کی نمازوں میں دوسروں کے لیے نام لے کر دعا کریں: اپنے والدین، اپنے گھر والوں، بیماروں اور تکلیف میں مبتلا لوگوں، اور دنیا بھر کے مسلمانوں کے لیے۔ نبی کریم ﷺ نے فرمایا کہ جب مومن اپنے بھائی کے لیے اس کی غیر موجودگی میں دعا کرتا ہے تو فرشتہ کہتا ہے: ”اور تمہیں بھی ایسا ہی ملے“ (مسلم 2732)۔
+- [ ] `day.19.quran.note`
+  - English: The summary of the Prophet's ﷺ mission: "And We have not sent you except as a mercy to the worlds."
+  - Urdu: نبی کریم ﷺ کے مشن کا خلاصہ: ”اور ہم نے آپ کو تمام جہانوں کے لیے رحمت ہی بنا کر بھیجا ہے۔“
+- [ ] `day.19.sunnah.description`
+  - English: The Prophet ﷺ told of a woman who entered the Fire because of a cat she locked up without food or water, and of a man who gave water to a thirsty dog, so Allah thanked him and admitted him to Paradise. Today, show active mercy: feed a bird, put out water, be gentle with animals and reduce waste.
+  - Urdu: نبی کریم ﷺ نے ایک عورت کا ذکر فرمایا جو ایک بلی کی وجہ سے آگ میں گئی جسے اس نے بغیر کھانے پانی کے باندھ رکھا تھا، اور ایک آدمی کا جس نے پیاسے کتے کو پانی پلایا تو اللہ نے اس کی قدر فرمائی اور اسے جنت میں داخل کیا۔ آج عملی رحم دکھائیں: کسی پرندے کو دانہ ڈالیں، پانی رکھیں، جانوروں سے نرمی کریں اور فضول ضیاع کم کریں۔
+- [ ] `day.2.character.action`
+  - English: Whenever you feel the urge to speak badly about someone, say "SubhanAllah" instead and change the topic.
+  - Urdu: جب بھی کسی کے بارے میں بری بات کہنے کا دل چاہے تو اس کے بجائے ”سبحان اللہ“ کہیں اور موضوع بدل دیں۔
+- [ ] `day.2.quran.note`
+  - English: Reflect on this verse about purification: "Indeed, Allah loves those who turn to Him in repentance and loves those who purify themselves."
+  - Urdu: پاکیزگی کے بارے میں اس آیت پر غور کریں: ”بے شک اللہ توبہ کرنے والوں کو پسند کرتا ہے اور پاک صاف رہنے والوں کو پسند کرتا ہے۔“
+- [ ] `day.2.sunnah.description`
+  - English: The Prophet ﷺ said: "Were it not that it would be hard on my ummah, I would have commanded them to use the siwak with every prayer." Use a siwak or brush your teeth before your prayers today.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اگر مجھے اپنی امت پر مشقت کا خیال نہ ہوتا تو میں انہیں ہر نماز کے ساتھ مسواک کا حکم دیتا۔“ آج اپنی نمازوں سے پہلے مسواک کریں یا دانت صاف کریں۔
+- [ ] `day.20.quran.note`
+  - English: Allah links keeping family ties directly to fearing Him: "And fear Allah, through whom you ask one another, and the wombs."
+  - Urdu: اللہ رشتے داری نبھانے کو براہِ راست اپنے تقویٰ سے جوڑتا ہے: ”اور اللہ سے ڈرو جس کے واسطے سے تم ایک دوسرے سے مانگتے ہو، اور رشتوں (کو توڑنے) سے بھی ڈرو۔“
+- [ ] `day.20.sunnah.description`
+  - English: The Prophet ﷺ said: "The one who keeps ties is not the one who only returns the favour, but the one who keeps ties when they have been cut." Today, reach out to a family member you have drifted away from.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”صلہ رحمی کرنے والا وہ نہیں جو صرف بدلہ چکائے، بلکہ وہ ہے کہ جب اس سے رشتہ توڑا جائے تو وہ اسے جوڑے۔“ آج خاندان کے کسی ایسے فرد سے رابطہ کریں جس سے آپ دور ہو گئے ہیں۔
+- [ ] `day.21.character.description`
+  - English: The Prophet ﷺ said that a good word is charity (Bukhari 2989; Muslim 1009). The words you choose can lift people up or tear them down, so choose every word with care today.
+  - Urdu: نبی کریم ﷺ نے فرمایا کہ اچھی بات صدقہ ہے (بخاری 2989؛ مسلم 1009)۔ آپ کے الفاظ لوگوں کو اٹھا بھی سکتے ہیں اور گرا بھی سکتے ہیں، اس لیے آج ہر لفظ سوچ سمجھ کر چنیں۔
+- [ ] `day.21.quran.note`
+  - English: Allah's description of the Prophet ﷺ: "And indeed, you are of a great moral character."
+  - Urdu: نبی کریم ﷺ کے بارے میں اللہ کا فرمان: ”اور بے شک آپ اخلاق کے بڑے مرتبے پر ہیں۔“
+- [ ] `day.21.sunnah.description`
+  - English: The Prophet ﷺ said: "Your smiling in the face of your brother is charity for you." Jarir said that from the day he accepted Islam, the Prophet ﷺ never saw him without smiling at him. Today, smile genuinely at every person you meet: at home, at work and in the street.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اپنے بھائی کے سامنے تمہارا مسکرانا تمہارے لیے صدقہ ہے۔“ حضرت جریرؓ فرماتے ہیں کہ جس دن سے انہوں نے اسلام قبول کیا، نبی کریم ﷺ نے انہیں جب بھی دیکھا مسکرا کر دیکھا۔ آج ہر ملنے والے سے دل سے مسکرا کر ملیں: گھر میں، کام پر اور راستے میں۔
+- [ ] `day.22.prayer.tip`
+  - English: After Fajr, while the mind is fresh and the world is quiet, spend 15 minutes studying one Islamic topic. Begin with the du'a for beneficial knowledge that the Prophet ﷺ said after the salam of Fajr.
+  - Urdu: فجر کے بعد، جب ذہن تازہ اور دنیا پرسکون ہو، 15 منٹ کسی ایک اسلامی موضوع کا مطالعہ کریں۔ اس کا آغاز نفع دینے والے علم کی اس دعا سے کریں جو نبی کریم ﷺ فجر کے سلام کے بعد پڑھتے تھے۔
+- [ ] `day.22.quran.note`
+  - English: Scholars note that knowledge is the only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."
+  - Urdu: علما بتاتے ہیں کہ علم ہی وہ واحد چیز ہے جس میں اضافہ مانگنے کا نبی کریم ﷺ کو حکم دیا گیا: ”اور کہیے: اے میرے رب! میرے علم میں اضافہ فرما۔“
+- [ ] `day.22.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever Allah wants good for, He gives him understanding of the religion." Learn one new thing about your deen today: a ruling of fiqh, a name of Allah, a hadith or the tafsir of an ayah.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اللہ جس کے ساتھ بھلائی کا ارادہ کرتا ہے اسے دین کی سمجھ عطا فرما دیتا ہے۔“ آج اپنے دین کے بارے میں ایک نئی بات سیکھیں: فقہ کا کوئی مسئلہ، اللہ کا کوئی نام، کوئی حدیث یا کسی آیت کی تفسیر۔
+- [ ] `day.23.sunnah.description`
+  - English: Allah praises those who "reflect on the creation of the heavens and the earth" and say: "Our Lord, You did not create this in vain." Take 15 minutes outside today: walk, sit and look at the sky, and say "SubhanAllah" at each sign of creation you notice.
+  - Urdu: اللہ ان لوگوں کی تعریف کرتا ہے جو ”آسمانوں اور زمین کی پیدائش پر غور کرتے ہیں“ اور کہتے ہیں: ”اے ہمارے رب! تو نے یہ سب بے مقصد پیدا نہیں کیا۔“ آج 15 منٹ باہر گزاریں: چلیں، بیٹھیں اور آسمان کو دیکھیں، اور مخلوق کی ہر نشانی پر ”سبحان اللہ“ کہیں۔
+- [ ] `day.24.character.description`
+  - English: Before every major decision, ask: "How does this serve my akhirah?" Let that question reframe your choices.
+  - Urdu: ہر بڑے فیصلے سے پہلے پوچھیں: ”یہ میری آخرت کے لیے کیسے مفید ہے؟“ اس سوال کو اپنے انتخاب کا نیا زاویہ بننے دیں۔
+- [ ] `day.24.prayer.tip`
+  - English: A sign of zuhd is giving your time to prayer over worldly pursuits. Today, pray the sunnah prayers with each fard: the Prophet ﷺ said that whoever prays twelve rak'ahs in a day and night, a house is built for him in Paradise (Muslim 728).
+  - Urdu: زہد کی ایک علامت یہ ہے کہ آپ دنیا کے کاموں کے بجائے نماز کو اپنا وقت دیں۔ آج ہر فرض کے ساتھ سنتیں پڑھیں: نبی کریم ﷺ نے فرمایا کہ جو دن اور رات میں بارہ رکعتیں پڑھے، اس کے لیے جنت میں ایک گھر بنا دیا جاتا ہے (مسلم 728)۔
+- [ ] `day.24.quran.note`
+  - English: The parable of this world: "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children..."
+  - Urdu: اس دنیا کی مثال: ”جان لو کہ دنیا کی زندگی بس کھیل اور تماشا اور زینت اور آپس میں فخر جتانا اور مال اور اولاد میں ایک دوسرے سے بڑھنے کی کوشش ہے...“
+- [ ] `day.24.sunnah.description`
+  - English: The Prophet ﷺ said: "There are two blessings that many people are cheated of: health and free time." Today, take a 3-hour break from social media and entertainment, and use that time for worship instead.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”دو نعمتیں ایسی ہیں جن کے بارے میں بہت سے لوگ دھوکے میں ہیں: صحت اور فراغت۔“ آج 3 گھنٹے سوشل میڈیا اور تفریح سے وقفہ لیں، اور وہ وقت عبادت میں لگائیں۔
+- [ ] `day.25.character.description`
+  - English: Among the seven whom Allah will shade on the Day when there is no shade but His is "a man who gives charity so secretly that his left hand does not know what his right hand gives" (Bukhari 660; Muslim 1031).
+  - Urdu: جن سات لوگوں کو اللہ اس دن اپنے سائے میں جگہ دے گا جس دن اس کے سائے کے سوا کوئی سایہ نہ ہوگا، ان میں ”وہ شخص بھی ہے جو اتنا چھپا کر صدقہ دے کہ اس کے بائیں ہاتھ کو بھی خبر نہ ہو کہ دائیں ہاتھ نے کیا دیا“ (بخاری 660؛ مسلم 1031)۔
+- [ ] `day.25.prayer.tip`
+  - English: Before each prayer today, check your intention: "Am I praying because people might see me, or purely for Allah?" Let every rak'ah be for Him alone.
+  - Urdu: آج ہر نماز سے پہلے اپنی نیت جانچیں: ”کیا میں اس لیے نماز پڑھ رہا ہوں کہ لوگ دیکھیں، یا خالص اللہ کے لیے؟“ ہر رکعت صرف اسی کے لیے ہو۔
+- [ ] `day.25.quran.note`
+  - English: The essence of the religion: "And they were not commanded except to worship Allah, sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion."
+  - Urdu: دین کا خلاصہ: ”اور انہیں یہی حکم دیا گیا تھا کہ اللہ کی عبادت کریں، دین کو اسی کے لیے خالص کرتے ہوئے، یکسو ہو کر، اور نماز قائم کریں اور زکوٰۃ دیں۔ اور یہی سیدھا دین ہے۔“
+- [ ] `day.25.sunnah.description`
+  - English: Allah says in a hadith qudsi: "I am the most free of need of any partner. Whoever does a deed in which he associates anyone else with Me, I leave him and his association." Test each action today: "Would I do this the same way if no one was watching?" If not, correct your intention.
+  - Urdu: اللہ ایک حدیثِ قدسی میں فرماتا ہے: ”میں شریکوں کے شرک سے سب سے زیادہ بے نیاز ہوں۔ جو کوئی ایسا عمل کرے جس میں میرے ساتھ کسی اور کو شریک کرے، تو میں اسے اور اس کے شرک کو چھوڑ دیتا ہوں۔“ آج ہر عمل کو پرکھیں: ”اگر کوئی نہ دیکھ رہا ہوتا تو کیا میں یہ اسی طرح کرتا؟“ اگر نہیں، تو اپنی نیت درست کریں۔
+- [ ] `day.26.quran.note`
+  - English: "And He is with you wherever you are. And Allah, of what you do, is Seeing."
+  - Urdu: ”اور وہ تمہارے ساتھ ہے جہاں کہیں بھی تم ہو۔ اور جو کچھ تم کرتے ہو اللہ اسے دیکھ رہا ہے۔“
+- [ ] `day.26.sunnah.description`
+  - English: 'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of 'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?
+  - Urdu: حضرت عمر بن خطابؓ نے فرمایا: ”اپنا محاسبہ کر لو اس سے پہلے کہ تمہارا محاسبہ کیا جائے۔“ یہ حضرت عمرؓ کا قول ہے، حدیث نہیں۔ سونے سے پہلے اپنے دن کا جائزہ لیں: آپ نے کیا اچھا کیا، کہاں کوتاہی ہوئی، اور کل کیا بہتر کریں گے؟
+- [ ] `day.27.prayer.tip`
+  - English: In the last third of tonight, when Allah descends to the lowest heaven and asks, "Who is seeking My forgiveness, that I may forgive him?" (Bukhari 1145), pray tahajjud and make the most sincere tawbah of your life. Be specific about what you are repenting from.
+  - Urdu: آج رات کے آخری تہائی حصے میں، جب اللہ آسمانِ دنیا پر نزول فرماتا ہے اور پوچھتا ہے: ”کون ہے جو مجھ سے مغفرت مانگے کہ میں اسے بخش دوں؟“ (بخاری 1145)، تہجد پڑھیں اور اپنی زندگی کی سب سے سچی توبہ کریں۔ واضح طور پر نام لیں کہ کس چیز سے توبہ کر رہے ہیں۔
+- [ ] `day.27.quran.note`
+  - English: The command to repent sincerely: "O you who believe, turn to Allah in sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow."
+  - Urdu: سچی توبہ کا حکم: ”اے ایمان والو! اللہ کی طرف سچی توبہ کرو۔ امید ہے کہ تمہارا رب تمہاری برائیاں تم سے دور کر دے اور تمہیں ایسے باغوں میں داخل کرے جن کے نیچے نہریں بہتی ہیں۔“
+- [ ] `day.27.sunnah.description`
+  - English: The Prophet ﷺ said: "No servant commits a sin, then purifies himself well, stands and prays two rak'ahs, then seeks Allah's forgiveness, except that Allah forgives him." Then he recited Al 'Imran 3:135. Make wudu carefully today, pray two rak'ahs and ask Allah to forgive you.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”کوئی بندہ گناہ کرے، پھر اچھی طرح وضو کرے، کھڑا ہو کر دو رکعتیں پڑھے، پھر اللہ سے مغفرت مانگے، تو اللہ اسے بخش دیتا ہے۔“ پھر آپ ﷺ نے آل عمران 3:135 کی تلاوت فرمائی۔ آج توجہ سے وضو کریں، دو رکعتیں پڑھیں اور اللہ سے معافی مانگیں۔
+- [ ] `day.28.intro`
+  - English: The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body (Bukhari 6011; Muslim 2586). Today you invest in your community.
+  - Urdu: نبی کریم ﷺ نے مومنوں کو آپس کی رحمت اور محبت میں ایک جسم کی مانند قرار دیا (بخاری 6011؛ مسلم 2586)۔ آج آپ اپنی کمیونٹی کے لیے کچھ کریں گے۔
+- [ ] `day.28.quran.note`
+  - English: "You are the best nation produced for mankind. You enjoin what is right, forbid what is wrong and believe in Allah."
+  - Urdu: ”تم بہترین امت ہو جو لوگوں کے لیے نکالی گئی ہے۔ تم بھلائی کا حکم دیتے ہو، برائی سے روکتے ہو اور اللہ پر ایمان رکھتے ہو۔“
+- [ ] `day.28.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever fulfils the need of his brother, Allah will fulfil his need; and whoever relieves a Muslim of a hardship, Allah will relieve him of a hardship on the Day of Resurrection." Today, volunteer, help a neighbour, contribute to a community cause or visit a sick Muslim.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”جو اپنے بھائی کی ضرورت پوری کرے، اللہ اس کی ضرورت پوری کرے گا؛ اور جو کسی مسلمان کی کوئی مشکل دور کرے، اللہ قیامت کے دن اس کی کوئی مشکل دور کرے گا۔“ آج رضاکارانہ کام کریں، کسی پڑوسی کی مدد کریں، کسی اجتماعی کام میں حصہ ڈالیں یا کسی بیمار مسلمان کی عیادت کریں۔
+- [ ] `day.29.intro`
+  - English: Every Muslim represents the deen, and da'wah is not only for scholars: it is living Islam so beautifully that others are inspired. "And who is better in speech than one who invites to Allah?"
+  - Urdu: ہر مسلمان دین کا نمائندہ ہے، اور دعوت صرف علما کا کام نہیں: یہ اسلام کو اتنی خوبصورتی سے جینا ہے کہ دوسرے متاثر ہوں۔ ”اور اس سے بہتر بات کس کی ہو سکتی ہے جو اللہ کی طرف بلائے؟“
+- [ ] `day.29.prayer.tip`
+  - English: In your prayers today, make heartfelt du'a by name for people who are not Muslim or who have drifted from Islam. The Prophet ﷺ prayed for people's guidance: "O Allah, guide Daws" (Bukhari 2937), and he prayed for the guidance of Abu Hurayrah's mother (Muslim 2491).
+  - Urdu: آج اپنی نمازوں میں ان لوگوں کے لیے نام لے کر دل سے دعا کریں جو مسلمان نہیں یا اسلام سے دور ہو گئے ہیں۔ نبی کریم ﷺ لوگوں کی ہدایت کے لیے دعا فرماتے تھے: ”اے اللہ! دَوس کو ہدایت دے“ (بخاری 2937)، اور آپ ﷺ نے حضرت ابو ہریرہؓ کی والدہ کی ہدایت کے لیے دعا فرمائی (مسلم 2491)۔
+- [ ] `day.29.quran.note`
+  - English: "And who is better in speech than one who invites to Allah, does righteousness and says: Indeed, I am of the Muslims."
+  - Urdu: ”اور اس سے بہتر بات کس کی ہو سکتی ہے جو اللہ کی طرف بلائے، نیک عمل کرے اور کہے: بے شک میں مسلمانوں میں سے ہوں۔“
+- [ ] `day.29.sunnah.description`
+  - English: The Prophet ﷺ said: "That Allah guides one person through you is better for you than red camels." The greatest da'wah is your character: when you are kind, honest, reliable, generous and humble, people see Islam in action. Embody these qualities in every interaction today.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اگر اللہ تمہارے ذریعے ایک شخص کو بھی ہدایت دے دے تو یہ تمہارے لیے سرخ اونٹوں سے بہتر ہے۔“ سب سے بڑی دعوت آپ کا کردار ہے: جب آپ مہربان، سچے، قابلِ اعتماد، سخی اور عاجز ہوتے ہیں تو لوگ اسلام کو عمل میں دیکھتے ہیں۔ آج ہر معاملے میں یہ خوبیاں اپنائیں۔
+- [ ] `day.3.quran.note`
+  - English: "Guard your prayers, especially the middle prayer, and stand before Allah in devotion." Reflect on what it means to truly guard your prayers.
+  - Urdu: ”نمازوں کی حفاظت کرو، خاص طور پر درمیانی نماز کی، اور اللہ کے سامنے عاجزی سے کھڑے ہو۔“ غور کریں کہ نمازوں کی صحیح معنوں میں حفاظت کا کیا مطلب ہے۔
+- [ ] `day.3.sunnah.description`
+  - English: The Prophet ﷺ said that whoever prays twelve voluntary rak'ahs in a day and night, a house will be built for him in Paradise. They are 2 before Fajr, 4 before Dhuhr and 2 after it, 2 after Maghrib and 2 after Isha.
+  - Urdu: نبی کریم ﷺ نے فرمایا کہ جو دن اور رات میں بارہ نفل (سنت) رکعتیں پڑھے، اس کے لیے جنت میں ایک گھر بنا دیا جائے گا۔ وہ یہ ہیں: 2 فجر سے پہلے، 4 ظہر سے پہلے اور 2 اس کے بعد، 2 مغرب کے بعد اور 2 عشاء کے بعد۔
+- [ ] `day.30.intro`
+  - English: You have reached Day 30, but the journey does not end here; it begins here. Istiqamah means staying on the straight path consistently, as the Prophet ﷺ taught: "Say: I believe in Allah, then be steadfast."
+  - Urdu: آپ دن 30 تک پہنچ گئے ہیں، مگر سفر یہاں ختم نہیں ہوتا؛ یہیں سے شروع ہوتا ہے۔ استقامت کا مطلب ہے مسلسل سیدھے راستے پر قائم رہنا، جیسا کہ نبی کریم ﷺ نے سکھایا: ”کہو: میں اللہ پر ایمان لایا، پھر اس پر ثابت قدم رہو۔“
+- [ ] `day.30.quran.note`
+  - English: The promise to those who remain steadfast: "Indeed, those who say, Our Lord is Allah, and then remain steadfast, the angels will descend upon them: Do not fear and do not grieve, but receive good tidings of Paradise, which you were promised."
+  - Urdu: ثابت قدم رہنے والوں سے وعدہ: ”بے شک جن لوگوں نے کہا: ہمارا رب اللہ ہے، پھر اس پر ثابت قدم رہے، ان پر فرشتے اترتے ہیں (اور کہتے ہیں): نہ ڈرو اور نہ غم کرو، اور اس جنت کی خوش خبری سنو جس کا تم سے وعدہ کیا گیا تھا۔“
+- [ ] `day.30.sunnah.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small." Plan a daily routine of prayer, Quran, dhikr and character work for the next 30 days that you can keep up.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اللہ کو سب سے زیادہ پسندیدہ عمل وہ ہے جو مسلسل ہو، چاہے تھوڑا ہو۔“ اگلے 30 دنوں کے لیے نماز، قرآن، ذکر اور اخلاق پر کام کا ایسا روزانہ معمول بنائیں جسے آپ نبھا سکیں۔
+- [ ] `day.4.prayer.tip`
+  - English: Sleep early tonight and lay out your prayer mat before bed. When the alarm rings, sit up straight away and say the waking du'a, "Al-hamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur." Don't lie back down; wudu will wake you fully.
+  - Urdu: آج رات جلدی سوئیں اور سونے سے پہلے جائے نماز بچھا دیں۔ جب الارم بجے تو فوراً اٹھ بیٹھیں اور جاگنے کی دعا پڑھیں: ”الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ“۔ دوبارہ نہ لیٹیں؛ وضو آپ کو پوری طرح جگا دے گا۔
+- [ ] `day.4.quran.note`
+  - English: Read about the dawn prayer, which the angels witness: "Indeed, the recitation at dawn is ever witnessed."
+  - Urdu: فجر کی نماز کے بارے میں پڑھیں، جس میں فرشتے حاضر ہوتے ہیں: ”بے شک فجر کی قراءت میں (فرشتے) حاضر ہوتے ہیں۔“
+- [ ] `day.4.sunnah.description`
+  - English: On waking, say the waking du'a, wipe the sleep from your face with your hand, make wudu, and pray the 2 sunnah rak'ahs before Fajr. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and everything in it."
+  - Urdu: جاگنے پر جاگنے کی دعا پڑھیں، ہاتھ سے چہرے سے نیند کے اثرات صاف کریں، وضو کریں، اور فجر سے پہلے کی 2 سنتیں پڑھیں۔ نبی کریم ﷺ نے فرمایا: ”فجر کی دو رکعتیں دنیا اور جو کچھ اس میں ہے اس سے بہتر ہیں۔“
+- [ ] `day.5.prayer.tip`
+  - English: Before Dhuhr, remind yourself that you are about to speak to Allah. Slow every movement and make your ruku' and sujood longer than usual. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is in prostration, so make much du'a."
+  - Urdu: ظہر سے پہلے خود کو یاد دلائیں کہ آپ اللہ سے ہم کلام ہونے والے ہیں۔ ہر حرکت آہستہ کریں اور اپنے رکوع اور سجدے معمول سے لمبے کریں۔ نبی کریم ﷺ نے فرمایا: ”بندہ اپنے رب کے سب سے زیادہ قریب سجدے کی حالت میں ہوتا ہے، اس لیے (سجدے میں) کثرت سے دعا کرو۔“
+- [ ] `day.5.quran.note`
+  - English: The first quality of the successful believers is khushu' in prayer: "Successful indeed are the believers, those who are humble in their prayer."
+  - Urdu: کامیاب مومنوں کی پہلی صفت نماز میں خشوع ہے: ”یقیناً ایمان والے کامیاب ہو گئے، جو اپنی نماز میں خشوع کرنے والے ہیں۔“
+- [ ] `day.5.sunnah.description`
+  - English: Make your prostration longer than usual today. In sujood, repeat "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High), then make your own du'a. In his night prayer, the Prophet's ﷺ prostration lasted as long as it takes to recite fifty verses.
+  - Urdu: آج اپنا سجدہ معمول سے لمبا کریں۔ سجدے میں ”سبحان ربی الاعلیٰ“ (پاک ہے میرا رب جو سب سے بلند ہے) بار بار پڑھیں، پھر اپنی دعا مانگیں۔ رات کی نماز میں نبی کریم ﷺ کا سجدہ اتنا لمبا ہوتا تھا جتنی دیر میں پچاس آیتیں پڑھی جائیں۔
+- [ ] `day.6.character.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small" (Bukhari 6464). A small daily Quran habit shapes the soul over time.
+  - Urdu: نبی کریم ﷺ نے فرمایا: ”اللہ کو سب سے زیادہ پسندیدہ عمل وہ ہے جو مسلسل ہو، چاہے تھوڑا ہو“ (بخاری 6464)۔ قرآن کی چھوٹی سی روزانہ عادت وقت کے ساتھ روح کو سنوار دیتی ہے۔
+- [ ] `day.6.sunnah.description`
+  - English: Set a fixed time each day for the Quran. The Prophet ﷺ said: "The best of you are those who learn the Quran and teach it." Even one verse read with reflection is valuable. Start small and stay consistent.
+  - Urdu: ہر روز قرآن کے لیے ایک مقررہ وقت رکھیں۔ نبی کریم ﷺ نے فرمایا: ”تم میں سب سے بہتر وہ ہے جو قرآن سیکھے اور سکھائے۔“ غور سے پڑھی گئی ایک آیت بھی قیمتی ہے۔ تھوڑے سے شروع کریں اور پابندی سے کرتے رہیں۔
+- [ ] `day.7.prayer.tip`
+  - English: Tonight, before you sleep or in the last part of the night before Fajr, pray 2 or more rak'ahs of night prayer. Ask Allah sincerely for forgiveness. Allah descends to the lowest heaven in the last third of the night and asks, "Who is asking Me for forgiveness, that I may forgive him?" (Bukhari 1145)
+  - Urdu: آج رات سونے سے پہلے یا فجر سے پہلے رات کے آخری حصے میں رات کی نماز کی 2 یا زیادہ رکعتیں پڑھیں۔ اللہ سے سچے دل سے مغفرت مانگیں۔ اللہ رات کے آخری تہائی حصے میں آسمانِ دنیا پر نزول فرماتا ہے اور پوچھتا ہے: ”کون ہے جو مجھ سے مغفرت مانگے کہ میں اسے بخش دوں؟“ (بخاری 1145)
+- [ ] `day.7.quran.note`
+  - English: One of the most hopeful verses in the Quran: "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins."
+  - Urdu: قرآن کی سب سے زیادہ امید دلانے والی آیات میں سے ایک: ”اللہ کی رحمت سے مایوس نہ ہو۔ بے شک اللہ سب گناہ معاف کر دیتا ہے۔“
+- [ ] `day.7.sunnah.description`
+  - English: Say the master du'a of seeking forgiveness in the morning and the evening. The Prophet ﷺ said that whoever says it with certainty during the day and dies before evening, or says it at night and dies before morning, is of the people of Paradise.
+  - Urdu: صبح و شام سید الاستغفار پڑھیں۔ نبی کریم ﷺ نے فرمایا کہ جو اسے یقین کے ساتھ دن میں پڑھے اور شام سے پہلے فوت ہو جائے، یا رات میں پڑھے اور صبح سے پہلے فوت ہو جائے، وہ جنتیوں میں سے ہے۔
+- [ ] `day.8.character.action`
+  - English: Name 10 specific blessings today. Be specific: not just "health" but "I can see, I have food, I have a home."
+  - Urdu: آج 10 متعین نعمتیں گنیں۔ واضح لکھیں: صرف ”صحت“ نہیں بلکہ ”میں دیکھ سکتا ہوں، میرے پاس کھانا ہے، میرے پاس گھر ہے۔“
+- [ ] `day.8.intro`
+  - English: Remembrance of Allah nourishes the heart: "Verily, in the remembrance of Allah do hearts find rest." Today you build a morning and evening dhikr routine to carry with you every day.
+  - Urdu: اللہ کا ذکر دل کی غذا ہے: ”سن لو! اللہ کے ذکر ہی سے دلوں کو اطمینان ملتا ہے۔“ آج آپ صبح و شام کے ذکر کا ایک معمول بنائیں گے جو ہر دن آپ کے ساتھ رہے۔
+- [ ] `day.8.quran.note`
+  - English: The well-known verse about dhikr and the heart: "Verily, in the remembrance of Allah do hearts find rest."
+  - Urdu: ذکر اور دل کے بارے میں مشہور آیت: ”سن لو! اللہ کے ذکر ہی سے دلوں کو اطمینان ملتا ہے۔“
+- [ ] `day.9.character.description`
+  - English: Love for the Prophet ﷺ grows and shows as you follow his way. Every Sunnah you follow is a sign of it.
+  - Urdu: نبی کریم ﷺ سے محبت آپ کے طریقے کی پیروی سے بڑھتی اور ظاہر ہوتی ہے۔ آپ جس سنت پر بھی عمل کرتے ہیں وہ اس محبت کی علامت ہے۔
+- [ ] `day.9.character.trait`
+  - English: Love for the Prophet ﷺ
+  - Urdu: نبی کریم ﷺ سے محبت
+- [ ] `day.9.intro`
+  - English: Following the Sunnah means living as the Prophet ﷺ lived. Every Sunnah you revive is an act of love for him and a source of great reward.
+  - Urdu: سنت کی پیروی کا مطلب ہے ویسے جینا جیسے نبی کریم ﷺ نے زندگی گزاری۔ آپ جو بھی سنت زندہ کرتے ہیں وہ آپ ﷺ سے محبت کا اظہار اور بڑے اجر کا ذریعہ ہے۔
+- [ ] `day.9.prayer.tip`
+  - English: Today, focus on praying as the Prophet ﷺ prayed. Learn one Sunnah of prayer you may have missed, such as the opening du'a (istiftah), the du'a between the two prostrations, or a du'a in the final tashahhud.
+  - Urdu: آج اس بات پر توجہ دیں کہ ویسے نماز پڑھیں جیسے نبی کریم ﷺ پڑھتے تھے۔ نماز کی کوئی ایک سنت سیکھیں جو شاید آپ سے چھوٹ رہی ہو، جیسے ابتدائی دعا (ثنا/استفتاح)، دو سجدوں کے درمیان کی دعا، یا آخری تشہد کی کوئی دعا۔
+- [ ] `day.9.quran.note`
+  - English: The verse that makes the Prophet ﷺ our finest example: "There has certainly been for you in the Messenger of Allah an excellent example."
+  - Urdu: وہ آیت جو نبی کریم ﷺ کو ہمارے لیے بہترین نمونہ قرار دیتی ہے: ”یقیناً تمہارے لیے اللہ کے رسول میں بہترین نمونہ ہے۔“
+- [ ] `day.9.reflection`
+  - English: Which Sunnah of the Prophet ﷺ do you most want to make a permanent part of your life?
+  - Urdu: نبی کریم ﷺ کی کون سی سنت آپ سب سے زیادہ اپنی زندگی کا مستقل حصہ بنانا چاہتے ہیں؟
+- [ ] `day.9.task.9_salawat.title`
+  - English: Send salawat on the Prophet ﷺ 100 times
+  - Urdu: نبی کریم ﷺ پر 100 مرتبہ درود بھیجیں
+- [ ] `dua.tawbah.occasion`
+  - English: Any time; the Prophet ﷺ said it more than seventy times a day
+  - Urdu: کسی بھی وقت؛ نبی کریم ﷺ دن میں ستر مرتبہ سے زیادہ یہ کہتے تھے
+- [ ] `learn.salah_notes.aloud_or_silent.body`
+  - English: Fajr is recited aloud, and so are the first two rak'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently. "Aloud" applies to men and to the imam; for women, see the note below.
+  - Urdu: فجر میں بلند آواز سے قراءت کی جاتی ہے، اور مغرب اور عشاء کی پہلی دو رکعتوں میں بھی۔ ظہر اور عصر میں آہستہ قراءت کی جاتی ہے۔ ”بلند آواز“ کا حکم مردوں اور امام کے لیے ہے؛ خواتین کے لیے نیچے دیا گیا نوٹ دیکھیں۔
+- [ ] `learn.salah_notes.aloud_or_silent.title`
+  - English: Aloud or silent
+  - Urdu: بلند آواز یا آہستہ
+- [ ] `learn.salah_notes.for_women.body`
+  - English: During menstruation and post-natal bleeding a woman does not pray, and she does not make up those prayers afterwards (Bukhari 321; Muslim 335). When non-mahram men are present, recite so that only you can hear. In prayer, cover the whole body except the face and hands.
+  - Urdu: حیض اور نفاس کے دوران عورت نماز نہیں پڑھتی، اور بعد میں ان نمازوں کی قضا بھی نہیں کرتی (بخاری 321؛ مسلم 335)۔ جب غیر محرم مرد موجود ہوں تو اتنی آواز سے پڑھیں کہ صرف آپ سن سکیں۔ نماز میں چہرے اور ہاتھوں کے سوا پورا جسم ڈھانپیں۔
+- [ ] `learn.salah_notes.for_women.title`
+  - English: For women
+  - Urdu: خواتین کے لیے
+- [ ] `learn.salah_notes.madhhab_details.body`
+  - English: The four schools (Hanafi, Maliki, Shafi'i and Hanbali) differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.
+  - Urdu: چاروں فقہی مذاہب (حنفی، مالکی، شافعی اور حنبلی) میں کچھ تفصیلات میں فرق ہے، جیسے ہاتھ کہاں باندھے جائیں، رکوع کے وقت ہاتھ اٹھانا (رفع یدین)، بیٹھنے کا طریقہ، اور امام کے پیچھے سورۃ الفاتحہ پڑھنا۔ کسی ایک قابلِ اعتماد استاد یا مذہب کی پیروی کریں؛ یہ تمام طریقے درست ہیں۔
+- [ ] `learn.salah_notes.madhhab_details.title`
+  - English: Small differences between madhhabs
+  - Urdu: فقہی مذاہب کے درمیان چھوٹے فرق
+- [ ] `learn.salah_notes.three_four_rakahs.body`
+  - English: After the second rak'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh" (Shafi'is also add the salawat), then stand with Allahu akbar. In the 3rd and 4th rak'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.
+  - Urdu: دوسری رکعت کے بعد بیٹھ کر تشہد صرف ”عبدہ ورسولہ“ تک پڑھیں (شافعی درود بھی شامل کرتے ہیں)، پھر اللہ اکبر کہتے ہوئے کھڑے ہو جائیں۔ تیسری اور چوتھی رکعت میں آہستہ صرف سورۃ الفاتحہ پڑھیں، پھر مکمل آخری قعدہ اور سلام کے ساتھ نماز ختم کریں۔
+- [ ] `learn.salah_notes.three_four_rakahs.title`
+  - English: 3- and 4-rak‘ah prayers
+  - Urdu: 3 اور 4 رکعت والی نمازیں
+- [ ] `learn.salah_steps.salah_fatihah.body`
+  - English: Recite Al-Fatihah, then say Āmīn. The Prophet ﷺ said there is no prayer without it (Bukhari 756).
+  - Urdu: سورۃ الفاتحہ پڑھیں، پھر آمین کہیں۔ نبی کریم ﷺ نے فرمایا کہ اس کے بغیر نماز نہیں ہوتی (بخاری 756)۔
+- [ ] `learn.salah_steps.salah_fatihah.title`
+  - English: Recite Al-Fatihah
+  - Urdu: سورۃ الفاتحہ پڑھیں
+- [ ] `learn.salah_steps.salah_final_dua.body`
+  - English: Before the salam, seek refuge in Allah from these four things, then ask Him for whatever you need.
+  - Urdu: سلام سے پہلے ان چار چیزوں سے اللہ کی پناہ مانگیں، پھر جو چاہیں اس سے مانگیں۔
+- [ ] `learn.salah_steps.salah_final_dua.title`
+  - English: A du‘a before ending
+  - Urdu: ختم کرنے سے پہلے ایک دعا
+- [ ] `learn.salah_steps.salah_istiadhah.body`
+  - English: Quietly seek refuge in Allah before you recite.
+  - Urdu: قراءت سے پہلے آہستہ سے اللہ کی پناہ مانگیں۔
+- [ ] `learn.salah_steps.salah_istiadhah.title`
+  - English: Seek refuge
+  - Urdu: پناہ مانگیں (تعوذ)
+- [ ] `learn.salah_steps.salah_opening_dua.body`
+  - English: Quietly say this short opening du‘a. It is sunnah, so your prayer is still valid while you are learning it.
+  - Urdu: آہستہ سے یہ مختصر ابتدائی دعا پڑھیں۔ یہ سنت ہے، اس لیے جب تک آپ اسے سیکھ رہے ہیں آپ کی نماز پھر بھی درست ہے۔
+- [ ] `learn.salah_steps.salah_opening_dua.title`
+  - English: Opening du‘a
+  - Urdu: ابتدائی دعا (ثنا)
+- [ ] `learn.salah_steps.salah_prepare.body`
+  - English: Make wudu, cover yourself properly and face the qiblah. Intend in your heart which prayer you are praying (for example, Fajr, 2 rak'ahs); nothing needs to be said aloud.
+  - Urdu: وضو کریں، اپنا جسم ٹھیک سے ڈھانپیں اور قبلہ رو ہو جائیں۔ دل میں نیت کریں کہ کون سی نماز پڑھ رہے ہیں (مثلاً فجر، 2 رکعت)؛ زبان سے کچھ کہنے کی ضرورت نہیں۔
+- [ ] `learn.salah_steps.salah_prepare.title`
+  - English: Get ready
+  - Urdu: تیاری کریں
+- [ ] `learn.salah_steps.salah_rising.body`
+  - English: Rise saying the first phrase, then once you are standing straight say the second. In most schools, behind an imam say only the second phrase (Shafi'is say both).
+  - Urdu: پہلا جملہ کہتے ہوئے اٹھیں، پھر جب سیدھے کھڑے ہو جائیں تو دوسرا جملہ کہیں۔ اکثر فقہی مذاہب میں امام کے پیچھے صرف دوسرا جملہ کہا جاتا ہے (شافعی دونوں کہتے ہیں)۔
+- [ ] `learn.salah_steps.salah_rising.title`
+  - English: Stand back up
+  - Urdu: دوبارہ کھڑے ہوں (قومہ)
+- [ ] `learn.salah_steps.salah_ruku.body`
+  - English: Say Allahu akbar and bow with your back straight and hands on your knees, and be still. Say this; once is valid, and it is commonly said three times.
+  - Urdu: اللہ اکبر کہیں اور کمر سیدھی رکھتے ہوئے، ہاتھ گھٹنوں پر رکھ کر جھکیں، اور سکون سے ٹھہریں۔ یہ پڑھیں؛ ایک بار کافی ہے، اور عام طور پر تین بار پڑھا جاتا ہے۔
+- [ ] `learn.salah_steps.salah_ruku.title`
+  - English: Bow (ruku‘)
+  - Urdu: رکوع کریں
+- [ ] `learn.salah_steps.salah_salawat.body`
+  - English: Still sitting, send blessings on the Prophet ﷺ.
+  - Urdu: بیٹھے بیٹھے نبی کریم ﷺ پر درود بھیجیں۔
+- [ ] `learn.salah_steps.salah_salawat.title`
+  - English: Send blessings on the Prophet ﷺ
+  - Urdu: نبی کریم ﷺ پر درود بھیجیں
+- [ ] `learn.salah_steps.salah_second_rakah.body`
+  - English: Stand up with Allahu akbar and repeat everything from Al-Fatihah to the second prostration. There is no opening du‘a this time.
+  - Urdu: اللہ اکبر کہتے ہوئے کھڑے ہوں اور سورۃ الفاتحہ سے دوسرے سجدے تک سب کچھ دہرائیں۔ اس بار ابتدائی دعا نہیں پڑھی جاتی۔
+- [ ] `learn.salah_steps.salah_second_rakah.title`
+  - English: Stand for the second rak‘ah
+  - Urdu: دوسری رکعت کے لیے کھڑے ہوں
+- [ ] `learn.salah_steps.salah_second_sujud.body`
+  - English: Say Allahu akbar and make a second prostration, just like the first.
+  - Urdu: اللہ اکبر کہیں اور پہلے سجدے کی طرح دوسرا سجدہ کریں۔
+- [ ] `learn.salah_steps.salah_second_sujud.title`
+  - English: Prostrate again
+  - Urdu: دوبارہ سجدہ کریں
+- [ ] `learn.salah_steps.salah_short_surah.body`
+  - English: In the first two rak'ahs, recite a short surah after Al-Fatihah. Al-Ikhlas is a good one to start with.
+  - Urdu: پہلی دو رکعتوں میں سورۃ الفاتحہ کے بعد کوئی چھوٹی سورت پڑھیں۔ شروع کرنے کے لیے سورۃ الاخلاص اچھی ہے۔
+- [ ] `learn.salah_steps.salah_short_surah.title`
+  - English: Recite a short surah
+  - Urdu: کوئی چھوٹی سورت پڑھیں
+- [ ] `learn.salah_steps.salah_sitting.body`
+  - English: Say Allahu akbar, sit up and be still for a moment.
+  - Urdu: اللہ اکبر کہیں، اٹھ کر بیٹھیں اور ایک لمحہ سکون سے ٹھہریں۔
+- [ ] `learn.salah_steps.salah_sitting.title`
+  - English: Sit between the prostrations
+  - Urdu: دو سجدوں کے درمیان بیٹھیں (جلسہ)
+- [ ] `learn.salah_steps.salah_sujud.body`
+  - English: Say Allahu akbar and prostrate on forehead and nose, palms, knees and toes, and be still. This is the closest you are to your Lord, so make du‘a here too (Muslim 482).
+  - Urdu: اللہ اکبر کہیں اور پیشانی اور ناک، ہتھیلیوں، گھٹنوں اور پاؤں کی انگلیوں پر سجدہ کریں، اور سکون سے ٹھہریں۔ اس حالت میں آپ اپنے رب کے سب سے زیادہ قریب ہوتے ہیں، اس لیے یہاں دعا بھی کریں (مسلم 482)۔
+- [ ] `learn.salah_steps.salah_sujud.title`
+  - English: Prostrate (sujud)
+  - Urdu: سجدہ کریں
+- [ ] `learn.salah_steps.salah_takbir.body`
+  - English: Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Where the hands rest differs by school. Hanafi and Hanbali: below the navel (Hanafi women: on the chest); Shafi'i: below the chest, above the navel; many Malikis let the arms hang at the sides. All are valid practice.
+  - Urdu: اپنے ہاتھ کندھوں یا کانوں تک اٹھائیں اور اللہ اکبر کہیں، پھر دایاں ہاتھ بائیں ہاتھ پر رکھیں۔ ہاتھ کہاں باندھے جائیں اس میں فقہی مذاہب کا فرق ہے۔ حنفی اور حنبلی: ناف کے نیچے (حنفی خواتین: سینے پر)؛ شافعی: سینے کے نیچے، ناف کے اوپر؛ بہت سے مالکی ہاتھ پہلوؤں میں چھوڑ دیتے ہیں۔ یہ سب درست طریقے ہیں۔
+- [ ] `learn.salah_steps.salah_takbir.title`
+  - English: Begin with Allahu akbar
+  - Urdu: اللہ اکبر سے آغاز کریں
+- [ ] `learn.salah_steps.salah_tashahhud.body`
+  - English: After the second rak'ah's prostrations, sit and recite the tashahhud.
+  - Urdu: دوسری رکعت کے سجدوں کے بعد بیٹھیں اور تشہد پڑھیں۔
+- [ ] `learn.salah_steps.salah_tashahhud.title`
+  - English: Sit for the tashahhud
+  - Urdu: تشہد کے لیے بیٹھیں
+- [ ] `learn.salah_steps.salah_taslim.body`
+  - English: Turn your head to the right and say the salam, then turn to the left and say it again. Your prayer is complete, alhamdulillah.
+  - Urdu: اپنا سر دائیں طرف پھیریں اور سلام کہیں، پھر بائیں طرف پھیر کر دوبارہ کہیں۔ آپ کی نماز مکمل ہو گئی، الحمد للہ۔
+- [ ] `learn.salah_steps.salah_taslim.title`
+  - English: End with salam
+  - Urdu: سلام کے ساتھ ختم کریں
+- [ ] `learn.wudu_steps.wudu_arms.body`
+  - English: Wash your right arm from the fingertips up to and including the elbow, three times, then the left.
+  - Urdu: اپنا دایاں بازو انگلیوں کے سروں سے کہنی تک، کہنی سمیت، تین بار دھوئیں، پھر بایاں۔
+- [ ] `learn.wudu_steps.wudu_arms.title`
+  - English: Wash your arms
+  - Urdu: بازو دھوئیں
+- [ ] `learn.wudu_steps.wudu_bismillah.body`
+  - English: Begin by mentioning the name of Allah.
+  - Urdu: اللہ کا نام لے کر شروع کریں۔
+- [ ] `learn.wudu_steps.wudu_bismillah.title`
+  - English: Say Bismillah
+  - Urdu: بسم اللہ کہیں
+- [ ] `learn.wudu_steps.wudu_ears.body`
+  - English: Wipe the inside of your ears with your index fingers and the back with your thumbs, once.
+  - Urdu: شہادت کی انگلیوں سے کانوں کے اندر کا اور انگوٹھوں سے کانوں کی پشت کا ایک بار مسح کریں۔
+- [ ] `learn.wudu_steps.wudu_ears.title`
+  - English: Wipe your ears
+  - Urdu: کانوں کا مسح کریں
+- [ ] `learn.wudu_steps.wudu_face.body`
+  - English: Wash your whole face, from the hairline to the chin and from ear to ear, three times.
+  - Urdu: پورا چہرہ، پیشانی کے بالوں سے ٹھوڑی تک اور ایک کان سے دوسرے کان تک، تین بار دھوئیں۔
+- [ ] `learn.wudu_steps.wudu_face.title`
+  - English: Wash your face
+  - Urdu: چہرہ دھوئیں
+- [ ] `learn.wudu_steps.wudu_feet.body`
+  - English: Wash your right foot up to and including the ankle, three times, getting between the toes, then the left.
+  - Urdu: اپنا دایاں پاؤں ٹخنے تک، ٹخنے سمیت، تین بار دھوئیں اور انگلیوں کے درمیان بھی پانی پہنچائیں، پھر بایاں۔
+- [ ] `learn.wudu_steps.wudu_feet.title`
+  - English: Wash your feet
+  - Urdu: پاؤں دھوئیں
+- [ ] `learn.wudu_steps.wudu_hands.body`
+  - English: Wash both hands up to the wrists, three times.
+  - Urdu: دونوں ہاتھ کلائیوں تک تین بار دھوئیں۔
+- [ ] `learn.wudu_steps.wudu_hands.title`
+  - English: Wash your hands
+  - Urdu: ہاتھ دھوئیں
+- [ ] `learn.wudu_steps.wudu_head.body`
+  - English: Wipe your head once with wet hands, from front to back and back to the front again, as the Prophet ﷺ did. How much must be wiped differs by school. Maliki and Hanbali: the whole head; Hanafi: at least a quarter; Shafi'i: any part. Wiping the whole head covers all views.
+  - Urdu: گیلے ہاتھوں سے ایک بار سر کا مسح کریں، آگے سے پیچھے اور پھر پیچھے سے آگے، جیسے نبی کریم ﷺ کرتے تھے۔ کتنے حصے کا مسح ضروری ہے اس میں فقہی مذاہب کا فرق ہے۔ مالکی اور حنبلی: پورا سر؛ حنفی: کم از کم چوتھائی؛ شافعی: کوئی بھی حصہ۔ پورے سر کا مسح کرنے سے تمام آراء پر عمل ہو جاتا ہے۔
+- [ ] `learn.wudu_steps.wudu_head.title`
+  - English: Wipe your head
+  - Urdu: سر کا مسح کریں
+- [ ] `learn.wudu_steps.wudu_intention.body`
+  - English: Intend in your heart that you are purifying yourself for prayer; there is nothing to say out loud. Most scholars count this intention as required, while Hanafis count it as sunnah.
+  - Urdu: دل میں نیت کریں کہ آپ نماز کے لیے پاکیزگی حاصل کر رہے ہیں؛ زبان سے کچھ کہنے کی ضرورت نہیں۔ اکثر علما کے نزدیک یہ نیت ضروری ہے، جبکہ حنفیوں کے نزدیک سنت ہے۔
+- [ ] `learn.wudu_steps.wudu_intention.title`
+  - English: Intend in your heart
+  - Urdu: دل میں نیت کریں
+- [ ] `learn.wudu_steps.wudu_mouth_nose.body`
+  - English: Rinse your mouth and sniff water into your nose and blow it out, three times. One handful of water for both is fine.
+  - Urdu: تین بار کلی کریں اور ناک میں پانی چڑھا کر جھاڑیں۔ دونوں کے لیے ایک چلو پانی بھی کافی ہے۔
+- [ ] `learn.wudu_steps.wudu_mouth_nose.title`
+  - English: Mouth and nose
+  - Urdu: منہ اور ناک
+- [ ] `learn.wudu_steps.wudu_order.body`
+  - English: Do the steps in this order and without long breaks in between. Washing each part once or twice is valid too; three times is the full sunnah, so don't go beyond three.
+  - Urdu: یہ مراحل اسی ترتیب سے اور درمیان میں لمبے وقفے کے بغیر کریں۔ ہر عضو کو ایک یا دو بار دھونا بھی درست ہے؛ تین بار دھونا پوری سنت ہے، اس لیے تین سے زیادہ نہ دھوئیں۔
+- [ ] `learn.wudu_steps.wudu_order.title`
+  - English: Keep the order, no long pauses
+  - Urdu: ترتیب برقرار رکھیں، لمبا وقفہ نہیں
 
 ### UI legal and privacy text (ur)
 
@@ -2194,6 +3164,491 @@ These 201 keys have an intentionally empty Arabic meaning; nothing to review.
   - English: "The most beloved of deeds to Allah are the most consistent, even if small."
   - Indonesian: "Amalan yang paling dicintai Allah adalah yang paling konsisten, meskipun sedikit."
 
+### Quotations and rulings outside meaning lines (id)
+
+Texts outside the meaning lines that quote Allah or the Prophet ﷺ, quote someone, or explain a ruling (every Learn title and body). Check that each quotation is faithful and each ruling is stated accurately.
+
+- [ ] `day.1.quran.note`
+  - English: Read Al-Fatihah slowly and reflect on each verse. You recite it in every rak'ah: "Guide us to the straight path."
+  - Indonesian: Bacalah Al-Fatihah perlahan dan renungkan setiap ayatnya. Kamu membacanya di setiap rakaat: "Tunjukilah kami jalan yang lurus."
+- [ ] `day.1.sunnah.description`
+  - English: Say "Bismillah" before you eat, drink, leave the house or start your work. The Prophet ﷺ said to a boy: "Mention the name of Allah, eat with your right hand, and eat from what is in front of you."
+  - Indonesian: Ucapkan "Bismillah" sebelum makan, minum, keluar rumah, atau memulai pekerjaanmu. Nabi ﷺ bersabda kepada seorang anak: "Sebutlah nama Allah, makanlah dengan tangan kananmu, dan makanlah dari makanan yang ada di dekatmu."
+- [ ] `day.10.intro`
+  - English: Du'a is worship itself, and Allah says, "Call upon Me; I will respond to you." Today you learn to speak to Allah in your own words and trust in His answer.
+  - Indonesian: Doa adalah ibadah itu sendiri, dan Allah berfirman, "Berdoalah kepada-Ku, niscaya akan Aku kabulkan untukmu." Hari ini kamu belajar berbicara kepada Allah dengan kata-katamu sendiri dan meyakini jawaban-Nya.
+- [ ] `day.10.prayer.tip`
+  - English: In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is prostrating, so make much du'a." Anas said this Quranic du'a was the one he made most often (Bukhari 6389).
+  - Indonesian: Di setiap sujud hari ini, berdoalah dengan kata-katamu sendiri untuk kebutuhanmu, keluargamu, dan umat. Nabi ﷺ bersabda: "Keadaan seorang hamba yang paling dekat dengan Tuhannya adalah ketika ia sujud, maka perbanyaklah doa." Anas berkata bahwa doa dari Al-Qur'an ini adalah doa yang paling sering beliau panjatkan (Bukhari 6389).
+- [ ] `day.10.quran.note`
+  - English: The verse that shows Allah is always near and always listening: "I am near. I respond to the call of the one who calls upon Me."
+  - Indonesian: Ayat yang menunjukkan bahwa Allah selalu dekat dan selalu mendengar: "Aku dekat. Aku mengabulkan permohonan orang yang berdoa apabila ia berdoa kepada-Ku."
+- [ ] `day.10.sunnah.description`
+  - English: The Prophet ﷺ taught us special times for du'a: the last third of the night (Bukhari 1145), between the adhan and the iqamah (Abu Dawud 521; Tirmidhi 212), in sujood (Muslim 482), at the end of the obligatory prayers (Tirmidhi 3499), and the hour on Friday, sought in the last hour after Asr (Bukhari 935; Abu Dawud 1048). Use at least 3 of these times today.
+  - Indonesian: Nabi ﷺ mengajarkan waktu-waktu istimewa untuk berdoa: sepertiga malam terakhir (Bukhari 1145), antara azan dan iqamah (Abu Dawud 521; Tirmidzi 212), saat sujud (Muslim 482), di akhir sholat wajib (Tirmidzi 3499), dan satu saat di hari Jumat yang dicari pada saat terakhir setelah Asar (Bukhari 935; Abu Dawud 1048). Manfaatkan setidaknya 3 dari waktu-waktu ini hari ini.
+- [ ] `day.11.intro`
+  - English: Giving in the way of Allah purifies your wealth, eases hardship and earns His love. The Prophet ﷺ was the most generous of people, and even more generous in Ramadan.
+  - Indonesian: Memberi di jalan Allah menyucikan hartamu, meringankan kesulitan, dan mendatangkan cinta-Nya. Nabi ﷺ adalah manusia yang paling dermawan, dan beliau lebih dermawan lagi di bulan Ramadhan.
+- [ ] `day.11.prayer.tip`
+  - English: Every morning two angels come down. One says, "O Allah, give the one who spends something in return," and the other says, "O Allah, give the one who withholds loss" (Bukhari 1442; Muslim 1010). Give some sadaqah early today, after Fajr.
+  - Indonesian: Setiap pagi dua malaikat turun. Yang satu berdoa, "Ya Allah, berilah ganti bagi orang yang berinfak," dan yang lain berdoa, "Ya Allah, berilah kebinasaan bagi orang yang menahan hartanya" (Bukhari 1442; Muslim 1010). Bersedekahlah lebih awal hari ini, setelah Subuh.
+- [ ] `day.11.quran.note`
+  - English: The parable of those who spend in the way of Allah: like a grain that grows seven ears, with a hundred grains in each ear. "And Allah multiplies for whom He wills."
+  - Indonesian: Perumpamaan orang yang berinfak di jalan Allah: seperti sebutir benih yang menumbuhkan tujuh tangkai, pada setiap tangkai ada seratus biji. "Dan Allah melipatgandakan bagi siapa yang Dia kehendaki."
+- [ ] `day.11.sunnah.description`
+  - English: The Prophet ﷺ said: "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that benefits, or a righteous child who prays for him." Start an ongoing charity today: share beneficial knowledge, teach someone a Sunnah, plant a tree, give to a masjid fund or support an orphan.
+  - Indonesian: Nabi ﷺ bersabda: "Apabila seseorang meninggal dunia, terputuslah amalnya kecuali tiga: sedekah jariyah, ilmu yang bermanfaat, atau anak saleh yang mendoakannya." Mulailah sedekah jariyah hari ini: bagikan ilmu yang bermanfaat, ajarkan satu Sunnah kepada seseorang, tanamlah pohon, berdonasi untuk dana masjid, atau santuni anak yatim.
+- [ ] `day.12.character.action`
+  - English: Practise contentment today: hold back from one purchase or desire you would normally give in to, and say "Alhamdulillah" for what you have.
+  - Indonesian: Latihlah sifat qana'ah hari ini: tahanlah satu pembelian atau keinginan yang biasanya kamu turuti, dan ucapkan "Alhamdulillah" atas apa yang kamu miliki.
+- [ ] `day.12.character.description`
+  - English: The Prophet ﷺ said: "Wealth is not having many possessions; true wealth is contentment of the soul" (Bukhari 6446).
+  - Indonesian: Nabi ﷺ bersabda: "Kekayaan bukanlah banyaknya harta; kekayaan yang sejati adalah kekayaan jiwa" (Bukhari 6446).
+- [ ] `day.12.quran.note`
+  - English: Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."
+  - Indonesian: Allah memerintahkan kita memakan yang halal lagi baik, dan memperingatkan agar tidak mengikuti langkah-langkah setan: "Sungguh, ia musuh yang nyata bagimu."
+- [ ] `day.12.sunnah.description`
+  - English: Make this du'a often: "Allahummak-fini bi-halalika 'an haramika wa aghnini bi-fadlika 'amman siwak" (O Allah, suffice me with what You have made lawful instead of what You have forbidden, and make me free of need of anyone besides You). After Fajr, also ask Allah for "beneficial knowledge, good provision and accepted deeds" (Ibn Majah 925).
+  - Indonesian: Perbanyaklah doa ini: "Allahummak-fini bi-halalika 'an haramika wa aghnini bi-fadlika 'amman siwak" (Ya Allah, cukupkanlah aku dengan yang Engkau halalkan dari yang Engkau haramkan, dan jadikanlah aku tidak membutuhkan siapa pun selain Engkau). Setelah Subuh, mohonlah juga kepada Allah "ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima" (Ibnu Majah 925).
+- [ ] `day.13.character.action`
+  - English: Write down your top 3 worries. Then sincerely hand each one to Allah's care, saying "Hasbunallahu wa ni'mal wakil."
+  - Indonesian: Tuliskan 3 kekhawatiran terbesarmu. Lalu serahkan masing-masing dengan tulus kepada Allah, sambil mengucapkan "Hasbunallahu wa ni'mal wakil."
+- [ ] `day.13.prayer.tip`
+  - English: If you have a decision to make, big or small, pray istikhara today: two voluntary rak'ahs followed by the istikhara du'a, which the Prophet ﷺ taught his Companions for every matter (Bukhari 6382). Then move forward, trusting that Allah is guiding your steps.
+  - Indonesian: Jika kamu harus mengambil keputusan, besar maupun kecil, sholatlah istikharah hari ini: dua rakaat sholat sunnah diikuti doa istikharah, yang diajarkan Nabi ﷺ kepada para sahabatnya untuk setiap urusan (Bukhari 6382). Lalu melangkahlah, dengan yakin bahwa Allah sedang menuntun langkahmu.
+- [ ] `day.13.quran.note`
+  - English: The well-known verse on trust: "And whoever relies upon Allah, He is sufficient for him. Indeed, Allah will accomplish His purpose."
+  - Indonesian: Ayat yang terkenal tentang tawakal: "Dan barang siapa bertawakal kepada Allah, niscaya Allah akan mencukupkan (keperluan)nya. Sesungguhnya Allah melaksanakan urusan-Nya."
+- [ ] `day.13.sunnah.description`
+  - English: A man asked the Prophet ﷺ whether he should tie his camel and trust in Allah, or leave it untied and trust in Allah. He said: "Tie it, and trust in Allah." Tawakkul includes doing your part fully, then letting go of the outcome.
+  - Indonesian: Seorang laki-laki bertanya kepada Nabi ﷺ apakah ia sebaiknya mengikat untanya lalu bertawakal kepada Allah, atau membiarkannya lepas lalu bertawakal kepada Allah. Beliau bersabda: "Ikatlah, lalu bertawakallah kepada Allah." Tawakal mencakup melakukan bagianmu sepenuhnya, lalu melepaskan hasilnya.
+- [ ] `day.14.intro`
+  - English: Allah says, "If you are grateful, I will surely increase you." Today, learn to see every moment as a gift from Him, and to show gratitude in word and deed.
+  - Indonesian: Allah berfirman, "Sesungguhnya jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu." Hari ini, belajarlah melihat setiap saat sebagai karunia dari-Nya, dan tunjukkan syukur dengan ucapan dan perbuatan.
+- [ ] `day.14.prayer.tip`
+  - English: When good news or a blessing reaches you today, fall into a single prostration of gratitude (sujud ash-shukr). Whenever something pleasing came to the Prophet ﷺ, he would fall down in prostration, thanking Allah (Abu Dawud 2774). After each prayer, ask Allah to help you thank Him.
+  - Indonesian: Ketika kabar gembira atau nikmat datang kepadamu hari ini, bersujudlah sekali sebagai sujud syukur. Setiap kali sesuatu yang menggembirakan datang kepada Nabi ﷺ, beliau bersujud sebagai tanda syukur kepada Allah (Abu Dawud 2774). Setelah setiap sholat, mohonlah kepada Allah agar menolongmu untuk bersyukur kepada-Nya.
+- [ ] `day.14.quran.note`
+  - English: Allah's promise that gratitude brings increase: "If you are grateful, I will surely increase you; but if you deny, indeed, My punishment is severe."
+  - Indonesian: Janji Allah bahwa syukur mendatangkan tambahan: "Sesungguhnya jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu, tetapi jika kamu mengingkari (nikmat-Ku), maka sesungguhnya azab-Ku sangat berat."
+- [ ] `day.14.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever does not thank people does not thank Allah." Show gratitude in two ways today: thank Allah directly (Alhamdulillah), and thank the people through whom He blessed you.
+  - Indonesian: Nabi ﷺ bersabda: "Siapa yang tidak berterima kasih kepada manusia, ia tidak bersyukur kepada Allah." Tunjukkan rasa syukur dengan dua cara hari ini: bersyukurlah langsung kepada Allah (Alhamdulillah), dan berterima kasihlah kepada orang-orang yang melaluinya Allah memberimu nikmat.
+- [ ] `day.15.quran.note`
+  - English: The command to stand with the truthful: "O you who believe, fear Allah and be with those who are truthful."
+  - Indonesian: Perintah untuk bersama orang-orang yang jujur: "Wahai orang-orang yang beriman, bertakwalah kepada Allah dan bersamalah kamu dengan orang-orang yang benar."
+- [ ] `day.15.sunnah.description`
+  - English: When the Prophet ﷺ called the tribes of Quraysh together, they told him: "We have never experienced anything from you but truthfulness." Today, be completely honest in every interaction: no white lies, exaggerations or misleading statements, even ones that seem harmless.
+  - Indonesian: Ketika Nabi ﷺ mengumpulkan kabilah-kabilah Quraisy, mereka berkata kepada beliau: "Kami tidak pernah mendapati darimu selain kejujuran." Hari ini, jujurlah sepenuhnya dalam setiap interaksi: tanpa bohong kecil, berlebihan, atau ucapan yang menyesatkan, bahkan yang tampak tidak berbahaya.
+- [ ] `day.16.intro`
+  - English: Amanah means fulfilling trusts, keeping promises and being reliable in every role: in your family, with friends, at work and as a Muslim. Even before prophethood, the Prophet ﷺ was known among his people for his trustworthiness.
+  - Indonesian: Amanah berarti menunaikan titipan, menepati janji, dan dapat diandalkan dalam setiap peran: dalam keluarga, bersama teman, di tempat kerja, dan sebagai seorang Muslim. Bahkan sebelum kenabian, Nabi ﷺ dikenal di tengah kaumnya karena sifat amanahnya.
+- [ ] `day.16.quran.note`
+  - English: "O you who believe, do not betray Allah and the Messenger, and do not knowingly betray your trusts."
+  - Indonesian: "Wahai orang-orang yang beriman, janganlah kamu mengkhianati Allah dan Rasul, dan janganlah kamu mengkhianati amanah-amanah yang dipercayakan kepadamu, sedang kamu mengetahui."
+- [ ] `day.16.sunnah.description`
+  - English: The Prophet ﷺ said: "The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks his promise, and when he is trusted he betrays the trust." List any promises or commitments you have not kept, and fulfil at least one today.
+  - Indonesian: Nabi ﷺ bersabda: "Tanda orang munafik ada tiga: apabila berbicara ia berdusta, apabila berjanji ia mengingkari, dan apabila diberi amanah ia berkhianat." Catatlah janji atau komitmen yang belum kamu tepati, dan tunaikan setidaknya satu hari ini.
+- [ ] `day.17.character.action`
+  - English: When you feel irritated or frustrated today, stop and say "Alhamdulillah 'ala kulli hal" (praise be to Allah in every situation) before you respond.
+  - Indonesian: Ketika kamu merasa kesal atau frustrasi hari ini, berhentilah sejenak dan ucapkan "Alhamdulillah 'ala kulli hal" (segala puji bagi Allah dalam setiap keadaan) sebelum kamu menanggapi.
+- [ ] `day.17.intro`
+  - English: "Indeed, Allah is with the patient." Sabr is not passive resignation; it is active, disciplined perseverance, knowing that Allah is testing and refining you.
+  - Indonesian: "Sesungguhnya Allah beserta orang-orang yang sabar." Sabar bukanlah pasrah tanpa daya; sabar adalah ketekunan yang aktif dan disiplin, dengan menyadari bahwa Allah sedang menguji dan memurnikanmu.
+- [ ] `day.17.quran.note`
+  - English: Allah tests us with fear, hunger and loss, "but give good tidings to the patient: those who, when disaster strikes them, say: Indeed we belong to Allah, and indeed to Him we will return."
+  - Indonesian: Allah menguji kita dengan ketakutan, kelaparan, dan kehilangan, "dan sampaikanlah kabar gembira kepada orang-orang yang sabar: yaitu orang-orang yang apabila ditimpa musibah, mereka berkata: Sesungguhnya kami milik Allah dan sesungguhnya kepada-Nya kami kembali."
+- [ ] `day.17.sunnah.description`
+  - English: The Prophet ﷺ said: "The strong one is not the one who overcomes people by his strength, but the one who controls himself when angry." When something irritates you today, pause and say "A'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). If you are standing, sit down (Abu Dawud 4782).
+  - Indonesian: Nabi ﷺ bersabda: "Orang yang kuat bukanlah orang yang mengalahkan orang lain dengan kekuatannya, tetapi orang yang mampu mengendalikan dirinya ketika marah." Ketika sesuatu membuatmu kesal hari ini, berhentilah sejenak dan ucapkan "A'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). Jika kamu sedang berdiri, duduklah (Abu Dawud 4782).
+- [ ] `day.17.task.17_inna_lillah.title`
+  - English: Say "Inna lillahi wa inna ilayhi raji'un" at every difficulty today
+  - Indonesian: Ucapkan "Inna lillahi wa inna ilayhi raji'un" di setiap kesulitan hari ini
+- [ ] `day.18.character.description`
+  - English: Pride (kibr) is a disease of the heart. The Prophet ﷺ said that no one with an atom's weight of pride in his heart will enter Paradise, and he defined pride as "rejecting the truth and looking down on people" (Muslim 91).
+  - Indonesian: Kesombongan (kibr) adalah penyakit hati. Nabi ﷺ bersabda bahwa tidak akan masuk surga orang yang di dalam hatinya ada kesombongan walau seberat dzarrah, dan beliau menjelaskan kesombongan sebagai "menolak kebenaran dan merendahkan manusia" (Muslim 91).
+- [ ] `day.18.intro`
+  - English: The Prophet ﷺ was the most humble of people, though he was the greatest of them. True tawadu' comes from knowing Allah and knowing yourself.
+  - Indonesian: Nabi ﷺ adalah manusia yang paling rendah hati, padahal beliau yang paling mulia di antara mereka. Tawadhu' yang sejati lahir dari mengenal Allah dan mengenal diri sendiri.
+- [ ] `day.18.prayer.tip`
+  - English: Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, say "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High; Muslim 772) and feel its meaning: you are submitting completely to Him. Let that feeling stay with you.
+  - Indonesian: Meletakkan dahi di atas tanah adalah wujud fisik kerendahan hati yang paling sempurna. Di setiap sujud hari ini, ucapkan "Subhana Rabbiyal-A'la" (Maha Suci Tuhanku Yang Maha Tinggi; Muslim 772) dan rasakan maknanya: kamu berserah diri sepenuhnya kepada-Nya. Biarkan perasaan itu tetap menyertaimu.
+- [ ] `day.18.quran.note`
+  - English: "And do not walk upon the earth arrogantly. Indeed, you will never tear the earth apart, and you will never reach the mountains in height."
+  - Indonesian: "Dan janganlah kamu berjalan di bumi ini dengan sombong, karena sesungguhnya kamu tidak akan dapat menembus bumi dan tidak akan mampu menjulang setinggi gunung."
+- [ ] `day.18.sunnah.description`
+  - English: The Prophet ﷺ would greet even children with salam (Bukhari 6247; Muslim 2168), and he said: "The people closest to Allah are those who begin the greeting of salam." Today, be the first to say salam to everyone you meet.
+  - Indonesian: Nabi ﷺ bahkan mengucapkan salam kepada anak-anak (Bukhari 6247; Muslim 2168), dan beliau bersabda: "Manusia yang paling dekat dengan Allah adalah yang memulai salam." Hari ini, jadilah yang pertama mengucapkan salam kepada setiap orang yang kamu temui.
+- [ ] `day.19.intro`
+  - English: The Prophet ﷺ was sent as a mercy to all the worlds. Mercy towards people, animals and all of creation is a sign of strong faith.
+  - Indonesian: Nabi ﷺ diutus sebagai rahmat bagi seluruh alam. Kasih sayang kepada manusia, hewan, dan seluruh makhluk adalah tanda iman yang kuat.
+- [ ] `day.19.prayer.tip`
+  - English: In today's prayers, make specific du'a for others: your parents, your family, the sick and suffering, and Muslims around the world. The Prophet ﷺ said that when a believer prays for his brother in his absence, the angel says, "And the same for you" (Muslim 2732).
+  - Indonesian: Dalam sholat hari ini, panjatkan doa yang spesifik untuk orang lain: orang tuamu, keluargamu, orang yang sakit dan menderita, serta kaum Muslimin di seluruh dunia. Nabi ﷺ bersabda bahwa ketika seorang mukmin mendoakan saudaranya tanpa sepengetahuannya, malaikat berkata, "Dan bagimu juga yang semisal" (Muslim 2732).
+- [ ] `day.19.quran.note`
+  - English: The summary of the Prophet's ﷺ mission: "And We have not sent you except as a mercy to the worlds."
+  - Indonesian: Ringkasan misi Nabi ﷺ: "Dan Kami tidak mengutus engkau melainkan sebagai rahmat bagi seluruh alam."
+- [ ] `day.19.sunnah.description`
+  - English: The Prophet ﷺ told of a woman who entered the Fire because of a cat she locked up without food or water, and of a man who gave water to a thirsty dog, so Allah thanked him and admitted him to Paradise. Today, show active mercy: feed a bird, put out water, be gentle with animals and reduce waste.
+  - Indonesian: Nabi ﷺ menceritakan seorang perempuan yang masuk neraka karena seekor kucing yang ia kurung tanpa diberi makan dan minum, dan seorang laki-laki yang memberi minum seekor anjing yang kehausan, lalu Allah berterima kasih kepadanya dan memasukkannya ke surga. Hari ini, tunjukkan kasih sayang secara nyata: beri makan burung, sediakan air, bersikap lembut kepada hewan, dan kurangi pemborosan.
+- [ ] `day.2.character.action`
+  - English: Whenever you feel the urge to speak badly about someone, say "SubhanAllah" instead and change the topic.
+  - Indonesian: Setiap kali kamu ingin membicarakan keburukan seseorang, ucapkan "SubhanAllah" dan alihkan pembicaraan.
+- [ ] `day.2.quran.note`
+  - English: Reflect on this verse about purification: "Indeed, Allah loves those who turn to Him in repentance and loves those who purify themselves."
+  - Indonesian: Renungkan ayat tentang bersuci ini: "Sesungguhnya Allah menyukai orang-orang yang bertaubat dan menyukai orang-orang yang menyucikan diri."
+- [ ] `day.2.sunnah.description`
+  - English: The Prophet ﷺ said: "Were it not that it would be hard on my ummah, I would have commanded them to use the siwak with every prayer." Use a siwak or brush your teeth before your prayers today.
+  - Indonesian: Nabi ﷺ bersabda: "Seandainya tidak memberatkan umatku, niscaya aku perintahkan mereka untuk bersiwak setiap kali sholat." Gunakan siwak atau sikat gigimu sebelum sholat hari ini.
+- [ ] `day.20.quran.note`
+  - English: Allah links keeping family ties directly to fearing Him: "And fear Allah, through whom you ask one another, and the wombs."
+  - Indonesian: Allah mengaitkan silaturahim langsung dengan takwa kepada-Nya: "Dan bertakwalah kepada Allah yang dengan nama-Nya kamu saling meminta, dan (peliharalah) hubungan kekeluargaan."
+- [ ] `day.20.sunnah.description`
+  - English: The Prophet ﷺ said: "The one who keeps ties is not the one who only returns the favour, but the one who keeps ties when they have been cut." Today, reach out to a family member you have drifted away from.
+  - Indonesian: Nabi ﷺ bersabda: "Orang yang menyambung silaturahim bukanlah orang yang sekadar membalas kebaikan, tetapi orang yang menyambungnya ketika hubungan itu diputus." Hari ini, hubungilah anggota keluarga yang mulai jauh darimu.
+- [ ] `day.21.character.description`
+  - English: The Prophet ﷺ said that a good word is charity (Bukhari 2989; Muslim 1009). The words you choose can lift people up or tear them down, so choose every word with care today.
+  - Indonesian: Nabi ﷺ bersabda bahwa kata-kata yang baik adalah sedekah (Bukhari 2989; Muslim 1009). Kata-kata yang kamu pilih dapat mengangkat atau menjatuhkan orang, maka pilihlah setiap kata dengan hati-hati hari ini.
+- [ ] `day.21.quran.note`
+  - English: Allah's description of the Prophet ﷺ: "And indeed, you are of a great moral character."
+  - Indonesian: Gambaran Allah tentang Nabi ﷺ: "Dan sesungguhnya engkau benar-benar berbudi pekerti yang agung."
+- [ ] `day.21.sunnah.description`
+  - English: The Prophet ﷺ said: "Your smiling in the face of your brother is charity for you." Jarir said that from the day he accepted Islam, the Prophet ﷺ never saw him without smiling at him. Today, smile genuinely at every person you meet: at home, at work and in the street.
+  - Indonesian: Nabi ﷺ bersabda: "Senyummu di hadapan saudaramu adalah sedekah bagimu." Jarir berkata bahwa sejak hari ia masuk Islam, Nabi ﷺ tidak pernah melihatnya kecuali beliau tersenyum kepadanya. Hari ini, tersenyumlah dengan tulus kepada setiap orang yang kamu temui: di rumah, di tempat kerja, dan di jalan.
+- [ ] `day.22.prayer.tip`
+  - English: After Fajr, while the mind is fresh and the world is quiet, spend 15 minutes studying one Islamic topic. Begin with the du'a for beneficial knowledge that the Prophet ﷺ said after the salam of Fajr.
+  - Indonesian: Setelah Subuh, saat pikiran masih segar dan dunia masih tenang, luangkan 15 menit untuk mempelajari satu topik Islam. Awali dengan doa memohon ilmu yang bermanfaat yang dibaca Nabi ﷺ setelah salam sholat Subuh.
+- [ ] `day.22.quran.note`
+  - English: Scholars note that knowledge is the only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."
+  - Indonesian: Para ulama mencatat bahwa ilmu adalah satu-satunya hal yang Nabi ﷺ diperintahkan untuk meminta tambahannya: "Dan katakanlah: Ya Tuhanku, tambahkanlah kepadaku ilmu."
+- [ ] `day.22.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever Allah wants good for, He gives him understanding of the religion." Learn one new thing about your deen today: a ruling of fiqh, a name of Allah, a hadith or the tafsir of an ayah.
+  - Indonesian: Nabi ﷺ bersabda: "Barang siapa yang Allah kehendaki kebaikan baginya, Dia akan memahamkannya dalam urusan agama." Pelajari satu hal baru tentang agamamu hari ini: satu hukum fikih, satu nama Allah, satu hadis, atau tafsir satu ayat.
+- [ ] `day.23.sunnah.description`
+  - English: Allah praises those who "reflect on the creation of the heavens and the earth" and say: "Our Lord, You did not create this in vain." Take 15 minutes outside today: walk, sit and look at the sky, and say "SubhanAllah" at each sign of creation you notice.
+  - Indonesian: Allah memuji orang-orang yang "memikirkan penciptaan langit dan bumi" dan berkata: "Ya Tuhan kami, tidaklah Engkau menciptakan semua ini dengan sia-sia." Luangkan 15 menit di luar hari ini: berjalanlah, duduklah dan pandanglah langit, dan ucapkan "SubhanAllah" untuk setiap tanda ciptaan yang kamu perhatikan.
+- [ ] `day.24.character.description`
+  - English: Before every major decision, ask: "How does this serve my akhirah?" Let that question reframe your choices.
+  - Indonesian: Sebelum setiap keputusan penting, tanyakan: "Bagaimana ini bermanfaat bagi akhiratku?" Biarkan pertanyaan itu membingkai ulang pilihan-pilihanmu.
+- [ ] `day.24.prayer.tip`
+  - English: A sign of zuhd is giving your time to prayer over worldly pursuits. Today, pray the sunnah prayers with each fard: the Prophet ﷺ said that whoever prays twelve rak'ahs in a day and night, a house is built for him in Paradise (Muslim 728).
+  - Indonesian: Salah satu tanda zuhud adalah mendahulukan waktu untuk sholat daripada urusan dunia. Hari ini, kerjakan sholat sunnah bersama setiap sholat fardhu: Nabi ﷺ bersabda bahwa siapa yang sholat dua belas rakaat dalam sehari semalam, akan dibangunkan baginya sebuah rumah di surga (Muslim 728).
+- [ ] `day.24.quran.note`
+  - English: The parable of this world: "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children..."
+  - Indonesian: Perumpamaan kehidupan dunia: "Ketahuilah, sesungguhnya kehidupan dunia itu hanyalah permainan dan senda gurau, perhiasan dan saling berbangga di antara kamu serta berlomba dalam kekayaan dan anak keturunan..."
+- [ ] `day.24.sunnah.description`
+  - English: The Prophet ﷺ said: "There are two blessings that many people are cheated of: health and free time." Today, take a 3-hour break from social media and entertainment, and use that time for worship instead.
+  - Indonesian: Nabi ﷺ bersabda: "Ada dua nikmat yang banyak manusia tertipu di dalamnya: kesehatan dan waktu luang." Hari ini, rehatlah 3 jam dari media sosial dan hiburan, dan gunakan waktu itu untuk ibadah.
+- [ ] `day.25.character.description`
+  - English: Among the seven whom Allah will shade on the Day when there is no shade but His is "a man who gives charity so secretly that his left hand does not know what his right hand gives" (Bukhari 660; Muslim 1031).
+  - Indonesian: Di antara tujuh golongan yang akan Allah naungi pada hari yang tiada naungan selain naungan-Nya adalah "seseorang yang bersedekah dengan sangat tersembunyi hingga tangan kirinya tidak mengetahui apa yang diberikan tangan kanannya" (Bukhari 660; Muslim 1031).
+- [ ] `day.25.prayer.tip`
+  - English: Before each prayer today, check your intention: "Am I praying because people might see me, or purely for Allah?" Let every rak'ah be for Him alone.
+  - Indonesian: Sebelum setiap sholat hari ini, periksalah niatmu: "Apakah aku sholat karena mungkin dilihat orang, atau semata-mata karena Allah?" Jadikan setiap rakaat hanya untuk-Nya.
+- [ ] `day.25.quran.note`
+  - English: The essence of the religion: "And they were not commanded except to worship Allah, sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion."
+  - Indonesian: Inti agama: "Padahal mereka tidak diperintah kecuali agar menyembah Allah dengan ikhlas menaati-Nya semata-mata karena (menjalankan) agama dengan lurus, dan agar melaksanakan sholat dan menunaikan zakat; dan yang demikian itulah agama yang lurus."
+- [ ] `day.25.sunnah.description`
+  - English: Allah says in a hadith qudsi: "I am the most free of need of any partner. Whoever does a deed in which he associates anyone else with Me, I leave him and his association." Test each action today: "Would I do this the same way if no one was watching?" If not, correct your intention.
+  - Indonesian: Allah berfirman dalam sebuah hadis qudsi: "Aku adalah Dzat yang paling tidak membutuhkan sekutu. Barang siapa mengerjakan suatu amal yang di dalamnya ia menyekutukan-Ku dengan selain-Ku, Aku tinggalkan dia bersama sekutunya." Ujilah setiap perbuatanmu hari ini: "Apakah aku akan melakukannya dengan cara yang sama jika tak ada seorang pun yang melihat?" Jika tidak, perbaikilah niatmu.
+- [ ] `day.26.quran.note`
+  - English: "And He is with you wherever you are. And Allah, of what you do, is Seeing."
+  - Indonesian: "Dan Dia bersama kamu di mana saja kamu berada. Dan Allah Maha Melihat apa yang kamu kerjakan."
+- [ ] `day.26.sunnah.description`
+  - English: 'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of 'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?
+  - Indonesian: 'Umar bin al-Khaththab berkata: "Hisablah diri kalian sebelum kalian dihisab." Ini adalah perkataan 'Umar, bukan hadis. Sebelum tidur, tinjaulah harimu: apa yang telah kamu lakukan dengan baik, di mana kamu masih kurang, dan apa yang akan kamu perbaiki besok?
+- [ ] `day.27.prayer.tip`
+  - English: In the last third of tonight, when Allah descends to the lowest heaven and asks, "Who is seeking My forgiveness, that I may forgive him?" (Bukhari 1145), pray tahajjud and make the most sincere tawbah of your life. Be specific about what you are repenting from.
+  - Indonesian: Di sepertiga malam terakhir malam ini, ketika Allah turun ke langit dunia dan berfirman, "Siapa yang memohon ampun kepada-Ku, maka akan Aku ampuni dia?" (Bukhari 1145), sholatlah tahajud dan bertaubatlah dengan taubat yang paling tulus dalam hidupmu. Sebutkan secara spesifik apa yang kamu taubati.
+- [ ] `day.27.quran.note`
+  - English: The command to repent sincerely: "O you who believe, turn to Allah in sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow."
+  - Indonesian: Perintah untuk bertaubat dengan tulus: "Wahai orang-orang yang beriman, bertaubatlah kepada Allah dengan taubat yang semurni-murninya. Mudah-mudahan Tuhanmu akan menghapus kesalahan-kesalahanmu dan memasukkanmu ke dalam surga-surga yang mengalir di bawahnya sungai-sungai."
+- [ ] `day.27.sunnah.description`
+  - English: The Prophet ﷺ said: "No servant commits a sin, then purifies himself well, stands and prays two rak'ahs, then seeks Allah's forgiveness, except that Allah forgives him." Then he recited Al 'Imran 3:135. Make wudu carefully today, pray two rak'ahs and ask Allah to forgive you.
+  - Indonesian: Nabi ﷺ bersabda: "Tidaklah seorang hamba melakukan dosa, lalu ia bersuci dengan baik, kemudian berdiri dan sholat dua rakaat, lalu memohon ampun kepada Allah, melainkan Allah akan mengampuninya." Kemudian beliau membaca Ali 'Imran 3:135. Berwudhulah dengan cermat hari ini, sholatlah dua rakaat, dan mohonlah ampunan kepada Allah.
+- [ ] `day.28.intro`
+  - English: The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body (Bukhari 6011; Muslim 2586). Today you invest in your community.
+  - Indonesian: Nabi ﷺ mengumpamakan orang-orang beriman, dalam kasih sayang dan kecintaan di antara mereka, seperti satu tubuh (Bukhari 6011; Muslim 2586). Hari ini kamu berinvestasi untuk komunitasmu.
+- [ ] `day.28.quran.note`
+  - English: "You are the best nation produced for mankind. You enjoin what is right, forbid what is wrong and believe in Allah."
+  - Indonesian: "Kamu adalah umat terbaik yang dilahirkan untuk manusia, (karena kamu) menyuruh (berbuat) yang makruf, mencegah dari yang mungkar, dan beriman kepada Allah."
+- [ ] `day.28.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever fulfils the need of his brother, Allah will fulfil his need; and whoever relieves a Muslim of a hardship, Allah will relieve him of a hardship on the Day of Resurrection." Today, volunteer, help a neighbour, contribute to a community cause or visit a sick Muslim.
+  - Indonesian: Nabi ﷺ bersabda: "Barang siapa memenuhi kebutuhan saudaranya, Allah akan memenuhi kebutuhannya; dan barang siapa melapangkan satu kesusahan seorang Muslim, Allah akan melapangkan darinya satu kesusahan pada Hari Kiamat." Hari ini, jadilah relawan, bantulah tetangga, berkontribusilah untuk kegiatan sosial, atau jenguklah seorang Muslim yang sakit.
+- [ ] `day.29.intro`
+  - English: Every Muslim represents the deen, and da'wah is not only for scholars: it is living Islam so beautifully that others are inspired. "And who is better in speech than one who invites to Allah?"
+  - Indonesian: Setiap Muslim mewakili agamanya, dan dakwah bukan hanya untuk para ulama: dakwah adalah menjalani Islam dengan begitu indah sehingga orang lain terinspirasi. "Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah?"
+- [ ] `day.29.prayer.tip`
+  - English: In your prayers today, make heartfelt du'a by name for people who are not Muslim or who have drifted from Islam. The Prophet ﷺ prayed for people's guidance: "O Allah, guide Daws" (Bukhari 2937), and he prayed for the guidance of Abu Hurayrah's mother (Muslim 2491).
+  - Indonesian: Dalam sholatmu hari ini, panjatkan doa yang tulus dengan menyebut nama orang-orang yang belum Muslim atau yang telah menjauh dari Islam. Nabi ﷺ mendoakan hidayah bagi manusia: "Ya Allah, berilah petunjuk kepada kabilah Daus" (Bukhari 2937), dan beliau mendoakan hidayah bagi ibu Abu Hurairah (Muslim 2491).
+- [ ] `day.29.quran.note`
+  - English: "And who is better in speech than one who invites to Allah, does righteousness and says: Indeed, I am of the Muslims."
+  - Indonesian: "Dan siapakah yang lebih baik perkataannya daripada orang yang menyeru kepada Allah, mengerjakan kebajikan, dan berkata: Sungguh, aku termasuk orang-orang Muslim (yang berserah diri)."
+- [ ] `day.29.sunnah.description`
+  - English: The Prophet ﷺ said: "That Allah guides one person through you is better for you than red camels." The greatest da'wah is your character: when you are kind, honest, reliable, generous and humble, people see Islam in action. Embody these qualities in every interaction today.
+  - Indonesian: Nabi ﷺ bersabda: "Sungguh, Allah memberi petunjuk kepada satu orang melalui dirimu itu lebih baik bagimu daripada unta merah." Dakwah terbesar adalah akhlakmu: ketika kamu baik, jujur, dapat diandalkan, dermawan, dan rendah hati, orang-orang melihat Islam dalam tindakan nyata. Wujudkan sifat-sifat ini dalam setiap interaksi hari ini.
+- [ ] `day.3.quran.note`
+  - English: "Guard your prayers, especially the middle prayer, and stand before Allah in devotion." Reflect on what it means to truly guard your prayers.
+  - Indonesian: "Peliharalah semua sholat, dan (peliharalah) sholat wustha, dan berdirilah karena Allah (dalam sholat) dengan khusyuk." Renungkan apa artinya benar-benar memelihara sholatmu.
+- [ ] `day.3.sunnah.description`
+  - English: The Prophet ﷺ said that whoever prays twelve voluntary rak'ahs in a day and night, a house will be built for him in Paradise. They are 2 before Fajr, 4 before Dhuhr and 2 after it, 2 after Maghrib and 2 after Isha.
+  - Indonesian: Nabi ﷺ bersabda bahwa siapa yang sholat sunnah dua belas rakaat dalam sehari semalam, akan dibangunkan baginya sebuah rumah di surga. Yaitu 2 rakaat sebelum Subuh, 4 sebelum Zuhur dan 2 setelahnya, 2 setelah Maghrib, dan 2 setelah Isya.
+- [ ] `day.30.intro`
+  - English: You have reached Day 30, but the journey does not end here; it begins here. Istiqamah means staying on the straight path consistently, as the Prophet ﷺ taught: "Say: I believe in Allah, then be steadfast."
+  - Indonesian: Kamu telah sampai di Hari ke-30, tetapi perjalanan tidak berakhir di sini; justru dimulai dari sini. Istiqamah berarti tetap konsisten di jalan yang lurus, sebagaimana diajarkan Nabi ﷺ: "Katakanlah: Aku beriman kepada Allah, kemudian istiqamahlah."
+- [ ] `day.30.quran.note`
+  - English: The promise to those who remain steadfast: "Indeed, those who say, Our Lord is Allah, and then remain steadfast, the angels will descend upon them: Do not fear and do not grieve, but receive good tidings of Paradise, which you were promised."
+  - Indonesian: Janji bagi orang-orang yang tetap istiqamah: "Sesungguhnya orang-orang yang berkata, Tuhan kami adalah Allah, kemudian mereka tetap istiqamah, malaikat-malaikat akan turun kepada mereka (dengan berkata): Janganlah kamu takut dan janganlah bersedih hati; dan bergembiralah kamu dengan surga yang telah dijanjikan kepadamu."
+- [ ] `day.30.sunnah.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small." Plan a daily routine of prayer, Quran, dhikr and character work for the next 30 days that you can keep up.
+  - Indonesian: Nabi ﷺ bersabda: "Amalan yang paling dicintai Allah adalah yang paling konsisten, meskipun sedikit." Rencanakan rutinitas harian berupa sholat, Al-Qur'an, dzikir, dan perbaikan akhlak untuk 30 hari ke depan yang mampu kamu jaga.
+- [ ] `day.4.prayer.tip`
+  - English: Sleep early tonight and lay out your prayer mat before bed. When the alarm rings, sit up straight away and say the waking du'a, "Al-hamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur." Don't lie back down; wudu will wake you fully.
+  - Indonesian: Tidurlah lebih awal malam ini dan siapkan sajadahmu sebelum tidur. Ketika alarm berbunyi, langsung duduklah dan baca doa bangun tidur, "Al-hamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur." Jangan berbaring lagi; wudhu akan membuatmu benar-benar terjaga.
+- [ ] `day.4.quran.note`
+  - English: Read about the dawn prayer, which the angels witness: "Indeed, the recitation at dawn is ever witnessed."
+  - Indonesian: Bacalah tentang sholat Subuh, yang disaksikan oleh para malaikat: "Sesungguhnya bacaan (sholat) Subuh itu disaksikan."
+- [ ] `day.4.sunnah.description`
+  - English: On waking, say the waking du'a, wipe the sleep from your face with your hand, make wudu, and pray the 2 sunnah rak'ahs before Fajr. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and everything in it."
+  - Indonesian: Saat bangun tidur, bacalah doa bangun tidur, usaplah sisa kantuk dari wajahmu dengan tangan, berwudhulah, dan sholatlah 2 rakaat sunnah sebelum Subuh. Nabi ﷺ bersabda: "Dua rakaat (sebelum) Subuh lebih baik daripada dunia dan seisinya."
+- [ ] `day.5.prayer.tip`
+  - English: Before Dhuhr, remind yourself that you are about to speak to Allah. Slow every movement and make your ruku' and sujood longer than usual. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is in prostration, so make much du'a."
+  - Indonesian: Sebelum Zuhur, ingatkan dirimu bahwa kamu akan berbicara kepada Allah. Perlambat setiap gerakan dan buatlah rukuk serta sujudmu lebih lama dari biasanya. Nabi ﷺ bersabda: "Keadaan seorang hamba yang paling dekat dengan Tuhannya adalah ketika ia sujud, maka perbanyaklah doa."
+- [ ] `day.5.quran.note`
+  - English: The first quality of the successful believers is khushu' in prayer: "Successful indeed are the believers, those who are humble in their prayer."
+  - Indonesian: Sifat pertama orang-orang beriman yang beruntung adalah khusyuk dalam sholat: "Sungguh beruntung orang-orang yang beriman, (yaitu) orang yang khusyuk dalam sholatnya."
+- [ ] `day.5.sunnah.description`
+  - English: Make your prostration longer than usual today. In sujood, repeat "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High), then make your own du'a. In his night prayer, the Prophet's ﷺ prostration lasted as long as it takes to recite fifty verses.
+  - Indonesian: Buatlah sujudmu lebih lama dari biasanya hari ini. Saat sujud, ulangi "Subhana Rabbiyal-A'la" (Maha Suci Tuhanku Yang Maha Tinggi), lalu panjatkan doamu sendiri. Dalam sholat malamnya, sujud Nabi ﷺ berlangsung selama waktu membaca lima puluh ayat.
+- [ ] `day.6.character.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small" (Bukhari 6464). A small daily Quran habit shapes the soul over time.
+  - Indonesian: Nabi ﷺ bersabda: "Amalan yang paling dicintai Allah adalah yang paling konsisten, meskipun sedikit" (Bukhari 6464). Kebiasaan kecil membaca Al-Qur'an setiap hari akan membentuk jiwa seiring waktu.
+- [ ] `day.6.sunnah.description`
+  - English: Set a fixed time each day for the Quran. The Prophet ﷺ said: "The best of you are those who learn the Quran and teach it." Even one verse read with reflection is valuable. Start small and stay consistent.
+  - Indonesian: Tetapkan waktu khusus setiap hari untuk Al-Qur'an. Nabi ﷺ bersabda: "Sebaik-baik kalian adalah orang yang mempelajari Al-Qur'an dan mengajarkannya." Bahkan satu ayat yang dibaca dengan perenungan sangat berharga. Mulailah dari yang kecil dan tetaplah konsisten.
+- [ ] `day.7.prayer.tip`
+  - English: Tonight, before you sleep or in the last part of the night before Fajr, pray 2 or more rak'ahs of night prayer. Ask Allah sincerely for forgiveness. Allah descends to the lowest heaven in the last third of the night and asks, "Who is asking Me for forgiveness, that I may forgive him?" (Bukhari 1145)
+  - Indonesian: Malam ini, sebelum tidur atau di akhir malam sebelum Subuh, sholatlah 2 rakaat atau lebih sholat malam. Mohonlah ampunan kepada Allah dengan tulus. Allah turun ke langit dunia pada sepertiga malam terakhir dan berfirman, "Siapa yang memohon ampun kepada-Ku, maka akan Aku ampuni dia?" (Bukhari 1145)
+- [ ] `day.7.quran.note`
+  - English: One of the most hopeful verses in the Quran: "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins."
+  - Indonesian: Salah satu ayat yang paling memberi harapan dalam Al-Qur'an: "Janganlah kamu berputus asa dari rahmat Allah. Sesungguhnya Allah mengampuni dosa-dosa semuanya."
+- [ ] `day.7.sunnah.description`
+  - English: Say the master du'a of seeking forgiveness in the morning and the evening. The Prophet ﷺ said that whoever says it with certainty during the day and dies before evening, or says it at night and dies before morning, is of the people of Paradise.
+  - Indonesian: Bacalah sayyidul istighfar di pagi dan petang hari. Nabi ﷺ bersabda bahwa siapa yang membacanya dengan yakin di siang hari lalu meninggal sebelum petang, atau membacanya di malam hari lalu meninggal sebelum pagi, maka ia termasuk penghuni surga.
+- [ ] `day.8.character.action`
+  - English: Name 10 specific blessings today. Be specific: not just "health" but "I can see, I have food, I have a home."
+  - Indonesian: Sebutkan 10 nikmat yang spesifik hari ini. Buatlah spesifik: bukan sekadar "kesehatan", tetapi "aku bisa melihat, aku punya makanan, aku punya rumah."
+- [ ] `day.8.intro`
+  - English: Remembrance of Allah nourishes the heart: "Verily, in the remembrance of Allah do hearts find rest." Today you build a morning and evening dhikr routine to carry with you every day.
+  - Indonesian: Mengingat Allah menghidupkan hati: "Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram." Hari ini kamu membangun rutinitas dzikir pagi dan petang yang akan kamu bawa setiap hari.
+- [ ] `day.8.quran.note`
+  - English: The well-known verse about dhikr and the heart: "Verily, in the remembrance of Allah do hearts find rest."
+  - Indonesian: Ayat yang terkenal tentang dzikir dan hati: "Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram."
+- [ ] `day.9.character.description`
+  - English: Love for the Prophet ﷺ grows and shows as you follow his way. Every Sunnah you follow is a sign of it.
+  - Indonesian: Cinta kepada Nabi ﷺ tumbuh dan tampak ketika kamu mengikuti jalannya. Setiap Sunnah yang kamu ikuti adalah tandanya.
+- [ ] `day.9.character.trait`
+  - English: Love for the Prophet ﷺ
+  - Indonesian: Cinta kepada Nabi ﷺ
+- [ ] `day.9.intro`
+  - English: Following the Sunnah means living as the Prophet ﷺ lived. Every Sunnah you revive is an act of love for him and a source of great reward.
+  - Indonesian: Mengikuti Sunnah berarti hidup sebagaimana Nabi ﷺ hidup. Setiap Sunnah yang kamu hidupkan adalah wujud cintamu kepada beliau dan sumber pahala yang besar.
+- [ ] `day.9.prayer.tip`
+  - English: Today, focus on praying as the Prophet ﷺ prayed. Learn one Sunnah of prayer you may have missed, such as the opening du'a (istiftah), the du'a between the two prostrations, or a du'a in the final tashahhud.
+  - Indonesian: Hari ini, fokuslah untuk sholat sebagaimana Nabi ﷺ sholat. Pelajari satu Sunnah dalam sholat yang mungkin terlewat olehmu, seperti doa iftitah, doa di antara dua sujud, atau doa di tasyahud akhir.
+- [ ] `day.9.quran.note`
+  - English: The verse that makes the Prophet ﷺ our finest example: "There has certainly been for you in the Messenger of Allah an excellent example."
+  - Indonesian: Ayat yang menjadikan Nabi ﷺ teladan terbaik kita: "Sungguh, telah ada pada (diri) Rasulullah itu suri teladan yang baik bagimu."
+- [ ] `day.9.reflection`
+  - English: Which Sunnah of the Prophet ﷺ do you most want to make a permanent part of your life?
+  - Indonesian: Sunnah Nabi ﷺ yang mana yang paling ingin kamu jadikan bagian tetap dari hidupmu?
+- [ ] `day.9.task.9_salawat.title`
+  - English: Send salawat on the Prophet ﷺ 100 times
+  - Indonesian: Bershalawat kepada Nabi ﷺ 100 kali
+- [ ] `dua.tawbah.occasion`
+  - English: Any time; the Prophet ﷺ said it more than seventy times a day
+  - Indonesian: Kapan saja; Nabi ﷺ mengucapkannya lebih dari tujuh puluh kali sehari
+- [ ] `learn.salah_notes.aloud_or_silent.body`
+  - English: Fajr is recited aloud, and so are the first two rak'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently. "Aloud" applies to men and to the imam; for women, see the note below.
+  - Indonesian: Sholat Subuh dibaca dengan suara keras (jahr), begitu pula dua rakaat pertama Maghrib dan Isya. Zuhur dan Asar dibaca dengan pelan (sirr). Bacaan "keras" berlaku bagi laki-laki dan imam; bagi perempuan, lihat catatan di bawah.
+- [ ] `learn.salah_notes.aloud_or_silent.title`
+  - English: Aloud or silent
+  - Indonesian: Keras atau pelan
+- [ ] `learn.salah_notes.for_women.body`
+  - English: During menstruation and post-natal bleeding a woman does not pray, and she does not make up those prayers afterwards (Bukhari 321; Muslim 335). When non-mahram men are present, recite so that only you can hear. In prayer, cover the whole body except the face and hands.
+  - Indonesian: Selama haid dan nifas, seorang perempuan tidak sholat, dan ia tidak perlu mengqadha sholat-sholat itu setelahnya (Bukhari 321; Muslim 335). Jika ada laki-laki yang bukan mahram, bacalah dengan suara yang hanya terdengar olehmu sendiri. Dalam sholat, tutuplah seluruh tubuh kecuali wajah dan telapak tangan.
+- [ ] `learn.salah_notes.for_women.title`
+  - English: For women
+  - Indonesian: Untuk perempuan
+- [ ] `learn.salah_notes.madhhab_details.body`
+  - English: The four schools (Hanafi, Maliki, Shafi'i and Hanbali) differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.
+  - Indonesian: Empat mazhab (Hanafi, Maliki, Syafi'i, dan Hanbali) berbeda pendapat dalam beberapa rincian, seperti letak tangan, mengangkat tangan saat rukuk, cara duduk, dan membaca Al-Fatihah di belakang imam. Ikutilah satu guru atau mazhab yang terpercaya; setiap cara ini sah.
+- [ ] `learn.salah_notes.madhhab_details.title`
+  - English: Small differences between madhhabs
+  - Indonesian: Perbedaan kecil antarmazhab
+- [ ] `learn.salah_notes.three_four_rakahs.body`
+  - English: After the second rak'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh" (Shafi'is also add the salawat), then stand with Allahu akbar. In the 3rd and 4th rak'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.
+  - Indonesian: Setelah rakaat kedua, duduklah dan bacalah tasyahud hanya sampai "ʿabduhū wa rasūluh" (dalam mazhab Syafi'i ditambah shalawat), lalu berdiri dengan mengucapkan Allahu akbar. Pada rakaat ke-3 dan ke-4, bacalah hanya Al-Fatihah dengan pelan, lalu akhiri dengan duduk tasyahud akhir yang lengkap dan salam.
+- [ ] `learn.salah_notes.three_four_rakahs.title`
+  - English: 3- and 4-rak‘ah prayers
+  - Indonesian: Sholat 3 dan 4 rakaat
+- [ ] `learn.salah_steps.salah_fatihah.body`
+  - English: Recite Al-Fatihah, then say Āmīn. The Prophet ﷺ said there is no prayer without it (Bukhari 756).
+  - Indonesian: Bacalah Al-Fatihah, lalu ucapkan Āmīn. Nabi ﷺ bersabda bahwa tidak ada sholat tanpanya (Bukhari 756).
+- [ ] `learn.salah_steps.salah_fatihah.title`
+  - English: Recite Al-Fatihah
+  - Indonesian: Membaca Al-Fatihah
+- [ ] `learn.salah_steps.salah_final_dua.body`
+  - English: Before the salam, seek refuge in Allah from these four things, then ask Him for whatever you need.
+  - Indonesian: Sebelum salam, berlindunglah kepada Allah dari empat perkara ini, lalu mintalah kepada-Nya apa pun yang kamu butuhkan.
+- [ ] `learn.salah_steps.salah_final_dua.title`
+  - English: A du‘a before ending
+  - Indonesian: Doa sebelum mengakhiri sholat
+- [ ] `learn.salah_steps.salah_istiadhah.body`
+  - English: Quietly seek refuge in Allah before you recite.
+  - Indonesian: Berlindunglah kepada Allah dengan pelan sebelum kamu membaca.
+- [ ] `learn.salah_steps.salah_istiadhah.title`
+  - English: Seek refuge
+  - Indonesian: Memohon perlindungan
+- [ ] `learn.salah_steps.salah_opening_dua.body`
+  - English: Quietly say this short opening du‘a. It is sunnah, so your prayer is still valid while you are learning it.
+  - Indonesian: Bacalah doa iftitah yang singkat ini dengan pelan. Hukumnya sunnah, jadi sholatmu tetap sah selama kamu masih mempelajarinya.
+- [ ] `learn.salah_steps.salah_opening_dua.title`
+  - English: Opening du‘a
+  - Indonesian: Doa iftitah
+- [ ] `learn.salah_steps.salah_prepare.body`
+  - English: Make wudu, cover yourself properly and face the qiblah. Intend in your heart which prayer you are praying (for example, Fajr, 2 rak'ahs); nothing needs to be said aloud.
+  - Indonesian: Berwudhulah, tutuplah aurat dengan benar, dan menghadaplah ke kiblat. Niatkan dalam hati sholat apa yang akan kamu kerjakan (misalnya, Subuh, 2 rakaat); tidak ada yang perlu diucapkan dengan suara keras.
+- [ ] `learn.salah_steps.salah_prepare.title`
+  - English: Get ready
+  - Indonesian: Bersiap
+- [ ] `learn.salah_steps.salah_rising.body`
+  - English: Rise saying the first phrase, then once you are standing straight say the second. In most schools, behind an imam say only the second phrase (Shafi'is say both).
+  - Indonesian: Bangkitlah sambil mengucapkan kalimat pertama, lalu setelah berdiri tegak ucapkan kalimat kedua. Menurut sebagian besar mazhab, makmum di belakang imam hanya mengucapkan kalimat kedua (dalam mazhab Syafi'i keduanya diucapkan).
+- [ ] `learn.salah_steps.salah_rising.title`
+  - English: Stand back up
+  - Indonesian: Bangkit dari rukuk (i'tidal)
+- [ ] `learn.salah_steps.salah_ruku.body`
+  - English: Say Allahu akbar and bow with your back straight and hands on your knees, and be still. Say this; once is valid, and it is commonly said three times.
+  - Indonesian: Ucapkan Allahu akbar lalu membungkuklah dengan punggung lurus dan kedua tangan di atas lutut, dan tenanglah sejenak. Ucapkan bacaan ini; sekali sudah sah, dan biasanya diucapkan tiga kali.
+- [ ] `learn.salah_steps.salah_ruku.title`
+  - English: Bow (ruku‘)
+  - Indonesian: Rukuk
+- [ ] `learn.salah_steps.salah_salawat.body`
+  - English: Still sitting, send blessings on the Prophet ﷺ.
+  - Indonesian: Masih dalam posisi duduk, bershalawatlah kepada Nabi ﷺ.
+- [ ] `learn.salah_steps.salah_salawat.title`
+  - English: Send blessings on the Prophet ﷺ
+  - Indonesian: Bershalawat kepada Nabi ﷺ
+- [ ] `learn.salah_steps.salah_second_rakah.body`
+  - English: Stand up with Allahu akbar and repeat everything from Al-Fatihah to the second prostration. There is no opening du‘a this time.
+  - Indonesian: Berdirilah dengan mengucapkan Allahu akbar dan ulangi semuanya dari Al-Fatihah hingga sujud kedua. Kali ini tidak ada doa iftitah.
+- [ ] `learn.salah_steps.salah_second_rakah.title`
+  - English: Stand for the second rak‘ah
+  - Indonesian: Berdiri untuk rakaat kedua
+- [ ] `learn.salah_steps.salah_second_sujud.body`
+  - English: Say Allahu akbar and make a second prostration, just like the first.
+  - Indonesian: Ucapkan Allahu akbar dan sujudlah untuk kedua kalinya, sama seperti sujud pertama.
+- [ ] `learn.salah_steps.salah_second_sujud.title`
+  - English: Prostrate again
+  - Indonesian: Sujud kembali
+- [ ] `learn.salah_steps.salah_short_surah.body`
+  - English: In the first two rak'ahs, recite a short surah after Al-Fatihah. Al-Ikhlas is a good one to start with.
+  - Indonesian: Pada dua rakaat pertama, bacalah surah pendek setelah Al-Fatihah. Al-Ikhlas adalah surah yang baik untuk memulai.
+- [ ] `learn.salah_steps.salah_short_surah.title`
+  - English: Recite a short surah
+  - Indonesian: Membaca surah pendek
+- [ ] `learn.salah_steps.salah_sitting.body`
+  - English: Say Allahu akbar, sit up and be still for a moment.
+  - Indonesian: Ucapkan Allahu akbar, bangkitlah untuk duduk, dan tenanglah sejenak.
+- [ ] `learn.salah_steps.salah_sitting.title`
+  - English: Sit between the prostrations
+  - Indonesian: Duduk di antara dua sujud
+- [ ] `learn.salah_steps.salah_sujud.body`
+  - English: Say Allahu akbar and prostrate on forehead and nose, palms, knees and toes, and be still. This is the closest you are to your Lord, so make du‘a here too (Muslim 482).
+  - Indonesian: Ucapkan Allahu akbar dan sujudlah dengan dahi dan hidung, kedua telapak tangan, kedua lutut, dan ujung jari kaki, lalu tenanglah sejenak. Inilah saat kamu paling dekat dengan Tuhanmu, maka berdoalah juga di sini (Muslim 482).
+- [ ] `learn.salah_steps.salah_sujud.title`
+  - English: Prostrate (sujud)
+  - Indonesian: Sujud
+- [ ] `learn.salah_steps.salah_takbir.body`
+  - English: Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Where the hands rest differs by school. Hanafi and Hanbali: below the navel (Hanafi women: on the chest); Shafi'i: below the chest, above the navel; many Malikis let the arms hang at the sides. All are valid practice.
+  - Indonesian: Angkatlah kedua tanganmu setinggi bahu atau telinga dan ucapkan Allahu akbar, lalu letakkan tangan kananmu di atas tangan kiri. Letak tangan berbeda menurut mazhab. Hanafi dan Hanbali: di bawah pusar (perempuan dalam mazhab Hanafi: di dada); Syafi'i: di bawah dada, di atas pusar; banyak pengikut mazhab Maliki membiarkan kedua tangan terjulur di samping badan. Semuanya adalah praktik yang sah.
+- [ ] `learn.salah_steps.salah_takbir.title`
+  - English: Begin with Allahu akbar
+  - Indonesian: Mulailah dengan Allahu akbar
+- [ ] `learn.salah_steps.salah_tashahhud.body`
+  - English: After the second rak'ah's prostrations, sit and recite the tashahhud.
+  - Indonesian: Setelah sujud-sujud pada rakaat kedua, duduklah dan bacalah tasyahud.
+- [ ] `learn.salah_steps.salah_tashahhud.title`
+  - English: Sit for the tashahhud
+  - Indonesian: Duduk tasyahud
+- [ ] `learn.salah_steps.salah_taslim.body`
+  - English: Turn your head to the right and say the salam, then turn to the left and say it again. Your prayer is complete, alhamdulillah.
+  - Indonesian: Palingkan kepalamu ke kanan dan ucapkan salam, lalu palingkan ke kiri dan ucapkan lagi. Sholatmu telah selesai, alhamdulillah.
+- [ ] `learn.salah_steps.salah_taslim.title`
+  - English: End with salam
+  - Indonesian: Akhiri dengan salam
+- [ ] `learn.wudu_steps.wudu_arms.body`
+  - English: Wash your right arm from the fingertips up to and including the elbow, three times, then the left.
+  - Indonesian: Basuhlah lengan kananmu dari ujung jari hingga siku (termasuk siku), tiga kali, lalu lengan kiri.
+- [ ] `learn.wudu_steps.wudu_arms.title`
+  - English: Wash your arms
+  - Indonesian: Membasuh kedua lengan
+- [ ] `learn.wudu_steps.wudu_bismillah.body`
+  - English: Begin by mentioning the name of Allah.
+  - Indonesian: Mulailah dengan menyebut nama Allah.
+- [ ] `learn.wudu_steps.wudu_bismillah.title`
+  - English: Say Bismillah
+  - Indonesian: Mengucapkan Bismillah
+- [ ] `learn.wudu_steps.wudu_ears.body`
+  - English: Wipe the inside of your ears with your index fingers and the back with your thumbs, once.
+  - Indonesian: Usaplah bagian dalam telingamu dengan jari telunjuk dan bagian belakangnya dengan ibu jari, sekali.
+- [ ] `learn.wudu_steps.wudu_ears.title`
+  - English: Wipe your ears
+  - Indonesian: Mengusap kedua telinga
+- [ ] `learn.wudu_steps.wudu_face.body`
+  - English: Wash your whole face, from the hairline to the chin and from ear to ear, three times.
+  - Indonesian: Basuhlah seluruh wajahmu, dari tempat tumbuhnya rambut hingga dagu dan dari telinga ke telinga, tiga kali.
+- [ ] `learn.wudu_steps.wudu_face.title`
+  - English: Wash your face
+  - Indonesian: Membasuh wajah
+- [ ] `learn.wudu_steps.wudu_feet.body`
+  - English: Wash your right foot up to and including the ankle, three times, getting between the toes, then the left.
+  - Indonesian: Basuhlah kaki kananmu hingga mata kaki (termasuk mata kaki), tiga kali, sambil membersihkan sela-sela jari kaki, lalu kaki kiri.
+- [ ] `learn.wudu_steps.wudu_feet.title`
+  - English: Wash your feet
+  - Indonesian: Membasuh kedua kaki
+- [ ] `learn.wudu_steps.wudu_hands.body`
+  - English: Wash both hands up to the wrists, three times.
+  - Indonesian: Basuhlah kedua tangan hingga pergelangan, tiga kali.
+- [ ] `learn.wudu_steps.wudu_hands.title`
+  - English: Wash your hands
+  - Indonesian: Membasuh kedua tangan
+- [ ] `learn.wudu_steps.wudu_head.body`
+  - English: Wipe your head once with wet hands, from front to back and back to the front again, as the Prophet ﷺ did. How much must be wiped differs by school. Maliki and Hanbali: the whole head; Hanafi: at least a quarter; Shafi'i: any part. Wiping the whole head covers all views.
+  - Indonesian: Usaplah kepalamu sekali dengan tangan yang basah, dari depan ke belakang lalu kembali lagi ke depan, sebagaimana yang dilakukan Nabi ﷺ. Batas minimal yang wajib diusap berbeda menurut mazhab. Maliki dan Hanbali: seluruh kepala; Hanafi: setidaknya seperempat; Syafi'i: sebagian kepala. Mengusap seluruh kepala mencakup semua pendapat.
+- [ ] `learn.wudu_steps.wudu_head.title`
+  - English: Wipe your head
+  - Indonesian: Mengusap kepala
+- [ ] `learn.wudu_steps.wudu_intention.body`
+  - English: Intend in your heart that you are purifying yourself for prayer; there is nothing to say out loud. Most scholars count this intention as required, while Hanafis count it as sunnah.
+  - Indonesian: Niatkan dalam hati bahwa kamu bersuci untuk sholat; tidak ada yang perlu diucapkan dengan suara keras. Mayoritas ulama memandang niat ini wajib, sedangkan mazhab Hanafi memandangnya sunnah.
+- [ ] `learn.wudu_steps.wudu_intention.title`
+  - English: Intend in your heart
+  - Indonesian: Berniat dalam hati
+- [ ] `learn.wudu_steps.wudu_mouth_nose.body`
+  - English: Rinse your mouth and sniff water into your nose and blow it out, three times. One handful of water for both is fine.
+  - Indonesian: Berkumurlah, hiruplah air ke dalam hidung lalu keluarkan, tiga kali. Satu cidukan air untuk keduanya sudah cukup.
+- [ ] `learn.wudu_steps.wudu_mouth_nose.title`
+  - English: Mouth and nose
+  - Indonesian: Mulut dan hidung
+- [ ] `learn.wudu_steps.wudu_order.body`
+  - English: Do the steps in this order and without long breaks in between. Washing each part once or twice is valid too; three times is the full sunnah, so don't go beyond three.
+  - Indonesian: Lakukan langkah-langkah ini secara berurutan dan tanpa jeda yang lama di antaranya. Membasuh setiap anggota sekali atau dua kali juga sah; tiga kali adalah sunnah yang sempurna, jadi jangan lebih dari tiga.
+- [ ] `learn.wudu_steps.wudu_order.title`
+  - English: Keep the order, no long pauses
+  - Indonesian: Jaga urutan, tanpa jeda lama
+
 ### UI legal and privacy text (id)
 
 - [ ] `share.footer`
@@ -3153,6 +4608,491 @@ These 201 keys have an intentionally empty Arabic meaning; nothing to review.
   - Arabic source: وَأَنَّ أَحَبَّ الأَعْمَالِ أَدْوَمُهَا إِلَى اللَّهِ وَإِنْ قَلَّ
   - English: "The most beloved of deeds to Allah are the most consistent, even if small."
   - Turkish: "Allah'a en sevimli amel, az da olsa devamlı olanıdır."
+
+### Quotations and rulings outside meaning lines (tr)
+
+Texts outside the meaning lines that quote Allah or the Prophet ﷺ, quote someone, or explain a ruling (every Learn title and body). Check that each quotation is faithful and each ruling is stated accurately.
+
+- [ ] `day.1.quran.note`
+  - English: Read Al-Fatihah slowly and reflect on each verse. You recite it in every rak'ah: "Guide us to the straight path."
+  - Turkish: Fatiha suresini yavaşça oku ve her ayeti üzerinde düşün. Onu her rekâtta okursun: "Bizi dosdoğru yola ilet."
+- [ ] `day.1.sunnah.description`
+  - English: Say "Bismillah" before you eat, drink, leave the house or start your work. The Prophet ﷺ said to a boy: "Mention the name of Allah, eat with your right hand, and eat from what is in front of you."
+  - Turkish: Yemeden, içmeden, evden çıkmadan ya da işine başlamadan önce "Bismillah" de. Peygamber ﷺ bir çocuğa şöyle buyurdu: "Allah'ın adını an, sağ elinle ye ve önünden ye."
+- [ ] `day.10.intro`
+  - English: Du'a is worship itself, and Allah says, "Call upon Me; I will respond to you." Today you learn to speak to Allah in your own words and trust in His answer.
+  - Turkish: Dua ibadetin ta kendisidir ve Allah "Bana dua edin, size icabet edeyim" buyurur. Bugün Allah'la kendi sözlerinle konuşmayı ve O'nun cevabına güvenmeyi öğreniyorsun.
+- [ ] `day.10.prayer.tip`
+  - English: In every sujood today, make du'a in your own words for your needs, your family and the ummah. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is prostrating, so make much du'a." Anas said this Quranic du'a was the one he made most often (Bukhari 6389).
+  - Turkish: Bugün her secdede ihtiyaçların, ailen ve ümmet için kendi sözlerinle dua et. Peygamber ﷺ şöyle buyurdu: "Kulun Rabbine en yakın olduğu an secdede olduğu andır; öyleyse secdede çok dua edin." Enes, onun en çok ettiği duanın bu Kur'an duası olduğunu söylemiştir (Buhari 6389).
+- [ ] `day.10.quran.note`
+  - English: The verse that shows Allah is always near and always listening: "I am near. I respond to the call of the one who calls upon Me."
+  - Turkish: Allah'ın her zaman yakın olduğunu ve her zaman işittiğini gösteren ayet: "Ben yakınım. Bana dua ettiğinde dua edenin duasına icabet ederim."
+- [ ] `day.10.sunnah.description`
+  - English: The Prophet ﷺ taught us special times for du'a: the last third of the night (Bukhari 1145), between the adhan and the iqamah (Abu Dawud 521; Tirmidhi 212), in sujood (Muslim 482), at the end of the obligatory prayers (Tirmidhi 3499), and the hour on Friday, sought in the last hour after Asr (Bukhari 935; Abu Dawud 1048). Use at least 3 of these times today.
+  - Turkish: Peygamber ﷺ bize duanın özel vakitlerini öğretti: gecenin son üçte biri (Buhari 1145), ezan ile kamet arası (Ebu Davud 521; Tirmizi 212), secde (Müslim 482), farz namazların sonu (Tirmizi 3499) ve cuma günü ikindiden sonraki son saatte aranan o an (Buhari 935; Ebu Davud 1048). Bugün bu vakitlerden en az 3'ünü değerlendir.
+- [ ] `day.11.intro`
+  - English: Giving in the way of Allah purifies your wealth, eases hardship and earns His love. The Prophet ﷺ was the most generous of people, and even more generous in Ramadan.
+  - Turkish: Allah yolunda vermek malını arındırır, sıkıntıları hafifletir ve O'nun sevgisini kazandırır. Peygamber ﷺ insanların en cömerdiydi; Ramazan'da ise daha da cömert olurdu.
+- [ ] `day.11.prayer.tip`
+  - English: Every morning two angels come down. One says, "O Allah, give the one who spends something in return," and the other says, "O Allah, give the one who withholds loss" (Bukhari 1442; Muslim 1010). Give some sadaqah early today, after Fajr.
+  - Turkish: Her sabah iki melek iner. Biri "Allah'ım, infak edene harcadığının yerine karşılık ver" der, diğeri "Allah'ım, malını harcamayıp tutanın malını telef et" der (Buhari 1442; Müslim 1010). Bugün sabah namazından sonra erkenden biraz sadaka ver.
+- [ ] `day.11.quran.note`
+  - English: The parable of those who spend in the way of Allah: like a grain that grows seven ears, with a hundred grains in each ear. "And Allah multiplies for whom He wills."
+  - Turkish: Allah yolunda harcayanların misali: yedi başak bitiren ve her başakta yüz tane bulunan bir tohum gibidir. "Allah dilediğine kat kat verir."
+- [ ] `day.11.sunnah.description`
+  - English: The Prophet ﷺ said: "When a person dies, his deeds come to an end except for three: ongoing charity, knowledge that benefits, or a righteous child who prays for him." Start an ongoing charity today: share beneficial knowledge, teach someone a Sunnah, plant a tree, give to a masjid fund or support an orphan.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "İnsan ölünce ameli kesilir, ancak üç şey müstesna: sadaka-i câriye, faydalanılan ilim ya da kendisine dua eden salih evlat." Bugün bir sadaka-i câriye başlat: faydalı bir bilgiyi paylaş, birine bir sünnet öğret, bir ağaç dik, bir cami fonuna bağış yap ya da bir yetime destek ol.
+- [ ] `day.12.character.action`
+  - English: Practise contentment today: hold back from one purchase or desire you would normally give in to, and say "Alhamdulillah" for what you have.
+  - Turkish: Bugün kanaati uygula: normalde boyun eğeceğin bir alışverişten ya da arzudan vazgeç ve sahip olduklarına "Elhamdülillah" de.
+- [ ] `day.12.character.description`
+  - English: The Prophet ﷺ said: "Wealth is not having many possessions; true wealth is contentment of the soul" (Bukhari 6446).
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Zenginlik mal çokluğu değildir; asıl zenginlik gönül zenginliğidir" (Buhari 6446).
+- [ ] `day.12.quran.note`
+  - English: Allah commands us to eat of what is lawful and good, and warns us not to follow the footsteps of Shaytan: "Indeed, he is to you a clear enemy."
+  - Turkish: Allah bize helal ve temiz olandan yememizi emreder ve şeytanın adımlarına uymamamız konusunda uyarır: "Çünkü o sizin için apaçık bir düşmandır."
+- [ ] `day.12.sunnah.description`
+  - English: Make this du'a often: "Allahummak-fini bi-halalika 'an haramika wa aghnini bi-fadlika 'amman siwak" (O Allah, suffice me with what You have made lawful instead of what You have forbidden, and make me free of need of anyone besides You). After Fajr, also ask Allah for "beneficial knowledge, good provision and accepted deeds" (Ibn Majah 925).
+  - Turkish: Bu duayı sıkça oku: "Allahümmekfinî bi-helâlike an harâmike ve ağninî bi-fadlike ammen sivâk" (Allah'ım, helalinle beni haramından müstağni kıl ve beni Senden başkasına muhtaç etme). Sabah namazından sonra Allah'tan "faydalı ilim, temiz rızık ve kabul edilmiş amel" de iste (İbn Mace 925).
+- [ ] `day.13.character.action`
+  - English: Write down your top 3 worries. Then sincerely hand each one to Allah's care, saying "Hasbunallahu wa ni'mal wakil."
+  - Turkish: En büyük 3 kaygını yaz. Sonra "Hasbünallahu ve ni'mel vekîl" diyerek her birini içtenlikle Allah'a emanet et.
+- [ ] `day.13.prayer.tip`
+  - English: If you have a decision to make, big or small, pray istikhara today: two voluntary rak'ahs followed by the istikhara du'a, which the Prophet ﷺ taught his Companions for every matter (Bukhari 6382). Then move forward, trusting that Allah is guiding your steps.
+  - Turkish: Büyük ya da küçük, vermen gereken bir karar varsa bugün istihare namazı kıl: iki rekât nafile namaz ve ardından Peygamber'in ﷺ ashabına her iş için öğrettiği istihare duası (Buhari 6382). Sonra Allah'ın adımlarına yol gösterdiğine güvenerek ilerle.
+- [ ] `day.13.quran.note`
+  - English: The well-known verse on trust: "And whoever relies upon Allah, He is sufficient for him. Indeed, Allah will accomplish His purpose."
+  - Turkish: Tevekkül hakkındaki meşhur ayet: "Kim Allah'a tevekkül ederse O ona yeter. Şüphesiz Allah emrini yerine getirendir."
+- [ ] `day.13.sunnah.description`
+  - English: A man asked the Prophet ﷺ whether he should tie his camel and trust in Allah, or leave it untied and trust in Allah. He said: "Tie it, and trust in Allah." Tawakkul includes doing your part fully, then letting go of the outcome.
+  - Turkish: Bir adam Peygamber'e ﷺ devesini bağlayıp mı Allah'a tevekkül etmesi, yoksa bağlamadan mı tevekkül etmesi gerektiğini sordu. Peygamber ﷺ şöyle buyurdu: "Onu bağla, sonra Allah'a tevekkül et." Tevekkül, üzerine düşeni tam yapmayı ve sonra sonucu bırakmayı içerir.
+- [ ] `day.14.intro`
+  - English: Allah says, "If you are grateful, I will surely increase you." Today, learn to see every moment as a gift from Him, and to show gratitude in word and deed.
+  - Turkish: Allah şöyle buyurur: "Eğer şükrederseniz, elbette size nimetimi artırırım." Bugün her anı O'ndan bir hediye olarak görmeyi ve şükrünü sözle ve davranışla göstermeyi öğren.
+- [ ] `day.14.prayer.tip`
+  - English: When good news or a blessing reaches you today, fall into a single prostration of gratitude (sujud ash-shukr). Whenever something pleasing came to the Prophet ﷺ, he would fall down in prostration, thanking Allah (Abu Dawud 2774). After each prayer, ask Allah to help you thank Him.
+  - Turkish: Bugün sana güzel bir haber ya da bir nimet ulaştığında tek bir şükür secdesi yap. Peygamber'e ﷺ sevindirici bir şey geldiğinde Allah'a şükrederek secdeye kapanırdı (Ebu Davud 2774). Her namazdan sonra Allah'tan Ona şükretmen için yardım iste.
+- [ ] `day.14.quran.note`
+  - English: Allah's promise that gratitude brings increase: "If you are grateful, I will surely increase you; but if you deny, indeed, My punishment is severe."
+  - Turkish: Allah'ın, şükrün nimeti artıracağına dair vaadi: "Eğer şükrederseniz elbette size artırırım; nankörlük ederseniz, şüphesiz azabım çok şiddetlidir."
+- [ ] `day.14.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever does not thank people does not thank Allah." Show gratitude in two ways today: thank Allah directly (Alhamdulillah), and thank the people through whom He blessed you.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "İnsanlara teşekkür etmeyen Allah'a şükretmez." Bugün şükrünü iki şekilde göster: Allah'a doğrudan şükret (Elhamdülillah) ve O'nun sana nimet ulaştırdığı insanlara teşekkür et.
+- [ ] `day.15.quran.note`
+  - English: The command to stand with the truthful: "O you who believe, fear Allah and be with those who are truthful."
+  - Turkish: Doğrularla beraber olma emri: "Ey iman edenler, Allah'tan sakının ve doğrularla beraber olun."
+- [ ] `day.15.sunnah.description`
+  - English: When the Prophet ﷺ called the tribes of Quraysh together, they told him: "We have never experienced anything from you but truthfulness." Today, be completely honest in every interaction: no white lies, exaggerations or misleading statements, even ones that seem harmless.
+  - Turkish: Peygamber ﷺ Kureyş kabilelerini bir araya topladığında ona şöyle dediler: "Senden doğruluktan başka bir şey görmedik." Bugün her etkileşimde tamamen dürüst ol: masum görünse bile beyaz yalan, abartı ya da yanıltıcı söz olmasın.
+- [ ] `day.16.intro`
+  - English: Amanah means fulfilling trusts, keeping promises and being reliable in every role: in your family, with friends, at work and as a Muslim. Even before prophethood, the Prophet ﷺ was known among his people for his trustworthiness.
+  - Turkish: Emanet; emanetleri yerine getirmek, sözünü tutmak ve her rolde güvenilir olmaktır: ailende, arkadaşlarınla, işte ve bir Müslüman olarak. Peygamber ﷺ peygamberlikten önce bile kavmi arasında güvenilirliğiyle tanınırdı.
+- [ ] `day.16.quran.note`
+  - English: "O you who believe, do not betray Allah and the Messenger, and do not knowingly betray your trusts."
+  - Turkish: "Ey iman edenler, Allah'a ve Resul'e hıyanet etmeyin; bile bile emanetlerinize de hıyanet etmeyin."
+- [ ] `day.16.sunnah.description`
+  - English: The Prophet ﷺ said: "The signs of a hypocrite are three: when he speaks he lies, when he promises he breaks his promise, and when he is trusted he betrays the trust." List any promises or commitments you have not kept, and fulfil at least one today.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Münafığın alameti üçtür: Konuştuğunda yalan söyler, söz verdiğinde sözünden döner, kendisine güvenildiğinde hıyanet eder." Tutmadığın sözleri ya da taahhütleri listele ve bugün en az birini yerine getir.
+- [ ] `day.17.character.action`
+  - English: When you feel irritated or frustrated today, stop and say "Alhamdulillah 'ala kulli hal" (praise be to Allah in every situation) before you respond.
+  - Turkish: Bugün sinirlendiğinde ya da bunaldığında dur ve karşılık vermeden önce "Elhamdülillah alâ külli hâl" (her hâlükârda Allah'a hamd olsun) de.
+- [ ] `day.17.intro`
+  - English: "Indeed, Allah is with the patient." Sabr is not passive resignation; it is active, disciplined perseverance, knowing that Allah is testing and refining you.
+  - Turkish: "Şüphesiz Allah sabredenlerle beraberdir." Sabır edilgen bir teslimiyet değildir; Allah'ın seni sınadığını ve olgunlaştırdığını bilerek gösterilen etkin ve disiplinli bir sebattır.
+- [ ] `day.17.quran.note`
+  - English: Allah tests us with fear, hunger and loss, "but give good tidings to the patient: those who, when disaster strikes them, say: Indeed we belong to Allah, and indeed to Him we will return."
+  - Turkish: Allah bizi korku, açlık ve kayıplarla sınar, "ama sabredenleri müjdele: Onlar ki başlarına bir musibet geldiğinde: Biz Allah'a aidiz ve şüphesiz O'na döneceğiz derler."
+- [ ] `day.17.sunnah.description`
+  - English: The Prophet ﷺ said: "The strong one is not the one who overcomes people by his strength, but the one who controls himself when angry." When something irritates you today, pause and say "A'udhu billahi minash-shaytanir-rajim" (Bukhari 6115). If you are standing, sit down (Abu Dawud 4782).
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Güçlü kimse, insanları gücüyle yenen değil, öfkelendiğinde kendine hâkim olandır." Bugün bir şey seni sinirlendirdiğinde dur ve "Eûzü billâhi mineş-şeytânirracîm" de (Buhari 6115). Ayaktaysan otur (Ebu Davud 4782).
+- [ ] `day.17.task.17_inna_lillah.title`
+  - English: Say "Inna lillahi wa inna ilayhi raji'un" at every difficulty today
+  - Turkish: Bugün her zorlukta "İnnâ lillâhi ve innâ ileyhi râciûn" de
+- [ ] `day.18.character.description`
+  - English: Pride (kibr) is a disease of the heart. The Prophet ﷺ said that no one with an atom's weight of pride in his heart will enter Paradise, and he defined pride as "rejecting the truth and looking down on people" (Muslim 91).
+  - Turkish: Kibir bir kalp hastalığıdır. Peygamber ﷺ kalbinde zerre kadar kibir bulunan kimsenin cennete giremeyeceğini söylemiş ve kibri "hakkı reddetmek ve insanları küçük görmek" diye tanımlamıştır (Müslim 91).
+- [ ] `day.18.intro`
+  - English: The Prophet ﷺ was the most humble of people, though he was the greatest of them. True tawadu' comes from knowing Allah and knowing yourself.
+  - Turkish: Peygamber ﷺ insanların en büyüğü olduğu hâlde en alçakgönüllüsüydü. Gerçek tevazu, Allah'ı ve kendini tanımaktan doğar.
+- [ ] `day.18.prayer.tip`
+  - English: Placing your forehead on the ground is the fullest physical expression of humility. In every sujood today, say "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High; Muslim 772) and feel its meaning: you are submitting completely to Him. Let that feeling stay with you.
+  - Turkish: Alnını yere koymak, tevazunun bedenle yapılan en eksiksiz ifadesidir. Bugün her secdede "Sübhâne Rabbiye'l-a'lâ" de (Yüce Rabbimi tesbih ederim; Müslim 772) ve anlamını hisset: Kendini tamamen O'na teslim ediyorsun. Bu his seninle kalsın.
+- [ ] `day.18.quran.note`
+  - English: "And do not walk upon the earth arrogantly. Indeed, you will never tear the earth apart, and you will never reach the mountains in height."
+  - Turkish: "Yeryüzünde böbürlenerek yürüme. Çünkü sen ne yeri yarabilirsin ne de boyca dağlara erişebilirsin."
+- [ ] `day.18.sunnah.description`
+  - English: The Prophet ﷺ would greet even children with salam (Bukhari 6247; Muslim 2168), and he said: "The people closest to Allah are those who begin the greeting of salam." Today, be the first to say salam to everyone you meet.
+  - Turkish: Peygamber ﷺ çocuklara bile selam verirdi (Buhari 6247; Müslim 2168) ve şöyle buyurdu: "İnsanların Allah'a en yakın olanı, selamı önce verendir." Bugün karşılaştığın herkese önce sen selam ver.
+- [ ] `day.19.intro`
+  - English: The Prophet ﷺ was sent as a mercy to all the worlds. Mercy towards people, animals and all of creation is a sign of strong faith.
+  - Turkish: Peygamber ﷺ bütün âlemlere rahmet olarak gönderildi. İnsanlara, hayvanlara ve bütün yaratılmışlara merhamet, güçlü imanın bir işaretidir.
+- [ ] `day.19.prayer.tip`
+  - English: In today's prayers, make specific du'a for others: your parents, your family, the sick and suffering, and Muslims around the world. The Prophet ﷺ said that when a believer prays for his brother in his absence, the angel says, "And the same for you" (Muslim 2732).
+  - Turkish: Bugünkü namazlarında başkaları için özel olarak dua et: annen baban, ailen, hastalar ve acı çekenler ve dünyanın dört bir yanındaki Müslümanlar. Peygamber ﷺ, bir mümin kardeşi için gıyabında dua ettiğinde meleğin "Sana da onun bir misli" dediğini bildirmiştir (Müslim 2732).
+- [ ] `day.19.quran.note`
+  - English: The summary of the Prophet's ﷺ mission: "And We have not sent you except as a mercy to the worlds."
+  - Turkish: Peygamber'in ﷺ görevinin özeti: "Biz seni ancak âlemlere rahmet olarak gönderdik."
+- [ ] `day.19.sunnah.description`
+  - English: The Prophet ﷺ told of a woman who entered the Fire because of a cat she locked up without food or water, and of a man who gave water to a thirsty dog, so Allah thanked him and admitted him to Paradise. Today, show active mercy: feed a bird, put out water, be gentle with animals and reduce waste.
+  - Turkish: Peygamber ﷺ, hapsedip yiyecek ve su vermediği bir kedi yüzünden cehenneme giren bir kadından ve susamış bir köpeğe su verdiği için Allah'ın kendisinden razı olup onu cennete koyduğu bir adamdan haber verdi. Bugün merhameti eyleme dök: bir kuşu besle, su bırak, hayvanlara şefkatle davran ve israfı azalt.
+- [ ] `day.2.character.action`
+  - English: Whenever you feel the urge to speak badly about someone, say "SubhanAllah" instead and change the topic.
+  - Turkish: Biri hakkında kötü konuşma isteği duyduğunda bunun yerine "Sübhanallah" de ve konuyu değiştir.
+- [ ] `day.2.quran.note`
+  - English: Reflect on this verse about purification: "Indeed, Allah loves those who turn to Him in repentance and loves those who purify themselves."
+  - Turkish: Temizlikle ilgili bu ayet üzerinde düşün: "Şüphesiz Allah çokça tövbe edenleri sever, temizlenenleri de sever."
+- [ ] `day.2.sunnah.description`
+  - English: The Prophet ﷺ said: "Were it not that it would be hard on my ummah, I would have commanded them to use the siwak with every prayer." Use a siwak or brush your teeth before your prayers today.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Ümmetime zor gelmeseydi, onlara her namazda misvak kullanmalarını emrederdim." Bugün namazlarından önce misvak kullan ya da dişlerini fırçala.
+- [ ] `day.20.quran.note`
+  - English: Allah links keeping family ties directly to fearing Him: "And fear Allah, through whom you ask one another, and the wombs."
+  - Turkish: Allah akrabalık bağlarını gözetmeyi doğrudan kendisinden sakınmaya bağlar: "Adını anarak birbirinizden dilekte bulunduğunuz Allah'tan ve akrabalık bağlarını koparmaktan sakının."
+- [ ] `day.20.sunnah.description`
+  - English: The Prophet ﷺ said: "The one who keeps ties is not the one who only returns the favour, but the one who keeps ties when they have been cut." Today, reach out to a family member you have drifted away from.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Akrabalık bağını gözeten, yalnızca karşılık veren değildir; asıl gözeten, bağ koparıldığında onu yeniden kurandır." Bugün uzaklaştığın bir aile üyene ulaş.
+- [ ] `day.21.character.description`
+  - English: The Prophet ﷺ said that a good word is charity (Bukhari 2989; Muslim 1009). The words you choose can lift people up or tear them down, so choose every word with care today.
+  - Turkish: Peygamber ﷺ güzel sözün sadaka olduğunu bildirdi (Buhari 2989; Müslim 1009). Seçtiğin sözler insanları yüceltebilir ya da yıkabilir; bugün her sözünü özenle seç.
+- [ ] `day.21.quran.note`
+  - English: Allah's description of the Prophet ﷺ: "And indeed, you are of a great moral character."
+  - Turkish: Allah'ın Peygamber'i ﷺ tarifi: "Şüphesiz sen yüce bir ahlak üzeresin."
+- [ ] `day.21.sunnah.description`
+  - English: The Prophet ﷺ said: "Your smiling in the face of your brother is charity for you." Jarir said that from the day he accepted Islam, the Prophet ﷺ never saw him without smiling at him. Today, smile genuinely at every person you meet: at home, at work and in the street.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Kardeşinin yüzüne gülümsemen senin için bir sadakadır." Cerîr, Müslüman olduğu günden beri Peygamber'in ﷺ kendisini her görüşünde gülümsediğini söylemiştir. Bugün evde, işte ve sokakta karşılaştığın herkese içtenlikle gülümse.
+- [ ] `day.22.prayer.tip`
+  - English: After Fajr, while the mind is fresh and the world is quiet, spend 15 minutes studying one Islamic topic. Begin with the du'a for beneficial knowledge that the Prophet ﷺ said after the salam of Fajr.
+  - Turkish: Sabah namazından sonra, zihin zindeyken ve dünya sessizken, 15 dakikanı bir İslami konuyu çalışmaya ayır. Peygamber'in ﷺ sabah namazının selamından sonra okuduğu faydalı ilim duasıyla başla.
+- [ ] `day.22.quran.note`
+  - English: Scholars note that knowledge is the only thing the Prophet ﷺ was commanded to ask for more of: "And say: My Lord, increase me in knowledge."
+  - Turkish: Âlimler, Peygamber'in ﷺ fazlasını istemekle emrolunduğu tek şeyin ilim olduğuna dikkat çeker: "Ve de ki: Rabbim, ilmimi artır."
+- [ ] `day.22.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever Allah wants good for, He gives him understanding of the religion." Learn one new thing about your deen today: a ruling of fiqh, a name of Allah, a hadith or the tafsir of an ayah.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Allah kimin hakkında hayır dilerse onu dinde anlayış sahibi kılar." Bugün dinin hakkında yeni bir şey öğren: bir fıkıh hükmü, Allah'ın bir ismi, bir hadis ya da bir ayetin tefsiri.
+- [ ] `day.23.sunnah.description`
+  - English: Allah praises those who "reflect on the creation of the heavens and the earth" and say: "Our Lord, You did not create this in vain." Take 15 minutes outside today: walk, sit and look at the sky, and say "SubhanAllah" at each sign of creation you notice.
+  - Turkish: Allah, "göklerin ve yerin yaratılışı üzerine düşünen" ve "Rabbimiz, Sen bunu boşuna yaratmadın" diyenleri över. Bugün 15 dakikanı dışarıda geçir: yürü, otur ve göğe bak; fark ettiğin her yaratılış ayetinde "Sübhanallah" de.
+- [ ] `day.24.character.description`
+  - English: Before every major decision, ask: "How does this serve my akhirah?" Let that question reframe your choices.
+  - Turkish: Her önemli karardan önce sor: "Bu benim ahiretime nasıl hizmet ediyor?" Bu soru seçimlerine yeni bir çerçeve kazandırsın.
+- [ ] `day.24.prayer.tip`
+  - English: A sign of zuhd is giving your time to prayer over worldly pursuits. Today, pray the sunnah prayers with each fard: the Prophet ﷺ said that whoever prays twelve rak'ahs in a day and night, a house is built for him in Paradise (Muslim 728).
+  - Turkish: Zühdün bir işareti, vaktini dünya uğraşları yerine namaza vermektir. Bugün her farzla birlikte sünnetlerini de kıl: Peygamber ﷺ, bir gün ve gecede on iki rekât kılan kimse için cennette bir ev yapılacağını buyurmuştur (Müslim 728).
+- [ ] `day.24.quran.note`
+  - English: The parable of this world: "Know that the life of this world is but amusement and diversion and adornment and boasting to one another and competition in increase of wealth and children..."
+  - Turkish: Bu dünyanın misali: "Bilin ki dünya hayatı ancak bir oyun, bir eğlence, bir süs, aranızda bir övünme ve mal ile evlatta bir çoğalma yarışıdır..."
+- [ ] `day.24.sunnah.description`
+  - English: The Prophet ﷺ said: "There are two blessings that many people are cheated of: health and free time." Today, take a 3-hour break from social media and entertainment, and use that time for worship instead.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "İki nimet vardır ki insanların çoğu onlarda aldanmıştır: sağlık ve boş vakit." Bugün sosyal medyaya ve eğlenceye 3 saat ara ver ve bu zamanı ibadete ayır.
+- [ ] `day.25.character.description`
+  - English: Among the seven whom Allah will shade on the Day when there is no shade but His is "a man who gives charity so secretly that his left hand does not know what his right hand gives" (Bukhari 660; Muslim 1031).
+  - Turkish: Allah'ın, O'nun gölgesinden başka gölgenin olmadığı günde gölgelendireceği yedi kişiden biri de "sağ elinin verdiğini sol eli bilmeyecek kadar gizli sadaka veren kişidir" (Buhari 660; Müslim 1031).
+- [ ] `day.25.prayer.tip`
+  - English: Before each prayer today, check your intention: "Am I praying because people might see me, or purely for Allah?" Let every rak'ah be for Him alone.
+  - Turkish: Bugün her namazdan önce niyetini kontrol et: "İnsanlar görsün diye mi kılıyorum, yoksa yalnızca Allah için mi?" Her rekât yalnızca O'nun için olsun.
+- [ ] `day.25.quran.note`
+  - English: The essence of the religion: "And they were not commanded except to worship Allah, sincere to Him in religion, inclining to truth, and to establish prayer and to give zakah. And that is the correct religion."
+  - Turkish: Dinin özü: "Oysa onlara ancak dini yalnızca O'na has kılarak, hakka yönelerek Allah'a ibadet etmeleri, namazı kılmaları ve zekâtı vermeleri emredilmişti. İşte dosdoğru din budur."
+- [ ] `day.25.sunnah.description`
+  - English: Allah says in a hadith qudsi: "I am the most free of need of any partner. Whoever does a deed in which he associates anyone else with Me, I leave him and his association." Test each action today: "Would I do this the same way if no one was watching?" If not, correct your intention.
+  - Turkish: Allah bir kudsî hadiste şöyle buyurur: "Ben ortaklardan, ortaklığa en az muhtaç olanım. Kim bir amel işler de onda Benimle birlikte başkasını ortak koşarsa, onu da ortak koştuğunu da terk ederim." Bugün her davranışını sına: "Kimse görmeseydi de bunu aynı şekilde yapar mıydım?" Yapmazsan niyetini düzelt.
+- [ ] `day.26.quran.note`
+  - English: "And He is with you wherever you are. And Allah, of what you do, is Seeing."
+  - Turkish: "Nerede olursanız olun O sizinle beraberdir. Allah yaptıklarınızı hakkıyla görendir."
+- [ ] `day.26.sunnah.description`
+  - English: 'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of 'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?
+  - Turkish: Ömer b. Hattab şöyle demiştir: "Hesaba çekilmeden önce kendinizi hesaba çekin." Bu bir hadis değil, Ömer'in sözüdür. Uyumadan önce gününü gözden geçir: Neyi iyi yaptın, nerede eksik kaldın ve yarın neyi daha iyi yapacaksın?
+- [ ] `day.27.prayer.tip`
+  - English: In the last third of tonight, when Allah descends to the lowest heaven and asks, "Who is seeking My forgiveness, that I may forgive him?" (Bukhari 1145), pray tahajjud and make the most sincere tawbah of your life. Be specific about what you are repenting from.
+  - Turkish: Bu gecenin son üçte birinde, Allah dünya semasına inip "Bana istiğfar eden yok mu ki onu bağışlayayım?" buyurduğunda (Buhari 1145), teheccüd kıl ve hayatının en içten tövbesini et. Neden tövbe ettiğini açıkça belirt.
+- [ ] `day.27.quran.note`
+  - English: The command to repent sincerely: "O you who believe, turn to Allah in sincere repentance. Perhaps your Lord will remove from you your misdeeds and admit you into gardens beneath which rivers flow."
+  - Turkish: İçtenlikle tövbe etme emri: "Ey iman edenler, Allah'a içten bir tövbe ile tövbe edin. Umulur ki Rabbiniz kötülüklerinizi örter ve sizi altından ırmaklar akan cennetlere koyar."
+- [ ] `day.27.sunnah.description`
+  - English: The Prophet ﷺ said: "No servant commits a sin, then purifies himself well, stands and prays two rak'ahs, then seeks Allah's forgiveness, except that Allah forgives him." Then he recited Al 'Imran 3:135. Make wudu carefully today, pray two rak'ahs and ask Allah to forgive you.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Bir kul bir günah işler, sonra güzelce abdest alır, kalkıp iki rekât namaz kılar, sonra Allah'tan bağışlanma dilerse, Allah onu mutlaka bağışlar." Sonra Al-i İmran 3:135'i okudu. Bugün özenle abdest al, iki rekât namaz kıl ve Allah'tan seni bağışlamasını iste.
+- [ ] `day.28.intro`
+  - English: The Prophet ﷺ likened the believers, in their mercy and affection for one another, to one body (Bukhari 6011; Muslim 2586). Today you invest in your community.
+  - Turkish: Peygamber ﷺ müminleri birbirlerine olan merhamet ve sevgilerinde tek bir beden gibi tarif etti (Buhari 6011; Müslim 2586). Bugün topluluğuna yatırım yapıyorsun.
+- [ ] `day.28.quran.note`
+  - English: "You are the best nation produced for mankind. You enjoin what is right, forbid what is wrong and believe in Allah."
+  - Turkish: "Siz insanlar için çıkarılmış en hayırlı ümmetsiniz. İyiliği emreder, kötülükten men eder ve Allah'a iman edersiniz."
+- [ ] `day.28.sunnah.description`
+  - English: The Prophet ﷺ said: "Whoever fulfils the need of his brother, Allah will fulfil his need; and whoever relieves a Muslim of a hardship, Allah will relieve him of a hardship on the Day of Resurrection." Today, volunteer, help a neighbour, contribute to a community cause or visit a sick Muslim.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Kim kardeşinin ihtiyacını giderirse Allah da onun ihtiyacını giderir; kim bir Müslümanın sıkıntısını giderirse Allah da kıyamet gününde onun bir sıkıntısını giderir." Bugün gönüllü ol, bir komşuna yardım et, bir topluluk işine katkıda bulun ya da hasta bir Müslümanı ziyaret et.
+- [ ] `day.29.intro`
+  - English: Every Muslim represents the deen, and da'wah is not only for scholars: it is living Islam so beautifully that others are inspired. "And who is better in speech than one who invites to Allah?"
+  - Turkish: Her Müslüman dini temsil eder ve tebliğ yalnızca âlimlere ait değildir: İslam'ı başkalarına ilham verecek kadar güzel yaşamaktır. "Allah'a davet eden kimseden daha güzel sözlü kim vardır?"
+- [ ] `day.29.prayer.tip`
+  - English: In your prayers today, make heartfelt du'a by name for people who are not Muslim or who have drifted from Islam. The Prophet ﷺ prayed for people's guidance: "O Allah, guide Daws" (Bukhari 2937), and he prayed for the guidance of Abu Hurayrah's mother (Muslim 2491).
+  - Turkish: Bugün namazlarında Müslüman olmayan ya da İslam'dan uzaklaşmış insanlar için ismen, içten dua et. Peygamber ﷺ insanların hidayeti için dua ederdi: "Allah'ım, Devs kabilesine hidayet ver" (Buhari 2937); Ebu Hureyre'nin annesinin hidayeti için de dua etmiştir (Müslim 2491).
+- [ ] `day.29.quran.note`
+  - English: "And who is better in speech than one who invites to Allah, does righteousness and says: Indeed, I am of the Muslims."
+  - Turkish: "Allah'a davet eden, salih amel işleyen ve: Ben Müslümanlardanım diyen kimseden daha güzel sözlü kim vardır?"
+- [ ] `day.29.sunnah.description`
+  - English: The Prophet ﷺ said: "That Allah guides one person through you is better for you than red camels." The greatest da'wah is your character: when you are kind, honest, reliable, generous and humble, people see Islam in action. Embody these qualities in every interaction today.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Allah'ın senin vesilenle bir kişiye hidayet vermesi, senin için kızıl develerden daha hayırlıdır." En büyük tebliğ ahlakındır: Nazik, dürüst, güvenilir, cömert ve alçakgönüllü olduğunda insanlar İslam'ı uygulamada görür. Bugün her etkileşiminde bu nitelikleri yaşa.
+- [ ] `day.3.quran.note`
+  - English: "Guard your prayers, especially the middle prayer, and stand before Allah in devotion." Reflect on what it means to truly guard your prayers.
+  - Turkish: "Namazlara ve orta namaza devam edin ve Allah'ın huzurunda gönülden boyun eğerek durun." Namazları gerçekten korumanın ne anlama geldiği üzerine düşün.
+- [ ] `day.3.sunnah.description`
+  - English: The Prophet ﷺ said that whoever prays twelve voluntary rak'ahs in a day and night, a house will be built for him in Paradise. They are 2 before Fajr, 4 before Dhuhr and 2 after it, 2 after Maghrib and 2 after Isha.
+  - Turkish: Peygamber ﷺ, bir gün ve gecede on iki rekât nafile namaz kılan kimse için cennette bir ev yapılacağını buyurdu. Bunlar sabahtan önce 2, öğleden önce 4 ve sonra 2, akşamdan sonra 2 ve yatsıdan sonra 2 rekâttır.
+- [ ] `day.30.intro`
+  - English: You have reached Day 30, but the journey does not end here; it begins here. Istiqamah means staying on the straight path consistently, as the Prophet ﷺ taught: "Say: I believe in Allah, then be steadfast."
+  - Turkish: 30. güne ulaştın, ama yolculuk burada bitmiyor; burada başlıyor. İstikamet, Peygamber'in ﷺ öğrettiği gibi dosdoğru yolda istikrarla kalmaktır: "De ki: Allah'a iman ettim, sonra dosdoğru ol."
+- [ ] `day.30.quran.note`
+  - English: The promise to those who remain steadfast: "Indeed, those who say, Our Lord is Allah, and then remain steadfast, the angels will descend upon them: Do not fear and do not grieve, but receive good tidings of Paradise, which you were promised."
+  - Turkish: İstikamet üzere olanlara verilen vaat: "Rabbimiz Allah'tır deyip sonra dosdoğru olanların üzerine melekler iner: Korkmayın, üzülmeyin, size vaat edilen cennetle sevinin."
+- [ ] `day.30.sunnah.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small." Plan a daily routine of prayer, Quran, dhikr and character work for the next 30 days that you can keep up.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Allah'a en sevimli amel, az da olsa devamlı olanıdır." Önümüzdeki 30 gün için sürdürebileceğin namaz, Kur'an, zikir ve ahlak çalışmasından oluşan günlük bir düzen planla.
+- [ ] `day.4.prayer.tip`
+  - English: Sleep early tonight and lay out your prayer mat before bed. When the alarm rings, sit up straight away and say the waking du'a, "Al-hamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur." Don't lie back down; wudu will wake you fully.
+  - Turkish: Bu gece erken yat ve yatmadan önce seccadeni ser. Alarm çaldığında hemen doğrul ve uyanma duasını oku: "Elhamdü lillâhillezî ahyânâ ba'de mâ emâtenâ ve ileyhin-nüşûr." Yeniden uzanma; abdest seni tamamen uyandıracaktır.
+- [ ] `day.4.quran.note`
+  - English: Read about the dawn prayer, which the angels witness: "Indeed, the recitation at dawn is ever witnessed."
+  - Turkish: Meleklerin şahit olduğu sabah namazı hakkında oku: "Şüphesiz sabah namazındaki okuyuşa şahit olunur."
+- [ ] `day.4.sunnah.description`
+  - English: On waking, say the waking du'a, wipe the sleep from your face with your hand, make wudu, and pray the 2 sunnah rak'ahs before Fajr. The Prophet ﷺ said: "The two rak'ahs of Fajr are better than this world and everything in it."
+  - Turkish: Uyandığında uyanma duasını oku, elinle yüzündeki uyku izlerini sil, abdest al ve sabah namazından önceki 2 rekât sünneti kıl. Peygamber ﷺ şöyle buyurdu: "Sabah namazının iki rekât sünneti dünyadan ve içindeki her şeyden daha hayırlıdır."
+- [ ] `day.5.prayer.tip`
+  - English: Before Dhuhr, remind yourself that you are about to speak to Allah. Slow every movement and make your ruku' and sujood longer than usual. The Prophet ﷺ said: "The closest a servant is to his Lord is when he is in prostration, so make much du'a."
+  - Turkish: Öğle namazından önce Allah'la konuşmak üzere olduğunu kendine hatırlat. Her hareketi yavaşlat, rükû ve secdeni her zamankinden uzun tut. Peygamber ﷺ şöyle buyurdu: "Kulun Rabbine en yakın olduğu an secdede olduğu andır; öyleyse çokça dua edin."
+- [ ] `day.5.quran.note`
+  - English: The first quality of the successful believers is khushu' in prayer: "Successful indeed are the believers, those who are humble in their prayer."
+  - Turkish: Kurtuluşa eren müminlerin ilk niteliği namazdaki huşudur: "Müminler gerçekten kurtuluşa ermiştir; onlar ki namazlarında huşu içindedirler."
+- [ ] `day.5.sunnah.description`
+  - English: Make your prostration longer than usual today. In sujood, repeat "Subhana Rabbiyal-A'la" (Glory be to my Lord, the Most High), then make your own du'a. In his night prayer, the Prophet's ﷺ prostration lasted as long as it takes to recite fifty verses.
+  - Turkish: Bugün secdeni her zamankinden uzun tut. Secdede "Sübhâne Rabbiye'l-a'lâ" (Yüce Rabbimi tesbih ederim) de, sonra kendi duanı et. Peygamber'in ﷺ gece namazındaki secdesi, elli ayet okuyacak kadar uzun sürerdi.
+- [ ] `day.6.character.description`
+  - English: The Prophet ﷺ said: "The most beloved of deeds to Allah are the most consistent, even if small" (Bukhari 6464). A small daily Quran habit shapes the soul over time.
+  - Turkish: Peygamber ﷺ şöyle buyurdu: "Allah'a en sevimli amel, az da olsa devamlı olanıdır" (Buhari 6464). Küçük bir günlük Kur'an alışkanlığı zamanla ruhu şekillendirir.
+- [ ] `day.6.sunnah.description`
+  - English: Set a fixed time each day for the Quran. The Prophet ﷺ said: "The best of you are those who learn the Quran and teach it." Even one verse read with reflection is valuable. Start small and stay consistent.
+  - Turkish: Her gün Kur'an için sabit bir vakit belirle. Peygamber ﷺ şöyle buyurdu: "Sizin en hayırlınız Kur'an'ı öğrenen ve öğretendir." Düşünerek okunan tek bir ayet bile değerlidir. Küçük başla ve istikrarlı ol.
+- [ ] `day.7.prayer.tip`
+  - English: Tonight, before you sleep or in the last part of the night before Fajr, pray 2 or more rak'ahs of night prayer. Ask Allah sincerely for forgiveness. Allah descends to the lowest heaven in the last third of the night and asks, "Who is asking Me for forgiveness, that I may forgive him?" (Bukhari 1145)
+  - Turkish: Bu gece uyumadan önce ya da sabah namazından önceki gecenin son bölümünde 2 ya da daha fazla rekât gece namazı kıl. Allah'tan içtenlikle bağışlanma dile. Allah gecenin son üçte birinde dünya semasına iner ve "Benden bağışlanma dileyen yok mu ki onu bağışlayayım?" buyurur (Buhari 1145).
+- [ ] `day.7.quran.note`
+  - English: One of the most hopeful verses in the Quran: "Do not despair of the mercy of Allah. Indeed, Allah forgives all sins."
+  - Turkish: Kur'an'daki en ümit verici ayetlerden biri: "Allah'ın rahmetinden ümit kesmeyin. Şüphesiz Allah bütün günahları bağışlar."
+- [ ] `day.7.sunnah.description`
+  - English: Say the master du'a of seeking forgiveness in the morning and the evening. The Prophet ﷺ said that whoever says it with certainty during the day and dies before evening, or says it at night and dies before morning, is of the people of Paradise.
+  - Turkish: Seyyidü'l-istiğfar duasını sabah ve akşam oku. Peygamber ﷺ, kim onu gündüz inanarak söyler de akşam olmadan ölürse ya da gece söyler de sabah olmadan ölürse cennet ehlinden olacağını buyurdu.
+- [ ] `day.8.character.action`
+  - English: Name 10 specific blessings today. Be specific: not just "health" but "I can see, I have food, I have a home."
+  - Turkish: Bugün 10 somut nimet say. Net ol: sadece "sağlık" değil, "görebiliyorum, yiyeceğim var, bir evim var" gibi.
+- [ ] `day.8.intro`
+  - English: Remembrance of Allah nourishes the heart: "Verily, in the remembrance of Allah do hearts find rest." Today you build a morning and evening dhikr routine to carry with you every day.
+  - Turkish: Allah'ı anmak kalbi besler: "Bilesiniz ki kalpler ancak Allah'ı anmakla huzur bulur." Bugün her gün yanında taşıyacağın bir sabah ve akşam zikri düzeni kuruyorsun.
+- [ ] `day.8.quran.note`
+  - English: The well-known verse about dhikr and the heart: "Verily, in the remembrance of Allah do hearts find rest."
+  - Turkish: Zikir ve kalp hakkındaki meşhur ayet: "Bilesiniz ki kalpler ancak Allah'ı anmakla huzur bulur."
+- [ ] `day.9.character.description`
+  - English: Love for the Prophet ﷺ grows and shows as you follow his way. Every Sunnah you follow is a sign of it.
+  - Turkish: Peygamber ﷺ sevgisi, onun yolunu izledikçe büyür ve kendini gösterir. Uyguladığın her sünnet bu sevginin bir işaretidir.
+- [ ] `day.9.character.trait`
+  - English: Love for the Prophet ﷺ
+  - Turkish: Peygamber ﷺ sevgisi
+- [ ] `day.9.intro`
+  - English: Following the Sunnah means living as the Prophet ﷺ lived. Every Sunnah you revive is an act of love for him and a source of great reward.
+  - Turkish: Sünnete uymak, Peygamber'in ﷺ yaşadığı gibi yaşamaktır. İhya ettiğin her sünnet ona duyduğun sevginin bir ifadesi ve büyük bir sevap kaynağıdır.
+- [ ] `day.9.prayer.tip`
+  - English: Today, focus on praying as the Prophet ﷺ prayed. Learn one Sunnah of prayer you may have missed, such as the opening du'a (istiftah), the du'a between the two prostrations, or a du'a in the final tashahhud.
+  - Turkish: Bugün Peygamber'in ﷺ kıldığı gibi namaz kılmaya odaklan. Atlamış olabileceğin bir namaz sünnetini öğren: açılış duası (istiftah), iki secde arasındaki dua ya da son oturuştaki bir dua gibi.
+- [ ] `day.9.quran.note`
+  - English: The verse that makes the Prophet ﷺ our finest example: "There has certainly been for you in the Messenger of Allah an excellent example."
+  - Turkish: Peygamber'i ﷺ bize en güzel örnek kılan ayet: "Andolsun, Allah'ın Resulünde sizin için güzel bir örnek vardır."
+- [ ] `day.9.reflection`
+  - English: Which Sunnah of the Prophet ﷺ do you most want to make a permanent part of your life?
+  - Turkish: Peygamber'in ﷺ hangi sünnetini hayatının kalıcı bir parçası yapmayı en çok istiyorsun?
+- [ ] `day.9.task.9_salawat.title`
+  - English: Send salawat on the Prophet ﷺ 100 times
+  - Turkish: Peygamber'e ﷺ 100 kez salavat getir
+- [ ] `dua.tawbah.occasion`
+  - English: Any time; the Prophet ﷺ said it more than seventy times a day
+  - Turkish: Her zaman; Peygamber ﷺ bunu günde yetmiş defadan fazla söylerdi
+- [ ] `learn.salah_notes.aloud_or_silent.body`
+  - English: Fajr is recited aloud, and so are the first two rak'ahs of Maghrib and Isha. Dhuhr and Asr are recited silently. "Aloud" applies to men and to the imam; for women, see the note below.
+  - Turkish: Sabah namazında ve akşam ile yatsının ilk iki rekâtında kıraat sesli yapılır. Öğle ve ikindide kıraat gizli yapılır. "Sesli" okuma erkekler ve imam içindir; kadınlar için aşağıdaki nota bak.
+- [ ] `learn.salah_notes.aloud_or_silent.title`
+  - English: Aloud or silent
+  - Turkish: Sesli ya da gizli
+- [ ] `learn.salah_notes.for_women.body`
+  - English: During menstruation and post-natal bleeding a woman does not pray, and she does not make up those prayers afterwards (Bukhari 321; Muslim 335). When non-mahram men are present, recite so that only you can hear. In prayer, cover the whole body except the face and hands.
+  - Turkish: Hayız ve nifas hâlinde kadın namaz kılmaz ve bu namazları sonradan kaza etmez (Buhari 321; Müslim 335). Namahrem erkekler bulunduğunda yalnızca kendin duyacak şekilde oku. Namazda yüz ve eller dışında bütün bedeni ört.
+- [ ] `learn.salah_notes.for_women.title`
+  - English: For women
+  - Turkish: Kadınlar için
+- [ ] `learn.salah_notes.madhhab_details.body`
+  - English: The four schools (Hanafi, Maliki, Shafi'i and Hanbali) differ on a few details, such as where the hands rest, raising the hands at ruku‘, how you sit, and reciting Al-Fatihah behind an imam. Follow one trusted teacher or madhhab; every one of these ways is valid.
+  - Turkish: Dört mezhep (Hanefi, Maliki, Şafii ve Hanbeli) ellerin nereye bağlanacağı, rükûda elleri kaldırmak, oturuş şekli ve imamın arkasında Fatiha okumak gibi birkaç ayrıntıda farklılık gösterir. Güvendiğin bir hocaya ya da bir mezhebe uy; bu yolların her biri geçerlidir.
+- [ ] `learn.salah_notes.madhhab_details.title`
+  - English: Small differences between madhhabs
+  - Turkish: Mezhepler arasındaki küçük farklar
+- [ ] `learn.salah_notes.three_four_rakahs.body`
+  - English: After the second rak'ah, sit and recite the tashahhud only up to "ʿabduhū wa rasūluh" (Shafi'is also add the salawat), then stand with Allahu akbar. In the 3rd and 4th rak'ahs recite only Al-Fatihah, silently, then finish with the full final sitting and the salam.
+  - Turkish: İkinci rekâttan sonra otur ve teşehhüdü yalnızca "abdühû ve rasûlüh" kısmına kadar oku (Şafiiler salavatı da ekler), sonra "Allahu ekber" diyerek kalk. 3. ve 4. rekâtlarda yalnızca Fatiha'yı gizlice oku, ardından tam son oturuş ve selamla namazı bitir.
+- [ ] `learn.salah_notes.three_four_rakahs.title`
+  - English: 3- and 4-rak‘ah prayers
+  - Turkish: 3 ve 4 rekâtlı namazlar
+- [ ] `learn.salah_steps.salah_fatihah.body`
+  - English: Recite Al-Fatihah, then say Āmīn. The Prophet ﷺ said there is no prayer without it (Bukhari 756).
+  - Turkish: Fatiha'yı oku, sonra "Âmin" de. Peygamber ﷺ Fatiha'sız namaz olmayacağını buyurdu (Buhari 756).
+- [ ] `learn.salah_steps.salah_fatihah.title`
+  - English: Recite Al-Fatihah
+  - Turkish: Fatiha'yı oku
+- [ ] `learn.salah_steps.salah_final_dua.body`
+  - English: Before the salam, seek refuge in Allah from these four things, then ask Him for whatever you need.
+  - Turkish: Selamdan önce şu dört şeyden Allah'a sığın, sonra O'ndan neye ihtiyacın varsa iste.
+- [ ] `learn.salah_steps.salah_final_dua.title`
+  - English: A du‘a before ending
+  - Turkish: Bitirmeden önce bir dua
+- [ ] `learn.salah_steps.salah_istiadhah.body`
+  - English: Quietly seek refuge in Allah before you recite.
+  - Turkish: Okumaya başlamadan önce sessizce Allah'a sığın.
+- [ ] `learn.salah_steps.salah_istiadhah.title`
+  - English: Seek refuge
+  - Turkish: Allah'a sığın
+- [ ] `learn.salah_steps.salah_opening_dua.body`
+  - English: Quietly say this short opening du‘a. It is sunnah, so your prayer is still valid while you are learning it.
+  - Turkish: Bu kısa açılış duasını sessizce oku. Sünnettir; bu yüzden onu öğrenirken de namazın geçerlidir.
+- [ ] `learn.salah_steps.salah_opening_dua.title`
+  - English: Opening du‘a
+  - Turkish: Açılış duası
+- [ ] `learn.salah_steps.salah_prepare.body`
+  - English: Make wudu, cover yourself properly and face the qiblah. Intend in your heart which prayer you are praying (for example, Fajr, 2 rak'ahs); nothing needs to be said aloud.
+  - Turkish: Abdest al, uygun şekilde örtün ve kıbleye yönel. Hangi namazı kıldığına kalbinle niyet et (örneğin sabah namazı, 2 rekât); bir şeyi yüksek sesle söylemene gerek yok.
+- [ ] `learn.salah_steps.salah_prepare.title`
+  - English: Get ready
+  - Turkish: Hazırlan
+- [ ] `learn.salah_steps.salah_rising.body`
+  - English: Rise saying the first phrase, then once you are standing straight say the second. In most schools, behind an imam say only the second phrase (Shafi'is say both).
+  - Turkish: İlk ifadeyi söyleyerek doğrul, dimdik ayakta durunca ikincisini söyle. Çoğu mezhebe göre imamın arkasında yalnızca ikinci ifade söylenir (Şafiiler ikisini de söyler).
+- [ ] `learn.salah_steps.salah_rising.title`
+  - English: Stand back up
+  - Turkish: Yeniden doğrul
+- [ ] `learn.salah_steps.salah_ruku.body`
+  - English: Say Allahu akbar and bow with your back straight and hands on your knees, and be still. Say this; once is valid, and it is commonly said three times.
+  - Turkish: "Allahu ekber" de ve sırtın düz, ellerin dizlerinde olacak şekilde eğil ve sükûnetle dur. Şunu söyle; bir kez söylemek geçerlidir, genellikle üç kez söylenir.
+- [ ] `learn.salah_steps.salah_ruku.title`
+  - English: Bow (ruku‘)
+  - Turkish: Rükû
+- [ ] `learn.salah_steps.salah_salawat.body`
+  - English: Still sitting, send blessings on the Prophet ﷺ.
+  - Turkish: Oturmaya devam ederek Peygamber'e ﷺ salavat getir.
+- [ ] `learn.salah_steps.salah_salawat.title`
+  - English: Send blessings on the Prophet ﷺ
+  - Turkish: Peygamber'e ﷺ salavat getir
+- [ ] `learn.salah_steps.salah_second_rakah.body`
+  - English: Stand up with Allahu akbar and repeat everything from Al-Fatihah to the second prostration. There is no opening du‘a this time.
+  - Turkish: "Allahu ekber" diyerek kalk ve Fatiha'dan ikinci secdeye kadar her şeyi tekrarla. Bu sefer açılış duası yoktur.
+- [ ] `learn.salah_steps.salah_second_rakah.title`
+  - English: Stand for the second rak‘ah
+  - Turkish: İkinci rekâta kalk
+- [ ] `learn.salah_steps.salah_second_sujud.body`
+  - English: Say Allahu akbar and make a second prostration, just like the first.
+  - Turkish: "Allahu ekber" de ve tıpkı ilki gibi ikinci secdeyi yap.
+- [ ] `learn.salah_steps.salah_second_sujud.title`
+  - English: Prostrate again
+  - Turkish: Yeniden secdeye var
+- [ ] `learn.salah_steps.salah_short_surah.body`
+  - English: In the first two rak'ahs, recite a short surah after Al-Fatihah. Al-Ikhlas is a good one to start with.
+  - Turkish: İlk iki rekâtta Fatiha'dan sonra kısa bir sure oku. Başlamak için İhlas suresi güzel bir seçimdir.
+- [ ] `learn.salah_steps.salah_short_surah.title`
+  - English: Recite a short surah
+  - Turkish: Kısa bir sure oku
+- [ ] `learn.salah_steps.salah_sitting.body`
+  - English: Say Allahu akbar, sit up and be still for a moment.
+  - Turkish: "Allahu ekber" de, doğrulup otur ve bir an sükûnetle dur.
+- [ ] `learn.salah_steps.salah_sitting.title`
+  - English: Sit between the prostrations
+  - Turkish: İki secde arasında otur
+- [ ] `learn.salah_steps.salah_sujud.body`
+  - English: Say Allahu akbar and prostrate on forehead and nose, palms, knees and toes, and be still. This is the closest you are to your Lord, so make du‘a here too (Muslim 482).
+  - Turkish: "Allahu ekber" de ve alnın ile burnun, avuçların, dizlerin ve ayak parmakların üzerinde secdeye var ve sükûnetle dur. Bu, Rabbine en yakın olduğun andır; burada da dua et (Müslim 482).
+- [ ] `learn.salah_steps.salah_sujud.title`
+  - English: Prostrate (sujud)
+  - Turkish: Secde
+- [ ] `learn.salah_steps.salah_takbir.body`
+  - English: Raise your hands to your shoulders or ears and say Allahu akbar, then rest your right hand over your left. Where the hands rest differs by school. Hanafi and Hanbali: below the navel (Hanafi women: on the chest); Shafi'i: below the chest, above the navel; many Malikis let the arms hang at the sides. All are valid practice.
+  - Turkish: Ellerini omuz ya da kulak hizasına kaldır ve "Allahu ekber" de, sonra sağ elini sol elinin üzerine koy. Ellerin nereye konacağı mezhebe göre değişir. Hanefi ve Hanbeli: göbeğin altı (Hanefi kadınlar: göğüs üzeri); Şafii: göğsün altı, göbeğin üstü; Malikilerin çoğu kollarını yanlara salar. Hepsi geçerli uygulamalardır.
+- [ ] `learn.salah_steps.salah_takbir.title`
+  - English: Begin with Allahu akbar
+  - Turkish: "Allahu ekber" ile başla
+- [ ] `learn.salah_steps.salah_tashahhud.body`
+  - English: After the second rak'ah's prostrations, sit and recite the tashahhud.
+  - Turkish: İkinci rekâtın secdelerinden sonra otur ve teşehhüdü oku.
+- [ ] `learn.salah_steps.salah_tashahhud.title`
+  - English: Sit for the tashahhud
+  - Turkish: Teşehhüd için otur
+- [ ] `learn.salah_steps.salah_taslim.body`
+  - English: Turn your head to the right and say the salam, then turn to the left and say it again. Your prayer is complete, alhamdulillah.
+  - Turkish: Başını sağa çevir ve selam ver, sonra sola çevir ve yine selam ver. Namazın tamamlandı, elhamdülillah.
+- [ ] `learn.salah_steps.salah_taslim.title`
+  - English: End with salam
+  - Turkish: Selamla bitir
+- [ ] `learn.wudu_steps.wudu_arms.body`
+  - English: Wash your right arm from the fingertips up to and including the elbow, three times, then the left.
+  - Turkish: Sağ kolunu parmak uçlarından dirsek dahil olmak üzere üç kez yıka, sonra sol kolunu.
+- [ ] `learn.wudu_steps.wudu_arms.title`
+  - English: Wash your arms
+  - Turkish: Kollarını yıka
+- [ ] `learn.wudu_steps.wudu_bismillah.body`
+  - English: Begin by mentioning the name of Allah.
+  - Turkish: Allah'ın adını anarak başla.
+- [ ] `learn.wudu_steps.wudu_bismillah.title`
+  - English: Say Bismillah
+  - Turkish: Bismillah de
+- [ ] `learn.wudu_steps.wudu_ears.body`
+  - English: Wipe the inside of your ears with your index fingers and the back with your thumbs, once.
+  - Turkish: Kulaklarının içini işaret parmaklarınla, arkasını başparmaklarınla bir kez meshet.
+- [ ] `learn.wudu_steps.wudu_ears.title`
+  - English: Wipe your ears
+  - Turkish: Kulaklarını meshet
+- [ ] `learn.wudu_steps.wudu_face.body`
+  - English: Wash your whole face, from the hairline to the chin and from ear to ear, three times.
+  - Turkish: Bütün yüzünü, saç bitiminden çeneye ve bir kulaktan diğerine kadar üç kez yıka.
+- [ ] `learn.wudu_steps.wudu_face.title`
+  - English: Wash your face
+  - Turkish: Yüzünü yıka
+- [ ] `learn.wudu_steps.wudu_feet.body`
+  - English: Wash your right foot up to and including the ankle, three times, getting between the toes, then the left.
+  - Turkish: Sağ ayağını topuk kemiği dahil olmak üzere, parmak aralarına da suyu ulaştırarak üç kez yıka, sonra sol ayağını.
+- [ ] `learn.wudu_steps.wudu_feet.title`
+  - English: Wash your feet
+  - Turkish: Ayaklarını yıka
+- [ ] `learn.wudu_steps.wudu_hands.body`
+  - English: Wash both hands up to the wrists, three times.
+  - Turkish: İki elini bileklere kadar üç kez yıka.
+- [ ] `learn.wudu_steps.wudu_hands.title`
+  - English: Wash your hands
+  - Turkish: Ellerini yıka
+- [ ] `learn.wudu_steps.wudu_head.body`
+  - English: Wipe your head once with wet hands, from front to back and back to the front again, as the Prophet ﷺ did. How much must be wiped differs by school. Maliki and Hanbali: the whole head; Hanafi: at least a quarter; Shafi'i: any part. Wiping the whole head covers all views.
+  - Turkish: Islak ellerinle, Peygamber'in ﷺ yaptığı gibi önden arkaya ve tekrar arkadan öne doğru başını bir kez meshet. Ne kadarının meshedilmesi gerektiği mezhebe göre değişir. Maliki ve Hanbeli: başın tamamı; Hanefi: en az dörtte biri; Şafii: herhangi bir kısmı. Başın tamamını meshetmek bütün görüşleri karşılar.
+- [ ] `learn.wudu_steps.wudu_head.title`
+  - English: Wipe your head
+  - Turkish: Başını meshet
+- [ ] `learn.wudu_steps.wudu_intention.body`
+  - English: Intend in your heart that you are purifying yourself for prayer; there is nothing to say out loud. Most scholars count this intention as required, while Hanafis count it as sunnah.
+  - Turkish: Namaz için temizlendiğine kalbinle niyet et; yüksek sesle söylenecek bir şey yoktur. Âlimlerin çoğu bu niyeti farz sayar, Hanefiler ise sünnet sayar.
+- [ ] `learn.wudu_steps.wudu_intention.title`
+  - English: Intend in your heart
+  - Turkish: Kalbinle niyet et
+- [ ] `learn.wudu_steps.wudu_mouth_nose.body`
+  - English: Rinse your mouth and sniff water into your nose and blow it out, three times. One handful of water for both is fine.
+  - Turkish: Ağzını çalkala, burnuna su çekip sümkür; bunu üç kez yap. İkisi için bir avuç su yeterlidir.
+- [ ] `learn.wudu_steps.wudu_mouth_nose.title`
+  - English: Mouth and nose
+  - Turkish: Ağız ve burun
+- [ ] `learn.wudu_steps.wudu_order.body`
+  - English: Do the steps in this order and without long breaks in between. Washing each part once or twice is valid too; three times is the full sunnah, so don't go beyond three.
+  - Turkish: Adımları bu sırayla ve aralarında uzun ara vermeden yap. Her uzvu bir ya da iki kez yıkamak da geçerlidir; üç kez tam sünnettir, bu yüzden üçü geçme.
+- [ ] `learn.wudu_steps.wudu_order.title`
+  - English: Keep the order, no long pauses
+  - Turkish: Sırayı koru, uzun ara verme
 
 ### UI legal and privacy text (tr)
 

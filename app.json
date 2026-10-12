@@ -16,13 +16,18 @@
         "backgroundColor": "#161A33"
       },
       "permissions": [
-        "NOTIFICATIONS"
+        "POST_NOTIFICATIONS"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_FINE_LOCATION"
       ],
       "allowBackup": true,
       "versionCode": 1
     },
     "ios": {
-      "supportsTablet": true,
+      "supportsTablet": false,
       "bundleIdentifier": "com.nafs.transformation",
       "buildNumber": "1",
       "infoPlist": {
@@ -33,12 +38,22 @@
           "id",
           "tr"
         ]
+      },
+      "config": {
+        "usesNonExemptEncryption": false
       }
     },
     "web": {
       "bundler": "metro",
       "output": "single",
       "favicon": "./assets/images/favicon.png"
+    },
+    "locales": {
+      "en": "./locales/native/en.json",
+      "ar": "./locales/native/ar.json",
+      "ur": "./locales/native/ur.json",
+      "id": "./locales/native/id.json",
+      "tr": "./locales/native/tr.json"
     },
     "plugins": [
       "expo-router",

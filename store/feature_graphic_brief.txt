@@ -1,0 +1,23 @@
+Google Play feature graphic brief (Awdah)
+
+Size: 1024 x 500 px, PNG or JPEG (24-bit, no transparency). Keep important content inside the central safe area; Play may crop the edges or overlay a play button in the middle on some surfaces.
+
+Background
+- Solid night ink, the app's night color layl #161A33 (the same as the splash and adaptive icon background). A very subtle lift towards the lower edge is fine (#20254A); no busy textures, photos or patterns.
+
+Composition
+- Left third: the Awdah dawn mark (the app icon artwork from assets/images/icon.png / adaptive-icon-foreground.png, without the rounded tile), vertically centred, about 260-300 px tall.
+- Right two thirds, left-aligned in LTR languages (right-aligned in Arabic and Urdu):
+  - Wordmark "Awdah" in Readex Pro, starlight #E9EBF5, about 96 px.
+  - Tagline below it in Readex Pro regular, star muted #A7ACC9 or dawn gold #E3B65A, about 40 px: "A gentle path back to your deen".
+- Nothing else: no screenshots, no phone frames, no badges, no "free" or ranking claims, no extra text.
+
+Localized versions (optional; Play lets you upload one feature graphic per listing language)
+Use the localized tagline from the store listing subtitle (store/<lang>/ios_subtitle.txt); keep the Latin wordmark "Awdah" for en, id and tr, and use the Arabic-script name for ar and ur:
+- en: Awdah / A gentle path back to your deen
+- ar: عودة / رفيقك اللطيف للرجوع إلى الله (Amiri or Readex Pro Arabic; mirror the layout: mark on the right third)
+- ur: عودہ / اللہ کی طرف واپسی کا نرم راستہ (Noto Nastaliq Urdu; mirror the layout: mark on the right third)
+- id: Awdah / Panduan Pulang ke Jalan Allah
+- tr: Awdah / Allah'a Dönüşte Nazik Rehber
+
+Check before upload: text is readable at small sizes (about 320 px wide), contrast stays high, and the file is exactly 1024 x 500.
