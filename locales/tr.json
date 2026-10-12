@@ -1,495 +1,495 @@
 {
   "app": {
     "name": "Awdah",
-    "tagline": "Your gentle path back to the deen"
+    "tagline": "Dine dönüşte nazik yol arkadaşın"
   },
   "common": {
-    "continue": "Continue",
-    "back": "Back",
-    "cancel": "Cancel",
-    "save": "Save",
-    "done": "Done",
-    "retry": "Try again",
-    "home": "Go to Today",
-    "close": "Close"
+    "continue": "Devam",
+    "back": "Geri",
+    "cancel": "İptal",
+    "save": "Kaydet",
+    "done": "Tamam",
+    "retry": "Tekrar dene",
+    "home": "Bugün'e git",
+    "close": "Kapat"
   },
   "errors": {
-    "generic": "Something went wrong. Please try again.",
-    "storage": "We couldn't save that change on your device.",
-    "notFound": "This page could not be found.",
-    "startFresh": "Start fresh",
-    "startFreshHint": "Your saved data could not be opened. Starting fresh clears it and begins again.",
-    "startFreshConfirm": "Tap again to clear your saved data",
-    "startFreshConfirmHint": "This cannot be undone. It cancels by itself in a few seconds."
+    "generic": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+    "storage": "Bu değişiklik cihazına kaydedilemedi.",
+    "notFound": "Bu sayfa bulunamadı.",
+    "startFresh": "Baştan başla",
+    "startFreshHint": "Kayıtlı verilerin açılamadı. Baştan başlamak onları siler ve her şeye yeniden başlar.",
+    "startFreshConfirm": "Kayıtlı verilerini silmek için tekrar dokun",
+    "startFreshConfirmHint": "Bu işlem geri alınamaz. Birkaç saniye içinde kendiliğinden iptal olur."
   },
   "tabs": {
-    "today": "Today",
-    "worship": "Worship",
-    "learn": "Learn",
-    "journey": "Journey",
-    "me": "Me"
+    "today": "Bugün",
+    "worship": "İbadet",
+    "learn": "Öğren",
+    "journey": "Yolculuk",
+    "me": "Ben"
   },
   "milestones": {
-    "unlocked": "Milestone reached: {{title}}",
-    "unlockedMany": "{{n}} milestones reached"
+    "unlocked": "Kilometre taşına ulaşıldı: {{title}}",
+    "unlockedMany": "{{n}} kilometre taşına ulaşıldı"
   },
   "prayers": {
-    "fajr": "Fajr",
-    "dhuhr": "Dhuhr",
-    "asr": "Asr",
-    "maghrib": "Maghrib",
-    "isha": "Isha",
-    "sunrise": "Sunrise"
+    "fajr": "Sabah",
+    "dhuhr": "Öğle",
+    "asr": "İkindi",
+    "maghrib": "Akşam",
+    "isha": "Yatsı",
+    "sunrise": "Güneş"
   },
   "category": {
-    "prayer": "Prayer",
-    "quran": "Quran",
-    "dhikr": "Dhikr",
-    "sunnah": "Sunnah",
-    "character": "Character",
-    "reflection": "Reflection"
+    "prayer": "Namaz",
+    "quran": "Kur'an",
+    "dhikr": "Zikir",
+    "sunnah": "Sünnet",
+    "character": "Ahlak",
+    "reflection": "Tefekkür"
   },
   "mood": {
-    "grateful": "Grateful",
-    "peaceful": "Peaceful",
-    "struggling": "Struggling",
-    "motivated": "Motivated",
-    "reflective": "Reflective"
+    "grateful": "Şükür dolu",
+    "peaceful": "Huzurlu",
+    "struggling": "Zorlanıyor",
+    "motivated": "İstekli",
+    "reflective": "Düşünceli"
   },
   "hijri": {
     "months": {
-      "1": "Muharram",
-      "2": "Safar",
-      "3": "Rabi al-Awwal",
-      "4": "Rabi al-Thani",
-      "5": "Jumada al-Ula",
-      "6": "Jumada al-Akhirah",
-      "7": "Rajab",
-      "8": "Sha'ban",
-      "9": "Ramadan",
-      "10": "Shawwal",
-      "11": "Dhu al-Qi'dah",
-      "12": "Dhu al-Hijjah"
+      "1": "Muharrem",
+      "2": "Safer",
+      "3": "Rebiülevvel",
+      "4": "Rebiülahir",
+      "5": "Cemaziyelevvel",
+      "6": "Cemaziyelahir",
+      "7": "Recep",
+      "8": "Şaban",
+      "9": "Ramazan",
+      "10": "Şevval",
+      "11": "Zilkade",
+      "12": "Zilhicce"
     }
   },
   "share": {
-    "footer": "Shared from Awdah"
+    "footer": "Awdah'tan paylaşıldı"
   },
   "today": {
-    "greeting": "Assalamu alaikum, {{name}}",
-    "greetingNoName": "Assalamu alaikum",
+    "greeting": "Esselamü aleyküm, {{name}}",
+    "greetingNoName": "Esselamü aleyküm",
     "hijriDate": "{{day}} {{month}} {{year}}",
-    "dayN": "Day {{day}} of 30",
-    "setPrayerTimes": "Set your location for prayer times",
-    "welcomeBack": "Welcome back. Pick up right where you are — no catching up needed.",
-    "learnSalah": "Learn how to pray, step by step",
-    "learnSalahHint": "A gentle guide, at your own pace",
-    "intention": "Today's intention",
-    "steps": "Today's steps",
-    "a11yDone": "done",
-    "tasbihLocked": "This one completed itself from your tasbih count today.",
-    "share": "Share",
-    "reflect": "Reflect",
-    "reflectPlaceholder": "Write a few honest words. Only you will see them.",
-    "saved": "Saved",
-    "moodPrompt": "How is your heart today?",
-    "contentComing": "Today's guidance is on its way. Keep your prayers and dhikr going in the meantime.",
+    "dayN": "30 günün {{day}}. günü",
+    "setPrayerTimes": "Namaz vakitleri için konumunu ayarla",
+    "welcomeBack": "Tekrar hoş geldin. Kaldığın yerden devam et — telafi etmen gereken bir şey yok.",
+    "learnSalah": "Namaz kılmayı adım adım öğren",
+    "learnSalahHint": "Kendi hızında, nazik bir rehber",
+    "intention": "Bugünün niyeti",
+    "steps": "Bugünün adımları",
+    "a11yDone": "tamamlandı",
+    "tasbihLocked": "Bu adım, bugünkü tesbih sayından kendiliğinden tamamlandı.",
+    "share": "Paylaş",
+    "reflect": "Düşün",
+    "reflectPlaceholder": "Birkaç samimi kelime yaz. Bunları yalnızca sen göreceksin.",
+    "saved": "Kaydedildi",
+    "moodPrompt": "Bugün kalbin nasıl?",
+    "contentComing": "Bugünün rehberliği yolda. Bu arada namazlarına ve zikrine devam et.",
     "dateLine": "{{hijri}}, {{gregorian}}",
-    "nextPrayer": "Next: {{prayer}} at {{time}}",
-    "nextIn": "Next: {{prayer}} at {{time}}, in {{h}} h {{m}} min",
-    "nextInMin": "Next: {{prayer}} at {{time}}, in {{m}} min",
-    "nextInHours": "Next: {{prayer}} at {{time}}, in {{h}} h"
+    "nextPrayer": "Sıradaki: {{prayer}}, saat {{time}}",
+    "nextIn": "Sıradaki: {{prayer}}, saat {{time}}, {{h}} sa {{m}} dk sonra",
+    "nextInMin": "Sıradaki: {{prayer}}, saat {{time}}, {{m}} dk sonra",
+    "nextInHours": "Sıradaki: {{prayer}}, saat {{time}}, {{h}} sa sonra"
   },
   "istiqamah": {
-    "title": "Istiqamah — staying steady",
+    "title": "İstikamet — sebat etmek",
     "titleArabic": "الاستقامة",
-    "subtitle": "Small, steady deeds, every day",
-    "steps": "Today's steps",
-    "morning": "Morning adhkar",
-    "evening": "Evening adhkar",
-    "reflection": "What helped you stay steady today?",
-    "newCycleTitle": "Walk the 30 days again",
-    "newCycleHint": "Begin a fresh cycle with deeper steps, whenever you feel ready.",
-    "newCycle": "Begin a new 30 days",
-    "confirm": "Tap again to begin",
-    "doneToday": "Done today"
+    "subtitle": "Her gün küçük ama devamlı ameller",
+    "steps": "Bugünün adımları",
+    "morning": "Sabah zikirleri",
+    "evening": "Akşam zikirleri",
+    "reflection": "Bugün sebat etmene ne yardımcı oldu?",
+    "newCycleTitle": "30 günü yeniden yürü",
+    "newCycleHint": "Kendini hazır hissettiğinde daha derin adımlarla yeni bir döngüye başla.",
+    "newCycle": "Yeni bir 30 güne başla",
+    "confirm": "Başlamak için tekrar dokun",
+    "doneToday": "Bugün tamamlandı"
   },
   "day": {
-    "title": "Day {{n}}",
-    "generic": "Day",
-    "locked": "Opens on day {{n}}"
+    "title": "Gün {{n}}",
+    "generic": "Gün",
+    "locked": "{{n}}. günde açılır"
   },
   "me": {
-    "greeting": "Assalamu alaikum, {{name}}",
-    "greetingNoName": "Assalamu alaikum",
-    "editProfile": "Edit profile",
-    "daysShownUp": "days shown up",
-    "streak": "day streak",
-    "prayersKept": "prayers kept, last 30 days",
-    "heatmapTitle": "Your prayers",
-    "heatmapSubtitle": "The last five weeks, one square a day",
-    "heatmapCell": "{{date}}: {{count}} of 5 prayers",
-    "milestones": "Milestones",
-    "unlocked": "reached",
-    "locked": "not yet reached",
-    "reachedOn": "Reached on {{date}}",
-    "notYet": "Not reached yet. It will come in its own time.",
-    "milestoneUnknown": "This milestone could not be found.",
-    "settings": "Settings",
-    "about": "About",
-    "help": "Help",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "duas": "Daily duas"
+    "greeting": "Esselamü aleyküm, {{name}}",
+    "greetingNoName": "Esselamü aleyküm",
+    "editProfile": "Profili düzenle",
+    "daysShownUp": "gün katıldın",
+    "streak": "günlük seri",
+    "prayersKept": "kılınan namaz, son 30 gün",
+    "heatmapTitle": "Namazların",
+    "heatmapSubtitle": "Son beş hafta, her gün için bir kare",
+    "heatmapCell": "{{date}}: 5 namazdan {{count}}",
+    "milestones": "Kilometre taşları",
+    "unlocked": "ulaşıldı",
+    "locked": "henüz ulaşılmadı",
+    "reachedOn": "{{date}} tarihinde ulaşıldı",
+    "notYet": "Henüz ulaşılmadı. Vakti geldiğinde gelecek.",
+    "milestoneUnknown": "Bu kilometre taşı bulunamadı.",
+    "settings": "Ayarlar",
+    "about": "Hakkında",
+    "help": "Yardım",
+    "privacy": "Gizlilik",
+    "terms": "Koşullar",
+    "duas": "Günlük dualar"
   },
   "duas": {
-    "intro": "Short supplications from the Quran and Sunnah. Tap one to read it."
+    "intro": "Kur'an ve Sünnet'ten kısa dualar. Okumak için birine dokun."
   },
   "journey": {
-    "title": "Your path",
-    "cycle": "Round {{n}}",
-    "weekProgress": "{{done}} of {{total}} days complete",
-    "dayN": "Day {{n}}",
+    "title": "Yolun",
+    "cycle": "Tur {{n}}",
+    "weekProgress": "{{total}} günden {{done}} gün tamamlandı",
+    "dayN": "Gün {{n}}",
     "status": {
-      "complete": "complete",
-      "partial": "started",
-      "open": "not started",
-      "today": "today",
-      "locked": "not yet open"
+      "complete": "tamamlandı",
+      "partial": "başlandı",
+      "open": "başlanmadı",
+      "today": "bugün",
+      "locked": "henüz açılmadı"
     }
   },
   "onboarding": {
-    "begin": "Begin",
-    "start": "Start my journey",
-    "skip": "Skip",
-    "progress": "Step {{current}} of {{total}}",
+    "begin": "Başla",
+    "start": "Yolculuğuma başla",
+    "skip": "Atla",
+    "progress": "Adım {{current}} / {{total}}",
     "welcome": {
       "arabic": "عودة",
-      "arabicLabel": "Awdah, meaning return",
-      "title": "A gentle path back to your deen",
-      "body": "Free and private. No account, no ads, no tracking. Your data stays with you."
+      "arabicLabel": "Awdah, dönüş anlamına gelir",
+      "title": "Dinine dönüşte nazik bir yol",
+      "body": "Ücretsiz ve gizli. Hesap yok, reklam yok, takip yok. Verilerin sende kalır."
     },
     "language": {
-      "title": "Choose your language",
-      "subtitle": "You can change this any time in Settings. Right-to-left languages take full effect after restarting the app."
+      "title": "Dilini seç",
+      "subtitle": "Bunu istediğin zaman Ayarlar'dan değiştirebilirsin. Sağdan sola yazılan diller, uygulama yeniden başlatıldıktan sonra tam olarak etkin olur."
     },
     "name": {
-      "title": "What should we call you?",
-      "subtitle": "This is optional. Your name stays on this phone."
+      "title": "Sana nasıl hitap edelim?",
+      "subtitle": "Bu isteğe bağlıdır. Adın bu telefonda kalır."
     },
     "habit": {
-      "title": "How is your prayer these days?",
-      "subtitle": "There is no wrong answer. This only helps us start gently."
+      "title": "Bu aralar namazın nasıl?",
+      "subtitle": "Yanlış cevap yok. Bu yalnızca nazikçe başlamamıza yardımcı olur."
     },
     "knowledge": {
-      "title": "How familiar are you with the basics?",
-      "subtitle": "We will match the pace to you."
+      "title": "Temel bilgilere ne kadar aşinasın?",
+      "subtitle": "Hızı sana göre ayarlayacağız."
     },
     "focus": {
-      "title": "What would you like to focus on?",
-      "subtitle": "Choose up to three."
+      "title": "Neye odaklanmak istersin?",
+      "subtitle": "En fazla üç tane seç."
     },
     "time": {
-      "title": "How much time can you give each day?",
-      "subtitle": "A few minutes is enough to start."
+      "title": "Her gün ne kadar zaman ayırabilirsin?",
+      "subtitle": "Başlamak için birkaç dakika yeterli."
     },
     "intention": {
-      "title": "Set your intention",
-      "subtitle": "Begin with a sincere intention. Allah knows your heart.",
-      "summary": "Your prayer: {{habit}}. Your time: {{minutes}}.",
+      "title": "Niyetini belirle",
+      "subtitle": "Samimi bir niyetle başla. Allah kalbindekini bilir.",
+      "summary": "Namazın: {{habit}}. Zamanın: {{minutes}}.",
       "hadithArabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
-      "hadithMeaning": "Actions are judged by intentions, and each person will have what they intended.",
-      "hadithSource": "Sahih al-Bukhari 1"
+      "hadithMeaning": "Ameller niyetlere göredir ve herkese niyet ettiği şey vardır.",
+      "hadithSource": "Sahih-i Buhârî 1"
     },
-    "later": "Later",
+    "later": "Sonra",
     "prayerTimes": {
-      "title": "Prayer times",
-      "subtitle": "Optional. Your location is used only on this phone to calculate prayer times. Awdah never sends it anywhere."
+      "title": "Namaz vakitleri",
+      "subtitle": "İsteğe bağlı. Konumun yalnızca bu telefonda namaz vakitlerini hesaplamak için kullanılır. Awdah onu hiçbir yere göndermez."
     }
   },
   "profile": {
-    "name": "Name",
-    "nameOptional": "Optional",
-    "namePlaceholder": "Your name",
-    "saved": "Profile saved",
-    "needFocus": "Choose at least one focus area.",
+    "name": "Ad",
+    "nameOptional": "İsteğe bağlı",
+    "namePlaceholder": "Adın",
+    "saved": "Profil kaydedildi",
+    "needFocus": "En az bir odak alanı seç.",
     "habit": {
-      "none": "Not yet",
-      "some": "Sometimes",
-      "most": "Most days",
-      "all": "All five, alhamdulillah"
+      "none": "Henüz değil",
+      "some": "Bazen",
+      "most": "Çoğu gün",
+      "all": "Beş vaktin hepsi, elhamdülillah"
     },
     "knowledge": {
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced"
+      "beginner": "Başlangıç",
+      "intermediate": "Orta",
+      "advanced": "İleri"
     },
     "knowledgeDesc": {
-      "beginner": "I am learning the basics",
-      "intermediate": "I practise regularly and want to grow",
-      "advanced": "I have a solid foundation"
+      "beginner": "Temel bilgileri öğreniyorum",
+      "intermediate": "Düzenli ibadet ediyorum ve gelişmek istiyorum",
+      "advanced": "Sağlam bir temelim var"
     },
     "area": {
-      "prayer": "Prayer",
-      "quran": "Quran",
-      "dhikr": "Dhikr",
-      "fasting": "Fasting",
-      "character": "Character",
-      "family": "Family",
-      "knowledge": "Knowledge",
-      "charity": "Charity"
+      "prayer": "Namaz",
+      "quran": "Kur'an",
+      "dhikr": "Zikir",
+      "fasting": "Oruç",
+      "character": "Ahlak",
+      "family": "Aile",
+      "knowledge": "İlim",
+      "charity": "Sadaka"
     },
-    "minutes": "{{count}} min"
+    "minutes": "{{count}} dk"
   },
   "reminders": {
-    "title": "Reminders",
-    "note": "Gentle nudges, scheduled on your phone only. Off unless you turn them on. Open Awdah at least every 12 days to keep prayer reminders scheduled.",
-    "daily": "Daily reminder",
-    "dailyTime": "Reminder time",
-    "hour": "Hour",
-    "minute": "Minute",
-    "prayers": "Prayer time alerts",
-    "needsLocation": "Set your location above to get prayer time alerts.",
-    "denied": "Notifications are turned off for Awdah. You can allow them in your phone's system settings.",
-    "unavailable": "Reminders are not available on this device.",
-    "channel": "Reminders",
-    "revoked": "Notifications are turned off in your phone settings, so reminders are paused.",
-    "hourLabel": "Hour {{h}}",
-    "minuteLabel": "Minute {{m}}",
-    "dailyTitle": "A quiet moment for today",
-    "dailyBody": "Your plan is waiting whenever you are ready.",
-    "prayerTitle": "Time for {{prayer}}",
-    "prayerBody": "It is time for {{prayer}}. May it bring you peace."
+    "title": "Hatırlatıcılar",
+    "note": "Nazik hatırlatmalar, yalnızca telefonunda planlanır. Sen açmadıkça kapalıdır. Namaz hatırlatıcılarının planlı kalması için Awdah'ı en az 12 günde bir aç.",
+    "daily": "Günlük hatırlatıcı",
+    "dailyTime": "Hatırlatma saati",
+    "hour": "Saat",
+    "minute": "Dakika",
+    "prayers": "Namaz vakti bildirimleri",
+    "needsLocation": "Namaz vakti bildirimleri almak için yukarıdan konumunu ayarla.",
+    "denied": "Awdah için bildirimler kapalı. Bunlara telefonunun sistem ayarlarından izin verebilirsin.",
+    "unavailable": "Hatırlatıcılar bu cihazda kullanılamıyor.",
+    "channel": "Hatırlatıcılar",
+    "revoked": "Bildirimler telefon ayarlarında kapalı, bu yüzden hatırlatıcılar duraklatıldı.",
+    "hourLabel": "Saat {{h}}",
+    "minuteLabel": "Dakika {{m}}",
+    "dailyTitle": "Bugün için sakin bir an",
+    "dailyBody": "Planın, hazır olduğunda seni bekliyor.",
+    "prayerTitle": "{{prayer}} vakti",
+    "prayerBody": "{{prayer}} vakti girdi. Sana huzur getirsin."
   },
   "settings": {
-    "language": "Language",
-    "languageNote": "Right-to-left languages take full effect after restarting the app.",
-    "theme": "Theme",
+    "language": "Dil",
+    "languageNote": "Sağdan sola yazılan diller, uygulama yeniden başlatıldıktan sonra tam olarak etkin olur.",
+    "theme": "Tema",
     "themes": {
-      "system": "System",
-      "light": "Light",
-      "dark": "Dark"
+      "system": "Sistem",
+      "light": "Açık",
+      "dark": "Koyu"
     },
-    "data": "Your data",
-    "reset": "Erase all data",
-    "resetHint": "Removes your profile and progress from this phone.",
-    "resetConfirm": "Tap again to erase everything",
-    "resetConfirmHint": "This cannot be undone. It cancels by itself in a few seconds.",
-    "resetA11yHint": "Double tap twice within four seconds to erase everything",
-    "prayerTimes": "Prayer times",
-    "prayerTimesNote": "Your location is used only on this phone to calculate prayer times. Awdah never sends it anywhere.",
-    "location": "Location",
-    "method": "Calculation method",
-    "methodAuto": "Auto ({{method}})",
-    "asr": "Asr method",
-    "asrAuto": "Auto ({{asr}})",
-    "asrShafi": "Standard (Shafi'i, Maliki, Hanbali)",
-    "asrHanafi": "Hanafi"
+    "data": "Verilerin",
+    "reset": "Tüm verileri sil",
+    "resetHint": "Profilini ve ilerlemeni bu telefondan kaldırır.",
+    "resetConfirm": "Her şeyi silmek için tekrar dokun",
+    "resetConfirmHint": "Bu işlem geri alınamaz. Birkaç saniye içinde kendiliğinden iptal olur.",
+    "resetA11yHint": "Her şeyi silmek için dört saniye içinde iki kez çift dokun",
+    "prayerTimes": "Namaz vakitleri",
+    "prayerTimesNote": "Konumun yalnızca bu telefonda namaz vakitlerini hesaplamak için kullanılır. Awdah onu hiçbir yere göndermez.",
+    "location": "Konum",
+    "method": "Hesaplama yöntemi",
+    "methodAuto": "Otomatik ({{method}})",
+    "asr": "İkindi yöntemi",
+    "asrAuto": "Otomatik ({{asr}})",
+    "asrShafi": "Standart (Şâfiî, Mâlikî, Hanbelî)",
+    "asrHanafi": "Hanefî"
   },
   "about": {
-    "intro": "Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.",
-    "whatTitle": "What Awdah is",
-    "whatBody": "A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.",
-    "freeTitle": "Why it is free",
-    "freeBody": "Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.",
-    "sourcesTitle": "About the content",
-    "sourcesBody": "Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.",
-    "version": "Version {{version}}"
+    "intro": "Awdah dönüş demektir. Namazına ve dinine, her gün bir adımla geri dönmen için sessiz bir yol arkadaşıdır.",
+    "whatTitle": "Awdah nedir",
+    "whatBody": "Küçük günlük adımlar, namaz takibi, zikir ve kısa derslerden oluşan 30 günlük bir yol; ardından devam etmen için düzenli bir rutin.",
+    "freeTitle": "Neden ücretsiz",
+    "freeBody": "Awdah, Allah'ın rızasını gözeterek sadaka-i câriye, yani sevabı süren bir hayır olarak yapıldı. Reklam yok, satın alma yok ve veri toplama yok.",
+    "sourcesTitle": "İçerik hakkında",
+    "sourcesBody": "Hadisler ve dualar kaynaklarıyla birlikte verilir. Bir hata fark edersen, düzeltilebilmesi için lütfen bize bildir.",
+    "version": "Sürüm {{version}}"
   },
   "backup": {
-    "title": "Backup",
-    "note": "A backup is a file you keep. Awdah never uploads it.",
-    "save": "Save a backup file",
-    "saveHint": "Choose where to keep it.",
-    "restore": "Restore from a file",
-    "restoreHint": "Pick a backup you saved earlier.",
-    "restoreConfirm": "Tap again to restore",
-    "restoreConfirmHint": "This replaces everything on this phone. It cancels by itself in a few seconds.",
-    "restored": "Backup restored",
-    "shareTitle": "Awdah backup",
-    "unavailable": "Saving a backup file is not available here.",
-    "saveFailed": "The backup could not be saved. Please try again.",
+    "title": "Yedek",
+    "note": "Yedek, senin sakladığın bir dosyadır. Awdah onu asla yüklemez.",
+    "save": "Yedek dosyası kaydet",
+    "saveHint": "Nerede saklayacağını seç.",
+    "restore": "Dosyadan geri yükle",
+    "restoreHint": "Daha önce kaydettiğin bir yedeği seç.",
+    "restoreConfirm": "Geri yüklemek için tekrar dokun",
+    "restoreConfirmHint": "Bu, bu telefondaki her şeyin yerine geçer. Birkaç saniye içinde kendiliğinden iptal olur.",
+    "restored": "Yedek geri yüklendi",
+    "shareTitle": "Awdah yedeği",
+    "unavailable": "Yedek dosyası kaydetme burada kullanılamıyor.",
+    "saveFailed": "Yedek kaydedilemedi. Lütfen tekrar dene.",
     "error": {
-      "read": "That file could not be read.",
-      "tooLarge": "That file is too large to be an Awdah backup.",
-      "invalid_json": "That file is not a valid backup.",
-      "not_awdah": "That file is not an Awdah backup.",
-      "unsupported_version": "That backup is from a newer version of Awdah. Please update the app.",
-      "invalid_shape": "That backup looks damaged and could not be restored."
+      "read": "Bu dosya okunamadı.",
+      "tooLarge": "Bu dosya bir Awdah yedeği olamayacak kadar büyük.",
+      "invalid_json": "Bu dosya geçerli bir yedek değil.",
+      "not_awdah": "Bu dosya bir Awdah yedeği değil.",
+      "unsupported_version": "Bu yedek, Awdah'ın daha yeni bir sürümüne ait. Lütfen uygulamayı güncelle.",
+      "invalid_shape": "Bu yedek hasarlı görünüyor ve geri yüklenemedi."
     },
-    "restoreUnavailable": "Restoring a backup file is not available here."
+    "restoreUnavailable": "Yedek dosyasından geri yükleme burada kullanılamıyor."
   },
   "privacy": {
-    "intro": "Awdah does not collect any data about you.",
+    "intro": "Awdah senin hakkında hiçbir veri toplamaz.",
     "storage": {
-      "title": "Stored on your device",
-      "body": "Everything you enter, such as your profile, prayers, tasks and journal, is stored on this phone. If your phone's own system backup (Google or iCloud) is turned on, it may include Awdah's data. That backup belongs to you; Awdah never sends anything to us."
+      "title": "Cihazında saklanır",
+      "body": "Girdiğin her şey; profilin, namazların, görevlerin ve günlüğün gibi, bu telefonda saklanır. Telefonunun kendi sistem yedeklemesi (Google veya iCloud) açıksa, Awdah'ın verilerini de içerebilir. O yedek sana aittir; Awdah bize hiçbir şey göndermez."
     },
     "accounts": {
-      "title": "No accounts, analytics or ads",
-      "body": "There are no accounts, no analytics, no advertising and no trackers. Awdah never sends anything to us or to anyone else."
+      "title": "Hesap, analiz veya reklam yok",
+      "body": "Hesap yok, analiz yok, reklam yok ve takip aracı yok. Awdah ne bize ne de başka birine hiçbir şey göndermez."
     },
     "location": {
-      "title": "Location",
-      "body": "If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere."
+      "title": "Konum",
+      "body": "Konumunu ayarlamayı seçersen, yalnızca telefonunda namaz vakitlerini hesaplamak için kullanılır. Awdah onu hiçbir yere göndermez."
     },
     "backups": {
-      "title": "Backups",
-      "body": "Backups are files you create and keep. You decide where they go; Awdah never uploads them."
+      "title": "Yedekler",
+      "body": "Yedekler, senin oluşturup sakladığın dosyalardır. Nereye gideceklerine sen karar verirsin; Awdah onları asla yüklemez."
     },
     "deletion": {
-      "title": "Deleting your data",
-      "body": "Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made may still hold a copy."
+      "title": "Verilerini silmek",
+      "body": "Ayarlar'daki Tüm verileri sil seçeneği, Awdah'ın bu telefonda tuttuğu her şeyi kaldırır. Uygulamayı kaldırmak da verileri siler; ancak yaptığın bir sistem yedeği hâlâ bir kopyasını barındırabilir."
     },
-    "updated": "Last updated {{date}}"
+    "updated": "Son güncelleme: {{date}}"
   },
   "terms": {
-    "intro": "These are the plain terms for using Awdah.",
+    "intro": "Awdah'ı kullanmanın sade koşulları bunlardır.",
     "guidance": {
-      "title": "Personal guidance",
-      "body": "Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings."
+      "title": "Kişisel rehberlik",
+      "body": "Awdah kişisel manevi rehberlik ve hatırlatmalar içindir. Dinî hükümler için bir kaynak değildir."
     },
     "scholars": {
-      "title": "Not a fatwa",
-      "body": "Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar."
+      "title": "Fetva değildir",
+      "body": "Uygulamadaki hiçbir şey fetva değildir. Kendi durumunla ilgili sorular için lütfen ehil bir âlime danış."
     },
     "asIs": {
-      "title": "As is",
-      "body": "The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time."
+      "title": "Olduğu gibi",
+      "body": "Uygulama ücretsiz olarak, olduğu gibi ve hiçbir garanti olmaksızın sunulur. Doğru olması için elimizden geleni yaparız ve içeriği zamanla düzeltebilir veya değiştirebiliriz."
     },
     "yourData": {
-      "title": "Your data",
-      "body": "Your data is stored on your phone and is yours. See the Privacy page for details."
+      "title": "Verilerin",
+      "body": "Verilerin telefonunda saklanır ve sana aittir. Ayrıntılar için Gizlilik sayfasına bak."
     },
-    "updated": "Last updated {{date}}"
+    "updated": "Son güncelleme: {{date}}"
   },
   "help": {
-    "intro": "Answers to common questions.",
+    "intro": "Sık sorulan soruların cevapları.",
     "days": {
-      "q": "How do the days advance?",
-      "a": "Your 30-day path follows the calendar. Day 1 is the day you began, and each new date brings the next day automatically."
+      "q": "Günler nasıl ilerler?",
+      "a": "30 günlük yolun takvimi takip eder. 1. gün başladığın gündür ve her yeni tarih bir sonraki günü kendiliğinden getirir."
     },
     "missed": {
-      "q": "What if I miss a day?",
-      "a": "Nothing is lost and nothing is punished. The path keeps moving with the calendar, and you can open any past day from Journey to catch up."
+      "q": "Bir günü kaçırırsam ne olur?",
+      "a": "Hiçbir şey kaybolmaz ve hiçbir ceza yoktur. Yol takvimle birlikte ilerlemeye devam eder ve telafi etmek için geçmiş herhangi bir günü Yolculuk'tan açabilirsin."
     },
     "past": {
-      "q": "Can I complete past or future days?",
-      "a": "You can edit past days from Journey. Future days stay locked until their date arrives."
+      "q": "Geçmiş veya gelecek günleri tamamlayabilir miyim?",
+      "a": "Geçmiş günleri Yolculuk'tan düzenleyebilirsin. Gelecek günler, tarihleri gelene kadar kilitli kalır."
     },
     "prayers": {
-      "q": "How do I mark my prayers?",
-      "a": "On the Today screen, tap a prayer on the horizon to mark it as prayed. Tap again to undo."
+      "q": "Namazlarımı nasıl işaretlerim?",
+      "a": "Bugün ekranında, ufuktaki bir namaza dokunarak onu kılındı olarak işaretle. Geri almak için tekrar dokun."
     },
     "tasbih": {
-      "q": "How does the tasbih work?",
-      "a": "Count your dhikr in the Worship tab. When a day's step asks for a dhikr and you reach its target, that step is completed for you."
+      "q": "Tesbih nasıl çalışır?",
+      "a": "Zikrini İbadet sekmesinde say. Bir günün adımı bir zikir istediğinde ve hedefine ulaştığında, o adım senin için tamamlanır."
     },
     "language": {
-      "q": "How do I change the language?",
-      "a": "Open Me, then Settings, and choose your language. Right-to-left languages take full effect after restarting the app."
+      "q": "Dili nasıl değiştiririm?",
+      "a": "Ben'i, ardından Ayarlar'ı aç ve dilini seç. Sağdan sola yazılan diller, uygulama yeniden başlatıldıktan sonra tam olarak etkin olur."
     },
     "backup": {
-      "q": "How do I back up or move my data?",
-      "a": "Open Me, then Settings, and tap Save a backup file. Choose where to keep it, such as Files or an email to yourself. To restore, tap Restore from a file and pick that backup. Restoring replaces everything on this phone, so it asks you to tap twice."
+      "q": "Verilerimi nasıl yedeklerim veya taşırım?",
+      "a": "Ben'i, ardından Ayarlar'ı aç ve Yedek dosyası kaydet'e dokun. Nerede saklayacağını seç; örneğin Dosyalar ya da kendine göndereceğin bir e-posta. Geri yüklemek için Dosyadan geri yükle'ye dokun ve o yedeği seç. Geri yükleme bu telefondaki her şeyin yerine geçtiği için iki kez dokunmanı ister."
     },
     "reset": {
-      "q": "How do I erase my data?",
-      "a": "Open Me, then Settings, and tap Erase all data twice. This removes your profile and progress. Your language and theme are kept."
+      "q": "Verilerimi nasıl silerim?",
+      "a": "Ben'i, ardından Ayarlar'ı aç ve Tüm verileri sil'e iki kez dokun. Bu, profilini ve ilerlemeni kaldırır. Dil ve tema tercihlerin korunur."
     }
   },
   "learn": {
-    "expandHint": "Show details",
-    "collapseHint": "Hide details",
+    "expandHint": "Ayrıntıları göster",
+    "collapseHint": "Ayrıntıları gizle",
     "wudu": {
-      "title": "Wudu, step by step",
-      "subtitle": "Tap a step to see more",
-      "duaAfter": "After wudu"
+      "title": "Adım adım abdest",
+      "subtitle": "Daha fazlasını görmek için bir adıma dokun",
+      "duaAfter": "Abdestten sonra"
     },
     "salah": {
-      "title": "Your first prayer",
-      "subtitle": "A 2-rak‘ah prayer, start to finish. Go at your own pace."
+      "title": "İlk namazın",
+      "subtitle": "Baştan sona 2 rekâtlık bir namaz. Kendi hızında ilerle."
     },
     "rakah": {
-      "title": "How many rak‘ah?",
-      "subtitle": "The obligatory (fard) rak‘ahs of each prayer",
-      "rowLabel": "{{prayer}}, {{count}} rak‘ahs"
+      "title": "Kaç rekât?",
+      "subtitle": "Her namazın farz rekâtları",
+      "rowLabel": "{{prayer}}: {{count}} rekât farz"
     },
     "islam": {
-      "title": "Pillars of Islam"
+      "title": "İslam'ın şartları"
     },
     "iman": {
-      "title": "Pillars of iman"
+      "title": "İmanın şartları"
     },
     "resources": {
-      "title": "Keep learning",
-      "caption": "Free, trusted resources. These sites are run by others and open in your browser.",
-      "hint": "Opens in your browser",
+      "title": "Öğrenmeye devam et",
+      "caption": "Ücretsiz ve güvenilir kaynaklar. Bu siteler başkaları tarafından yönetilir ve tarayıcında açılır.",
+      "hint": "Tarayıcında açılır",
       "quran": {
         "title": "Quran.com",
-        "subtitle": "Read and listen to the Quran"
+        "subtitle": "Kur'an'ı oku ve dinle"
       },
       "sunnah": {
         "title": "Sunnah.com",
-        "subtitle": "Browse hadith with their sources"
+        "subtitle": "Hadislere kaynaklarıyla birlikte göz at"
       }
     }
   },
   "worship": {
-    "title": "Worship",
-    "tasbih": "Tasbih",
-    "morning": "Morning adhkar",
-    "evening": "Evening adhkar",
-    "duas": "Daily duas",
-    "today": "Today: {{count}}",
-    "resetRound": "Reset round",
-    "ofTarget": "of {{target}}",
-    "tapA11y": "{{name}}, {{round}} of {{target}}",
-    "tapHint": "Double tap to count one",
-    "itemCount": "Tap to count, {{n}} of {{count}}",
-    "itemDone": "Done, {{count}} of {{count}}",
-    "completeMorning": "I’ve completed the morning adhkar",
-    "completedMorning": "Morning adhkar completed today",
-    "completeEvening": "I’ve completed the evening adhkar",
-    "completedEvening": "Evening adhkar completed today",
+    "title": "İbadet",
+    "tasbih": "Tesbih",
+    "morning": "Sabah zikirleri",
+    "evening": "Akşam zikirleri",
+    "duas": "Günlük dualar",
+    "today": "Bugün: {{count}}",
+    "resetRound": "Turu sıfırla",
+    "ofTarget": "/ {{target}}",
+    "tapA11y": "{{name}}, {{round}} / {{target}}",
+    "tapHint": "Bir tane saymak için çift dokun",
+    "itemCount": "Saymak için dokun, {{n}} / {{count}}",
+    "itemDone": "Tamamlandı, {{count}} / {{count}}",
+    "completeMorning": "Sabah zikirlerini tamamladım",
+    "completedMorning": "Sabah zikirleri bugün tamamlandı",
+    "completeEvening": "Akşam zikirlerini tamamladım",
+    "completedEvening": "Akşam zikirleri bugün tamamlandı",
     "grade": {
       "sahih": "sahih",
-      "hasan": "hasan"
+      "hasan": "hasen"
     },
-    "prayerTimesToday": "Prayer times today",
-    "nextPrayer": "next prayer"
+    "prayerTimesToday": "Bugünün namaz vakitleri",
+    "nextPrayer": "sıradaki namaz"
   },
   "prayer": {
-    "estimated": "Times estimated for high latitude"
+    "estimated": "Vakitler yüksek enlem için tahmin edildi"
   },
   "location": {
-    "near": "Near {{city}}",
+    "near": "{{city}} yakınında",
     "cityLabel": "{{city}}, {{country}}",
-    "notSet": "Not set",
-    "useMyLocation": "Use my location",
-    "chooseCity": "Choose a city",
-    "searchPlaceholder": "Search for a city",
-    "searchHint": "Type a city name to search. Search works offline.",
-    "noResults": "No matching city. Try another spelling or a nearby city.",
-    "locating": "Finding your location…",
-    "denied": "Location permission was not granted. You can choose a city instead.",
-    "unavailable": "Could not get your location. You can choose a city instead."
+    "notSet": "Ayarlanmadı",
+    "useMyLocation": "Konumumu kullan",
+    "chooseCity": "Şehir seç",
+    "searchPlaceholder": "Şehir ara",
+    "searchHint": "Aramak için bir şehir adı yaz. Arama çevrimdışı çalışır.",
+    "noResults": "Eşleşen şehir yok. Başka bir yazım ya da yakındaki bir şehri dene.",
+    "locating": "Konumun bulunuyor…",
+    "denied": "Konum izni verilmedi. Bunun yerine bir şehir seçebilirsin.",
+    "unavailable": "Konumun alınamadı. Bunun yerine bir şehir seçebilirsin."
   },
   "methods": {
-    "MuslimWorldLeague": "Muslim World League",
-    "Egyptian": "Egyptian General Authority",
-    "Karachi": "University of Islamic Sciences, Karachi",
-    "UmmAlQura": "Umm al-Qura, Makkah",
+    "MuslimWorldLeague": "Dünya Müslüman Birliği",
+    "Egyptian": "Mısır Genel Ölçme Kurumu",
+    "Karachi": "İslami İlimler Üniversitesi, Karaçi",
+    "UmmAlQura": "Ümmü'l-Kurâ, Mekke",
     "Dubai": "Dubai",
-    "MoonsightingCommittee": "Moonsighting Committee",
-    "NorthAmerica": "ISNA (North America)",
-    "Kuwait": "Kuwait",
-    "Qatar": "Qatar",
-    "Singapore": "Singapore / Malaysia / Indonesia",
-    "Tehran": "Tehran (Geophysics Institute)",
-    "Turkey": "Turkey (Diyanet)"
+    "MoonsightingCommittee": "Hilal Gözlem Komitesi (Moonsighting Committee)",
+    "NorthAmerica": "ISNA (Kuzey Amerika)",
+    "Kuwait": "Kuveyt",
+    "Qatar": "Katar",
+    "Singapore": "Singapur / Malezya / Endonezya",
+    "Tehran": "Tahran (Jeofizik Enstitüsü)",
+    "Turkey": "Diyanet (Türkiye)"
   },
   "language": {
-    "restart": "Restart Awdah to finish switching language."
+    "restart": "Dil değişikliğini tamamlamak için Awdah'ı yeniden başlat."
   }
 }
