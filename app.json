@@ -71,7 +71,7 @@
         "expo-notifications",
         {
           "icon": "./assets/images/notification-icon.png",
-          "color": "#161A33"
+          "color": "#E3B65A"
         }
       ]
     ],
@@ -79,7 +79,6 @@
       "typedRoutes": true
     },
     "extra": {
-      "privacyPolicyUrl": "https://nafs.app/privacy",
       "supportEmail": "nafs.app.support@gmail.com",
       "supportsRTL": true
     }

@@ -1,3 +1,64 @@
-# muslim-helper
+# Awdah
 
-[![Open in Bolt](https://bolt.new/static/open-in-bolt.svg)](https://bolt.new/~/sb1-bbxnkshf)
+Awdah is a free, private, ad-free guide back to your deen: a gentle 30-day path, salah, dhikr and reflection. There are no accounts, no ads and no analytics. Everything is stored on your phone and nothing leaves it.
+
+## Features
+
+- A gentle 30-day journey with daily tasks and milestones
+- Prayer times calculated on-device (adhan), with optional local reminders
+- Dhikr and adhkar, daily duas, and a Learn section with trusted links
+- Journal and reflection, backups as files you keep
+- Light and dark themes; English, Arabic, Urdu, Indonesian and Turkish (with RTL)
+
+## Tech stack
+
+Expo SDK 54, React Native 0.81, TypeScript, Expo Router, AsyncStorage, Jest.
+
+## Commands
+
+```
+npm install
+npm run dev        # start Expo
+npm test           # Jest
+npm run typecheck  # tsc --noEmit
+npm run lint       # expo lint
+```
+
+## Project structure
+
+- `app/` - screens and routes (Expo Router)
+- `components/` - UI components
+- `theme/` - colors, fonts, spacing
+- `lib/` - pure logic, store and i18n (with tests in `lib/__tests__/`)
+- `content/` - journey days, duas, learn links, milestones, cities
+- `locales/` - translation files (`en.json` is the source)
+- `store/` - app store listing text per language
+- `docs/` - privacy policy, review checklists, screenshots
+
+## Content sources and review
+
+Religious content is sourced and checked as recorded in `docs/content-sources/`. Every content change should be reviewed against `docs/content-review-checklist.md`. A translation review checklist will be added later.
+
+## Building with EAS
+
+You need a free Expo account (the owner must create one). No backend is required.
+
+```
+npm install -g eas-cli
+eas login
+eas build -p android
+eas build -p ios
+```
+
+Store listing text lives in `store/<language>/`; screenshots are in `docs/screenshots/`.
+
+## Hosting the privacy policy
+
+The policy is `docs/privacy-policy.md`. To publish it for the stores:
+
+1. On GitHub, open the repository Settings, then Pages.
+2. Set the source to the `main` branch and the `/docs` folder.
+3. The policy will be served at `https://<user>.github.io/<repo>/privacy-policy`.
+4. Add that URL to `app.json` as `expo.extra.privacyPolicyUrl` and use it in the App Store and Google Play listings.
+
+Contact: nafs.app.support@gmail.com
