@@ -19,6 +19,9 @@ import { AppText, Button, RestartBanner, ToastHost } from '@/components';
 
 SplashScreen.preventAutoHideAsync().catch(() => {});
 
+// Deep links into a modal (e.g. a web reload on /settings) still get the tabs underneath, so back works.
+export const unstable_settings = { anchor: '(tabs)' };
+
 const deviceCodes = () => getLocales().map((l) => l.languageCode);
 
 function ErrorFallback({ onRetry }: { onRetry: () => void }) {
