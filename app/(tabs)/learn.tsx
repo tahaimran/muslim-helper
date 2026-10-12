@@ -108,12 +108,12 @@ export default function LearnScreen() {
 
       <Section title={t('learn.islam.title')}>
         <PillarList items={PILLARS_OF_ISLAM} />
-        <AppText variant="caption" muted style={styles.source}>{PILLARS_SOURCES.islam.ref}</AppText>
+        <AppText variant="caption" muted style={styles.source}>{sourceLabel(PILLARS_SOURCES.islam, t, lang)}</AppText>
       </Section>
 
       <Section title={t('learn.iman.title')}>
         <PillarList items={PILLARS_OF_IMAN} />
-        <AppText variant="caption" muted style={styles.source}>{PILLARS_SOURCES.iman.ref}</AppText>
+        <AppText variant="caption" muted style={styles.source}>{sourceLabel(PILLARS_SOURCES.iman, t, lang)}</AppText>
       </Section>
 
       <Section title={t('learn.resources.title')} subtitle={t('learn.resources.caption')}>
