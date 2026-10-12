@@ -15,6 +15,7 @@ export default function ModalsLayout() {
         headerTintColor: colors.accent,
         headerShadowVisible: false,
         headerBackButtonDisplayMode: 'minimal',
+        headerBackTitle: t('common.back'),
         contentStyle: { backgroundColor: colors.bg },
         presentation: 'modal',
         animation: 'slide_from_bottom',
