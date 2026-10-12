@@ -3,7 +3,7 @@
        Background colour (#161A33) comes from app.json android.adaptiveIcon.backgroundColor. -->
   <g transform="translate(512 512) scale(0.72) translate(-512 -453)">
     <!-- 8-point girih star (two interlaced squares), quiet at low opacity -->
-    <g opacity="0.34" fill="none" stroke="#F2DDAA" stroke-width="10" stroke-linejoin="round">
+    <g opacity="0.55" fill="none" stroke="#E3B65A" stroke-width="8" stroke-linejoin="round">
       <rect x="457" y="245" width="110" height="110"/>
       <rect x="457" y="245" width="110" height="110" transform="rotate(45 512 300)"/>
     </g>
