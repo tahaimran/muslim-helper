@@ -10,6 +10,7 @@ import { MoodPicker } from '@/components/day/MoodPicker';
 import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
 import { localizedWelcomeBack, showMeaning } from '@/content/i18n';
+import { sourceLabel } from '@/lib/sourceRef';
 import { buildShareMessage } from '@/lib/view/share';
 import type { SourcedText } from '@/content/types';
 import { dateFromKey, formatTime, formatWeekdayDate } from '@/lib/dates';
@@ -149,7 +150,7 @@ export default function TodayScreen() {
   };
 
   const share = (text: SourcedText) => {
-    const message = buildShareMessage(text, lang, t('share.footer'));
+    const message = buildShareMessage(text, lang, t('share.footer'), t);
     Share.share({ message }).catch(() => showToast(t('errors.generic'), 'error'));
   };
 
@@ -182,7 +183,7 @@ export default function TodayScreen() {
 
         {vm.welcomeBack ? (
           <Section>
-            <ArabicBlock arabic={welcomeBack.arabic} meaning={meaningShown ? welcomeBack.meaning : undefined} sourceRef={welcomeBack.source.ref} />
+            <ArabicBlock arabic={welcomeBack.arabic} meaning={meaningShown ? welcomeBack.meaning : undefined} sourceRef={sourceLabel(welcomeBack.source, t, lang)} />
             <AppText variant="body" center muted style={styles.welcomeLine}>{t('today.welcomeBack')}</AppText>
           </Section>
         ) : null}
@@ -277,9 +278,11 @@ export default function TodayScreen() {
 
 function HadithBlock({ text, meaningShown, onShare, shareLabel }: { text: SourcedText; meaningShown: boolean; onShare: (t: SourcedText) => void; shareLabel: string }) {
   const { colors } = useTheme();
+  const { t } = useTranslation();
+  const lang = useLang();
   return (
     <Section>
-      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={meaningShown ? text.meaning : undefined} sourceRef={text.source.ref} size="large" />
+      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={meaningShown ? text.meaning : undefined} sourceRef={sourceLabel(text.source, t, lang)} size="large" />
       <View style={styles.shareRow}>
         <PressableScale onPress={() => onShare(text)} accessibilityRole="button" accessibilityLabel={shareLabel} style={styles.shareBtn}>
           <Share2 size={20} color={colors.textMuted} />

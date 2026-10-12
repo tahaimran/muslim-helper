@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { AppText, ArabicBlock, PressableScale, Screen, Section } from '@/components';
 import { DUA_CATEGORIES, type DuaEntry } from '@/content/duas';
 import { localizeDuaCategories, showMeaning } from '@/content/i18n';
+import { sourceLabel } from '@/lib/sourceRef';
 import { useLang } from '@/theme/useLang';
 import { useTheme } from '@/theme/ThemeProvider';
 
@@ -15,11 +16,7 @@ export default function DuasScreen() {
   const categories = useMemo(() => localizeDuaCategories(DUA_CATEGORIES, lang), [lang]);
   const [open, setOpen] = useState<Record<string, boolean>>({});
 
-  const sourceLabel = (d: DuaEntry) => {
-    const s = d.text.source;
-    if (!s) return undefined;
-    return s.grade ? `${s.ref}, ${t(`worship.grade.${s.grade}`)}` : s.ref;
-  };
+  const duaSource = (d: DuaEntry) => (d.text.source ? sourceLabel(d.text.source, t, lang) : undefined);
 
   return (
     <Screen edges={['bottom']}>
@@ -50,7 +47,7 @@ export default function DuasScreen() {
                       arabic={d.text.arabic}
                       transliteration={d.text.transliteration}
                       meaning={showMeaning(lang) ? d.text.meaning : undefined}
-                      sourceRef={sourceLabel(d)}
+                      sourceRef={duaSource(d)}
                     />
                   </View>
                 ) : null}

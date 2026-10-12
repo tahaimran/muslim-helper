@@ -6,6 +6,7 @@ import { AppText, ArabicBlock, Screen, Section } from '@/components';
 import { localizeMilestone, showMeaning } from '@/content/i18n';
 import { formatLongDate } from '@/lib/dates';
 import { MILESTONE_IDS, type MilestoneId } from '@/lib/milestones';
+import { sourceLabel } from '@/lib/sourceRef';
 import { useAppStore } from '@/lib/store';
 import { useLang } from '@/theme/useLang';
 
@@ -43,7 +44,7 @@ export default function MilestoneScreen() {
         </View>
       </Section>
       <Section>
-        <ArabicBlock arabic={content.text.arabic} meaning={showMeaning(lang) ? content.text.meaning : undefined} sourceRef={content.text.source.ref} size="large" />
+        <ArabicBlock arabic={content.text.arabic} meaning={showMeaning(lang) ? content.text.meaning : undefined} sourceRef={sourceLabel(content.text.source, t, lang)} size="large" />
       </Section>
     </Screen>
   );

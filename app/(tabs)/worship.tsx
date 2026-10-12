@@ -12,6 +12,7 @@ import { localizeDay, localizeLearn, showMeaning, showTransliteration } from '@/
 import type { Dhikr } from '@/content/types';
 import { formatTime } from '@/lib/dates';
 import { getPlanPosition } from '@/lib/day';
+import { sourceLabel } from '@/lib/sourceRef';
 import { useAppStore } from '@/lib/store';
 import { usePrayerTimes } from '@/lib/usePrayerTimes';
 import { useToday } from '@/lib/useToday';
@@ -120,12 +121,9 @@ export default function WorshipScreen() {
       }));
   }, [times, next, lang, t]);
 
-  const sourceLabel = useCallback(
-    (d: Dhikr) => {
-      if (!d.source) return undefined;
-      return d.source.grade ? `${d.source.ref}, ${t(`worship.grade.${d.source.grade}`)}` : d.source.ref;
-    },
-    [t],
+  const dhikrSource = useCallback(
+    (d: Dhikr) => (d.source ? sourceLabel(d.source, t, lang) : undefined),
+    [t, lang],
   );
 
   // Stable handlers so the memoized adhkar lists skip re-rendering on tasbih taps.
@@ -174,7 +172,7 @@ export default function WorshipScreen() {
         completeLabel={t('worship.completeMorning')}
         completedLabel={t('worship.completedMorning')}
         onComplete={completeMorning}
-        sourceLabel={sourceLabel}
+        sourceLabel={dhikrSource}
       />
       <AdhkarList
         key={`e-${today}`}
@@ -185,7 +183,7 @@ export default function WorshipScreen() {
         completeLabel={t('worship.completeEvening')}
         completedLabel={t('worship.completedEvening')}
         onComplete={completeEvening}
-        sourceLabel={sourceLabel}
+        sourceLabel={dhikrSource}
       />
 
       <View style={styles.duas}>

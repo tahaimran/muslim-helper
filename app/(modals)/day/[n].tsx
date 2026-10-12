@@ -10,6 +10,7 @@ import { PLAN_LENGTH } from '@/lib/day';
 import { MOODS, persistedFrom } from '@/lib/model';
 import { useAppStore } from '@/lib/store';
 import type { MoodType } from '@/lib/types';
+import { sourceLabel } from '@/lib/sourceRef';
 import { useToday } from '@/lib/useToday';
 import { buildDayVM, type TaskVM } from '@/lib/view/today';
 import { showMeaning } from '@/content/i18n';
@@ -103,7 +104,7 @@ export default function DayDetailScreen() {
           arabic={content.hadith.arabic}
           transliteration={content.hadith.transliteration}
           meaning={showMeaning(lang) ? content.hadith.meaning : undefined}
-          sourceRef={content.hadith.source.ref}
+          sourceRef={sourceLabel(content.hadith.source, t, lang)}
           size="large"
         />
       </Section>

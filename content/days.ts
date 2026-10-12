@@ -2769,7 +2769,7 @@ export const DAYS: DayContent[] = [
         meaning:
           "(Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds righteous, purely for Your Face, and let no one have any share in them",
         count: 1,
-        source: athar("Du'a of 'Umar ibn al-Khattab (Ahmad, az-Zuhd)"),
+        source: athar('Ahmad, az-Zuhd'),
       },
     ],
     quran: {
@@ -2873,9 +2873,7 @@ export const DAYS: DayContent[] = [
       title: 'Muhasabah (self-accounting)',
       description:
         '\'Umar ibn al-Khattab said: "Hold yourselves to account before you are held to account." This is a saying of \'Umar, not a hadith. Before sleeping, review your day: what did you do well, where did you fall short, and what will you improve tomorrow?',
-      source: athar(
-        "Athar of 'Umar ibn al-Khattab, cited by at-Tirmidhi under no. 2459",
-      ),
+      source: athar('Tirmidhi 2459'),
     },
     character: {
       trait: 'The same in private',

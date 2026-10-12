@@ -13,6 +13,7 @@ import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
 import { useTheme } from '@/theme/ThemeProvider';
 import { useLang } from '@/theme/useLang';
+import { showMeaning } from '@/content/i18n';
 import {
   ONBOARDING_STEPS, buildProfile, canAdvance, toggleFocusArea, type OnboardingDraft,
 } from '@/lib/onboarding';
@@ -135,7 +136,7 @@ export default function OnboardingScreen() {
               <ArabicBlock
                 size="large"
                 arabic={t('onboarding.intention.hadithArabic')}
-                meaning={t('onboarding.intention.hadithMeaning')}
+                meaning={showMeaning(lang) ? t('onboarding.intention.hadithMeaning') : undefined}
                 sourceRef={t('onboarding.intention.hadithSource')}
               />
             </View>
