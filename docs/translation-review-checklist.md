@@ -1,0 +1,3260 @@
+# Translation review checklist
+
+**Purpose.** Awdah ships its religious content (hadith, duas, adhkar, prayer steps, pillars, milestone texts) and its privacy/legal text in five languages: English, Arabic, Urdu, Indonesian and Turkish. This file lists every translated religious meaning next to its Arabic source and the English text so a native-speaking reviewer can check each one for accuracy, tone and respectful wording.
+
+**How to review.** For each entry, read the Arabic source, the English, and the translation. Then mark the box:
+
+- `[x]` the translation is accurate and appropriate;
+- `[!]` there is a problem. Add a short note after the entry (what is wrong and a suggested wording).
+
+Leave `[ ]` if you have not reviewed the entry yet.
+
+**Status.** These translations were machine-assisted and checked by an AI reviewer. They have NOT yet been checked by a qualified human reviewer. Please do not treat any entry as verified until it is marked `[x]` by a person.
+
+**Contact.** Send notes or corrections to nafs.app.support@gmail.com.
+
+Key format: the key in backticks is the entry's id in `content/i18n/<lang>.json` (or `locales/<lang>.json` for UI text).
+
+---
+
+## Arabic (ar)
+
+### Religious meanings
+
+In the Arabic UI the translated meaning line is hidden, because readers use the Arabic source directly. 201 meaning keys are therefore empty and are listed under "Hidden in Arabic UI" below.
+
+- [ ] `learn.pillar.allah.meaning`
+  - Arabic source: الْإِيمَانُ بِاللَّهِ
+  - English: Believing that Allah exists, that He alone is Lord and alone deserves worship, and in His names and attributes.
+  - Arabic: الإيمان بوجود الله، وبأنه وحده الربّ، ووحده المستحق للعبادة، وبأسمائه وصفاته.
+- [ ] `learn.pillar.angels.meaning`
+  - Arabic source: الْإِيمَانُ بِالْمَلَائِكَةِ
+  - English: Believing in the angels, created from light, who always obey Allah, such as Jibril.
+  - Arabic: الإيمان بالملائكة المخلوقين من نور، الذين لا يعصون الله أبدًا، ومنهم جبريل.
+- [ ] `learn.pillar.books.meaning`
+  - Arabic source: الْإِيمَانُ بِالْكُتُبِ
+  - English: Believing in the books Allah revealed, such as the Torah and the Gospel, with the Quran as the final, preserved one.
+  - Arabic: الإيمان بالكتب التي أنزلها الله، كالتوراة والإنجيل، وبأن القرآن آخرها والمحفوظ منها.
+- [ ] `learn.pillar.hajj.meaning`
+  - Arabic source: حَجُّ الْبَيْتِ
+  - English: Pilgrimage to the Ka‘bah once in a lifetime, for those who are able.
+  - Arabic: حجّ بيت الله الحرام مرةً في العمر لمن استطاع إليه سبيلًا.
+- [ ] `learn.pillar.last_day.meaning`
+  - Arabic source: الْإِيمَانُ بِالْيَوْمِ الْآخِرِ
+  - English: Believing in what comes after death: the grave, the resurrection, the judgement, Paradise and Hell.
+  - Arabic: الإيمان بما يكون بعد الموت: القبر، والبعث، والحساب، والجنة، والنار.
+- [ ] `learn.pillar.messengers.meaning`
+  - Arabic source: الْإِيمَانُ بِالرُّسُلِ
+  - English: Believing in all of Allah's messengers, from Nuh to Muhammad ﷺ, the last of them.
+  - Arabic: الإيمان بجميع رسل الله، من نوحٍ إلى محمدٍ ﷺ خاتمهم.
+- [ ] `learn.pillar.qadar.meaning`
+  - Arabic source: الْإِيمَانُ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ
+  - English: Believing that everything, good and bad, happens by Allah's knowledge, writing, will and creation.
+  - Arabic: الإيمان بأن كل شيء، خيره وشرّه، يقع بعلم الله وكتابته ومشيئته وخلقه.
+- [ ] `learn.pillar.salah.meaning`
+  - Arabic source: إِقَامُ الصَّلَاةِ
+  - English: Establishing the five daily prayers on time.
+  - Arabic: إقامة الصلوات الخمس في أوقاتها.
+- [ ] `learn.pillar.sawm.meaning`
+  - Arabic source: صَوْمُ رَمَضَانَ
+  - English: Fasting from dawn to sunset throughout the month of Ramadan.
+  - Arabic: الصيام من الفجر إلى غروب الشمس طوال شهر رمضان.
+- [ ] `learn.pillar.shahadah.meaning`
+  - Arabic source: الشَّهَادَتَانِ
+  - English: Testifying that there is no god but Allah and that Muhammad is the Messenger of Allah.
+  - Arabic: شهادة أن لا إله إلا الله وأن محمدًا رسول الله.
+- [ ] `learn.pillar.zakah.meaning`
+  - Arabic source: إِيتَاءُ الزَّكَاةِ
+  - English: Paying the yearly obligatory charity: 2.5% of savings held above the nisab threshold.
+  - Arabic: أداء الصدقة الواجبة كل عام: ٢٫٥٪ من المدّخرات التي بلغت النصاب.
+
+### Hidden in Arabic UI
+
+These 201 keys have an intentionally empty Arabic meaning; nothing to review.
+
+- `day.1.dhikr.ainni_ala_dhikrik.meaning`
+- `day.1.dhikr.alhamdulillah.meaning`
+- `day.1.dhikr.allahuakbar.meaning`
+- `day.1.dhikr.astaghfirullah.meaning`
+- `day.1.dhikr.basmalah.meaning`
+- `day.1.dhikr.shahadah.meaning`
+- `day.1.dhikr.subhanallah.meaning`
+- `day.1.dhikr.tahlil.meaning`
+- `day.1.hadith.meaning`
+- `day.1.prayer.dua.meaning`
+- `day.10.dhikr.hamm_wal_hazan.meaning`
+- `day.10.dhikr.tahlil.meaning`
+- `day.10.hadith.meaning`
+- `day.10.prayer.dua.meaning`
+- `day.11.dhikr.bismillah_before_eating.meaning`
+- `day.11.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.11.dhikr.yunfiqu_fa_tukhlif.meaning`
+- `day.11.hadith.meaning`
+- `day.12.dhikr.astaghfirullah.meaning`
+- `day.12.dhikr.audhu_minal_faqr.meaning`
+- `day.12.dhikr.ikfini_bi_halalik.meaning`
+- `day.12.hadith.meaning`
+- `day.13.dhikr.hasbunallah.meaning`
+- `day.13.dhikr.leaving_home_dua.meaning`
+- `day.13.dhikr.tahlil.meaning`
+- `day.13.hadith.meaning`
+- `day.14.dhikr.ainni_ala_dhikrik.meaning`
+- `day.14.dhikr.hamdan_kathiran.meaning`
+- `day.14.dhikr.waking_dua.meaning`
+- `day.14.dhikr.waking_dua_afani.meaning`
+- `day.14.hadith.meaning`
+- `day.15.dhikr.astaghfirullah.meaning`
+- `day.15.dhikr.ighsilni.meaning`
+- `day.15.dhikr.sidq_dua.meaning`
+- `day.15.hadith.meaning`
+- `day.16.dhikr.audhu_minal_khiyanah.meaning`
+- `day.16.dhikr.subhanallahil_azimi_wa_bihamdihi.meaning`
+- `day.16.hadith.meaning`
+- `day.17.dhikr.audhu_minal_jaza.meaning`
+- `day.17.dhikr.istirja.meaning`
+- `day.17.dhikr.sabr_dua.meaning`
+- `day.17.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.17.hadith.meaning`
+- `day.18.dhikr.audhu_minal_kibr.meaning`
+- `day.18.dhikr.kaffarat_al_majlis.meaning`
+- `day.18.hadith.meaning`
+- `day.19.dhikr.basmalah.meaning`
+- `day.19.dhikr.ighfir_lil_muminin.meaning`
+- `day.19.dhikr.irhamna_bi_rahmatik.meaning`
+- `day.19.dhikr.rabbana_wasita.meaning`
+- `day.19.hadith.meaning`
+- `day.2.dhikr.kaffarat_al_majlis.meaning`
+- `day.2.dhikr.sayyid_istighfar.meaning`
+- `day.2.dhikr.shahadah_after_wudu.meaning`
+- `day.2.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.2.hadith.meaning`
+- `day.2.prayer.dua.meaning`
+- `day.20.dhikr.barik_li_fi_ahli.meaning`
+- `day.20.dhikr.ijma_shamla_ahli.meaning`
+- `day.20.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.20.hadith.meaning`
+- `day.21.dhikr.ahsanta_khalqi.meaning`
+- `day.21.dhikr.astaghfirullah.meaning`
+- `day.21.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+- `day.21.hadith.meaning`
+- `day.22.dhikr.ilman_nafian.meaning`
+- `day.22.dhikr.rabbi_zidni_ilma.meaning`
+- `day.22.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.22.hadith.meaning`
+- `day.23.dhikr.rabbana_ma_khalaqta.meaning`
+- `day.23.dhikr.subhanallahi_adada_khalqih.meaning`
+- `day.23.hadith.meaning`
+- `day.24.dhikr.asalukal_jannah.meaning`
+- `day.24.dhikr.la_tajal_ad_dunya.meaning`
+- `day.24.hadith.meaning`
+- `day.25.dhikr.audhu_an_ushrika.meaning`
+- `day.25.dhikr.umar_dua_ikhlas.meaning`
+- `day.25.hadith.meaning`
+- `day.26.dhikr.sayyid_istighfar.meaning`
+- `day.26.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.26.dhikr.yuraqibuka.meaning`
+- `day.26.hadith.meaning`
+- `day.27.dhikr.asalukal_afiyah.meaning`
+- `day.27.dhikr.astaghfirullah_al_azim.meaning`
+- `day.27.dhikr.rabbana_zalamna.meaning`
+- `day.27.hadith.meaning`
+- `day.28.dhikr.aslih_ummata_muhammad.meaning`
+- `day.28.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.28.dhikr.unsur_al_islam.meaning`
+- `day.28.hadith.meaning`
+- `day.29.dhikr.hudatan_muhtadin.meaning`
+- `day.29.dhikr.salawat_ibrahimiyyah.meaning`
+- `day.29.hadith.meaning`
+- `day.3.dhikr.alhamdulillah.meaning`
+- `day.3.dhikr.allahuakbar.meaning`
+- `day.3.dhikr.dua_after_adhan.meaning`
+- `day.3.dhikr.subhanallah.meaning`
+- `day.3.dhikr.tahlil.meaning`
+- `day.3.dhikr.waking_dua.meaning`
+- `day.3.hadith.meaning`
+- `day.30.dhikr.ighfir_li_ma_qaddamtu.meaning`
+- `day.30.dhikr.musarrifal_qulub.meaning`
+- `day.30.dhikr.ya_muqallibal_qulub.meaning`
+- `day.30.hadith.meaning`
+- `day.4.dhikr.asbahna_ala_fitrah.meaning`
+- `day.4.dhikr.audhu_bikalimatillah.meaning`
+- `day.4.dhikr.bika_amsayna.meaning`
+- `day.4.dhikr.bika_asbahna.meaning`
+- `day.4.hadith.meaning`
+- `day.4.prayer.dua.meaning`
+- `day.5.dhikr.dua_dhun_nun.meaning`
+- `day.5.dhikr.salawat.meaning`
+- `day.5.dhikr.subhanallahil_azim.meaning`
+- `day.5.dhikr.ya_hayyu_ya_qayyum.meaning`
+- `day.5.hadith.meaning`
+- `day.5.prayer.dua.meaning`
+- `day.6.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+- `day.6.dhikr.rabi_qalbi.meaning`
+- `day.6.dhikr.subhanallahi_wa_bihamdihi.meaning`
+- `day.6.hadith.meaning`
+- `day.7.dhikr.astaghfirullah_al_azim.meaning`
+- `day.7.dhikr.sayyid_istighfar.meaning`
+- `day.7.hadith.meaning`
+- `day.7.prayer.dua.meaning`
+- `day.8.dhikr.afini_fi_badani.meaning`
+- `day.8.dhikr.amsayna_wa_amsal_mulk.meaning`
+- `day.8.dhikr.bismillah_alladhi.meaning`
+- `day.8.dhikr.hasbiyallah.meaning`
+- `day.8.dhikr.three_quls.meaning`
+- `day.8.hadith.meaning`
+- `day.9.dhikr.salawat.meaning`
+- `day.9.dhikr.salawat_ibrahimiyyah.meaning`
+- `day.9.hadith.meaning`
+- `dua.after_adhan.meaning`
+- `dua.after_eating.meaning`
+- `dua.after_salah.meaning`
+- `dua.before_eating.meaning`
+- `dua.before_reciting_quran.meaning`
+- `dua.before_sleeping.meaning`
+- `dua.dua_for_knowledge.meaning`
+- `dua.entering_mosque.meaning`
+- `dua.evening_bika_amsayna.meaning`
+- `dua.evening_bismillah_protection.meaning`
+- `dua.forgot_bismillah_eating.meaning`
+- `dua.leaving_home.meaning`
+- `dua.leaving_mosque.meaning`
+- `dua.morning_bika_asbahna.meaning`
+- `dua.morning_bismillah_protection.meaning`
+- `dua.opening_dua_salah.meaning`
+- `dua.sayyid_istighfar.meaning`
+- `dua.tawbah.meaning`
+- `dua.waking_up.meaning`
+- `learn.dua_after_wudu.meaning`
+- `learn.evening_adhkar.afiyah.meaning`
+- `learn.evening_adhkar.alimal_ghayb.meaning`
+- `learn.evening_adhkar.amsayna_wa_amsal_mulk.meaning`
+- `learn.evening_adhkar.audhu_bikalimatillah.meaning`
+- `learn.evening_adhkar.ayat_al_kursi.meaning`
+- `learn.evening_adhkar.bika_amsayna.meaning`
+- `learn.evening_adhkar.bismillah_la_yadurr.meaning`
+- `learn.evening_adhkar.sayyid_istighfar.meaning`
+- `learn.evening_adhkar.subhanallahi_wa_bihamdihi.meaning`
+- `learn.evening_adhkar.surah_falaq.meaning`
+- `learn.evening_adhkar.surah_ikhlas.meaning`
+- `learn.evening_adhkar.surah_nas.meaning`
+- `learn.morning_adhkar.afiyah.meaning`
+- `learn.morning_adhkar.alimal_ghayb.meaning`
+- `learn.morning_adhkar.asbahna_wa_asbahal_mulk.meaning`
+- `learn.morning_adhkar.ayat_al_kursi.meaning`
+- `learn.morning_adhkar.bika_asbahna.meaning`
+- `learn.morning_adhkar.bismillah_la_yadurr.meaning`
+- `learn.morning_adhkar.sayyid_istighfar.meaning`
+- `learn.morning_adhkar.subhanallahi_wa_bihamdihi.meaning`
+- `learn.morning_adhkar.surah_falaq.meaning`
+- `learn.morning_adhkar.surah_ikhlas.meaning`
+- `learn.morning_adhkar.surah_nas.meaning`
+- `learn.salah_steps.salah_fatihah.recite.meaning`
+- `learn.salah_steps.salah_final_dua.recite.meaning`
+- `learn.salah_steps.salah_istiadhah.recite.meaning`
+- `learn.salah_steps.salah_opening_dua.recite.meaning`
+- `learn.salah_steps.salah_rising.recite.meaning`
+- `learn.salah_steps.salah_ruku.recite.meaning`
+- `learn.salah_steps.salah_salawat.recite.meaning`
+- `learn.salah_steps.salah_short_surah.recite.meaning`
+- `learn.salah_steps.salah_sitting.recite.meaning`
+- `learn.salah_steps.salah_sujud.recite.meaning`
+- `learn.salah_steps.salah_takbir.recite.meaning`
+- `learn.salah_steps.salah_tashahhud.recite.meaning`
+- `learn.salah_steps.salah_taslim.recite.meaning`
+- `learn.wudu_steps.wudu_bismillah.recite.meaning`
+- `milestone.fajr_7.meaning`
+- `milestone.first_full_salah_day.meaning`
+- `milestone.first_reflection.meaning`
+- `milestone.first_step.meaning`
+- `milestone.halfway.meaning`
+- `milestone.journey_complete.meaning`
+- `milestone.streak_7.meaning`
+- `milestone.tasbih_1000.meaning`
+- `milestone.three_days.meaning`
+- `milestone.week_one.meaning`
+- `welcomeBack.meaning`
+
+### UI legal and privacy text (ar)
+
+- [ ] `share.footer`
+  - English: Shared from Awdah
+  - Arabic: تمت المشاركة من تطبيق عودة
+- [ ] `me.about`
+  - English: About
+  - Arabic: حول التطبيق
+- [ ] `me.privacy`
+  - English: Privacy
+  - Arabic: الخصوصية
+- [ ] `me.terms`
+  - English: Terms
+  - Arabic: الشروط
+- [ ] `about.intro`
+  - English: Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.
+  - Arabic: عودة تعني الرجوع. إنه رفيق هادئ للعودة إلى صلاتك ودينك، يومًا بعد يوم.
+- [ ] `about.whatTitle`
+  - English: What Awdah is
+  - Arabic: ما هو تطبيق عودة
+- [ ] `about.whatBody`
+  - English: A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.
+  - Arabic: طريق من 30 يومًا بخطوات يومية صغيرة، ومتابعة للصلاة، وذكر، ودروس قصيرة، يليه روتين ثابت للاستمرار.
+- [ ] `about.freeTitle`
+  - English: Why it is free
+  - Arabic: لماذا هو مجاني
+- [ ] `about.freeBody`
+  - English: Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.
+  - Arabic: صُنع تطبيق عودة صدقةً جارية، ابتغاءً لمرضاة الله. لا إعلانات، ولا مشتريات، ولا جمع للبيانات.
+- [ ] `about.sourcesTitle`
+  - English: About the content
+  - Arabic: عن المحتوى
+- [ ] `about.sourcesBody`
+  - English: Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.
+  - Arabic: الأحاديث والأدعية مذكورة مع مصادرها. إن لاحظت خطأً، فأخبرنا من فضلك ليتم تصحيحه.
+- [ ] `about.version`
+  - English: Version {{version}}
+  - Arabic: الإصدار {{version}}
+- [ ] `privacy.intro`
+  - English: Awdah does not collect any data about you.
+  - Arabic: لا يجمع تطبيق عودة أي بيانات عنك.
+- [ ] `privacy.storage.title`
+  - English: Stored on your device
+  - Arabic: مخزّنة على جهازك
+- [ ] `privacy.storage.body`
+  - English: Everything you enter, such as your profile, prayers, tasks and journal, is stored on this phone. If your phone's own system backup (Google or iCloud) is turned on, it may include Awdah's data. That backup belongs to you; Awdah never sends anything to us.
+  - Arabic: كل ما تدخله، مثل ملفك الشخصي وصلواتك ومهامك ويومياتك، مخزّن على هذا الهاتف. إذا كان النسخ الاحتياطي الخاص بنظام هاتفك (Google أو iCloud) مفعّلًا، فقد يتضمن بيانات عودة. تلك النسخة ملك لك؛ ولا يرسل تطبيق عودة أي شيء إلينا أبدًا.
+- [ ] `privacy.accounts.title`
+  - English: No accounts, analytics or ads
+  - Arabic: بلا حسابات ولا تحليلات ولا إعلانات
+- [ ] `privacy.accounts.body`
+  - English: There are no accounts, no analytics, no advertising and no trackers. Awdah never sends anything to us or to anyone else.
+  - Arabic: لا توجد حسابات، ولا تحليلات، ولا إعلانات، ولا أدوات تتبّع. لا يرسل تطبيق عودة أي شيء إلينا أو إلى أي أحد آخر أبدًا.
+- [ ] `privacy.location.title`
+  - English: Location
+  - Arabic: الموقع
+- [ ] `privacy.location.body`
+  - English: If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere.
+  - Arabic: إذا اخترت تحديد موقعك، فإنه يُستخدم على هاتفك فقط لحساب مواقيت الصلاة. لا يرسله تطبيق عودة إلى أي مكان أبدًا.
+- [ ] `privacy.backups.title`
+  - English: Backups
+  - Arabic: النسخ الاحتياطية
+- [ ] `privacy.backups.body`
+  - English: Backups are files you create and keep. You decide where they go; Awdah never uploads them.
+  - Arabic: النسخ الاحتياطية ملفات تنشئها وتحتفظ بها أنت. أنت من يقرر أين تذهب؛ ولا يرفعها تطبيق عودة أبدًا.
+- [ ] `privacy.deletion.title`
+  - English: Deleting your data
+  - Arabic: حذف بياناتك
+- [ ] `privacy.deletion.body`
+  - English: Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made may still hold a copy.
+  - Arabic: خيار «مسح كل البيانات» في الإعدادات يزيل كل ما يحتفظ به تطبيق عودة على هذا الهاتف. وإلغاء تثبيت التطبيق يزيلها أيضًا، وإن كانت نسخة احتياطية للنظام أجريتها قد تظل تحتفظ بنسخة منها.
+- [ ] `privacy.updated`
+  - English: Last updated {{date}}
+  - Arabic: آخر تحديث {{date}}
+- [ ] `terms.intro`
+  - English: These are the plain terms for using Awdah.
+  - Arabic: هذه هي الشروط الواضحة لاستخدام تطبيق عودة.
+- [ ] `terms.guidance.title`
+  - English: Personal guidance
+  - Arabic: إرشاد شخصي
+- [ ] `terms.guidance.body`
+  - English: Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings.
+  - Arabic: تطبيق عودة للإرشاد الروحي الشخصي والتذكير. وليس مصدرًا للأحكام الشرعية.
+- [ ] `terms.scholars.title`
+  - English: Not a fatwa
+  - Arabic: ليس فتوى
+- [ ] `terms.scholars.body`
+  - English: Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar.
+  - Arabic: لا شيء في التطبيق يُعدّ فتوى. لأسئلتك المتعلقة بحالتك، يرجى استشارة عالم مؤهل.
+- [ ] `terms.asIs.title`
+  - English: As is
+  - Arabic: كما هو
+- [ ] `terms.asIs.body`
+  - English: The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time.
+  - Arabic: يُقدَّم التطبيق مجانًا، كما هو، دون أي ضمانات. نبذل جهدنا لنكون دقيقين، وقد نصحح المحتوى أو نغيّره مع الوقت.
+- [ ] `terms.yourData.title`
+  - English: Your data
+  - Arabic: بياناتك
+- [ ] `terms.yourData.body`
+  - English: Your data is stored on your phone and is yours. See the Privacy page for details.
+  - Arabic: بياناتك مخزّنة على هاتفك وهي ملك لك. راجع صفحة الخصوصية للتفاصيل.
+- [ ] `terms.updated`
+  - English: Last updated {{date}}
+  - Arabic: آخر تحديث {{date}}
+
+---
+
+## Urdu (ur)
+
+### Religious meanings
+
+- [ ] `day.1.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Urdu: (ہر نماز کے آخر میں) اے اللہ! اپنے ذکر، اپنے شکر اور اپنی اچھی عبادت پر میری مدد فرما
+- [ ] `day.1.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Urdu: (ہر نماز کے بعد) تمام تعریفیں اللہ کے لیے ہیں
+- [ ] `day.1.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Urdu: (ہر نماز کے بعد) اللہ سب سے بڑا ہے
+- [ ] `day.1.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں
+- [ ] `day.1.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Urdu: اللہ کے نام سے جو بڑا مہربان، نہایت رحم والا ہے
+- [ ] `day.1.dhikr.shahadah.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ
+  - English: I bear witness that there is no god but Allah, and that Muhammad is the Messenger of Allah
+  - Urdu: میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اللہ کے رسول ہیں
+- [ ] `day.1.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Urdu: (ہر نماز کے بعد) اللہ پاک ہے
+- [ ] `day.1.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Urdu: (تسبیح کے بعد سوواں) اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے
+- [ ] `day.1.hadith.meaning`
+  - Arabic source: إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
+  - English: "Actions are only by intentions, and each person will only have what he intended."
+  - Urdu: ”اعمال کا دار و مدار نیتوں پر ہے، اور ہر شخص کو وہی ملے گا جس کی اس نے نیت کی۔“
+- [ ] `day.1.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds.
+  - Urdu: (فجر کے سلام کے بعد) اے اللہ! میں تجھ سے نفع دینے والا علم، پاکیزہ رزق اور قبول ہونے والا عمل مانگتا ہوں۔
+- [ ] `day.10.dhikr.hamm_wal_hazan.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ
+  - English: O Allah, I seek refuge in You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from the burden of debt and from being overpowered by men
+  - Urdu: اے اللہ! میں تیری پناہ مانگتا ہوں فکر اور غم سے، عاجزی اور سستی سے، بزدلی اور کنجوسی سے، قرض کے بوجھ سے اور لوگوں کے غلبے سے
+- [ ] `day.10.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Urdu: اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے
+- [ ] `day.10.hadith.meaning`
+  - Arabic source: الدُّعَاءُ هُوَ الْعِبَادَةُ، وَقَرَأَ: ﴿وَقَالَ رَبُّكُمُ ٱدۡعُونِيٓ أَسۡتَجِبۡ لَكُمۡ﴾
+  - English: "Supplication is worship itself." Then he recited: "And your Lord says: Call upon Me; I will respond to you" (Ghafir 40:60).
+  - Urdu: ”دعا ہی عبادت ہے۔“ پھر آپ ﷺ نے یہ آیت پڑھی: ”اور تمہارے رب نے فرمایا: مجھے پکارو، میں تمہاری دعا قبول کروں گا“ (غافر 40:60)۔
+- [ ] `day.10.prayer.dua.meaning`
+  - Arabic source: رَبَّنَآ ءَاتِنَا فِي ٱلدُّنۡيَا حَسَنَةࣰ وَفِي ٱلۡأٓخِرَةِ حَسَنَةࣰ وَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.
+  - Urdu: اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔
+- [ ] `day.11.dhikr.bismillah_before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: (Before eating) In the name of Allah
+  - Urdu: (کھانے سے پہلے) اللہ کے نام سے
+- [ ] `day.11.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.11.dhikr.yunfiqu_fa_tukhlif.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنَا مِمَّن يُنفِقُ فَتُخْلِفُ لَهُ
+  - English: (Personal du'a, inspired by the angels' du'a in Bukhari 1442) O Allah, make us among those who spend, and You replace it for them
+  - Urdu: (ذاتی دعا، بخاری 1442 میں فرشتوں کی دعا سے ماخوذ) اے اللہ! ہمیں ان لوگوں میں شامل فرما جو خرچ کرتے ہیں اور تو انہیں اس کا بدل عطا فرماتا ہے
+- [ ] `day.11.hadith.meaning`
+  - Arabic source: مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ، وَمَا زَادَ اللَّهُ عَبْدًا بِعَفْوٍ إِلاَّ عِزًّا
+  - English: "Charity does not decrease wealth, and Allah does not increase a servant who forgives except in honour."
+  - Urdu: ”صدقہ مال میں کمی نہیں کرتا، اور جو بندہ معاف کرتا ہے اللہ اس کی عزت ہی بڑھاتا ہے۔“
+- [ ] `day.12.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں۔ نبی کریم ﷺ دن میں سو مرتبہ استغفار فرماتے تھے۔
+- [ ] `day.12.dhikr.audhu_minal_faqr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ، وَأَعُوذُ بِكَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ
+  - English: O Allah, I seek refuge in You from poverty, from scarcity and from humiliation, and I seek refuge in You from wronging others or being wronged
+  - Urdu: اے اللہ! میں تیری پناہ مانگتا ہوں محتاجی سے، کمی سے اور ذلت سے، اور تیری پناہ مانگتا ہوں اس سے کہ میں کسی پر ظلم کروں یا مجھ پر ظلم کیا جائے
+- [ ] `day.12.dhikr.ikfini_bi_halalik.meaning`
+  - Arabic source: اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ
+  - English: O Allah, suffice me with what You have made lawful instead of what You have forbidden, and by Your grace make me free of need of anyone besides You
+  - Urdu: اے اللہ! اپنے حلال کے ذریعے مجھے اپنے حرام سے بچا کر کافی ہو جا، اور اپنے فضل سے مجھے اپنے سوا ہر ایک سے بے نیاز کر دے
+- [ ] `day.12.hadith.meaning`
+  - Arabic source: أَيُّهَا النَّاسُ، إِنَّ اللَّهَ طَيِّبٌ لاَ يَقْبَلُ إِلاَّ طَيِّبًا
+  - English: "O people, Allah is Good and accepts only what is good."
+  - Urdu: ”اے لوگو! اللہ پاک ہے اور صرف پاک چیز ہی قبول کرتا ہے۔“
+- [ ] `day.13.dhikr.hasbunallah.meaning`
+  - Arabic source: حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ
+  - English: Allah is sufficient for us, and He is the best disposer of affairs
+  - Urdu: ہمارے لیے اللہ کافی ہے، اور وہ بہترین کارساز ہے
+- [ ] `day.13.dhikr.leaving_home_dua.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ
+  - English: (On leaving home) In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah
+  - Urdu: (گھر سے نکلتے وقت) اللہ کے نام سے، میں نے اللہ پر بھروسا کیا، اللہ کے سوا نہ کوئی طاقت ہے نہ قوت
+- [ ] `day.13.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Urdu: اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے
+- [ ] `day.13.hadith.meaning`
+  - Arabic source: لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ، تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا
+  - English: "If you relied on Allah as He truly deserves, you would be provided for as the birds are provided for: they go out hungry in the morning and return full in the evening."
+  - Urdu: ”اگر تم اللہ پر ویسا بھروسا کرو جیسا اس کا حق ہے تو تمہیں اس طرح رزق دیا جائے جیسے پرندوں کو دیا جاتا ہے: وہ صبح خالی پیٹ نکلتے ہیں اور شام کو پیٹ بھر کر لوٹتے ہیں۔“
+- [ ] `day.14.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Urdu: (ہر نماز کے آخر میں) اے اللہ! اپنے ذکر، اپنے شکر اور اپنی اچھی عبادت پر میری مدد فرما
+- [ ] `day.14.dhikr.hamdan_kathiran.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ
+  - English: (In prayer) Praise be to Allah, abundant, good and blessed praise
+  - Urdu: (نماز میں) تمام تعریفیں اللہ کے لیے ہیں، بہت زیادہ، پاکیزہ اور بابرکت تعریف
+- [ ] `day.14.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Urdu: (جاگنے پر) تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں موت کے بعد زندگی دی، اور اسی کی طرف اٹھ کر جانا ہے
+- [ ] `day.14.dhikr.waking_dua_afani.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ
+  - English: (On waking) Praise be to Allah who gave health to my body, returned my soul to me and permitted me to remember Him
+  - Urdu: (جاگنے پر) تمام تعریفیں اللہ کے لیے ہیں جس نے میرے جسم کو عافیت دی، میری روح مجھے لوٹا دی اور مجھے اپنے ذکر کی توفیق دی
+- [ ] `day.14.hadith.meaning`
+  - Arabic source: انْظُرُوا إِلَى مَنْ أَسْفَلَ مِنْكُمْ وَلاَ تَنْظُرُوا إِلَى مَنْ هُوَ فَوْقَكُمْ، فَهُوَ أَجْدَرُ أَنْ لاَ تَزْدَرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ
+  - English: "Look at those below you and do not look at those above you, for that is more fitting, so that you do not belittle the favours of Allah upon you."
+  - Urdu: ”اپنے سے نیچے والوں کو دیکھو اور اپنے سے اوپر والوں کو نہ دیکھو، یہ اس کے زیادہ لائق ہے کہ تم اپنے اوپر اللہ کی نعمتوں کو حقیر نہ سمجھو۔“
+- [ ] `day.15.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں۔ نبی کریم ﷺ دن میں سو مرتبہ استغفار فرماتے تھے۔
+- [ ] `day.15.dhikr.ighsilni.meaning`
+  - Arabic source: اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: (From the opening du'a of prayer) O Allah, wash away my sins with water, snow and hail
+  - Urdu: (نماز کی ابتدائی دعا سے) اے اللہ! میرے گناہوں کو پانی، برف اور اولوں سے دھو دے
+- [ ] `day.15.dhikr.sidq_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصِّدْقَ فِي الْقَوْلِ وَالْعَمَلِ
+  - English: (Personal du'a) O Allah, I ask You for truthfulness in speech and in action
+  - Urdu: (ذاتی دعا) اے اللہ! میں تجھ سے قول اور عمل میں سچائی مانگتا ہوں
+- [ ] `day.15.hadith.meaning`
+  - Arabic source: إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ، وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ، وَإِنَّ الرَّجُلَ لَيَصْدُقُ حَتَّى يَكُونَ صِدِّيقًا، وَإِنَّ الْكَذِبَ يَهْدِي إِلَى الْفُجُورِ، وَإِنَّ الْفُجُورَ يَهْدِي إِلَى النَّارِ، وَإِنَّ الرَّجُلَ لَيَكْذِبُ، حَتَّى يُكْتَبَ عِنْدَ اللَّهِ كَذَّابًا
+  - English: "Truthfulness leads to righteousness, and righteousness leads to Paradise. A man keeps telling the truth until he becomes truthful. Lying leads to wickedness, and wickedness leads to the Fire. A man keeps lying until he is written before Allah as a liar."
+  - Urdu: ”سچائی نیکی کی طرف لے جاتی ہے، اور نیکی جنت کی طرف لے جاتی ہے۔ آدمی سچ بولتا رہتا ہے یہاں تک کہ وہ صدیق بن جاتا ہے۔ اور جھوٹ گناہ کی طرف لے جاتا ہے، اور گناہ آگ کی طرف لے جاتا ہے۔ آدمی جھوٹ بولتا رہتا ہے یہاں تک کہ اللہ کے ہاں بہت جھوٹا لکھ دیا جاتا ہے۔“
+- [ ] `day.16.dhikr.audhu_minal_khiyanah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُوعِ فَإِنَّهُ بِئْسَ الضَّجِيعُ، وَأَعُوذُ بِكَ مِنَ الْخِيَانَةِ فَإِنَّهَا بِئْسَتِ الْبِطَانَةُ
+  - English: O Allah, I seek refuge in You from hunger, for it is a wretched bed-fellow, and from treachery, for it is a wretched inner companion
+  - Urdu: اے اللہ! میں تیری پناہ مانگتا ہوں بھوک سے، کیونکہ وہ بدترین ساتھی ہے، اور خیانت سے، کیونکہ وہ بدترین رازدار ہے
+- [ ] `day.16.dhikr.subhanallahil_azimi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ
+  - English: Glory be to Allah the Magnificent, and praise be to Him
+  - Urdu: عظمت والا اللہ پاک ہے، اپنی تعریف کے ساتھ
+- [ ] `day.16.hadith.meaning`
+  - Arabic source: أَلاَ كُلُّكُمْ رَاعٍ، وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ
+  - English: "Indeed, each of you is a shepherd, and each of you is responsible for his flock."
+  - Urdu: ”سن لو! تم میں سے ہر ایک نگہبان ہے، اور ہر ایک سے اس کی رعیت کے بارے میں پوچھا جائے گا۔“
+- [ ] `day.17.dhikr.audhu_minal_jaza.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجَزَعِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from panic and despair in hardship
+  - Urdu: (ذاتی دعا) اے اللہ! میں بے صبری اور گھبراہٹ سے تیری پناہ مانگتا ہوں
+- [ ] `day.17.dhikr.istirja.meaning`
+  - Arabic source: إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا
+  - English: (At a calamity) We belong to Allah and to Him we return. O Allah, reward me in my affliction and replace it for me with something better
+  - Urdu: (مصیبت کے وقت) ہم اللہ ہی کے ہیں اور اسی کی طرف لوٹنے والے ہیں۔ اے اللہ! مجھے میری مصیبت میں اجر دے اور مجھے اس کے بدلے اس سے بہتر عطا فرما
+- [ ] `day.17.dhikr.sabr_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصَّبْرَ عَلَى أَقْدَارِكَ
+  - English: (Personal du'a) O Allah, I ask You for patience with what You decree
+  - Urdu: (ذاتی دعا) اے اللہ! میں تجھ سے تیری تقدیر پر صبر مانگتا ہوں
+- [ ] `day.17.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.17.hadith.meaning`
+  - Arabic source: عَجَبًا لأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ وَلَيْسَ ذَاكَ لأَحَدٍ إِلاَّ لِلْمُؤْمِنِ إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ
+  - English: "How wonderful is the affair of the believer! All of it is good, and that is for no one except the believer. If something good happens to him, he is grateful, and that is good for him. If something bad happens to him, he is patient, and that is good for him."
+  - Urdu: ”مومن کا معاملہ بھی عجیب ہے! اس کا ہر معاملہ اس کے لیے بھلائی ہے، اور یہ بات مومن کے سوا کسی کو حاصل نہیں۔ اگر اسے خوشی پہنچے تو شکر کرتا ہے، اور یہ اس کے لیے بھلائی ہے۔ اور اگر اسے تکلیف پہنچے تو صبر کرتا ہے، اور یہ بھی اس کے لیے بھلائی ہے۔“
+- [ ] `day.18.dhikr.audhu_minal_kibr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكِبْرِ وَالْعُجْبِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from arrogance and self-admiration
+  - Urdu: (ذاتی دعا) اے اللہ! میں تکبر اور خود پسندی سے تیری پناہ مانگتا ہوں
+- [ ] `day.18.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Urdu: (مجلس کے اختتام پر) اے اللہ! تو پاک ہے اپنی تعریف کے ساتھ، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے مغفرت مانگتا ہوں اور تیری طرف توبہ کرتا ہوں
+- [ ] `day.18.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ أَوْحَى إِلَىَّ أَنْ تَوَاضَعُوا حَتَّى لاَ يَفْخَرَ أَحَدٌ عَلَى أَحَدٍ وَلاَ يَبْغِي أَحَدٌ عَلَى أَحَدٍ
+  - English: "Allah has revealed to me that you must be humble towards one another, so that no one boasts over another and no one wrongs another."
+  - Urdu: ”اللہ نے میری طرف وحی کی ہے کہ تم آپس میں عاجزی اختیار کرو، یہاں تک کہ کوئی کسی پر فخر نہ کرے اور کوئی کسی پر زیادتی نہ کرے۔“
+- [ ] `day.19.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Urdu: اللہ کے نام سے جو بڑا مہربان، نہایت رحم والا ہے
+- [ ] `day.19.dhikr.ighfir_lil_muminin.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ
+  - English: (Personal du'a) O Allah, forgive the believing men and women
+  - Urdu: (ذاتی دعا) اے اللہ! مومن مردوں اور مومن عورتوں کی مغفرت فرما
+- [ ] `day.19.dhikr.irhamna_bi_rahmatik.meaning`
+  - Arabic source: اللَّهُمَّ ارْحَمْنَا بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ
+  - English: (Personal du'a) O Allah, have mercy on us with Your mercy that encompasses all things
+  - Urdu: (ذاتی دعا) اے اللہ! ہم پر اپنی اس رحمت سے رحم فرما جو ہر چیز پر چھائی ہوئی ہے
+- [ ] `day.19.dhikr.rabbana_wasita.meaning`
+  - Arabic source: رَبَّنَا وَسِعۡتَ كُلَّ شَيۡءࣲ رَّحۡمَةࣰ وَعِلۡمࣰا فَٱغۡفِرۡ لِلَّذِينَ تَابُواْ وَٱتَّبَعُواْ سَبِيلَكَ وَقِهِمۡ عَذَابَ ٱلۡجَحِيمِ
+  - English: Our Lord, You encompass all things in mercy and knowledge, so forgive those who repent and follow Your way, and protect them from the punishment of Hellfire
+  - Urdu: اے ہمارے رب! تو نے ہر چیز کو رحمت اور علم سے گھیر رکھا ہے، پس ان لوگوں کو بخش دے جنہوں نے توبہ کی اور تیرے راستے کی پیروی کی، اور انہیں جہنم کے عذاب سے بچا
+- [ ] `day.19.hadith.meaning`
+  - Arabic source: الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ، ارْحَمُوا مَنْ فِي الأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ
+  - English: "The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will have mercy on you."
+  - Urdu: ”رحم کرنے والوں پر رحمٰن رحم کرتا ہے۔ تم زمین والوں پر رحم کرو، آسمان والا تم پر رحم کرے گا۔“
+- [ ] `day.2.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Urdu: (مجلس کے اختتام پر) اے اللہ! تو پاک ہے اپنی تعریف کے ساتھ، میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں، میں تجھ سے مغفرت مانگتا ہوں اور تیری طرف توبہ کرتا ہوں
+- [ ] `day.2.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `day.2.dhikr.shahadah_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: (After wudu) I testify that there is no god but Allah, alone without partner, and that Muhammad is His servant and messenger
+  - Urdu: (وضو کے بعد) میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں
+- [ ] `day.2.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.2.hadith.meaning`
+  - Arabic source: الطُّهُورُ شَطْرُ الإِيمَانِ
+  - English: "Purification is half of faith."
+  - Urdu: ”پاکیزگی آدھا ایمان ہے۔“
+- [ ] `day.2.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ
+  - English: (After the shahadah that follows wudu) O Allah, make me among those who repent and make me among those who purify themselves.
+  - Urdu: (وضو کے بعد کلمۂ شہادت کے بعد) اے اللہ! مجھے توبہ کرنے والوں میں سے بنا دے اور مجھے پاکیزگی اختیار کرنے والوں میں سے بنا دے۔
+- [ ] `day.20.dhikr.barik_li_fi_ahli.meaning`
+  - Arabic source: اللَّهُمَّ بَارِكْ لِي فِي أَهْلِي وَمَالِي
+  - English: (Personal du'a) O Allah, bless me in my family and my wealth
+  - Urdu: (ذاتی دعا) اے اللہ! میرے گھر والوں اور میرے مال میں برکت عطا فرما
+- [ ] `day.20.dhikr.ijma_shamla_ahli.meaning`
+  - Arabic source: اللَّهُمَّ اجْمَعْ شَمْلَ أَهْلِي عَلَى طَاعَتِكَ
+  - English: (Personal du'a) O Allah, unite my family in obeying You
+  - Urdu: (ذاتی دعا) اے اللہ! میرے گھر والوں کو اپنی اطاعت پر جمع فرما دے
+- [ ] `day.20.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.20.hadith.meaning`
+  - Arabic source: مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، وَيُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ
+  - English: "Whoever loves that his provision be expanded and his life be extended, let him keep the ties of kinship."
+  - Urdu: ”جسے یہ پسند ہو کہ اس کے رزق میں کشادگی کی جائے اور اس کی عمر دراز کی جائے، تو وہ صلہ رحمی کرے۔“
+- [ ] `day.21.dhikr.ahsanta_khalqi.meaning`
+  - Arabic source: اللَّهُمَّ أَحْسَنْتَ خَلْقِي فَأَحْسِنْ خُلُقِي
+  - English: O Allah, You have made my form beautiful, so make my character beautiful
+  - Urdu: اے اللہ! تو نے میری صورت اچھی بنائی، تو میرے اخلاق بھی اچھے بنا دے
+- [ ] `day.21.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں۔ نبی کریم ﷺ دن میں سو مرتبہ استغفار فرماتے تھے۔
+- [ ] `day.21.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Urdu: (ایک طویل دعا سے) اور مجھے بہترین اخلاق کی ہدایت دے، تیرے سوا کوئی بہترین اخلاق کی ہدایت نہیں دیتا؛ اور برے اخلاق مجھ سے دور کر دے، تیرے سوا کوئی انہیں مجھ سے دور نہیں کرتا
+- [ ] `day.21.hadith.meaning`
+  - Arabic source: إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلاَقًا
+  - English: "Indeed, among the best of you are those with the best character."
+  - Urdu: ”بے شک تم میں سے بہترین لوگ وہ ہیں جن کے اخلاق سب سے اچھے ہیں۔“
+- [ ] `day.22.dhikr.ilman_nafian.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds
+  - Urdu: (فجر کے سلام کے بعد) اے اللہ! میں تجھ سے نفع دینے والا علم، پاکیزہ رزق اور قبول ہونے والا عمل مانگتا ہوں
+- [ ] `day.22.dhikr.rabbi_zidni_ilma.meaning`
+  - Arabic source: رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: (From Quran 20:114, where Allah tells the Prophet ﷺ to say it) My Lord, increase me in knowledge
+  - Urdu: (قرآن 20:114 سے، جہاں اللہ نے نبی کریم ﷺ کو یہ کہنے کا حکم دیا) اے میرے رب! میرے علم میں اضافہ فرما
+- [ ] `day.22.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.22.hadith.meaning`
+  - Arabic source: وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
+  - English: "Whoever travels a path seeking knowledge, Allah will make easy for him a path to Paradise."
+  - Urdu: ”جو شخص علم کی تلاش میں کسی راستے پر چلتا ہے، اللہ اس کے لیے جنت کا راستہ آسان کر دیتا ہے۔“
+- [ ] `day.23.dhikr.rabbana_ma_khalaqta.meaning`
+  - Arabic source: رَبَّنَا مَا خَلَقۡتَ هَٰذَا بَٰطِلࣰا سُبۡحَٰنَكَ فَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, You did not create this in vain; glory be to You, so protect us from the punishment of the Fire
+  - Urdu: اے ہمارے رب! تو نے یہ سب بے مقصد پیدا نہیں کیا، تو پاک ہے، پس ہمیں آگ کے عذاب سے بچا
+- [ ] `day.23.dhikr.subhanallahi_adada_khalqih.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ
+  - English: (Three times, after Fajr) Glory be to Allah and praise be to Him, as many times as the number of His creation, as much as pleases Him, as much as the weight of His Throne, and as much as the ink of His words
+  - Urdu: (فجر کے بعد تین مرتبہ) اللہ پاک ہے اپنی تعریف کے ساتھ، اپنی مخلوق کی تعداد کے برابر، اپنی رضا کے مطابق، اپنے عرش کے وزن کے برابر، اور اپنے کلمات کی سیاہی کے برابر
+- [ ] `day.23.hadith.meaning`
+  - Arabic source: قَعَدَ فَنَظَرَ إِلَى السَّمَاءِ فَقَالَ ﴿إِنَّ فِي خَلْقِ السَّمَوَاتِ وَالأَرْضِ وَاخْتِلاَفِ اللَّيْلِ وَالنَّهَارِ لآيَاتٍ لأُولِي الأَلْبَابِ﴾
+  - English: Ibn 'Abbas said that when it was the last third of the night, the Prophet ﷺ sat up, looked at the sky and recited: "Indeed, in the creation of the heavens and the earth and the alternation of night and day are signs for those of understanding" (3:190).
+  - Urdu: حضرت ابن عباسؓ بیان کرتے ہیں کہ جب رات کا آخری تہائی حصہ ہوا تو نبی کریم ﷺ اٹھ بیٹھے، آسمان کی طرف دیکھا اور یہ آیت پڑھی: ”بے شک آسمانوں اور زمین کی پیدائش میں اور رات اور دن کے بدلنے میں عقل والوں کے لیے نشانیاں ہیں“ (3:190)۔
+- [ ] `day.24.dhikr.asalukal_jannah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ
+  - English: (From a longer du'a) O Allah, I ask You for Paradise and for whatever word or deed brings me near to it
+  - Urdu: (ایک طویل دعا سے) اے اللہ! میں تجھ سے جنت مانگتا ہوں اور ہر اس قول یا عمل کو جو اس کے قریب کر دے
+- [ ] `day.24.dhikr.la_tajal_ad_dunya.meaning`
+  - Arabic source: وَلاَ تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلاَ مَبْلَغَ عِلْمِنَا
+  - English: (From a longer du'a he often made before rising from a gathering) And do not make this world our greatest concern nor the limit of our knowledge
+  - Urdu: (ایک طویل دعا سے جو آپ ﷺ اکثر مجلس سے اٹھنے سے پہلے مانگتے تھے) اور دنیا کو ہماری سب سے بڑی فکر اور ہمارے علم کی انتہا نہ بنا
+- [ ] `day.24.hadith.meaning`
+  - Arabic source: كُنْ فِي الدُّنْيَا كَأَنَّكَ غَرِيبٌ، أَوْ عَابِرُ سَبِيلٍ
+  - English: "Be in this world as if you were a stranger or a traveller."
+  - Urdu: ”دنیا میں ایسے رہو گویا تم اجنبی ہو یا راہ گیر۔“
+- [ ] `day.25.dhikr.audhu_an_ushrika.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ
+  - English: O Allah, I seek refuge in You from knowingly associating anything with You, and I seek Your forgiveness for what I do not know
+  - Urdu: اے اللہ! میں تیری پناہ مانگتا ہوں اس سے کہ جانتے بوجھتے تیرے ساتھ کسی کو شریک ٹھہراؤں، اور جو میں نہیں جانتا اس کے لیے تجھ سے مغفرت مانگتا ہوں
+- [ ] `day.25.dhikr.umar_dua_ikhlas.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا، وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا، وَلَا تَجْعَلْ لِأَحَدٍ فِيهِ شَيْئًا
+  - English: (Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds righteous, purely for Your Face, and let no one have any share in them
+  - Urdu: (حضرت عمر بن خطابؓ کی دعا) اے اللہ! میرے تمام اعمال کو نیک بنا، انہیں خالص اپنی رضا کے لیے بنا، اور ان میں کسی اور کا کوئی حصہ نہ رکھ
+- [ ] `day.25.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ لاَ يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ
+  - English: "Allah does not look at your forms or your wealth, but He looks at your hearts and your deeds."
+  - Urdu: ”اللہ تمہاری صورتوں اور تمہارے مالوں کو نہیں دیکھتا، بلکہ تمہارے دلوں اور تمہارے اعمال کو دیکھتا ہے۔“
+- [ ] `day.26.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `day.26.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.26.dhikr.yuraqibuka.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِمَّنْ يُرَاقِبُكَ فِي السِّرِّ وَالْعَلَانِيَةِ
+  - English: (Personal du'a) O Allah, make me among those who are mindful of You in private and in public
+  - Urdu: (ذاتی دعا) اے اللہ! مجھے ان لوگوں میں سے بنا جو تنہائی میں بھی اور سب کے سامنے بھی تیرا دھیان رکھتے ہیں
+- [ ] `day.26.hadith.meaning`
+  - Arabic source: أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ، فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+  - English: "[Ihsan is] to worship Allah as if you see Him, and if you do not see Him, He surely sees you."
+  - Urdu: ”[احسان یہ ہے کہ] تم اللہ کی عبادت اس طرح کرو گویا تم اسے دیکھ رہے ہو، اور اگر تم اسے نہیں دیکھ رہے تو وہ یقیناً تمہیں دیکھ رہا ہے۔“
+- [ ] `day.27.dhikr.asalukal_afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: (Morning and evening) O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me
+  - Urdu: (صبح و شام) اے اللہ! میں تجھ سے دنیا اور آخرت میں عافیت مانگتا ہوں۔ اے اللہ! میں تجھ سے اپنے دین، اپنی دنیا، اپنے گھر والوں اور اپنے مال میں معافی اور عافیت مانگتا ہوں۔ اے اللہ! میرے عیبوں پر پردہ ڈال دے اور میرے خوف کو امن میں بدل دے۔ اے اللہ! میرے آگے سے، میرے پیچھے سے، میرے دائیں سے، میرے بائیں سے اور میرے اوپر سے میری حفاظت فرما، اور میں تیری عظمت کی پناہ مانگتا ہوں اس سے کہ اچانک نیچے سے ہلاک کیا جاؤں
+- [ ] `day.27.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Urdu: میں اللہ عظمت والے سے مغفرت مانگتا ہوں جس کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ ہے، سب کو قائم رکھنے والا ہے، اور میں اس کی طرف توبہ کرتا ہوں
+- [ ] `day.27.dhikr.rabbana_zalamna.meaning`
+  - Arabic source: رَبَّنَا ظَلَمۡنَآ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَٰسِرِينَ
+  - English: Our Lord, we have wronged ourselves; if You do not forgive us and have mercy on us, we will surely be among the losers
+  - Urdu: اے ہمارے رب! ہم نے اپنی جانوں پر ظلم کیا، اور اگر تو ہمیں نہ بخشے اور ہم پر رحم نہ کرے تو ہم ضرور نقصان اٹھانے والوں میں سے ہو جائیں گے
+- [ ] `day.27.hadith.meaning`
+  - Arabic source: اللَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ، وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ
+  - English: "Allah is more pleased with the repentance of His servant than one of you who comes upon his camel after losing it in a desolate land."
+  - Urdu: ”اللہ اپنے بندے کی توبہ پر تم میں سے اس شخص سے بھی زیادہ خوش ہوتا ہے جسے اپنا اونٹ مل جائے جو اس سے ایک ویران بیابان میں گم ہو گیا تھا۔“
+- [ ] `day.28.dhikr.aslih_ummata_muhammad.meaning`
+  - Arabic source: اللَّهُمَّ أَصْلِحْ أُمَّةَ مُحَمَّدٍ، وَفَرِّجْ عَنْ أُمَّةِ مُحَمَّدٍ، وَارْحَمْ أُمَّةَ مُحَمَّدٍ
+  - English: (Personal du'a) O Allah, set right the ummah of Muhammad, relieve the ummah of Muhammad, and have mercy on the ummah of Muhammad
+  - Urdu: (ذاتی دعا) اے اللہ! امتِ محمد ﷺ کی اصلاح فرما، امتِ محمد ﷺ کی مشکلات دور فرما، اور امتِ محمد ﷺ پر رحم فرما
+- [ ] `day.28.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.28.dhikr.unsur_al_islam.meaning`
+  - Arabic source: اللَّهُمَّ انْصُرِ الْإِسْلَامَ وَالْمُسْلِمِينَ
+  - English: (Personal du'a) O Allah, give victory to Islam and the Muslims
+  - Urdu: (ذاتی دعا) اے اللہ! اسلام اور مسلمانوں کی مدد فرما
+- [ ] `day.28.hadith.meaning`
+  - Arabic source: الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا
+  - English: "The believer to the believer is like a building, each part strengthening the other."
+  - Urdu: ”مومن مومن کے لیے عمارت کی طرح ہے، جس کا ایک حصہ دوسرے کو مضبوط کرتا ہے۔“
+- [ ] `day.29.dhikr.hudatan_muhtadin.meaning`
+  - Arabic source: اللَّهُمَّ زَيِّنَّا بِزِينَةِ الْإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ
+  - English: (From a longer du'a) O Allah, adorn us with the beauty of faith, and make us guides who are themselves rightly guided
+  - Urdu: (ایک طویل دعا سے) اے اللہ! ہمیں ایمان کی زینت سے آراستہ فرما، اور ہمیں ہدایت دینے والا اور خود ہدایت یافتہ بنا
+- [ ] `day.29.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Urdu: اے اللہ! محمد ﷺ پر اور آلِ محمد پر رحمت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر رحمت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔ اے اللہ! محمد ﷺ پر اور آلِ محمد پر برکت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر برکت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔
+- [ ] `day.29.hadith.meaning`
+  - Arabic source: بَلِّغُوا عَنِّي وَلَوْ آيَةً
+  - English: "Convey from me, even if it is one verse."
+  - Urdu: ”میری طرف سے پہنچا دو، چاہے ایک آیت ہی ہو۔“
+- [ ] `day.3.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Urdu: (ہر نماز کے بعد) تمام تعریفیں اللہ کے لیے ہیں
+- [ ] `day.3.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Urdu: (ہر نماز کے بعد) اللہ سب سے بڑا ہے
+- [ ] `day.3.dhikr.dua_after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: (After each adhan) O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him
+  - Urdu: (ہر اذان کے بعد) اے اللہ! اس کامل پکار اور قائم ہونے والی نماز کے رب! محمد ﷺ کو وسیلہ اور فضیلت عطا فرما، اور انہیں اس مقامِ محمود پر فائز فرما جس کا تو نے ان سے وعدہ کیا ہے
+- [ ] `day.3.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Urdu: (ہر نماز کے بعد) اللہ پاک ہے
+- [ ] `day.3.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Urdu: (تسبیح کے بعد سوواں) اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے
+- [ ] `day.3.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Urdu: (جاگنے پر) تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں موت کے بعد زندگی دی، اور اسی کی طرف اٹھ کر جانا ہے
+- [ ] `day.3.hadith.meaning`
+  - Arabic source: إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلاَتُهُ، فَإِنْ صَلَحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ
+  - English: "The first of his deeds for which a servant will be called to account on the Day of Resurrection is his prayer. If it is sound, he has succeeded and prospered; if it is corrupt, he has failed and lost."
+  - Urdu: ”قیامت کے دن بندے سے اس کے اعمال میں سب سے پہلے اس کی نماز کا حساب لیا جائے گا۔ اگر وہ درست ہوئی تو وہ کامیاب اور بامراد ہوا، اور اگر وہ خراب ہوئی تو وہ ناکام اور نامراد ہوا۔“
+- [ ] `day.30.dhikr.ighfir_li_ma_qaddamtu.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: O Allah, forgive me what I have done before and what I have left for later, what I did in secret and what I did openly, and what You know better than I. You are the One who brings forward and the One who puts back, and You are able to do all things
+  - Urdu: اے اللہ! میرے وہ گناہ بخش دے جو میں نے پہلے کیے اور جو بعد میں کیے، جو چھپ کر کیے اور جو علانیہ کیے، اور جنہیں تو مجھ سے زیادہ جانتا ہے۔ تو ہی آگے کرنے والا ہے اور تو ہی پیچھے کرنے والا ہے، اور تو ہر چیز پر قادر ہے
+- [ ] `day.30.dhikr.musarrifal_qulub.meaning`
+  - Arabic source: اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ
+  - English: O Allah, Director of hearts, direct our hearts to Your obedience
+  - Urdu: اے اللہ! دلوں کو پھیرنے والے! ہمارے دلوں کو اپنی اطاعت کی طرف پھیر دے
+- [ ] `day.30.dhikr.ya_muqallibal_qulub.meaning`
+  - Arabic source: يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ
+  - English: (Umm Salamah said this was the du'a he made most often when he was with her) O Turner of hearts, make my heart firm upon Your religion
+  - Urdu: (حضرت ام سلمہؓ نے بتایا کہ ان کے پاس ہوتے ہوئے آپ ﷺ سب سے زیادہ یہی دعا مانگتے تھے) اے دلوں کو پلٹنے والے! میرے دل کو اپنے دین پر ثابت قدم رکھ
+- [ ] `day.30.hadith.meaning`
+  - Arabic source: قُلْ آمَنْتُ بِاللَّهِ فَاسْتَقِمْ
+  - English: "Say: I believe in Allah, then be steadfast." (His answer to Sufyan ibn 'Abdullah ath-Thaqafi, who asked for a teaching he would never need to ask anyone else about.)
+  - Urdu: ”کہو: میں اللہ پر ایمان لایا، پھر اس پر ثابت قدم رہو۔“ (یہ آپ ﷺ کا جواب تھا حضرت سفیان بن عبداللہ ثقفیؓ کو، جنہوں نے ایسی نصیحت مانگی تھی جس کے بارے میں انہیں پھر کسی اور سے پوچھنے کی ضرورت نہ پڑے۔)
+- [ ] `day.4.dhikr.asbahna_ala_fitrah.meaning`
+  - Arabic source: أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ، وَعَلَى كَلِمَةِ الْإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ
+  - English: We have entered the morning upon the natural way of Islam, the word of sincerity, the religion of our Prophet Muhammad ﷺ, and the way of our father Ibrahim, upright and submitting, who was not of the polytheists
+  - Urdu: ہم نے صبح کی اسلام کی فطرت پر، کلمۂ اخلاص پر، اپنے نبی محمد ﷺ کے دین پر، اور اپنے باپ ابراہیمؑ کی ملت پر جو یکسو اور فرمانبردار تھے اور مشرکوں میں سے نہ تھے
+- [ ] `day.4.dhikr.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created
+  - Urdu: میں اللہ کے کامل کلمات کی پناہ مانگتا ہوں ہر اس چیز کے شر سے جو اس نے پیدا کی
+- [ ] `day.4.dhikr.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے شام کی اور تیری ہی بدولت صبح کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف لوٹ کر جانا ہے
+- [ ] `day.4.dhikr.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے صبح کی اور تیری ہی بدولت شام کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف اٹھ کر جانا ہے
+- [ ] `day.4.hadith.meaning`
+  - Arabic source: مَنْ صَلَّى الصُّبْحَ فَهُوَ فِي ذِمَّةِ اللَّهِ
+  - English: "Whoever prays Subh (Fajr) is under the protection of Allah."
+  - Urdu: ”جس نے صبح (فجر) کی نماز پڑھی وہ اللہ کی حفاظت میں ہے۔“
+- [ ] `day.4.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَاجْعَلْ فِي سَمْعِي نُورًا، وَاجْعَلْ فِي بَصَرِي نُورًا
+  - English: O Allah, place light in my heart, light in my tongue, light in my hearing and light in my sight.
+  - Urdu: اے اللہ! میرے دل میں نور رکھ دے، میری زبان میں نور، میری سماعت میں نور اور میری بصارت میں نور۔
+- [ ] `day.5.dhikr.dua_dhun_nun.meaning`
+  - Arabic source: لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبۡحَٰنَكَ إِنِّي كُنتُ مِنَ ٱلظَّٰلِمِينَ
+  - English: There is no god but You, glory be to You; I have been among the wrongdoers
+  - Urdu: تیرے سوا کوئی معبود نہیں، تو پاک ہے، بے شک میں ظالموں میں سے تھا
+- [ ] `day.5.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Urdu: اے اللہ! محمد ﷺ پر رحمت نازل فرما
+- [ ] `day.5.dhikr.subhanallahil_azim.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ
+  - English: Glory be to Allah and praise be to Him; glory be to Allah the Magnificent
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ، اللہ پاک ہے عظمت والا
+- [ ] `day.5.dhikr.ya_hayyu_ya_qayyum.meaning`
+  - Arabic source: يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ
+  - English: (In times of distress) O Ever-Living, O Sustainer, by Your mercy I seek help
+  - Urdu: (پریشانی کے وقت) اے ہمیشہ زندہ رہنے والے! اے سب کو قائم رکھنے والے! میں تیری رحمت سے مدد کی فریاد کرتا ہوں
+- [ ] `day.5.hadith.meaning`
+  - Arabic source: صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي
+  - English: "Pray as you have seen me praying."
+  - Urdu: ”اسی طرح نماز پڑھو جیسے تم نے مجھے نماز پڑھتے دیکھا ہے۔“
+- [ ] `day.5.prayer.dua.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ، اللَّهُمَّ اغْفِرْ لِي
+  - English: (In ruku' and sujood) Glory be to You, O Allah, our Lord, and praise be to You. O Allah, forgive me.
+  - Urdu: (رکوع اور سجدے میں) اے اللہ! اے ہمارے رب! تو پاک ہے اپنی تعریف کے ساتھ۔ اے اللہ! مجھے بخش دے۔
+- [ ] `day.6.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Urdu: (ایک طویل دعا سے) اور مجھے بہترین اخلاق کی ہدایت دے، تیرے سوا کوئی بہترین اخلاق کی ہدایت نہیں دیتا؛ اور برے اخلاق مجھ سے دور کر دے، تیرے سوا کوئی انہیں مجھ سے دور نہیں کرتا
+- [ ] `day.6.dhikr.rabi_qalbi.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلِ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ صَدْرِي، وَجِلَاءَ حُزْنِي، وَذَهَابَ هَمِّي
+  - English: (From a longer du'a for distress, Ahmad 3712) O Allah, make the Quran the spring of my heart, the light of my chest, the remover of my sorrow and the reliever of my distress
+  - Urdu: (پریشانی کی ایک طویل دعا سے، احمد 3712) اے اللہ! قرآن کو میرے دل کی بہار، میرے سینے کا نور، میرے غم کو دور کرنے والا اور میری فکر کو ختم کرنے والا بنا دے
+- [ ] `day.6.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `day.6.hadith.meaning`
+  - Arabic source: مَنْ قَرَأَ حَرْفًا مِنْ كِتَابِ اللَّهِ فَلَهُ بِهِ حَسَنَةٌ، وَالْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا، لاَ أَقُولُ الم حَرْفٌ، وَلَكِنْ أَلِفٌ حَرْفٌ وَلاَمٌ حَرْفٌ وَمِيمٌ حَرْفٌ
+  - English: "Whoever reads a letter from the Book of Allah receives a good deed for it, and a good deed is multiplied ten times. I do not say that Alif-Lam-Mim is one letter; rather Alif is a letter, Lam is a letter and Mim is a letter."
+  - Urdu: ”جس نے اللہ کی کتاب کا ایک حرف پڑھا اسے اس کے بدلے ایک نیکی ملے گی، اور نیکی دس گنا بڑھا دی جاتی ہے۔ میں نہیں کہتا کہ الم ایک حرف ہے، بلکہ الف ایک حرف ہے، لام ایک حرف ہے اور میم ایک حرف ہے۔“
+- [ ] `day.7.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Urdu: میں اللہ عظمت والے سے مغفرت مانگتا ہوں جس کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ ہے، سب کو قائم رکھنے والا ہے، اور میں اس کی طرف توبہ کرتا ہوں
+- [ ] `day.7.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `day.7.hadith.meaning`
+  - Arabic source: وَاللَّهِ إِنِّي لأَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ فِي الْيَوْمِ أَكْثَرَ مِنْ سَبْعِينَ مَرَّةً
+  - English: "By Allah, I seek Allah's forgiveness and turn to Him in repentance more than seventy times a day."
+  - Urdu: ”اللہ کی قسم! میں دن میں ستر مرتبہ سے زیادہ اللہ سے مغفرت مانگتا ہوں اور اس کی طرف توبہ کرتا ہوں۔“
+- [ ] `day.7.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ
+  - English: O Allah, I ask You for pardon and well-being in this world and the Hereafter.
+  - Urdu: اے اللہ! میں تجھ سے دنیا اور آخرت میں معافی اور عافیت مانگتا ہوں۔
+- [ ] `day.8.dhikr.afini_fi_badani.meaning`
+  - Arabic source: اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ
+  - English: O Allah, grant me well-being in my body, my hearing and my sight; there is no god but You
+  - Urdu: اے اللہ! مجھے میرے جسم میں عافیت دے، اے اللہ! مجھے میری سماعت میں عافیت دے، اے اللہ! مجھے میری بصارت میں عافیت دے، تیرے سوا کوئی معبود نہیں
+- [ ] `day.8.dhikr.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave
+  - Urdu: ہم نے شام کی اور اللہ کی بادشاہی نے شام کی، اور تمام تعریفیں اللہ کے لیے ہیں۔ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے۔ اے میرے رب! میں تجھ سے اس رات کی بھلائی اور اس کے بعد کی بھلائی مانگتا ہوں، اور اس رات کے شر اور اس کے بعد کے شر سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں سستی اور بڑھاپے کی خرابی سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں آگ کے عذاب اور قبر کے عذاب سے تیری پناہ مانگتا ہوں
+- [ ] `day.8.dhikr.bismillah_alladhi.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing
+  - Urdu: اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ سب کچھ سننے والا، سب کچھ جاننے والا ہے
+- [ ] `day.8.dhikr.hasbiyallah.meaning`
+  - Arabic source: حَسۡبِيَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَۖ عَلَيۡهِ تَوَكَّلۡتُۖ وَهُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡعَظِيمِ
+  - English: Allah is sufficient for me; there is no god but Him; in Him I trust, and He is Lord of the Mighty Throne
+  - Urdu: میرے لیے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں، میں نے اسی پر بھروسا کیا، اور وہ عرشِ عظیم کا رب ہے
+- [ ] `day.8.dhikr.three_quls.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ
+  - English: Surahs Al-Ikhlas, Al-Falaq and An-Nas, three times each in the morning and evening. The Prophet ﷺ said they will suffice you against everything.
+  - Urdu: سورۃ الاخلاص، سورۃ الفلق اور سورۃ الناس، صبح و شام تین تین مرتبہ۔ نبی کریم ﷺ نے فرمایا کہ یہ تمہیں ہر چیز سے کافی ہو جائیں گی۔
+- [ ] `day.8.hadith.meaning`
+  - Arabic source: مَثَلُ الَّذِي يَذْكُرُ رَبَّهُ وَالَّذِي لاَ يَذْكُرُ رَبَّهُ مَثَلُ الْحَيِّ وَالْمَيِّتِ
+  - English: "The example of one who remembers his Lord and one who does not is like the living and the dead."
+  - Urdu: ”اپنے رب کو یاد کرنے والے اور یاد نہ کرنے والے کی مثال زندہ اور مردہ کی سی ہے۔“
+- [ ] `day.9.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Urdu: اے اللہ! محمد ﷺ پر رحمت نازل فرما
+- [ ] `day.9.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Urdu: اے اللہ! محمد ﷺ پر اور آلِ محمد پر رحمت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر رحمت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔ اے اللہ! محمد ﷺ پر اور آلِ محمد پر برکت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر برکت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔
+- [ ] `day.9.hadith.meaning`
+  - Arabic source: لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ وَالنَّاسِ أَجْمَعِينَ
+  - English: "None of you truly believes until I am more beloved to him than his father, his child and all of mankind."
+  - Urdu: ”تم میں سے کوئی اس وقت تک مومن نہیں ہو سکتا جب تک میں اسے اس کے والد، اس کی اولاد اور تمام لوگوں سے زیادہ محبوب نہ ہو جاؤں۔“
+- [ ] `dua.after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him.
+  - Urdu: اے اللہ! اس کامل پکار اور قائم ہونے والی نماز کے رب! محمد ﷺ کو وسیلہ اور فضیلت عطا فرما، اور انہیں اس مقامِ محمود پر فائز فرما جس کا تو نے ان سے وعدہ کیا ہے۔
+- [ ] `dua.after_eating.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ
+  - English: All praise is for Allah who fed me this and provided it for me without any might or power on my part.
+  - Urdu: تمام تعریفیں اللہ کے لیے ہیں جس نے مجھے یہ کھلایا اور میری کسی طاقت اور قوت کے بغیر مجھے یہ رزق عطا کیا۔
+- [ ] `dua.after_salah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ. اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ ذَا الْجَلَالِ وَالْإِكْرَامِ
+  - English: I seek Allah’s forgiveness (three times). O Allah, You are Peace and from You comes peace; blessed are You, Possessor of majesty and honour.
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں (تین مرتبہ)۔ اے اللہ! تو ہی سلامتی والا ہے اور تجھ ہی سے سلامتی ہے؛ تو بڑی برکت والا ہے، اے جلال اور عزت والے!
+- [ ] `dua.before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah. The Prophet ﷺ told a boy: “Mention the name of Allah, eat with your right hand, and eat from what is in front of you.”
+  - Urdu: اللہ کے نام سے۔ نبی کریم ﷺ نے ایک لڑکے سے فرمایا: ”اللہ کا نام لو، دائیں ہاتھ سے کھاؤ، اور اپنے سامنے سے کھاؤ۔“
+- [ ] `dua.before_reciting_quran.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed. Allah says: “When you recite the Quran, seek refuge in Allah from Shaytan, the accursed.”
+  - Urdu: میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔ اللہ فرماتا ہے: ”جب تم قرآن پڑھو تو شیطان مردود سے اللہ کی پناہ مانگ لیا کرو۔“
+- [ ] `dua.before_sleeping.meaning`
+  - Arabic source: بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+  - English: In Your name, O Allah, I die and I live.
+  - Urdu: اے اللہ! تیرے ہی نام سے میں مرتا ہوں اور جیتا ہوں۔
+- [ ] `dua.dua_for_knowledge.meaning`
+  - Arabic source: وَقُل رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: And say: “My Lord, increase me in knowledge.” (Allah tells the Prophet ﷺ to say this; the du‘a itself is “Rabbi zidnī ʿilmā”.)
+  - Urdu: اور کہیے: ”اے میرے رب! میرے علم میں اضافہ فرما۔“ (اللہ نے نبی کریم ﷺ کو یہ کہنے کا حکم دیا؛ دعا کے الفاظ یہ ہیں: ”رَّبِّ زِدۡنِي عِلۡمࣰا“۔)
+- [ ] `dua.entering_mosque.meaning`
+  - Arabic source: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ
+  - English: O Allah, open for me the doors of Your mercy.
+  - Urdu: اے اللہ! میرے لیے اپنی رحمت کے دروازے کھول دے۔
+- [ ] `dua.evening_bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے شام کی اور تیری ہی بدولت صبح کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف لوٹ کر جانا ہے۔
+- [ ] `dua.evening_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Urdu: اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ سب کچھ سننے والا، سب کچھ جاننے والا ہے۔
+- [ ] `dua.forgot_bismillah_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ
+  - English: In the name of Allah, at its beginning and at its end.
+  - Urdu: اللہ کے نام سے، اس کے شروع میں بھی اور آخر میں بھی۔
+- [ ] `dua.leaving_home.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+  - English: In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah.
+  - Urdu: اللہ کے نام سے، میں نے اللہ پر بھروسا کیا، اللہ کے سوا نہ کوئی طاقت ہے نہ قوت۔
+- [ ] `dua.leaving_mosque.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ
+  - English: O Allah, I ask You of Your bounty.
+  - Urdu: اے اللہ! میں تجھ سے تیرا فضل مانگتا ہوں۔
+- [ ] `dua.morning_bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے صبح کی اور تیری ہی بدولت شام کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف اٹھ کر جانا ہے۔
+- [ ] `dua.morning_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Urdu: اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ سب کچھ سننے والا، سب کچھ جاننے والا ہے۔
+- [ ] `dua.opening_dua_salah.meaning`
+  - Arabic source: اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: O Allah, put distance between me and my sins as You have put distance between the East and the West. O Allah, cleanse me of sins as a white garment is cleansed of dirt. O Allah, wash away my sins with water, snow and hail.
+  - Urdu: اے اللہ! میرے اور میرے گناہوں کے درمیان اتنی دوری کر دے جتنی تو نے مشرق اور مغرب کے درمیان دوری رکھی ہے۔ اے اللہ! مجھے گناہوں سے ایسا صاف کر دے جیسے سفید کپڑا میل سے صاف کیا جاتا ہے۔ اے اللہ! میرے گناہوں کو پانی، برف اور اولوں سے دھو دے۔
+- [ ] `dua.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `dua.tawbah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ
+  - English: I seek Allah’s forgiveness and I turn to Him in repentance.
+  - Urdu: میں اللہ سے مغفرت مانگتا ہوں اور اس کی طرف توبہ کرتا ہوں۔
+- [ ] `dua.waking_up.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: All praise is for Allah who gave us life after causing us to die, and to Him is the resurrection.
+  - Urdu: تمام تعریفیں اللہ کے لیے ہیں جس نے ہمیں موت کے بعد زندگی دی، اور اسی کی طرف اٹھ کر جانا ہے۔
+- [ ] `learn.dua_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: I bear witness that there is no god but Allah, alone without partner, and I bear witness that Muhammad is His servant and Messenger. (Whoever performs wudu well, then says this, the eight gates of Paradise are opened for him.)
+  - Urdu: میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں۔ (جو اچھی طرح وضو کرے، پھر یہ کہے، اس کے لیے جنت کے آٹھوں دروازے کھول دیے جاتے ہیں۔)
+- [ ] `learn.evening_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Urdu: اے اللہ! میں تجھ سے دنیا اور آخرت میں عافیت مانگتا ہوں۔ اے اللہ! میں تجھ سے اپنے دین، اپنی دنیا، اپنے گھر والوں اور اپنے مال میں معافی اور عافیت مانگتا ہوں۔ اے اللہ! میرے عیبوں پر پردہ ڈال دے اور میرے خوف کو امن میں بدل دے۔ اے اللہ! میرے آگے سے، میرے پیچھے سے، میرے دائیں سے، میرے بائیں سے اور میرے اوپر سے میری حفاظت فرما، اور میں تیری عظمت کی پناہ مانگتا ہوں اس سے کہ اچانک نیچے سے ہلاک کیا جاؤں۔
+- [ ] `learn.evening_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Urdu: اے اللہ! غیب اور ظاہر کے جاننے والے، آسمانوں اور زمین کے پیدا کرنے والے، ہر چیز کے رب اور مالک! میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں۔ میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے شرک (کی دعوت) سے تیری پناہ مانگتا ہوں۔
+- [ ] `learn.evening_adhkar.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Urdu: ہم نے شام کی اور اللہ کی بادشاہی نے شام کی، اور تمام تعریفیں اللہ کے لیے ہیں۔ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے۔ اے میرے رب! میں تجھ سے اس رات کی بھلائی اور اس کے بعد کی بھلائی مانگتا ہوں، اور اس رات کے شر اور اس کے بعد کے شر سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں سستی اور بڑھاپے کی خرابی سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں آگ کے عذاب اور قبر کے عذاب سے تیری پناہ مانگتا ہوں۔
+- [ ] `learn.evening_adhkar.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created.
+  - Urdu: میں اللہ کے کامل کلمات کی پناہ مانگتا ہوں ہر اس چیز کے شر سے جو اس نے پیدا کی۔
+- [ ] `learn.evening_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Urdu: اللہ، اس کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ ہے، سب کو قائم رکھنے والا ہے۔ اسے نہ اونگھ آتی ہے نہ نیند۔ جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے سب اسی کا ہے۔ کون ہے جو اس کی اجازت کے بغیر اس کے پاس سفارش کر سکے؟ وہ جانتا ہے جو کچھ ان کے سامنے ہے اور جو کچھ ان کے پیچھے ہے، اور وہ اس کے علم میں سے کسی چیز کا احاطہ نہیں کر سکتے سوائے اس کے جو وہ چاہے۔ اس کی کرسی آسمانوں اور زمین پر چھائی ہوئی ہے، اور ان کی حفاظت اسے نہیں تھکاتی۔ وہ سب سے بلند، بڑی عظمت والا ہے۔
+- [ ] `learn.evening_adhkar.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے شام کی اور تیری ہی بدولت صبح کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف لوٹ کر جانا ہے۔
+- [ ] `learn.evening_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Urdu: اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ سب کچھ سننے والا، سب کچھ جاننے والا ہے۔
+- [ ] `learn.evening_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `learn.evening_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `learn.evening_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Urdu: الفلق: کہو: میں صبح کے رب کی پناہ مانگتا ہوں، ہر اس چیز کے شر سے جو اس نے پیدا کی، اور اندھیری رات کے شر سے جب وہ چھا جائے، اور گرہوں میں پھونکنے والیوں کے شر سے، اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔
+- [ ] `learn.evening_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Urdu: الاخلاص: کہو: وہ اللہ ایک ہے۔ اللہ بے نیاز ہے، سب اسی کے محتاج ہیں۔ نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے، اور کوئی اس کا ہمسر نہیں۔
+- [ ] `learn.evening_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Urdu: الناس: کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں، انسانوں کے بادشاہ کی، انسانوں کے معبود کی، بار بار پیچھے ہٹ جانے والے وسوسہ ڈالنے والے کے شر سے، جو لوگوں کے دلوں میں وسوسے ڈالتا ہے، جنوں میں سے بھی اور انسانوں میں سے بھی۔
+- [ ] `learn.morning_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Urdu: اے اللہ! میں تجھ سے دنیا اور آخرت میں عافیت مانگتا ہوں۔ اے اللہ! میں تجھ سے اپنے دین، اپنی دنیا، اپنے گھر والوں اور اپنے مال میں معافی اور عافیت مانگتا ہوں۔ اے اللہ! میرے عیبوں پر پردہ ڈال دے اور میرے خوف کو امن میں بدل دے۔ اے اللہ! میرے آگے سے، میرے پیچھے سے، میرے دائیں سے، میرے بائیں سے اور میرے اوپر سے میری حفاظت فرما، اور میں تیری عظمت کی پناہ مانگتا ہوں اس سے کہ اچانک نیچے سے ہلاک کیا جاؤں۔
+- [ ] `learn.morning_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Urdu: اے اللہ! غیب اور ظاہر کے جاننے والے، آسمانوں اور زمین کے پیدا کرنے والے، ہر چیز کے رب اور مالک! میں گواہی دیتا ہوں کہ تیرے سوا کوئی معبود نہیں۔ میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے شرک (کی دعوت) سے تیری پناہ مانگتا ہوں۔
+- [ ] `learn.morning_adhkar.asbahna_wa_asbahal_mulk.meaning`
+  - Arabic source: أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the morning and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this day and what follows it, and seek refuge in You from the evil of this day and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Urdu: ہم نے صبح کی اور اللہ کی بادشاہی نے صبح کی، اور تمام تعریفیں اللہ کے لیے ہیں۔ اللہ کے سوا کوئی معبود نہیں، وہ اکیلا ہے، اس کا کوئی شریک نہیں، بادشاہی اسی کی ہے اور تعریف اسی کے لیے ہے، اور وہ ہر چیز پر قادر ہے۔ اے میرے رب! میں تجھ سے اس دن کی بھلائی اور اس کے بعد کی بھلائی مانگتا ہوں، اور اس دن کے شر اور اس کے بعد کے شر سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں سستی اور بڑھاپے کی خرابی سے تیری پناہ مانگتا ہوں۔ اے میرے رب! میں آگ کے عذاب اور قبر کے عذاب سے تیری پناہ مانگتا ہوں۔
+- [ ] `learn.morning_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Urdu: اللہ، اس کے سوا کوئی معبود نہیں، وہ ہمیشہ زندہ ہے، سب کو قائم رکھنے والا ہے۔ اسے نہ اونگھ آتی ہے نہ نیند۔ جو کچھ آسمانوں میں ہے اور جو کچھ زمین میں ہے سب اسی کا ہے۔ کون ہے جو اس کی اجازت کے بغیر اس کے پاس سفارش کر سکے؟ وہ جانتا ہے جو کچھ ان کے سامنے ہے اور جو کچھ ان کے پیچھے ہے، اور وہ اس کے علم میں سے کسی چیز کا احاطہ نہیں کر سکتے سوائے اس کے جو وہ چاہے۔ اس کی کرسی آسمانوں اور زمین پر چھائی ہوئی ہے، اور ان کی حفاظت اسے نہیں تھکاتی۔ وہ سب سے بلند، بڑی عظمت والا ہے۔
+- [ ] `learn.morning_adhkar.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Urdu: اے اللہ! تیری ہی بدولت ہم نے صبح کی اور تیری ہی بدولت شام کی، تیری ہی بدولت ہم جیتے ہیں اور تیری ہی بدولت مرتے ہیں، اور تیری ہی طرف اٹھ کر جانا ہے۔
+- [ ] `learn.morning_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Urdu: اللہ کے نام سے جس کے نام کے ساتھ زمین اور آسمان میں کوئی چیز نقصان نہیں پہنچا سکتی، اور وہ سب کچھ سننے والا، سب کچھ جاننے والا ہے۔
+- [ ] `learn.morning_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Urdu: اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، اور میں اپنی استطاعت کے مطابق تیرے عہد اور وعدے پر قائم ہوں۔ میں نے جو کچھ کیا اس کے شر سے تیری پناہ مانگتا ہوں۔ میں اپنے اوپر تیری نعمت کا اقرار کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے بخش دے، کیونکہ تیرے سوا کوئی گناہوں کو نہیں بخشتا۔
+- [ ] `learn.morning_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Urdu: اللہ پاک ہے اپنی تعریف کے ساتھ
+- [ ] `learn.morning_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Urdu: الفلق: کہو: میں صبح کے رب کی پناہ مانگتا ہوں، ہر اس چیز کے شر سے جو اس نے پیدا کی، اور اندھیری رات کے شر سے جب وہ چھا جائے، اور گرہوں میں پھونکنے والیوں کے شر سے، اور حسد کرنے والے کے شر سے جب وہ حسد کرے۔
+- [ ] `learn.morning_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Urdu: الاخلاص: کہو: وہ اللہ ایک ہے۔ اللہ بے نیاز ہے، سب اسی کے محتاج ہیں۔ نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے، اور کوئی اس کا ہمسر نہیں۔
+- [ ] `learn.morning_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Urdu: الناس: کہو: میں انسانوں کے رب کی پناہ مانگتا ہوں، انسانوں کے بادشاہ کی، انسانوں کے معبود کی، اس وسوسہ ڈالنے والے کے شر سے جو (اللہ کا نام سن کر) پیچھے ہٹ جاتا ہے، جو لوگوں کے دلوں میں وسوسے ڈالتا ہے، جنوں میں سے بھی اور انسانوں میں سے بھی۔
+- [ ] `learn.pillar.allah.meaning`
+  - Arabic source: الْإِيمَانُ بِاللَّهِ
+  - English: Believing that Allah exists, that He alone is Lord and alone deserves worship, and in His names and attributes.
+  - Urdu: یہ ایمان رکھنا کہ اللہ موجود ہے، وہی اکیلا رب ہے اور وہی اکیلا عبادت کا مستحق ہے، اور اس کے ناموں اور صفات پر ایمان۔
+- [ ] `learn.pillar.angels.meaning`
+  - Arabic source: الْإِيمَانُ بِالْمَلَائِكَةِ
+  - English: Believing in the angels, created from light, who always obey Allah, such as Jibril.
+  - Urdu: فرشتوں پر ایمان، جو نور سے پیدا کیے گئے اور ہمیشہ اللہ کی اطاعت کرتے ہیں، جیسے جبریلؑ۔
+- [ ] `learn.pillar.books.meaning`
+  - Arabic source: الْإِيمَانُ بِالْكُتُبِ
+  - English: Believing in the books Allah revealed, such as the Torah and the Gospel, with the Quran as the final, preserved one.
+  - Urdu: اللہ کی نازل کردہ کتابوں پر ایمان، جیسے تورات اور انجیل، اور قرآن آخری اور محفوظ کتاب ہے۔
+- [ ] `learn.pillar.hajj.meaning`
+  - Arabic source: حَجُّ الْبَيْتِ
+  - English: Pilgrimage to the Ka‘bah once in a lifetime, for those who are able.
+  - Urdu: استطاعت رکھنے والوں کے لیے زندگی میں ایک بار کعبہ کا حج۔
+- [ ] `learn.pillar.last_day.meaning`
+  - Arabic source: الْإِيمَانُ بِالْيَوْمِ الْآخِرِ
+  - English: Believing in what comes after death: the grave, the resurrection, the judgement, Paradise and Hell.
+  - Urdu: موت کے بعد آنے والی چیزوں پر ایمان: قبر، دوبارہ زندہ ہونا، حساب، جنت اور جہنم۔
+- [ ] `learn.pillar.messengers.meaning`
+  - Arabic source: الْإِيمَانُ بِالرُّسُلِ
+  - English: Believing in all of Allah's messengers, from Nuh to Muhammad ﷺ, the last of them.
+  - Urdu: اللہ کے تمام رسولوں پر ایمان، نوحؑ سے لے کر محمد ﷺ تک، جو آخری رسول ہیں۔
+- [ ] `learn.pillar.qadar.meaning`
+  - Arabic source: الْإِيمَانُ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ
+  - English: Believing that everything, good and bad, happens by Allah's knowledge, writing, will and creation.
+  - Urdu: یہ ایمان رکھنا کہ ہر چیز، اچھی ہو یا بری، اللہ کے علم، اس کے لکھنے، اس کے ارادے اور اس کی تخلیق سے ہوتی ہے۔
+- [ ] `learn.pillar.salah.meaning`
+  - Arabic source: إِقَامُ الصَّلَاةِ
+  - English: Establishing the five daily prayers on time.
+  - Urdu: پانچوں روزانہ نمازیں وقت پر قائم کرنا۔
+- [ ] `learn.pillar.sawm.meaning`
+  - Arabic source: صَوْمُ رَمَضَانَ
+  - English: Fasting from dawn to sunset throughout the month of Ramadan.
+  - Urdu: پورے رمضان کے مہینے میں صبحِ صادق سے غروبِ آفتاب تک روزہ رکھنا۔
+- [ ] `learn.pillar.shahadah.meaning`
+  - Arabic source: الشَّهَادَتَانِ
+  - English: Testifying that there is no god but Allah and that Muhammad is the Messenger of Allah.
+  - Urdu: یہ گواہی دینا کہ اللہ کے سوا کوئی معبود نہیں اور محمد ﷺ اللہ کے رسول ہیں۔
+- [ ] `learn.pillar.zakah.meaning`
+  - Arabic source: إِيتَاءُ الزَّكَاةِ
+  - English: Paying the yearly obligatory charity: 2.5% of savings held above the nisab threshold.
+  - Urdu: سالانہ فرض صدقہ ادا کرنا: نصاب سے زائد بچت کا 2.5%۔
+- [ ] `learn.salah_steps.salah_fatihah.recite.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿١﴾ ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ ﴿٢﴾ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿٣﴾ مَٰلِكِ يَوۡمِ ٱلدِّينِ ﴿٤﴾ إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ ﴿٥﴾ ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ ﴿٦﴾ صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ ﴿٧﴾
+  - English: In the name of Allah, the Most Gracious, the Most Merciful. All praise is for Allah, Lord of all the worlds, the Most Gracious, the Most Merciful, Master of the Day of Judgement. You alone we worship, and You alone we ask for help. Guide us to the straight path, the path of those You have blessed, not of those who earned Your anger, nor of those who went astray.
+  - Urdu: اللہ کے نام سے جو بڑا مہربان، نہایت رحم والا ہے۔ تمام تعریفیں اللہ کے لیے ہیں جو تمام جہانوں کا رب ہے، بڑا مہربان، نہایت رحم والا، جزا کے دن کا مالک۔ ہم تیری ہی عبادت کرتے ہیں اور تجھ ہی سے مدد مانگتے ہیں۔ ہمیں سیدھا راستہ دکھا، ان لوگوں کا راستہ جن پر تو نے انعام کیا، نہ ان کا جن پر غضب ہوا اور نہ گمراہوں کا۔
+- [ ] `learn.salah_steps.salah_final_dua.recite.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ
+  - English: O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah.
+  - Urdu: اے اللہ! میں تیری پناہ مانگتا ہوں جہنم کے عذاب سے، قبر کے عذاب سے، زندگی اور موت کے فتنے سے، اور مسیح دجال کے فتنے کے شر سے۔
+- [ ] `learn.salah_steps.salah_istiadhah.recite.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed.
+  - Urdu: میں شیطان مردود سے اللہ کی پناہ مانگتا ہوں۔
+- [ ] `learn.salah_steps.salah_opening_dua.recite.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ
+  - English: Glory be to You, O Allah, and praise; blessed is Your name, exalted is Your majesty, and there is no god besides You.
+  - Urdu: اے اللہ! تو پاک ہے اپنی تعریف کے ساتھ، تیرا نام بابرکت ہے، تیری شان بلند ہے، اور تیرے سوا کوئی معبود نہیں۔
+- [ ] `learn.salah_steps.salah_rising.recite.meaning`
+  - Arabic source: سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ، رَبَّنَا وَلَكَ الْحَمْدُ
+  - English: Allah hears whoever praises Him. Our Lord, and to You belongs all praise.
+  - Urdu: اللہ نے اس کی سن لی جس نے اس کی تعریف کی۔ اے ہمارے رب! اور تمام تعریفیں تیرے ہی لیے ہیں۔
+- [ ] `learn.salah_steps.salah_ruku.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْعَظِيمِ
+  - English: Glory be to my Lord, the Magnificent
+  - Urdu: پاک ہے میرا رب جو عظمت والا ہے
+- [ ] `learn.salah_steps.salah_salawat.recite.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Urdu: اے اللہ! محمد ﷺ پر اور آلِ محمد پر رحمت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر رحمت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔ اے اللہ! محمد ﷺ پر اور آلِ محمد پر برکت نازل فرما، جیسے تو نے ابراہیمؑ پر اور آلِ ابراہیم پر برکت نازل فرمائی؛ بے شک تو قابلِ تعریف، بزرگی والا ہے۔
+- [ ] `learn.salah_steps.salah_short_surah.recite.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Urdu: کہو: وہ اللہ ایک ہے۔ اللہ بے نیاز ہے، سب اسی کے محتاج ہیں۔ نہ اس کی کوئی اولاد ہے اور نہ وہ کسی کی اولاد ہے، اور کوئی اس کا ہمسر نہیں۔
+- [ ] `learn.salah_steps.salah_sitting.recite.meaning`
+  - Arabic source: رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي
+  - English: My Lord, forgive me. My Lord, forgive me.
+  - Urdu: اے میرے رب! مجھے بخش دے۔ اے میرے رب! مجھے بخش دے۔
+- [ ] `learn.salah_steps.salah_sujud.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْأَعْلَى
+  - English: Glory be to my Lord, the Most High
+  - Urdu: پاک ہے میرا رب جو سب سے بلند ہے
+- [ ] `learn.salah_steps.salah_takbir.recite.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: Allah is the Greatest
+  - Urdu: اللہ سب سے بڑا ہے
+- [ ] `learn.salah_steps.salah_tashahhud.recite.meaning`
+  - Arabic source: التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: All greetings, prayers and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and Messenger.
+  - Urdu: تمام تعظیمیں، تمام دعائیں اور تمام پاکیزہ باتیں اللہ کے لیے ہیں۔ اے نبی! آپ پر سلام ہو اور اللہ کی رحمت اور اس کی برکتیں۔ ہم پر اور اللہ کے نیک بندوں پر سلام ہو۔ میں گواہی دیتا ہوں کہ اللہ کے سوا کوئی معبود نہیں، اور میں گواہی دیتا ہوں کہ محمد ﷺ اس کے بندے اور رسول ہیں۔
+- [ ] `learn.salah_steps.salah_taslim.recite.meaning`
+  - Arabic source: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ
+  - English: Peace and the mercy of Allah be upon you
+  - Urdu: تم پر سلامتی ہو اور اللہ کی رحمت
+- [ ] `learn.wudu_steps.wudu_bismillah.recite.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah
+  - Urdu: اللہ کے نام سے
+- [ ] `milestone.fajr_7.meaning`
+  - Arabic source: مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّةَ
+  - English: "Whoever prays the two cool prayers (Fajr and 'Asr) will enter Paradise."
+  - Urdu: ”جس نے دو ٹھنڈی نمازیں (فجر اور عصر) پڑھیں وہ جنت میں داخل ہوگا۔“
+- [ ] `milestone.first_full_salah_day.meaning`
+  - Arabic source: فَذَلِكَ مِثْلُ الصَّلَوَاتِ الْخَمْسِ، يَمْحُو اللَّهُ بِهَا الْخَطَايَا
+  - English: "That is the likeness of the five prayers: through them Allah wipes away sins." (Like bathing in a river at your door five times a day.)
+  - Urdu: ”یہی پانچ نمازوں کی مثال ہے: اللہ ان کے ذریعے گناہوں کو مٹا دیتا ہے۔“ (جیسے آپ کے دروازے پر بہتی نہر میں دن میں پانچ بار نہانا۔)
+- [ ] `milestone.first_reflection.meaning`
+  - Arabic source: يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَلۡتَنظُرۡ نَفۡسࣱ مَّا قَدَّمَتۡ لِغَدࣲۖ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ خَبِيرُۢ بِمَا تَعۡمَلُونَ
+  - English: "O you who believe, fear Allah, and let every soul look to what it has sent forth for tomorrow. And fear Allah; indeed, Allah is Aware of what you do."
+  - Urdu: ”اے ایمان والو! اللہ سے ڈرو، اور ہر شخص دیکھ لے کہ اس نے کل کے لیے کیا آگے بھیجا ہے۔ اور اللہ سے ڈرو؛ بے شک اللہ تمہارے اعمال سے باخبر ہے۔“
+- [ ] `milestone.first_step.meaning`
+  - Arabic source: وَإِنْ تَقَرَّبَ إِلَىَّ بِشِبْرٍ تَقَرَّبْتُ إِلَيْهِ ذِرَاعًا ... وَإِنْ أَتَانِي يَمْشِي أَتَيْتُهُ هَرْوَلَةً
+  - English: Allah says: "If he draws near to Me a hand-span, I draw near to him an arm's length… and if he comes to Me walking, I come to him running."
+  - Urdu: اللہ فرماتا ہے: ”اگر وہ ایک بالشت میرے قریب آتا ہے تو میں ایک ہاتھ اس کے قریب آتا ہوں... اور اگر وہ میرے پاس چل کر آتا ہے تو میں اس کے پاس دوڑ کر آتا ہوں۔“
+- [ ] `milestone.halfway.meaning`
+  - Arabic source: فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا ﴿٥﴾ إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰا
+  - English: "For indeed, with hardship comes ease. Indeed, with hardship comes ease."
+  - Urdu: ”پس بے شک مشکل کے ساتھ آسانی ہے۔ بے شک مشکل کے ساتھ آسانی ہے۔“
+- [ ] `milestone.journey_complete.meaning`
+  - Arabic source: لَئِن شَكَرۡتُمۡ لَأَزِيدَنَّكُمۡ
+  - English: "If you are grateful, I will surely increase you."
+  - Urdu: ”اگر تم شکر کرو گے تو میں تمہیں ضرور زیادہ دوں گا۔“
+- [ ] `milestone.streak_7.meaning`
+  - Arabic source: وَٱعۡبُدۡ رَبَّكَ حَتَّىٰ يَأۡتِيَكَ ٱلۡيَقِينُ
+  - English: "And worship your Lord until there comes to you the certainty (death)."
+  - Urdu: ”اور اپنے رب کی عبادت کرتے رہو یہاں تک کہ تمہیں یقینی چیز (موت) آ جائے۔“
+- [ ] `milestone.tasbih_1000.meaning`
+  - Arabic source: أَيَعْجِزُ أَحَدُكُمْ أَنْ يَكْسِبَ كُلَّ يَوْمٍ أَلْفَ حَسَنَةٍ ... يُسَبِّحُ مِائَةَ تَسْبِيحَةٍ فَيُكْتَبُ لَهُ أَلْفُ حَسَنَةٍ أَوْ يُحَطُّ عَنْهُ أَلْفُ خَطِيئَةٍ
+  - English: "Is any of you unable to earn a thousand good deeds each day? He glorifies Allah a hundred times, and a thousand good deeds are written for him or a thousand sins are removed."
+  - Urdu: ”کیا تم میں سے کوئی ہر دن ہزار نیکیاں کمانے سے عاجز ہے؟ وہ سو مرتبہ اللہ کی تسبیح کرے، تو اس کے لیے ہزار نیکیاں لکھ دی جاتی ہیں یا اس کے ہزار گناہ مٹا دیے جاتے ہیں۔“
+- [ ] `milestone.three_days.meaning`
+  - Arabic source: وَٱلَّذِينَ جَٰهَدُواْ فِينَا لَنَهۡدِيَنَّهُمۡ سُبُلَنَاۚ وَإِنَّ ٱللَّهَ لَمَعَ ٱلۡمُحۡسِنِينَ
+  - English: "And those who strive for Us, We will surely guide them to Our ways. And indeed, Allah is with the doers of good."
+  - Urdu: ”اور جو لوگ ہماری راہ میں کوشش کرتے ہیں، ہم انہیں ضرور اپنے راستے دکھائیں گے۔ اور بے شک اللہ نیکی کرنے والوں کے ساتھ ہے۔“
+- [ ] `milestone.week_one.meaning`
+  - Arabic source: إِنَّ الدِّينَ يُسْرٌ ... فَسَدِّدُوا وَقَارِبُوا وَأَبْشِرُوا
+  - English: "The religion is ease… so do what is right, come as close as you can, and rejoice."
+  - Urdu: ”دین آسان ہے... پس درست عمل کرو، جتنا ہو سکے قریب رہو، اور خوش ہو جاؤ۔“
+- [ ] `welcomeBack.meaning`
+  - Arabic source: وَأَنَّ أَحَبَّ الأَعْمَالِ أَدْوَمُهَا إِلَى اللَّهِ وَإِنْ قَلَّ
+  - English: "The most beloved of deeds to Allah are the most consistent, even if small."
+  - Urdu: ”اللہ کو سب سے زیادہ پسندیدہ عمل وہ ہے جو مسلسل ہو، چاہے تھوڑا ہو۔“
+
+### UI legal and privacy text (ur)
+
+- [ ] `share.footer`
+  - English: Shared from Awdah
+  - Urdu: عودہ ایپ سے شیئر کیا گیا
+- [ ] `me.about`
+  - English: About
+  - Urdu: تعارف
+- [ ] `me.privacy`
+  - English: Privacy
+  - Urdu: رازداری
+- [ ] `me.terms`
+  - English: Terms
+  - Urdu: شرائط
+- [ ] `about.intro`
+  - English: Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.
+  - Urdu: عودہ کا مطلب ہے واپسی۔ یہ آپ کی نماز اور دین کی طرف ایک ایک دن کر کے لوٹنے کا ایک پُرسکون ساتھی ہے۔
+- [ ] `about.whatTitle`
+  - English: What Awdah is
+  - Urdu: عودہ کیا ہے
+- [ ] `about.whatBody`
+  - English: A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.
+  - Urdu: 30 دن کا ایک راستہ جس میں روزانہ چھوٹے قدم، نماز کا حساب، ذکر اور مختصر اسباق ہیں، اور اس کے بعد جاری رکھنے کے لیے ایک مستقل معمول۔
+- [ ] `about.freeTitle`
+  - English: Why it is free
+  - Urdu: یہ مفت کیوں ہے
+- [ ] `about.freeBody`
+  - English: Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.
+  - Urdu: عودہ صدقۂ جاریہ کے طور پر، اللہ کی رضا حاصل کرنے کی نیت سے بنائی گئی ہے۔ نہ اشتہارات ہیں، نہ خریداری، نہ ڈیٹا اکٹھا کیا جاتا ہے۔
+- [ ] `about.sourcesTitle`
+  - English: About the content
+  - Urdu: مواد کے بارے میں
+- [ ] `about.sourcesBody`
+  - English: Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.
+  - Urdu: احادیث اور دعائیں ان کے حوالوں کے ساتھ دی گئی ہیں۔ اگر آپ کو کوئی غلطی نظر آئے تو براہِ کرم ہمیں بتائیں تاکہ اس کی اصلاح کی جا سکے۔
+- [ ] `about.version`
+  - English: Version {{version}}
+  - Urdu: ورژن {{version}}
+- [ ] `privacy.intro`
+  - English: Awdah does not collect any data about you.
+  - Urdu: عودہ آپ کے بارے میں کوئی ڈیٹا اکٹھا نہیں کرتی۔
+- [ ] `privacy.storage.title`
+  - English: Stored on your device
+  - Urdu: آپ کے آلے پر محفوظ
+- [ ] `privacy.storage.body`
+  - English: Everything you enter, such as your profile, prayers, tasks and journal, is stored on this phone. If your phone's own system backup (Google or iCloud) is turned on, it may include Awdah's data. That backup belongs to you; Awdah never sends anything to us.
+  - Urdu: آپ جو کچھ درج کرتے ہیں، جیسے آپ کی پروفائل، نمازیں، کام اور ڈائری، وہ اسی فون پر محفوظ ہوتا ہے۔ اگر آپ کے فون کا اپنا سسٹم بیک اپ (Google یا iCloud) آن ہے، تو اس میں عودہ کا ڈیٹا شامل ہو سکتا ہے۔ وہ بیک اپ آپ کی ملکیت ہے؛ عودہ ہمیں کبھی کچھ نہیں بھیجتی۔
+- [ ] `privacy.accounts.title`
+  - English: No accounts, analytics or ads
+  - Urdu: نہ اکاؤنٹ، نہ اینالیٹکس، نہ اشتہارات
+- [ ] `privacy.accounts.body`
+  - English: There are no accounts, no analytics, no advertising and no trackers. Awdah never sends anything to us or to anyone else.
+  - Urdu: نہ کوئی اکاؤنٹ ہے، نہ اینالیٹکس، نہ اشتہارات اور نہ ٹریکرز۔ عودہ ہمیں یا کسی اور کو کبھی کچھ نہیں بھیجتی۔
+- [ ] `privacy.location.title`
+  - English: Location
+  - Urdu: مقام
+- [ ] `privacy.location.body`
+  - English: If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere.
+  - Urdu: اگر آپ اپنا مقام منتخب کرتے ہیں، تو یہ صرف آپ کے فون پر نماز کے اوقات کا حساب لگانے کے لیے استعمال ہوتا ہے۔ عودہ اسے کبھی کہیں نہیں بھیجتی۔
+- [ ] `privacy.backups.title`
+  - English: Backups
+  - Urdu: بیک اپ
+- [ ] `privacy.backups.body`
+  - English: Backups are files you create and keep. You decide where they go; Awdah never uploads them.
+  - Urdu: بیک اپ وہ فائلیں ہیں جو آپ خود بناتے اور اپنے پاس رکھتے ہیں۔ آپ طے کرتے ہیں کہ وہ کہاں جائیں؛ عودہ انہیں کبھی اپ لوڈ نہیں کرتی۔
+- [ ] `privacy.deletion.title`
+  - English: Deleting your data
+  - Urdu: اپنا ڈیٹا حذف کرنا
+- [ ] `privacy.deletion.body`
+  - English: Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made may still hold a copy.
+  - Urdu: ترتیبات میں "تمام ڈیٹا مٹائیں" اس فون پر عودہ کا رکھا ہوا سب کچھ ہٹا دیتا ہے۔ ایپ ان انسٹال کرنے سے بھی یہ ہٹ جاتا ہے، البتہ آپ کے بنائے ہوئے سسٹم بیک اپ میں اس کی ایک کاپی پھر بھی موجود رہ سکتی ہے۔
+- [ ] `privacy.updated`
+  - English: Last updated {{date}}
+  - Urdu: آخری بار اپ ڈیٹ: {{date}}
+- [ ] `terms.intro`
+  - English: These are the plain terms for using Awdah.
+  - Urdu: عودہ استعمال کرنے کی سادہ شرائط یہ ہیں۔
+- [ ] `terms.guidance.title`
+  - English: Personal guidance
+  - Urdu: ذاتی رہنمائی
+- [ ] `terms.guidance.body`
+  - English: Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings.
+  - Urdu: عودہ ذاتی روحانی رہنمائی اور یاد دہانیوں کے لیے ہے۔ یہ شرعی احکام کا ماخذ نہیں ہے۔
+- [ ] `terms.scholars.title`
+  - English: Not a fatwa
+  - Urdu: فتویٰ نہیں
+- [ ] `terms.scholars.body`
+  - English: Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar.
+  - Urdu: ایپ میں موجود کوئی بھی چیز فتویٰ نہیں ہے۔ اپنی صورتِ حال سے متعلق سوالات کے لیے براہِ کرم کسی مستند عالم سے رجوع کریں۔
+- [ ] `terms.asIs.title`
+  - English: As is
+  - Urdu: جیسی ہے ویسی
+- [ ] `terms.asIs.body`
+  - English: The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time.
+  - Urdu: یہ ایپ مفت، جیسی ہے ویسی، کسی ضمانت کے بغیر پیش کی جاتی ہے۔ ہم درست رہنے کی پوری کوشش کرتے ہیں، اور وقت کے ساتھ مواد کی اصلاح یا تبدیلی کر سکتے ہیں۔
+- [ ] `terms.yourData.title`
+  - English: Your data
+  - Urdu: آپ کا ڈیٹا
+- [ ] `terms.yourData.body`
+  - English: Your data is stored on your phone and is yours. See the Privacy page for details.
+  - Urdu: آپ کا ڈیٹا آپ کے فون پر محفوظ ہے اور آپ ہی کا ہے۔ تفصیلات کے لیے رازداری کا صفحہ دیکھیں۔
+- [ ] `terms.updated`
+  - English: Last updated {{date}}
+  - Urdu: آخری بار اپ ڈیٹ: {{date}}
+
+---
+
+## Indonesian (id)
+
+### Religious meanings
+
+- [ ] `day.1.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Indonesian: (Di akhir setiap sholat) Ya Allah, tolonglah aku untuk mengingat-Mu, bersyukur kepada-Mu, dan beribadah kepada-Mu dengan baik
+- [ ] `day.1.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Indonesian: (Setelah setiap sholat) Segala puji bagi Allah
+- [ ] `day.1.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Indonesian: (Setelah setiap sholat) Allah Maha Besar
+- [ ] `day.1.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness
+  - Indonesian: Aku memohon ampun kepada Allah
+- [ ] `day.1.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Indonesian: Dengan nama Allah Yang Maha Pengasih, Maha Penyayang
+- [ ] `day.1.dhikr.shahadah.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ
+  - English: I bear witness that there is no god but Allah, and that Muhammad is the Messenger of Allah
+  - Indonesian: Aku bersaksi bahwa tiada tuhan selain Allah, dan bahwa Muhammad adalah utusan Allah
+- [ ] `day.1.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Indonesian: (Setelah setiap sholat) Maha Suci Allah
+- [ ] `day.1.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Indonesian: (Yang ke-100, setelah tasbih) Tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan milik-Nya segala puji, dan Dia Maha Kuasa atas segala sesuatu
+- [ ] `day.1.hadith.meaning`
+  - Arabic source: إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
+  - English: "Actions are only by intentions, and each person will only have what he intended."
+  - Indonesian: "Sesungguhnya amal itu hanyalah tergantung pada niatnya, dan setiap orang hanya akan mendapatkan apa yang ia niatkan."
+- [ ] `day.1.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds.
+  - Indonesian: (Setelah salam sholat Subuh) Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima.
+- [ ] `day.10.dhikr.hamm_wal_hazan.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ
+  - English: O Allah, I seek refuge in You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from the burden of debt and from being overpowered by men
+  - Indonesian: Ya Allah, aku berlindung kepada-Mu dari rasa cemas dan sedih, dari kelemahan dan kemalasan, dari sifat pengecut dan kikir, dari beban utang dan dari dikuasai orang lain
+- [ ] `day.10.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Indonesian: Tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan milik-Nya segala puji, dan Dia Maha Kuasa atas segala sesuatu
+- [ ] `day.10.hadith.meaning`
+  - Arabic source: الدُّعَاءُ هُوَ الْعِبَادَةُ، وَقَرَأَ: ﴿وَقَالَ رَبُّكُمُ ٱدۡعُونِيٓ أَسۡتَجِبۡ لَكُمۡ﴾
+  - English: "Supplication is worship itself." Then he recited: "And your Lord says: Call upon Me; I will respond to you" (Ghafir 40:60).
+  - Indonesian: "Doa itu adalah ibadah." Kemudian beliau membaca: "Dan Tuhanmu berfirman: Berdoalah kepada-Ku, niscaya akan Aku kabulkan untukmu" (Ghafir 40:60).
+- [ ] `day.10.prayer.dua.meaning`
+  - Arabic source: رَبَّنَآ ءَاتِنَا فِي ٱلدُّنۡيَا حَسَنَةࣰ وَفِي ٱلۡأٓخِرَةِ حَسَنَةࣰ وَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.
+  - Indonesian: Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.
+- [ ] `day.11.dhikr.bismillah_before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: (Before eating) In the name of Allah
+  - Indonesian: (Sebelum makan) Dengan nama Allah
+- [ ] `day.11.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.11.dhikr.yunfiqu_fa_tukhlif.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنَا مِمَّن يُنفِقُ فَتُخْلِفُ لَهُ
+  - English: (Personal du'a, inspired by the angels' du'a in Bukhari 1442) O Allah, make us among those who spend, and You replace it for them
+  - Indonesian: (Doa pribadi, terinspirasi dari doa malaikat dalam Bukhari 1442) Ya Allah, jadikanlah kami termasuk orang-orang yang berinfak lalu Engkau beri ganti kepada mereka
+- [ ] `day.11.hadith.meaning`
+  - Arabic source: مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ، وَمَا زَادَ اللَّهُ عَبْدًا بِعَفْوٍ إِلاَّ عِزًّا
+  - English: "Charity does not decrease wealth, and Allah does not increase a servant who forgives except in honour."
+  - Indonesian: "Sedekah tidak akan mengurangi harta, dan tidaklah Allah menambah bagi seorang hamba yang pemaaf melainkan kemuliaan."
+- [ ] `day.12.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Indonesian: Aku memohon ampun kepada Allah. Nabi ﷺ memohon ampun seratus kali dalam sehari.
+- [ ] `day.12.dhikr.audhu_minal_faqr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ، وَأَعُوذُ بِكَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ
+  - English: O Allah, I seek refuge in You from poverty, from scarcity and from humiliation, and I seek refuge in You from wronging others or being wronged
+  - Indonesian: Ya Allah, aku berlindung kepada-Mu dari kefakiran, kekurangan, dan kehinaan, dan aku berlindung kepada-Mu dari menzalimi atau dizalimi
+- [ ] `day.12.dhikr.ikfini_bi_halalik.meaning`
+  - Arabic source: اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ
+  - English: O Allah, suffice me with what You have made lawful instead of what You have forbidden, and by Your grace make me free of need of anyone besides You
+  - Indonesian: Ya Allah, cukupkanlah aku dengan yang Engkau halalkan dari yang Engkau haramkan, dan dengan karunia-Mu jadikanlah aku tidak membutuhkan siapa pun selain Engkau
+- [ ] `day.12.hadith.meaning`
+  - Arabic source: أَيُّهَا النَّاسُ، إِنَّ اللَّهَ طَيِّبٌ لاَ يَقْبَلُ إِلاَّ طَيِّبًا
+  - English: "O people, Allah is Good and accepts only what is good."
+  - Indonesian: "Wahai manusia, sesungguhnya Allah itu Maha Baik dan tidak menerima kecuali yang baik."
+- [ ] `day.13.dhikr.hasbunallah.meaning`
+  - Arabic source: حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ
+  - English: Allah is sufficient for us, and He is the best disposer of affairs
+  - Indonesian: Cukuplah Allah bagi kami, dan Dia sebaik-baik Pelindung
+- [ ] `day.13.dhikr.leaving_home_dua.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ
+  - English: (On leaving home) In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah
+  - Indonesian: (Saat keluar rumah) Dengan nama Allah; aku bertawakal kepada Allah; tiada daya dan kekuatan kecuali dengan pertolongan Allah
+- [ ] `day.13.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Indonesian: Tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan milik-Nya segala puji, dan Dia Maha Kuasa atas segala sesuatu
+- [ ] `day.13.hadith.meaning`
+  - Arabic source: لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ، تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا
+  - English: "If you relied on Allah as He truly deserves, you would be provided for as the birds are provided for: they go out hungry in the morning and return full in the evening."
+  - Indonesian: "Seandainya kalian bertawakal kepada Allah dengan sebenar-benar tawakal, niscaya kalian akan diberi rezeki sebagaimana burung diberi rezeki: ia pergi di pagi hari dalam keadaan lapar dan pulang di sore hari dalam keadaan kenyang."
+- [ ] `day.14.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Indonesian: (Di akhir setiap sholat) Ya Allah, tolonglah aku untuk mengingat-Mu, bersyukur kepada-Mu, dan beribadah kepada-Mu dengan baik
+- [ ] `day.14.dhikr.hamdan_kathiran.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ
+  - English: (In prayer) Praise be to Allah, abundant, good and blessed praise
+  - Indonesian: (Dalam sholat) Segala puji bagi Allah, pujian yang banyak, baik, dan penuh berkah
+- [ ] `day.14.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Indonesian: (Saat bangun tidur) Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami, dan kepada-Nya kami dibangkitkan
+- [ ] `day.14.dhikr.waking_dua_afani.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ
+  - English: (On waking) Praise be to Allah who gave health to my body, returned my soul to me and permitted me to remember Him
+  - Indonesian: (Saat bangun tidur) Segala puji bagi Allah yang telah menyehatkan tubuhku, mengembalikan ruhku kepadaku, dan mengizinkanku untuk mengingat-Nya
+- [ ] `day.14.hadith.meaning`
+  - Arabic source: انْظُرُوا إِلَى مَنْ أَسْفَلَ مِنْكُمْ وَلاَ تَنْظُرُوا إِلَى مَنْ هُوَ فَوْقَكُمْ، فَهُوَ أَجْدَرُ أَنْ لاَ تَزْدَرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ
+  - English: "Look at those below you and do not look at those above you, for that is more fitting, so that you do not belittle the favours of Allah upon you."
+  - Indonesian: "Lihatlah orang yang berada di bawah kalian dan jangan melihat orang yang berada di atas kalian, karena yang demikian itu lebih layak agar kalian tidak meremehkan nikmat Allah atas kalian."
+- [ ] `day.15.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Indonesian: Aku memohon ampun kepada Allah. Nabi ﷺ memohon ampun seratus kali dalam sehari.
+- [ ] `day.15.dhikr.ighsilni.meaning`
+  - Arabic source: اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: (From the opening du'a of prayer) O Allah, wash away my sins with water, snow and hail
+  - Indonesian: (Dari doa iftitah dalam sholat) Ya Allah, bersihkanlah dosa-dosaku dengan air, salju, dan butiran es
+- [ ] `day.15.dhikr.sidq_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصِّدْقَ فِي الْقَوْلِ وَالْعَمَلِ
+  - English: (Personal du'a) O Allah, I ask You for truthfulness in speech and in action
+  - Indonesian: (Doa pribadi) Ya Allah, aku memohon kepada-Mu kejujuran dalam ucapan dan perbuatan
+- [ ] `day.15.hadith.meaning`
+  - Arabic source: إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ، وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ، وَإِنَّ الرَّجُلَ لَيَصْدُقُ حَتَّى يَكُونَ صِدِّيقًا، وَإِنَّ الْكَذِبَ يَهْدِي إِلَى الْفُجُورِ، وَإِنَّ الْفُجُورَ يَهْدِي إِلَى النَّارِ، وَإِنَّ الرَّجُلَ لَيَكْذِبُ، حَتَّى يُكْتَبَ عِنْدَ اللَّهِ كَذَّابًا
+  - English: "Truthfulness leads to righteousness, and righteousness leads to Paradise. A man keeps telling the truth until he becomes truthful. Lying leads to wickedness, and wickedness leads to the Fire. A man keeps lying until he is written before Allah as a liar."
+  - Indonesian: "Kejujuran membawa kepada kebaikan, dan kebaikan membawa ke surga. Seseorang senantiasa berkata jujur hingga ia menjadi orang yang jujur. Dusta membawa kepada kejahatan, dan kejahatan membawa ke neraka. Seseorang senantiasa berdusta hingga ia dicatat di sisi Allah sebagai pendusta."
+- [ ] `day.16.dhikr.audhu_minal_khiyanah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُوعِ فَإِنَّهُ بِئْسَ الضَّجِيعُ، وَأَعُوذُ بِكَ مِنَ الْخِيَانَةِ فَإِنَّهَا بِئْسَتِ الْبِطَانَةُ
+  - English: O Allah, I seek refuge in You from hunger, for it is a wretched bed-fellow, and from treachery, for it is a wretched inner companion
+  - Indonesian: Ya Allah, aku berlindung kepada-Mu dari kelaparan, karena ia seburuk-buruk teman tidur, dan dari pengkhianatan, karena ia seburuk-buruk teman dalam diri
+- [ ] `day.16.dhikr.subhanallahil_azimi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ
+  - English: Glory be to Allah the Magnificent, and praise be to Him
+  - Indonesian: Maha Suci Allah Yang Maha Agung, dan segala puji bagi-Nya
+- [ ] `day.16.hadith.meaning`
+  - Arabic source: أَلاَ كُلُّكُمْ رَاعٍ، وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ
+  - English: "Indeed, each of you is a shepherd, and each of you is responsible for his flock."
+  - Indonesian: "Ketahuilah, setiap kalian adalah pemimpin, dan setiap kalian akan dimintai pertanggungjawaban atas yang dipimpinnya."
+- [ ] `day.17.dhikr.audhu_minal_jaza.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجَزَعِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from panic and despair in hardship
+  - Indonesian: (Doa pribadi) Ya Allah, aku berlindung kepada-Mu dari kepanikan dan keputusasaan saat menghadapi kesulitan
+- [ ] `day.17.dhikr.istirja.meaning`
+  - Arabic source: إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا
+  - English: (At a calamity) We belong to Allah and to Him we return. O Allah, reward me in my affliction and replace it for me with something better
+  - Indonesian: (Saat tertimpa musibah) Sesungguhnya kami milik Allah dan kepada-Nya kami kembali. Ya Allah, berilah aku pahala dalam musibahku dan gantilah untukku dengan yang lebih baik darinya
+- [ ] `day.17.dhikr.sabr_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصَّبْرَ عَلَى أَقْدَارِكَ
+  - English: (Personal du'a) O Allah, I ask You for patience with what You decree
+  - Indonesian: (Doa pribadi) Ya Allah, aku memohon kepada-Mu kesabaran atas apa yang Engkau takdirkan
+- [ ] `day.17.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.17.hadith.meaning`
+  - Arabic source: عَجَبًا لأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ وَلَيْسَ ذَاكَ لأَحَدٍ إِلاَّ لِلْمُؤْمِنِ إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ
+  - English: "How wonderful is the affair of the believer! All of it is good, and that is for no one except the believer. If something good happens to him, he is grateful, and that is good for him. If something bad happens to him, he is patient, and that is good for him."
+  - Indonesian: "Sungguh menakjubkan urusan seorang mukmin! Seluruh urusannya adalah baik, dan itu tidak dimiliki oleh siapa pun kecuali seorang mukmin. Jika ia mendapat kesenangan, ia bersyukur, dan itu baik baginya. Jika ia ditimpa kesusahan, ia bersabar, dan itu baik baginya."
+- [ ] `day.18.dhikr.audhu_minal_kibr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكِبْرِ وَالْعُجْبِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from arrogance and self-admiration
+  - Indonesian: (Doa pribadi) Ya Allah, aku berlindung kepada-Mu dari kesombongan dan rasa kagum pada diri sendiri
+- [ ] `day.18.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Indonesian: (Di akhir majelis) Maha Suci Engkau, ya Allah, dan dengan memuji-Mu; aku bersaksi tiada tuhan selain Engkau; aku memohon ampun kepada-Mu dan bertaubat kepada-Mu
+- [ ] `day.18.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ أَوْحَى إِلَىَّ أَنْ تَوَاضَعُوا حَتَّى لاَ يَفْخَرَ أَحَدٌ عَلَى أَحَدٍ وَلاَ يَبْغِي أَحَدٌ عَلَى أَحَدٍ
+  - English: "Allah has revealed to me that you must be humble towards one another, so that no one boasts over another and no one wrongs another."
+  - Indonesian: "Sesungguhnya Allah mewahyukan kepadaku agar kalian saling merendahkan hati, sehingga tidak ada seorang pun yang menyombongkan diri atas yang lain dan tidak ada seorang pun yang berbuat zalim kepada yang lain."
+- [ ] `day.19.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Indonesian: Dengan nama Allah Yang Maha Pengasih, Maha Penyayang
+- [ ] `day.19.dhikr.ighfir_lil_muminin.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ
+  - English: (Personal du'a) O Allah, forgive the believing men and women
+  - Indonesian: (Doa pribadi) Ya Allah, ampunilah orang-orang mukmin laki-laki dan perempuan
+- [ ] `day.19.dhikr.irhamna_bi_rahmatik.meaning`
+  - Arabic source: اللَّهُمَّ ارْحَمْنَا بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ
+  - English: (Personal du'a) O Allah, have mercy on us with Your mercy that encompasses all things
+  - Indonesian: (Doa pribadi) Ya Allah, rahmatilah kami dengan rahmat-Mu yang meliputi segala sesuatu
+- [ ] `day.19.dhikr.rabbana_wasita.meaning`
+  - Arabic source: رَبَّنَا وَسِعۡتَ كُلَّ شَيۡءࣲ رَّحۡمَةࣰ وَعِلۡمࣰا فَٱغۡفِرۡ لِلَّذِينَ تَابُواْ وَٱتَّبَعُواْ سَبِيلَكَ وَقِهِمۡ عَذَابَ ٱلۡجَحِيمِ
+  - English: Our Lord, You encompass all things in mercy and knowledge, so forgive those who repent and follow Your way, and protect them from the punishment of Hellfire
+  - Indonesian: Ya Tuhan kami, rahmat dan ilmu-Mu meliputi segala sesuatu, maka ampunilah orang-orang yang bertaubat dan mengikuti jalan-Mu, dan peliharalah mereka dari azab neraka Jahim
+- [ ] `day.19.hadith.meaning`
+  - Arabic source: الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ، ارْحَمُوا مَنْ فِي الأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ
+  - English: "The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will have mercy on you."
+  - Indonesian: "Orang-orang yang penyayang akan disayangi oleh Yang Maha Penyayang. Sayangilah yang ada di bumi, niscaya Yang di atas langit akan menyayangimu."
+- [ ] `day.2.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Indonesian: (Di akhir majelis) Maha Suci Engkau, ya Allah, dan dengan memuji-Mu; aku bersaksi tiada tuhan selain Engkau; aku memohon ampun kepada-Mu dan bertaubat kepada-Mu
+- [ ] `day.2.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `day.2.dhikr.shahadah_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: (After wudu) I testify that there is no god but Allah, alone without partner, and that Muhammad is His servant and messenger
+  - Indonesian: (Setelah wudhu) Aku bersaksi bahwa tiada tuhan selain Allah semata, tiada sekutu bagi-Nya, dan bahwa Muhammad adalah hamba dan utusan-Nya
+- [ ] `day.2.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.2.hadith.meaning`
+  - Arabic source: الطُّهُورُ شَطْرُ الإِيمَانِ
+  - English: "Purification is half of faith."
+  - Indonesian: "Bersuci adalah separuh dari iman."
+- [ ] `day.2.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ
+  - English: (After the shahadah that follows wudu) O Allah, make me among those who repent and make me among those who purify themselves.
+  - Indonesian: (Setelah syahadat yang dibaca usai wudhu) Ya Allah, jadikanlah aku termasuk orang-orang yang bertaubat dan jadikanlah aku termasuk orang-orang yang menyucikan diri.
+- [ ] `day.20.dhikr.barik_li_fi_ahli.meaning`
+  - Arabic source: اللَّهُمَّ بَارِكْ لِي فِي أَهْلِي وَمَالِي
+  - English: (Personal du'a) O Allah, bless me in my family and my wealth
+  - Indonesian: (Doa pribadi) Ya Allah, berkahilah aku dalam keluargaku dan hartaku
+- [ ] `day.20.dhikr.ijma_shamla_ahli.meaning`
+  - Arabic source: اللَّهُمَّ اجْمَعْ شَمْلَ أَهْلِي عَلَى طَاعَتِكَ
+  - English: (Personal du'a) O Allah, unite my family in obeying You
+  - Indonesian: (Doa pribadi) Ya Allah, satukanlah keluargaku dalam ketaatan kepada-Mu
+- [ ] `day.20.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.20.hadith.meaning`
+  - Arabic source: مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، وَيُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ
+  - English: "Whoever loves that his provision be expanded and his life be extended, let him keep the ties of kinship."
+  - Indonesian: "Barang siapa yang ingin dilapangkan rezekinya dan dipanjangkan umurnya, hendaklah ia menyambung tali silaturahim."
+- [ ] `day.21.dhikr.ahsanta_khalqi.meaning`
+  - Arabic source: اللَّهُمَّ أَحْسَنْتَ خَلْقِي فَأَحْسِنْ خُلُقِي
+  - English: O Allah, You have made my form beautiful, so make my character beautiful
+  - Indonesian: Ya Allah, Engkau telah membaguskan rupaku, maka baguskanlah akhlakku
+- [ ] `day.21.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Indonesian: Aku memohon ampun kepada Allah. Nabi ﷺ memohon ampun seratus kali dalam sehari.
+- [ ] `day.21.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Indonesian: (Dari doa yang lebih panjang) Dan tunjukilah aku kepada akhlak yang terbaik, karena tiada yang dapat menunjukkan kepadanya selain Engkau; dan jauhkanlah dariku akhlak yang buruk, karena tiada yang dapat menjauhkannya selain Engkau
+- [ ] `day.21.hadith.meaning`
+  - Arabic source: إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلاَقًا
+  - English: "Indeed, among the best of you are those with the best character."
+  - Indonesian: "Sesungguhnya di antara orang-orang terbaik kalian adalah yang paling baik akhlaknya."
+- [ ] `day.22.dhikr.ilman_nafian.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds
+  - Indonesian: (Setelah salam sholat Subuh) Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima
+- [ ] `day.22.dhikr.rabbi_zidni_ilma.meaning`
+  - Arabic source: رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: (From Quran 20:114, where Allah tells the Prophet ﷺ to say it) My Lord, increase me in knowledge
+  - Indonesian: (Dari Al-Qur'an 20:114, ketika Allah memerintahkan Nabi ﷺ mengucapkannya) Ya Tuhanku, tambahkanlah kepadaku ilmu
+- [ ] `day.22.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.22.hadith.meaning`
+  - Arabic source: وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
+  - English: "Whoever travels a path seeking knowledge, Allah will make easy for him a path to Paradise."
+  - Indonesian: "Barang siapa menempuh suatu jalan untuk mencari ilmu, Allah akan memudahkan baginya jalan menuju surga."
+- [ ] `day.23.dhikr.rabbana_ma_khalaqta.meaning`
+  - Arabic source: رَبَّنَا مَا خَلَقۡتَ هَٰذَا بَٰطِلࣰا سُبۡحَٰنَكَ فَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, You did not create this in vain; glory be to You, so protect us from the punishment of the Fire
+  - Indonesian: Ya Tuhan kami, tidaklah Engkau menciptakan semua ini dengan sia-sia; Maha Suci Engkau, maka lindungilah kami dari azab neraka
+- [ ] `day.23.dhikr.subhanallahi_adada_khalqih.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ
+  - English: (Three times, after Fajr) Glory be to Allah and praise be to Him, as many times as the number of His creation, as much as pleases Him, as much as the weight of His Throne, and as much as the ink of His words
+  - Indonesian: (Tiga kali, setelah Subuh) Maha Suci Allah dan segala puji bagi-Nya, sebanyak jumlah makhluk-Nya, sesuai keridhaan-Nya, seberat timbangan 'Arsy-Nya, dan sebanyak tinta kalimat-Nya
+- [ ] `day.23.hadith.meaning`
+  - Arabic source: قَعَدَ فَنَظَرَ إِلَى السَّمَاءِ فَقَالَ ﴿إِنَّ فِي خَلْقِ السَّمَوَاتِ وَالأَرْضِ وَاخْتِلاَفِ اللَّيْلِ وَالنَّهَارِ لآيَاتٍ لأُولِي الأَلْبَابِ﴾
+  - English: Ibn 'Abbas said that when it was the last third of the night, the Prophet ﷺ sat up, looked at the sky and recited: "Indeed, in the creation of the heavens and the earth and the alternation of night and day are signs for those of understanding" (3:190).
+  - Indonesian: Ibnu 'Abbas berkata bahwa ketika tiba sepertiga malam terakhir, Nabi ﷺ duduk, memandang ke langit, lalu membaca: "Sesungguhnya dalam penciptaan langit dan bumi, dan pergantian malam dan siang terdapat tanda-tanda bagi orang yang berakal" (3:190).
+- [ ] `day.24.dhikr.asalukal_jannah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ
+  - English: (From a longer du'a) O Allah, I ask You for Paradise and for whatever word or deed brings me near to it
+  - Indonesian: (Dari doa yang lebih panjang) Ya Allah, aku memohon kepada-Mu surga dan setiap ucapan atau perbuatan yang mendekatkanku kepadanya
+- [ ] `day.24.dhikr.la_tajal_ad_dunya.meaning`
+  - Arabic source: وَلاَ تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلاَ مَبْلَغَ عِلْمِنَا
+  - English: (From a longer du'a he often made before rising from a gathering) And do not make this world our greatest concern nor the limit of our knowledge
+  - Indonesian: (Dari doa yang lebih panjang yang sering beliau baca sebelum bangkit dari majelis) Dan janganlah Engkau jadikan dunia sebagai tujuan terbesar kami dan batas pengetahuan kami
+- [ ] `day.24.hadith.meaning`
+  - Arabic source: كُنْ فِي الدُّنْيَا كَأَنَّكَ غَرِيبٌ، أَوْ عَابِرُ سَبِيلٍ
+  - English: "Be in this world as if you were a stranger or a traveller."
+  - Indonesian: "Jadilah engkau di dunia ini seakan-akan orang asing atau seorang musafir."
+- [ ] `day.25.dhikr.audhu_an_ushrika.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ
+  - English: O Allah, I seek refuge in You from knowingly associating anything with You, and I seek Your forgiveness for what I do not know
+  - Indonesian: Ya Allah, aku berlindung kepada-Mu dari menyekutukan-Mu dengan sesuatu sedang aku mengetahuinya, dan aku memohon ampun kepada-Mu atas apa yang tidak aku ketahui
+- [ ] `day.25.dhikr.umar_dua_ikhlas.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا، وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا، وَلَا تَجْعَلْ لِأَحَدٍ فِيهِ شَيْئًا
+  - English: (Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds righteous, purely for Your Face, and let no one have any share in them
+  - Indonesian: (Doa 'Umar bin al-Khaththab) Ya Allah, jadikanlah seluruh amalku saleh, ikhlas semata-mata karena wajah-Mu, dan jangan jadikan sedikit pun bagian darinya untuk seorang pun
+- [ ] `day.25.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ لاَ يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ
+  - English: "Allah does not look at your forms or your wealth, but He looks at your hearts and your deeds."
+  - Indonesian: "Sesungguhnya Allah tidak melihat kepada rupa dan harta kalian, tetapi Dia melihat kepada hati dan amal kalian."
+- [ ] `day.26.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `day.26.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.26.dhikr.yuraqibuka.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِمَّنْ يُرَاقِبُكَ فِي السِّرِّ وَالْعَلَانِيَةِ
+  - English: (Personal du'a) O Allah, make me among those who are mindful of You in private and in public
+  - Indonesian: (Doa pribadi) Ya Allah, jadikanlah aku termasuk orang-orang yang merasa diawasi oleh-Mu, saat sendiri maupun di hadapan orang
+- [ ] `day.26.hadith.meaning`
+  - Arabic source: أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ، فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+  - English: "[Ihsan is] to worship Allah as if you see Him, and if you do not see Him, He surely sees you."
+  - Indonesian: "[Ihsan adalah] engkau menyembah Allah seakan-akan engkau melihat-Nya, dan jika engkau tidak melihat-Nya, sesungguhnya Dia melihatmu."
+- [ ] `day.27.dhikr.asalukal_afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: (Morning and evening) O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me
+  - Indonesian: (Pagi dan sore) Ya Allah, aku memohon kepada-Mu keselamatan di dunia dan akhirat. Ya Allah, aku memohon kepada-Mu ampunan dan keselamatan dalam agamaku, duniaku, keluargaku, dan hartaku. Ya Allah, tutupilah aib-aibku dan tenteramkanlah rasa takutku. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri, dan atasku, dan aku berlindung dengan keagungan-Mu dari dibinasakan dari bawahku
+- [ ] `day.27.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Indonesian: Aku memohon ampun kepada Allah Yang Maha Agung, yang tiada tuhan selain Dia, Yang Maha Hidup lagi terus-menerus mengurus makhluk-Nya, dan aku bertaubat kepada-Nya
+- [ ] `day.27.dhikr.rabbana_zalamna.meaning`
+  - Arabic source: رَبَّنَا ظَلَمۡنَآ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَٰسِرِينَ
+  - English: Our Lord, we have wronged ourselves; if You do not forgive us and have mercy on us, we will surely be among the losers
+  - Indonesian: Ya Tuhan kami, kami telah menzalimi diri kami sendiri; jika Engkau tidak mengampuni kami dan tidak merahmati kami, niscaya kami termasuk orang-orang yang merugi
+- [ ] `day.27.hadith.meaning`
+  - Arabic source: اللَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ، وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ
+  - English: "Allah is more pleased with the repentance of His servant than one of you who comes upon his camel after losing it in a desolate land."
+  - Indonesian: "Sungguh Allah lebih gembira dengan taubat hamba-Nya daripada salah seorang di antara kalian yang menemukan kembali untanya setelah hilang di padang yang tandus."
+- [ ] `day.28.dhikr.aslih_ummata_muhammad.meaning`
+  - Arabic source: اللَّهُمَّ أَصْلِحْ أُمَّةَ مُحَمَّدٍ، وَفَرِّجْ عَنْ أُمَّةِ مُحَمَّدٍ، وَارْحَمْ أُمَّةَ مُحَمَّدٍ
+  - English: (Personal du'a) O Allah, set right the ummah of Muhammad, relieve the ummah of Muhammad, and have mercy on the ummah of Muhammad
+  - Indonesian: (Doa pribadi) Ya Allah, perbaikilah umat Muhammad, berilah kelapangan kepada umat Muhammad, dan rahmatilah umat Muhammad
+- [ ] `day.28.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.28.dhikr.unsur_al_islam.meaning`
+  - Arabic source: اللَّهُمَّ انْصُرِ الْإِسْلَامَ وَالْمُسْلِمِينَ
+  - English: (Personal du'a) O Allah, give victory to Islam and the Muslims
+  - Indonesian: (Doa pribadi) Ya Allah, menangkanlah Islam dan kaum Muslimin
+- [ ] `day.28.hadith.meaning`
+  - Arabic source: الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا
+  - English: "The believer to the believer is like a building, each part strengthening the other."
+  - Indonesian: "Seorang mukmin bagi mukmin yang lain bagaikan sebuah bangunan, yang sebagiannya menguatkan sebagian yang lain."
+- [ ] `day.29.dhikr.hudatan_muhtadin.meaning`
+  - Arabic source: اللَّهُمَّ زَيِّنَّا بِزِينَةِ الْإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ
+  - English: (From a longer du'a) O Allah, adorn us with the beauty of faith, and make us guides who are themselves rightly guided
+  - Indonesian: (Dari doa yang lebih panjang) Ya Allah, hiasilah kami dengan keindahan iman, dan jadikanlah kami pemberi petunjuk yang mendapat petunjuk
+- [ ] `day.29.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Indonesian: Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan shalawat kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia. Ya Allah, limpahkanlah keberkahan kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan keberkahan kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.
+- [ ] `day.29.hadith.meaning`
+  - Arabic source: بَلِّغُوا عَنِّي وَلَوْ آيَةً
+  - English: "Convey from me, even if it is one verse."
+  - Indonesian: "Sampaikanlah dariku walau hanya satu ayat."
+- [ ] `day.3.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Indonesian: (Setelah setiap sholat) Segala puji bagi Allah
+- [ ] `day.3.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Indonesian: (Setelah setiap sholat) Allah Maha Besar
+- [ ] `day.3.dhikr.dua_after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: (After each adhan) O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him
+  - Indonesian: (Setelah setiap azan) Ya Allah, Tuhan pemilik seruan yang sempurna ini dan sholat yang akan didirikan, berikanlah kepada Muhammad al-Wasilah dan keutamaan, dan bangkitkanlah beliau ke kedudukan terpuji yang telah Engkau janjikan kepadanya
+- [ ] `day.3.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Indonesian: (Setelah setiap sholat) Maha Suci Allah
+- [ ] `day.3.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Indonesian: (Yang ke-100, setelah tasbih) Tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan milik-Nya segala puji, dan Dia Maha Kuasa atas segala sesuatu
+- [ ] `day.3.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Indonesian: (Saat bangun tidur) Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami, dan kepada-Nya kami dibangkitkan
+- [ ] `day.3.hadith.meaning`
+  - Arabic source: إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلاَتُهُ، فَإِنْ صَلَحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ
+  - English: "The first of his deeds for which a servant will be called to account on the Day of Resurrection is his prayer. If it is sound, he has succeeded and prospered; if it is corrupt, he has failed and lost."
+  - Indonesian: "Amal pertama yang akan dihisab dari seorang hamba pada Hari Kiamat adalah sholatnya. Jika sholatnya baik, maka ia beruntung dan selamat; jika sholatnya rusak, maka ia gagal dan merugi."
+- [ ] `day.30.dhikr.ighfir_li_ma_qaddamtu.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: O Allah, forgive me what I have done before and what I have left for later, what I did in secret and what I did openly, and what You know better than I. You are the One who brings forward and the One who puts back, and You are able to do all things
+  - Indonesian: Ya Allah, ampunilah aku atas apa yang telah aku lakukan dan apa yang aku tunda, apa yang aku lakukan secara tersembunyi dan apa yang aku lakukan secara terang-terangan, dan apa yang Engkau lebih mengetahuinya daripada aku. Engkaulah Yang Mendahulukan dan Engkaulah Yang Mengakhirkan, dan Engkau Maha Kuasa atas segala sesuatu
+- [ ] `day.30.dhikr.musarrifal_qulub.meaning`
+  - Arabic source: اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ
+  - English: O Allah, Director of hearts, direct our hearts to Your obedience
+  - Indonesian: Ya Allah, Dzat yang memalingkan hati, palingkanlah hati kami kepada ketaatan kepada-Mu
+- [ ] `day.30.dhikr.ya_muqallibal_qulub.meaning`
+  - Arabic source: يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ
+  - English: (Umm Salamah said this was the du'a he made most often when he was with her) O Turner of hearts, make my heart firm upon Your religion
+  - Indonesian: (Ummu Salamah berkata bahwa inilah doa yang paling sering beliau panjatkan saat bersamanya) Wahai Dzat yang membolak-balikkan hati, teguhkanlah hatiku di atas agama-Mu
+- [ ] `day.30.hadith.meaning`
+  - Arabic source: قُلْ آمَنْتُ بِاللَّهِ فَاسْتَقِمْ
+  - English: "Say: I believe in Allah, then be steadfast." (His answer to Sufyan ibn 'Abdullah ath-Thaqafi, who asked for a teaching he would never need to ask anyone else about.)
+  - Indonesian: "Katakanlah: Aku beriman kepada Allah, kemudian istiqamahlah." (Jawaban beliau kepada Sufyan bin 'Abdullah ats-Tsaqafi, yang meminta suatu ajaran yang tidak perlu lagi ia tanyakan kepada orang lain.)
+- [ ] `day.4.dhikr.asbahna_ala_fitrah.meaning`
+  - Arabic source: أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ، وَعَلَى كَلِمَةِ الْإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ
+  - English: We have entered the morning upon the natural way of Islam, the word of sincerity, the religion of our Prophet Muhammad ﷺ, and the way of our father Ibrahim, upright and submitting, who was not of the polytheists
+  - Indonesian: Kami memasuki waktu pagi di atas fitrah Islam, di atas kalimat ikhlas, di atas agama Nabi kami Muhammad ﷺ, dan di atas millah bapak kami Ibrahim, yang lurus dan berserah diri, dan ia bukan termasuk orang-orang musyrik
+- [ ] `day.4.dhikr.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created
+  - Indonesian: Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari keburukan makhluk yang Dia ciptakan
+- [ ] `day.4.dhikr.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu petang dan dengan-Mu kami memasuki waktu pagi, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu tempat kembali
+- [ ] `day.4.dhikr.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu pagi dan dengan-Mu kami memasuki waktu petang, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu kebangkitan
+- [ ] `day.4.hadith.meaning`
+  - Arabic source: مَنْ صَلَّى الصُّبْحَ فَهُوَ فِي ذِمَّةِ اللَّهِ
+  - English: "Whoever prays Subh (Fajr) is under the protection of Allah."
+  - Indonesian: "Barang siapa sholat Subuh, maka ia berada dalam jaminan perlindungan Allah."
+- [ ] `day.4.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَاجْعَلْ فِي سَمْعِي نُورًا، وَاجْعَلْ فِي بَصَرِي نُورًا
+  - English: O Allah, place light in my heart, light in my tongue, light in my hearing and light in my sight.
+  - Indonesian: Ya Allah, jadikanlah cahaya di hatiku, cahaya di lisanku, cahaya di pendengaranku, dan cahaya di penglihatanku.
+- [ ] `day.5.dhikr.dua_dhun_nun.meaning`
+  - Arabic source: لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبۡحَٰنَكَ إِنِّي كُنتُ مِنَ ٱلظَّٰلِمِينَ
+  - English: There is no god but You, glory be to You; I have been among the wrongdoers
+  - Indonesian: Tiada tuhan selain Engkau, Maha Suci Engkau; sesungguhnya aku termasuk orang-orang yang zalim
+- [ ] `day.5.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Indonesian: Ya Allah, limpahkanlah shalawat kepada Muhammad
+- [ ] `day.5.dhikr.subhanallahil_azim.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ
+  - English: Glory be to Allah and praise be to Him; glory be to Allah the Magnificent
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya; Maha Suci Allah Yang Maha Agung
+- [ ] `day.5.dhikr.ya_hayyu_ya_qayyum.meaning`
+  - Arabic source: يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ
+  - English: (In times of distress) O Ever-Living, O Sustainer, by Your mercy I seek help
+  - Indonesian: (Saat dalam kesusahan) Wahai Yang Maha Hidup, wahai Yang terus-menerus mengurus makhluk-Nya, dengan rahmat-Mu aku memohon pertolongan
+- [ ] `day.5.hadith.meaning`
+  - Arabic source: صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي
+  - English: "Pray as you have seen me praying."
+  - Indonesian: "Sholatlah kalian sebagaimana kalian melihat aku sholat."
+- [ ] `day.5.prayer.dua.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ، اللَّهُمَّ اغْفِرْ لِي
+  - English: (In ruku' and sujood) Glory be to You, O Allah, our Lord, and praise be to You. O Allah, forgive me.
+  - Indonesian: (Saat rukuk dan sujud) Maha Suci Engkau, ya Allah, Tuhan kami, dan dengan memuji-Mu. Ya Allah, ampunilah aku.
+- [ ] `day.6.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Indonesian: (Dari doa yang lebih panjang) Dan tunjukilah aku kepada akhlak yang terbaik, karena tiada yang dapat menunjukkan kepadanya selain Engkau; dan jauhkanlah dariku akhlak yang buruk, karena tiada yang dapat menjauhkannya selain Engkau
+- [ ] `day.6.dhikr.rabi_qalbi.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلِ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ صَدْرِي، وَجِلَاءَ حُزْنِي، وَذَهَابَ هَمِّي
+  - English: (From a longer du'a for distress, Ahmad 3712) O Allah, make the Quran the spring of my heart, the light of my chest, the remover of my sorrow and the reliever of my distress
+  - Indonesian: (Dari doa yang lebih panjang saat kesusahan, Ahmad 3712) Ya Allah, jadikanlah Al-Qur'an penyejuk hatiku, cahaya dadaku, penghapus kesedihanku, dan pelenyap kegelisahanku
+- [ ] `day.6.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `day.6.hadith.meaning`
+  - Arabic source: مَنْ قَرَأَ حَرْفًا مِنْ كِتَابِ اللَّهِ فَلَهُ بِهِ حَسَنَةٌ، وَالْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا، لاَ أَقُولُ الم حَرْفٌ، وَلَكِنْ أَلِفٌ حَرْفٌ وَلاَمٌ حَرْفٌ وَمِيمٌ حَرْفٌ
+  - English: "Whoever reads a letter from the Book of Allah receives a good deed for it, and a good deed is multiplied ten times. I do not say that Alif-Lam-Mim is one letter; rather Alif is a letter, Lam is a letter and Mim is a letter."
+  - Indonesian: "Barang siapa membaca satu huruf dari Kitab Allah, maka baginya satu kebaikan, dan satu kebaikan dilipatgandakan menjadi sepuluh. Aku tidak mengatakan Alif-Lam-Mim itu satu huruf; tetapi Alif satu huruf, Lam satu huruf, dan Mim satu huruf."
+- [ ] `day.7.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Indonesian: Aku memohon ampun kepada Allah Yang Maha Agung, yang tiada tuhan selain Dia, Yang Maha Hidup lagi terus-menerus mengurus makhluk-Nya, dan aku bertaubat kepada-Nya
+- [ ] `day.7.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `day.7.hadith.meaning`
+  - Arabic source: وَاللَّهِ إِنِّي لأَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ فِي الْيَوْمِ أَكْثَرَ مِنْ سَبْعِينَ مَرَّةً
+  - English: "By Allah, I seek Allah's forgiveness and turn to Him in repentance more than seventy times a day."
+  - Indonesian: "Demi Allah, sungguh aku memohon ampun kepada Allah dan bertaubat kepada-Nya dalam sehari lebih dari tujuh puluh kali."
+- [ ] `day.7.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ
+  - English: O Allah, I ask You for pardon and well-being in this world and the Hereafter.
+  - Indonesian: Ya Allah, aku memohon kepada-Mu ampunan dan keselamatan di dunia dan akhirat.
+- [ ] `day.8.dhikr.afini_fi_badani.meaning`
+  - Arabic source: اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ
+  - English: O Allah, grant me well-being in my body, my hearing and my sight; there is no god but You
+  - Indonesian: Ya Allah, sehatkanlah tubuhku, pendengaranku, dan penglihatanku; tiada tuhan selain Engkau
+- [ ] `day.8.dhikr.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave
+  - Indonesian: Kami memasuki waktu petang dan kerajaan hanya milik Allah; segala puji bagi Allah; tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan pujian, dan Dia Maha Kuasa atas segala sesuatu. Ya Tuhanku, aku memohon kepada-Mu kebaikan malam ini dan kebaikan sesudahnya, dan aku berlindung kepada-Mu dari keburukan malam ini dan keburukan sesudahnya. Ya Tuhanku, aku berlindung kepada-Mu dari kemalasan dan buruknya masa tua. Ya Tuhanku, aku berlindung kepada-Mu dari azab di neraka dan azab di kubur
+- [ ] `day.8.dhikr.bismillah_alladhi.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing
+  - Indonesian: Dengan nama Allah, yang bersama nama-Nya tidak ada sesuatu pun di bumi maupun di langit yang dapat membahayakan, dan Dia Maha Mendengar lagi Maha Mengetahui
+- [ ] `day.8.dhikr.hasbiyallah.meaning`
+  - Arabic source: حَسۡبِيَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَۖ عَلَيۡهِ تَوَكَّلۡتُۖ وَهُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡعَظِيمِ
+  - English: Allah is sufficient for me; there is no god but Him; in Him I trust, and He is Lord of the Mighty Throne
+  - Indonesian: Cukuplah Allah bagiku; tiada tuhan selain Dia; kepada-Nya aku bertawakal, dan Dia adalah Tuhan pemilik 'Arsy yang agung
+- [ ] `day.8.dhikr.three_quls.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ
+  - English: Surahs Al-Ikhlas, Al-Falaq and An-Nas, three times each in the morning and evening. The Prophet ﷺ said they will suffice you against everything.
+  - Indonesian: Surah Al-Ikhlas, Al-Falaq, dan An-Nas, masing-masing tiga kali di pagi dan petang hari. Nabi ﷺ bersabda bahwa ketiganya akan mencukupimu dari segala sesuatu.
+- [ ] `day.8.hadith.meaning`
+  - Arabic source: مَثَلُ الَّذِي يَذْكُرُ رَبَّهُ وَالَّذِي لاَ يَذْكُرُ رَبَّهُ مَثَلُ الْحَيِّ وَالْمَيِّتِ
+  - English: "The example of one who remembers his Lord and one who does not is like the living and the dead."
+  - Indonesian: "Perumpamaan orang yang mengingat Tuhannya dan orang yang tidak mengingat-Nya adalah seperti orang yang hidup dan orang yang mati."
+- [ ] `day.9.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Indonesian: Ya Allah, limpahkanlah shalawat kepada Muhammad
+- [ ] `day.9.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Indonesian: Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan shalawat kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia. Ya Allah, limpahkanlah keberkahan kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan keberkahan kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.
+- [ ] `day.9.hadith.meaning`
+  - Arabic source: لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ وَالنَّاسِ أَجْمَعِينَ
+  - English: "None of you truly believes until I am more beloved to him than his father, his child and all of mankind."
+  - Indonesian: "Tidaklah salah seorang di antara kalian benar-benar beriman hingga aku lebih ia cintai daripada ayahnya, anaknya, dan seluruh manusia."
+- [ ] `dua.after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him.
+  - Indonesian: Ya Allah, Tuhan pemilik seruan yang sempurna ini dan sholat yang akan didirikan, berikanlah kepada Muhammad al-Wasilah dan keutamaan, dan bangkitkanlah beliau ke kedudukan terpuji yang telah Engkau janjikan kepadanya.
+- [ ] `dua.after_eating.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ
+  - English: All praise is for Allah who fed me this and provided it for me without any might or power on my part.
+  - Indonesian: Segala puji bagi Allah yang telah memberiku makanan ini dan menganugerahkannya kepadaku tanpa daya dan kekuatan dariku.
+- [ ] `dua.after_salah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ. اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ ذَا الْجَلَالِ وَالْإِكْرَامِ
+  - English: I seek Allah’s forgiveness (three times). O Allah, You are Peace and from You comes peace; blessed are You, Possessor of majesty and honour.
+  - Indonesian: Aku memohon ampun kepada Allah (tiga kali). Ya Allah, Engkau adalah As-Salam dan dari-Mu keselamatan; Maha Berkah Engkau, wahai Pemilik keagungan dan kemuliaan.
+- [ ] `dua.before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah. The Prophet ﷺ told a boy: “Mention the name of Allah, eat with your right hand, and eat from what is in front of you.”
+  - Indonesian: Dengan nama Allah. Nabi ﷺ bersabda kepada seorang anak: “Sebutlah nama Allah, makanlah dengan tangan kananmu, dan makanlah dari makanan yang ada di dekatmu.”
+- [ ] `dua.before_reciting_quran.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed. Allah says: “When you recite the Quran, seek refuge in Allah from Shaytan, the accursed.”
+  - Indonesian: Aku berlindung kepada Allah dari setan yang terkutuk. Allah berfirman: “Apabila kamu membaca Al-Qur'an, mohonlah perlindungan kepada Allah dari setan yang terkutuk.”
+- [ ] `dua.before_sleeping.meaning`
+  - Arabic source: بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+  - English: In Your name, O Allah, I die and I live.
+  - Indonesian: Dengan nama-Mu, ya Allah, aku mati dan aku hidup.
+- [ ] `dua.dua_for_knowledge.meaning`
+  - Arabic source: وَقُل رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: And say: “My Lord, increase me in knowledge.” (Allah tells the Prophet ﷺ to say this; the du‘a itself is “Rabbi zidnī ʿilmā”.)
+  - Indonesian: Dan katakanlah: “Ya Tuhanku, tambahkanlah kepadaku ilmu.” (Allah memerintahkan Nabi ﷺ mengucapkannya; doanya sendiri adalah “Rabbi zidnī ʿilmā”.)
+- [ ] `dua.entering_mosque.meaning`
+  - Arabic source: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ
+  - English: O Allah, open for me the doors of Your mercy.
+  - Indonesian: Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu.
+- [ ] `dua.evening_bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu petang dan dengan-Mu kami memasuki waktu pagi, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu tempat kembali.
+- [ ] `dua.evening_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Indonesian: Dengan nama Allah, yang bersama nama-Nya tidak ada sesuatu pun di bumi maupun di langit yang dapat membahayakan, dan Dia Maha Mendengar lagi Maha Mengetahui.
+- [ ] `dua.forgot_bismillah_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ
+  - English: In the name of Allah, at its beginning and at its end.
+  - Indonesian: Dengan nama Allah, di awal dan di akhirnya.
+- [ ] `dua.leaving_home.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+  - English: In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah.
+  - Indonesian: Dengan nama Allah; aku bertawakal kepada Allah; tiada daya dan kekuatan kecuali dengan pertolongan Allah.
+- [ ] `dua.leaving_mosque.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ
+  - English: O Allah, I ask You of Your bounty.
+  - Indonesian: Ya Allah, aku memohon kepada-Mu sebagian dari karunia-Mu.
+- [ ] `dua.morning_bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu pagi dan dengan-Mu kami memasuki waktu petang, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu kebangkitan.
+- [ ] `dua.morning_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Indonesian: Dengan nama Allah, yang bersama nama-Nya tidak ada sesuatu pun di bumi maupun di langit yang dapat membahayakan, dan Dia Maha Mendengar lagi Maha Mengetahui.
+- [ ] `dua.opening_dua_salah.meaning`
+  - Arabic source: اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: O Allah, put distance between me and my sins as You have put distance between the East and the West. O Allah, cleanse me of sins as a white garment is cleansed of dirt. O Allah, wash away my sins with water, snow and hail.
+  - Indonesian: Ya Allah, jauhkanlah antara aku dan dosa-dosaku sebagaimana Engkau menjauhkan antara timur dan barat. Ya Allah, bersihkanlah aku dari dosa-dosa sebagaimana kain putih dibersihkan dari kotoran. Ya Allah, bersihkanlah dosa-dosaku dengan air, salju, dan butiran es.
+- [ ] `dua.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `dua.tawbah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ
+  - English: I seek Allah’s forgiveness and I turn to Him in repentance.
+  - Indonesian: Aku memohon ampun kepada Allah dan aku bertaubat kepada-Nya.
+- [ ] `dua.waking_up.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: All praise is for Allah who gave us life after causing us to die, and to Him is the resurrection.
+  - Indonesian: Segala puji bagi Allah yang telah menghidupkan kami setelah mematikan kami, dan kepada-Nya kebangkitan.
+- [ ] `learn.dua_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: I bear witness that there is no god but Allah, alone without partner, and I bear witness that Muhammad is His servant and Messenger. (Whoever performs wudu well, then says this, the eight gates of Paradise are opened for him.)
+  - Indonesian: Aku bersaksi bahwa tiada tuhan selain Allah semata, tiada sekutu bagi-Nya, dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya. (Barang siapa berwudhu dengan baik lalu mengucapkan ini, akan dibukakan baginya delapan pintu surga.)
+- [ ] `learn.evening_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Indonesian: Ya Allah, aku memohon kepada-Mu keselamatan di dunia dan akhirat. Ya Allah, aku memohon kepada-Mu ampunan dan keselamatan dalam agamaku, duniaku, keluargaku, dan hartaku. Ya Allah, tutupilah aib-aibku dan tenteramkanlah rasa takutku. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri, dan atasku, dan aku berlindung dengan keagungan-Mu dari dibinasakan dari bawahku.
+- [ ] `learn.evening_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Indonesian: Ya Allah, Yang Maha Mengetahui yang gaib dan yang nyata, Pencipta langit dan bumi, Tuhan dan Penguasa segala sesuatu: aku bersaksi bahwa tiada tuhan selain Engkau. Aku berlindung kepada-Mu dari keburukan diriku sendiri dan dari keburukan setan serta ajakannya kepada syirik.
+- [ ] `learn.evening_adhkar.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Indonesian: Kami memasuki waktu petang dan kerajaan hanya milik Allah; segala puji bagi Allah; tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan pujian, dan Dia Maha Kuasa atas segala sesuatu. Ya Tuhanku, aku memohon kepada-Mu kebaikan malam ini dan kebaikan sesudahnya, dan aku berlindung kepada-Mu dari keburukan malam ini dan keburukan sesudahnya. Ya Tuhanku, aku berlindung kepada-Mu dari kemalasan dan buruknya masa tua. Ya Tuhanku, aku berlindung kepada-Mu dari azab di neraka dan azab di kubur.
+- [ ] `learn.evening_adhkar.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created.
+  - Indonesian: Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari keburukan makhluk yang Dia ciptakan.
+- [ ] `learn.evening_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Indonesian: Allah, tiada tuhan selain Dia, Yang Maha Hidup, yang terus-menerus mengurus (makhluk-Nya). Dia tidak mengantuk dan tidak tidur. Milik-Nya apa yang ada di langit dan apa yang ada di bumi. Siapa yang dapat memberi syafaat di sisi-Nya tanpa izin-Nya? Dia mengetahui apa yang di hadapan mereka dan apa yang di belakang mereka, dan mereka tidak mengetahui sesuatu apa pun dari ilmu-Nya melainkan apa yang Dia kehendaki. Kursi-Nya meliputi langit dan bumi, dan Dia tidak merasa berat memelihara keduanya. Dan Dia Maha Tinggi, Maha Agung.
+- [ ] `learn.evening_adhkar.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu petang dan dengan-Mu kami memasuki waktu pagi, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu tempat kembali.
+- [ ] `learn.evening_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Indonesian: Dengan nama Allah, yang bersama nama-Nya tidak ada sesuatu pun di bumi maupun di langit yang dapat membahayakan, dan Dia Maha Mendengar lagi Maha Mengetahui.
+- [ ] `learn.evening_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `learn.evening_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `learn.evening_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Indonesian: Al-Falaq: Katakanlah: Aku berlindung kepada Tuhan yang menguasai subuh, dari kejahatan makhluk yang Dia ciptakan, dari kejahatan malam apabila telah gelap gulita, dari kejahatan perempuan-perempuan penyihir yang meniup pada buhul-buhul, dan dari kejahatan orang yang dengki apabila ia dengki.
+- [ ] `learn.evening_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Indonesian: Al-Ikhlas: Katakanlah: Dialah Allah, Yang Maha Esa. Allah tempat meminta segala sesuatu. Dia tidak beranak dan tidak pula diperanakkan, dan tidak ada sesuatu pun yang setara dengan-Nya.
+- [ ] `learn.evening_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Indonesian: An-Nas: Katakanlah: Aku berlindung kepada Tuhan manusia, Raja manusia, sembahan manusia, dari kejahatan bisikan setan yang bersembunyi, yang membisikkan (kejahatan) ke dalam dada manusia, dari golongan jin dan manusia.
+- [ ] `learn.morning_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Indonesian: Ya Allah, aku memohon kepada-Mu keselamatan di dunia dan akhirat. Ya Allah, aku memohon kepada-Mu ampunan dan keselamatan dalam agamaku, duniaku, keluargaku, dan hartaku. Ya Allah, tutupilah aib-aibku dan tenteramkanlah rasa takutku. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri, dan atasku, dan aku berlindung dengan keagungan-Mu dari dibinasakan dari bawahku.
+- [ ] `learn.morning_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Indonesian: Ya Allah, Yang Maha Mengetahui yang gaib dan yang nyata, Pencipta langit dan bumi, Tuhan dan Penguasa segala sesuatu: aku bersaksi bahwa tiada tuhan selain Engkau. Aku berlindung kepada-Mu dari keburukan diriku sendiri dan dari keburukan setan serta ajakannya kepada syirik.
+- [ ] `learn.morning_adhkar.asbahna_wa_asbahal_mulk.meaning`
+  - Arabic source: أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the morning and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this day and what follows it, and seek refuge in You from the evil of this day and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Indonesian: Kami memasuki waktu pagi dan kerajaan hanya milik Allah; segala puji bagi Allah; tiada tuhan yang berhak disembah selain Allah semata, tiada sekutu bagi-Nya; milik-Nya kerajaan dan pujian, dan Dia Maha Kuasa atas segala sesuatu. Ya Tuhanku, aku memohon kepada-Mu kebaikan hari ini dan kebaikan sesudahnya, dan aku berlindung kepada-Mu dari keburukan hari ini dan keburukan sesudahnya. Ya Tuhanku, aku berlindung kepada-Mu dari kemalasan dan buruknya masa tua. Ya Tuhanku, aku berlindung kepada-Mu dari azab di neraka dan azab di kubur.
+- [ ] `learn.morning_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Indonesian: Allah, tiada tuhan selain Dia, Yang Maha Hidup, yang terus-menerus mengurus (makhluk-Nya). Dia tidak mengantuk dan tidak tidur. Milik-Nya apa yang ada di langit dan apa yang ada di bumi. Siapa yang dapat memberi syafaat di sisi-Nya tanpa izin-Nya? Dia mengetahui apa yang di hadapan mereka dan apa yang di belakang mereka, dan mereka tidak mengetahui sesuatu apa pun dari ilmu-Nya melainkan apa yang Dia kehendaki. Kursi-Nya meliputi langit dan bumi, dan Dia tidak merasa berat memelihara keduanya. Dan Dia Maha Tinggi, Maha Agung.
+- [ ] `learn.morning_adhkar.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Indonesian: Ya Allah, dengan-Mu kami memasuki waktu pagi dan dengan-Mu kami memasuki waktu petang, dengan-Mu kami hidup dan dengan-Mu kami mati, dan kepada-Mu kebangkitan.
+- [ ] `learn.morning_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Indonesian: Dengan nama Allah, yang bersama nama-Nya tidak ada sesuatu pun di bumi maupun di langit yang dapat membahayakan, dan Dia Maha Mendengar lagi Maha Mengetahui.
+- [ ] `learn.morning_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Indonesian: Ya Allah, Engkau adalah Tuhanku; tiada tuhan selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu, dan aku berpegang pada perjanjian dan janji-Mu semampuku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu atasku dan aku mengakui dosaku, maka ampunilah aku, karena tiada yang mengampuni dosa selain Engkau.
+- [ ] `learn.morning_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Indonesian: Maha Suci Allah dan segala puji bagi-Nya
+- [ ] `learn.morning_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Indonesian: Al-Falaq: Katakanlah: Aku berlindung kepada Tuhan yang menguasai subuh, dari kejahatan makhluk yang Dia ciptakan, dari kejahatan malam apabila telah gelap gulita, dari kejahatan perempuan-perempuan penyihir yang meniup pada buhul-buhul, dan dari kejahatan orang yang dengki apabila ia dengki.
+- [ ] `learn.morning_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Indonesian: Al-Ikhlas: Katakanlah: Dialah Allah, Yang Maha Esa. Allah tempat meminta segala sesuatu. Dia tidak beranak dan tidak pula diperanakkan, dan tidak ada sesuatu pun yang setara dengan-Nya.
+- [ ] `learn.morning_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Indonesian: An-Nas: Katakanlah: Aku berlindung kepada Tuhan manusia, Raja manusia, sembahan manusia, dari kejahatan bisikan setan yang bersembunyi, yang membisikkan (kejahatan) ke dalam dada manusia, dari golongan jin dan manusia.
+- [ ] `learn.pillar.allah.meaning`
+  - Arabic source: الْإِيمَانُ بِاللَّهِ
+  - English: Believing that Allah exists, that He alone is Lord and alone deserves worship, and in His names and attributes.
+  - Indonesian: Meyakini bahwa Allah itu ada, bahwa hanya Dia satu-satunya Tuhan dan satu-satunya yang berhak disembah, serta beriman kepada nama-nama dan sifat-sifat-Nya.
+- [ ] `learn.pillar.angels.meaning`
+  - Arabic source: الْإِيمَانُ بِالْمَلَائِكَةِ
+  - English: Believing in the angels, created from light, who always obey Allah, such as Jibril.
+  - Indonesian: Beriman kepada para malaikat, yang diciptakan dari cahaya dan senantiasa taat kepada Allah, seperti Jibril.
+- [ ] `learn.pillar.books.meaning`
+  - Arabic source: الْإِيمَانُ بِالْكُتُبِ
+  - English: Believing in the books Allah revealed, such as the Torah and the Gospel, with the Quran as the final, preserved one.
+  - Indonesian: Beriman kepada kitab-kitab yang Allah turunkan, seperti Taurat dan Injil, dengan Al-Qur'an sebagai kitab terakhir yang terjaga.
+- [ ] `learn.pillar.hajj.meaning`
+  - Arabic source: حَجُّ الْبَيْتِ
+  - English: Pilgrimage to the Ka‘bah once in a lifetime, for those who are able.
+  - Indonesian: Berhaji ke Ka‘bah sekali seumur hidup, bagi yang mampu.
+- [ ] `learn.pillar.last_day.meaning`
+  - Arabic source: الْإِيمَانُ بِالْيَوْمِ الْآخِرِ
+  - English: Believing in what comes after death: the grave, the resurrection, the judgement, Paradise and Hell.
+  - Indonesian: Beriman kepada apa yang terjadi setelah kematian: alam kubur, kebangkitan, hari perhitungan, surga, dan neraka.
+- [ ] `learn.pillar.messengers.meaning`
+  - Arabic source: الْإِيمَانُ بِالرُّسُلِ
+  - English: Believing in all of Allah's messengers, from Nuh to Muhammad ﷺ, the last of them.
+  - Indonesian: Beriman kepada seluruh rasul Allah, dari Nuh hingga Muhammad ﷺ, rasul yang terakhir.
+- [ ] `learn.pillar.qadar.meaning`
+  - Arabic source: الْإِيمَانُ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ
+  - English: Believing that everything, good and bad, happens by Allah's knowledge, writing, will and creation.
+  - Indonesian: Meyakini bahwa segala sesuatu, yang baik maupun yang buruk, terjadi dengan ilmu, catatan, kehendak, dan ciptaan Allah.
+- [ ] `learn.pillar.salah.meaning`
+  - Arabic source: إِقَامُ الصَّلَاةِ
+  - English: Establishing the five daily prayers on time.
+  - Indonesian: Mendirikan sholat lima waktu tepat pada waktunya.
+- [ ] `learn.pillar.sawm.meaning`
+  - Arabic source: صَوْمُ رَمَضَانَ
+  - English: Fasting from dawn to sunset throughout the month of Ramadan.
+  - Indonesian: Berpuasa dari terbit fajar hingga terbenam matahari sepanjang bulan Ramadhan.
+- [ ] `learn.pillar.shahadah.meaning`
+  - Arabic source: الشَّهَادَتَانِ
+  - English: Testifying that there is no god but Allah and that Muhammad is the Messenger of Allah.
+  - Indonesian: Bersaksi bahwa tiada tuhan selain Allah dan bahwa Muhammad adalah utusan Allah.
+- [ ] `learn.pillar.zakah.meaning`
+  - Arabic source: إِيتَاءُ الزَّكَاةِ
+  - English: Paying the yearly obligatory charity: 2.5% of savings held above the nisab threshold.
+  - Indonesian: Menunaikan sedekah wajib tahunan: 2,5% dari simpanan yang mencapai batas nisab.
+- [ ] `learn.salah_steps.salah_fatihah.recite.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿١﴾ ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ ﴿٢﴾ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿٣﴾ مَٰلِكِ يَوۡمِ ٱلدِّينِ ﴿٤﴾ إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ ﴿٥﴾ ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ ﴿٦﴾ صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ ﴿٧﴾
+  - English: In the name of Allah, the Most Gracious, the Most Merciful. All praise is for Allah, Lord of all the worlds, the Most Gracious, the Most Merciful, Master of the Day of Judgement. You alone we worship, and You alone we ask for help. Guide us to the straight path, the path of those You have blessed, not of those who earned Your anger, nor of those who went astray.
+  - Indonesian: Dengan nama Allah Yang Maha Pengasih, Maha Penyayang. Segala puji bagi Allah, Tuhan seluruh alam, Yang Maha Pengasih, Maha Penyayang, Pemilik hari pembalasan. Hanya kepada Engkaulah kami menyembah, dan hanya kepada Engkaulah kami memohon pertolongan. Tunjukilah kami jalan yang lurus, (yaitu) jalan orang-orang yang telah Engkau beri nikmat, bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat.
+- [ ] `learn.salah_steps.salah_final_dua.recite.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ
+  - English: O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah.
+  - Indonesian: Ya Allah, aku berlindung kepada-Mu dari azab Jahanam, dari azab kubur, dari fitnah kehidupan dan kematian, dan dari keburukan fitnah Al-Masih Ad-Dajjal.
+- [ ] `learn.salah_steps.salah_istiadhah.recite.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed.
+  - Indonesian: Aku berlindung kepada Allah dari setan yang terkutuk.
+- [ ] `learn.salah_steps.salah_opening_dua.recite.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ
+  - English: Glory be to You, O Allah, and praise; blessed is Your name, exalted is Your majesty, and there is no god besides You.
+  - Indonesian: Maha Suci Engkau, ya Allah, dan dengan memuji-Mu; Maha Berkah nama-Mu, Maha Tinggi keagungan-Mu, dan tiada tuhan selain Engkau.
+- [ ] `learn.salah_steps.salah_rising.recite.meaning`
+  - Arabic source: سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ، رَبَّنَا وَلَكَ الْحَمْدُ
+  - English: Allah hears whoever praises Him. Our Lord, and to You belongs all praise.
+  - Indonesian: Allah mendengar orang yang memuji-Nya. Ya Tuhan kami, dan bagi-Mu segala puji.
+- [ ] `learn.salah_steps.salah_ruku.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْعَظِيمِ
+  - English: Glory be to my Lord, the Magnificent
+  - Indonesian: Maha Suci Tuhanku Yang Maha Agung
+- [ ] `learn.salah_steps.salah_salawat.recite.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Indonesian: Ya Allah, limpahkanlah shalawat kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan shalawat kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia. Ya Allah, limpahkanlah keberkahan kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan keberkahan kepada Ibrahim dan keluarga Ibrahim; sesungguhnya Engkau Maha Terpuji lagi Maha Mulia.
+- [ ] `learn.salah_steps.salah_short_surah.recite.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Indonesian: Katakanlah: Dialah Allah, Yang Maha Esa. Allah tempat meminta segala sesuatu. Dia tidak beranak dan tidak pula diperanakkan, dan tidak ada sesuatu pun yang setara dengan-Nya.
+- [ ] `learn.salah_steps.salah_sitting.recite.meaning`
+  - Arabic source: رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي
+  - English: My Lord, forgive me. My Lord, forgive me.
+  - Indonesian: Ya Tuhanku, ampunilah aku. Ya Tuhanku, ampunilah aku.
+- [ ] `learn.salah_steps.salah_sujud.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْأَعْلَى
+  - English: Glory be to my Lord, the Most High
+  - Indonesian: Maha Suci Tuhanku Yang Maha Tinggi
+- [ ] `learn.salah_steps.salah_takbir.recite.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: Allah is the Greatest
+  - Indonesian: Allah Maha Besar
+- [ ] `learn.salah_steps.salah_tashahhud.recite.meaning`
+  - Arabic source: التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: All greetings, prayers and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and Messenger.
+  - Indonesian: Segala penghormatan, sholat, dan kebaikan adalah milik Allah. Semoga keselamatan tercurah kepadamu, wahai Nabi, beserta rahmat Allah dan berkah-Nya. Semoga keselamatan tercurah kepada kami dan kepada hamba-hamba Allah yang saleh. Aku bersaksi bahwa tiada tuhan selain Allah, dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya.
+- [ ] `learn.salah_steps.salah_taslim.recite.meaning`
+  - Arabic source: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ
+  - English: Peace and the mercy of Allah be upon you
+  - Indonesian: Semoga keselamatan dan rahmat Allah tercurah kepadamu
+- [ ] `learn.wudu_steps.wudu_bismillah.recite.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah
+  - Indonesian: Dengan nama Allah
+- [ ] `milestone.fajr_7.meaning`
+  - Arabic source: مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّةَ
+  - English: "Whoever prays the two cool prayers (Fajr and 'Asr) will enter Paradise."
+  - Indonesian: "Barang siapa mengerjakan dua sholat di waktu sejuk (Subuh dan Asar), ia akan masuk surga."
+- [ ] `milestone.first_full_salah_day.meaning`
+  - Arabic source: فَذَلِكَ مِثْلُ الصَّلَوَاتِ الْخَمْسِ، يَمْحُو اللَّهُ بِهَا الْخَطَايَا
+  - English: "That is the likeness of the five prayers: through them Allah wipes away sins." (Like bathing in a river at your door five times a day.)
+  - Indonesian: "Demikianlah perumpamaan sholat lima waktu: dengannya Allah menghapus dosa-dosa." (Seperti mandi di sungai di depan pintu rumahmu lima kali sehari.)
+- [ ] `milestone.first_reflection.meaning`
+  - Arabic source: يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَلۡتَنظُرۡ نَفۡسࣱ مَّا قَدَّمَتۡ لِغَدࣲۖ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ خَبِيرُۢ بِمَا تَعۡمَلُونَ
+  - English: "O you who believe, fear Allah, and let every soul look to what it has sent forth for tomorrow. And fear Allah; indeed, Allah is Aware of what you do."
+  - Indonesian: "Wahai orang-orang yang beriman, bertakwalah kepada Allah dan hendaklah setiap diri memperhatikan apa yang telah diperbuatnya untuk hari esok. Dan bertakwalah kepada Allah; sungguh, Allah Maha Teliti terhadap apa yang kamu kerjakan."
+- [ ] `milestone.first_step.meaning`
+  - Arabic source: وَإِنْ تَقَرَّبَ إِلَىَّ بِشِبْرٍ تَقَرَّبْتُ إِلَيْهِ ذِرَاعًا ... وَإِنْ أَتَانِي يَمْشِي أَتَيْتُهُ هَرْوَلَةً
+  - English: Allah says: "If he draws near to Me a hand-span, I draw near to him an arm's length… and if he comes to Me walking, I come to him running."
+  - Indonesian: Allah berfirman: "Jika ia mendekat kepada-Ku sejengkal, Aku mendekat kepadanya sehasta… dan jika ia datang kepada-Ku dengan berjalan, Aku datang kepadanya dengan berlari."
+- [ ] `milestone.halfway.meaning`
+  - Arabic source: فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا ﴿٥﴾ إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰا
+  - English: "For indeed, with hardship comes ease. Indeed, with hardship comes ease."
+  - Indonesian: "Maka sesungguhnya bersama kesulitan ada kemudahan. Sesungguhnya bersama kesulitan ada kemudahan."
+- [ ] `milestone.journey_complete.meaning`
+  - Arabic source: لَئِن شَكَرۡتُمۡ لَأَزِيدَنَّكُمۡ
+  - English: "If you are grateful, I will surely increase you."
+  - Indonesian: "Sesungguhnya jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu."
+- [ ] `milestone.streak_7.meaning`
+  - Arabic source: وَٱعۡبُدۡ رَبَّكَ حَتَّىٰ يَأۡتِيَكَ ٱلۡيَقِينُ
+  - English: "And worship your Lord until there comes to you the certainty (death)."
+  - Indonesian: "Dan sembahlah Tuhanmu sampai datang kepadamu yang diyakini (ajal)."
+- [ ] `milestone.tasbih_1000.meaning`
+  - Arabic source: أَيَعْجِزُ أَحَدُكُمْ أَنْ يَكْسِبَ كُلَّ يَوْمٍ أَلْفَ حَسَنَةٍ ... يُسَبِّحُ مِائَةَ تَسْبِيحَةٍ فَيُكْتَبُ لَهُ أَلْفُ حَسَنَةٍ أَوْ يُحَطُّ عَنْهُ أَلْفُ خَطِيئَةٍ
+  - English: "Is any of you unable to earn a thousand good deeds each day? He glorifies Allah a hundred times, and a thousand good deeds are written for him or a thousand sins are removed."
+  - Indonesian: "Apakah salah seorang di antara kalian tidak mampu meraih seribu kebaikan setiap hari? Ia bertasbih kepada Allah seratus kali, maka dicatat baginya seribu kebaikan atau dihapus darinya seribu kesalahan."
+- [ ] `milestone.three_days.meaning`
+  - Arabic source: وَٱلَّذِينَ جَٰهَدُواْ فِينَا لَنَهۡدِيَنَّهُمۡ سُبُلَنَاۚ وَإِنَّ ٱللَّهَ لَمَعَ ٱلۡمُحۡسِنِينَ
+  - English: "And those who strive for Us, We will surely guide them to Our ways. And indeed, Allah is with the doers of good."
+  - Indonesian: "Dan orang-orang yang bersungguh-sungguh untuk (mencari keridhaan) Kami, pasti akan Kami tunjukkan kepada mereka jalan-jalan Kami. Dan sungguh, Allah beserta orang-orang yang berbuat baik."
+- [ ] `milestone.week_one.meaning`
+  - Arabic source: إِنَّ الدِّينَ يُسْرٌ ... فَسَدِّدُوا وَقَارِبُوا وَأَبْشِرُوا
+  - English: "The religion is ease… so do what is right, come as close as you can, and rejoice."
+  - Indonesian: "Sesungguhnya agama itu mudah… maka berlaku luruslah, mendekatlah (pada kesempurnaan), dan bergembiralah."
+- [ ] `welcomeBack.meaning`
+  - Arabic source: وَأَنَّ أَحَبَّ الأَعْمَالِ أَدْوَمُهَا إِلَى اللَّهِ وَإِنْ قَلَّ
+  - English: "The most beloved of deeds to Allah are the most consistent, even if small."
+  - Indonesian: "Amalan yang paling dicintai Allah adalah yang paling konsisten, meskipun sedikit."
+
+### UI legal and privacy text (id)
+
+- [ ] `share.footer`
+  - English: Shared from Awdah
+  - Indonesian: Dibagikan dari Awdah
+- [ ] `me.about`
+  - English: About
+  - Indonesian: Tentang
+- [ ] `me.privacy`
+  - English: Privacy
+  - Indonesian: Privasi
+- [ ] `me.terms`
+  - English: Terms
+  - Indonesian: Ketentuan
+- [ ] `about.intro`
+  - English: Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.
+  - Indonesian: Awdah berarti kembali. Ia adalah teman yang tenang untuk kembali kepada sholat dan agamamu, hari demi hari.
+- [ ] `about.whatTitle`
+  - English: What Awdah is
+  - Indonesian: Apa itu Awdah
+- [ ] `about.whatBody`
+  - English: A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.
+  - Indonesian: Jalan 30 hari berisi langkah-langkah kecil harian, pencatatan sholat, dzikir, dan pelajaran singkat, lalu dilanjutkan dengan rutinitas yang konsisten agar kamu terus melangkah.
+- [ ] `about.freeTitle`
+  - English: Why it is free
+  - Indonesian: Mengapa gratis
+- [ ] `about.freeBody`
+  - English: Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.
+  - Indonesian: Awdah dibuat sebagai sedekah jariyah, amal yang terus mengalir, dengan niat mencari ridha Allah. Tidak ada iklan, tidak ada pembelian, dan tidak ada pengumpulan data.
+- [ ] `about.sourcesTitle`
+  - English: About the content
+  - Indonesian: Tentang konten
+- [ ] `about.sourcesBody`
+  - English: Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.
+  - Indonesian: Hadis dan doa dicantumkan beserta sumbernya. Jika kamu menemukan kesalahan, mohon beri tahu kami agar bisa diperbaiki.
+- [ ] `about.version`
+  - English: Version {{version}}
+  - Indonesian: Versi {{version}}
+- [ ] `privacy.intro`
+  - English: Awdah does not collect any data about you.
+  - Indonesian: Awdah tidak mengumpulkan data apa pun tentang dirimu.
+- [ ] `privacy.storage.title`
+  - English: Stored on your device
+  - Indonesian: Disimpan di perangkatmu
+- [ ] `privacy.storage.body`
+  - English: Everything you enter, such as your profile, prayers, tasks and journal, is stored on this phone. If your phone's own system backup (Google or iCloud) is turned on, it may include Awdah's data. That backup belongs to you; Awdah never sends anything to us.
+  - Indonesian: Semua yang kamu masukkan, seperti profil, sholat, tugas, dan jurnalmu, disimpan di ponsel ini. Jika cadangan sistem bawaan ponselmu (Google atau iCloud) aktif, cadangan itu mungkin menyertakan data Awdah. Cadangan itu milikmu; Awdah tidak pernah mengirimkan apa pun kepada kami.
+- [ ] `privacy.accounts.title`
+  - English: No accounts, analytics or ads
+  - Indonesian: Tanpa akun, analitik, atau iklan
+- [ ] `privacy.accounts.body`
+  - English: There are no accounts, no analytics, no advertising and no trackers. Awdah never sends anything to us or to anyone else.
+  - Indonesian: Tidak ada akun, tidak ada analitik, tidak ada iklan, dan tidak ada pelacak. Awdah tidak pernah mengirimkan apa pun kepada kami atau kepada siapa pun.
+- [ ] `privacy.location.title`
+  - English: Location
+  - Indonesian: Lokasi
+- [ ] `privacy.location.body`
+  - English: If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere.
+  - Indonesian: Jika kamu memilih untuk mengatur lokasimu, lokasi itu hanya digunakan di ponselmu untuk menghitung waktu sholat. Awdah tidak pernah mengirimkannya ke mana pun.
+- [ ] `privacy.backups.title`
+  - English: Backups
+  - Indonesian: Cadangan
+- [ ] `privacy.backups.body`
+  - English: Backups are files you create and keep. You decide where they go; Awdah never uploads them.
+  - Indonesian: Cadangan adalah file yang kamu buat dan simpan sendiri. Kamu yang menentukan ke mana file itu disimpan; Awdah tidak pernah mengunggahnya.
+- [ ] `privacy.deletion.title`
+  - English: Deleting your data
+  - Indonesian: Menghapus datamu
+- [ ] `privacy.deletion.body`
+  - English: Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made may still hold a copy.
+  - Indonesian: Hapus semua data di Pengaturan menghapus semua yang disimpan Awdah di ponsel ini. Menghapus instalasi aplikasi juga menghapusnya, meskipun cadangan sistem yang kamu buat mungkin masih menyimpan salinannya.
+- [ ] `privacy.updated`
+  - English: Last updated {{date}}
+  - Indonesian: Terakhir diperbarui {{date}}
+- [ ] `terms.intro`
+  - English: These are the plain terms for using Awdah.
+  - Indonesian: Berikut ketentuan sederhana untuk menggunakan Awdah.
+- [ ] `terms.guidance.title`
+  - English: Personal guidance
+  - Indonesian: Panduan pribadi
+- [ ] `terms.guidance.body`
+  - English: Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings.
+  - Indonesian: Awdah ditujukan untuk panduan dan pengingat spiritual pribadi. Awdah bukan sumber hukum agama.
+- [ ] `terms.scholars.title`
+  - English: Not a fatwa
+  - Indonesian: Bukan fatwa
+- [ ] `terms.scholars.body`
+  - English: Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar.
+  - Indonesian: Tidak ada isi aplikasi ini yang merupakan fatwa. Untuk pertanyaan tentang keadaanmu, silakan berkonsultasi dengan ulama yang berkompeten.
+- [ ] `terms.asIs.title`
+  - English: As is
+  - Indonesian: Apa adanya
+- [ ] `terms.asIs.body`
+  - English: The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time.
+  - Indonesian: Aplikasi ini disediakan secara gratis, apa adanya, tanpa jaminan. Kami berusaha sebaik mungkin agar akurat, dan kami dapat memperbaiki atau mengubah konten seiring waktu.
+- [ ] `terms.yourData.title`
+  - English: Your data
+  - Indonesian: Datamu
+- [ ] `terms.yourData.body`
+  - English: Your data is stored on your phone and is yours. See the Privacy page for details.
+  - Indonesian: Datamu disimpan di ponselmu dan merupakan milikmu. Lihat halaman Privasi untuk detailnya.
+- [ ] `terms.updated`
+  - English: Last updated {{date}}
+  - Indonesian: Terakhir diperbarui {{date}}
+
+---
+
+## Turkish (tr)
+
+### Religious meanings
+
+- [ ] `day.1.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Turkish: (Her namazın sonunda) Allah'ım, Seni anmak, Sana şükretmek ve Sana güzelce ibadet etmek için bana yardım et
+- [ ] `day.1.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Turkish: (Her namazdan sonra) Hamd Allah'a mahsustur
+- [ ] `day.1.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Turkish: (Her namazdan sonra) Allah en büyüktür
+- [ ] `day.1.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness
+  - Turkish: Allah'tan bağışlanma dilerim
+- [ ] `day.1.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Turkish: Rahmân ve Rahîm olan Allah'ın adıyla
+- [ ] `day.1.dhikr.shahadah.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ اللَّهِ
+  - English: I bear witness that there is no god but Allah, and that Muhammad is the Messenger of Allah
+  - Turkish: Şahitlik ederim ki Allah'tan başka ilah yoktur ve yine şahitlik ederim ki Muhammed Allah'ın Resulüdür
+- [ ] `day.1.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Turkish: (Her namazdan sonra) Allah'ı tesbih ederim
+- [ ] `day.1.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Turkish: (Tesbihten sonra yüzüncüsü) Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir
+- [ ] `day.1.hadith.meaning`
+  - Arabic source: إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ، وَإِنَّمَا لِكُلِّ امْرِئٍ مَا نَوَى
+  - English: "Actions are only by intentions, and each person will only have what he intended."
+  - Turkish: "Ameller ancak niyetlere göredir ve herkese ancak niyet ettiği şey vardır."
+- [ ] `day.1.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds.
+  - Turkish: (Sabah namazının selamından sonra) Allah'ım, Senden faydalı ilim, temiz rızık ve kabul edilmiş amel isterim.
+- [ ] `day.10.dhikr.hamm_wal_hazan.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ
+  - English: O Allah, I seek refuge in You from worry and grief, from incapacity and laziness, from cowardice and miserliness, from the burden of debt and from being overpowered by men
+  - Turkish: Allah'ım, kaygıdan ve hüzünden, acizlikten ve tembellikten, korkaklıktan ve cimrilikten, borcun ağırlığından ve insanların baskısından Sana sığınırım
+- [ ] `day.10.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Turkish: Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir
+- [ ] `day.10.hadith.meaning`
+  - Arabic source: الدُّعَاءُ هُوَ الْعِبَادَةُ، وَقَرَأَ: ﴿وَقَالَ رَبُّكُمُ ٱدۡعُونِيٓ أَسۡتَجِبۡ لَكُمۡ﴾
+  - English: "Supplication is worship itself." Then he recited: "And your Lord says: Call upon Me; I will respond to you" (Ghafir 40:60).
+  - Turkish: "Dua, ibadetin ta kendisidir." Sonra şu ayeti okudu: "Rabbiniz dedi ki: Bana dua edin, size icabet edeyim" (Gafir 40:60).
+- [ ] `day.10.prayer.dua.meaning`
+  - Arabic source: رَبَّنَآ ءَاتِنَا فِي ٱلدُّنۡيَا حَسَنَةࣰ وَفِي ٱلۡأٓخِرَةِ حَسَنَةࣰ وَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.
+  - Turkish: Rabbimiz, bize dünyada da iyilik ver, ahirette de iyilik ver ve bizi ateş azabından koru.
+- [ ] `day.11.dhikr.bismillah_before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: (Before eating) In the name of Allah
+  - Turkish: (Yemekten önce) Allah'ın adıyla
+- [ ] `day.11.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.11.dhikr.yunfiqu_fa_tukhlif.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنَا مِمَّن يُنفِقُ فَتُخْلِفُ لَهُ
+  - English: (Personal du'a, inspired by the angels' du'a in Bukhari 1442) O Allah, make us among those who spend, and You replace it for them
+  - Turkish: (Buhari 1442'deki meleklerin duasından ilham alan kişisel dua) Allah'ım, bizi infak eden ve harcadığının yerine Senin karşılığını verdiğin kimselerden eyle
+- [ ] `day.11.hadith.meaning`
+  - Arabic source: مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ، وَمَا زَادَ اللَّهُ عَبْدًا بِعَفْوٍ إِلاَّ عِزًّا
+  - English: "Charity does not decrease wealth, and Allah does not increase a servant who forgives except in honour."
+  - Turkish: "Sadaka maldan hiçbir şey eksiltmez. Allah, affeden kulun ancak izzetini artırır."
+- [ ] `day.12.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Turkish: Allah'tan bağışlanma dilerim. Peygamber ﷺ günde yüz kez istiğfar ederdi.
+- [ ] `day.12.dhikr.audhu_minal_faqr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذِّلَّةِ، وَأَعُوذُ بِكَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ
+  - English: O Allah, I seek refuge in You from poverty, from scarcity and from humiliation, and I seek refuge in You from wronging others or being wronged
+  - Turkish: Allah'ım, fakirlikten, yoksunluktan ve zilletten Sana sığınırım; zulmetmekten ya da zulme uğramaktan da Sana sığınırım
+- [ ] `day.12.dhikr.ikfini_bi_halalik.meaning`
+  - Arabic source: اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ، وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ
+  - English: O Allah, suffice me with what You have made lawful instead of what You have forbidden, and by Your grace make me free of need of anyone besides You
+  - Turkish: Allah'ım, helalinle beni haramından müstağni kıl ve lütfunla beni Senden başkasına muhtaç etme
+- [ ] `day.12.hadith.meaning`
+  - Arabic source: أَيُّهَا النَّاسُ، إِنَّ اللَّهَ طَيِّبٌ لاَ يَقْبَلُ إِلاَّ طَيِّبًا
+  - English: "O people, Allah is Good and accepts only what is good."
+  - Turkish: "Ey insanlar, Allah temizdir ve ancak temiz olanı kabul eder."
+- [ ] `day.13.dhikr.hasbunallah.meaning`
+  - Arabic source: حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِيلُ
+  - English: Allah is sufficient for us, and He is the best disposer of affairs
+  - Turkish: Allah bize yeter, O ne güzel vekildir
+- [ ] `day.13.dhikr.leaving_home_dua.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ
+  - English: (On leaving home) In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah
+  - Turkish: (Evden çıkarken) Allah'ın adıyla; Allah'a tevekkül ettim; güç ve kuvvet ancak Allah iledir
+- [ ] `day.13.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Turkish: Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir
+- [ ] `day.13.hadith.meaning`
+  - Arabic source: لَوْ أَنَّكُمْ كُنْتُمْ تَوَكَّلُونَ عَلَى اللَّهِ حَقَّ تَوَكُّلِهِ لَرُزِقْتُمْ كَمَا تُرْزَقُ الطَّيْرُ، تَغْدُو خِمَاصًا وَتَرُوحُ بِطَانًا
+  - English: "If you relied on Allah as He truly deserves, you would be provided for as the birds are provided for: they go out hungry in the morning and return full in the evening."
+  - Turkish: "Eğer Allah'a hakkıyla tevekkül etseydiniz, kuşları rızıklandırdığı gibi sizi de rızıklandırırdı: Sabah aç çıkarlar, akşam tok dönerler."
+- [ ] `day.14.dhikr.ainni_ala_dhikrik.meaning`
+  - Arabic source: اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ
+  - English: (At the end of each prayer) O Allah, help me to remember You, thank You and worship You well
+  - Turkish: (Her namazın sonunda) Allah'ım, Seni anmak, Sana şükretmek ve Sana güzelce ibadet etmek için bana yardım et
+- [ ] `day.14.dhikr.hamdan_kathiran.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ
+  - English: (In prayer) Praise be to Allah, abundant, good and blessed praise
+  - Turkish: (Namazda) Allah'a çok, temiz ve bereketli bir hamd ile hamd olsun
+- [ ] `day.14.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Turkish: (Uyanınca) Bizi öldürdükten sonra dirilten Allah'a hamd olsun; dönüş O'nadır
+- [ ] `day.14.dhikr.waking_dua_afani.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ
+  - English: (On waking) Praise be to Allah who gave health to my body, returned my soul to me and permitted me to remember Him
+  - Turkish: (Uyanınca) Bedenime sağlık veren, ruhumu bana geri döndüren ve O'nu anmama izin veren Allah'a hamd olsun
+- [ ] `day.14.hadith.meaning`
+  - Arabic source: انْظُرُوا إِلَى مَنْ أَسْفَلَ مِنْكُمْ وَلاَ تَنْظُرُوا إِلَى مَنْ هُوَ فَوْقَكُمْ، فَهُوَ أَجْدَرُ أَنْ لاَ تَزْدَرُوا نِعْمَةَ اللَّهِ عَلَيْكُمْ
+  - English: "Look at those below you and do not look at those above you, for that is more fitting, so that you do not belittle the favours of Allah upon you."
+  - Turkish: "Sizden aşağıda olana bakın, sizden yukarıda olana bakmayın. Bu, Allah'ın üzerinizdeki nimetini küçümsememeniz için daha uygundur."
+- [ ] `day.15.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Turkish: Allah'tan bağışlanma dilerim. Peygamber ﷺ günde yüz kez istiğfar ederdi.
+- [ ] `day.15.dhikr.ighsilni.meaning`
+  - Arabic source: اللَّهُمَّ اغْسِلْنِي مِنْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: (From the opening du'a of prayer) O Allah, wash away my sins with water, snow and hail
+  - Turkish: (Namazın açılış duasından) Allah'ım, beni hatalarımdan su, kar ve dolu ile yıka
+- [ ] `day.15.dhikr.sidq_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصِّدْقَ فِي الْقَوْلِ وَالْعَمَلِ
+  - English: (Personal du'a) O Allah, I ask You for truthfulness in speech and in action
+  - Turkish: (Kişisel dua) Allah'ım, Senden sözde ve amelde doğruluk isterim
+- [ ] `day.15.hadith.meaning`
+  - Arabic source: إِنَّ الصِّدْقَ يَهْدِي إِلَى الْبِرِّ، وَإِنَّ الْبِرَّ يَهْدِي إِلَى الْجَنَّةِ، وَإِنَّ الرَّجُلَ لَيَصْدُقُ حَتَّى يَكُونَ صِدِّيقًا، وَإِنَّ الْكَذِبَ يَهْدِي إِلَى الْفُجُورِ، وَإِنَّ الْفُجُورَ يَهْدِي إِلَى النَّارِ، وَإِنَّ الرَّجُلَ لَيَكْذِبُ، حَتَّى يُكْتَبَ عِنْدَ اللَّهِ كَذَّابًا
+  - English: "Truthfulness leads to righteousness, and righteousness leads to Paradise. A man keeps telling the truth until he becomes truthful. Lying leads to wickedness, and wickedness leads to the Fire. A man keeps lying until he is written before Allah as a liar."
+  - Turkish: "Doğruluk iyiliğe, iyilik de cennete götürür. Kişi doğru söylemeye devam eder ve sonunda sıddîk olur. Yalan kötülüğe, kötülük de cehenneme götürür. Kişi yalan söylemeye devam eder ve sonunda Allah katında yalancı olarak yazılır."
+- [ ] `day.16.dhikr.audhu_minal_khiyanah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُوعِ فَإِنَّهُ بِئْسَ الضَّجِيعُ، وَأَعُوذُ بِكَ مِنَ الْخِيَانَةِ فَإِنَّهَا بِئْسَتِ الْبِطَانَةُ
+  - English: O Allah, I seek refuge in You from hunger, for it is a wretched bed-fellow, and from treachery, for it is a wretched inner companion
+  - Turkish: Allah'ım, açlıktan Sana sığınırım, çünkü o ne kötü bir yatak arkadaşıdır; hıyanetten de Sana sığınırım, çünkü o ne kötü bir iç dosttur
+- [ ] `day.16.dhikr.subhanallahil_azimi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ
+  - English: Glory be to Allah the Magnificent, and praise be to Him
+  - Turkish: Azîm olan Allah'ı hamdiyle tesbih ederim
+- [ ] `day.16.hadith.meaning`
+  - Arabic source: أَلاَ كُلُّكُمْ رَاعٍ، وَكُلُّكُمْ مَسْئُولٌ عَنْ رَعِيَّتِهِ
+  - English: "Indeed, each of you is a shepherd, and each of you is responsible for his flock."
+  - Turkish: "Dikkat edin! Hepiniz çobansınız ve hepiniz sürünüzden sorumlusunuz."
+- [ ] `day.17.dhikr.audhu_minal_jaza.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجَزَعِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from panic and despair in hardship
+  - Turkish: (Kişisel dua) Allah'ım, sıkıntı anında feryat edip ümitsizliğe düşmekten Sana sığınırım
+- [ ] `day.17.dhikr.istirja.meaning`
+  - Arabic source: إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ، اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا
+  - English: (At a calamity) We belong to Allah and to Him we return. O Allah, reward me in my affliction and replace it for me with something better
+  - Turkish: (Bir musibet anında) Biz Allah'a aidiz ve O'na döneceğiz. Allah'ım, musibetimde bana ecir ver ve onun yerine bana daha hayırlısını ver
+- [ ] `day.17.dhikr.sabr_dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الصَّبْرَ عَلَى أَقْدَارِكَ
+  - English: (Personal du'a) O Allah, I ask You for patience with what You decree
+  - Turkish: (Kişisel dua) Allah'ım, takdirlerine karşı Senden sabır isterim
+- [ ] `day.17.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.17.hadith.meaning`
+  - Arabic source: عَجَبًا لأَمْرِ الْمُؤْمِنِ إِنَّ أَمْرَهُ كُلَّهُ خَيْرٌ وَلَيْسَ ذَاكَ لأَحَدٍ إِلاَّ لِلْمُؤْمِنِ إِنْ أَصَابَتْهُ سَرَّاءُ شَكَرَ فَكَانَ خَيْرًا لَهُ وَإِنْ أَصَابَتْهُ ضَرَّاءُ صَبَرَ فَكَانَ خَيْرًا لَهُ
+  - English: "How wonderful is the affair of the believer! All of it is good, and that is for no one except the believer. If something good happens to him, he is grateful, and that is good for him. If something bad happens to him, he is patient, and that is good for him."
+  - Turkish: "Müminin durumu ne hoştur! Her hâli kendisi için hayırdır ve bu yalnızca mümine mahsustur. Başına sevindirici bir şey gelirse şükreder, bu onun için hayır olur. Başına bir sıkıntı gelirse sabreder, bu da onun için hayır olur."
+- [ ] `day.18.dhikr.audhu_minal_kibr.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكِبْرِ وَالْعُجْبِ
+  - English: (Personal du'a) O Allah, I seek refuge in You from arrogance and self-admiration
+  - Turkish: (Kişisel dua) Allah'ım, kibirden ve kendini beğenmekten Sana sığınırım
+- [ ] `day.18.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Turkish: (Bir meclisin sonunda) Allah'ım, Seni hamdinle tesbih ederim; Senden başka ilah olmadığına şahitlik ederim; Senden bağışlanma diler ve Sana tövbe ederim
+- [ ] `day.18.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ أَوْحَى إِلَىَّ أَنْ تَوَاضَعُوا حَتَّى لاَ يَفْخَرَ أَحَدٌ عَلَى أَحَدٍ وَلاَ يَبْغِي أَحَدٌ عَلَى أَحَدٍ
+  - English: "Allah has revealed to me that you must be humble towards one another, so that no one boasts over another and no one wrongs another."
+  - Turkish: "Allah bana, birbirinize karşı alçakgönüllü olmanızı vahyetti; ta ki kimse kimseye karşı övünmesin ve kimse kimseye zulmetmesin."
+- [ ] `day.19.dhikr.basmalah.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ
+  - English: In the name of Allah, the Most Gracious, the Most Merciful
+  - Turkish: Rahmân ve Rahîm olan Allah'ın adıyla
+- [ ] `day.19.dhikr.ighfir_lil_muminin.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ
+  - English: (Personal du'a) O Allah, forgive the believing men and women
+  - Turkish: (Kişisel dua) Allah'ım, mümin erkekleri ve mümin kadınları bağışla
+- [ ] `day.19.dhikr.irhamna_bi_rahmatik.meaning`
+  - Arabic source: اللَّهُمَّ ارْحَمْنَا بِرَحْمَتِكَ الَّتِي وَسِعَتْ كُلَّ شَيْءٍ
+  - English: (Personal du'a) O Allah, have mercy on us with Your mercy that encompasses all things
+  - Turkish: (Kişisel dua) Allah'ım, her şeyi kuşatan rahmetinle bize merhamet et
+- [ ] `day.19.dhikr.rabbana_wasita.meaning`
+  - Arabic source: رَبَّنَا وَسِعۡتَ كُلَّ شَيۡءࣲ رَّحۡمَةࣰ وَعِلۡمࣰا فَٱغۡفِرۡ لِلَّذِينَ تَابُواْ وَٱتَّبَعُواْ سَبِيلَكَ وَقِهِمۡ عَذَابَ ٱلۡجَحِيمِ
+  - English: Our Lord, You encompass all things in mercy and knowledge, so forgive those who repent and follow Your way, and protect them from the punishment of Hellfire
+  - Turkish: Rabbimiz, Sen rahmet ve ilimce her şeyi kuşattın; tövbe edip yoluna uyanları bağışla ve onları cehennem azabından koru
+- [ ] `day.19.hadith.meaning`
+  - Arabic source: الرَّاحِمُونَ يَرْحَمُهُمُ الرَّحْمَنُ، ارْحَمُوا مَنْ فِي الأَرْضِ يَرْحَمْكُمْ مَنْ فِي السَّمَاءِ
+  - English: "The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will have mercy on you."
+  - Turkish: "Merhamet edenlere Rahmân merhamet eder. Yeryüzündekilere merhamet edin ki göktekiler de size merhamet etsin."
+- [ ] `day.2.dhikr.kaffarat_al_majlis.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ
+  - English: (At the end of a sitting) Glory be to You, O Allah, and praise; I testify there is no god but You; I seek Your forgiveness and repent to You
+  - Turkish: (Bir meclisin sonunda) Allah'ım, Seni hamdinle tesbih ederim; Senden başka ilah olmadığına şahitlik ederim; Senden bağışlanma diler ve Sana tövbe ederim
+- [ ] `day.2.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `day.2.dhikr.shahadah_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: (After wudu) I testify that there is no god but Allah, alone without partner, and that Muhammad is His servant and messenger
+  - Turkish: (Abdestten sonra) Şahitlik ederim ki Allah'tan başka ilah yoktur, O tektir, ortağı yoktur; yine şahitlik ederim ki Muhammed O'nun kulu ve resulüdür
+- [ ] `day.2.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.2.hadith.meaning`
+  - Arabic source: الطُّهُورُ شَطْرُ الإِيمَانِ
+  - English: "Purification is half of faith."
+  - Turkish: "Temizlik imanın yarısıdır."
+- [ ] `day.2.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ
+  - English: (After the shahadah that follows wudu) O Allah, make me among those who repent and make me among those who purify themselves.
+  - Turkish: (Abdestten sonraki şehadetin ardından) Allah'ım, beni tövbe edenlerden eyle ve beni temizlenenlerden eyle.
+- [ ] `day.20.dhikr.barik_li_fi_ahli.meaning`
+  - Arabic source: اللَّهُمَّ بَارِكْ لِي فِي أَهْلِي وَمَالِي
+  - English: (Personal du'a) O Allah, bless me in my family and my wealth
+  - Turkish: (Kişisel dua) Allah'ım, ailemi ve malımı benim için bereketli kıl
+- [ ] `day.20.dhikr.ijma_shamla_ahli.meaning`
+  - Arabic source: اللَّهُمَّ اجْمَعْ شَمْلَ أَهْلِي عَلَى طَاعَتِكَ
+  - English: (Personal du'a) O Allah, unite my family in obeying You
+  - Turkish: (Kişisel dua) Allah'ım, ailemi Sana itaat üzere bir araya getir
+- [ ] `day.20.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.20.hadith.meaning`
+  - Arabic source: مَنْ أَحَبَّ أَنْ يُبْسَطَ لَهُ فِي رِزْقِهِ، وَيُنْسَأَ لَهُ فِي أَثَرِهِ، فَلْيَصِلْ رَحِمَهُ
+  - English: "Whoever loves that his provision be expanded and his life be extended, let him keep the ties of kinship."
+  - Turkish: "Kim rızkının genişletilmesini ve ömrünün uzatılmasını isterse, akrabalık bağını gözetsin."
+- [ ] `day.21.dhikr.ahsanta_khalqi.meaning`
+  - Arabic source: اللَّهُمَّ أَحْسَنْتَ خَلْقِي فَأَحْسِنْ خُلُقِي
+  - English: O Allah, You have made my form beautiful, so make my character beautiful
+  - Turkish: Allah'ım, yaratılışımı güzel kıldın, ahlakımı da güzel kıl
+- [ ] `day.21.dhikr.astaghfirullah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ
+  - English: I seek Allah's forgiveness. The Prophet ﷺ sought forgiveness a hundred times a day.
+  - Turkish: Allah'tan bağışlanma dilerim. Peygamber ﷺ günde yüz kez istiğfar ederdi.
+- [ ] `day.21.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Turkish: (Daha uzun bir duadan) Beni ahlakın en güzeline ilet, onun en güzeline ancak Sen iletirsin; kötü ahlakı benden uzaklaştır, onun kötüsünü benden ancak Sen uzaklaştırırsın
+- [ ] `day.21.hadith.meaning`
+  - Arabic source: إِنَّ مِنْ خِيَارِكُمْ أَحْسَنَكُمْ أَخْلاَقًا
+  - English: "Indeed, among the best of you are those with the best character."
+  - Turkish: "Şüphesiz sizin en hayırlılarınızdan biri, ahlakı en güzel olanınızdır."
+- [ ] `day.22.dhikr.ilman_nafian.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلًا مُتَقَبَّلًا
+  - English: (After the salam of Fajr) O Allah, I ask You for beneficial knowledge, good provision and accepted deeds
+  - Turkish: (Sabah namazının selamından sonra) Allah'ım, Senden faydalı ilim, temiz rızık ve kabul edilmiş amel isterim
+- [ ] `day.22.dhikr.rabbi_zidni_ilma.meaning`
+  - Arabic source: رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: (From Quran 20:114, where Allah tells the Prophet ﷺ to say it) My Lord, increase me in knowledge
+  - Turkish: (Allah'ın Peygamber'e ﷺ söylemesini emrettiği Taha 20:114'ten) Rabbim, ilmimi artır
+- [ ] `day.22.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.22.hadith.meaning`
+  - Arabic source: وَمَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللَّهُ لَهُ بِهِ طَرِيقًا إِلَى الْجَنَّةِ
+  - English: "Whoever travels a path seeking knowledge, Allah will make easy for him a path to Paradise."
+  - Turkish: "Kim ilim aramak için bir yola girerse, Allah ona bu sayede cennete giden yolu kolaylaştırır."
+- [ ] `day.23.dhikr.rabbana_ma_khalaqta.meaning`
+  - Arabic source: رَبَّنَا مَا خَلَقۡتَ هَٰذَا بَٰطِلࣰا سُبۡحَٰنَكَ فَقِنَا عَذَابَ ٱلنَّارِ
+  - English: Our Lord, You did not create this in vain; glory be to You, so protect us from the punishment of the Fire
+  - Turkish: Rabbimiz, Sen bunu boşuna yaratmadın; Seni tesbih ederiz, bizi ateş azabından koru
+- [ ] `day.23.dhikr.subhanallahi_adada_khalqih.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ
+  - English: (Three times, after Fajr) Glory be to Allah and praise be to Him, as many times as the number of His creation, as much as pleases Him, as much as the weight of His Throne, and as much as the ink of His words
+  - Turkish: (Sabah namazından sonra üç kez) Allah'ı hamdiyle tesbih ederim; yarattıklarının sayısınca, kendi rızası kadar, Arşının ağırlığınca ve kelimelerinin mürekkebi kadar
+- [ ] `day.23.hadith.meaning`
+  - Arabic source: قَعَدَ فَنَظَرَ إِلَى السَّمَاءِ فَقَالَ ﴿إِنَّ فِي خَلْقِ السَّمَوَاتِ وَالأَرْضِ وَاخْتِلاَفِ اللَّيْلِ وَالنَّهَارِ لآيَاتٍ لأُولِي الأَلْبَابِ﴾
+  - English: Ibn 'Abbas said that when it was the last third of the night, the Prophet ﷺ sat up, looked at the sky and recited: "Indeed, in the creation of the heavens and the earth and the alternation of night and day are signs for those of understanding" (3:190).
+  - Turkish: İbn Abbas şöyle anlatır: Gecenin son üçte biri olunca Peygamber ﷺ doğrulup oturdu, göğe baktı ve şu ayeti okudu: "Şüphesiz göklerin ve yerin yaratılışında, gece ile gündüzün birbiri ardınca gelişinde akıl sahipleri için ayetler vardır" (3:190).
+- [ ] `day.24.dhikr.asalukal_jannah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ
+  - English: (From a longer du'a) O Allah, I ask You for Paradise and for whatever word or deed brings me near to it
+  - Turkish: (Daha uzun bir duadan) Allah'ım, Senden cenneti ve beni ona yaklaştıracak her sözü ve ameli isterim
+- [ ] `day.24.dhikr.la_tajal_ad_dunya.meaning`
+  - Arabic source: وَلاَ تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلاَ مَبْلَغَ عِلْمِنَا
+  - English: (From a longer du'a he often made before rising from a gathering) And do not make this world our greatest concern nor the limit of our knowledge
+  - Turkish: (Bir meclisten kalkmadan önce sıkça ettiği daha uzun bir duadan) Dünyayı en büyük derdimiz ve ilmimizin son noktası kılma
+- [ ] `day.24.hadith.meaning`
+  - Arabic source: كُنْ فِي الدُّنْيَا كَأَنَّكَ غَرِيبٌ، أَوْ عَابِرُ سَبِيلٍ
+  - English: "Be in this world as if you were a stranger or a traveller."
+  - Turkish: "Dünyada bir garip ya da bir yolcu gibi ol."
+- [ ] `day.25.dhikr.audhu_an_ushrika.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ
+  - English: O Allah, I seek refuge in You from knowingly associating anything with You, and I seek Your forgiveness for what I do not know
+  - Turkish: Allah'ım, bilerek Sana şirk koşmaktan Sana sığınırım ve bilmediklerim için Senden bağışlanma dilerim
+- [ ] `day.25.dhikr.umar_dua_ikhlas.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا، وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا، وَلَا تَجْعَلْ لِأَحَدٍ فِيهِ شَيْئًا
+  - English: (Du'a of 'Umar ibn al-Khattab) O Allah, make all my deeds righteous, purely for Your Face, and let no one have any share in them
+  - Turkish: (Ömer b. Hattab'ın duası) Allah'ım, bütün amelimi salih kıl, onu yalnızca Senin rızan için halis kıl ve onda kimseye bir pay bırakma
+- [ ] `day.25.hadith.meaning`
+  - Arabic source: إِنَّ اللَّهَ لاَ يَنْظُرُ إِلَى صُوَرِكُمْ وَأَمْوَالِكُمْ وَلَكِنْ يَنْظُرُ إِلَى قُلُوبِكُمْ وَأَعْمَالِكُمْ
+  - English: "Allah does not look at your forms or your wealth, but He looks at your hearts and your deeds."
+  - Turkish: "Allah sizin suretlerinize ve mallarınıza bakmaz; O sizin kalplerinize ve amellerinize bakar."
+- [ ] `day.26.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `day.26.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.26.dhikr.yuraqibuka.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْنِي مِمَّنْ يُرَاقِبُكَ فِي السِّرِّ وَالْعَلَانِيَةِ
+  - English: (Personal du'a) O Allah, make me among those who are mindful of You in private and in public
+  - Turkish: (Kişisel dua) Allah'ım, beni gizlide ve açıkta Seni gözeten kimselerden eyle
+- [ ] `day.26.hadith.meaning`
+  - Arabic source: أَنْ تَعْبُدَ اللَّهَ كَأَنَّكَ تَرَاهُ، فَإِنْ لَمْ تَكُنْ تَرَاهُ فَإِنَّهُ يَرَاكَ
+  - English: "[Ihsan is] to worship Allah as if you see Him, and if you do not see Him, He surely sees you."
+  - Turkish: "[İhsan,] Allah'a O'nu görüyormuş gibi ibadet etmendir; sen O'nu görmesen de O seni görür."
+- [ ] `day.27.dhikr.asalukal_afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: (Morning and evening) O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me
+  - Turkish: (Sabah ve akşam) Allah'ım, Senden dünyada ve ahirette afiyet isterim. Allah'ım, Senden dinimde, dünyamda, ailemde ve malımda af ve afiyet isterim. Allah'ım, ayıplarımı ört ve korkularımdan emin kıl. Allah'ım, beni önümden, arkamdan, sağımdan, solumdan ve üstümden koru; altımdan ansızın helak edilmekten de Senin azametine sığınırım
+- [ ] `day.27.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Turkish: Kendisinden başka ilah olmayan, Hayy ve Kayyûm olan Azîm Allah'tan bağışlanma diler ve O'na tövbe ederim
+- [ ] `day.27.dhikr.rabbana_zalamna.meaning`
+  - Arabic source: رَبَّنَا ظَلَمۡنَآ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَٰسِرِينَ
+  - English: Our Lord, we have wronged ourselves; if You do not forgive us and have mercy on us, we will surely be among the losers
+  - Turkish: Rabbimiz, biz kendimize zulmettik; eğer bizi bağışlamaz ve bize merhamet etmezsen, mutlaka hüsrana uğrayanlardan oluruz
+- [ ] `day.27.hadith.meaning`
+  - Arabic source: اللَّهُ أَفْرَحُ بِتَوْبَةِ عَبْدِهِ مِنْ أَحَدِكُمْ سَقَطَ عَلَى بَعِيرِهِ، وَقَدْ أَضَلَّهُ فِي أَرْضِ فَلاَةٍ
+  - English: "Allah is more pleased with the repentance of His servant than one of you who comes upon his camel after losing it in a desolate land."
+  - Turkish: "Allah, kulunun tövbesine, ıssız bir çölde kaybettiği devesini bulan birinizden daha çok sevinir."
+- [ ] `day.28.dhikr.aslih_ummata_muhammad.meaning`
+  - Arabic source: اللَّهُمَّ أَصْلِحْ أُمَّةَ مُحَمَّدٍ، وَفَرِّجْ عَنْ أُمَّةِ مُحَمَّدٍ، وَارْحَمْ أُمَّةَ مُحَمَّدٍ
+  - English: (Personal du'a) O Allah, set right the ummah of Muhammad, relieve the ummah of Muhammad, and have mercy on the ummah of Muhammad
+  - Turkish: (Kişisel dua) Allah'ım, Muhammed ümmetini ıslah et, Muhammed ümmetine ferahlık ver ve Muhammed ümmetine merhamet et
+- [ ] `day.28.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.28.dhikr.unsur_al_islam.meaning`
+  - Arabic source: اللَّهُمَّ انْصُرِ الْإِسْلَامَ وَالْمُسْلِمِينَ
+  - English: (Personal du'a) O Allah, give victory to Islam and the Muslims
+  - Turkish: (Kişisel dua) Allah'ım, İslam'a ve Müslümanlara yardım et
+- [ ] `day.28.hadith.meaning`
+  - Arabic source: الْمُؤْمِنُ لِلْمُؤْمِنِ كَالْبُنْيَانِ يَشُدُّ بَعْضُهُ بَعْضًا
+  - English: "The believer to the believer is like a building, each part strengthening the other."
+  - Turkish: "Mümin mümin için, parçaları birbirini destekleyen bir bina gibidir."
+- [ ] `day.29.dhikr.hudatan_muhtadin.meaning`
+  - Arabic source: اللَّهُمَّ زَيِّنَّا بِزِينَةِ الْإِيمَانِ، وَاجْعَلْنَا هُدَاةً مُهْتَدِينَ
+  - English: (From a longer du'a) O Allah, adorn us with the beauty of faith, and make us guides who are themselves rightly guided
+  - Turkish: (Daha uzun bir duadan) Allah'ım, bizi iman süsüyle süsle ve bizi hidayete ermiş, hidayete erdiren kimseler kıl
+- [ ] `day.29.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Turkish: Allah'ım, İbrahim'e ve İbrahim'in ailesine salat ettiğin gibi Muhammed'e ve Muhammed'in ailesine de salat et; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın. Allah'ım, İbrahim'i ve İbrahim'in ailesini mübarek kıldığın gibi Muhammed'i ve Muhammed'in ailesini de mübarek kıl; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın.
+- [ ] `day.29.hadith.meaning`
+  - Arabic source: بَلِّغُوا عَنِّي وَلَوْ آيَةً
+  - English: "Convey from me, even if it is one verse."
+  - Turkish: "Bir ayet bile olsa benden tebliğ edin."
+- [ ] `day.3.dhikr.alhamdulillah.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ
+  - English: (After each prayer) All praise is for Allah
+  - Turkish: (Her namazdan sonra) Hamd Allah'a mahsustur
+- [ ] `day.3.dhikr.allahuakbar.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: (After each prayer) Allah is the Greatest
+  - Turkish: (Her namazdan sonra) Allah en büyüktür
+- [ ] `day.3.dhikr.dua_after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: (After each adhan) O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him
+  - Turkish: (Her ezandan sonra) Allah'ım, ey bu eksiksiz davetin ve kılınacak namazın Rabbi! Muhammed'e vesileyi ve fazileti ver ve onu kendisine vaat ettiğin makam-ı mahmuda ulaştır
+- [ ] `day.3.dhikr.subhanallah.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ
+  - English: (After each prayer) Glory be to Allah
+  - Turkish: (Her namazdan sonra) Allah'ı tesbih ederim
+- [ ] `day.3.dhikr.tahlil.meaning`
+  - Arabic source: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: (The 100th, after the tasbih) None has the right to be worshipped but Allah alone, without partner; His is the dominion and His is the praise, and He is able to do all things
+  - Turkish: (Tesbihten sonra yüzüncüsü) Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir
+- [ ] `day.3.dhikr.waking_dua.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: (On waking) Praise be to Allah who gave us life after causing us to die, and to Him is the resurrection
+  - Turkish: (Uyanınca) Bizi öldürdükten sonra dirilten Allah'a hamd olsun; dönüş O'nadır
+- [ ] `day.3.hadith.meaning`
+  - Arabic source: إِنَّ أَوَّلَ مَا يُحَاسَبُ بِهِ الْعَبْدُ يَوْمَ الْقِيَامَةِ مِنْ عَمَلِهِ صَلاَتُهُ، فَإِنْ صَلَحَتْ فَقَدْ أَفْلَحَ وَأَنْجَحَ، وَإِنْ فَسَدَتْ فَقَدْ خَابَ وَخَسِرَ
+  - English: "The first of his deeds for which a servant will be called to account on the Day of Resurrection is his prayer. If it is sound, he has succeeded and prospered; if it is corrupt, he has failed and lost."
+  - Turkish: "Kıyamet gününde kulun amellerinden ilk hesaba çekileceği şey namazıdır. Namazı düzgün olursa kurtuluşa ermiş ve başarmıştır; bozuk olursa hüsrana uğramış ve kaybetmiştir."
+- [ ] `day.30.dhikr.ighfir_li_ma_qaddamtu.meaning`
+  - Arabic source: اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+  - English: O Allah, forgive me what I have done before and what I have left for later, what I did in secret and what I did openly, and what You know better than I. You are the One who brings forward and the One who puts back, and You are able to do all things
+  - Turkish: Allah'ım, önceden yaptıklarımı ve sonraya bıraktıklarımı, gizli yaptıklarımı ve açıktan yaptıklarımı ve benden daha iyi bildiğin şeyleri bağışla. Öne alan da Sensin, geri bırakan da Sensin ve Sen her şeye kadirsin
+- [ ] `day.30.dhikr.musarrifal_qulub.meaning`
+  - Arabic source: اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ
+  - English: O Allah, Director of hearts, direct our hearts to Your obedience
+  - Turkish: Allah'ım, ey kalpleri yönlendiren, kalplerimizi Sana itaate yönelt
+- [ ] `day.30.dhikr.ya_muqallibal_qulub.meaning`
+  - Arabic source: يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ
+  - English: (Umm Salamah said this was the du'a he made most often when he was with her) O Turner of hearts, make my heart firm upon Your religion
+  - Turkish: (Ümmü Seleme, onun yanındayken en çok ettiği duanın bu olduğunu söylemiştir) Ey kalpleri çeviren, kalbimi dinin üzere sabit kıl
+- [ ] `day.30.hadith.meaning`
+  - Arabic source: قُلْ آمَنْتُ بِاللَّهِ فَاسْتَقِمْ
+  - English: "Say: I believe in Allah, then be steadfast." (His answer to Sufyan ibn 'Abdullah ath-Thaqafi, who asked for a teaching he would never need to ask anyone else about.)
+  - Turkish: "De ki: Allah'a iman ettim, sonra dosdoğru ol." (Bu, başka hiç kimseye sormaya ihtiyaç duymayacağı bir öğüt isteyen Süfyan b. Abdullah es-Sekafî'ye verdiği cevaptır.)
+- [ ] `day.4.dhikr.asbahna_ala_fitrah.meaning`
+  - Arabic source: أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ، وَعَلَى كَلِمَةِ الْإِخْلَاصِ، وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ ﷺ، وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِينَ
+  - English: We have entered the morning upon the natural way of Islam, the word of sincerity, the religion of our Prophet Muhammad ﷺ, and the way of our father Ibrahim, upright and submitting, who was not of the polytheists
+  - Turkish: İslam fıtratı üzere, ihlas kelimesi üzere, Peygamberimiz Muhammed'in ﷺ dini üzere ve hanif bir Müslüman olan, müşriklerden olmayan atamız İbrahim'in milleti üzere sabaha ulaştık
+- [ ] `day.4.dhikr.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created
+  - Turkish: Yarattığı şeylerin şerrinden Allah'ın eksiksiz kelimelerine sığınırım
+- [ ] `day.4.dhikr.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return
+  - Turkish: Allah'ım, Seninle akşama erdik, Seninle sabaha erdik; Seninle yaşar, Seninle ölürüz; dönüş de Sanadır
+- [ ] `day.4.dhikr.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection
+  - Turkish: Allah'ım, Seninle sabaha erdik, Seninle akşama erdik; Seninle yaşar, Seninle ölürüz; diriliş de Sanadır
+- [ ] `day.4.hadith.meaning`
+  - Arabic source: مَنْ صَلَّى الصُّبْحَ فَهُوَ فِي ذِمَّةِ اللَّهِ
+  - English: "Whoever prays Subh (Fajr) is under the protection of Allah."
+  - Turkish: "Kim sabah namazını kılarsa o, Allah'ın himayesindedir."
+- [ ] `day.4.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي لِسَانِي نُورًا، وَاجْعَلْ فِي سَمْعِي نُورًا، وَاجْعَلْ فِي بَصَرِي نُورًا
+  - English: O Allah, place light in my heart, light in my tongue, light in my hearing and light in my sight.
+  - Turkish: Allah'ım, kalbime nur, dilime nur, kulağıma nur ve gözüme nur ver.
+- [ ] `day.5.dhikr.dua_dhun_nun.meaning`
+  - Arabic source: لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبۡحَٰنَكَ إِنِّي كُنتُ مِنَ ٱلظَّٰلِمِينَ
+  - English: There is no god but You, glory be to You; I have been among the wrongdoers
+  - Turkish: Senden başka ilah yoktur, Seni tesbih ederim; ben gerçekten zalimlerden oldum
+- [ ] `day.5.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Turkish: Allah'ım, Muhammed'e salat eyle
+- [ ] `day.5.dhikr.subhanallahil_azim.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ
+  - English: Glory be to Allah and praise be to Him; glory be to Allah the Magnificent
+  - Turkish: Allah'ı hamdiyle tesbih ederim; Azîm olan Allah'ı tesbih ederim
+- [ ] `day.5.dhikr.ya_hayyu_ya_qayyum.meaning`
+  - Arabic source: يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ
+  - English: (In times of distress) O Ever-Living, O Sustainer, by Your mercy I seek help
+  - Turkish: (Sıkıntı anlarında) Ey Hayy, ey Kayyûm, rahmetinle yardım dilerim
+- [ ] `day.5.hadith.meaning`
+  - Arabic source: صَلُّوا كَمَا رَأَيْتُمُونِي أُصَلِّي
+  - English: "Pray as you have seen me praying."
+  - Turkish: "Benim nasıl namaz kıldığımı gördüyseniz öyle kılın."
+- [ ] `day.5.prayer.dua.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ، اللَّهُمَّ اغْفِرْ لِي
+  - English: (In ruku' and sujood) Glory be to You, O Allah, our Lord, and praise be to You. O Allah, forgive me.
+  - Turkish: (Rükû ve secdede) Allah'ım, Rabbimiz, Seni hamdinle tesbih ederim. Allah'ım, beni bağışla.
+- [ ] `day.6.dhikr.ihdini_li_ahsanil_akhlaq.meaning`
+  - Arabic source: وَاهْدِنِي لأَحْسَنِ الأَخْلاَقِ لاَ يَهْدِي لأَحْسَنِهَا إِلاَّ أَنْتَ وَاصْرِفْ عَنِّي سَيِّئَهَا لاَ يَصْرِفُ عَنِّي سَيِّئَهَا إِلاَّ أَنْتَ
+  - English: (From a longer du'a) And guide me to the best of character, for none guides to the best of it but You; and turn away from me its evil, for none turns away its evil but You
+  - Turkish: (Daha uzun bir duadan) Beni ahlakın en güzeline ilet, onun en güzeline ancak Sen iletirsin; kötü ahlakı benden uzaklaştır, onun kötüsünü benden ancak Sen uzaklaştırırsın
+- [ ] `day.6.dhikr.rabi_qalbi.meaning`
+  - Arabic source: اللَّهُمَّ اجْعَلِ الْقُرْآنَ رَبِيعَ قَلْبِي، وَنُورَ صَدْرِي، وَجِلَاءَ حُزْنِي، وَذَهَابَ هَمِّي
+  - English: (From a longer du'a for distress, Ahmad 3712) O Allah, make the Quran the spring of my heart, the light of my chest, the remover of my sorrow and the reliever of my distress
+  - Turkish: (Sıkıntı için okunan daha uzun bir duadan, Ahmed 3712) Allah'ım, Kur'an'ı kalbimin baharı, göğsümün nuru, hüznümün cilası ve kederimin gidericisi kıl
+- [ ] `day.6.dhikr.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `day.6.hadith.meaning`
+  - Arabic source: مَنْ قَرَأَ حَرْفًا مِنْ كِتَابِ اللَّهِ فَلَهُ بِهِ حَسَنَةٌ، وَالْحَسَنَةُ بِعَشْرِ أَمْثَالِهَا، لاَ أَقُولُ الم حَرْفٌ، وَلَكِنْ أَلِفٌ حَرْفٌ وَلاَمٌ حَرْفٌ وَمِيمٌ حَرْفٌ
+  - English: "Whoever reads a letter from the Book of Allah receives a good deed for it, and a good deed is multiplied ten times. I do not say that Alif-Lam-Mim is one letter; rather Alif is a letter, Lam is a letter and Mim is a letter."
+  - Turkish: "Kim Allah'ın Kitabından bir harf okursa ona bir iyilik vardır; bir iyilik de on katıyla karşılanır. Elif-Lâm-Mîm bir harftir demiyorum; Elif bir harf, Lâm bir harf, Mîm bir harftir."
+- [ ] `day.7.dhikr.astaghfirullah_al_azim.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ
+  - English: I seek forgiveness from Allah the Magnificent, besides whom there is no god, the Ever-Living, the Sustainer, and I repent to Him
+  - Turkish: Kendisinden başka ilah olmayan, Hayy ve Kayyûm olan Azîm Allah'tan bağışlanma diler ve O'na tövbe ederim
+- [ ] `day.7.dhikr.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `day.7.hadith.meaning`
+  - Arabic source: وَاللَّهِ إِنِّي لأَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ فِي الْيَوْمِ أَكْثَرَ مِنْ سَبْعِينَ مَرَّةً
+  - English: "By Allah, I seek Allah's forgiveness and turn to Him in repentance more than seventy times a day."
+  - Turkish: "Allah'a yemin ederim ki ben günde yetmiş defadan fazla Allah'tan bağışlanma diler ve O'na tövbe ederim."
+- [ ] `day.7.prayer.dua.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ
+  - English: O Allah, I ask You for pardon and well-being in this world and the Hereafter.
+  - Turkish: Allah'ım, Senden dünyada ve ahirette af ve afiyet isterim.
+- [ ] `day.8.dhikr.afini_fi_badani.meaning`
+  - Arabic source: اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ
+  - English: O Allah, grant me well-being in my body, my hearing and my sight; there is no god but You
+  - Turkish: Allah'ım, bedenime afiyet ver; Allah'ım, kulağıma afiyet ver; Allah'ım, gözüme afiyet ver; Senden başka ilah yoktur
+- [ ] `day.8.dhikr.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave
+  - Turkish: Akşama erdik, mülk de Allah'ın olarak akşama erdi; hamd Allah'a mahsustur. Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir. Rabbim, bu gecede olanın ve ondan sonrakinin hayrını Senden isterim; bu gecede olanın ve ondan sonrakinin şerrinden Sana sığınırım. Rabbim, tembellikten ve ihtiyarlığın kötülüğünden Sana sığınırım. Rabbim, cehennem azabından ve kabir azabından Sana sığınırım
+- [ ] `day.8.dhikr.bismillah_alladhi.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing
+  - Turkish: İsmiyle birlikte yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O her şeyi işiten, her şeyi bilendir
+- [ ] `day.8.dhikr.hasbiyallah.meaning`
+  - Arabic source: حَسۡبِيَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَۖ عَلَيۡهِ تَوَكَّلۡتُۖ وَهُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡعَظِيمِ
+  - English: Allah is sufficient for me; there is no god but Him; in Him I trust, and He is Lord of the Mighty Throne
+  - Turkish: Allah bana yeter; O'ndan başka ilah yoktur. Ben yalnızca O'na tevekkül ettim ve O, büyük Arşın Rabbidir
+- [ ] `day.8.dhikr.three_quls.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ٱللَّهُ ٱلصَّمَدُ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ مِن شَرِّ مَا خَلَقَ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ مَلِكِ ٱلنَّاسِ إِلَٰهِ ٱلنَّاسِ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ
+  - English: Surahs Al-Ikhlas, Al-Falaq and An-Nas, three times each in the morning and evening. The Prophet ﷺ said they will suffice you against everything.
+  - Turkish: İhlas, Felak ve Nas sureleri, sabah ve akşam üçer kez. Peygamber ﷺ bunların sana her şeye karşı yeteceğini buyurdu.
+- [ ] `day.8.hadith.meaning`
+  - Arabic source: مَثَلُ الَّذِي يَذْكُرُ رَبَّهُ وَالَّذِي لاَ يَذْكُرُ رَبَّهُ مَثَلُ الْحَيِّ وَالْمَيِّتِ
+  - English: "The example of one who remembers his Lord and one who does not is like the living and the dead."
+  - Turkish: "Rabbini anan ile anmayanın misali, diri ile ölünün misali gibidir."
+- [ ] `day.9.dhikr.salawat.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ
+  - English: O Allah, send blessings upon Muhammad
+  - Turkish: Allah'ım, Muhammed'e salat eyle
+- [ ] `day.9.dhikr.salawat_ibrahimiyyah.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Turkish: Allah'ım, İbrahim'e ve İbrahim'in ailesine salat ettiğin gibi Muhammed'e ve Muhammed'in ailesine de salat et; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın. Allah'ım, İbrahim'i ve İbrahim'in ailesini mübarek kıldığın gibi Muhammed'i ve Muhammed'in ailesini de mübarek kıl; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın.
+- [ ] `day.9.hadith.meaning`
+  - Arabic source: لاَ يُؤْمِنُ أَحَدُكُمْ حَتَّى أَكُونَ أَحَبَّ إِلَيْهِ مِنْ وَالِدِهِ وَوَلَدِهِ وَالنَّاسِ أَجْمَعِينَ
+  - English: "None of you truly believes until I am more beloved to him than his father, his child and all of mankind."
+  - Turkish: "Ben birinize babasından, çocuğundan ve bütün insanlardan daha sevimli olmadıkça, o gerçekten iman etmiş olmaz."
+- [ ] `dua.after_adhan.meaning`
+  - Arabic source: اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ، وَالصَّلَاةِ الْقَائِمَةِ، آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ، وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ
+  - English: O Allah, Lord of this perfect call and the prayer about to be established, grant Muhammad al-Wasilah and excellence, and raise him to the praised station You promised him.
+  - Turkish: Allah'ım, ey bu eksiksiz davetin ve kılınacak namazın Rabbi! Muhammed'e vesileyi ve fazileti ver ve onu kendisine vaat ettiğin makam-ı mahmuda ulaştır.
+- [ ] `dua.after_eating.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ
+  - English: All praise is for Allah who fed me this and provided it for me without any might or power on my part.
+  - Turkish: Bana bunu yediren ve benim hiçbir güç ve kuvvetim olmadan onu bana rızık olarak veren Allah'a hamd olsun.
+- [ ] `dua.after_salah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ، أَسْتَغْفِرُ اللَّهَ. اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ، تَبَارَكْتَ ذَا الْجَلَالِ وَالْإِكْرَامِ
+  - English: I seek Allah’s forgiveness (three times). O Allah, You are Peace and from You comes peace; blessed are You, Possessor of majesty and honour.
+  - Turkish: Allah'tan bağışlanma dilerim (üç kez). Allah'ım, Sen Selam'sın ve selamet Sendendir; ey celal ve ikram sahibi, Sen ne yücesin.
+- [ ] `dua.before_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah. The Prophet ﷺ told a boy: “Mention the name of Allah, eat with your right hand, and eat from what is in front of you.”
+  - Turkish: Allah'ın adıyla. Peygamber ﷺ bir çocuğa şöyle buyurdu: "Allah'ın adını an, sağ elinle ye ve önünden ye."
+- [ ] `dua.before_reciting_quran.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed. Allah says: “When you recite the Quran, seek refuge in Allah from Shaytan, the accursed.”
+  - Turkish: Kovulmuş şeytandan Allah'a sığınırım. Allah şöyle buyurur: "Kur'an okuyacağın zaman kovulmuş şeytandan Allah'a sığın."
+- [ ] `dua.before_sleeping.meaning`
+  - Arabic source: بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا
+  - English: In Your name, O Allah, I die and I live.
+  - Turkish: Allah'ım, Senin adınla ölür ve dirilirim.
+- [ ] `dua.dua_for_knowledge.meaning`
+  - Arabic source: وَقُل رَّبِّ زِدۡنِي عِلۡمࣰا
+  - English: And say: “My Lord, increase me in knowledge.” (Allah tells the Prophet ﷺ to say this; the du‘a itself is “Rabbi zidnī ʿilmā”.)
+  - Turkish: Ve de ki: "Rabbim, ilmimi artır." (Allah bunu Peygamber'e ﷺ söylemesini emreder; duanın kendisi "Rabbi zidnî ilmâ"dır.)
+- [ ] `dua.entering_mosque.meaning`
+  - Arabic source: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ
+  - English: O Allah, open for me the doors of Your mercy.
+  - Turkish: Allah'ım, bana rahmetinin kapılarını aç.
+- [ ] `dua.evening_bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Turkish: Allah'ım, Seninle akşama erdik, Seninle sabaha erdik; Seninle yaşar, Seninle ölürüz; dönüş de Sanadır.
+- [ ] `dua.evening_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Turkish: İsmiyle birlikte yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O her şeyi işiten, her şeyi bilendir.
+- [ ] `dua.forgot_bismillah_eating.meaning`
+  - Arabic source: بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ
+  - English: In the name of Allah, at its beginning and at its end.
+  - Turkish: Başında da sonunda da Allah'ın adıyla.
+- [ ] `dua.leaving_home.meaning`
+  - Arabic source: بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ
+  - English: In the name of Allah; I place my trust in Allah; there is no might nor power except by Allah.
+  - Turkish: Allah'ın adıyla; Allah'a tevekkül ettim; güç ve kuvvet ancak Allah iledir.
+- [ ] `dua.leaving_mosque.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ
+  - English: O Allah, I ask You of Your bounty.
+  - Turkish: Allah'ım, Senden lütfundan isterim.
+- [ ] `dua.morning_bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Turkish: Allah'ım, Seninle sabaha erdik, Seninle akşama erdik; Seninle yaşar, Seninle ölürüz; diriliş de Sanadır.
+- [ ] `dua.morning_bismillah_protection.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Turkish: İsmiyle birlikte yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O her şeyi işiten, her şeyi bilendir.
+- [ ] `dua.opening_dua_salah.meaning`
+  - Arabic source: اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَايَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْ خَطَايَايَ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ
+  - English: O Allah, put distance between me and my sins as You have put distance between the East and the West. O Allah, cleanse me of sins as a white garment is cleansed of dirt. O Allah, wash away my sins with water, snow and hail.
+  - Turkish: Allah'ım, doğu ile batının arasını uzaklaştırdığın gibi benimle günahlarımın arasını da uzaklaştır. Allah'ım, beyaz elbisenin kirden temizlendiği gibi beni de günahlardan temizle. Allah'ım, günahlarımı su, kar ve dolu ile yıka.
+- [ ] `dua.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `dua.tawbah.meaning`
+  - Arabic source: أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ
+  - English: I seek Allah’s forgiveness and I turn to Him in repentance.
+  - Turkish: Allah'tan bağışlanma diler ve O'na tövbe ederim.
+- [ ] `dua.waking_up.meaning`
+  - Arabic source: الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ
+  - English: All praise is for Allah who gave us life after causing us to die, and to Him is the resurrection.
+  - Turkish: Bizi öldürdükten sonra dirilten Allah'a hamd olsun; diriliş de O'nadır.
+- [ ] `learn.dua_after_wudu.meaning`
+  - Arabic source: أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: I bear witness that there is no god but Allah, alone without partner, and I bear witness that Muhammad is His servant and Messenger. (Whoever performs wudu well, then says this, the eight gates of Paradise are opened for him.)
+  - Turkish: Şahitlik ederim ki Allah'tan başka ilah yoktur, O tektir, ortağı yoktur; yine şahitlik ederim ki Muhammed O'nun kulu ve Resulüdür. (Kim güzelce abdest alır, sonra bunu söylerse, ona cennetin sekiz kapısı açılır.)
+- [ ] `learn.evening_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Turkish: Allah'ım, Senden dünyada ve ahirette afiyet isterim. Allah'ım, Senden dinimde, dünyamda, ailemde ve malımda af ve afiyet isterim. Allah'ım, ayıplarımı ört ve korkularımdan emin kıl. Allah'ım, beni önümden, arkamdan, sağımdan, solumdan ve üstümden koru; altımdan ansızın helak edilmekten de Senin azametine sığınırım.
+- [ ] `learn.evening_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Turkish: Allah'ım, ey gaybı ve görüneni bilen, gökleri ve yeri yaratan, her şeyin Rabbi ve Sahibi! Senden başka ilah olmadığına şahitlik ederim. Nefsimin şerrinden, şeytanın şerrinden ve onun şirke çağrısından Sana sığınırım.
+- [ ] `learn.evening_adhkar.amsayna_wa_amsal_mulk.meaning`
+  - Arabic source: أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the evening and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this night and what follows it, and seek refuge in You from the evil of this night and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Turkish: Akşama erdik, mülk de Allah'ın olarak akşama erdi; hamd Allah'a mahsustur. Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir. Rabbim, bu gecede olanın ve ondan sonrakinin hayrını Senden isterim; bu gecede olanın ve ondan sonrakinin şerrinden Sana sığınırım. Rabbim, tembellikten ve ihtiyarlığın kötülüğünden Sana sığınırım. Rabbim, cehennem azabından ve kabir azabından Sana sığınırım.
+- [ ] `learn.evening_adhkar.audhu_bikalimatillah.meaning`
+  - Arabic source: أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ
+  - English: I seek refuge in the perfect words of Allah from the evil of what He created.
+  - Turkish: Yarattığı şeylerin şerrinden Allah'ın eksiksiz kelimelerine sığınırım.
+- [ ] `learn.evening_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Turkish: Allah, O'ndan başka ilah yoktur; O Hayy'dır, Kayyûm'dur. O'nu ne bir uyuklama tutar ne de uyku. Göklerde ve yerde ne varsa O'nundur. İzni olmadan O'nun katında kim şefaat edebilir? O, kullarının önlerindekini ve arkalarındakini bilir; onlar ise O'nun ilminden, dilediği kadarı dışında hiçbir şeyi kavrayamazlar. O'nun Kürsîsi gökleri ve yeri kaplamıştır; onları korumak O'na ağır gelmez. O yücedir, azametlidir.
+- [ ] `learn.evening_adhkar.bika_amsayna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ
+  - English: O Allah, by You we enter the evening and by You we enter the morning, by You we live and by You we die, and to You is the final return.
+  - Turkish: Allah'ım, Seninle akşama erdik, Seninle sabaha erdik; Seninle yaşar, Seninle ölürüz; dönüş de Sanadır.
+- [ ] `learn.evening_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Turkish: İsmiyle birlikte yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O her şeyi işiten, her şeyi bilendir.
+- [ ] `learn.evening_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `learn.evening_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `learn.evening_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Turkish: Felak: De ki: Sabahın Rabbine sığınırım; yarattığı şeylerin şerrinden, karanlığı çöktüğü zaman gecenin şerrinden, düğümlere üfleyenlerin şerrinden ve haset ettiği zaman hasetçinin şerrinden.
+- [ ] `learn.evening_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Turkish: İhlas: De ki: O Allah birdir. Allah Samed'dir (her şey O'na muhtaçtır, O hiçbir şeye muhtaç değildir). O doğurmamış ve doğurulmamıştır. Hiçbir şey O'na denk değildir.
+- [ ] `learn.evening_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Turkish: Nas: De ki: İnsanların Rabbine, insanların Melikine, insanların İlahına sığınırım; insanların göğüslerine vesvese veren, cinlerden ve insanlardan olan sinsi vesvesecinin şerrinden.
+- [ ] `learn.morning_adhkar.afiyah.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي
+  - English: O Allah, I ask You for well-being in this world and the next. O Allah, I ask You for pardon and well-being in my religion, my worldly life, my family and my wealth. O Allah, cover my faults and calm my fears. O Allah, guard me from in front, behind, my right, my left and above me, and I seek refuge in Your greatness from being struck down from beneath me.
+  - Turkish: Allah'ım, Senden dünyada ve ahirette afiyet isterim. Allah'ım, Senden dinimde, dünyamda, ailemde ve malımda af ve afiyet isterim. Allah'ım, ayıplarımı ört ve korkularımdan emin kıl. Allah'ım, beni önümden, arkamdan, sağımdan, solumdan ve üstümden koru; altımdan ansızın helak edilmekten de Senin azametine sığınırım.
+- [ ] `learn.morning_adhkar.alimal_ghayb.meaning`
+  - Arabic source: اللَّهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ، فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ
+  - English: O Allah, Knower of the unseen and the seen, Creator of the heavens and the earth, Lord and Sovereign of all things: I bear witness that there is no god but You. I seek refuge in You from the evil of my own self and from the evil of Shaytan and his call to shirk.
+  - Turkish: Allah'ım, ey gaybı ve görüneni bilen, gökleri ve yeri yaratan, her şeyin Rabbi ve Sahibi! Senden başka ilah olmadığına şahitlik ederim. Nefsimin şerrinden, şeytanın şerrinden ve onun şirke çağrısından Sana sığınırım.
+- [ ] `learn.morning_adhkar.asbahna_wa_asbahal_mulk.meaning`
+  - Arabic source: أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذَا الْيَوْمِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِي هَذَا الْيَوْمِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوذُ بِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ
+  - English: We have entered the morning and the dominion belongs to Allah; praise be to Allah; none has the right to be worshipped but Allah alone, without partner; His is the dominion and the praise, and He is able to do all things. My Lord, I ask You for the good of this day and what follows it, and seek refuge in You from the evil of this day and what follows it. My Lord, I seek refuge in You from laziness and the misery of old age. My Lord, I seek refuge in You from punishment in the Fire and in the grave.
+  - Turkish: Sabaha erdik, mülk de Allah'ın olarak sabaha erdi; hamd Allah'a mahsustur. Allah'tan başka ilah yoktur; O tektir, ortağı yoktur. Mülk O'nundur, hamd O'na mahsustur ve O her şeye kadirdir. Rabbim, bu günde olanın ve ondan sonrakinin hayrını Senden isterim; bu günde olanın ve ondan sonrakinin şerrinden Sana sığınırım. Rabbim, tembellikten ve ihtiyarlığın kötülüğünden Sana sığınırım. Rabbim, cehennem azabından ve kabir azabından Sana sığınırım.
+- [ ] `learn.morning_adhkar.ayat_al_kursi.meaning`
+  - Arabic source: ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءࣲ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَا يَـُٔودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ ﴿٢٥٥﴾
+  - English: Allah: there is no god but Him, the Ever-Living, the Sustainer of all. Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and the earth. Who could intercede with Him except by His permission? He knows what is before them and what is behind them, and they grasp nothing of His knowledge except what He wills. His Kursi extends over the heavens and the earth, and guarding them does not tire Him. He is the Most High, the Magnificent.
+  - Turkish: Allah, O'ndan başka ilah yoktur; O Hayy'dır, Kayyûm'dur. O'nu ne bir uyuklama tutar ne de uyku. Göklerde ve yerde ne varsa O'nundur. İzni olmadan O'nun katında kim şefaat edebilir? O, kullarının önlerindekini ve arkalarındakini bilir; onlar ise O'nun ilminden, dilediği kadarı dışında hiçbir şeyi kavrayamazlar. O'nun Kürsîsi gökleri ve yeri kaplamıştır; onları korumak O'na ağır gelmez. O yücedir, azametlidir.
+- [ ] `learn.morning_adhkar.bika_asbahna.meaning`
+  - Arabic source: اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ
+  - English: O Allah, by You we enter the morning and by You we enter the evening, by You we live and by You we die, and to You is the resurrection.
+  - Turkish: Allah'ım, Seninle sabaha erdik, Seninle akşama erdik; Seninle yaşar, Seninle ölürüz; diriliş de Sanadır.
+- [ ] `learn.morning_adhkar.bismillah_la_yadurr.meaning`
+  - Arabic source: بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+  - English: In the name of Allah, with whose name nothing on earth or in heaven can cause harm, and He is the All-Hearing, the All-Knowing.
+  - Turkish: İsmiyle birlikte yerde ve gökte hiçbir şeyin zarar veremeyeceği Allah'ın adıyla. O her şeyi işiten, her şeyi bilendir.
+- [ ] `learn.morning_adhkar.sayyid_istighfar.meaning`
+  - Arabic source: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ
+  - English: O Allah, You are my Lord; there is no god but You. You created me and I am Your servant, and I keep Your covenant and my promise to You as much as I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.
+  - Turkish: Allah'ım, Sen benim Rabbimsin; Senden başka ilah yoktur. Beni Sen yarattın, ben Senin kulunum ve gücüm yettiğince Sana verdiğim ahde ve vaade bağlıyım. Yaptıklarımın şerrinden Sana sığınırım. Bana verdiğin nimeti ikrar eder, günahımı da itiraf ederim. Beni bağışla, çünkü günahları ancak Sen bağışlarsın.
+- [ ] `learn.morning_adhkar.subhanallahi_wa_bihamdihi.meaning`
+  - Arabic source: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+  - English: Glory be to Allah and praise be to Him
+  - Turkish: Allah'ı hamdiyle tesbih ederim
+- [ ] `learn.morning_adhkar.surah_falaq.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾
+  - English: Al-Falaq: Say: I seek refuge in the Lord of daybreak, from the evil of what He created, from the evil of darkness when it settles, from the evil of those who blow on knots, and from the evil of an envier when he envies.
+  - Turkish: Felak: De ki: Sabahın Rabbine sığınırım; yarattığı şeylerin şerrinden, karanlığı çöktüğü zaman gecenin şerrinden, düğümlere üfleyenlerin şerrinden ve haset ettiği zaman hasetçinin şerrinden.
+- [ ] `learn.morning_adhkar.surah_ikhlas.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Al-Ikhlas: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Turkish: İhlas: De ki: O Allah birdir. Allah Samed'dir (her şey O'na muhtaçtır, O hiçbir şeye muhtaç değildir). O doğurmamış ve doğurulmamıştır. Hiçbir şey O'na denk değildir.
+- [ ] `learn.morning_adhkar.surah_nas.meaning`
+  - Arabic source: قُلۡ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلۡوَسۡوَاسِ ٱلۡخَنَّاسِ ﴿٤﴾ ٱلَّذِي يُوَسۡوِسُ فِي صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلۡجِنَّةِ وَٱلنَّاسِ ﴿٦﴾
+  - English: An-Nas: Say: I seek refuge in the Lord of mankind, the King of mankind, the God of mankind, from the evil of the retreating whisperer, who whispers into the hearts of mankind, from among jinn and mankind.
+  - Turkish: Nas: De ki: İnsanların Rabbine, insanların Melikine, insanların İlahına sığınırım; insanların göğüslerine vesvese veren, cinlerden ve insanlardan olan sinsi vesvesecinin şerrinden.
+- [ ] `learn.pillar.allah.meaning`
+  - Arabic source: الْإِيمَانُ بِاللَّهِ
+  - English: Believing that Allah exists, that He alone is Lord and alone deserves worship, and in His names and attributes.
+  - Turkish: Allah'ın var olduğuna, yalnızca O'nun Rab olduğuna ve yalnızca O'nun ibadete layık olduğuna, O'nun isimlerine ve sıfatlarına iman etmek.
+- [ ] `learn.pillar.angels.meaning`
+  - Arabic source: الْإِيمَانُ بِالْمَلَائِكَةِ
+  - English: Believing in the angels, created from light, who always obey Allah, such as Jibril.
+  - Turkish: Nurdan yaratılmış, Allah'a daima itaat eden, Cebrail gibi meleklere iman etmek.
+- [ ] `learn.pillar.books.meaning`
+  - Arabic source: الْإِيمَانُ بِالْكُتُبِ
+  - English: Believing in the books Allah revealed, such as the Torah and the Gospel, with the Quran as the final, preserved one.
+  - Turkish: Tevrat ve İncil gibi Allah'ın indirdiği kitaplara iman etmek; bunların sonuncusu ve korunmuş olanı Kur'an'dır.
+- [ ] `learn.pillar.hajj.meaning`
+  - Arabic source: حَجُّ الْبَيْتِ
+  - English: Pilgrimage to the Ka‘bah once in a lifetime, for those who are able.
+  - Turkish: Gücü yetenler için ömürde bir kez Kâbe'yi haccetmek.
+- [ ] `learn.pillar.last_day.meaning`
+  - Arabic source: الْإِيمَانُ بِالْيَوْمِ الْآخِرِ
+  - English: Believing in what comes after death: the grave, the resurrection, the judgement, Paradise and Hell.
+  - Turkish: Ölümden sonra olacaklara iman etmek: kabir, diriliş, hesap, cennet ve cehennem.
+- [ ] `learn.pillar.messengers.meaning`
+  - Arabic source: الْإِيمَانُ بِالرُّسُلِ
+  - English: Believing in all of Allah's messengers, from Nuh to Muhammad ﷺ, the last of them.
+  - Turkish: Nuh'tan, sonuncuları olan Muhammed'e ﷺ kadar Allah'ın bütün peygamberlerine iman etmek.
+- [ ] `learn.pillar.qadar.meaning`
+  - Arabic source: الْإِيمَانُ بِالْقَدَرِ خَيْرِهِ وَشَرِّهِ
+  - English: Believing that everything, good and bad, happens by Allah's knowledge, writing, will and creation.
+  - Turkish: Hayır ve şer her şeyin Allah'ın ilmi, yazması, dilemesi ve yaratmasıyla gerçekleştiğine iman etmek.
+- [ ] `learn.pillar.salah.meaning`
+  - Arabic source: إِقَامُ الصَّلَاةِ
+  - English: Establishing the five daily prayers on time.
+  - Turkish: Beş vakit namazı vaktinde kılmak.
+- [ ] `learn.pillar.sawm.meaning`
+  - Arabic source: صَوْمُ رَمَضَانَ
+  - English: Fasting from dawn to sunset throughout the month of Ramadan.
+  - Turkish: Ramazan ayı boyunca tan yerinin ağarmasından güneşin batışına kadar oruç tutmak.
+- [ ] `learn.pillar.shahadah.meaning`
+  - Arabic source: الشَّهَادَتَانِ
+  - English: Testifying that there is no god but Allah and that Muhammad is the Messenger of Allah.
+  - Turkish: Allah'tan başka ilah olmadığına ve Muhammed'in Allah'ın Resulü olduğuna şahitlik etmek.
+- [ ] `learn.pillar.zakah.meaning`
+  - Arabic source: إِيتَاءُ الزَّكَاةِ
+  - English: Paying the yearly obligatory charity: 2.5% of savings held above the nisab threshold.
+  - Turkish: Yıllık farz olan zekâtı vermek: nisap miktarının üzerindeki birikimin %2,5'i.
+- [ ] `learn.salah_steps.salah_fatihah.recite.meaning`
+  - Arabic source: بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿١﴾ ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ ﴿٢﴾ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ﴿٣﴾ مَٰلِكِ يَوۡمِ ٱلدِّينِ ﴿٤﴾ إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ ﴿٥﴾ ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ ﴿٦﴾ صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ ﴿٧﴾
+  - English: In the name of Allah, the Most Gracious, the Most Merciful. All praise is for Allah, Lord of all the worlds, the Most Gracious, the Most Merciful, Master of the Day of Judgement. You alone we worship, and You alone we ask for help. Guide us to the straight path, the path of those You have blessed, not of those who earned Your anger, nor of those who went astray.
+  - Turkish: Rahmân ve Rahîm olan Allah'ın adıyla. Hamd, âlemlerin Rabbi Allah'a mahsustur. O Rahmân'dır, Rahîm'dir. Din gününün sahibidir. Yalnız Sana ibadet eder ve yalnız Senden yardım dileriz. Bizi dosdoğru yola ilet; nimet verdiklerinin yoluna, gazaba uğrayanların ve sapkınların yoluna değil.
+- [ ] `learn.salah_steps.salah_final_dua.recite.meaning`
+  - Arabic source: اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ، وَمِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ، وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ
+  - English: O Allah, I seek refuge in You from the punishment of Hell, from the punishment of the grave, from the trials of life and death, and from the evil of the trial of the False Messiah.
+  - Turkish: Allah'ım, cehennem azabından, kabir azabından, hayatın ve ölümün fitnesinden ve Mesih Deccal'ın fitnesinin şerrinden Sana sığınırım.
+- [ ] `learn.salah_steps.salah_istiadhah.recite.meaning`
+  - Arabic source: أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ
+  - English: I seek refuge in Allah from Shaytan, the accursed.
+  - Turkish: Kovulmuş şeytandan Allah'a sığınırım.
+- [ ] `learn.salah_steps.salah_opening_dua.recite.meaning`
+  - Arabic source: سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ، وَتَعَالَى جَدُّكَ، وَلَا إِلَهَ غَيْرُكَ
+  - English: Glory be to You, O Allah, and praise; blessed is Your name, exalted is Your majesty, and there is no god besides You.
+  - Turkish: Allah'ım, Seni hamdinle tesbih ederim; Senin adın mübarektir, şanın yücedir ve Senden başka ilah yoktur.
+- [ ] `learn.salah_steps.salah_rising.recite.meaning`
+  - Arabic source: سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ، رَبَّنَا وَلَكَ الْحَمْدُ
+  - English: Allah hears whoever praises Him. Our Lord, and to You belongs all praise.
+  - Turkish: Allah, kendisine hamd edeni işitir. Rabbimiz, hamd Sana mahsustur.
+- [ ] `learn.salah_steps.salah_ruku.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْعَظِيمِ
+  - English: Glory be to my Lord, the Magnificent
+  - Turkish: Azîm olan Rabbimi tesbih ederim
+- [ ] `learn.salah_steps.salah_salawat.recite.meaning`
+  - Arabic source: اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ
+  - English: O Allah, send prayers upon Muhammad and the family of Muhammad, as You sent prayers upon Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious. O Allah, bless Muhammad and the family of Muhammad, as You blessed Ibrahim and the family of Ibrahim; You are Praiseworthy, Glorious.
+  - Turkish: Allah'ım, İbrahim'e ve İbrahim'in ailesine salat ettiğin gibi Muhammed'e ve Muhammed'in ailesine de salat et; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın. Allah'ım, İbrahim'i ve İbrahim'in ailesini mübarek kıldığın gibi Muhammed'i ve Muhammed'in ailesini de mübarek kıl; şüphesiz Sen övülmeye layık olansın, şanı yüce olansın.
+- [ ] `learn.salah_steps.salah_short_surah.recite.meaning`
+  - Arabic source: قُلۡ هُوَ ٱللَّهُ أَحَدٌ ﴿١﴾ ٱللَّهُ ٱلصَّمَدُ ﴿٢﴾ لَمۡ يَلِدۡ وَلَمۡ يُولَدۡ ﴿٣﴾ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ﴿٤﴾
+  - English: Say: He is Allah, the One. Allah, the Self-Sufficient on whom all depend. He neither begets nor was He begotten, and there is none comparable to Him.
+  - Turkish: De ki: O Allah birdir. Allah Samed'dir (her şey O'na muhtaçtır, O hiçbir şeye muhtaç değildir). O doğurmamış ve doğurulmamıştır. Hiçbir şey O'na denk değildir.
+- [ ] `learn.salah_steps.salah_sitting.recite.meaning`
+  - Arabic source: رَبِّ اغْفِرْ لِي، رَبِّ اغْفِرْ لِي
+  - English: My Lord, forgive me. My Lord, forgive me.
+  - Turkish: Rabbim, beni bağışla. Rabbim, beni bağışla.
+- [ ] `learn.salah_steps.salah_sujud.recite.meaning`
+  - Arabic source: سُبْحَانَ رَبِّيَ الْأَعْلَى
+  - English: Glory be to my Lord, the Most High
+  - Turkish: Yüce Rabbimi tesbih ederim
+- [ ] `learn.salah_steps.salah_takbir.recite.meaning`
+  - Arabic source: اللَّهُ أَكْبَرُ
+  - English: Allah is the Greatest
+  - Turkish: Allah en büyüktür
+- [ ] `learn.salah_steps.salah_tashahhud.recite.meaning`
+  - Arabic source: التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ
+  - English: All greetings, prayers and good things are for Allah. Peace be upon you, O Prophet, and the mercy of Allah and His blessings. Peace be upon us and upon the righteous servants of Allah. I bear witness that there is no god but Allah, and I bear witness that Muhammad is His servant and Messenger.
+  - Turkish: Bütün selamlar, dualar ve güzel şeyler Allah'a mahsustur. Ey Peygamber, selam, Allah'ın rahmeti ve bereketleri senin üzerine olsun. Selam bizim ve Allah'ın salih kullarının üzerine olsun. Şahitlik ederim ki Allah'tan başka ilah yoktur ve yine şahitlik ederim ki Muhammed O'nun kulu ve Resulüdür.
+- [ ] `learn.salah_steps.salah_taslim.recite.meaning`
+  - Arabic source: السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ
+  - English: Peace and the mercy of Allah be upon you
+  - Turkish: Selam ve Allah'ın rahmeti üzerinize olsun
+- [ ] `learn.wudu_steps.wudu_bismillah.recite.meaning`
+  - Arabic source: بِسْمِ اللَّهِ
+  - English: In the name of Allah
+  - Turkish: Allah'ın adıyla
+- [ ] `milestone.fajr_7.meaning`
+  - Arabic source: مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّةَ
+  - English: "Whoever prays the two cool prayers (Fajr and 'Asr) will enter Paradise."
+  - Turkish: "Kim iki serin vakit namazını (sabah ve ikindi) kılarsa cennete girer."
+- [ ] `milestone.first_full_salah_day.meaning`
+  - Arabic source: فَذَلِكَ مِثْلُ الصَّلَوَاتِ الْخَمْسِ، يَمْحُو اللَّهُ بِهَا الْخَطَايَا
+  - English: "That is the likeness of the five prayers: through them Allah wipes away sins." (Like bathing in a river at your door five times a day.)
+  - Turkish: "İşte beş vakit namazın misali budur: Allah onlarla günahları siler." (Kapının önünden akan bir nehirde günde beş kez yıkanmak gibi.)
+- [ ] `milestone.first_reflection.meaning`
+  - Arabic source: يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱتَّقُواْ ٱللَّهَ وَلۡتَنظُرۡ نَفۡسࣱ مَّا قَدَّمَتۡ لِغَدࣲۖ وَٱتَّقُواْ ٱللَّهَۚ إِنَّ ٱللَّهَ خَبِيرُۢ بِمَا تَعۡمَلُونَ
+  - English: "O you who believe, fear Allah, and let every soul look to what it has sent forth for tomorrow. And fear Allah; indeed, Allah is Aware of what you do."
+  - Turkish: "Ey iman edenler, Allah'tan sakının ve herkes yarın için ne gönderdiğine baksın. Allah'tan sakının; şüphesiz Allah yaptıklarınızdan haberdardır."
+- [ ] `milestone.first_step.meaning`
+  - Arabic source: وَإِنْ تَقَرَّبَ إِلَىَّ بِشِبْرٍ تَقَرَّبْتُ إِلَيْهِ ذِرَاعًا ... وَإِنْ أَتَانِي يَمْشِي أَتَيْتُهُ هَرْوَلَةً
+  - English: Allah says: "If he draws near to Me a hand-span, I draw near to him an arm's length… and if he comes to Me walking, I come to him running."
+  - Turkish: Allah şöyle buyurur: "Kulum Bana bir karış yaklaşırsa Ben ona bir arşın yaklaşırım… Bana yürüyerek gelirse Ben ona koşarak gelirim."
+- [ ] `milestone.halfway.meaning`
+  - Arabic source: فَإِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرًا ﴿٥﴾ إِنَّ مَعَ ٱلۡعُسۡرِ يُسۡرࣰا
+  - English: "For indeed, with hardship comes ease. Indeed, with hardship comes ease."
+  - Turkish: "Şüphesiz zorlukla beraber bir kolaylık vardır. Gerçekten zorlukla beraber bir kolaylık vardır."
+- [ ] `milestone.journey_complete.meaning`
+  - Arabic source: لَئِن شَكَرۡتُمۡ لَأَزِيدَنَّكُمۡ
+  - English: "If you are grateful, I will surely increase you."
+  - Turkish: "Eğer şükrederseniz, elbette size artırırım."
+- [ ] `milestone.streak_7.meaning`
+  - Arabic source: وَٱعۡبُدۡ رَبَّكَ حَتَّىٰ يَأۡتِيَكَ ٱلۡيَقِينُ
+  - English: "And worship your Lord until there comes to you the certainty (death)."
+  - Turkish: "Ve sana yakîn (ölüm) gelinceye kadar Rabbine ibadet et."
+- [ ] `milestone.tasbih_1000.meaning`
+  - Arabic source: أَيَعْجِزُ أَحَدُكُمْ أَنْ يَكْسِبَ كُلَّ يَوْمٍ أَلْفَ حَسَنَةٍ ... يُسَبِّحُ مِائَةَ تَسْبِيحَةٍ فَيُكْتَبُ لَهُ أَلْفُ حَسَنَةٍ أَوْ يُحَطُّ عَنْهُ أَلْفُ خَطِيئَةٍ
+  - English: "Is any of you unable to earn a thousand good deeds each day? He glorifies Allah a hundred times, and a thousand good deeds are written for him or a thousand sins are removed."
+  - Turkish: "Sizden biriniz her gün bin sevap kazanmaktan aciz midir? Yüz kez Allah'ı tesbih eder de kendisine bin sevap yazılır ya da ondan bin günah silinir."
+- [ ] `milestone.three_days.meaning`
+  - Arabic source: وَٱلَّذِينَ جَٰهَدُواْ فِينَا لَنَهۡدِيَنَّهُمۡ سُبُلَنَاۚ وَإِنَّ ٱللَّهَ لَمَعَ ٱلۡمُحۡسِنِينَ
+  - English: "And those who strive for Us, We will surely guide them to Our ways. And indeed, Allah is with the doers of good."
+  - Turkish: "Bizim uğrumuzda cihad edenleri (var gücüyle çaba gösterenleri) elbette yollarımıza iletiriz. Şüphesiz Allah iyilik yapanlarla beraberdir."
+- [ ] `milestone.week_one.meaning`
+  - Arabic source: إِنَّ الدِّينَ يُسْرٌ ... فَسَدِّدُوا وَقَارِبُوا وَأَبْشِرُوا
+  - English: "The religion is ease… so do what is right, come as close as you can, and rejoice."
+  - Turkish: "Din kolaylıktır… Doğruyu tutturun, (tutturamazsanız) ona yaklaşın ve sevinin."
+- [ ] `welcomeBack.meaning`
+  - Arabic source: وَأَنَّ أَحَبَّ الأَعْمَالِ أَدْوَمُهَا إِلَى اللَّهِ وَإِنْ قَلَّ
+  - English: "The most beloved of deeds to Allah are the most consistent, even if small."
+  - Turkish: "Allah'a en sevimli amel, az da olsa devamlı olanıdır."
+
+### UI legal and privacy text (tr)
+
+- [ ] `share.footer`
+  - English: Shared from Awdah
+  - Turkish: Awdah'tan paylaşıldı
+- [ ] `me.about`
+  - English: About
+  - Turkish: Hakkında
+- [ ] `me.privacy`
+  - English: Privacy
+  - Turkish: Gizlilik
+- [ ] `me.terms`
+  - English: Terms
+  - Turkish: Koşullar
+- [ ] `about.intro`
+  - English: Awdah means return. It is a quiet companion for coming back to your prayer and your deen, one day at a time.
+  - Turkish: Awdah dönüş demektir. Namazına ve dinine, her gün bir adımla geri dönmen için sessiz bir yol arkadaşıdır.
+- [ ] `about.whatTitle`
+  - English: What Awdah is
+  - Turkish: Awdah nedir
+- [ ] `about.whatBody`
+  - English: A 30-day path of small daily steps, prayer tracking, dhikr, and short lessons, followed by a steady routine to keep going.
+  - Turkish: Küçük günlük adımlar, namaz takibi, zikir ve kısa derslerden oluşan 30 günlük bir yol; ardından devam etmen için düzenli bir rutin.
+- [ ] `about.freeTitle`
+  - English: Why it is free
+  - Turkish: Neden ücretsiz
+- [ ] `about.freeBody`
+  - English: Awdah is made as sadaqah jariyah, an ongoing charity, with the intention of seeking Allah's pleasure. There are no ads, no purchases and no data collection.
+  - Turkish: Awdah, Allah'ın rızasını gözeterek sadaka-i câriye, yani sevabı süren bir hayır olarak yapıldı. Reklam yok, satın alma yok ve veri toplama yok.
+- [ ] `about.sourcesTitle`
+  - English: About the content
+  - Turkish: İçerik hakkında
+- [ ] `about.sourcesBody`
+  - English: Hadith and duas are cited with their sources. If you notice a mistake, please let us know so it can be corrected.
+  - Turkish: Hadisler ve dualar kaynaklarıyla birlikte verilir. Bir hata fark edersen, düzeltilebilmesi için lütfen bize bildir.
+- [ ] `about.version`
+  - English: Version {{version}}
+  - Turkish: Sürüm {{version}}
+- [ ] `privacy.intro`
+  - English: Awdah does not collect any data about you.
+  - Turkish: Awdah senin hakkında hiçbir veri toplamaz.
+- [ ] `privacy.storage.title`
+  - English: Stored on your device
+  - Turkish: Cihazında saklanır
+- [ ] `privacy.storage.body`
+  - English: Everything you enter, such as your profile, prayers, tasks and journal, is stored on this phone. If your phone's own system backup (Google or iCloud) is turned on, it may include Awdah's data. That backup belongs to you; Awdah never sends anything to us.
+  - Turkish: Girdiğin her şey; profilin, namazların, görevlerin ve günlüğün gibi, bu telefonda saklanır. Telefonunun kendi sistem yedeklemesi (Google veya iCloud) açıksa, Awdah'ın verilerini de içerebilir. O yedek sana aittir; Awdah bize hiçbir şey göndermez.
+- [ ] `privacy.accounts.title`
+  - English: No accounts, analytics or ads
+  - Turkish: Hesap, analiz veya reklam yok
+- [ ] `privacy.accounts.body`
+  - English: There are no accounts, no analytics, no advertising and no trackers. Awdah never sends anything to us or to anyone else.
+  - Turkish: Hesap yok, analiz yok, reklam yok ve takip aracı yok. Awdah ne bize ne de başka birine hiçbir şey göndermez.
+- [ ] `privacy.location.title`
+  - English: Location
+  - Turkish: Konum
+- [ ] `privacy.location.body`
+  - English: If you choose to set your location, it is used only on your phone to calculate prayer times. Awdah never sends it anywhere.
+  - Turkish: Konumunu ayarlamayı seçersen, yalnızca telefonunda namaz vakitlerini hesaplamak için kullanılır. Awdah onu hiçbir yere göndermez.
+- [ ] `privacy.backups.title`
+  - English: Backups
+  - Turkish: Yedekler
+- [ ] `privacy.backups.body`
+  - English: Backups are files you create and keep. You decide where they go; Awdah never uploads them.
+  - Turkish: Yedekler, senin oluşturup sakladığın dosyalardır. Nereye gideceklerine sen karar verirsin; Awdah onları asla yüklemez.
+- [ ] `privacy.deletion.title`
+  - English: Deleting your data
+  - Turkish: Verilerini silmek
+- [ ] `privacy.deletion.body`
+  - English: Erase all data in Settings removes everything Awdah keeps on this phone. Uninstalling removes it too, though a system backup you made may still hold a copy.
+  - Turkish: Ayarlar'daki Tüm verileri sil seçeneği, Awdah'ın bu telefonda tuttuğu her şeyi kaldırır. Uygulamayı kaldırmak da verileri siler; ancak yaptığın bir sistem yedeği hâlâ bir kopyasını barındırabilir.
+- [ ] `privacy.updated`
+  - English: Last updated {{date}}
+  - Turkish: Son güncelleme: {{date}}
+- [ ] `terms.intro`
+  - English: These are the plain terms for using Awdah.
+  - Turkish: Awdah'ı kullanmanın sade koşulları bunlardır.
+- [ ] `terms.guidance.title`
+  - English: Personal guidance
+  - Turkish: Kişisel rehberlik
+- [ ] `terms.guidance.body`
+  - English: Awdah is for personal spiritual guidance and reminders. It is not a source of religious rulings.
+  - Turkish: Awdah kişisel manevi rehberlik ve hatırlatmalar içindir. Dinî hükümler için bir kaynak değildir.
+- [ ] `terms.scholars.title`
+  - English: Not a fatwa
+  - Turkish: Fetva değildir
+- [ ] `terms.scholars.body`
+  - English: Nothing in the app is a fatwa. For questions about your situation, please consult a qualified scholar.
+  - Turkish: Uygulamadaki hiçbir şey fetva değildir. Kendi durumunla ilgili sorular için lütfen ehil bir âlime danış.
+- [ ] `terms.asIs.title`
+  - English: As is
+  - Turkish: Olduğu gibi
+- [ ] `terms.asIs.body`
+  - English: The app is offered free, as is, without warranties. We do our best to be accurate, and we may fix or change content over time.
+  - Turkish: Uygulama ücretsiz olarak, olduğu gibi ve hiçbir garanti olmaksızın sunulur. Doğru olması için elimizden geleni yaparız ve içeriği zamanla düzeltebilir veya değiştirebiliriz.
+- [ ] `terms.yourData.title`
+  - English: Your data
+  - Turkish: Verilerin
+- [ ] `terms.yourData.body`
+  - English: Your data is stored on your phone and is yours. See the Privacy page for details.
+  - Turkish: Verilerin telefonunda saklanır ve sana aittir. Ayrıntılar için Gizlilik sayfasına bak.
+- [ ] `terms.updated`
+  - English: Last updated {{date}}
+  - Turkish: Son güncelleme: {{date}}
