@@ -23,7 +23,9 @@ export const LANGUAGE_NAMES: Record<Lang, string> = {
 export function OptionRow({
   title, subtitle, selected, onPress,
 }: { title: string; subtitle?: string; selected: boolean; onPress: () => void }) {
-  const { colors } = useTheme();
+  const { colors, isRTL } = useTheme();
+  // Align every row to the start edge, whatever script the label is in.
+  const align = { textAlign: isRTL ? 'right' : 'left', writingDirection: isRTL ? 'rtl' : 'ltr' } as const;
   return (
     <PressableScale
       onPress={onPress}
@@ -36,8 +38,8 @@ export function OptionRow({
       ]}
     >
       <View style={styles.optionText}>
-        <AppText variant="body" weight="medium">{title}</AppText>
-        {subtitle ? <AppText variant="small" muted>{subtitle}</AppText> : null}
+        <AppText variant="body" weight="medium" style={align}>{title}</AppText>
+        {subtitle ? <AppText variant="small" muted style={align}>{subtitle}</AppText> : null}
       </View>
       {selected ? <Check size={20} color={colors.accent} /> : null}
     </PressableScale>

@@ -76,7 +76,7 @@ export default function DayDetailScreen() {
       {header}
       <View style={styles.theme}>
         {content.themeArabic ? <AppText variant="arabicLarge" center>{content.themeArabic}</AppText> : null}
-        <AppText variant="heading" center>{content.theme}</AppText>
+        {lang === 'ar' && content.theme === content.themeArabic ? null : <AppText variant="heading" center>{content.theme}</AppText>}
       </View>
 
       {vm.isFuture ? (

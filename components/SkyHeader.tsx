@@ -28,6 +28,8 @@ const FADE_MS = 900;
 
 /** Full-bleed sky panel whose gradient follows the time of day; hosts the Prayer Horizon. */
 export function SkyHeader({ phase, greeting, title, titleArabic, dateLine, nextPrayerLine, children }: SkyHeaderProps) {
+  // In Arabic the localized title is the same word as the calligraphic one; show it once.
+  const duplicate = !!titleArabic && title === titleArabic;
   const { font, isRTL, reduceMotion } = useTheme();
   const insets = useSafeAreaInsets();
   const sky = SKY[phase];
@@ -61,9 +63,11 @@ export function SkyHeader({ phase, greeting, title, titleArabic, dateLine, nextP
         >
           {titleArabic}
         </AppText>
-        <AppText variant="heading" weight="medium" color={sky.text} accessibilityRole="header">
-          {title}
-        </AppText>
+        {duplicate ? null : (
+          <AppText variant="heading" weight="medium" color={sky.text} accessibilityRole="header">
+            {title}
+          </AppText>
+        )}
         <AppText variant="caption" color={sky.textMuted} style={styles.date}>
           {dateLine}
         </AppText>

@@ -8,7 +8,7 @@ import { AdhkarList } from '@/components/worship/AdhkarList';
 import { PrayerTimesList, type PrayerTimeRow } from '@/components/worship/PrayerTimesList';
 import { TasbihCounter } from '@/components/worship/TasbihCounter';
 import { DAYS } from '@/content/days';
-import { localizeDay, localizeLearn, showMeaning } from '@/content/i18n';
+import { localizeDay, localizeLearn, showMeaning, showTransliteration } from '@/content/i18n';
 import type { Dhikr } from '@/content/types';
 import { formatTime } from '@/lib/dates';
 import { getPlanPosition } from '@/lib/day';
@@ -36,7 +36,12 @@ export default function WorshipScreen() {
   const learn = useMemo(() => localizeLearn(lang), [lang]);
   // Arabic UI readers get the Arabic source only: drop the meaning line before it reaches ArabicBlock.
   const adhkar = useCallback(
-    (list: Dhikr[]) => (showMeaning(lang) ? list : list.map((d) => ({ ...d, meaning: '', transliteration: d.arabic }))),
+    (list: Dhikr[]) =>
+      list.map((d) => ({
+        ...d,
+        ...(showMeaning(lang) ? {} : { meaning: '' }),
+        ...(showTransliteration(lang) ? {} : { transliteration: d.arabic }),
+      })),
     [lang],
   );
   const morningItems = useMemo(() => adhkar(learn.MORNING_ADHKAR), [adhkar, learn]);
@@ -55,7 +60,7 @@ export default function WorshipScreen() {
   const options = useMemo(() => {
     const list = buildDhikrOptions(DAYS.map((d) => localizeDay(d, lang)), todayContent);
     // Arabic readers see the Arabic itself, not a Latin transliteration, on the chips.
-    return showMeaning(lang) ? list : list.map((o) => ({ ...o, transliteration: o.arabic }));
+    return showTransliteration(lang) ? list : list.map((o) => ({ ...o, transliteration: o.arabic }));
   }, [todayContent, lang]);
 
   const [selectedId, setSelectedId] = useState('subhanallah');

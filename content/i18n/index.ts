@@ -68,6 +68,11 @@ export function showMeaning(lang: Lang): boolean {
   return lang !== 'ar';
 }
 
+/** Arabic-script readers (ar, ur) see the Arabic itself rather than a Latin transliteration. */
+export function showTransliteration(lang: Lang): boolean {
+  return lang !== 'ar' && lang !== 'ur';
+}
+
 function dhikrs(list: Dhikr[], prefix: string, lang: Lang): Dhikr[] {
   return list.map((z) => ({ ...z, meaning: pick(lang, `${prefix}.${z.id}.meaning`, z.meaning) }));
 }
