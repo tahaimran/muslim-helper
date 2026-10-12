@@ -36,7 +36,7 @@ export default function WorshipScreen() {
   const learn = useMemo(() => localizeLearn(lang), [lang]);
   // Arabic UI readers get the Arabic source only: drop the meaning line before it reaches ArabicBlock.
   const adhkar = useCallback(
-    (list: Dhikr[]) => (showMeaning(lang) ? list : list.map((d) => ({ ...d, meaning: '' }))),
+    (list: Dhikr[]) => (showMeaning(lang) ? list : list.map((d) => ({ ...d, meaning: '', transliteration: d.arabic }))),
     [lang],
   );
   const morningItems = useMemo(() => adhkar(learn.MORNING_ADHKAR), [adhkar, learn]);
@@ -52,7 +52,11 @@ export default function WorshipScreen() {
     return src ? localizeDay(src, lang) : null;
   }, [planStartDate, today, lang]);
 
-  const options = useMemo(() => buildDhikrOptions(DAYS.map((d) => localizeDay(d, lang)), todayContent), [todayContent, lang]);
+  const options = useMemo(() => {
+    const list = buildDhikrOptions(DAYS.map((d) => localizeDay(d, lang)), todayContent);
+    // Arabic readers see the Arabic itself, not a Latin transliteration, on the chips.
+    return showMeaning(lang) ? list : list.map((o) => ({ ...o, transliteration: o.arabic }));
+  }, [todayContent, lang]);
 
   const [selectedId, setSelectedId] = useState('subhanallah');
   const [target, setTarget] = useState<number>(ROUND_TARGETS[0]);

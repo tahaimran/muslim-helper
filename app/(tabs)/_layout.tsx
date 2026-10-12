@@ -26,7 +26,7 @@ const JourneyIcon = icon(Route);
 const MeIcon = icon(CircleUser);
 
 export default function TabLayout() {
-  const { colors, scheme, font } = useTheme();
+  const { colors, scheme, font, lineHeight } = useTheme();
   const { t } = useTranslation();
   const insets = useSafeAreaInsets();
 
@@ -39,7 +39,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: colors.accent,
         tabBarInactiveTintColor: colors.textMuted,
         tabBarHideOnKeyboard: true,
-        tabBarLabelStyle: { fontFamily: font('uiMedium'), fontSize: 11, lineHeight: 16 },
+        tabBarLabelStyle: { fontFamily: font('uiMedium'), fontSize: 11, lineHeight: lineHeight(11) },
         tabBarItemStyle: { paddingVertical: 4 },
         tabBarBackground: () => (
           <View style={styles.clip}>

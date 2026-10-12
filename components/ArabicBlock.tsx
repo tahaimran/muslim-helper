@@ -1,5 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { localizeSourceRef } from '../lib/sourceRef';
+import type { Lang } from '../lib/model';
 import { AppText } from './AppText';
 
 export type ArabicBlockProps = {
@@ -11,12 +14,14 @@ export type ArabicBlockProps = {
 };
 
 export function ArabicBlock({ arabic, transliteration, meaning, sourceRef, size = 'normal' }: ArabicBlockProps) {
+  const { i18n } = useTranslation();
+  const lang = (i18n.language ?? 'en').split('-')[0] as Lang;
   return (
     <View style={styles.block}>
       <AppText variant={size === 'large' ? 'arabicLarge' : 'arabic'}>{arabic}</AppText>
-      {transliteration ? <AppText variant="small" muted center>{transliteration}</AppText> : null}
+      {transliteration && lang !== 'ar' ? <AppText variant="small" muted center>{transliteration}</AppText> : null}
       {meaning ? <AppText variant="body" center>{meaning}</AppText> : null}
-      {sourceRef ? <AppText variant="caption" muted center>{sourceRef}</AppText> : null}
+      {sourceRef ? <AppText variant="caption" muted center>{localizeSourceRef(sourceRef, lang)}</AppText> : null}
     </View>
   );
 }
