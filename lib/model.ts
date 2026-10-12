@@ -10,6 +10,7 @@ export const MOODS: readonly MoodType[] = ['grateful', 'peaceful', 'struggling',
 export const PRAYER_NAMES: readonly PrayerName[] = ['fajr', 'dhuhr', 'asr', 'maghrib', 'isha'];
 
 export type Lang = 'en' | 'ar' | 'ur' | 'id' | 'tr';
+export const SUPPORTED_LANGS: readonly Lang[] = ['en', 'ar', 'ur', 'id', 'tr'];
 
 export type CalcMethodId =
   | 'MuslimWorldLeague' | 'Egyptian' | 'Karachi' | 'UmmAlQura' | 'Dubai'
@@ -85,6 +86,11 @@ export function initialState(): PersistedState {
     dates: {},
     milestones: {},
   };
+}
+
+/** A full persisted-state object from the slices a caller has; the rest are initial values. */
+export function persistedFrom(slices: Partial<PersistedState>): PersistedState {
+  return { ...initialState(), ...slices, schema: 1 };
 }
 
 export function emptyDateLog(): DateLog {

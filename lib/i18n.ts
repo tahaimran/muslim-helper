@@ -5,9 +5,9 @@ import en from '../locales/en.json';
 import id from '../locales/id.json';
 import tr from '../locales/tr.json';
 import ur from '../locales/ur.json';
-import type { Lang } from './model';
+import { SUPPORTED_LANGS, type Lang } from './model';
 
-export const SUPPORTED_LANGS: readonly Lang[] = ['en', 'ar', 'ur', 'id', 'tr'];
+export { SUPPORTED_LANGS };
 const RTL_LANGS: readonly Lang[] = ['ar', 'ur'];
 
 export const resources = {

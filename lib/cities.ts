@@ -5,6 +5,8 @@ export interface City {
   country: string; // ISO 3166-1 alpha-2
   lat: number;
   lng: number;
+  /** Other common names, e.g. "Mecca" for Makkah; used by search only. */
+  aliases?: string[];
 }
 
 export const CITIES: City[] = citiesData as City[];
@@ -36,17 +38,20 @@ export function nearestCity(lat: number, lng: number): City {
 const fold = (s: string) =>
   s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 
-const FOLDED = CITIES.map((c) => ({ city: c, key: fold(c.name) }));
+const FOLDED = CITIES.map((c) => ({ city: c, keys: [c.name, ...(c.aliases ?? [])].map(fold) }));
 
-/** Case- and diacritic-insensitive search: prefix matches first, then substring matches. */
+/**
+ * Case- and diacritic-insensitive search over names and aliases: prefix matches first,
+ * then substring matches. Each city appears at most once.
+ */
 export function searchCities(query: string, limit = 30): City[] {
   const q = fold(query);
   if (!q) return [];
   const prefix: City[] = [];
   const inner: City[] = [];
-  for (const { city, key } of FOLDED) {
-    if (key.startsWith(q)) prefix.push(city);
-    else if (key.includes(q)) inner.push(city);
+  for (const { city, keys } of FOLDED) {
+    if (keys.some((k) => k.startsWith(q))) prefix.push(city);
+    else if (keys.some((k) => k.includes(q))) inner.push(city);
   }
   return [...prefix, ...inner].slice(0, limit);
 }

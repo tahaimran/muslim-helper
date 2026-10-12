@@ -42,3 +42,28 @@ describe('searchCities', () => {
     expect(searchCities('  ')).toEqual([]);
   });
 });
+
+describe('searchCities aliases', () => {
+  it('finds cities by their common alternative names', () => {
+    expect(searchCities('Mecca')[0].name).toBe('Makkah');
+    expect(searchCities('makka')[0].name).toBe('Makkah');
+    expect(searchCities('Medina')[0].name).toBe('Madinah');
+    expect(searchCities('Al-Quds')[0].name).toBe('Jerusalem');
+    expect(searchCities('Calcutta')[0].name).toBe('Kolkata');
+    expect(searchCities('bombay')[0].name).toBe('Mumbai');
+    expect(searchCities('Madras')[0].name).toBe('Chennai');
+    expect(searchCities('Bangalore')[0].name).toBe('Bengaluru');
+    expect(searchCities('Rangoon')[0].name).toBe('Yangon');
+  });
+  it('lists a city once even when its name and alias both match', () => {
+    const hits = searchCities('mad').filter((c) => c.name === 'Madinah');
+    expect(hits).toHaveLength(1);
+  });
+  it('keeps aliases well-formed', () => {
+    for (const c of CITIES) {
+      if (c.aliases === undefined) continue;
+      expect(Array.isArray(c.aliases)).toBe(true);
+      for (const a of c.aliases) expect(a.trim().length).toBeGreaterThan(0);
+    }
+  });
+});

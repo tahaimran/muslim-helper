@@ -100,6 +100,44 @@ describe('app store', () => {
     expect(getPersisted(b.getState())).not.toHaveProperty('toggleTask');
   });
 
+  it('resetAll also removes leftover legacy data so it is not imported again', async () => {
+    await AsyncStorage.setItem(LEGACY_NAFS_KEY, JSON.stringify({ isOnboarded: true, userProfile: { name: 'Old' } }));
+    const store = createAppStore();
+    store.getState().completeOnboarding(profile, '2026-10-09');
+    store.getState().resetAll();
+    await flush();
+    expect(await AsyncStorage.getItem(LEGACY_NAFS_KEY)).toBeNull();
+  });
+
+  it('writes the imported state to storage before removing the legacy key', async () => {
+    await AsyncStorage.setItem(LEGACY_NAFS_KEY, JSON.stringify({ isOnboarded: true, userProfile: { name: 'Old' } }));
+    const store = createAppStore();
+    await store.persist.rehydrate();
+    const order: string[] = [];
+    const setMock = AsyncStorage.setItem as jest.Mock;
+    const rmMock = AsyncStorage.removeItem as jest.Mock;
+    const realSet = setMock.getMockImplementation();
+    const realRemove = rmMock.getMockImplementation();
+    setMock.mockImplementation(async (k: string, v: string) => {
+      await new Promise((r) => setTimeout(r, 5));
+      order.push(`set:${k}`); // recorded when the write completes
+      return realSet?.(k, v);
+    });
+    rmMock.mockImplementation(async (k: string) => {
+      order.push(`remove:${k}`);
+      return realRemove?.(k);
+    });
+    try {
+      expect(await importLegacyIfNeeded(store, '2026-10-09')).toBe(true);
+    } finally {
+      setMock.mockImplementation(realSet);
+      rmMock.mockImplementation(realRemove);
+    }
+    const removeAt = order.indexOf(`remove:${LEGACY_NAFS_KEY}`);
+    expect(removeAt).toBeGreaterThan(-1);
+    expect(order.slice(0, removeAt)).toContain(`set:${STORE_KEY}`);
+  });
+
   it('imports legacy Nafs data once when no profile exists', async () => {
     await AsyncStorage.setItem(LEGACY_NAFS_KEY, JSON.stringify({
       isOnboarded: true,

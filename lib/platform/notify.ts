@@ -83,15 +83,18 @@ export async function applyNotifications(planned: PlannedNotification[]): Promis
  */
 export async function pauseIfPermissionRevoked(): Promise<boolean> {
   if (!notificationsSupported()) return false;
-  const { settings, updateSettings } = appStore.getState();
-  const r = settings.reminders;
-  if (!r.daily && !r.prayers) return false;
+  const before = appStore.getState().settings.reminders;
+  if (!before.daily && !before.prayers) return false;
   try {
     const perm = await Notifications.getPermissionsAsync();
     if (perm.granted) return false;
   } catch {
     return false;
   }
+  // Re-read after the await: settings may have changed meanwhile (e.g. a new reminder time).
+  const { settings, updateSettings } = appStore.getState();
+  const r = settings.reminders;
+  if (!r.daily && !r.prayers) return false;
   updateSettings({ reminders: { ...r, daily: false, prayers: false } });
   showToast(i18n.t('reminders.revoked'), 'info');
   return true;

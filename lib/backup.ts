@@ -1,6 +1,7 @@
 import type { DateKey } from './day';
 import { convertLegacyNafs } from './legacy';
 import {
+  CALC_METHODS,
   DEFAULT_SETTINGS,
   initialState,
   IMPROVEMENT_AREAS,
@@ -8,10 +9,9 @@ import {
   MOODS,
   PRACTICE_LEVELS,
   PRAYER_NAMES,
-  type CalcMethodId,
+  SUPPORTED_LANGS,
   type DateLog,
   type MadhabId,
-  type Lang,
   type PersistedState,
   type PlanDayLog,
   type Profile,
@@ -23,13 +23,7 @@ import type { ImprovementArea, KnowledgeLevel, MoodType, PracticeLevel, PrayerNa
 export type BackupError = 'invalid_json' | 'not_awdah' | 'unsupported_version' | 'invalid_shape';
 export type BackupResult = { ok: true; data: PersistedState } | { ok: false; error: BackupError };
 
-const LANGS: Lang[] = ['en', 'ar', 'ur', 'id', 'tr'];
 const THEMES: Settings['theme'][] = ['system', 'light', 'dark'];
-const CALC_METHODS: CalcMethodId[] = [
-  'MuslimWorldLeague', 'Egyptian', 'Karachi', 'UmmAlQura', 'Dubai',
-  'MoonsightingCommittee', 'NorthAmerica', 'Kuwait', 'Qatar',
-  'Singapore', 'Tehran', 'Turkey',
-];
 const MADHABS: MadhabId[] = ['shafi', 'hanafi'];
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const PLAN_RE = /^\d+:\d+$/;
@@ -77,7 +71,7 @@ function normalizeSettings(v: unknown): Settings {
   const r = isObj(s.reminders) ? s.reminders : {};
   const d = DEFAULT_SETTINGS;
   return {
-    language: oneOf(s.language, LANGS) ?? null,
+    language: oneOf(s.language, SUPPORTED_LANGS) ?? null,
     theme: oneOf(s.theme, THEMES) ?? d.theme,
     location: normalizeLocation(s.location),
     calcMethod: oneOf(s.calcMethod, CALC_METHODS) ?? null,
@@ -132,14 +126,18 @@ function normalizeMilestones(v: unknown): Record<string, DateKey> {
   return out;
 }
 
-export function normalizeState(d: Record<string, unknown>): PersistedState {
+/** `today` stands in for a missing plan start date when a profile exists (the plan must have a start). */
+export function normalizeState(d: Record<string, unknown>, today: DateKey): PersistedState {
   const base = initialState();
+  const profile = normalizeProfile(d.profile);
+  const planStartDate =
+    typeof d.planStartDate === 'string' && DATE_RE.test(d.planStartDate) ? d.planStartDate : base.planStartDate;
   return {
-    schema: 1,
-    profile: normalizeProfile(d.profile),
+    ...base,
+    profile,
     settings: normalizeSettings(d.settings),
     cycle: typeof d.cycle === 'number' && Number.isInteger(d.cycle) && d.cycle >= 1 ? d.cycle : base.cycle,
-    planStartDate: typeof d.planStartDate === 'string' && DATE_RE.test(d.planStartDate) ? d.planStartDate : base.planStartDate,
+    planStartDate: planStartDate ?? (profile ? today : null),
     planDays: normalizePlanDays(d.planDays),
     dates: normalizeDates(d.dates),
     milestones: normalizeMilestones(d.milestones),
@@ -177,5 +175,5 @@ export function parseBackup(json: string, today: DateKey): BackupResult {
   if (parsed.schema !== 1) return { ok: false, error: 'unsupported_version' };
   const data = parsed.data;
   if (!isObj(data) || !isValidState(data)) return { ok: false, error: 'invalid_shape' };
-  return { ok: true, data: normalizeState(data) };
+  return { ok: true, data: normalizeState(data, today) };
 }

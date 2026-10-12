@@ -136,13 +136,16 @@ export function createAppStore(storage: AppStorage = AsyncStorage) {
 
           replaceAll: (data) => set({ ...data }),
 
-          resetAll: () =>
+          resetAll: () => {
+            // Leftover legacy data would otherwise be imported again on the next launch.
+            void Promise.resolve().then(() => storage.removeItem(LEGACY_NAFS_KEY)).catch(() => {});
             set((s) => {
               const fresh = initialState();
               fresh.settings.language = s.settings.language;
               fresh.settings.theme = s.settings.theme;
               return fresh;
-            }),
+            });
+          },
         };
       },
       {
@@ -218,6 +221,8 @@ export async function importLegacyIfNeeded(
   if (!converted) return false;
   store.getState().replaceAll(converted);
   try {
+    // Only drop the legacy copy once the converted state is safely on disk.
+    await flushPersist(store);
     await AsyncStorage.removeItem(LEGACY_NAFS_KEY);
   } catch {
     // best-effort cleanup; import already applied
@@ -233,4 +238,9 @@ export async function importLegacyIfNeeded(
 export async function flushPersist(store: typeof appStore = appStore): Promise<void> {
   const opts = store.persist.getOptions();
   await opts.storage?.setItem(STORE_KEY, { state: getPersisted(store.getState()), version: opts.version });
+}
+
+/** Deletes the saved state from storage (used to start fresh when it cannot be read). */
+export async function clearPersistedState(store: typeof appStore = appStore): Promise<void> {
+  await store.persist.getOptions().storage?.removeItem(STORE_KEY);
 }

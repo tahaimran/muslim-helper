@@ -25,9 +25,10 @@ export async function exportBackup(): Promise<{ ok: true } | { ok: false; reason
     if (Platform.OS === 'web' || !(await Sharing.isAvailableAsync())) return { ok: false, reason: 'unavailable' };
     const now = new Date();
     const file = new File(Paths.cache, backupFileName(toDateKey(now)));
-    file.create({ overwrite: true });
-    file.write(serializeBackup(getPersisted(appStore.getState()), now));
+    // The temp file is removed even when creating or writing it fails part-way.
     try {
+      file.create({ overwrite: true });
+      file.write(serializeBackup(getPersisted(appStore.getState()), now));
       await Sharing.shareAsync(file.uri, { mimeType: 'application/json', dialogTitle: i18n.t('backup.shareTitle') });
     } finally {
       removeQuietly(file);

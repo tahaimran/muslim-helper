@@ -62,3 +62,18 @@ describe('backup normalization', () => {
     if (res.ok) expect(res.data.dates['2026-10-01']).toEqual({ active: true, prayers: ['fajr'], tasbih: { b: 5 } });
   });
 });
+
+describe('backup plan start date', () => {
+  it('uses today when a profile exists but the plan start date is missing', () => {
+    const json = JSON.stringify({ app: 'awdah', schema: 1, data: { ...sample(), planStartDate: null } });
+    const res = parseBackup(json, '2026-10-09');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.planStartDate).toBe('2026-10-09');
+  });
+  it('keeps a null plan start date when there is no profile', () => {
+    const json = JSON.stringify({ app: 'awdah', schema: 1, data: { ...sample(), profile: null, planStartDate: null } });
+    const res = parseBackup(json, '2026-10-09');
+    expect(res.ok).toBe(true);
+    if (res.ok) expect(res.data.planStartDate).toBeNull();
+  });
+});

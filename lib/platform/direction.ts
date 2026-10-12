@@ -1,6 +1,5 @@
 import { DevSettings, I18nManager, Platform } from 'react-native';
 import { directionPlan } from '../direction';
-import { isRTL } from '../i18n';
 import type { Lang } from '../model';
 import { flushPersist } from '../store';
 
@@ -26,10 +25,6 @@ function setPending(v: boolean) {
   if (restartPending === v) return;
   restartPending = v;
   listeners.forEach((l) => l());
-}
-
-export function needsDirectionChange(lang: Lang): boolean {
-  return isRTL(lang) !== I18nManager.isRTL;
 }
 
 export async function applyDirection(lang: Lang): Promise<DirectionResult> {
