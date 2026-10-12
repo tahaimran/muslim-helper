@@ -224,3 +224,13 @@ export async function importLegacyIfNeeded(
   }
   return true;
 }
+
+/**
+ * Resolve once the current state has been written to storage. Zustand persists
+ * asynchronously after setState, so callers about to reload the JS bundle write the
+ * snapshot explicitly through the store's own storage (same key, version and shape).
+ */
+export async function flushPersist(store: typeof appStore = appStore): Promise<void> {
+  const opts = store.persist.getOptions();
+  await opts.storage?.setItem(STORE_KEY, { state: getPersisted(store.getState()), version: opts.version });
+}

@@ -8,7 +8,7 @@ import {
 } from '@/components';
 import { CityPicker } from '@/components/settings/CityPicker';
 import { useLocationSetup } from '@/lib/useLocationSetup';
-import { applyDirection } from '@/lib/platform/direction';
+import { useLanguageChange } from '@/lib/useLanguageChange';
 import { useAppStore } from '@/lib/store';
 import { useToday } from '@/lib/useToday';
 import { useTheme } from '@/theme/ThemeProvider';
@@ -23,7 +23,7 @@ export default function OnboardingScreen() {
   const { colors } = useTheme();
   const today = useToday();
   const lang = useLang();
-  const updateSettings = useAppStore((s) => s.updateSettings);
+  const changeLanguage = useLanguageChange();
   const completeOnboarding = useAppStore((s) => s.completeOnboarding);
 
   const [stepIndex, setStepIndex] = useState(0);
@@ -101,10 +101,7 @@ export default function OnboardingScreen() {
           )}
 
           {step === 'language' ? (
-            <LanguageOptions value={lang} onChange={(l) => {
-          updateSettings({ language: l });
-          void applyDirection(l);
-        }} />
+            <LanguageOptions value={lang} onChange={changeLanguage} />
           ) : null}
           {step === 'name' ? <NameInput value={name} onChange={setName} autoFocus /> : null}
           {step === 'habit' ? <HabitOptions value={prayerHabit} onChange={setPrayerHabit} /> : null}

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { AppText, Button, Chip, LanguageOptions, ListRow, Screen, Section } from '@/components';
 import { OptionRow } from '@/components/profile/ProfileControls';
 import { CityPicker } from '@/components/settings/CityPicker';
-import { applyDirection } from '@/lib/platform/direction';
+import { useLanguageChange } from '@/lib/useLanguageChange';
 import { useAppStore } from '@/lib/store';
 import { useLang } from '@/theme/useLang';
 import { CALC_METHODS, type CalcMethodId, type MadhabId, type Settings } from '@/lib/model';
@@ -27,6 +27,7 @@ export default function SettingsScreen() {
   const lang = useLang();
   const theme = useAppStore((s) => s.settings.theme);
   const updateSettings = useAppStore((s) => s.updateSettings);
+  const changeLanguage = useLanguageChange();
   const resetAll = useAppStore((s) => s.resetAll);
   const location = useAppStore((s) => s.settings.location);
   const calcMethod = useAppStore((s) => s.settings.calcMethod);
@@ -66,10 +67,7 @@ export default function SettingsScreen() {
   return (
     <Screen edges={['bottom']}>
       <Section title={t('settings.language')} subtitle={t('settings.languageNote')}>
-        <LanguageOptions value={lang} onChange={(l) => {
-          updateSettings({ language: l });
-          void applyDirection(l);
-        }} />
+        <LanguageOptions value={lang} onChange={changeLanguage} />
       </Section>
 
       <Section title={t('settings.theme')}>

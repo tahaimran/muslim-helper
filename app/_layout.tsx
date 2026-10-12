@@ -94,6 +94,7 @@ function Shell() {
 
   return (
     <>
+      <RestartBanner />
       <Stack screenOptions={{ headerShown: false }}>
         <Stack.Screen name="(onboarding)" />
         <Stack.Screen name="(tabs)" />
@@ -101,7 +102,6 @@ function Shell() {
         <Stack.Screen name="+not-found" />
       </Stack>
       <ToastHost />
-      <RestartBanner />
       <StatusBar style={scheme === 'dark' ? 'light' : 'dark'} />
     </>
   );

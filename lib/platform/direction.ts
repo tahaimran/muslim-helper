@@ -1,7 +1,8 @@
-import { DevSettings, I18nManager } from 'react-native';
-import { needsDirectionChange as needsChange } from '../direction';
+import { DevSettings, I18nManager, Platform } from 'react-native';
+import { directionPlan } from '../direction';
 import { isRTL } from '../i18n';
 import type { Lang } from '../model';
+import { flushPersist } from '../store';
 
 export type DirectionResult = 'unchanged' | 'reloading' | 'restart-required';
 
@@ -28,24 +29,28 @@ function setPending(v: boolean) {
 }
 
 export function needsDirectionChange(lang: Lang): boolean {
-  return needsChange(lang, I18nManager.isRTL);
+  return isRTL(lang) !== I18nManager.isRTL;
 }
 
 export async function applyDirection(lang: Lang): Promise<DirectionResult> {
-  if (!needsDirectionChange(lang)) {
-    setPending(false);
-    return 'unchanged';
-  }
+  const canReload = __DEV__ && typeof DevSettings?.reload === 'function';
+  const plan = directionPlan(lang, I18nManager.isRTL, Platform.OS, canReload);
+  // Always written: idempotent, and reverting to the live direction resets a stale native flag.
   I18nManager.allowRTL(true);
-  I18nManager.forceRTL(isRTL(lang));
-  if (__DEV__) {
+  I18nManager.forceRTL(plan.force);
+  if (Platform.OS === 'web' && typeof document !== 'undefined') {
+    document.documentElement.dir = plan.force ? 'rtl' : 'ltr';
+  }
+  setPending(plan.action === 'banner');
+  if (plan.action === 'none') return 'unchanged';
+  if (plan.action === 'reload') {
     try {
+      await flushPersist(); // make sure the language choice is on disk before the bundle reloads
       DevSettings.reload();
       return 'reloading';
     } catch {
-      // fall through to the banner
+      setPending(true);
     }
   }
-  setPending(true);
   return 'restart-required';
 }
