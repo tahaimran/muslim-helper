@@ -55,6 +55,6 @@ export function ToastHost() {
 }
 
 const styles = StyleSheet.create({
-  host: { position: 'absolute', start: 20, end: 20, alignItems: 'center', pointerEvents: 'none' },
+  host: { position: 'absolute', start: 20, end: 20, alignItems: 'center', pointerEvents: 'none', zIndex: 1000, elevation: 1000 },
   toast: { borderRadius: 14, borderWidth: 1, paddingHorizontal: 18, paddingVertical: 12, maxWidth: '100%' },
 });
