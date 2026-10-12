@@ -10,6 +10,7 @@ import { MoodPicker } from '@/components/day/MoodPicker';
 import { ReflectionBox } from '@/components/day/ReflectionBox';
 import { TaskThread } from '@/components/day/TaskThread';
 import { localizedWelcomeBack, showMeaning } from '@/content/i18n';
+import { buildShareMessage } from '@/lib/view/share';
 import type { SourcedText } from '@/content/types';
 import { dateFromKey, formatTime, formatWeekdayDate } from '@/lib/dates';
 import type { DateKey } from '@/lib/day';
@@ -148,7 +149,7 @@ export default function TodayScreen() {
   };
 
   const share = (text: SourcedText) => {
-    const message = `${meaningShown ? text.meaning : text.arabic}\n— ${text.source.ref}\n\n${t('share.footer')}`;
+    const message = buildShareMessage(text, lang, t('share.footer'));
     Share.share({ message }).catch(() => showToast(t('errors.generic'), 'error'));
   };
 
@@ -209,7 +210,7 @@ export default function TodayScreen() {
               />
             </Section>
 
-            <HadithBlock text={content.hadith} showMeaningLine={meaningShown} onShare={share} shareLabel={t('today.share')} />
+            <HadithBlock text={content.hadith} meaningShown={meaningShown} onShare={share} shareLabel={t('today.share')} />
 
             <Section title={t('today.reflect')}>
               <ReflectionBox
@@ -247,7 +248,7 @@ export default function TodayScreen() {
               />
             </Section>
 
-            <HadithBlock text={vm.istiqamah.hadith} showMeaningLine={meaningShown} onShare={share} shareLabel={t('today.share')} />
+            <HadithBlock text={vm.istiqamah.hadith} meaningShown={meaningShown} onShare={share} shareLabel={t('today.share')} />
 
             <Section title={t('today.reflect')}>
               <ReflectionBox
@@ -274,11 +275,11 @@ export default function TodayScreen() {
   );
 }
 
-function HadithBlock({ text, showMeaningLine, onShare, shareLabel }: { text: SourcedText; showMeaningLine: boolean; onShare: (t: SourcedText) => void; shareLabel: string }) {
+function HadithBlock({ text, meaningShown, onShare, shareLabel }: { text: SourcedText; meaningShown: boolean; onShare: (t: SourcedText) => void; shareLabel: string }) {
   const { colors } = useTheme();
   return (
     <Section>
-      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={showMeaningLine ? text.meaning : undefined} sourceRef={text.source.ref} size="large" />
+      <ArabicBlock arabic={text.arabic} transliteration={text.transliteration} meaning={meaningShown ? text.meaning : undefined} sourceRef={text.source.ref} size="large" />
       <View style={styles.shareRow}>
         <PressableScale onPress={() => onShare(text)} accessibilityRole="button" accessibilityLabel={shareLabel} style={styles.shareBtn}>
           <Share2 size={20} color={colors.textMuted} />

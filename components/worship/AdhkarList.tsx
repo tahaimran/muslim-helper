@@ -21,8 +21,6 @@ export type AdhkarListProps = {
   onComplete: () => void;
   /** Formats a source for display, e.g. "Muslim 2692, sahih". */
   sourceLabel: (d: Dhikr) => string | undefined;
-  /** Show the translated meaning line (false for the Arabic UI). Defaults to true. */
-  showMeaning?: boolean;
 };
 
 /**
@@ -30,7 +28,7 @@ export type AdhkarListProps = {
  * the tasbih counter and should not re-render on every tap (callers pass stable handlers).
  */
 export const AdhkarList = memo(function AdhkarList({
-  title, items, defaultExpanded, completed, completeLabel, completedLabel, onComplete, sourceLabel, showMeaning = true,
+  title, items, defaultExpanded, completed, completeLabel, completedLabel, onComplete, sourceLabel,
 }: AdhkarListProps) {
   const { t } = useTranslation();
   const { colors } = useTheme();
@@ -60,7 +58,7 @@ export const AdhkarList = memo(function AdhkarList({
             </PressableScale>
             {expanded ? (
               <View style={styles.body}>
-                <ArabicBlock arabic={d.arabic} meaning={showMeaning ? d.meaning : undefined} sourceRef={sourceLabel(d)} />
+                <ArabicBlock arabic={d.arabic} meaning={d.meaning} sourceRef={sourceLabel(d)} />
                 <Button
                   variant="secondary"
                   label={done ? t('worship.itemDone', { count: d.count }) : t('worship.itemCount', { n, count: d.count })}

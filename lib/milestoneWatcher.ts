@@ -1,15 +1,15 @@
 import { showToast } from '../components/Toast';
 import { localizeMilestone } from '../content/i18n';
 import { toDateKey } from './day';
-import i18n from './i18n';
+import { getLocales } from 'expo-localization';
+import i18n, { resolveLanguage } from './i18n';
 import * as milestones from './milestones';
-import { SUPPORTED_LANGS, type Lang } from './model';
+import type { Lang } from './model';
 import { isTasbihOnlyChange } from './selectors';
 import { appStore, getPersisted, type AppStore } from './store';
 
-function currentLang(): Lang {
-  const l = (i18n.language ?? 'en').split('-')[0] as Lang;
-  return SUPPORTED_LANGS.includes(l) ? l : 'en';
+function currentLang(state: AppStore): Lang {
+  return resolveLanguage(state.settings.language, getLocales().map((l) => l.languageCode));
 }
 
 /** Unlocks newly earned milestones now and whenever the store changes. Call after hydration. Returns unsubscribe. */
@@ -24,7 +24,7 @@ export function startMilestoneWatcher(): () => void {
     state.unlockMilestones(ids, today);
     showToast(
       ids.length === 1
-        ? i18n.t('milestones.unlocked', { title: localizeMilestone(ids[0], currentLang()).title })
+        ? i18n.t('milestones.unlocked', { title: localizeMilestone(ids[0], currentLang(state)).title })
         : i18n.t('milestones.unlockedMany', { n: ids.length }),
     );
   };

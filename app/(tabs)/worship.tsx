@@ -34,6 +34,13 @@ export default function WorshipScreen() {
   const today = useToday();
   const lang = useLang();
   const learn = useMemo(() => localizeLearn(lang), [lang]);
+  // Arabic UI readers get the Arabic source only: drop the meaning line before it reaches ArabicBlock.
+  const adhkar = useCallback(
+    (list: Dhikr[]) => (showMeaning(lang) ? list : list.map((d) => ({ ...d, meaning: '' }))),
+    [lang],
+  );
+  const morningItems = useMemo(() => adhkar(learn.MORNING_ADHKAR), [adhkar, learn]);
+  const eveningItems = useMemo(() => adhkar(learn.EVENING_ADHKAR), [adhkar, learn]);
 
   const planStartDate = useAppStore((s) => s.planStartDate);
   const tasbih = useAppStore((s) => s.dates[today]?.tasbih) ?? NO_TASBIH;
@@ -152,8 +159,7 @@ export default function WorshipScreen() {
       <AdhkarList
         key={`m-${today}`}
         title={t('worship.morning')}
-        items={learn.MORNING_ADHKAR}
-        showMeaning={showMeaning(lang)}
+        items={morningItems}
         defaultExpanded={expansion === 'morning'}
         completed={(tasbih.morning_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeMorning')}
@@ -164,8 +170,7 @@ export default function WorshipScreen() {
       <AdhkarList
         key={`e-${today}`}
         title={t('worship.evening')}
-        items={learn.EVENING_ADHKAR}
-        showMeaning={showMeaning(lang)}
+        items={eveningItems}
         defaultExpanded={expansion === 'evening'}
         completed={(tasbih.evening_adhkar ?? 0) >= 1}
         completeLabel={t('worship.completeEvening')}

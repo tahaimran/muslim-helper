@@ -6,8 +6,10 @@ import { appStore } from '../store';
 import { initialState } from '../model';
 
 jest.mock('../../components/Toast', () => ({ showToast: jest.fn() }));
+jest.mock('expo-localization', () => ({ getLocales: () => [{ languageCode: 'en' }] }));
 jest.mock('../i18n', () => ({
   __esModule: true,
+  resolveLanguage: jest.requireActual('../i18n').resolveLanguage,
   default: { t: (key: string, opts?: Record<string, unknown>) => `${key}${opts ? JSON.stringify(opts) : ''}` },
 }));
 
