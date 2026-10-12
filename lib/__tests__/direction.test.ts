@@ -30,3 +30,11 @@ describe('directionPlan', () => {
     expect(directionPlan('ar', false, 'web', true)).toEqual({ force: true, action: 'none' });
   });
 });
+
+describe('directionPlan on an RTL phone', () => {
+  it('choosing an LTR language plans force=false so RTL is also disallowed natively', () => {
+    // Arabic phone (live RTL) -> English: force false; applyDirection writes allowRTL(false) too.
+    expect(directionPlan('en', true, 'android', false)).toEqual({ force: false, action: 'banner' });
+    expect(directionPlan('tr', true, 'ios', true)).toEqual({ force: false, action: 'reload' });
+  });
+});

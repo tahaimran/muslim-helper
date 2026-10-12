@@ -31,7 +31,8 @@ export async function applyDirection(lang: Lang): Promise<DirectionResult> {
   const canReload = __DEV__ && typeof DevSettings?.reload === 'function';
   const plan = directionPlan(lang, I18nManager.isRTL, Platform.OS, canReload);
   // Always written: idempotent, and reverting to the live direction resets a stale native flag.
-  I18nManager.allowRTL(true);
+  // allowRTL follows the in-app language too, so an RTL phone running an LTR language renders LTR.
+  I18nManager.allowRTL(plan.force);
   I18nManager.forceRTL(plan.force);
   if (Platform.OS === 'web' && typeof document !== 'undefined') {
     document.documentElement.dir = plan.force ? 'rtl' : 'ltr';

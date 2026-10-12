@@ -39,6 +39,15 @@ npm run lint       # expo lint
 
 Religious content is sourced and checked as recorded in `docs/content-sources/`. Every content change should be reviewed against `docs/content-review-checklist.md`. A translation review checklist will be added later.
 
+## Testing RTL on device
+
+The layout direction follows the language chosen inside Awdah, not the phone's language. The native RTL flags are written by `lib/platform/direction.ts` (`allowRTL` and `forceRTL` both follow the in-app language); `expo-localization` is configured without `supportsRTL`, so it never overrides them. A direction change applies after a restart in release builds. On a real device (release or preview build), check these four combinations:
+
+1. English phone, switch Awdah to Arabic: after the restart, the layout is right-to-left.
+2. Arabic phone, switch Awdah to English: after the restart, the layout is left-to-right.
+3. Switch Awdah to Urdu: after the restart, the layout is right-to-left with Urdu text.
+4. Switch back to the phone's own language: after the restart, the layout matches it again.
+
 ## Building with EAS
 
 You need a free Expo account (the owner must create one). No backend is required.

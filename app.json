@@ -43,12 +43,7 @@
     "plugins": [
       "expo-router",
       "expo-font",
-      [
-        "expo-localization",
-        {
-          "supportsRTL": true
-        }
-      ],
+      "expo-localization",
       [
         "expo-splash-screen",
         {
@@ -80,8 +75,7 @@
       "typedRoutes": true
     },
     "extra": {
-      "supportEmail": "nafs.app.support@gmail.com",
-      "supportsRTL": true
+      "supportEmail": "nafs.app.support@gmail.com"
     }
   }
 }
