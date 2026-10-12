@@ -55,7 +55,7 @@ export default function TabLayout() {
           borderRadius: 22,
           borderWidth: StyleSheet.hairlineWidth,
           borderColor: colors.line,
-          backgroundColor: withAlpha(colors.surface, 0.92),
+          backgroundColor: withAlpha(colors.surface, Platform.OS === 'ios' ? 0.92 : 0.98),
           shadowColor: colors.shadow,
           shadowOpacity: 0.1,
           shadowRadius: 16,
