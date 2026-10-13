@@ -1,15 +1,18 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { View, Text, TextInput, ScrollView, StyleSheet, TouchableOpacity, Platform } from 'react-native';
+import { View, Text, TextInput, ScrollView, StyleSheet, TouchableOpacity, Platform, Share } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Haptics from 'expo-haptics';
 import Animated, { FadeIn, FadeInDown, ZoomIn, Layout } from 'react-native-reanimated';
 import { BlurView } from 'expo-blur';
 import { appStorage } from '@/lib/storage';
+import { syncNotifications } from '@/lib/notifications';
 import { getDayPlan, calculateDayPoints } from '@/lib/planGenerator';
 import { AppState, DayPlan, DayProgress, MoodType } from '@/lib/types';
 import { CATEGORY_COLORS, WEEK_TITLES } from '@/constants/islamicContent';
 import { useTheme } from '@/lib/theme';
 import { Check, Share2, BookOpen, Leaf, Sun, Moon, Cloud } from 'lucide-react-native';
+
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.nafs.transformation';
 
 const MOOD_OPTIONS: { value: MoodType; emoji: string; label: string }[] = [
   { value: 'grateful', emoji: '🤲', label: 'Grateful' },
@@ -87,6 +90,7 @@ export default function TodayScreen() {
     setState(newState);
     setDayProgress(updatedProgress);
     await appStorage.setState(newState);
+    syncNotifications();
 
     triggerHaptic();
     if (!isCompleted && newCompletedIds.length === dayPlan.tasks.length && Platform.OS !== 'web') {
@@ -115,8 +119,10 @@ export default function TodayScreen() {
 
   const handleShare = async () => {
     if (!dayPlan) return;
-    const text = `Day ${dayPlan.day} - ${dayPlan.theme} (${dayPlan.themeArabic})\n\n"${dayPlan.hadith.text}"\n- ${dayPlan.hadith.source}\n\nNafs - 30-Day Islamic Transformation`;
-    if (typeof navigator !== 'undefined' && navigator.share) {
+    const text = `Day ${dayPlan.day} - ${dayPlan.theme} (${dayPlan.themeArabic})\n\n"${dayPlan.hadith.text}"\n- ${dayPlan.hadith.source}\n\nNafs - 30-Day Islamic Transformation\n${PLAY_STORE_URL}`;
+    if (Platform.OS !== 'web') {
+      try { await Share.share({ message: text }); } catch { /* cancelled */ }
+    } else if (typeof navigator !== 'undefined' && navigator.share) {
       try { await navigator.share({ title: `Day ${dayPlan.day}`, text }); } catch { /* cancelled */ }
     } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
       await navigator.clipboard.writeText(text);

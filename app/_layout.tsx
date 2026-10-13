@@ -1,11 +1,14 @@
 import { useEffect, useState, Component, useRef } from 'react';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator, AppState } from 'react-native';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { appStorage } from '@/lib/storage';
+import { configureNotifications, syncNotifications } from '@/lib/notifications';
 import { ThemeProvider } from '@/lib/ThemeProvider';
 import { useTheme, lightTheme } from '@/lib/theme';
+
+configureNotifications();
 
 class ErrorBoundary extends Component<{ children: React.ReactNode }, { hasError: boolean; error: Error | null }> {
   state = { hasError: false, error: null as Error | null };
@@ -85,6 +88,15 @@ function RootLayoutInner() {
       initialize();
     }
   }, [isReady, segments, router]);
+
+  useEffect(() => {
+    if (!isReady) return;
+    syncNotifications();
+    const sub = AppState.addEventListener('change', (next) => {
+      if (next === 'active') syncNotifications();
+    });
+    return () => sub.remove();
+  }, [isReady]);
 
   if (!isReady) {
     return (

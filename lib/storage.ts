@@ -170,7 +170,15 @@ export const appStorage = {
 export interface NotificationSettings {
   dailyReminder: boolean;
   reminderTime: string;
+  /** Reserved for real prayer-time alerts; not scheduled until prayer times are supported. */
   prayerReminders: boolean;
   streakReminder: boolean;
 }
+
+export const DEFAULT_NOTIFICATION_SETTINGS: NotificationSettings = {
+  dailyReminder: true,
+  reminderTime: '06:00',
+  prayerReminders: false,
+  streakReminder: true,
+};
 

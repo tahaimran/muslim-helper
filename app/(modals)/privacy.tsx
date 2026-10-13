@@ -32,12 +32,12 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={s.subheading}>3. No Internet Access Required</Text>
           <Text style={s.body}>
-            Nafs functions entirely offline. The app does not require an internet connection to operate, and no data is sent to or received from any remote server during normal use.
+            Nafs functions entirely offline. The app does not require an internet connection to operate, and no data is sent to or received from any remote server during normal use. Reminder notifications are scheduled locally on your device; no push-notification service or server is involved.
           </Text>
 
           <Text style={s.subheading}>4. Local Storage</Text>
           <Text style={s.body}>
-            Your data is stored locally on your device using secure storage mechanisms. This includes:{'\n'}
+            Your data is stored locally on your device. This includes:{'\n'}
             {'\n'}- Your profile information (name, age, preferences){'\n'}
             - Daily progress and task completions{'\n'}
             - Points, streaks, and achievements{'\n'}
@@ -48,7 +48,7 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={s.subheading}>5. Security</Text>
           <Text style={s.body}>
-            {"We use device-level secure storage for sensitive data such as your PIN. However, no method of electronic storage is 100% secure. We recommend using your device's built-in security features (screen lock, biometric authentication) for additional protection."}
+            {"Your data never leaves your device, which keeps it out of reach of third parties. However, no method of electronic storage is 100% secure. We recommend using your device's built-in security features (screen lock, biometric authentication) for additional protection."}
           </Text>
 
           <Text style={s.subheading}>{"6. Children's Privacy"}</Text>

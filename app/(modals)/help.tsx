@@ -33,10 +33,6 @@ const FAQ_ITEMS = [
     a: 'Go to Settings > Data > Export Data to create a backup. You can import this backup on a new device using the Import Data option.',
   },
   {
-    q: 'What if I forget my PIN?',
-    a: 'Currently, there is no PIN recovery option. You would need to reset the app from Settings, which will clear all data. We recommend using a memorable PIN.',
-  },
-  {
     q: 'How is the content personalized?',
     a: 'During onboarding, you select your knowledge level and available daily time. Beginners get simplified task descriptions, and the number of daily tasks adjusts based on your time commitment.',
   },

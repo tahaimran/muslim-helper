@@ -6,6 +6,7 @@ import * as Haptics from 'expo-haptics';
 import Animated, { FadeInDown, FadeOut, Layout } from 'react-native-reanimated';
 import { Leaf, ChevronRight, ChevronLeft, Check } from 'lucide-react-native';
 import { appStorage } from '@/lib/storage';
+import { requestNotificationPermission, syncNotifications } from '@/lib/notifications';
 import { useTheme } from '@/lib/theme';
 import { ImprovementArea, KnowledgeLevel, Gender, PracticeLevel } from '@/lib/types';
 
@@ -96,6 +97,7 @@ export default function OnboardingScreen() {
       };
       await appStorage.saveProfile(profile);
       await appStorage.initState(profile);
+      if (await requestNotificationPermission()) await syncNotifications();
       router.replace('/(tabs)');
     } catch { /* error */ } finally { setIsLoading(false); }
   };

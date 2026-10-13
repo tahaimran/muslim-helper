@@ -13,15 +13,21 @@
       "package": "com.nafs.transformation",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon-foreground.png",
-        "backgroundColor": "#1B4332"
+        "backgroundColor": "#3E5A48"
       },
-      "permissions": ["NOTIFICATIONS"],
-      "versionCode": 1
+      "permissions": [
+        "POST_NOTIFICATIONS",
+        "VIBRATE"
+      ],
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ]
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.nafs.transformation",
-      "buildNumber": "1"
+      "bundleIdentifier": "com.nafs.transformation"
     },
     "web": {
       "bundler": "metro",
@@ -33,16 +39,19 @@
       "expo-font",
       "expo-web-browser",
       [
-        "expo-notifications",
+        "expo-splash-screen",
         {
-          "icon": "./assets/images/notification-icon.png",
-          "color": "#2D6A4F"
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#3E5A48"
         }
       ],
       [
-        "expo-secure-store",
+        "expo-notifications",
         {
-          "configureAndroid": true
+          "icon": "./assets/images/notification-icon.png",
+          "color": "#4A6352"
         }
       ]
     ],

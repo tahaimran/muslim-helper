@@ -1,20 +1,25 @@
 import { useState, useEffect } from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Switch } from 'react-native';
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Switch, Alert, Linking, Platform, Share } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRouter, Stack } from 'expo-router';
-import { appStorage, NotificationSettings } from '@/lib/storage';
+import { appStorage, DEFAULT_NOTIFICATION_SETTINGS, NotificationSettings } from '@/lib/storage';
+import { requestNotificationPermission, syncNotifications } from '@/lib/notifications';
 import { useTheme } from '@/lib/theme';
 import { Moon, Sun, Bell, Download, Upload, Shield, FileText, Circle as HelpCircle, Info, ChevronRight, Trophy, BookOpen } from 'lucide-react-native';
+
+const REMINDER_TIMES: { value: string; label: string }[] = [
+  { value: '05:00', label: '5:00 AM' },
+  { value: '06:00', label: '6:00 AM' },
+  { value: '08:00', label: '8:00 AM' },
+  { value: '12:30', label: '12:30 PM' },
+  { value: '18:00', label: '6:00 PM' },
+  { value: '21:00', label: '9:00 PM' },
+];
 
 export default function SettingsScreen() {
   const router = useRouter();
   const { colors, mode, toggleTheme } = useTheme();
-  const [notifSettings, setNotifSettings] = useState<NotificationSettings>({
-    dailyReminder: true,
-    reminderTime: '06:00',
-    prayerReminders: true,
-    streakReminder: true,
-  });
+  const [notifSettings, setNotifSettings] = useState<NotificationSettings>(DEFAULT_NOTIFICATION_SETTINGS);
 
   useEffect(() => {
     (async () => {
@@ -24,15 +29,29 @@ export default function SettingsScreen() {
   }, []);
 
   const updateNotif = async (key: keyof NotificationSettings, value: boolean | string) => {
+    if (value === true && Platform.OS !== 'web') {
+      const granted = await requestNotificationPermission();
+      if (!granted) {
+        Alert.alert(
+          'Notifications are off',
+          'Allow notifications for Nafs in your device settings to receive reminders.',
+          [{ text: 'Not now', style: 'cancel' }, { text: 'Open settings', onPress: () => Linking.openSettings() }],
+        );
+        return;
+      }
+    }
     const updated = { ...notifSettings, [key]: value };
     setNotifSettings(updated);
     await appStorage.setNotificationSettings(updated);
+    await syncNotifications();
   };
 
   const handleExport = async () => {
     try {
       const data = await appStorage.exportData();
-      if (typeof navigator !== 'undefined' && navigator.share) {
+      if (Platform.OS !== 'web') {
+        await Share.share({ title: 'Nafs Backup', message: data });
+      } else if (typeof navigator !== 'undefined' && navigator.share) {
         await navigator.share({ title: 'Nafs Backup', text: data });
       } else if (typeof navigator !== 'undefined' && navigator.clipboard) {
         await navigator.clipboard.writeText(data);
@@ -95,17 +114,25 @@ export default function SettingsScreen() {
                   accessibilityLabel="Toggle daily reminder"
                 />
               </View>
-              <View style={s.row}>
-                <Bell size={20} color={colors.freshGreen} />
-                <Text style={s.rowLabel}>Prayer Reminders</Text>
-                <Switch
-                  value={notifSettings.prayerReminders}
-                  onValueChange={(v) => updateNotif('prayerReminders', v)}
-                  trackColor={{ false: colors.border, true: colors.mediumGreen }}
-                  thumbColor={colors.white}
-                  accessibilityLabel="Toggle prayer reminders"
-                />
-              </View>
+              {notifSettings.dailyReminder && (
+                <View style={s.timeRow}>
+                  {REMINDER_TIMES.map((t) => {
+                    const active = notifSettings.reminderTime === t.value;
+                    return (
+                      <TouchableOpacity
+                        key={t.value}
+                        style={[s.timeChip, active && s.timeChipActive]}
+                        onPress={() => updateNotif('reminderTime', t.value)}
+                        accessibilityRole="button"
+                        accessibilityState={{ selected: active }}
+                        accessibilityLabel={`Remind me at ${t.label}`}
+                      >
+                        <Text style={[s.timeChipText, active && s.timeChipTextActive]}>{t.label}</Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              )}
               <View style={s.row}>
                 <Bell size={20} color={colors.gold} />
                 <Text style={s.rowLabel}>Streak Reminder</Text>
@@ -192,5 +219,10 @@ const makeStyles = (c: typeof import('@/lib/theme').lightTheme) =>
     sectionTitle: { fontSize: 14, fontWeight: '600', color: c.mutedText, marginBottom: 8, textTransform: 'uppercase', letterSpacing: 0.5 },
     card: { backgroundColor: c.cardBackground, borderRadius: 12, overflow: 'hidden' },
     row: { flexDirection: 'row', alignItems: 'center', paddingHorizontal: 14, paddingVertical: 14, gap: 12, borderBottomColor: c.border, borderBottomWidth: 1 },
+    timeRow: { flexDirection: 'row', flexWrap: 'wrap', gap: 8, paddingHorizontal: 14, paddingBottom: 14, borderBottomColor: c.border, borderBottomWidth: 1 },
+    timeChip: { paddingHorizontal: 12, paddingVertical: 8, borderRadius: 16, borderWidth: 1, borderColor: c.border },
+    timeChipActive: { backgroundColor: c.mediumGreen, borderColor: c.mediumGreen },
+    timeChipText: { fontSize: 13, fontWeight: '500', color: c.mutedText },
+    timeChipTextActive: { color: '#FFFFFF' },
     rowLabel: { flex: 1, fontSize: 14, fontWeight: '500', color: c.darkText },
   });

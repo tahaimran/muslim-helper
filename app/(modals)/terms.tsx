@@ -42,7 +42,7 @@ export default function TermsOfServiceScreen() {
           <Text style={s.subheading}>4. User Responsibilities</Text>
           <Text style={s.body}>
             You are responsible for:{'\n'}
-            {'\n'}- Maintaining the security of your device and PIN{'\n'}
+            {'\n'}- Maintaining the security of your device{'\n'}
             - Backing up your data regularly using the export feature{'\n'}
             - Using the app in a manner consistent with its intended purpose{'\n'}
             - Understanding that the app is a tool for personal spiritual growth, not a religious authority
