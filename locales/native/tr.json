@@ -1,4 +1,9 @@
 {
-  "CFBundleDisplayName": "Awdah",
-  "NSLocationWhenInUseUsageDescription": "Awdah konumunu yalnızca telefonunda namaz vakitlerini hesaplamak için kullanır. Konumun hiçbir yere gönderilmez."
+  "ios": {
+    "CFBundleDisplayName": "Awdah",
+    "NSLocationWhenInUseUsageDescription": "Awdah konumunu yalnızca telefonunda namaz vakitlerini hesaplamak için kullanır. Konumun hiçbir yere gönderilmez."
+  },
+  "android": {
+    "app_name": "Awdah"
+  }
 }

@@ -35,7 +35,7 @@ node scripts/render-icons.mjs  # render the app icon, adaptive icon, splash and 
 - `theme/` - colors, fonts, spacing
 - `lib/` - pure logic, store and i18n (with tests in `lib/__tests__/`)
 - `content/` - journey days, duas, learn links, milestones, cities
-- `locales/` - translation files (`en.json` is the source); `locales/native/` holds the localized iOS app name and location permission text
+- `locales/` - translation files (`en.json` is the source); `locales/native/` holds the localized app name (iOS + Android) and iOS location permission text; keep iOS keys under `ios` and Android string resources under `android` — top-level keys get written to both platforms and break Android release lint
 - `store/` - app store listing text per language
 - `docs/` - privacy policy, review checklists, screenshots
 

@@ -1,4 +1,9 @@
 {
-  "CFBundleDisplayName": "عودة",
-  "NSLocationWhenInUseUsageDescription": "يستخدم «عودة» موقعك على هاتفك فقط لحساب مواقيت الصلاة، ولا يُرسَل إلى أي مكان."
+  "ios": {
+    "CFBundleDisplayName": "عودة",
+    "NSLocationWhenInUseUsageDescription": "يستخدم «عودة» موقعك على هاتفك فقط لحساب مواقيت الصلاة، ولا يُرسَل إلى أي مكان."
+  },
+  "android": {
+    "app_name": "عودة"
+  }
 }
